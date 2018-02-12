@@ -1,0 +1,23 @@
+.title{
+  .primary {
+      color: $primary-color;
+  }
+  .text-black{
+    color:$black;
+  }
+  .text-white{
+    color:$white;
+  }
+  .left{
+    text-align: left;
+    width:100%;
+  }
+  .center{
+    width:100%;
+    text-align: center;
+  }
+  .right{
+    text-align: right;
+    width:100%;
+  }
+}
