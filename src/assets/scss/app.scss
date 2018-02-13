@@ -52,8 +52,10 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+@import "foundation-icons";
 
 // additional SCSS files
 @import 'divider';
 @import 'text';
 @import 'title';
+@import 'button';

@@ -1,0 +1,33 @@
+$videoIcon: "\f196";
+$iconScale: 1.9;
+
+.video-icon:before {
+  font-family: "foundation-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+  content: "\f196";
+  margin-left: 10px;
+  transform: scale($iconScale);
+}
+
+.cta {
+  // Can not call it button, since the button class is a protected class in foundation.
+  .left {
+    text-align:left;
+  }
+
+  .center {
+    text-align:center;
+    
+  }
+
+  .right {
+    text-align:right;
+  }
+}
