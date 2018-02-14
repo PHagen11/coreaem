@@ -64,32 +64,49 @@
 //---------- GENERAL ----------//
 
 // Alignment
+// -----------
+
 $left: left;
 $center: center;
 $right: right;
 
-// Divider Thickness
+//---------- DIVIDER ----------//
+
+// 1. Thickness
+// -----------
+
 $hairline: 1px;
 $thin: 2px;
 $medium: 3px;
 $heavy: 5px;
 
-// Divider Width
+// 2. Width
+// -----------
+
 $size-small: 35px;
 $size-medium: 140px;
 $size-large: 250px;
 $size-full: 100%;
 
-// Button Text
+//---------- BUTTON ----------//
+
+// 1. Text
+// -----------
+
 @mixin button-text ($font) {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 600;
 }
-// Hollow Border Radius
+
+// 2. Hollow Button
+// -----------
+
 $hollow-radius: 4px;
 
-// Clear button
+// 3. Clear Button
+// -----------
+
 @mixin button-clear {
   padding:1em 0 1em 0;
 }
