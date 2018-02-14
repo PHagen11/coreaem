@@ -9,15 +9,12 @@
     color:$white;
   }
   .left{
-    text-align: left;
-    width:100%;
+    text-align: $left;
   }
   .center{
-    width:100%;
-    text-align: center;
+    text-align: $center;
   }
   .right{
-    text-align: right;
-    width:100%;
+    text-align: $right;
   }
 }

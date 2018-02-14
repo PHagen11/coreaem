@@ -1,99 +1,68 @@
 /*line size*/
 .divider {
   .size-small {
-      max-width: 2.25rem;
+      max-width: $size-small;
   }
-} 
-.divider{
   .size-medium {
-      max-width: 9.25rem;
+      max-width: $size-medium;
   }
-} 
-.divider{
   .size-large {
-      max-width: 16rem;
+      max-width: $size-large;
   }
-} 
-.divider {
   .size-full {
-      max-width: 100%;
+      max-width: $size-full;
   }
 }
-
 
 /*weight*/
 .divider{
   .weight-hariline {
-      border-bottom-width: 1px;
+      border-bottom-width: $hairline;
   }
-} 
-.divider{
   .weight-thin {
-      border-bottom-width: 2px;
+      border-bottom-width: $thin;
   }
-} 
-.divider{
   .weight-medium {
-      border-bottom-width: 3px;
+      border-bottom-width: $medium;
   }
-} 
-.divider{
   .weight-heavy {
-      border-bottom-width: 5px;
+      border-bottom-width: $heavy;
   }
-} 
+}
 
 /*color*/
 .divider {
   .primary {
       border-bottom-color: $primary-color;
   }
-}
-.divider {
   .secondary {
       border-bottom-color: $secondary-color;
   }
-}
-.divider{
   .success {
       border-bottom-color: $success-color;
   }
-} 
-.divider{
   .warning {
       border-bottom-color: $warning-color;
   }
-} 
-.divider{
   .alert {
       border-bottom-color: $alert-color;
   }
-} 
-.divider{
   .white {
       border-bottom-color: $white;
   }
-} 
-.divider{
   .light-gray {
       border-bottom-color: $light-gray;
   }
-} 
-.divider{
   .medium-gray {
       border-bottom-color: $medium-gray;
   }
-} 
-.divider{
   .dark-gray {
       border-bottom-color: $dark-gray;
   }
-} 
-.divider{
   .black {
       border-bottom-color: $black;
   }
-} 
+}
 
 /*position*/
 
@@ -103,16 +72,10 @@
    margin-left: 0;
    margin-right: auto;
   }
-}
-
-.divider{
   .center {
    float: none;
    margin: 0 auto;
   }
-} 
-
-.divider {
   .right {
    float: none;
    margin-left: auto;
