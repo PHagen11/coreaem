@@ -74,12 +74,14 @@ $foundation-palette: (
   success: #8ABF61,
   warning: #F3AC51,
   alert: #E35D5D,
+  border-gray: #DEDEDE,
   light-gray: #F7F7F7,
   medium-gray: #8B8B8B,
   dark-gray: #4A4A4A,
   black: #222222,
   white: #FFFFFF
 );
+$border-gray: #DEDEDE;
 $light-gray: #F7F7F7;
 $medium-gray: #8B8B8B;
 $dark-gray: #4A4A4A;
@@ -161,7 +163,7 @@ $header-styles: (
   ),
 );
 $header-text-rendering: optimizeLegibility;
-$small-font-size: 80%;
+$small-font-size: 90%;
 $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
