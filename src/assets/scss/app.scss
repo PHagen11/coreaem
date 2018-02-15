@@ -7,7 +7,6 @@
 @include foundation-global-styles;
 // @include foundation-grid;
 // @include foundation-flex-grid;
-//
 @include foundation-xy-grid-classes;
 @include foundation-typography;
 @include foundation-button;
@@ -46,21 +45,76 @@
 @include foundation-visibility-classes;
 // @include foundation-float-classes;
 @include foundation-flex-classes;
-
 // @include foundation-prototype-classes;
-
 @include motion-ui-transitions;
 @include motion-ui-animations;
-
 @import "foundation-icons";
+
+
+
+//---------- BEGIN GLOBAL STYLES ----------//
+
+
+// 1. Typography
+// --------------
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+
+
+//---------- GENERAL ----------//
+
+// Alignment
+// -----------
+
+$left: left;
+$center: center;
+$right: right;
+
+//---------- DIVIDER ----------//
+
+// 1. Thickness
+// -----------
+
+$hairline: 1px;
+$thin: 2px;
+$medium: 3px;
+$heavy: 5px;
+
+// 2. Width
+// -----------
+
+$size-small: 35px;
+$size-medium: 140px;
+$size-large: 250px;
+$size-full: 100%;
+
+//---------- BUTTON ----------//
+
+// 1. Text
+// -----------
+
+@mixin button-text ($font) {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+// 2. Hollow Button
+// -----------
+
+$hollow-radius: 4px;
+
+// 3. Clear Button
+// -----------
+
+@mixin button-clear {
+  padding:1em 0 1em 0;
+}
+
+
 
 // additional SCSS files
 @import 'divider';
 @import 'text';
 @import 'title';
 @import 'button';
-
-
-// Typography
-
-@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');

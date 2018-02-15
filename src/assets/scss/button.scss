@@ -19,15 +19,26 @@ $iconScale: 1.9;
 .cta {
   // Can not call it button, since the button class is a protected class in foundation.
   .left {
-    text-align:left;
+    text-align:$left;
   }
-
   .center {
-    text-align:center;
-    
+    text-align:$center;
   }
-
   .right {
-    text-align:right;
+    text-align:$right;
   }
+}
+
+.button {
+  @include button-text ('Lato');
+}
+.button.hollow {
+  border-radius: $hollow-radius;
+}
+.button.clear {
+  @include button-clear;
+}
+
+.right-arrow-icon:before {
+  //place right icon here
 }
