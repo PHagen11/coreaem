@@ -61,6 +61,24 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
 
 
+//---------- THEMES ----------//
+
+// 1. Minimal
+// --------------
+
+@mixin minimal {
+  background-color: none;
+  padding: 0;
+}
+
+// 2. Basic
+// --------------
+
+@mixin basic {
+  background-color: $light-gray;
+  padding: 1.4rem;
+}
+
 //---------- GENERAL ----------//
 
 // Alignment
@@ -69,6 +87,19 @@
 $left: left;
 $center: center;
 $right: right;
+
+// Spacing
+// -----------
+
+$none:0;
+$tiny:10px;
+$small: 20px;
+$medium: 40px;
+$large: 60px;
+$xlarge: 80px;
+
+
+$border: 1px solid $border-gray;
 
 //---------- DIVIDER ----------//
 
@@ -112,9 +143,51 @@ $hollow-radius: 4px;
 }
 
 
+//---------- BLOCKQUOTE ----------//
+
+// 1. Basic Theme
+// -----------
+
+@mixin blockquote-basic {
+  @include basic;
+}
+
+// 2. Minimal Theme
+// -----------
+
+@mixin blockquote-minimal {
+  @include minimal;
+  @include breakpoint(small) {
+    border-left: none;
+  }
+  @include breakpoint(medium) {
+    padding-left: 1.5rem;
+    border-left: $border;
+  }
+}
+
+// 3. Blockquote Text
+// -----------
+
+$blockquote-font-size: $global-font-size;
+$blockquote-weight: 500;
+$blockquote-color: $body-font-color;
+$author-weight: 600;
+$author-color: $primary-color;
+
+// 4. Blockquote Profile Image
+// -----------
+
+$profile-radius: 100%;
+$profile-size: 50px;
+
+
 
 // additional SCSS files
 @import 'divider';
 @import 'text';
 @import 'title';
 @import 'button';
+@import 'blockquote';
+@import 'testimonial';
+@import 'spacing';
