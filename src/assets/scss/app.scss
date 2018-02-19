@@ -88,6 +88,17 @@ $left: left;
 $center: center;
 $right: right;
 
+// Spacing
+// -----------
+
+$none:0;
+$tiny:10px;
+$small: 20px;
+$medium: 40px;
+$large: 60px;
+$xlarge: 80px;
+
+
 $border: 1px solid $border-gray;
 
 //---------- DIVIDER ----------//
@@ -178,3 +189,5 @@ $profile-size: 50px;
 @import 'title';
 @import 'button';
 @import 'blockquote';
+@import 'testimonial';
+@import 'spacing';

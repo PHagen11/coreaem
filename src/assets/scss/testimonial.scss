@@ -1,0 +1,35 @@
+.testimonial-title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $medium-gray;
+}
+.testimonial-image img {
+  border-radius: $profile-radius;
+  width: 95px;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-quote {
+  @include breakpoint(small) {
+    font-size: 1.5rem;
+  }
+  @include breakpoint(medium) {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.testimonial-author {
+  font-style: italic;
+  font-size: 1.2rem;
+  font-weight: $author-weight;
+  color: $author-color;
+  margin-bottom: 0rem;
+}
+
+.testimonial-location {
+  color: $medium-gray;
+  margin-bottom: 0;
+}
