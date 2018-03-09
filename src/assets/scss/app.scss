@@ -81,7 +81,7 @@
 
 //---------- GENERAL ----------//
 
-// Site
+// 1. Site
 // -----------
 
 .site {
@@ -89,17 +89,17 @@
   margin: auto;
 }
 body {
-  background-color: $ligh-gray;
+  background-color: $light-gray;
 }
 
-// Alignment
+// 2. Alignment
 // -----------
 
 $left: left;
 $center: center;
 $right: right;
 
-// Spacing
+// 3. Spacing
 // -----------
 
 $none:0;
@@ -109,6 +109,8 @@ $medium: 40px;
 $large: 60px;
 $xlarge: 80px;
 
+// 4. Border
+// -----------
 
 $border: 1px solid $border-gray;
 
