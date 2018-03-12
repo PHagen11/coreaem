@@ -197,6 +197,7 @@ $profile-size: 50px;
 
 
 // additional SCSS files
+@import 'global';
 @import 'divider';
 @import 'text';
 @import 'title';
@@ -205,3 +206,4 @@ $profile-size: 50px;
 @import 'testimonial';
 @import 'spacing';
 @import 'column';
+@import 'hero';

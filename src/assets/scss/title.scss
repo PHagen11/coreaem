@@ -1,20 +1,14 @@
-.title{
-  .primary {
-      color: $primary-color;
-  }
-  .text-black{
-    color:$black;
-  }
-  .text-white{
-    color:$white;
-  }
-  .left{
-    text-align: $left;
-  }
-  .center{
-    text-align: $center;
-  }
-  .right{
-    text-align: $right;
-  }
+.title {
+    .left {
+        text-align: $left;
+    }
+
+    .center {
+        text-align: $center;
+    }
+
+    .right {
+        text-align: $right;
+    }
 }
+/* also uses text coloring from text.scss */
