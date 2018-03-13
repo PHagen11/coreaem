@@ -1,40 +1,14 @@
 .hero {
-    padding: 10rem; //need to make into variable
-    @include breakpoint(small) {
-        height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+    .small {
+      height: 480px;
     }
-    @include breakpoint(medium) {
-        height: 400px;
+    .medium {
+      height: 746px;
     }
-    @include breakpoint(large) {
-        height: 600px;
-    }
-    /* background sizes */
-    .background-cover {
-        background-size: cover;
-    }
-    .background-contain {
-        background-size: contain;
-    }
-
-    /* background repeat */
-    .background-repeat {
-        background-repeat: repeat;
-    }
-    .background-repeat {
-        background-repeat: repeat-x;
-    }
-    .background-repeat-y {
-        background-repeat: repeat-y;
-    }
-    .background-repeat-no {
-        background-repeat: no-repeat;
-    }
-    .background-repeat-space {
-        background-repeat: space;
-    }
-    .background-repeat-round {
-        background-repeat: round;
+    .large {
+      height: 846px;
     }
 
     /* background colors */
