@@ -1,0 +1,73 @@
+.hero {
+    padding: 10rem; //need to make into variable
+    @include breakpoint(small) {
+        height: 200px;
+    }
+    @include breakpoint(medium) {
+        height: 400px;
+    }
+    @include breakpoint(large) {
+        height: 600px;
+    }
+    /* background sizes */
+    .background-cover {
+        background-size: cover;
+    }
+    .background-contain {
+        background-size: contain;
+    }
+
+    /* background repeat */
+    .background-repeat {
+        background-repeat: repeat;
+    }
+    .background-repeat {
+        background-repeat: repeat-x;
+    }
+    .background-repeat-y {
+        background-repeat: repeat-y;
+    }
+    .background-repeat-no {
+        background-repeat: no-repeat;
+    }
+    .background-repeat-space {
+        background-repeat: space;
+    }
+    .background-repeat-round {
+        background-repeat: round;
+    }
+
+    /* background colors */
+    .background-primary {
+        background-color: $primary-color;
+    }
+    .background-secondary {
+        background-color: $secondary-color;
+    }
+    .background-success {
+        background-color: $success-color;
+    }
+    .background-warning {
+        background-color: $warning-color;
+    }
+    .background-alert {
+        background-color: $alert-color;
+    }
+    .background-light-gray {
+        background-color: $light-gray;
+    }
+    .background-medium-gray {
+        background-color: $medium-gray;
+    }
+    .background-dark-gray {
+        background-color: $dark-gray;
+    }
+    .background-black {
+        background-color: $black;
+    }
+    .background-white {
+        background-color: $white;
+    }
+
+
+}
