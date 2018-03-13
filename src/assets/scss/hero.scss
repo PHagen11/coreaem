@@ -1,6 +1,8 @@
 .hero {
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top:50px;
+  padding-bottom:50px;
     .small {
       height: 480px;
     }
@@ -10,10 +12,11 @@
     .large {
       height: 846px;
     }
-
-    /* background colors */
+}
+    /* background colors: these are also used by column */
     .background-primary {
         background-color: $primary-color;
+        
     }
     .background-secondary {
         background-color: $secondary-color;
@@ -44,4 +47,4 @@
     }
 
 
-}
+
