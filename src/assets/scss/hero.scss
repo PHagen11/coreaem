@@ -1,50 +1,40 @@
 .hero {
+  background: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top:50px;
-  padding-bottom:50px;
+  padding-top: $hero-top-padding;
+  padding-bottom:$hero-bottom-padding;
     .small {
-      height: 480px;
+      @include breakpoint(small) {
+        height: $small-mobile-hero;
+      }
+      @include breakpoint(medium) {
+        height: $small-tablet-hero;
+      }
+      @include breakpoint(large) {
+        height: $small-desktop-hero;
+      }
     }
     .medium {
-      height: 746px;
+      @include breakpoint(small) {
+        height: $medium-mobile-hero;
+      }
+      @include breakpoint(medium) {
+        height: $medium-tablet-hero;
+      }
+      @include breakpoint(large) {
+        height: $medium-desktop-hero;
+      }
     }
     .large {
-      height: 846px;
+      @include breakpoint(small) {
+        height: $large-mobile-hero;
+      }
+      @include breakpoint(medium) {
+        height: $large-tablet-hero;
+      }
+      @include breakpoint(large) {
+        height: $large-desktop-hero;
+      }
     }
 }
-    /* background colors: these are also used by column */
-    .background-primary {
-        background-color: $primary-color;
-        
-    }
-    .background-secondary {
-        background-color: $secondary-color;
-    }
-    .background-success {
-        background-color: $success-color;
-    }
-    .background-warning {
-        background-color: $warning-color;
-    }
-    .background-alert {
-        background-color: $alert-color;
-    }
-    .background-light-gray {
-        background-color: $light-gray;
-    }
-    .background-medium-gray {
-        background-color: $medium-gray;
-    }
-    .background-dark-gray {
-        background-color: $dark-gray;
-    }
-    .background-black {
-        background-color: $black;
-    }
-    .background-white {
-        background-color: $white;
-    }
-
-
-

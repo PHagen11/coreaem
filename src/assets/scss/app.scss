@@ -194,6 +194,92 @@ $author-color: $primary-color;
 $profile-radius: 100%;
 $profile-size: 50px;
 
+//---------- HERO ----------//
+
+// 1. Desktop Sizes
+$small-desktop-hero: 380px;
+$medium-desktop-hero: 626px;
+$large-desktop-hero: 750px;
+
+// 2. Tablet Sizes
+$small-tablet-hero: 380px;
+$medium-tablet-hero: 500px;
+$large-tablet-hero: 650px;
+
+// 3. Mobile Sizes
+$small-mobile-hero: 300px;
+$medium-mobile-hero: 450px;
+$large-mobile-hero: 450px;
+
+// 4. Hero Padding
+$hero-top-padding: 3rem;
+$hero-bottom-padding: 3rem;
+
+
+//---------- GLOBAL ----------//
+
+//These are used by numerous components but seldom change
+
+.background-primary {
+    background-color: $primary-color;
+}
+.background-secondary {
+    background-color: $secondary-color;
+}
+.background-success {
+    background-color: $success-color;
+}
+.background-warning {
+    background-color: $warning-color;
+}
+.background-alert {
+    background-color: $alert-color;
+}
+.background-light-gray {
+    background-color: $light-gray;
+}
+.background-medium-gray {
+    background-color: $medium-gray;
+}
+.background-dark-gray {
+    background-color: $dark-gray;
+}
+.background-black {
+    background-color: $black;
+}
+.background-white {
+    background-color: $white;
+}
+
+.opacity-90 {
+  opacity: 0.9;
+}
+.opacity-80 {
+  opacity: 0.8;
+}
+.opacity-70 {
+  //opacity: 0.7;
+  background: rgba(255,255,255, 0.7);
+}
+.opacity-60 {
+  opacity: 0.6;
+}
+.opacity-50 {
+  opacity: 0.5;
+}
+.opacity-40 {
+  opacity: 0.4;
+}
+.opacity-30 {
+  opacity: 0.3;
+}
+.opacity-20 {
+  //opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.opacity-10 {
+  opacity: 0.1;
+}
 
 
 // additional SCSS files
