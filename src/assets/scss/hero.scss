@@ -1,10 +1,17 @@
-.hero {
-  background: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.heroArea {
+  position:relative;
   padding-top: $hero-top-padding;
   padding-bottom:$hero-bottom-padding;
-    .small {
+  .heroImage{
+    background: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: $hero-top-padding;
+    padding-bottom:$hero-bottom-padding;
+      z-index:0; position:absolute; top:0; bottom:0; height:inherit; width:100%;
+  
+  }
+  .heroSmall {
       @include breakpoint(small) {
         height: $small-mobile-hero;
       }
@@ -15,7 +22,7 @@
         height: $small-desktop-hero;
       }
     }
-    .medium {
+    .heroMedium {
       @include breakpoint(small) {
         height: $medium-mobile-hero;
       }
@@ -26,7 +33,7 @@
         height: $medium-desktop-hero;
       }
     }
-    .large {
+    .heroLarge {
       @include breakpoint(small) {
         height: $large-mobile-hero;
       }
@@ -36,5 +43,8 @@
       @include breakpoint(large) {
         height: $large-desktop-hero;
       }
+    }
+    .childIndex{
+      position:relative; z-index:5;
     }
 }
