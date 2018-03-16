@@ -87,9 +87,7 @@
 .site {
   max-width: 1600px;
   margin: auto;
-}
-body {
-  background-color: $light-gray;
+  background-color: $white;
 }
 
 // 2. Alignment
@@ -275,7 +273,7 @@ $hero-bottom-padding: 3rem;
 }
 .opacity-20 {
   opacity: 0.2;
-  
+
 }
 .opacity-10 {
   opacity: 0.1;
@@ -283,6 +281,7 @@ $hero-bottom-padding: 3rem;
 
 
 // additional SCSS files
+
 @import 'divider';
 @import 'text';
 @import 'title';
@@ -292,3 +291,4 @@ $hero-bottom-padding: 3rem;
 @import 'spacing';
 @import 'column';
 @import 'hero';
+@import 'tabs';
