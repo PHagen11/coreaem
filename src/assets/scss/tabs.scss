@@ -1,0 +1,164 @@
+
+.tabs {
+    background: transparent;
+    border: none;
+
+    margin: 0 auto;
+    @include breakpoint(small) {
+      display:block;
+    }
+    @include breakpoint(medium) {
+      display: table;
+    }
+    .tabs-title {
+        background: transparent;
+        @include breakpoint(small) {
+          float:none;
+        }
+        @include breakpoint(medium) {
+          float:left;
+        }
+        a {
+            color: $body-font-color;
+            background: transparent;
+            font-size: 1rem;
+            border-bottom-style: solid;
+            border-bottom-color: transparent;
+            border-right-style: solid;
+            border-right-color: transparent;
+            opacity: 0.6;
+            @include breakpoint(small) {
+                margin: 0;
+                padding: .75rem 2vw;
+                border-bottom-width:1px;
+                border-right-width: 6px;
+                border-bottom-color: $border-gray;
+            }
+            @include breakpoint(medium) {
+                margin: 0 2vw;
+                padding: 1.5vw 3vw;
+                border-bottom-width: 6px;
+                border-right-width: 0;
+                border-bottom-color: transparent;
+            }
+        }
+
+        a:focus,
+        a:hover {
+            background: transparent;
+            outline: none;
+            @include breakpoint(small) {
+                border-right-color: $primary-color;
+            }
+            @include breakpoint(medium) {
+                border-bottom-color: $primary-color;
+            }
+        }
+    }
+
+    .tabs-title.is-active {
+        a {
+            opacity: 1;
+            @include breakpoint(small) {
+                border-right-color: $primary-color;
+            }
+            @include breakpoint(medium) {
+                border-bottom-color: $primary-color;
+            }
+        }
+    }
+}
+
+.tabs-content {
+    display: block;
+    width: 100%;
+    @include breakpoint(small) {
+      border-width: 0;
+    }
+    @include breakpoint(medium) {
+      border-width: 1px 0 0 0;
+    }
+    border-style: solid;
+    border-color: $border-gray;
+    background-color:transparent;
+    .tabs-panel {
+        margin: 0;
+    }
+}
+
+.tabs-panel {
+    @include breakpoint(small) {
+      padding: 2rem 0;
+    }
+    @include breakpoint(medium) {
+      padding: 3rem 0;
+    }
+}
+
+.tabs-vertical {
+    .tabs {
+        display: block;
+        margin: 0;
+    }
+    .tabs-title {
+        a {
+            background: transparent;
+            font-size: 1rem;
+            margin: 0;
+            opacity: 0.6;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: $border-gray;
+            border-right-width: 6px;
+            border-right-style: solid;
+            border-right-color: transparent;
+            @include breakpoint(small) {
+              padding: .75rem 2vw;
+            }
+            @include breakpoint(medium) {
+              padding: 1.5rem 2vw;
+            }
+            @include breakpoint(large) {
+              padding: 2rem 2vw;
+            }
+        }
+        a:focus,
+        a:hover {
+            background: transparent;
+            border-right-color: $primary-color;
+            border-bottom-color: $border-gray;
+            outline: none;
+        }
+    }
+
+    .tabs-title.is-active {
+        a {
+            opacity: 1;
+            border-right-color: $primary-color;
+            border-bottom-color: $border-gray;
+        }
+    }
+    .tabs-content {
+        border-width: 0 0 0 0;
+    }
+    .tabs-panel {
+        @include breakpoint(small) {
+          padding: 2rem 0;
+        }
+        @include breakpoint(medium) {
+          padding: 0 3rem;
+        }
+    }
+}
+
+
+.basic {
+    .tabs-content {
+        border-top-width: 0;
+        background-color: $light-gray;
+    }
+    .tabs-panel {
+        padding: 3rem;
+        margin: 0;
+    }
+}
