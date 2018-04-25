@@ -1,0 +1,52 @@
+.link-list {
+    .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
+        border-color: $primary-color;
+        border-style: solid;
+        border-width: 0 2px 2px 0;
+        width: 0.5em;
+        height: 0.5em;
+        transform: rotate(45deg);
+        margin-top: -0.3em;
+        right: 0;
+        transition: transform 0.25s ease-in-out;
+    }
+
+    .accordion-menu .is-accordion-submenu-parent[aria-expanded='true'] > a::after {
+        transform: rotate(-135deg);
+    }
+
+/* This sets thwe Title color on Large (when it is not in accordion mode) */
+    .dropdown.menu > li.is-dropdown-submenu-parent > a {
+        color: $medium-gray;
+
+    }
+    .dropdown.menu > li.is-dropdown-submenu-parent > a:hover {
+        cursor: default;
+    }
+    .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+        border: none;
+    }
+
+    .dropdown.menu > li.opens-right > .is-dropdown-submenu {
+        display: block;
+        position: relative;
+        top: 0;
+    }
+
+    .dropdown.menu .is-dropdown-submenu {
+        border: none;
+    }
+
+    i {
+        color: $primary-color;
+        margin-right: 0.5em;
+    }
+
+    .page-property {
+        font-size: 0.7em;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $alert-color;
+        margin-left: 0.5em;
+    }
+}
