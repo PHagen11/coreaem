@@ -248,10 +248,16 @@ $image-carousel-dots-margin: 0.25rem;
 $image-carousel-dots-y-move: -3rem; //0 = right below images
 
 
-
-
-
-
+//---------- VIDEO ----------//
+$video-play-button-opacity-start: 0.5;
+$video-play-button-opacity-hover: 0.85;
+$video-play-button-icon: '\f144';
+$video-play-button-tiny: 2vw;
+$video-play-button-small: 5vw;
+$video-play-button-medium: 10vw;
+$video-play-button-large: 15vw;
+$video-play-button-xlarge: 20vw;
+$video-play-button-margin: 2vw;
 
 
 //---------- GLOBAL ----------//
@@ -340,3 +346,4 @@ $image-carousel-dots-y-move: -3rem; //0 = right below images
 @import 'owl-lazyload';
 @import 'owl-video';
 @import 'image-carousel';
+@import 'video';

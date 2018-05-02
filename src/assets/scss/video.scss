@@ -1,0 +1,86 @@
+.video {
+    width:100%;
+    height:100%;
+    position:relative;
+    img {
+        position:relative;
+        width:100%;
+        height:auto;
+    }
+    .play-button {
+        width:100%;
+        position:absolute;
+        top:50%;
+        transform: translate(0, -50%);
+        padding: 0 $video-play-button-margin;
+    }
+    i::before {
+        content:$video-play-button-icon;
+        font-family: 'Font Awesome\ 5 Free';
+        font-style: normal;
+        line-height:1em;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        /* transform: translate(0, 0); */
+        text-shadow:  0 0 1px  rgba(0, 0, 0, 1);
+        opacity:$video-play-button-opacity-start;
+    }
+}
+.video:hover i::before {
+    opacity:$video-play-button-opacity-hover;
+}
+.video .play-button.play-left {
+    text-align:left;
+}
+.video .play-button.play-center {
+    text-align:center;
+}
+.video .play-button.play-right {
+    text-align:right;
+}
+.video .play-button.play-tiny {
+    i{
+        width:$video-play-button-tiny;
+        height:$video-play-button-tiny;
+    }
+    i::before{
+        font-size:$video-play-button-tiny;
+    }
+}
+.video .play-button.play-small {
+    i{
+        width:$video-play-button-small;
+        height:$video-play-button-small;
+    }
+    i::after{
+        font-size:$video-play-button-small;
+    }
+}
+.video .play-button.play-medium {
+    i{
+        width:$video-play-button-medium;
+        height:$video-play-button-medium;
+    }
+    i::before{
+        font-size:$video-play-button-medium;
+    }
+}
+.video .play-button.play-large {
+    i{
+        width:$video-play-button-large;
+        height:$video-play-button-large;
+    }
+    i::before{
+        font-size:$video-play-button-large;
+    }
+}
+.video .play-button.play-xlarge {
+    i{
+        width:$video-play-button-xlarge;
+        height:$video-play-button-xlarge;
+    }
+    i::before{
+        font-size:$video-play-button-xlarge;
+    }
+}
