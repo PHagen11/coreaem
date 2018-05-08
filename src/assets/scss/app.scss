@@ -260,6 +260,10 @@ $video-play-button-xlarge: 20vw;
 $video-play-button-margin: 2vw;
 
 
+//---------- ICON ----------//
+$icon-padding: 0.25em;
+
+
 //---------- GLOBAL ----------//
 
 //These are used by numerous components but seldom change
@@ -347,3 +351,4 @@ $video-play-button-margin: 2vw;
 @import 'owl-video';
 @import 'image-carousel';
 @import 'video';
+@import 'icon';
