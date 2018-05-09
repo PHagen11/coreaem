@@ -1,0 +1,104 @@
+.icon {
+    i {
+        padding:$icon-padding;
+    }
+}
+
+@mixin icon($color) {
+    color: $color;
+
+    &:hover {
+        color: darken($color, 10%);
+    };
+}
+
+.icon-primary {
+    color: $primary-color;
+}
+
+a .icon-primary {
+    @include icon($primary-color);
+}
+
+.icon-secondary {
+    color: $secondary-color;
+}
+
+a .icon-secondary {
+    @include icon($secondary-color);
+}
+
+.icon-success {
+    color: $success-color;
+}
+
+a .icon-success {
+    @include icon($success-color);
+}
+
+.icon-warning {
+    color: $warning-color;
+}
+
+a .icon-warning {
+    @include icon($warning-color);
+}
+
+.icon-alert {
+    color: $alert-color;
+}
+
+a .icon-alert {
+    @include icon($alert-color);
+}
+
+.icon-white {
+    color: $white;
+}
+
+a .icon-white {
+    @include icon($white);
+}
+
+.icon-light-gray {
+    color: $light-gray;
+}
+
+a .icon-light-gray {
+    @include icon($light-gray);
+}
+
+.icon-medium-gray {
+    color: $medium-gray;
+}
+
+a .icon-medium-gray {
+    @include icon($medium-gray);
+}
+
+.icon-dark-gray {
+    color: $dark-gray;
+}
+
+a .icon-dark-gray {
+    @include icon($dark-gray);
+}
+
+.icon-black {
+    color: $black;
+}
+
+a .icon-black {
+    @include icon($black);
+}
+
+.icon.horizontal {
+    display: block;
+}
+
+.icon.vertical {
+    i {
+        display: block;
+        line-height: 1.5em;
+    }
+}
