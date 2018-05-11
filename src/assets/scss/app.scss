@@ -116,6 +116,18 @@ $xlarge: 80px;
 
 $border: 1px solid $border-gray;
 
+
+//----------- HEADER -----------//
+$header-background-color: $light-gray;
+$header-submenu-background-color: $white;
+$header-logo-height: 50px;
+$header-logo-padding-top: 3px;
+$header-mobile-toggle-icon-color: $black;
+$header-link-color-start: $medium-gray;
+$header-link-color-hover: $dark-gray;
+$header-link-spacing: 1rem;
+$header-font-size: 1rem;
+
 //---------- DIVIDER ----------//
 
 // 1. Thickness
@@ -331,7 +343,7 @@ $icon-padding: 0.25em;
 
 
 // additional SCSS files
-
+@import 'header';
 @import 'divider';
 @import 'text';
 @import 'title';
