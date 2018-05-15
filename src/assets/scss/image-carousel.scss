@@ -37,7 +37,7 @@
 				opacity: $image-carousel-prevnext-opacity-hover;
 			}
 
-			i:before {
+			i::before {
 				padding: $image-carousel-prevnext-padding;
 				display: inline-block;
 				font-family: 'Font Awesome\ 5 Free';
@@ -55,7 +55,7 @@
 		button.owl-prev {
 			left: 0;
 
-			i:before {
+			i::before {
 				content: $image-carousel-previous-icon;
 			}
 		}
@@ -63,7 +63,7 @@
 		button.owl-next {
 			right: 0;
 
-			i:before {
+			i::before {
 				content: $image-carousel-next-icon;
 			}
 		}
