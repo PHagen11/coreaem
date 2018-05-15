@@ -9,14 +9,14 @@ SOFT LEAD FORM
         <div class="grid-x grid-padding-x">
             <div class="medium-6 large-2 cell">
                 <label>First Name*
-                    <input name="fname" type="text" id="fnameInput" placeholder="" required>
-                    <span class="form-error" data-form-error-for="fnameInput">First Name is required.</span>
+                    <input name="firstName" type="text" id="firstNameInput" placeholder="" required>
+                    <span class="form-error" data-form-error-for="firstNameInput">First Name is required.</span>
                 </label>
             </div>
             <div class="medium-6 large-2 cell">
                 <label>Last Name*
-                            <input name="lname" type="text" id="lnameInput" placeholder="" required>
-                            <span class="form-error" data-form-error-for="lnameInput">Last Name is required.</span>
+                            <input name="lastName" type="text" id="lastNameInput" placeholder="" required>
+                            <span class="form-error" data-form-error-for="lastNameInput">Last Name is required.</span>
                         </label>
             </div>
             <div class="medium-4 large-2 cell">
@@ -27,8 +27,8 @@ SOFT LEAD FORM
             </div>
             <div class="medium-4 large-2 cell">
                 <label>Zip/Postal Code*
-                    <input name="zipcode" type="text" id="zipcodeInput" placeholder="" required>
-                    <span class="form-error" data-form-error-for="zipcodeInput">Zip/Postal Code is required.</span>
+                    <input name="postalCode" type="text" id="postalCodeInput" placeholder="" required>
+                    <span class="form-error" data-form-error-for="postalCodeInput">Zip/Postal Code is required.</span>
                 </label>
             </div>
             <div class="medium-4 large-4 cell">
@@ -61,25 +61,25 @@ HARD LEAD FORM
         <div class="grid-x grid-padding-x">
             <div class="medium-6 cell">
                 <label>First Name*
-                    <input name="fname" type="text" id="fnameInput" placeholder="" required>
-                    <span class="form-error" data-form-error-for="fnameInput">First Name is required.</span>
+                    <input name="firstName" type="text" id="firstNameInput" placeholder="" required>
+                    <span class="form-error" data-form-error-for="firstNameInput">First Name is required.</span>
                 </label>
             </div>
             <div class="medium-6 cell">
                 <label>Last Name*
-                    <input name="lname" type="text" id="lnameInput" placeholder="" required>
-                    <span class="form-error" data-form-error-for="lnameInput">Last Name is required.</span>
+                    <input name="lastName" type="text" id="lastNameInput" placeholder="" required>
+                    <span class="form-error" data-form-error-for="lastNameInput">Last Name is required.</span>
                 </label>
             </div>
             <div class="medium-12 cell">
                 <label>Street Address 1*
-                    <input  name="address1" type="text" id="address1Input" placeholder="" required>
-                    <span class="form-error" data-form-error-for="address1Input">Street Address 1 is required.</span>
+                    <input  name="addressOne" type="text" id="addressOneInput" placeholder="" required>
+                    <span class="form-error" data-form-error-for="addressOneInput">Street Address 1 is required.</span>
                 </label>
             </div>
             <div class="medium-12 cell">
                 <label>Street Address 2
-                    <input  name="address2" type="text" id="address2Input" placeholder="">
+                    <input  name="addressTwo" type="text" id="addressTwoInput" placeholder="">
                 </label>
             </div>
             <div class="medium-6 cell">
@@ -96,8 +96,8 @@ HARD LEAD FORM
             </div>
             <div class="medium-6 cell">
                 <label>Zip/Postal Code*
-                    <input name="zipcode" type="text" id="zipcodeInput" placeholder="" required>
-                    <span class="form-error" data-form-error-for="zipcodeInput">Zip/Postal Code is required.</span>
+                    <input name="postalCode" type="text" id="postalCodeInput" placeholder="" required>
+                    <span class="form-error" data-form-error-for="postalCodeInput">Zip/Postal Code is required.</span>
                 </label>
             </div>
             <div class="medium-6 cell">
@@ -145,14 +145,14 @@ CONTACT US FORM
         <div class="grid-x grid-padding-x">
             <div class="medium-6 cell">
                 <label>First Name*
-                    <input name="fname" type="text" id="fnameInput" placeholder="" required>
+                    <input name="firstName" type="text" id="firstNameInput" placeholder="" required>
                     <span class="form-error" data-form-error-for="fnameInput">First Name is required.</span>
                 </label>
             </div>
             <div class="medium-6 cell">
                 <label>Last Name*
-                    <input name="lname" type="text" id="lnameInput" placeholder="" required>
-                    <span class="form-error" data-form-error-for="lnameInput">Last Name is required.</span>
+                    <input name="lastName" type="text" id="lastNameInput" placeholder="" required>
+                    <span class="form-error" data-form-error-for="lastNameInput">Last Name is required.</span>
                 </label>
             </div>
             <div class="medium-6 cell">
@@ -168,8 +168,12 @@ CONTACT US FORM
                 </label>
             </div>
             <div class="medium-12 cell">
-                <label>Subject
-                    <input name="subject" type="text" id="subjectInput" placeholder="">
+                <label>Category
+                    <select name="category" id="countryInput" required>
+                        <option value="General">General</option>
+                        <option value="Lost Kitty" selected>Lost Kitty</option>
+                        <option value="Something Completely Different">Something Completely Different</option>
+                    </select>
                 </label>
             </div>
             <div class="medium-12 cell">
@@ -178,6 +182,12 @@ CONTACT US FORM
                     <span class="form-error" data-form-error-for="messageInput">Message is required.</span>
                 </label>
             </div>
+            <!-- hidden fields -->
+            <input name="source" type="hidden" value="Brand Website">
+            <input name="sourceURL" type="hidden" value="https://www.thiswebsite.com/contact/">
+            <input name="leadFormId" type="hidden" value="42">
+            <input name="leadBrandId" type="hidden" value="DontPanic">
+            <!-- end hidden fields -->
 
             <div class="small-12 cell hide-for-medium">
                 <button class="button small expanded formSubmit" type="submit" value="Submit">Submit</button>
