@@ -1,8 +1,5 @@
-console.log('loading imagecarousel.js');
-
-$(document).ready(function() {
-    console.log('HERE!');
-    $('.owl-carousel').owlCarousel({
+jQuery(document).ready(function() {
+    jQuery('.owl-carousel').owlCarousel({
         center: true,
         lazyLoad: true,
         items: 1,

@@ -62,7 +62,7 @@
 
 // 2. Icons
 // --------------
-$icon-weight: 700;
+$icon-weight: 400;
 
 
 //---------- THEMES ----------//
@@ -271,6 +271,16 @@ $video-play-button-large: 15vw;
 $video-play-button-xlarge: 20vw;
 $video-play-button-margin: 2vw;
 
+//---------- GALLERY ----------//
+$gallery-thumbnail-border-color: $light-gray;
+$gallery-thumbnail-border-color-active: $primary-color;
+$gallery-play-button-icon: '\f144';
+$gallery-play-button-color: $white;
+$gallery-prevnext-color-start: $primary-color;
+$gallery-prevnext-color-hover: $white;
+$gallery-prevnext-background-color: rgba(0, 0, 0, 0.45);
+$gallery-toolbar-icons-color-start:$primary-color;
+$gallery-toolbar-icons-color-hover:$white;
 
 //---------- ICON ----------//
 $icon-padding: 0.25em;
@@ -364,3 +374,5 @@ $icon-padding: 0.25em;
 @import 'image-carousel';
 @import 'video';
 @import 'icon';
+@import 'lightgallery';
+@import 'gallery';
