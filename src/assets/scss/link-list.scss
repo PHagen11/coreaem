@@ -1,5 +1,11 @@
 .link-list {
+    .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a {
+        font-weight:$link-list-title-font-weight;
+        padding-left: 0;
+    }
     .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
+        position: relative;
+        display: inline-block;
         border-color: $primary-color;
         border-style: solid;
         border-width: 0 2px 2px 0;
@@ -7,18 +13,20 @@
         height: 0.5em;
         transform: rotate(45deg);
         margin-top: -0.3em;
-        right: 0;
+        left: 0.5em;
+        top: -0.125em;
         transition: transform 0.25s ease-in-out;
     }
 
     .accordion-menu .is-accordion-submenu-parent[aria-expanded='true'] > a::after {
         transform: rotate(-135deg);
     }
-
-/* This sets the Title color on Large (when it is not in accordion mode) */
+    .dropdown.menu a {
+        padding:0.7rem 0;
+    }
     .dropdown.menu > li.is-dropdown-submenu-parent > a {
-        color: $medium-gray;
-
+        color: inherit;
+        font-weight:$link-list-title-font-weight;
     }
     .dropdown.menu > li.is-dropdown-submenu-parent > a:hover {
         cursor: default;
@@ -31,14 +39,16 @@
         display: block;
         position: relative;
         top: 0;
+        min-width:inherit;
     }
 
     .dropdown.menu .is-dropdown-submenu {
         border: none;
+
     }
 
     i {
-        color: $primary-color;
+        color: inherit;
         margin-right: 0.5em;
     }
 

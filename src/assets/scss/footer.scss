@@ -1,0 +1,43 @@
+.footer {
+    background-color: $footer-background-color;
+    color: $footer-text-color;
+
+    a {
+        color: $footer-link-color-start;
+        transition: color 0.25s ease;
+
+        &:hover {
+            color: $footer-link-color-hover;
+        }
+    }
+
+    .logo {
+        img {
+            width: 100%;
+            max-width: 130px;
+        }
+    }
+    .dropdown.menu > li.is-dropdown-submenu-parent > a {
+        padding-top:0;
+        line-height:1.5;
+    }
+
+    .link-list .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
+        border-color: $footer-link-color-start;
+        transition: all 0.25s ease;
+    }
+    .link-list .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a:hover::after {
+        border-color: $footer-link-color-hover;
+    }
+    .link-list i {
+        color: $footer-link-color-start;
+        transition: all 0.25s ease;
+    }
+    .link-list a:hover i {
+        color: $footer-link-color-hover;
+    }
+    .link-list .is-dropdown-submenu {
+        background:transparent;
+    }
+
+}
