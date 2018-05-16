@@ -1,4 +1,5 @@
 .footer {
+    padding-top: 2rem;
     background-color: $footer-background-color;
     color: $footer-text-color;
 
@@ -17,27 +18,57 @@
             max-width: 130px;
         }
     }
+
     .dropdown.menu > li.is-dropdown-submenu-parent > a {
-        padding-top:0;
-        line-height:1.5;
+        padding-top: 0;
+        line-height: 1.5;
     }
 
     .link-list .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
         border-color: $footer-link-color-start;
         transition: all 0.25s ease;
     }
+
     .link-list .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a:hover::after {
         border-color: $footer-link-color-hover;
     }
+
     .link-list i {
         color: $footer-link-color-start;
         transition: all 0.25s ease;
     }
+
     .link-list a:hover i {
         color: $footer-link-color-hover;
     }
+
     .link-list .is-dropdown-submenu {
-        background:transparent;
+        background: transparent;
     }
 
+    .bottom {
+        padding: 1rem 0;
+        margin-top: 2rem;
+        background-color: $footer-bottom-nav-background-color;
+        font-size: $footer-bottom-nav-font-size;
+        color: $footer-bottom-nav-text-color;
+
+        .nav {
+            a {
+                padding: 0 0.5em;
+                color: $footer-bottom-nav-link-color-start;
+                text-transform: uppercase;
+
+                &:hover {
+                    color: $footer-bottom-nav-link-color-hover;
+                }
+            }
+            @include breakpoint(small) {
+                padding-top: 1rem;
+            }
+            @include breakpoint(large) {
+                padding-top: 0;
+            }
+        }
+    }
 }
