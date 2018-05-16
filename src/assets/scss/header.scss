@@ -87,6 +87,11 @@
         }
     }
 
+    .accordion-menu {
+        width: 100%;
+    }
+
+
     .accordion-menu a {
         padding-left: 0;
     }
@@ -157,4 +162,51 @@
         color: $alert-color;
         margin-left: 0.5em;
     }
+
+    .mega-menu-trigger > a {
+        padding-right: 1.5em;
+    }
+    .mega-menu-trigger > a::after {
+        content:'';
+        position: relative;
+        display: inline-block;
+        border-color: $header-link-color-start;
+        border-style: solid;
+        border-width: 0 2px 2px 0;
+        width: 0.5em;
+        height: 0.5em;
+        transform: rotate(45deg);
+        margin-top: -0.3em;
+        left: 0.5em;
+        top: -0.125em;
+        transition: transform 0.25s ease-in-out;
+    }
+    .mega-menu-trigger > a.mega-menu-triggered::after {
+        transform: rotate(-135deg);
+    }
+}
+.mega-menu-panel {
+    background-color:$header-submenu-background-color;
+    display:none;
+    position:absolute;
+    left:0;
+    width:100%;
+    z-index:20;
+}
+.mega-menu-panel.mega-menu-panel-open {
+    display:block;
+}
+//the following prevents the FOUC: flash of unstyled content for the toggling menus
+.no-js {
+  @include breakpoint(small) {
+    .top-bar {
+      display: none;
+    }
+  }
+
+  @include breakpoint(large) {
+    .mobile-menu {
+      display: none;
+    }
+  }
 }

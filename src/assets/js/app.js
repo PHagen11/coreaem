@@ -13,9 +13,9 @@
 
 // $(document).foundation();
 
-jQuery(document).ready(function() {
+jQuery(document).ready(function($) {
 
-    jQuery('#gallery-1').lightGallery({
+    $('#gallery-1').lightGallery({
         selector: '.media-item',
         mode: 'lg-fade',
         thumbnail: true,
@@ -35,5 +35,13 @@ jQuery(document).ready(function() {
             color: 'A90707'
         },
 
+    });
+
+    $('.mega-menu-trigger a').click(function() {
+        var target = "."+$(this).data("target");
+        $('.mega-menu-panel').not(target).removeClass('mega-menu-panel-open');
+        $('.mega-menu-trigger a').not(this).removeClass('mega-menu-triggered');
+        $(this).toggleClass('mega-menu-triggered');
+        $(target).toggleClass('mega-menu-panel-open');
     });
 });
