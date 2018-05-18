@@ -373,7 +373,6 @@ $footer-bottom-nav-link-color-hover: $white;
 
 
 // additional SCSS files
-@import 'header';
 @import 'divider';
 @import 'text';
 @import 'title';
@@ -397,3 +396,4 @@ $footer-bottom-nav-link-color-hover: $white;
 @import 'lightgallery';
 @import 'gallery';
 @import 'footer';
+@import 'header';
