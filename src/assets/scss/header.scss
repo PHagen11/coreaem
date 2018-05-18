@@ -2,7 +2,11 @@
 .header .menu {
     z-index: 10;
 }
-
+.header.sticky-header {
+    position:fixed;
+    top:0;
+    width:100%;
+}
 .header {
     background-color: $header-background-color;
 
