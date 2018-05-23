@@ -118,15 +118,29 @@ $border: 1px solid $border-gray;
 
 
 //----------- HEADER -----------//
-$header-background-color: $light-gray;
-$header-submenu-background-color: $white;
-$header-logo-height: 50px;
-$header-logo-padding-top: 3px;
-$header-mobile-toggle-icon-color: $black;
+$header-plain-text-color: $medium-gray; //ex: Link List component titles.
+$header-background-color: $white;
+$header-link-background-color-hover: $light-gray;
 $header-link-color-start: $medium-gray;
-$header-link-color-hover: $dark-gray;
-$header-link-spacing: 1rem;
-$header-font-size: 1rem;
+$header-link-color-hover: $black;
+$header-link-top-bottom-padding: 1.5rem;
+$header-link-left-right-padding: 1rem;
+$header-link-font-size: 1rem;
+
+$header-dropdown-width: 250px;
+
+$header-submenu-background-color: $light-gray;
+$header-submenu-link-font-size: 1rem;
+
+$header-logo-height: 45px;
+$header-logo-padding-top: 10px;
+
+$header-cta-left-spacing: 1rem;
+
+$header-icon-color: $black;
+
+
+
 
 //---------- DIVIDER ----------//
 
