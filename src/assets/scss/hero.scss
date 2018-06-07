@@ -8,8 +8,8 @@
     background-size: cover;
     padding-top: $hero-top-padding;
     padding-bottom:$hero-bottom-padding;
-      z-index:0; position:absolute; top:0; bottom:0; height:inherit; width:100%;
-  
+    z-index:0; position:absolute; top:0; bottom:0; height:inherit; width:100%;
+
   }
   .heroSmall {
       @include breakpoint(small) {
