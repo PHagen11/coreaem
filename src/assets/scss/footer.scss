@@ -5,7 +5,7 @@
 
     a {
         color: $footer-link-color-start;
-        transition: color 0.25s ease;
+        transition: $global-transition;
 
         &:hover {
             color: $footer-link-color-hover;
@@ -26,7 +26,7 @@
 
     .link-list .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
         border-color: $footer-link-color-start;
-        transition: all 0.25s ease;
+        transition: $global-transition;
     }
 
     .link-list .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a:hover::after {
@@ -35,7 +35,7 @@
 
     .link-list i {
         color: $footer-link-color-start;
-        transition: all 0.25s ease;
+        transition: $global-transition;
     }
 
     .link-list a:hover i {
@@ -58,6 +58,7 @@
                 padding: 0 0.5em;
                 color: $footer-bottom-nav-link-color-start;
                 text-transform: uppercase;
+                transition:$global-transition;
 
                 &:hover {
                     color: $footer-bottom-nav-link-color-hover;

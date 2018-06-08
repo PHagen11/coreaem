@@ -94,6 +94,8 @@ $icon-weight: 400;
   background-color: $white;
 }
 
+$global-transition: all .25s ease-in-out;
+
 // 2. Alignment
 // -----------
 
@@ -150,6 +152,26 @@ $sub-navigation-link-color-hover: $white;
 $sub-navigation-link-font-size: 1rem;
 $sub-navigation-selected-background-color: $primary-color;
 $sub-navigation-selected-text-color: $black;
+
+
+//----------- STICKY ANCHOR -----------//
+$sticky-anchor-link-text-transform: none;
+$sticky-anchor-link-text-color: $medium-gray;
+$sticky-anchor-link-border-size: 3px;
+$sticky-anchor-link-border-style: solid;
+$sticky-anchor-link-border-color: $border-gray;
+
+$sticky-anchor-link-text-color-hover: $medium-gray;
+$sticky-anchor-link-border-size-hover:3px;
+$sticky-anchor-link-border-style-hover: solid;
+$sticky-anchor-link-border-color-hover: $medium-gray;
+
+$sticky-anchor-link-text-color-active: $primary-color;
+$sticky-anchor-link-border-size-active: 3px;
+$sticky-anchor-link-border-style-active: solid;
+$sticky-anchor-link-border-color-active: $primary-color;
+
+
 
 //---------- DIVIDER ----------//
 
@@ -421,3 +443,4 @@ $footer-bottom-nav-link-color-hover: $white;
 @import 'footer';
 @import 'header';
 @import 'sub-navigation';
+@import 'sticky-anchor';

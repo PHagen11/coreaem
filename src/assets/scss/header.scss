@@ -54,7 +54,7 @@
             padding: 0;
             margin: 10px 1rem 0;
             color: $header-icon-color;
-            transition: transform 0.25s ease-in-out;
+            transition: $global-transition;
         }
     }
 
@@ -91,12 +91,14 @@
             }
 
             > li:not(.cta-container, .logo-container) {
+                transition:$global-transition;
                 > a {
                     text-decoration: none;
                     color: $header-link-color-start;
                     font-size: $header-link-font-size;
                     padding: $header-link-top-bottom-padding $header-link-left-right-padding;
                     display: block;
+                    transition: $global-transition;
 
                     &:hover {
                         color: $header-link-color-hover;
@@ -116,6 +118,7 @@
 
                 a {
                     text-decoration: none;
+                    transition: $global-transition;
                 }
 
                 > ul {
@@ -201,7 +204,7 @@
             a {
                 opacity: 0.8;
                 padding: 0;
-                transition: opacity 0.25s ease-in-out;
+                transition: $global-transition;
 
                 &:hover {
                     opacity: 1;

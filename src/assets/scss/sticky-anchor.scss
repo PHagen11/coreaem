@@ -1,0 +1,25 @@
+.sticky-anchor {
+    position: relative;
+    .menu {
+        margin:2em 0;
+    }
+    .menu a {
+        padding: 1em;
+        text-transform: $sticky-anchor-link-text-transform;
+        color:$sticky-anchor-link-text-color;
+        border-left: $sticky-anchor-link-border-size $sticky-anchor-link-border-style $sticky-anchor-link-border-color;
+        transition: $global-transition;
+        &:hover {
+            border-left: $sticky-anchor-link-border-size-hover $sticky-anchor-link-border-style-hover $sticky-anchor-link-border-color-hover;
+            color:$sticky-anchor-link-text-color-hover;
+        }
+        &.is-active {
+            border-left: $sticky-anchor-link-border-size-active $sticky-anchor-link-border-style-active $sticky-anchor-link-border-color-active;
+            color:$sticky-anchor-link-text-color-active;
+        }
+    }
+
+    section {
+        padding-top:2em;
+    }
+}

@@ -2,6 +2,7 @@
     width:100%;
     height:100%;
     position:relative;
+    transition: $global-transition;
     img {
         position:relative;
         width:100%;
@@ -25,6 +26,7 @@
         /* transform: translate(0, 0); */
         text-shadow:  0 0 1px  rgba(0, 0, 0, 1);
         opacity:$video-play-button-opacity-start;
+        transition: $global-transition;
     }
 }
 .video:hover i::before {

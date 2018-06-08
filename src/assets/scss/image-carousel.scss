@@ -89,7 +89,7 @@
 				background: $image-carousel-dots-color-start;
 				display: block;
 				-webkit-backface-visibility: visible;
-				transition: opacity 200ms ease;
+				transition: $global-transition;
 				border-radius: $image-carousel-dots-border-radius;
 				border: $image-carousel-dots-border-weight solid $image-carousel-dots-border-color;
 				opacity: $image-carousel-dots-opacity-start;
