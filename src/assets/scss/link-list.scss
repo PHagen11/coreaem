@@ -18,7 +18,7 @@
         margin:0;
         width:auto;
         height:auto;
-        transition: transform 0.25s ease-in-out;
+        transition: $global-transition;
         border:none;
     }
 

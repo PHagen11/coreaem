@@ -25,7 +25,7 @@
 .lg-outer .lg-toogle-thumb,
 .lg-toolbar .lg-icon {
     color: $gallery-toolbar-icons-color-start;
-    transition: color 0.25s linear;
+    transition: $global-transition;
 
     &:hover {
         color: $gallery-toolbar-icons-color-hover;
@@ -46,9 +46,9 @@
     position: absolute;
     top: 50%;
     transform: translate(-50%,-50%);
-    -webkit-transition: opacity ease 0.25s;
-    -o-transition: opacity ease 0.25s;
-    transition: opacity ease 0.25s;
+    -webkit-transition: $global-transition;
+    -o-transition: $global-transition;
+    transition: $global-transition;
 }
 
 .gallery a.video:hover > .play-button > i {

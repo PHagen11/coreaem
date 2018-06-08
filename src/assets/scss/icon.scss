@@ -6,7 +6,7 @@
 
 @mixin icon($color) {
     color: $color;
-
+    transition: $global-transition;
     &:hover {
         color: darken($color, 10%);
     };

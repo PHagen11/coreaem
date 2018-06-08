@@ -1,7 +1,6 @@
 .sub-navigation {
     position: relative;
     z-index: 10;
-    margin:0;
     clear:both;
 
     .title-bar {
@@ -33,6 +32,7 @@
                     padding: 1em;
                     color: $sub-navigation-link-color-start;
                     font-size: $sub-navigation-link-font-size;
+                    transition: $global-transition;
                 }
 
                 a:hover {
@@ -68,9 +68,7 @@
             padding: 0;
             margin: 0;
             border-color: $sub-navigation-link-color-start;
-            transition: -webkit-transform 0.25s ease-in-out;
-            transition: transform 0.25s ease-in-out;
-            transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+            transition: $global-transition;
         }
 
         .accordion-menu .is-accordion-submenu-parent a {
@@ -79,6 +77,7 @@
             font-weight: $sub-navigation-text-weight;
             padding-left: 0;
             width: 100%;
+            transition: $global-transition;
         }
 
         .accordion-menu .is-accordion-submenu-parent a:hover {
@@ -93,6 +92,7 @@
             color: $sub-navigation-link-color-start;
             font-weight: normal;
             text-transform: none;
+            transition: $global-transition;
         }
 
         .accordion-menu .is-accordion-submenu-item a:hover {
