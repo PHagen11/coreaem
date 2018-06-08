@@ -141,6 +141,15 @@ $header-icon-color: $black;
 
 
 
+//----------- SUB NAVIGATION -----------//
+$sub-navigation-text-color: $white;
+$sub-navigation-text-weight: bold;
+$sub-navigation-text-transform: uppercase;
+$sub-navigation-link-color-start: $medium-gray;
+$sub-navigation-link-color-hover: $white;
+$sub-navigation-link-font-size: 1rem;
+$sub-navigation-selected-background-color: $primary-color;
+$sub-navigation-selected-text-color: $black;
 
 //---------- DIVIDER ----------//
 
@@ -411,3 +420,4 @@ $footer-bottom-nav-link-color-hover: $white;
 @import 'gallery';
 @import 'footer';
 @import 'header';
+@import 'sub-navigation';
