@@ -1,0 +1,18 @@
+.model-motors {
+  table thead {
+    background-color: $white;
+    border:none;
+  }
+  table tbody {
+    border:none;
+  }
+  table tbody tr:nth-child(odd) {
+    background-color: $light-gray;
+  }
+  table tbody tr:nth-child(even) {
+    background-color: $white;
+  }
+  table tbody th, table tbody td {
+    border-right: 8px solid $white;
+  }
+}
