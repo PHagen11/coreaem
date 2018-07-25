@@ -349,6 +349,13 @@ $footer-bottom-nav-text-color: $medium-gray;
 $footer-bottom-nav-link-color-start: $medium-gray;
 $footer-bottom-nav-link-color-hover: $white;
 
+//----------- MODEL SPECS -----------//
+
+$minimal-spacing: 1rem 1rem 1rem 0;
+$minimal-odd-background: $white;
+$minimal-even-background: $white;
+$basic-odd-background: $light-gray;
+$basic-even-background: $white;
 
 
 //---------- GLOBAL ----------//
@@ -446,3 +453,4 @@ $footer-bottom-nav-link-color-hover: $white;
 @import 'sticky-anchor';
 @import 'model-features';
 @import 'model-motors';
+@import 'model-specs';
