@@ -1,0 +1,60 @@
+.model-specs {
+  .measurement-toggle {
+    padding: 1rem 0 1.5rem 0;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    a.active {
+      color: $black;
+      text-decoration: underline;
+      padding: 0 .5rem 0 0;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+    a.inactive {
+      color: $medium-gray;
+      padding: 0 0 0 0.5rem;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  table {
+    tbody {
+        border:none;
+    }
+    thead {
+      background-color: $white;
+      border:none;
+    }
+  }
+  table tbody th, table tbody td:nth-child(even) {
+    font-weight: bold;
+    width: 35%;
+    padding-left: 10px;
+  }
+  &.minimal {
+    table tbody {
+      th, td {
+        padding: $minimal-spacing;
+      }
+      tr:nth-child(odd) {
+        background-color: $minimal-odd-background;
+      }
+      tr:nth-child(even) {
+        background-color: $minimal-even-background;
+      }
+    }
+  }
+  &.basic {
+    table tbody {
+      tr:nth-child(odd) {
+        background-color: $basic-odd-background;
+      }
+      tr:nth-child(even) {
+        background-color: $basic-even-background;
+      }
+    }
+  }
+}

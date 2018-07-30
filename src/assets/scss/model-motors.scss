@@ -1,18 +1,45 @@
 .model-motors {
-  table thead {
-    background-color: $white;
-    border:none;
+  table {
+    thead {
+      background-color: $white;
+      border:none;
+    }
+    tbody {
+      border:none;
+    }
   }
-  table tbody {
-    border:none;
+  &.basic {
+    table tbody {
+      tr:nth-child(odd) {
+        background-color: $basic-odd-background;
+      }
+      tr:nth-child(even) {
+        background-color: $basic-even-background;
+      }
+      th, td {
+        border-right: 8px solid $white;
+      }
+    }
   }
-  table tbody tr:nth-child(odd) {
-    background-color: $light-gray;
-  }
-  table tbody tr:nth-child(even) {
-    background-color: $white;
-  }
-  table tbody th, table tbody td {
-    border-right: 8px solid $white;
+  &.minimal {
+    table tbody {
+      tr {
+        padding: 0.5rem 0 0.5rem 0;
+      }
+      tr:nth-child(odd) {
+        background-color: $minimal-odd-background;
+      }
+      tr:nth-child(even) {
+        background-color: $minimal-even-background;
+      }
+      th, td {
+        padding:0.5rem 0 0.5rem 0;
+      }
+    }
+    thead, tfoot {
+      th, td {
+        padding:0.5rem 0 0.5rem 0;
+      }
+    }
   }
 }
