@@ -1,0 +1,47 @@
+.country-select{
+  .dropdown-pane, button {
+    width: 200px;
+    text-align: left;
+    background-color: $light-gray;
+    color: $black;
+    text-transform: none;
+    letter-spacing: 0;
+    padding: 0.8em 1em 0.6em 1em;
+    border: 1px solid $border-gray;
+    &:focus {
+      background-color: $light-gray;
+      color: $black;
+    }
+    &:hover {
+      background-color: $light-gray;
+      color: $black;
+    }
+    .flag {
+      margin-top: -2px;
+      margin-right: 10px;
+      width: 15px;
+    }
+    .currency {
+      margin-left: 25px;
+      line-height: 2;
+      font-size: 0.9em;
+      font-weight: normal;
+      color: $medium-gray;
+    }
+    .country {
+      font-weight: 600;
+    }
+    .fa-angle-down {
+      padding-left: 8px;
+    }
+  }
+  .dropdown-pane {
+    width: 200px;
+      background-color: $white;
+      cursor: pointer;
+      .currency {
+        line-height: 0;
+      }
+  }
+
+}
