@@ -21,6 +21,21 @@
     }
   }
   table {
+    .spec-label {
+        text-transform: $model-specs-label-case;
+    }
+    .metric,
+    .standard {
+        display: none;
+        font-weight: bold;
+        width: 35%;
+        padding-left: 10px;
+    }
+    .active-always {
+        font-weight: bold;
+        width: 35%;
+        padding-left: 10px;
+    }
     tbody {
         border:none;
     }
@@ -29,11 +44,7 @@
       border:none;
     }
   }
-  table tbody th, table tbody td:nth-child(even) {
-    font-weight: bold;
-    width: 35%;
-    padding-left: 10px;
-  }
+
   &.minimal {
     table tbody {
       th, td {
