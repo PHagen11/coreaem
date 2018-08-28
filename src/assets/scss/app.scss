@@ -356,6 +356,11 @@ $minimal-odd-background: $white;
 $minimal-even-background: $white;
 $basic-odd-background: $light-gray;
 $basic-even-background: $white;
+$model-specs-label-case: uppercase;
+
+//----------- MODEL OPTIONS -----------//
+
+$model-options-background-color: $white;
 
 
 //---------- GLOBAL ----------//
@@ -452,6 +457,7 @@ $basic-even-background: $white;
 @import 'sub-navigation';
 @import 'sticky-anchor';
 @import 'model-features';
+@import 'model-options';
 @import 'model-motors';
 @import 'model-specs';
 @import 'country-select';

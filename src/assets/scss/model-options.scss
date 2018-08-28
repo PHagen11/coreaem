@@ -1,0 +1,126 @@
+.model-options {
+    table.option-item {
+        width: 100%;
+        margin-bottom: 0;
+        table-layout: fixed;
+        border-collapse: collapse;
+
+        tbody {
+            border-color: transparent;
+            border-spacing: 0;
+        }
+
+        tr {
+            background: none;
+        }
+
+        td {
+            padding: 1rem 0;
+            vertical-align: bottom;
+            line-height: 1.25em;
+        }
+
+        .option-name {
+            text-align: left;
+            overflow: hidden;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 1.2rem;
+                margin-left: 0.5em;
+                width: 1500px;
+                height: 0;
+                border-bottom: 2px dotted $border-gray;
+            }
+        }
+
+        .option-price {
+            color: $primary-color;
+            text-align: left;
+            width: 4em;
+            padding-left: 0.5em;
+        }
+    }
+
+    &.expanded {
+        .category {
+            margin: 0 0 4rem 0;
+
+            .title {
+                padding: 0.95rem 1em 0 0;
+                margin: 0 0 1rem;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &.collapsed {
+        .accordion {
+            margin: 0;
+        }
+        .accordion-item > a.accordion-title {
+            font-weight: bold;
+            font-size: 1em;
+            text-transform: uppercase;
+            color: inherit;
+            border-color: $border-gray;
+            border-width: 0 0 2px 0;
+            border-style: solid;
+            padding-left: 0;
+        }
+
+        .accordion-item > a.accordion-title::before {
+            position: absolute;
+            display: block;
+            content: "\f107";
+            font-family: 'Font Awesome\ 5 Free';
+            font-weight: 700;
+            font-style: normal;
+            cursor: pointer;
+            padding: 0;
+            right: 0.5em;
+            top: 35%;
+            margin: 0;
+            width: auto;
+            height: auto;
+            transition: $global-transition;
+            border: none;
+        }
+
+        .accordion-title {
+            background: transparent;
+        }
+
+        .accordion-item.is-active > a.accordion-title::before {
+            transform: rotate(-180deg);
+        }
+
+        .accordion-content {
+            padding: 1rem 0 0;
+            border: none;
+
+            table {
+                tr:nth-child(odd) {
+                    background-color: rgba(0,0,0,0.05);
+                }
+
+                .option-name {
+                    padding-left: 1em;
+
+                    &::after {
+                        border-bottom: none;
+                    }
+                }
+            }
+
+            ul {
+                li {
+                    padding: 0.5rem 0;
+                }
+            }
+        }
+    }
+}
