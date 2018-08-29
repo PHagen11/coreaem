@@ -62,7 +62,7 @@
 
 // 2. Icons
 // --------------
-$icon-weight: 400;
+$icon-weight: 700;
 
 
 //---------- THEMES ----------//
@@ -293,9 +293,9 @@ $image-carousel-next-icon:'\f054';
 $image-carousel-dots-width: 1rem;
 $image-carousel-dots-height: 1rem;
 $image-carousel-dots-color-start: transparent;
-$image-carousel-dots-color-hover: $white;
-$image-carousel-dots-color-active: $white;
-$image-carousel-dots-border-weight: 2px;
+$image-carousel-dots-color-hover: $primary-color;
+$image-carousel-dots-color-active: $primary-color;
+$image-carousel-dots-border-weight: 1px;
 $image-carousel-dots-border-radius: 50%;
 $image-carousel-dots-border-color: $white;
 $image-carousel-dots-opacity-start: 0.65;
@@ -362,6 +362,58 @@ $model-specs-label-case: uppercase;
 
 $model-options-background-color: $white;
 
+//---------- MODEL PRICE ----------//
+
+
+
+//---------- MODEL LISTING ----------//
+
+$model-listing-model-year-size: 1em;
+$model-listing-model-year-weight: bold;
+
+$model-listing-model-name-size: 1.5em;
+$model-listing-model-name-weight: bold;
+$model-listing-model-name-transform: uppercase;
+$model-listing-model-name-line-height: 1.2em;
+
+$model-listing-model-name-tag-color: $primary-color; //i.e.: NEW
+$model-listing-model-name-tag-weight: normal;
+
+$model-listing-package-detail-margin: 1rem 0;
+
+$model-listing-price-block-margin: 1rem 0;
+
+$model-listing-price-label-size: 0.85em; //i.e.: NO HAGGLE NO HASSLE National Price
+$model-listing-price-label-color: $medium-gray;
+
+$model-listing-price-sale-value-size: 1.5em;
+$model-listing-price-sale-value-weight: bold;
+$model-listing-price-sale-value-color: $alert-color;
+
+$model-listing-price-value-size: 1.5em;
+$model-listing-price-value-weight: bold;
+
+$model-listing-price-strike-color: $medium-gray;
+
+$model-listing-price-currency-size: 1.5em;
+$model-listing-price-currency-weight: 300;
+$model-listing-price-currency-color: $medium-gray;
+
+$model-listing-price-save-label-size: 1em;
+
+$model-listing-price-save-value-size: 1em;
+$model-listing-price-save-value-weight: bold;
+$model-listing-price-save-value-color: $alert-color;
+
+$model-listing-specs-block-margin: 1rem 0;
+
+$model-listing-specs-label-padding: 0.25em 0;
+$model-listing-specs-label-size: 1rem 0;
+$model-listing-specs-label-weight: normal;
+
+$model-listing-specs-value-padding: 0.25em 0;
+$model-listing-specs-value-size: 1rem 0;
+$model-listing-specs-value-weight: bold;
 
 //---------- GLOBAL ----------//
 
@@ -460,4 +512,5 @@ $model-options-background-color: $white;
 @import 'model-options';
 @import 'model-motors';
 @import 'model-specs';
+@import 'model-listing';
 @import 'country-select';
