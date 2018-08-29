@@ -7,14 +7,14 @@
     a.active {
       color: $black;
       text-decoration: underline;
-      padding: 0 .5rem 0 0;
+      padding: 0 .5rem;
       &:hover {
         color: $primary-color;
       }
     }
     a.inactive {
       color: $medium-gray;
-      padding: 0 0 0 0.5rem;
+      padding: 0 .5rem;
       &:hover {
         color: $primary-color;
       }

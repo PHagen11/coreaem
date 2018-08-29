@@ -1,0 +1,95 @@
+.model-listing {
+    .model-year {
+        font-size: $model-listing-model-year-size;
+        font-weight: $model-listing-model-year-weight;
+    }
+
+    .model-name {
+        font-size: $model-listing-model-name-size;
+        font-weight: $model-listing-model-name-weight;
+        line-height: $model-listing-model-name-line-height;
+        text-transform: $model-listing-model-name-transform;
+
+        .tag {
+            font-weight: $model-listing-model-name-tag-weight;
+            color: $model-listing-model-name-tag-color;
+        }
+    }
+
+    .package-details {
+        margin: $model-listing-package-detail-margin;
+    }
+
+    .prices {
+        margin: $model-listing-price-block-margin;
+    }
+
+    .price-label {
+        font-size: $model-listing-price-label-size;
+        color: $model-listing-price-label-color;
+    }
+
+    .price-sale-value {
+        display: inline;
+        font-size: $model-listing-price-sale-value-size;
+        font-weight: $model-listing-price-sale-value-weight;
+        color: $model-listing-price-sale-value-color;
+    }
+
+    .price-value {
+        display: inline;
+        font-size: $model-listing-price-value-size;
+        font-weight: $model-listing-price-value-weight;
+    }
+
+    .strike {
+        color: $model-listing-price-strike-color;
+        text-decoration: line-through;
+    }
+
+    .price-currency {
+        display: inline;
+        font-size: $model-listing-price-currency-size;
+        font-weight: $model-listing-price-currency-weight;
+        color: $model-listing-price-currency-color;
+    }
+
+    .price-save-label {
+        display: inline;
+        font-size: $model-listing-price-save-label-size;
+    }
+
+    .price-save-value {
+        display: inline;
+        font-size: $model-listing-price-save-value-size;
+        font-weight: $model-listing-price-save-value-weight;
+        color: $model-listing-price-save-value-color;
+    }
+
+    table.specs {
+        margin: $model-listing-specs-block-margin;
+
+        tbody {
+            border: none;
+            margin: 0;
+
+            tr {
+                background-color: transparent;
+            }
+
+            .spec-label {
+                width: 50%;
+                padding: $model-listing-specs-label-padding;
+                font-size: $model-listing-specs-label-size;
+                font-weight: $model-listing-specs-label-weight;
+            }
+
+            .spec-value {
+                width: 50%;
+                padding: $model-listing-specs-value-padding;
+                font-size: $model-listing-specs-value-size;
+                font-weight: $model-listing-specs-value-weight;
+            }
+        }
+    }
+}
