@@ -1,0 +1,143 @@
+.model-price {
+    table {
+        tbody {
+            border: none;
+
+            tr {
+                background-color: transparent;
+                vertical-align: bottom;
+
+                td {
+                    width: 50%;
+                    padding: $model-price-td-padding;
+                }
+            }
+        }
+    }
+
+    .model-year {
+        font-size: $model-price-model-year-size;
+        font-weight: $model-price-model-year-weight;
+    }
+
+    .model-name {
+        font-size: $model-price-model-name-size;
+        font-weight: $model-price-model-name-weight;
+        line-height: $model-price-model-name-line-height;
+        text-transform: $model-price-model-name-transform;
+
+        .tag {
+            font-weight: $model-price-model-name-tag-weight;
+            color: $model-price-model-name-tag-color;
+        }
+    }
+
+    .package-details {
+        margin: $model-price-package-detail-margin;
+    }
+
+    .prices {
+        margin: $model-price-block-margin;
+    }
+
+    .price-label {
+        font-size: $model-price-label-size;
+        color: $model-price-label-color;
+    }
+
+    .price-value {
+        display: inline;
+        font-size: $model-price-value-size;
+        font-weight: $model-price-value-weight;
+    }
+
+    .strike {
+        color: $model-price-strike-color;
+        text-decoration: line-through;
+    }
+
+    .price-currency {
+        display: inline;
+        font-size: $model-price-currency-size;
+        font-weight: $model-price-currency-weight;
+        color: $model-price-currency-color;
+    }
+
+    .price-sale-value {
+        font-size: $model-price-sale-value-size;
+        font-weight: $model-price-sale-value-weight;
+        color: $model-price-sale-value-color;
+    }
+
+    .price-save-label {
+        font-size: $model-price-save-label-size;
+    }
+
+    .price-save-value {
+        font-size: $model-price-save-value-size;
+        font-weight: $model-price-save-value-weight;
+        color: $model-price-save-value-color;
+    }
+
+    .your-price-value {
+        display: inline;
+        font-size: $model-price-value-size;
+        font-weight: $model-price-value-weight;
+    }
+
+    .prep-freight {
+        .dealer-select-label {
+            font-size: $model-price-dealer-select-label-size;
+        }
+        .dealer-select-link {
+            font-size: $model-price-dealer-select-link-size;
+        }
+
+        .dealer-name {
+            font-size: $model-price-dealer-name-size;
+            font-weight: $model-price-dealer-name-weight;
+        }
+
+        .dealer-name-link {
+            font-size: $model-price-dealer-name-link-size;
+            font-weight: $model-price-dealer-name-link-weight;
+        }
+
+        .prep-label {
+            font-size: $model-price-prep-label-size;
+        }
+        .prep-value {
+            font-size: $model-price-prep-value-size;
+        }
+
+        .freight-label {
+            font-size: $model-price-freight-label-size;
+        }
+        .freight-value {
+            font-size: $model-price-freight-value-size;
+        }
+    }
+
+    .your-price {
+
+        .your-price-label {
+            font-size: $model-price-your-price-label-size;
+            font-weight: $model-price-your-price-label-weight;
+            color: $model-price-your-price-label-color;
+        }
+        .your-price-sub-label {
+            font-size: $model-price-your-price-sub-label-size;
+            font-weight: $model-price-your-price-sub-label-weight;
+            color: $model-price-your-price-sub-label-color;
+        }
+    }
+
+    .button {
+        @include breakpoint(small) {
+            width: 100%;
+        }
+        @include breakpoint(medium) {
+            width: auto;
+        }
+    }
+}
