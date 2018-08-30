@@ -362,9 +362,6 @@ $model-specs-label-case: uppercase;
 
 $model-options-background-color: $white;
 
-//---------- MODEL PRICE ----------//
-
-
 
 //---------- MODEL LISTING ----------//
 
@@ -411,9 +408,80 @@ $model-listing-specs-label-padding: 0.25em 0;
 $model-listing-specs-label-size: 1rem 0;
 $model-listing-specs-label-weight: normal;
 
-$model-listing-specs-value-padding: 0.25em 0;
+$model-listing-specs-value-padding: 0.25em 0  0.25em 2.25em;
 $model-listing-specs-value-size: 1rem 0;
 $model-listing-specs-value-weight: bold;
+
+
+//---------- MODEL PRICE ----------//
+
+$model-price-model-year-size: 1em;
+$model-price-model-year-weight: bold;
+
+$model-price-model-name-size: 1.5em;
+$model-price-model-name-weight: bold;
+$model-price-model-name-transform: uppercase;
+$model-price-model-name-line-height: 1.2em;
+
+$model-price-model-name-tag-color: $primary-color; //i.e.: NEW
+$model-price-model-name-tag-weight: normal;
+
+$model-price-package-detail-margin: 1rem 0;
+
+$model-price-td-padding: 0.25rem 0;
+
+$model-price-block-margin: 1rem 0;
+
+$model-price-label-size: 1em; //i.e.: NO HAGGLE NO HASSLE National Price
+$model-price-label-color: inherit;
+
+$model-price-sale-value-size: 1em;
+$model-price-sale-value-weight: bold;
+$model-price-sale-value-color: $alert-color;
+
+$model-price-value-size: 1em;
+$model-price-value-weight: bold;
+
+$model-price-strike-color: inherit;
+
+$model-price-currency-size: 1em;
+$model-price-currency-weight: 300;
+$model-price-currency-color: $medium-gray;
+
+$model-price-save-label-size: 1em;
+
+$model-price-save-value-size: 1em;
+$model-price-save-value-weight: bold;
+$model-price-save-value-color: $alert-color;
+
+$model-price-save-label-size: 1em;
+
+$model-price-save-value-size: 1em;
+$model-price-save-value-weight: bold;
+$model-price-save-value-color: $alert-color;
+
+$model-price-dealer-select-label-size: 1em;
+
+$model-price-dealer-select-link-size: 1em;
+
+$model-price-dealer-name-size: 1em;
+$model-price-dealer-name-weight: bold;
+
+$model-price-dealer-name-link-size: 1em;
+$model-price-dealer-name-link-weight: normal;
+
+$model-price-prep-label-size: 1em;
+$model-price-prep-value-size: 1em;
+$model-price-freight-label-size: 1em;
+$model-price-freight-value-size: 1em;
+
+$model-price-your-price-label-size: 1em;
+$model-price-your-price-label-weight: bold;
+$model-price-your-price-label-color: inherit;
+$model-price-your-price-sub-label-size: 0.8em;
+$model-price-your-price-sub-label-weight: bold;
+$model-price-your-price-sub-label-color: $medium-gray;
+
 
 //---------- GLOBAL ----------//
 
@@ -480,6 +548,18 @@ $model-listing-specs-value-weight: bold;
   opacity: 0.1;
 }
 
+.hide {
+    display:none;
+}
+.block {
+    display:block;
+}
+.inline-block {
+    display:inline-block;
+}
+.inline {
+    display:inline;
+}
 
 // additional SCSS files
 @import 'divider';
@@ -513,4 +593,5 @@ $model-listing-specs-value-weight: bold;
 @import 'model-motors';
 @import 'model-specs';
 @import 'model-listing';
+@import 'model-price';
 @import 'country-select';
