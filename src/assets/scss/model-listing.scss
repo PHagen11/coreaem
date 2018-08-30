@@ -68,6 +68,7 @@
 
     table.specs {
         margin: $model-listing-specs-block-margin;
+        width:auto;
 
         tbody {
             border: none;
@@ -78,18 +79,27 @@
             }
 
             .spec-label {
-                width: 50%;
+                width: auto;
                 padding: $model-listing-specs-label-padding;
                 font-size: $model-listing-specs-label-size;
                 font-weight: $model-listing-specs-label-weight;
             }
 
             .spec-value {
-                width: 50%;
+                width: auto;
                 padding: $model-listing-specs-value-padding;
                 font-size: $model-listing-specs-value-size;
                 font-weight: $model-listing-specs-value-weight;
             }
+        }
+    }
+
+    .button {
+        @include breakpoint(small) {
+            width: 100%;
+        }
+        @include breakpoint(medium) {
+            width: auto;
         }
     }
 }
