@@ -483,6 +483,28 @@ $model-price-your-price-sub-label-weight: bold;
 $model-price-your-price-sub-label-color: $medium-gray;
 
 
+
+//---- DEALER SELECT MODAL ----//
+$dealer-select-modal-results-padding: 0 1.5rem;
+$dealer-select-modal-result-entry-padding: 1.5rem 0;
+
+$dealer-select-modal-dealer-name-size: 1em;
+$dealer-select-modal-dealer-name-line-height: 1.2em;
+$dealer-select-modal-dealer-name-weight: bold;
+
+$dealer-select-modal-dealer-distance-size: 0.9em;
+$dealer-select-modal-dealer-distance-weight: bold;
+
+$dealer-select-modal-dealer-address-size: 0.9em;
+$dealer-select-modal-dealer-address-weight: normal;
+
+$dealer-select-modal-dealer-city-state-zip-size: 0.9em;
+$dealer-select-modal-dealer-city-state-zip-weight: normal;
+
+$dealer-select-modal-dealer-phone-size: 0.9em;
+$dealer-select-modal-dealer-phone-weight: normal;
+
+
 //---------- GLOBAL ----------//
 
 //These are used by numerous components but seldom change
@@ -595,3 +617,4 @@ $model-price-your-price-sub-label-color: $medium-gray;
 @import 'model-listing';
 @import 'model-price';
 @import 'country-select';
+@import 'dealer-select-modal';
