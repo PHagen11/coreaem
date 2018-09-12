@@ -93,7 +93,14 @@
                 font-weight: $dealer-search-map-marker-counter-weight;
                 line-height: $dealer-search-map-marker-counter-line-height;
             }
-
+            .accolades {
+                img {
+                    height:100%;
+                    width:auto;
+                    max-height:3.5rem;
+                    margin:1rem 1rem 0rem 0;
+                }
+            }
             .boat-types-label {
                 font-size:$boat-types-label-size;
                 font-weight:$boat-types-label-weight;

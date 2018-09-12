@@ -50,7 +50,11 @@
 @include motion-ui-animations;
 @import "foundation-icons";
 
-
+// Font Awesome files
+@import "fontawesome/fontawesome.scss";
+@import "fontawesome/solid.scss";
+@import "fontawesome/regular.scss";
+@import "fontawesome/light.scss";
 
 //---------- BEGIN GLOBAL STYLES ----------//
 
