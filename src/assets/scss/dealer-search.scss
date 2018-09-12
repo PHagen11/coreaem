@@ -1,0 +1,144 @@
+.dealer-search {
+    /* border: 1px solid $border-gray; */
+    .grid-x.grid-padding-x {
+        /* padding:1rem; */
+    }
+
+    .close-button,
+    .close-button.medium {
+        right: 1.5rem;
+        top: 1rem;
+        color: $border-gray;
+
+        &:hover {
+            color: $medium-gray;
+        }
+    }
+
+    .heading {
+        font-weight: $dealer-search-heading-weight;
+        font-size: $dealer-search-heading-size;
+        text-transform: $dealer-search-heading-transform;
+    }
+
+    .search-by {
+        white-space: nowrap;
+        padding-top: 0.5em;
+
+        span {
+            margin-right: 0.25em;
+            white-space: nowrap;
+        }
+
+        label {
+            font-size: 1em;
+        }
+    }
+
+
+
+    .dealer-search-map {
+        width: 100%;
+        height: 50vh;
+
+
+        background-image: url("https://dummyimage.com/1500x1500/888/fff.png&text=Google+Map");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .results {
+        padding: $dealer-search-results-padding;
+        border-top: 1px solid $border-gray;
+
+        .result-entry {
+            padding: $dealer-search-result-entry-padding;
+            border-bottom: 1px solid $border-gray;
+
+
+
+            .dealer-name {
+                font-weight: $dealer-search-dealer-name-weight;
+                font-size: $dealer-search-dealer-name-size;
+                line-height: $dealer-search-dealer-name-line-height;
+            }
+
+            .distance {
+                font-weight: $dealer-search-dealer-distance-weight;
+                font-size: $dealer-search-dealer-distance-size;
+                margin: 1rem 0;
+            }
+
+            .address {
+                font-weight: $dealer-search-dealer-address-weight;
+                font-size: $dealer-search-dealer-address-size;
+            }
+
+            .city-state-zip {
+                font-weight: $dealer-search-dealer-city-state-zip-weight;
+                font-size: $dealer-search-dealer-city-state-zip-size;
+            }
+
+            .phone {
+                font-weight: $dealer-search-dealer-phone-weight;
+                font-size: $dealer-search-dealer-phone-size;
+            }
+
+            .map-marker {
+                color: $dealer-search-map-marker-color;
+            }
+            .map-marker-counter {
+                color: $dealer-search-map-marker-counter-color;
+                font-size: $dealer-search-map-marker-counter-size;
+                font-weight: $dealer-search-map-marker-counter-weight;
+                line-height: $dealer-search-map-marker-counter-line-height;
+            }
+
+            .boat-types-label {
+                font-size:$boat-types-label-size;
+                font-weight:$boat-types-label-weight;
+                @include breakpoint(small) {
+                    margin-top:1em;
+                }
+                @include breakpoint(medium) {
+                    margin-top:0;
+                }
+                @include breakpoint(large) {
+                    margin-top:0;
+                }
+            }
+            .other-info {
+                @include breakpoint(small) {
+                    margin-top:1em;
+                }
+                @include breakpoint(medium) {
+                    margin-top:1em;
+                }
+                @include breakpoint(large) {
+                    margin-top:0;
+                }
+            }
+
+            .links {
+                @include breakpoint(small) {
+                    margin-top:2em;
+                }
+                @include breakpoint(medium) {
+                    margin-top:0;
+                }
+                @include breakpoint(large) {
+                    margin-top:0;
+                }
+                div {
+                    margin-bottom:1.5em;
+                }
+                i {
+                    padding-left:0.5em;
+                }
+            }
+
+        }
+
+
+    }
+}
