@@ -50,7 +50,11 @@
 @include motion-ui-animations;
 @import "foundation-icons";
 
-
+// Font Awesome files
+@import "fontawesome/fontawesome.scss";
+@import "fontawesome/solid.scss";
+@import "fontawesome/regular.scss";
+@import "fontawesome/light.scss";
 
 //---------- BEGIN GLOBAL STYLES ----------//
 
@@ -505,6 +509,41 @@ $dealer-select-modal-dealer-phone-size: 0.9em;
 $dealer-select-modal-dealer-phone-weight: normal;
 
 
+//---- FIND A DEALER - DEALER SEARCH ----//
+$dealer-search-heading-size: 1em;
+$dealer-search-heading-weight: bold;
+$dealer-search-heading-transform: uppercase;
+
+$dealer-search-results-padding: 0;
+$dealer-search-result-entry-padding: 1.5rem 0;
+
+$dealer-search-map-marker-color: $primary-color;
+$dealer-search-map-marker-counter-color: $white;
+$dealer-search-map-marker-counter-size: 1em;
+$dealer-search-map-marker-counter-weight: bold;
+$dealer-search-map-marker-counter-line-height: 1.5em;
+
+$dealer-search-dealer-name-size: 1em;
+$dealer-search-dealer-name-line-height: 1.2em;
+$dealer-search-dealer-name-weight: bold;
+
+$dealer-search-dealer-distance-size: 0.9em;
+$dealer-search-dealer-distance-weight: bold;
+
+$dealer-search-dealer-address-size: 0.9em;
+$dealer-search-dealer-address-weight: normal;
+
+$dealer-search-dealer-city-state-zip-size: 0.9em;
+$dealer-search-dealer-city-state-zip-weight: normal;
+
+$dealer-search-dealer-phone-size: 0.9em;
+$dealer-search-dealer-phone-weight: normal;
+
+$boat-types-label-size: 1em;
+$boat-types-label-weight: bold;
+
+
+
 //---------- GLOBAL ----------//
 
 //These are used by numerous components but seldom change
@@ -618,3 +657,4 @@ $dealer-select-modal-dealer-phone-weight: normal;
 @import 'model-price';
 @import 'country-select';
 @import 'dealer-select-modal';
+@import 'dealer-search';
