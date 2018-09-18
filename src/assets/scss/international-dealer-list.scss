@@ -1,0 +1,28 @@
+.international-dealer-list {
+    .dealer {
+        margin-top:2rem;
+        border-bottom:1px solid $border-gray;
+            .name {
+                font-weight:bold;
+            }
+            .address {
+                margin-top:1rem;
+            }
+            .links {
+                @include breakpoint(small) {
+                    margin-top:2em;
+                }
+
+                @include breakpoint(large) {
+                    margin-top:0;
+                }
+                div {
+                    margin-bottom:1.5em;
+                }
+                i {
+                    padding-left:0.5em;
+                }
+            }
+    }
+
+}
