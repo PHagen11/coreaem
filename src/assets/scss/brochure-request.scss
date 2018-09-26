@@ -1,0 +1,42 @@
+.brochure-request {
+
+    .brochure-type-instructions {
+        margin:0 0 2rem 0;
+    }
+    .submit-instructions {
+        font-style: italic;
+    }
+
+    .select-a-dealer-label {
+        font-weight:bold;
+        margin:1rem 0 0.5rem 0;
+    }
+
+    .input-group-field {
+        flex-grow:0;
+        flex-shrink:0;
+        min-width:10em;
+    }
+
+    .dealer-result {
+        background:$dealer-result-background;
+        padding:1rem;
+        label {
+            cursor:pointer;
+            .dealer-result-name {
+                font-weight:bold;
+                min-height:3em;
+                line-height:1.3em;
+            }
+            .dealer-result-distance {
+                margin-bottom:1em;
+                font-weight:bold;
+            }
+            .dealer-result-info {
+                min-height:7em;
+                line-height:1.4em;
+            }
+        }
+
+    }
+}
