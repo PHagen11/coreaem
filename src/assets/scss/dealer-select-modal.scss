@@ -2,7 +2,7 @@
     border: 1px solid $border-gray;
 
     .grid-x.grid-padding-x {
-        padding:1rem;
+        padding: 1rem;
     }
 
     .close-button,
@@ -10,51 +10,37 @@
         right: 1.5rem;
         top: 1rem;
         color: $border-gray;
+
         &:hover {
             color: $medium-gray;
         }
     }
 
     .message {
-        margin-bottom:1rem;
+        margin-bottom: 1rem;
     }
-
-    .dealer-name{
-        font-weight:$dealer-select-modal-dealer-name-weight;
-        font-size:$dealer-select-modal-dealer-name-size;
-        line-height:$dealer-select-modal-dealer-name-line-height;
-    }
-    .distance {
-        font-weight:$dealer-select-modal-dealer-distance-weight;
-        font-size:$dealer-select-modal-dealer-distance-size;
-        margin:0.5rem 0;
-    }
-    .address {
-        font-weight:$dealer-select-modal-dealer-address-weight;
-        font-size:$dealer-select-modal-dealer-address-size;
-    }
-    .city-state-zip {
-        font-weight:$dealer-select-modal-dealer-city-state-zip-weight;
-        font-size:$dealer-select-modal-dealer-city-state-zip-size;
-    }
-    .phone {
-        font-weight:$dealer-select-modal-dealer-phone-weight;
-        font-size:$dealer-select-modal-dealer-phone-size;
-    }
-
     .results {
-        padding:$dealer-select-modal-results-padding;
-        height:50vh;
-        overflow:scroll;
+        padding:1.5rem;
         border-top: 1px solid $border-gray;
+    }
+    .result-entry {
 
-        .result-entry {
-            padding:$dealer-select-modal-result-entry-padding;
-            border-top: 1px solid $border-gray;
-            &:first-child {
-                border-top: none;
-            }
+        .dealer-result-name {
+            font-weight: bold;
+            margin-bottom: 1em;
+            line-height: 1.3em;
         }
+
+        .dealer-result-distance {
+            margin-bottom: 1em;
+            font-weight: bold;
+        }
+
+        .dealer-result-info {
+            margin-bottom: 1em;
+            line-height: 1.4em;
+        }
+
 
     }
 
