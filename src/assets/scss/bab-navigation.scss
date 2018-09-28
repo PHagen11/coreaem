@@ -1,0 +1,23 @@
+.build-a-boat-navigation {
+    border-top: $border;
+    border-bottom: $border;
+    background-color: $bab-nav-bkg-color;
+
+    a.bab-nav-item {
+        display: block;
+        padding: 0.75rem 0;
+        font-weight: $bab-nav-item-weight;
+        font-size: $bab-nav-item-size;
+        text-transform: uppercase;
+        text-align: center;
+        background-color: $bab-nav-bkg-color;
+        color: $bab-nav-item-color;
+        background-color: $bab-nav-bkg-color;
+
+        &.active {
+            background-color: $bab-nav-item-color;
+            color: $bab-nav-bkg-color;
+            background-color: $bab-nav-item-color;
+        }
+    }
+}

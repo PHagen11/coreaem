@@ -1,0 +1,30 @@
+<div class="build-a-boat-navigation show-for-medium">
+    <div class="grid-container">
+        <div class="grid-x">
+            <div class="cell auto">
+                <a href="#" class="bab-nav-item active" onclick="activate(this)">Motor</a>
+            </div>
+            <div class="cell auto">
+                <a href="#" class="bab-nav-item" onclick="activate(this)">Options</a>
+            </div>
+            <div class="cell auto">
+                <a href="#" class="bab-nav-item" onclick="activate(this)">Color</a>
+            </div>
+            <div class="cell auto">
+                <a href="#" class="bab-nav-item" onclick="activate(this)">Summary</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- YO, Kevin! This is only a quick 'n' dirty temp solution highlighting the BAB nav  -->
+<!-- With a jQuery solution you could also eliminate the onclick actions in the links above. -->
+<script type="text/javascript">
+    function activate(elem) {
+        var a = document.getElementsByTagName('a');
+        for (i = 0; i < a.length; i++) {
+        a[i].classList.remove('active')
+    }
+        elem.classList.add('active');
+    };
+</script>
