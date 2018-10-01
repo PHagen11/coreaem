@@ -1,0 +1,31 @@
+.build-a-boat-header {
+    background-color: $bab-header-background-color;
+    padding: 1.5rem 0;
+
+    .bab-boat-name {
+        font-weight: $bab-header-boat-name-weight;
+        font-size: $bab-header-boat-name-size;
+        text-transform: uppercase;
+
+        i {
+            margin-right: 0.3em;
+        }
+    }
+
+    .bab-boat-package-info {
+        font-size: 0.9em;
+    }
+
+    .bab-price-total {
+        font-weight: $bab-header-price-total-weight;
+        font-size: $bab-header-price-total-size;
+        color: $bab-header-price-total-color;
+        text-transform: uppercase;
+    }
+
+    .bab-price-total-note {
+        font-size: 0.65em;
+        line-height:0.8em;
+        text-transform: uppercase;
+    }
+}
