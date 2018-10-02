@@ -1,0 +1,95 @@
+.bab-sum-col {
+
+    .bab-boat {
+        .bab-boat-name {
+            font-size:1.5em;
+            font-weight:900;
+            text-transform: uppercase;
+        }
+    }
+    .prices {
+        font-size: 0.85em;
+        border: $border;
+        border-width: 1px 0;
+        padding: 1em 0;
+        margin-bottom: 2em;
+
+        .price-vals {
+            font-weight: 900;
+            text-align: right;
+
+            .price-reg {
+                white-space: nowrap;
+            }
+
+            .strike {
+                text-decoration: line-through;
+            }
+
+            .price-sale-value {
+                color: $alert-color;
+            }
+
+            .price-save-value {
+                white-space: nowrap;
+            }
+        }
+    }
+    .dealer-info {
+        font-size: 0.85em;
+        line-height:1.5em;
+        .dealer-result-name {
+            font-weight:bold;
+            margin-bottom:1em;
+        }
+        .dealer-result-phone {
+            margin-bottom:1em;
+        }
+        .dealer-result-hours {
+            font-weight:bold;
+            margin-bottom:1em;
+        }
+        .dealer-result-address {
+            margin-bottom:1em;
+        }
+    }
+    .prep-freight {
+        font-size: 0.85em;
+        line-height:2em;
+        margin-bottom:2em;
+        .prep-value, .freight-value{
+            font-weight:bold;
+        }
+    }
+    .special-offers {
+        font-size: 0.85em;
+        border: $border;
+        border-width: 1px 0;
+        padding: 1em 0;
+        margin-bottom: 2em;
+        .special-offers-label {
+            font-weight:bold;
+            margin-bottom:1em;
+        }
+    }
+
+    .price-total {
+        font-size:1.25em;
+        text-transform: uppercase;
+        font-weight:900;
+        margin-bottom: 1.5em;
+    }
+
+    .bab-help {
+        text-align:center;
+        .chat, .call {
+            margin-bottom:1em;
+        }
+    }
+    .bab-disclaimer {
+        font-size:$bab-disclaimer-text-size;
+        text-align:center;
+        color:$bab-disclaimer-text-color;
+        margin-bottom:5rem;
+    }
+}
