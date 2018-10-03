@@ -1,0 +1,38 @@
+.bab-motors {
+
+    .headings {
+        font-size:0.8em;
+        font-weight:bold;
+
+    }
+    .category {
+        background-color: $border-gray;
+        padding:0.5em 1em;
+    }
+    label {
+        line-height:1.3em;
+        cursor:pointer;
+        padding:0.4em 0;
+    }
+    .motor-listing {
+        padding:0.5em;
+    }
+    .motor-listing:nth-child(2n+1) {
+        background-color:$light-gray;
+    }
+    .price-vals {
+        font-weight: 900;
+
+        .strike {
+            text-decoration: line-through;
+        }
+
+        .price-sale-value {
+            color: $alert-color;
+        }
+
+        .price-save-value {
+            white-space: nowrap;
+        }
+    }
+}
