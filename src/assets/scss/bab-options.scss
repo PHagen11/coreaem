@@ -1,0 +1,99 @@
+.bab-options {
+    table.option-item {
+        width: 100%;
+        margin: 0;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+
+    .accordion {
+        margin: 0;
+    }
+
+    .accordion-item > a.accordion-title {
+        font-weight: 900;
+        font-size: 0.9em;
+        text-transform: uppercase;
+        color: inherit;
+        border: $border;
+        border-width: 0 0 1px 0;
+        padding-left: 0;
+    }
+
+    .accordion-item > a.accordion-title::before {
+        position: absolute;
+        display: block;
+        content: "\f107";
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 700;
+        font-style: normal;
+        cursor: pointer;
+        padding: 0;
+        right: 0.5em;
+        top: 35%;
+        margin: 0;
+        width: auto;
+        height: auto;
+        transition: $global-transition;
+        border: none;
+    }
+
+    .accordion-title {
+        background: transparent;
+    }
+
+    .accordion-item.is-active > a.accordion-title::before {
+        transform: rotate(-180deg);
+    }
+
+    .accordion-content {
+        padding: 0;
+        border: none;
+
+        table {
+            tbody {
+                border-color: transparent;
+                border-spacing: 0;
+            }
+
+            tr {
+                background-color: rgba(0,0,0,0.05);
+            }
+
+            td {
+                padding: 0.5rem 0;
+                vertical-align: top;
+                line-height: 1em;
+            }
+
+            .checkit {
+                padding-left: 1rem;
+                width: 2rem;
+            }
+
+            label {
+                font-size: 0.9em;
+                line-height: 1.5em;
+                cursor: pointer;
+            }
+
+            .option-name {
+                text-align: left;
+                width: auto;
+                label {
+                    padding-left: 1em;
+                }
+            }
+
+            .option-price {
+                text-align: right;
+                width: 5rem;
+                label {
+                    font-weight: bold;
+                    padding-left: 0.5em;
+                    padding-right: 1em;
+                }
+            }
+        }
+    }
+}
