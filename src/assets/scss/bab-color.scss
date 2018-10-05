@@ -1,0 +1,135 @@
+.bab-color {
+    .boat-thumbnail {
+        width: 9rem;
+        padding: 0.5rem;
+        display: inline-block;
+        margin: 0 0.5rem;
+        border: 3px solid $border-gray;
+
+        img {
+            width: 100%;
+        }
+
+        &.selected {
+            border: 3px solid $black;
+        }
+    }
+
+    .bab-step-heading {
+        margin-bottom: 2rem;
+    }
+
+    .boat-image {
+        img {
+            width: 100%;
+        }
+    }
+
+    .accordion {
+        margin: 0 0 3em 0;
+        border: $border;
+        border-width:0 0 1px 0;
+    }
+
+    .accordion-item > a.accordion-title {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        text-align: center;
+        color: inherit;
+        border: $border;
+        border-width: 1px 0 0 0;
+        padding-left: 0;
+
+        .color-title {
+            font-weight: 900;
+            margin-right: 0.5em;
+        }
+    }
+
+    .accordion-item > a.accordion-title::before {
+        content: "";
+    }
+
+    .accordion-item a.accordion-title::after {
+        position: relative;
+        display: inline-block;
+        content: "\f107";
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 700;
+        font-style: normal;
+        cursor: pointer;
+        padding: 0;
+        left: 1em;
+        margin: 0;
+        width: auto;
+        height: auto;
+        transition: $global-transition;
+        border: none;
+    }
+
+    .accordion-title {
+        background: transparent;
+    }
+
+    .accordion-item.is-active > a.accordion-title::after {
+        transform: rotate(-180deg);
+    }
+
+    .accordion-content {
+        padding: 0;
+        border: none;
+        background-color: $light-gray;
+        text-align:center;
+    }
+
+    .swatch {
+        display: inline-block;
+        margin: 1em;
+        text-align: center;
+
+        .swatch-circle-highlight {
+            transition: $global-transition;
+            position: relative;
+            width: 6em;
+            height: 6em;
+            border-radius: 50%;
+            background-color: transparent;
+
+            .swatch-circle {
+                cursor:pointer;
+                position: absolute;
+                top: .5em;
+                left: .5em;
+                width: 5em;
+                height: 5em;
+                border-radius: 50%;
+                background-color: $light-gray;
+                overflow: hidden;
+            }
+
+            .three-stripes {
+                .stripe {
+                    width: 100%;
+                    height: 33.3%;
+                }
+            }
+            .four-stripes {
+                .stripe {
+                    width: 100%;
+                    height: 25%;
+                }
+            }
+
+            .custom {
+
+            }
+        }
+
+        &.selected .swatch-circle-highlight {
+            background-color: $border-gray;
+        }
+        .swatch-name {
+            font-size: 0.8em;
+        }
+    }
+}
