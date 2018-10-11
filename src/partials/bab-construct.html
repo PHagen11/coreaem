@@ -1,11 +1,18 @@
-<div class="grid-x grid-margin-x">
-    <div class="cell medium-7">
-        {{> bab-motor}}
-        {{> bab-options}}
-        {{> bab-summary}}
+<div class="grid-container build-a-boat">
+    <div class="grid-x grid-margin-x">
+        <div class="cell medium-7">
+            {{> bab-motor}}
+            {{> bab-options}}
+            {{> bab-summary}}
+        </div>
+        <div class="cell medium-1"></div>
+        <div class="cell medium-4">
+            {{> bab-sum-column}}
+        </div>
     </div>
-    <div class="cell medium-1"></div>
-    <div class="cell medium-4">
-        {{> bab-sum-column}}
-    </div>
+</div>
+
+<div class="hide-for-medium mobile-bab-nav">
+    <a class="button primary expanded">Next: Options</a>
+    <a class="button back expanded">Back</a>
 </div>

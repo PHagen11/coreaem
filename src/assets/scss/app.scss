@@ -93,10 +93,12 @@ $icon-weight: 300;
 // 1. Site
 // -----------
 
+$site-bkg-color: $white;
+
 .site {
   max-width: 1600px;
   margin: auto;
-  background-color: $white;
+  background-color: $site-bkg-color;
 }
 
 $global-transition: all .25s ease-in-out;
@@ -545,7 +547,16 @@ $bab-nav-item-weight:900;
 $bab-disclaimer-text-size: 0.6em;
 $bab-disclaimer-text-color: $medium-gray;
 
+$bab-custom-color-nav-tab-text-color: $black;
+$bab-custom-color-nav-tab-bkg-color: transparent;
+$bab-custom-color-nav-tab-text-color-selected: $white;
+$bab-custom-color-nav-tab-bkg-color-selected: $black;
 
+$bab-custom-color-part-tab-part-text-color: $black;
+$bab-custom-color-part-tab-selected-color-text-color: $medium-gray;
+
+$bab-custom-color-part-tab-bkg-color: transparent;
+$bab-custom-color-part-tab-bkg-color-selected: $border-gray;
 
 //---------- GLOBAL ----------//
 

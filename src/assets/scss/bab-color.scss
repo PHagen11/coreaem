@@ -1,17 +1,34 @@
 .bab-color {
     .boat-thumbnail {
-        width: 9rem;
-        padding: 0.5rem;
+        overflow: hidden;
+        background-position:center;
+        background-size:90%;
+        background-repeat: no-repeat;
         display: inline-block;
-        margin: 0 0.5rem;
-        border: 3px solid $border-gray;
+        border: 2px solid $border-gray;
+
+        @include breakpoint(small) {
+            width: 5rem;
+            height:  2.5rem;
+            margin: 0 0.25rem;
+        }
+        @include breakpoint(medium) {
+            width: 7rem;
+            height:  3.5rem;
+            margin: 0 0.3rem;
+        }
+        @include breakpoint(large) {
+            width: 8rem;
+            height: 4rem;
+            margin: 0 0.5rem;
+        }
 
         img {
             width: 100%;
         }
 
         &.selected {
-            border: 3px solid $black;
+            border-color: $black;
         }
     }
 
@@ -20,13 +37,14 @@
     }
 
     .boat-image {
+        background-color:$site-bkg-color;
         img {
             width: 100%;
         }
     }
 
     .accordion {
-        margin: 0 0 3em 0;
+        margin-bottom:5rem;
         border: $border;
         border-width:0 0 1px 0;
     }
@@ -84,14 +102,33 @@
 
     .swatch {
         display: inline-block;
-        margin: 1em;
+
         text-align: center;
+        @include breakpoint(small) {
+            width: 6em;
+            margin: 1em 0.2em;
+        }
+        @include breakpoint(medium) {
+            width: 7em;
+            margin: 1em 0.5em;
+        }
+
+        vertical-align:top;
+        cursor: pointer;
 
         .swatch-circle-highlight {
             transition: $global-transition;
             position: relative;
-            width: 6em;
-            height: 6em;
+            @include breakpoint(small) {
+                width: 6em;
+                height: 6em;
+            }
+            @include breakpoint(medium) {
+                width: 7em;
+                height: 7em;
+            }
+
+
             border-radius: 50%;
             background-color: transparent;
 
@@ -100,8 +137,15 @@
                 position: absolute;
                 top: .5em;
                 left: .5em;
-                width: 5em;
-                height: 5em;
+                @include breakpoint(small) {
+                    width: 5em;
+                    height: 5em;
+                }
+                @include breakpoint(medium) {
+                    width: 6em;
+                    height: 6em;
+                }
+
                 border-radius: 50%;
                 background-color: $light-gray;
                 overflow: hidden;
@@ -121,7 +165,10 @@
             }
 
             .custom {
-
+                .stripe {
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
 
@@ -129,7 +176,146 @@
             background-color: $border-gray;
         }
         .swatch-name {
+            margin-top:0.25em;
             font-size: 0.8em;
+            line-height: 1.2em;
+        }
+
+
+    }
+    .custom-swatches {
+        .swatch {
+            display: inline-block;
+
+            text-align: center;
+            @include breakpoint(small) {
+                width: 5em;
+            }
+            @include breakpoint(medium) {
+                width: 6em;
+            }
+        }
+        .swatch-circle-highlight {
+            @include breakpoint(small) {
+                width: 5em;
+                height: 5em;
+            }
+            @include breakpoint(medium) {
+                width: 6em;
+                height: 6em;
+            }
+            .swatch-circle {
+                @include breakpoint(small) {
+                    width: 4em;
+                    height: 4em;
+                }
+                @include breakpoint(medium) {
+                    width: 5em;
+                    height: 5em;
+                }
+            }
+        }
+    }
+
+    .custom-nav {
+        margin-top:1.5rem;
+        .tabs {
+            width:max-content;
+            margin:0 auto;
+            padding:0;
+            border:none;
+            .tabs-title {
+                background:transparent;
+                float:left;
+                margin:0;
+                padding:0;
+                transition: $global-transition;
+                a {
+                    width:auto;
+                    opacity:1;
+                    margin:0;
+                    padding:0.5rem 0.75rem;
+                    border:none;
+                    text-transform:uppercase;
+                    font-size:0.9em;
+                    font-weight:900;
+                    color: $bab-custom-color-nav-tab-text-color;
+                }
+            }
+
+            .tabs-title.is-active {
+                background:$bab-custom-color-nav-tab-bkg-color-selected;
+                a {
+                    border:none;
+                    color:$bab-custom-color-nav-tab-text-color-selected;
+                }
+            }
+        }
+        .tabs::before, .tabs::after {
+            content:'';
+        }
+        .tabs-content {
+            border:none;
+        }
+        .custom-sub-categories {
+            text-align:left;
+            list-style: none;
+            margin:0;
+
+            .sub-cat-title {
+                display:block;
+                padding:1em 2em;
+                width:100%;
+                position:relative;
+                background-color:$bab-custom-color-part-tab-bkg-color;
+                .part-name {
+                    color:$bab-custom-color-part-tab-part-text-color;
+                    font-size:0.9em;
+                    font-weight:900;
+                    line-height:1.2em;
+                }
+                .selected-color {
+                    color:$bab-custom-color-part-tab-selected-color-text-color;
+                    font-size:0.9em;
+                    line-height:1.2em;
+                }
+                &.is-active {
+                    background-color:$bab-custom-color-part-tab-bkg-color-selected;
+                    &::after {
+                        content:'';
+                        position:absolute;
+                        width:1rem;
+                        height:1rem;
+                        right:-0.5rem;
+                        top:40%;
+                        background-color:$bab-custom-color-part-tab-bkg-color-selected;
+                        transform:rotate(45deg);
+                    }
+                }
+            }
+        }
+        .custom-sub-categories-mobile {
+            background-color:$black;
+            margin:0;
+            padding:0;
+            i {
+                color:$medium-gray;
+                font-size:1.5em;
+                padding:1em;
+                cursor:pointer;
+                &:active {
+                    color:$white;
+                }
+            }
+            .sub-cat-title {
+                color:$white;
+                font-weight:bold;
+            }
+            .selected-color {
+                color:$white;
+                font-style: italic;
+                line-height:1.2em;
+            }
         }
     }
 }
