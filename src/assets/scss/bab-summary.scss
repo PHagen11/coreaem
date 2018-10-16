@@ -1,0 +1,135 @@
+.bab-summary {
+    .section-title {
+        font-size:1.1em;
+        text-transform: uppercase;
+        font-weight:900;
+        margin-bottom:0.75em;
+        @include breakpoint(small) {
+            text-align:center;
+        }
+        @include breakpoint(medium) {
+            text-align:left;
+        }
+    }
+
+    .bab-sum-col {
+        .bab-boat-name {
+            @include breakpoint(small) {
+                font-size:1rem;
+            }
+            @include breakpoint(medium) {
+                font-size:1.5em;
+            }
+
+        }
+    }
+
+    .prices {
+            margin-top:1em;
+            text-align: left;
+    }
+    .prep-freight {
+            text-align: left;
+    }
+    .dealer-info {
+
+
+        .dealer-name {
+            font-weight:bold;
+        }
+        .dealer-distance{
+            font-weight:bold;
+            margin:1em 0;
+        }
+        .dealer-phone{
+            font-weight:bold;
+        }
+        .dealer-hours {
+            margin:1em 0;
+            .dealer-hours-title {
+                font-weight:bold;
+            }
+            table {
+                width:auto;
+                border-spacing:0;
+                @include breakpoint(small) {
+                    margin:0.5em auto 0 auto;
+                }
+                @include breakpoint(medium) {
+                    margin:0.5em 0 0 0;
+                }
+                tbody {
+                    border: none;
+                }
+                tr {
+                    background:transparent;
+                }
+                td {
+                    padding:0 3em 0.3em 0;
+                    font-size:0.9em;
+                    text-align:left;
+                }
+            }
+        }
+    }
+    .color-table {
+        tbody {
+            border:none;
+        }
+        th {
+            font-size:0.9em;
+            font-weight:bold;
+            text-align:left;
+            text-transform: uppercase;
+            background-color: $light-gray;
+        }
+        tr {
+            background-color: transparent;
+        }
+        td {
+            font-size:0.9em;
+        }
+        td:nth-child(even){
+            font-weight:bold;
+        }
+    }
+    .specs-table {
+        tbody {
+            border:none;
+        }
+        tr {
+            background:transparent;
+        }
+        tr:nth-child(odd){
+            background-color:$light-gray;
+        }
+        td {
+            font-size:.9em;
+        }
+        td:nth-child(even){
+            text-align:right;
+            font-weight:bold;
+        }
+    }
+
+    .features {
+        margin-bottom:5rem;
+    }
+    .feature-list-title {
+        font-weight:bold;
+        text-transform: uppercase;
+        font-size:.9em;
+        margin:1em 0 0 0;
+    }
+    .feature-list {
+        @include breakpoint(small) {
+            margin:1em 0 2em 1em;
+        }
+        @include breakpoint(medium) {
+            margin:1em 0 5em 2em;
+        }
+        li {
+            font-size:.9em;
+        }
+    }
+}

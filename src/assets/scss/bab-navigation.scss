@@ -1,5 +1,7 @@
 .build-a-boat {
+    @include breakpoint(medium) {
         padding-bottom:5rem;
+    }    
 }
 .build-a-boat-navigation {
     border-top: $border;
