@@ -1,6 +1,6 @@
 .bab-sum-col {
     margin: 0 0 3em 0;
-    
+
     .bab-boat {
         .bab-boat-name {
             font-size:1.25rem;
@@ -12,8 +12,8 @@
         font-size: 0.85em;
         border: $border;
         border-width: 1px 0;
-        padding: 1em 0;
-        margin-bottom: 2em;
+        padding: 1em 0 2em;
+        margin-bottom: 1em;
 
         .price-vals {
             font-weight: 900;
@@ -57,7 +57,7 @@
     .prep-freight {
         font-size: 0.85em;
         line-height:2em;
-        margin-bottom:2em;
+        margin-bottom:1em;
         .prep-value, .freight-value{
             font-weight:bold;
         }
