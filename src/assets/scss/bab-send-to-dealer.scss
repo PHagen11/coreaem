@@ -1,0 +1,35 @@
+.bab-send-to-dealer {
+    .bab-back-link {
+        margin-bottom:2em;
+        font-size:0.8em;
+        i {
+            margin-right:0.5em;
+        }
+    }
+    .dealer-info {
+        margin:2em 0;
+        padding:1em;
+        border: $border;
+        font-size:.9em;
+        line-height:2em;
+        .dealer-name, .dealer-distance, .dealer-hours {
+            font-weight:900;
+        }
+        .dealer-name {
+            font-size:1rem;
+        }
+        .dealer-distance {
+            margin:1em 0;
+        }
+        .change-dealer {
+            margin:1em 0;
+        }
+    }
+
+    .contact-area {
+        margin:1em 0;
+        .contact-label {
+            margin-bottom:1em;
+        }
+    }
+}

@@ -1,0 +1,125 @@
+<div class="bab-send-to-dealer">
+    <div class="bab-back-link"><a href="#"><i class="fas fa-chevron-left"></i>Back to Build</a></div>
+    <div class="bab-step-heading">Send to Dealer</div>
+    <div class="send-instructions">
+        AUTHORABLE TEXT. Lorem ipsum dolor sit stay good dog, concecteur adipisicing icing on cupcakes is tasty. Ut labore et dolore magna a liqua. Magma is liquid rock. Rock 'n' roll lives.
+    </div>
+    <div class="dealer-info">
+        <div class="dealer-name">
+            Bass Pro Shops Tracker Boat Center SPRINGFIELD
+        </div>
+        <div class="dealer-distance">
+            Distance: 3 miles
+        </div>
+        <div class="dealer-phone">
+            <a href="tel:4178777334">(417) 887-7334</a>
+        </div>
+        <div class="dealer-hours">
+            Open
+            <!-- if now is between hours of operation -->Now
+            <!-- end if -->: 7AM - 10PM
+        </div>
+        <div class="dealer-address1">
+            1935 S Campbell
+        </div>
+        <div class="dealer-address2">
+        </div>
+        <div class="dealer-city-state-zip">
+            Springfield, MO 65807
+        </div>
+        <div class="change-dealer">
+            <a href="#">Change Dealer</a>
+        </div>
+    </div>
+    <form data-abide novalidate>
+        <div data-abide-error class="alert callout" style="display: none;">
+            <p><i class="fas fa-exclamation-triangle fa-xs"></i> There are some errors in your form.</p>
+        </div>
+
+        <div class="grid-x grid-margin-x">
+
+            <div class="medium-6 cell">
+                <label>First Name*
+                    <input name="firstName" type="text" id="firstNameInput" placeholder="" required>
+                    <span class="form-error" data-form-error-for="firstNameInput">First Name is required.</span>
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label>Last Name*
+                    <input name="lastName" type="text" id="lastNameInput" placeholder="" required>
+                    <span class="form-error" data-form-error-for="lastNameInput">Last Name is required.</span>
+                </label>
+            </div>
+            <div class="medium-12 cell">
+                <label>Street Address 1*
+                    <input  name="addressOne" type="text" id="addressOneInput" placeholder="" required>
+                    <span class="form-error" data-form-error-for="addressOneInput">Street Address 1 is required.</span>
+                </label>
+            </div>
+            <div class="medium-12 cell">
+                <label>Street Address 2
+                    <input  name="addressTwo" type="text" id="addressTwoInput" placeholder="">
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label>City*
+                    <input  name="city" type="text" id="cityInput" placeholder="" required>
+                    <span class="form-error" data-form-error-for="cityInput">City is required.</span>
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label>State*
+                    <input name="state" type="text" id="stateInput" placeholder="" required>
+                    <span class="form-error" data-form-error-for="stateInput">State is required.</span>
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label>Zip/Postal Code*
+                            <input name="postalCode" type="text" id="postalCodeInput" placeholder="" required>
+                            <span class="form-error" data-form-error-for="postalCodeInput">Zip/Postal Code is required.</span>
+                        </label>
+            </div>
+            <div class="medium-6 cell">
+                <label>Country*
+                    <select name="country" id="countryInput" required>
+                        <option value="Canada">Canada</option>
+                        <option value="United States" selected>United States</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                    </select>
+                    <span class="form-error" data-form-error-for="countryInput">Country is required.</span>
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label>Email Address*
+                    <input name="email" type="text" id="emailInput" placeholder="" required pattern="email">
+                    <span class="form-error" data-form-error-for="emailInput">Email address is required in standard email format.</span>
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label>Phone Number
+                    <input  name="phone" type="text" id="phoneInput" placeholder="">
+                </label>
+            </div>
+            <div class="medium-12 cell">
+                <label>Message to Dealer:
+                    <textarea rows="3"></textarea>
+                </label>
+            </div>
+            <div class="medium-12 cell">
+                <div class="contact-area">
+                    <div class="contact-label">Preferred method of contact:</div>
+                    <div><input type="radio" name="contact-type" value="Email" id="contact-email"><label for="contact-email"> Email</label></div>
+                    <div><input type="radio" name="contact-type" value="Phone" id="contact-phone"><label for="contact-phone"> Phone</label></div>
+                </div>
+                <div class="medium-12 cell hide-for-medium">
+                    <button class="button  expanded formSubmit" type="submit" value="Submit">Submit</button>
+                </div>
+                <div class="medium-12 cell show-for-medium">
+                    <button class="button  formSubmit" type="submit" value="Submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+</div>
