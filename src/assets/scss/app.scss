@@ -135,17 +135,12 @@ $header-link-color-hover: $black;
 $header-link-top-bottom-padding: 1.5rem;
 $header-link-left-right-padding: 1rem;
 $header-link-font-size: 1rem;
-
 $header-dropdown-width: 250px;
-
 $header-submenu-background-color: $light-gray;
 $header-submenu-link-font-size: 1rem;
-
 $header-logo-height: 45px;
 $header-logo-padding-top: 10px;
-
 $header-cta-left-spacing: 1rem;
-
 $header-icon-color: $black;
 
 
@@ -187,7 +182,7 @@ $sticky-anchor-link-border-color-active: $primary-color;
 
 $hairline: 1px;
 $thin: 2px;
-$medium: 3px;
+$thick: 3px;
 $heavy: 5px;
 
 // 2. Width
@@ -349,7 +344,6 @@ $footer-background-color: $secondary-color;
 $footer-text-color: $light-gray;
 $footer-link-color-start: $medium-gray;
 $footer-link-color-hover: $white;
-
 $footer-bottom-nav-background-color: $black;
 $footer-bottom-nav-font-size: 0.7rem;
 $footer-bottom-nav-text-color: $medium-gray;
@@ -634,6 +628,10 @@ $bab-custom-color-part-tab-bkg-color-selected: $border-gray;
 }
 .inline {
     display:inline;
+}
+
+.spring-fever-logo {
+  margin-top: -30px;
 }
 
 // additional SCSS files
