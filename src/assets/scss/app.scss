@@ -48,41 +48,34 @@
 // @include foundation-prototype-classes;
 @include motion-ui-transitions;
 @include motion-ui-animations;
-@import "foundation-icons";
+@import "global/foundation-icons";
 
 // Font Awesome files
-@import "fontawesome/fontawesome.scss";
-@import "fontawesome/solid.scss";
-@import "fontawesome/regular.scss";
-@import "fontawesome/light.scss";
-@import "fontawesome/brands.scss";
+@import "vendor/fontawesome/fontawesome.scss";
+@import "vendor/fontawesome/solid.scss";
+@import "vendor/fontawesome/regular.scss";
+@import "vendor/fontawesome/light.scss";
+@import "vendor/fontawesome/brands.scss";
 
 //---------- BEGIN GLOBAL STYLES ----------//
 
 
 // 1. Typography
-// --------------
-
 @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
 
 // 2. Icons
-// --------------
 $icon-weight: 300;
 
 
 //---------- THEMES ----------//
 
 // 1. Minimal
-// --------------
-
 @mixin minimal {
   background-color: none;
   padding: 0;
 }
 
 // 2. Basic
-// --------------
-
 @mixin basic {
   background-color: $light-gray;
   padding: 1.4rem;
@@ -91,8 +84,6 @@ $icon-weight: 300;
 //---------- GENERAL ----------//
 
 // 1. Site
-// -----------
-
 $site-bkg-color: $white;
 
 .site {
@@ -104,15 +95,11 @@ $site-bkg-color: $white;
 $global-transition: all .25s ease-in-out;
 
 // 2. Alignment
-// -----------
-
 $left: left;
 $center: center;
 $right: right;
 
 // 3. Spacing
-// -----------
-
 $none:0;
 $tiny:10px;
 $small: 20px;
@@ -121,10 +108,7 @@ $large: 60px;
 $xlarge: 80px;
 
 // 4. Border
-// -----------
-
 $border: 1px solid $border-gray;
-
 
 //----------- HEADER -----------//
 $header-plain-text-color: $medium-gray; //ex: Link List component titles.
@@ -143,8 +127,6 @@ $header-logo-padding-top: 10px;
 $header-cta-left-spacing: 1rem;
 $header-icon-color: $black;
 
-
-
 //----------- SUB NAVIGATION -----------//
 $sub-navigation-text-color: $white;
 $sub-navigation-text-weight: bold;
@@ -155,39 +137,30 @@ $sub-navigation-link-font-size: 1rem;
 $sub-navigation-selected-background-color: $primary-color;
 $sub-navigation-selected-text-color: $black;
 
-
 //----------- STICKY ANCHOR -----------//
 $sticky-anchor-link-text-transform: none;
 $sticky-anchor-link-text-color: $medium-gray;
 $sticky-anchor-link-border-size: 3px;
 $sticky-anchor-link-border-style: solid;
 $sticky-anchor-link-border-color: $border-gray;
-
 $sticky-anchor-link-text-color-hover: $medium-gray;
 $sticky-anchor-link-border-size-hover:3px;
 $sticky-anchor-link-border-style-hover: solid;
 $sticky-anchor-link-border-color-hover: $medium-gray;
-
 $sticky-anchor-link-text-color-active: $primary-color;
 $sticky-anchor-link-border-size-active: 3px;
 $sticky-anchor-link-border-style-active: solid;
 $sticky-anchor-link-border-color-active: $primary-color;
 
-
-
 //---------- DIVIDER ----------//
 
 // 1. Thickness
-// -----------
-
 $hairline: 1px;
 $thin: 2px;
 $thick: 3px;
 $heavy: 5px;
 
 // 2. Width
-// -----------
-
 $size-small: 35px;
 $size-medium: 140px;
 $size-large: 250px;
@@ -196,8 +169,6 @@ $size-full: 100%;
 //---------- BUTTON ----------//
 
 // 1. Text
-// -----------
-
 @mixin button-text ($font) {
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -205,13 +176,9 @@ $size-full: 100%;
 }
 
 // 2. Hollow Button
-// -----------
-
 $hollow-radius: 4px;
 
 // 3. Clear Button
-// -----------
-
 @mixin button-clear {
   padding:1em 0 1em 0;
 }
@@ -220,15 +187,11 @@ $hollow-radius: 4px;
 //---------- BLOCKQUOTE ----------//
 
 // 1. Basic Theme
-// -----------
-
 @mixin blockquote-basic {
   @include basic;
 }
 
 // 2. Minimal Theme
-// -----------
-
 @mixin blockquote-minimal {
   @include minimal;
   @include breakpoint(small) {
@@ -241,8 +204,6 @@ $hollow-radius: 4px;
 }
 
 // 3. Blockquote Text
-// -----------
-
 $blockquote-font-size: $global-font-size;
 $blockquote-weight: 500;
 $blockquote-color: $body-font-color;
@@ -250,8 +211,6 @@ $author-weight: 600;
 $author-color: $primary-color;
 
 // 4. Blockquote Profile Image
-// -----------
-
 $profile-radius: 100%;
 $profile-size: 50px;
 
@@ -333,10 +292,8 @@ $gallery-toolbar-icons-color-hover:$white;
 $icon-padding: 0.25em;
 
 
-
 //---------- LINK LIST ---------//
 $link-list-title-font-weight: bold;
-
 
 
 //----------- FOOTER -----------//
@@ -351,7 +308,6 @@ $footer-bottom-nav-link-color-start: $medium-gray;
 $footer-bottom-nav-link-color-hover: $white;
 
 //----------- MODEL SPECS -----------//
-
 $minimal-spacing: 1rem 1rem 1rem 0;
 $minimal-odd-background: $white;
 $minimal-even-background: $white;
@@ -360,122 +316,85 @@ $basic-even-background: $white;
 $model-specs-label-case: uppercase;
 
 //----------- MODEL OPTIONS -----------//
-
 $model-options-background-color: $white;
 
 
 //---------- MODEL LISTING ----------//
-
 $model-listing-model-year-size: 1em;
 $model-listing-model-year-weight: bold;
-
 $model-listing-model-name-size: 1.5em;
 $model-listing-model-name-weight: bold;
 $model-listing-model-name-transform: uppercase;
 $model-listing-model-name-line-height: 1.2em;
-
 $model-listing-model-name-tag-color: $primary-color; //i.e.: NEW
 $model-listing-model-name-tag-weight: normal;
-
 $model-listing-package-detail-margin: 1rem 0;
-
 $model-listing-price-block-margin: 1rem 0;
-
 $model-listing-price-label-size: 0.85em; //i.e.: NO HAGGLE NO HASSLE National Price
 $model-listing-price-label-color: $medium-gray;
-
 $model-listing-price-sale-value-size: 1.5em;
 $model-listing-price-sale-value-weight: bold;
 $model-listing-price-sale-value-color: $alert-color;
-
 $model-listing-price-value-size: 1.5em;
 $model-listing-price-value-weight: bold;
-
 $model-listing-price-strike-color: $medium-gray;
-
 $model-listing-price-currency-size: 1.5em;
 $model-listing-price-currency-weight: 300;
 $model-listing-price-currency-color: $medium-gray;
-
 $model-listing-price-save-label-size: 1em;
-
 $model-listing-price-save-value-size: 1em;
 $model-listing-price-save-value-weight: bold;
 $model-listing-price-save-value-color: $alert-color;
-
 $model-listing-specs-block-margin: 1rem 0;
-
 $model-listing-specs-label-padding: 0.25em 0;
 $model-listing-specs-label-size: 1rem 0;
 $model-listing-specs-label-weight: normal;
-
 $model-listing-specs-value-padding: 0.25em 0  0.25em 2.25em;
 $model-listing-specs-value-size: 1rem 0;
 $model-listing-specs-value-weight: bold;
 
 
 //---------- MODEL PRICE ----------//
-
 $model-price-model-year-size: 1em;
 $model-price-model-year-weight: bold;
-
 $model-price-model-name-size: 1.5em;
 $model-price-model-name-weight: bold;
 $model-price-model-name-transform: uppercase;
 $model-price-model-name-line-height: 1.2em;
-
 $model-price-model-name-tag-color: $primary-color; //i.e.: NEW
 $model-price-model-name-tag-weight: normal;
-
 $model-price-package-detail-margin: 1rem 0;
-
 $model-price-td-padding: 0.25rem 0;
-
 $model-price-block-margin: 1rem 0;
-
 $model-price-label-size: 1em; //i.e.: NO HAGGLE NO HASSLE National Price
 $model-price-label-color: inherit;
-
 $model-price-sale-value-size: 1em;
 $model-price-sale-value-weight: bold;
 $model-price-sale-value-color: $alert-color;
-
 $model-price-value-size: 1em;
 $model-price-value-weight: bold;
-
 $model-price-strike-color: inherit;
-
 $model-price-currency-size: 1em;
 $model-price-currency-weight: 300;
 $model-price-currency-color: $medium-gray;
-
 $model-price-save-label-size: 1em;
-
 $model-price-save-value-size: 1em;
 $model-price-save-value-weight: bold;
 $model-price-save-value-color: $alert-color;
-
 $model-price-save-label-size: 1em;
-
 $model-price-save-value-size: 1em;
 $model-price-save-value-weight: bold;
 $model-price-save-value-color: $alert-color;
-
 $model-price-dealer-select-label-size: 1em;
-
 $model-price-dealer-select-link-size: 1em;
-
 $model-price-dealer-name-size: 1em;
 $model-price-dealer-name-weight: bold;
-
 $model-price-dealer-name-link-size: 1em;
 $model-price-dealer-name-link-weight: normal;
-
 $model-price-prep-label-size: 1em;
 $model-price-prep-value-size: 1em;
 $model-price-freight-label-size: 1em;
 $model-price-freight-value-size: 1em;
-
 $model-price-your-price-label-size: 1em;
 $model-price-your-price-label-weight: bold;
 $model-price-your-price-label-color: inherit;
@@ -495,32 +414,24 @@ $dealer-result-background: $light-gray;
 $dealer-search-heading-size: 1em;
 $dealer-search-heading-weight: bold;
 $dealer-search-heading-transform: uppercase;
-
 $dealer-search-results-padding: 0;
 $dealer-search-result-entry-padding: 1.5rem 0;
-
 $dealer-search-map-marker-color: $primary-color;
 $dealer-search-map-marker-counter-color: $white;
 $dealer-search-map-marker-counter-size: 1em;
 $dealer-search-map-marker-counter-weight: bold;
 $dealer-search-map-marker-counter-line-height: 1.5em;
-
 $dealer-search-dealer-name-size: 1em;
 $dealer-search-dealer-name-line-height: 1.2em;
 $dealer-search-dealer-name-weight: bold;
-
 $dealer-search-dealer-distance-size: 0.9em;
 $dealer-search-dealer-distance-weight: bold;
-
 $dealer-search-dealer-address-size: 0.9em;
 $dealer-search-dealer-address-weight: normal;
-
 $dealer-search-dealer-city-state-zip-size: 0.9em;
 $dealer-search-dealer-city-state-zip-weight: normal;
-
 $dealer-search-dealer-phone-size: 0.9em;
 $dealer-search-dealer-phone-weight: normal;
-
 $boat-types-label-size: 1em;
 $boat-types-label-weight: bold;
 
@@ -528,27 +439,21 @@ $boat-types-label-weight: bold;
 $bab-header-background-color: $light-gray;
 $bab-header-boat-name-size: 1.1em;
 $bab-header-boat-name-weight: 900;
-
 $bab-header-price-total-color: $black;
 $bab-header-price-total-size: 1.1em;
 $bab-header-price-total-weight: 900;
-
 $bab-nav-bkg-color:$white;
 $bab-nav-item-color:$black;
 $bab-nav-item-size:1em;
 $bab-nav-item-weight:900;
-
 $bab-disclaimer-text-size: 0.6em;
 $bab-disclaimer-text-color: $medium-gray;
-
 $bab-custom-color-nav-tab-text-color: $black;
 $bab-custom-color-nav-tab-bkg-color: transparent;
 $bab-custom-color-nav-tab-text-color-selected: $white;
 $bab-custom-color-nav-tab-bkg-color-selected: $black;
-
 $bab-custom-color-part-tab-part-text-color: $black;
 $bab-custom-color-part-tab-selected-color-text-color: $medium-gray;
-
 $bab-custom-color-part-tab-bkg-color: transparent;
 $bab-custom-color-part-tab-bkg-color-selected: $border-gray;
 
@@ -573,6 +478,9 @@ $bab-custom-color-part-tab-bkg-color-selected: $border-gray;
 }
 .background-light-gray {
     background-color: $light-gray;
+}
+.background-border-gray {
+    background-color: $border-gray;
 }
 .background-medium-gray {
     background-color: $medium-gray;
@@ -634,49 +542,56 @@ $bab-custom-color-part-tab-bkg-color-selected: $border-gray;
   margin-top: -30px;
 }
 
-// additional SCSS files
-@import 'divider';
-@import 'text';
-@import 'title';
-@import 'button';
-@import 'blockquote';
-@import 'testimonial';
-@import 'spacing';
-@import 'column';
-@import 'hero';
-@import 'tabs';
-@import 'form';
-@import 'link-list';
-@import 'owl-core';
-@import 'owl-animate';
-@import 'owl-autoheight';
-@import 'owl-lazyload';
-@import 'owl-video';
-@import 'image-carousel';
-@import 'video';
-@import 'icon';
-@import 'lightgallery';
-@import 'gallery';
-@import 'footer';
-@import 'header';
-@import 'sub-navigation';
-@import 'sticky-anchor';
-@import 'model-features';
-@import 'model-options';
-@import 'model-motors';
-@import 'model-specs';
-@import 'model-listing';
-@import 'model-price';
-@import 'country-select';
-@import 'dealer-select-modal';
-@import 'dealer-search';
-@import 'international-dealer-list';
-@import 'brochure-request';
-@import 'bab-header';
-@import 'bab-navigation';
-@import 'bab-sum-column';
-@import 'bab-motor';
-@import 'bab-options';
-@import 'bab-color';
-@import 'bab-summary';
-@import 'bab-send-to-dealer';
+// GLOBAL SCSS FILES
+@import 'global/button';
+@import 'global/column';
+@import 'global/divider';
+@import 'global/form';
+@import 'global/text';
+@import 'global/title';
+@import 'global/spacing';
+
+// COMPONENT SCSS FILES
+@import 'components/blockquote';
+@import 'components/testimonial';
+@import 'components/hero';
+@import 'components/tabs';
+@import 'components/link-list';
+@import 'components/image-carousel';
+@import 'components/video';
+@import 'components/icon';
+@import 'components/gallery';
+@import 'components/footer';
+@import 'components/header';
+@import 'components/sub-navigation';
+@import 'components/sticky-anchor';
+@import 'components/model-features';
+@import 'components/model-options';
+@import 'components/model-motors';
+@import 'components/model-specs';
+@import 'components/model-listing';
+@import 'components/model-price';
+@import 'components/country-select';
+@import 'components/dealer-select-modal';
+@import 'components/dealer-search';
+@import 'components/international-dealer-list';
+@import 'components/brochure-request';
+@import 'components/build-your-own/bab-header';
+@import 'components/build-your-own/bab-navigation';
+@import 'components/build-your-own/bab-sum-column';
+@import 'components/build-your-own/bab-motor';
+@import 'components/build-your-own/bab-options';
+@import 'components/build-your-own/bab-color';
+@import 'components/build-your-own/bab-summary';
+@import 'components/build-your-own/bab-send-to-dealer';
+
+// VENDOR SCSS FILES
+@import 'vendor/lightgallery';
+@import 'vendor/owl-core';
+@import 'vendor/owl-animate';
+@import 'vendor/owl-autoheight';
+@import 'vendor/owl-lazyload';
+@import 'vendor/owl-video';
+
+// STYLEGUIDE SPECIFIC SCSS FILES
+@import 'styleguide/styleguide';

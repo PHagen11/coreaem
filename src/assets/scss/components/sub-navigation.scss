@@ -1,0 +1,121 @@
+.sub-navigation {
+  position: relative;
+  z-index: 10;
+  clear: both;
+
+  .title-bar {
+    width: 100%;
+    padding: 0;
+
+    .menu-text {
+      padding-left: 0;
+      padding-right: 0;
+      font-weight: $sub-navigation-text-weight;
+      font-size: $sub-navigation-link-font-size;
+    }
+
+    .title-bar-left {
+      flex: 2 1 auto;
+      color: $sub-navigation-text-color;
+      text-transform: $sub-navigation-text-transform;
+
+      li {
+        padding: 1em 2em 1em 0;
+      }
+    }
+
+    .title-bar-right {
+      flex: 2 1 auto;
+
+      .menu {
+        a {
+          padding: 1em;
+          color: $sub-navigation-link-color-start;
+          font-size: $sub-navigation-link-font-size;
+          transition: $global-transition;
+        }
+
+        a:hover {
+          color: $sub-navigation-link-color-hover;
+        }
+
+        .selected a {
+          background-color: $sub-navigation-selected-background-color;
+          color: $sub-navigation-selected-text-color;
+        }
+      }
+    }
+
+    .accordion-menu {
+      width: 100%;
+    }
+
+    .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
+      display: none;
+      width: 0;
+      height: 0;
+      border: none;
+      content: '';
+    }
+
+    .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::before {
+      content: "\f107";
+      font-family: 'Font Awesome 5 Pro';
+      font-weight: 700;
+      font-style: normal;
+      cursor: pointer;
+      float: right;
+      padding: 0;
+      margin: 0;
+      border-color: $sub-navigation-link-color-start;
+      transition: $global-transition;
+    }
+
+    .accordion-menu .is-accordion-submenu-parent a {
+      color: $sub-navigation-text-color;
+      text-transform: $sub-navigation-text-transform;
+      font-weight: $sub-navigation-text-weight;
+      padding-left: 0;
+      width: 100%;
+      transition: $global-transition;
+    }
+
+    .accordion-menu .is-accordion-submenu-parent a:hover {
+      color: $sub-navigation-link-color-hover;
+    }
+
+    .accordion-menu .is-accordion-submenu-parent[aria-expanded='true'] > a::before {
+      transform: rotate(-180deg);
+    }
+
+    .accordion-menu .is-accordion-submenu-item a {
+      color: $sub-navigation-link-color-start;
+      font-weight: normal;
+      text-transform: none;
+      transition: $global-transition;
+    }
+
+    .accordion-menu .is-accordion-submenu-item a:hover {
+      color: $sub-navigation-link-color-hover;
+    }
+
+    i {
+      margin-right: 0.5em;
+    }
+
+    .page-property {
+      font-size: 0.7em;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $alert-color;
+      margin-left: 0.5em;
+    }
+  }
+
+  .inner-width {
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}

@@ -146,7 +146,7 @@ $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
   small: (
-    'h1': ('font-size': 24 'font-weight': 700),
+    'h1': ('font-size': 24),
     'h2': ('font-size': 20),
     'h3': ('font-size': 19),
     'h4': ('font-size': 18),
@@ -154,7 +154,7 @@ $header-styles: (
     'h6': ('font-size': 16),
   ),
   medium: (
-    'h1': ('font-size': 48 'font-weight': 700),
+    'h1': ('font-size': 48),
     'h2': ('font-size': 40),
     'h3': ('font-size': 31),
     'h4': ('font-size': 25),
@@ -866,10 +866,10 @@ $xy-grid: true;
 $grid-container: $global-width;
 $grid-columns: 12;
 $grid-margin-gutters: (
-  small: 20px,
-  medium: 30px
+  small: 30px,
+  medium: 50px
 );
-$grid-padding-gutters: 1rem;
+$grid-padding-gutters: 6rem;
 $grid-container-padding: (
   small: 50px,
   medium: 80px
