@@ -18,7 +18,9 @@
       flex: 2 1 auto;
       color: $sub-navigation-text-color;
       text-transform: $sub-navigation-text-transform;
-
+      .menu {
+        margin:0;
+      }
       li {
         padding: 1em 2em 1em 0;
       }
@@ -28,11 +30,13 @@
       flex: 2 1 auto;
 
       .menu {
+        margin:0;
         a {
           padding: 1em;
           color: $sub-navigation-link-color-start;
           font-size: $sub-navigation-link-font-size;
           transition: $global-transition;
+          border:none;
         }
 
         a:hover {
@@ -48,6 +52,9 @@
 
     .accordion-menu {
       width: 100%;
+      .menu a {
+        border:none;
+      }
     }
 
     .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
@@ -79,6 +86,7 @@
       width: 100%;
       transition: $global-transition;
     }
+
 
     .accordion-menu .is-accordion-submenu-parent a:hover {
       color: $sub-navigation-link-color-hover;

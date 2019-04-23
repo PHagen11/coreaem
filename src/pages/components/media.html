@@ -3,3 +3,44 @@
     <h1>Media</h1>
   </div>
 </div>
+
+<div class="grid-x grid-margin-x grid-padding-x sticky-anchor large-top" id="sticky-side-anchor-container">
+  <!-- Add a Sticky Menu -->
+  <div class="cell left small-0 medium-4 large-2 sticky-container" data-sticky-container>
+    <div class="sticky" data-sticky data-anchor="sticky-side-anchor-container" data-margin-top="5" data-sticky-on="medium" data-deep-linking="true">
+      <ul class="vertical menu" data-magellan>
+        <li><a href="#hero">Hero</a></li>
+        <li><a href="#image-carousel">Image Carousel</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#video">Video</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="cell small-12 medium-8 large-10 sections" id="sections">
+
+    <!-- HERO -->
+    <section id="hero" data-magellan-target="hero" class="large-bottom">
+      <h5 class="medium-bottom">Hero</h5>
+      {{> hero}}
+    </section>
+
+    <!-- IMAGE CAROUSEL -->
+    <section id="image-carousel" data-magellan-target="image-carousel" class="large-bottom">
+      <h5 class="medium-bottom">Image-Carousel</h5>
+      {{> image-carousel}}
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" data-magellan-target="gallery" class="large-bottom">
+      <h5 class="medium-bottom">Gallery</h5>
+      {{> gallery}}
+    </section>
+
+    <!-- VIDEO -->
+    <section id="video" data-magellan-target="video" class="large-bottom">
+      <h5 class="medium-bottom">Video</h5>
+      {{> video}}
+    </section>
+
+  </div>
+</div>

@@ -3,3 +3,55 @@
     <h1>Navigation</h1>
   </div>
 </div>
+
+<div class="grid-x grid-margin-x grid-padding-x sticky-anchor large-top" id="sticky-side-anchor-container">
+  <!-- Add a Sticky Menu -->
+  <div class="cell left small-0 medium-4 large-2 sticky-container" data-sticky-container>
+    <div class="sticky" data-sticky data-anchor="sticky-side-anchor-container" data-margin-top="5" data-sticky-on="medium" data-deep-linking="true">
+      <ul class="vertical menu" data-magellan>
+        <li><a href="#header">Header</a></li>
+        <li><a href="#footer">Footer</a></li>
+        <li><a href="#link-list">Link List</a></li>
+        <li><a href="#sub-navigation">Sub Navigation</a></li>
+        <li><a href="#sticky-anchor">Sticky Anchor</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="cell small-12 medium-8 large-10 sections" id="sections">
+
+    <!-- HEADER -->
+
+    <section id="header" data-magellan-target="header" class="large-bottom">
+      <h5 class="medium-bottom">Header</h5>
+      {{> header}}
+    </section>
+
+    <!-- FOOTER -->
+
+    <section id="footer" data-magellan-target="footer" class="large-bottom">
+      <h5 class="medium-bottom">Footer</h5>
+      {{> footer}}
+    </section>
+
+    <!-- LINK LIST -->
+
+    <section id="link-list" data-magellan-target="link-list" class="large-bottom">
+      <h5 class="medium-bottom">Link List</h5>
+      {{> link-list}}
+    </section>
+
+    <!-- SUB NAVIGATION -->
+
+    <section id="sub-navigation" data-magellan-target="sub-navigation" class="large-bottom">
+      <h5 class="medium-bottom">Sub Navigation</h5>
+      {{> sub-navigation}}
+    </section>
+
+    <!-- STICKY ANCHOR -->
+
+    <section id="sticky-anchor" data-magellan-target="sticky-anchor" class="large-bottom">
+      <h5 class="medium-bottom">Sticky Anchor</h5>
+      {{> sticky-anchor}}
+    </section>
+  </div>
+</div>

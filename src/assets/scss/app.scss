@@ -552,6 +552,7 @@ $bab-custom-color-part-tab-bkg-color-selected: $border-gray;
 @import 'global/spacing';
 
 // COMPONENT SCSS FILES
+@import 'components/sticky-anchor';
 @import 'components/blockquote';
 @import 'components/testimonial';
 @import 'components/hero';
@@ -564,7 +565,6 @@ $bab-custom-color-part-tab-bkg-color-selected: $border-gray;
 @import 'components/footer';
 @import 'components/header';
 @import 'components/sub-navigation';
-@import 'components/sticky-anchor';
 @import 'components/model-features';
 @import 'components/model-options';
 @import 'components/model-motors';

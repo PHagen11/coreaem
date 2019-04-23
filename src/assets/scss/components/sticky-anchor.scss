@@ -10,7 +10,7 @@
     }
     .menu a {
       @include breakpoint(medium) {
-        background-color: $white;
+        background-color: none;
         text-decoration: none;
         padding: 1em;
         color:$sticky-anchor-link-text-color;
@@ -23,7 +23,7 @@
         }
       }
         @include breakpoint(small) {
-          background-color: $light-gray;
+          background-color: none;
           text-decoration: underline;
           padding:0.8em;
         }

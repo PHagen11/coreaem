@@ -4,11 +4,11 @@
     color: $footer-text-color;
 
     a {
-        color: $footer-link-color-start;
+        color: $footer-link-color-start !important;
         transition: $global-transition;
 
         &:hover {
-            color: $footer-link-color-hover;
+            color: $footer-link-color-hover !important;
         }
     }
 

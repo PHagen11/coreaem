@@ -25,8 +25,16 @@
     .accordion-menu .is-accordion-submenu-parent[aria-expanded='true'] > a::after {
         transform: rotate(-180deg);
     }
+    .menu {
+      margin:0;
+    }
     .dropdown.menu a {
         padding:0.7rem 0;
+        border:none;
+        color: $primary-color;
+        &:hover {
+          border:none;
+        }
     }
     .dropdown.menu > li.is-dropdown-submenu-parent > a {
         color: inherit;
@@ -34,6 +42,7 @@
     }
     .dropdown.menu > li.is-dropdown-submenu-parent > a:hover {
         cursor: default;
+        border:none;
     }
     .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
         border: none;
