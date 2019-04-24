@@ -9,9 +9,13 @@
     <div class="sticky" data-sticky data-anchor="sticky-side-anchor-container" data-margin-top="5" data-sticky-on="medium" data-deep-linking="true">
       <ul class="vertical menu" data-magellan>
         <li><a href="#dealer-search">Dealer Search</a></li>
-        <li><a href="#image-carousel">Image Carousel</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#video">Video</a></li>
+        <li><a href="#international-dealers">Int. Dealers</a></li>
+        <li><a href="#dealer-select">Dealer Select</a></li>
+        <li><a href="#model-specs">Model Specs</a></li>
+        <li><a href="#model-listing">Model Listing</a></li>
+        <li><a href="#model-price">Model Price</a></li>
+        <li><a href="#model-features">Model Features</a></li>
+        <li><a href="#model-options">Model Options</a></li>
       </ul>
     </div>
   </div>
@@ -23,22 +27,46 @@
       {{> dealer-search}}
     </section>
 
-    <!-- IMAGE CAROUSEL -->
-    <section id="image-carousel" data-magellan-target="image-carousel" class="large-bottom">
-      <h5 class="medium-bottom">Image-Carousel</h5>
+    <!-- DEALER SELECT -->
+    <section id="dealer-select" data-magellan-target="dealer-select" class="large-bottom">
+      <h5 class="medium-bottom">Dealer Select</h5>
       {{> dealer-select-modal}}
     </section>
 
-    <!-- GALLERY -->
-    <section id="gallery" data-magellan-target="gallery" class="large-bottom">
-      <h5 class="medium-bottom">Gallery</h5>
-      {{> gallery}}
+    <!-- INTERNATIONAL DEALERS -->
+    <section id="international-dealers" data-magellan-target="international-dealers" class="large-bottom">
+      <h5 class="medium-bottom">International Dealers</h5>
+      {{> international-dealer-list}}
     </section>
 
-    <!-- VIDEO -->
-    <section id="video" data-magellan-target="video" class="large-bottom">
-      <h5 class="medium-bottom">Video</h5>
-      {{> video}}
+    <!-- MODEL SPECS -->
+    <section id="model-specs" data-magellan-target="model-specs" class="large-bottom">
+      <h5 class="medium-bottom">Model Specs</h5>
+      {{> model-specs}}
+    </section>
+
+    <!-- MODEL LISTING -->
+    <section id="model-listing" data-magellan-target="model-listing" class="large-bottom">
+      <h5 class="medium-bottom">Model Listing</h5>
+      {{> model-listing}}
+    </section>
+
+    <!-- MODEL PRICE -->
+    <section id="model-price" data-magellan-target="model-price" class="large-bottom">
+      <h5 class="medium-bottom">Model Price</h5>
+      {{> model-price}}
+    </section>
+
+    <!-- MODEL FEATURES -->
+    <section id="model-features" data-magellan-target="model-features" class="large-bottom">
+      <h5 class="medium-bottom">Model Features</h5>
+      {{> model-features}}
+    </section>
+
+    <!-- MODEL OPTIONS -->
+    <section id="model-options" data-magellan-target="model-options" class="large-bottom">
+      <h5 class="medium-bottom">Model Options</h5>
+      {{> model-options}}
     </section>
 
   </div>
