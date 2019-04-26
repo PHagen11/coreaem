@@ -1,5 +1,5 @@
 .footer {
-    padding-top: 2rem;
+    padding-top: 4rem;
     background-color: $footer-background-color;
     color: $footer-text-color;
 
@@ -22,6 +22,9 @@
     .dropdown.menu > li.is-dropdown-submenu-parent > a {
         padding-top: 0;
         line-height: 1.5;
+    }
+    .link-list .menu a {
+      color: $black;
     }
 
     .link-list .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
@@ -48,7 +51,7 @@
 
     .bottom {
         padding: 1rem 0;
-        margin-top: 2rem;
+        margin-top: 4rem;
         background-color: $footer-bottom-nav-background-color;
         font-size: $footer-bottom-nav-font-size;
         color: $footer-bottom-nav-text-color;

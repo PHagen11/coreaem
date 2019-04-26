@@ -31,13 +31,14 @@
     .dropdown.menu a {
         padding:0.7rem 0;
         border:none;
-        color: $primary-color;
+        color: $secondary-color;
         &:hover {
           border:none;
         }
     }
     .dropdown.menu > li.is-dropdown-submenu-parent > a {
         color: inherit;
+        text-transform: uppercase;
         font-weight:$link-list-title-font-weight;
     }
     .dropdown.menu > li.is-dropdown-submenu-parent > a:hover {

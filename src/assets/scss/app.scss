@@ -66,6 +66,11 @@
 // 2. Icons
 $icon-weight: 300;
 
+// 3. Links
+a {
+  color: $secondary-color
+}
+
 
 //---------- THEMES ----------//
 
@@ -87,7 +92,7 @@ $icon-weight: 300;
 $site-bkg-color: $white;
 
 .site {
-  max-width: 1600px;
+  //max-width: 1600px;
   margin: auto;
   background-color: $site-bkg-color;
 }
@@ -108,7 +113,7 @@ $large: 60px;
 $xlarge: 80px;
 
 // 4. Border
-$border: 1px solid $border-gray;
+$border: 2px solid $border-gray;
 
 //----------- HEADER -----------//
 $header-plain-text-color: $medium-gray; //ex: Link List component titles.
@@ -128,14 +133,15 @@ $header-cta-left-spacing: 1rem;
 $header-icon-color: $black;
 
 //----------- SUB NAVIGATION -----------//
+$sub-navigation-background-color: $black;
 $sub-navigation-text-color: $white;
-$sub-navigation-text-weight: bold;
+$sub-navigation-text-weight: 500;
 $sub-navigation-text-transform: uppercase;
 $sub-navigation-link-color-start: $medium-gray;
 $sub-navigation-link-color-hover: $white;
 $sub-navigation-link-font-size: 1rem;
-$sub-navigation-selected-background-color: $primary-color;
-$sub-navigation-selected-text-color: $black;
+$sub-navigation-selected-background-color: #1E2128;
+$sub-navigation-selected-text-color: $white;
 
 //----------- STICKY ANCHOR -----------//
 $sticky-anchor-link-text-transform: none;
@@ -168,15 +174,21 @@ $size-full: 100%;
 
 //---------- BUTTON ----------//
 
+.button {
+  &:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    transition: 0.25s ease-out, color 0.25s ease-out;
+  }
+}
 // 1. Text
 @mixin button-text ($font) {
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 600;
+  letter-spacing: 1px;
+  font-weight: 900;
 }
 
 // 2. Hollow Button
-$hollow-radius: 4px;
+$hollow-radius: 6px;
 
 // 3. Clear Button
 @mixin button-clear {
@@ -204,15 +216,15 @@ $hollow-radius: 4px;
 }
 
 // 3. Blockquote Text
-$blockquote-font-size: $global-font-size;
+$blockquote-font-size: 1.1rem;
 $blockquote-weight: 500;
 $blockquote-color: $body-font-color;
 $author-weight: 600;
-$author-color: $primary-color;
+$author-color: $secondary-color;
 
 // 4. Blockquote Profile Image
-$profile-radius: 100%;
-$profile-size: 50px;
+$profile-radius: 10%;
+$profile-size: 60px;
 
 //---------- HERO ----------//
 
@@ -293,19 +305,19 @@ $icon-padding: 0.25em;
 
 
 //---------- LINK LIST ---------//
-$link-list-title-font-weight: bold;
+$link-list-title-font-weight: 900;
 
 
 //----------- FOOTER -----------//
-$footer-background-color: $secondary-color;
-$footer-text-color: $light-gray;
+$footer-background-color: $white;
+$footer-text-color: $black;
 $footer-link-color-start: $medium-gray;
-$footer-link-color-hover: $white;
+$footer-link-color-hover: $secondary-color;
 $footer-bottom-nav-background-color: $black;
 $footer-bottom-nav-font-size: 0.7rem;
 $footer-bottom-nav-text-color: $medium-gray;
 $footer-bottom-nav-link-color-start: $medium-gray;
-$footer-bottom-nav-link-color-hover: $white;
+$footer-bottom-nav-link-color-hover: $black;
 
 //----------- MODEL SPECS -----------//
 $minimal-spacing: 1rem 1rem 1rem 0;
