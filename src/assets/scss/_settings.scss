@@ -69,34 +69,34 @@ $global-font-size: 100%;
 $global-width: rem-calc(1240);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #4A90E2,
-  secondary: #4A4A4A,
-  success: #8ABF61,
+  primary: #FFCC04,
+  secondary: #507594,
+  success: #8AC35F,
   warning: #F3AC51,
-  alert: #E35D5D,
-  border-gray: #DEDEDE,
-  light-gray: #F7F7F7,
-  medium-gray: #8B8B8B,
-  dark-gray: #4A4A4A,
-  black: #222222,
+  alert: #EC5840,
+  border-gray: #EBEDF2,
+  light-gray: #F4F5F7,
+  medium-gray: #80858F,
+  dark-gray: #52555B,
+  black: #303236,
   white: #FFFFFF
 );
-$border-gray: #DEDEDE;
-$light-gray: #F7F7F7;
+$border-gray: #D7DFE5;
+$light-gray: #F4F5F7;
 $medium-gray: #8B8B8B;
-$dark-gray: #4A4A4A;
-$black: #222222;
+$dark-gray: #52555B;
+$black: #303236;
 $white: #FFFFFF;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Lato', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: 'Roboto', Helvetica, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-position: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
-$global-radius: 0;
+$global-radius: 4px;
 $global-menu-padding: 0.7rem 1rem;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
@@ -286,25 +286,25 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // ----------
 
 $button-font-family: inherit;
-$button-padding: 1em 1.8em;
+$button-padding: 0.8em 1.6em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
-$button-background-hover: scale-color($button-background, $lightness: -10%);
-$button-color: $white;
-$button-color-alt: $dark-gray;
+$button-background-hover: scale-color($button-background, $lightness: 20%);
+$button-color: $black;
+$button-color-alt: $white;
 $button-radius: $global-radius;
-$button-hollow-border-width: 2px;
+$button-hollow-border-width: 3px;
 $button-sizes: (
-  tiny: 0.6rem,
+  tiny: 0.7rem,
   small: 0.8rem,
   default: 1rem,
   large: 1.25rem,
 );
 $button-palette: $foundation-palette;
 $button-opacity-disabled: 0.25;
-$button-background-hover-lightness: -10%;
-$button-hollow-hover-lightness: -20%;
+$button-background-hover-lightness: 10%;
+$button-hollow-hover-lightness: 20%;
 $button-transition: background-color 0.25s ease-out, color 0.25s ease-out;
 
 // 12. Button Group
@@ -866,10 +866,10 @@ $xy-grid: true;
 $grid-container: $global-width;
 $grid-columns: 12;
 $grid-margin-gutters: (
-  small: 20px,
-  medium: 30px
+  small: 30px,
+  medium: 50px
 );
-$grid-padding-gutters: 1rem;
+$grid-padding-gutters: 6rem;
 $grid-container-padding: (
   small: 50px,
   medium: 80px

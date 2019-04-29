@@ -1,0 +1,68 @@
+.page-title {
+  background: $light-gray;
+}
+@mixin color-swatch {
+  height: 150px;
+  border-radius: 6px;
+}
+.primary-color {
+  @include color-swatch;
+  background: $primary-color;
+}
+.secondary-color {
+  @include color-swatch;
+  background: $secondary-color;
+}
+.success-color {
+  @include color-swatch;
+  background: $success-color;
+}
+.warning-color {
+  @include color-swatch;
+  background: $warning-color;
+}
+.alert-color {
+  @include color-swatch;
+  background: $alert-color;
+}
+.alert-color {
+  @include color-swatch;
+  background: $alert-color;
+}
+.white-color {
+  @include color-swatch;
+  background: $white;
+  border: 1px solid $border-gray;
+}
+.white-color {
+  @include color-swatch;
+  background: $white;
+}
+.light-gray-color {
+  @include color-swatch;
+  background: $light-gray;
+}
+.border-gray-color {
+  @include color-swatch;
+  background: $border-gray;
+}
+.medium-gray-color {
+  @include color-swatch;
+  background: $medium-gray;
+}
+.dark-gray-color {
+  @include color-swatch;
+  background: $dark-gray;
+}
+.black-color {
+  @include color-swatch;
+  background: $black;
+}
+
+.grid-example .cell {
+  background: $light-gray;
+  padding: .5rem;
+}
+.grid-color-example .cell {
+  padding: 1rem;
+}
