@@ -3,3 +3,12 @@
         margin-top: 1rem;
     }
 }
+form label {
+  @include breakpoint(small) {
+    padding: 0 0.5rem 0 0.5rem;
+  }
+  @include breakpoint(medium) {
+    padding-right: 1.2rem;
+    padding-left: 0;
+  }
+}

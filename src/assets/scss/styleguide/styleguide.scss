@@ -1,5 +1,6 @@
 .page-title {
   background: $light-gray;
+  border-bottom: 2px solid $border-gray;
 }
 @mixin color-swatch {
   height: 150px;

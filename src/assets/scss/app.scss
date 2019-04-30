@@ -59,7 +59,6 @@
 
 //---------- BEGIN GLOBAL STYLES ----------//
 
-
 // 1. Typography
 @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
 
@@ -92,9 +91,10 @@ a {
 $site-bkg-color: $white;
 
 .site {
-  //max-width: 1600px;
+  max-width: 2000px;
   margin: auto;
   background-color: $site-bkg-color;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 $global-transition: all .25s ease-in-out;
@@ -116,10 +116,10 @@ $xlarge: 80px;
 $border: 2px solid $border-gray;
 
 //----------- HEADER -----------//
-$header-plain-text-color: $medium-gray; //ex: Link List component titles.
+$header-plain-text-color: $black; //ex: Link List component titles.
 $header-background-color: $white;
 $header-link-background-color-hover: $light-gray;
-$header-link-color-start: $medium-gray;
+$header-link-color-start: $black;
 $header-link-color-hover: $black;
 $header-link-top-bottom-padding: 1.5rem;
 $header-link-left-right-padding: 1rem;
