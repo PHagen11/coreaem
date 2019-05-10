@@ -116,19 +116,19 @@ $xlarge: 100px;
 $border: 2px solid $border-gray;
 
 //----------- HEADER -----------//
-$header-plain-text-color: $black; //ex: Link List component titles.
+$header-plain-text-color: $white; //ex: Link List component titles.
 $header-background-color: $white;
-$header-link-background-color-hover: $light-gray;
-$header-link-color-start: $black;
+$header-link-background-color-hover: $white;
+$header-link-color-start: $dark-gray;
 $header-link-color-hover: $black;
-$header-link-top-bottom-padding: 1.5rem;
-$header-link-left-right-padding: 1rem;
-$header-link-font-size: 1rem;
+$header-link-top-bottom-padding: 2.4rem;
+$header-link-left-right-padding: 1vw;
+$header-link-font-size: 0.9rem;
 $header-dropdown-width: 250px;
 $header-submenu-background-color: $light-gray;
 $header-submenu-link-font-size: 1rem;
-$header-logo-height: 45px;
-$header-logo-padding-top: 10px;
+$header-logo-height: 56px;
+$header-logo-padding-top: 20px;
 $header-cta-left-spacing: 1rem;
 $header-icon-color: $black;
 
@@ -470,6 +470,12 @@ $bab-custom-color-part-tab-bkg-color: transparent;
 $bab-custom-color-part-tab-bkg-color-selected: $border-gray;
 
 //---------- GLOBAL ----------//
+
+.mobile-center {
+  @include breakpoint(small only) {
+    text-align: center!important;
+  }
+}
 
 // AEM Parsys Overrides
 

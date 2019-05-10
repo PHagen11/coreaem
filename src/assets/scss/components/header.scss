@@ -68,6 +68,7 @@
     .header-menu {
         position: relative;
         z-index: 20;
+        padding-right: 1.5rem;
 
         > ul {
             margin: 0;
@@ -95,6 +96,9 @@
                 transition:$global-transition;
                 > a {
                     text-decoration: none;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
                     color: $header-link-color-start;
                     font-size: $header-link-font-size;
                     padding: $header-link-top-bottom-padding $header-link-left-right-padding;
@@ -107,7 +111,7 @@
                 }
 
                 &:hover {
-                    background-color: $header-link-background-color-hover;
+                    background-color: $light-gray;
                 }
             }
 
@@ -126,8 +130,8 @@
                     display: none;
                     width: 100%;
                     height: auto;
-                    background-color: $header-submenu-background-color;
-                    padding: 1em 1.5em;
+                    background-color: $white;
+                    padding: 0.5rem 0 0.5rem 0;
                     position: absolute;
                     z-index: 99;
                     left: 0;
@@ -171,7 +175,7 @@
                     }
 
                     &.normal-sub {
-                        width: $header-dropdown-width;
+                        width: 15vw;
                         left: auto;
 
                         > li {
@@ -182,12 +186,18 @@
                                 border: 0;
                                 display: block;
                                 height: auto;
-                                line-height: 2em;
+                                padding: 0 1.5rem 0rem 1.2rem;
+                                line-height: 2.5em;
+                                font-weight: 500;
                                 font-size: $header-submenu-link-font-size;
                                 color: $header-link-color-start;
+                                border-left: 4px solid $white;
+
 
                                 &:hover {
-                                    color: $header-link-color-hover;
+                                    color: $black;
+                                    background: $light-gray;
+                                    border-left: 4px solid $primary-color;
                                 }
                             }
                         }
@@ -197,13 +207,13 @@
         }
 
         .logo-container {
-            padding-left: 0;
+            padding-left: 1.5rem;
             position: absolute;
             left: 0;
             top: $header-logo-padding-top;
 
             a {
-                opacity: 0.8;
+                opacity: 1;
                 padding: 0;
                 transition: $global-transition;
 
