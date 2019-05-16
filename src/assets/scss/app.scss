@@ -59,7 +59,6 @@
 
 //---------- BEGIN GLOBAL STYLES ----------//
 
-
 // 1. Typography
 @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
 
@@ -92,9 +91,10 @@ a {
 $site-bkg-color: $white;
 
 .site {
-  //max-width: 1600px;
+  max-width: 2000px;
   margin: auto;
   background-color: $site-bkg-color;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 $global-transition: all .25s ease-in-out;
@@ -106,29 +106,29 @@ $right: right;
 
 // 3. Spacing
 $none:0;
-$tiny:10px;
-$small: 20px;
-$medium: 40px;
-$large: 60px;
-$xlarge: 80px;
+$tiny:20px;
+$small: 40px;
+$medium: 60px;
+$large: 80px;
+$xlarge: 100px;
 
 // 4. Border
 $border: 2px solid $border-gray;
 
 //----------- HEADER -----------//
-$header-plain-text-color: $medium-gray; //ex: Link List component titles.
+$header-plain-text-color: $white; //ex: Link List component titles.
 $header-background-color: $white;
-$header-link-background-color-hover: $light-gray;
-$header-link-color-start: $medium-gray;
+$header-link-background-color-hover: $white;
+$header-link-color-start: $dark-gray;
 $header-link-color-hover: $black;
-$header-link-top-bottom-padding: 1.5rem;
-$header-link-left-right-padding: 1rem;
-$header-link-font-size: 1rem;
+$header-link-top-bottom-padding: 2.4rem;
+$header-link-left-right-padding: 1vw;
+$header-link-font-size: 0.9rem;
 $header-dropdown-width: 250px;
 $header-submenu-background-color: $light-gray;
 $header-submenu-link-font-size: 1rem;
-$header-logo-height: 45px;
-$header-logo-padding-top: 10px;
+$header-logo-height: 56px;
+$header-logo-padding-top: 20px;
 $header-cta-left-spacing: 1rem;
 $header-icon-color: $black;
 
@@ -146,15 +146,15 @@ $sub-navigation-selected-text-color: $white;
 //----------- STICKY ANCHOR -----------//
 $sticky-anchor-link-text-transform: none;
 $sticky-anchor-link-text-color: $medium-gray;
-$sticky-anchor-link-border-size: 3px;
+$sticky-anchor-link-border-size: 2px;
 $sticky-anchor-link-border-style: solid;
 $sticky-anchor-link-border-color: $border-gray;
-$sticky-anchor-link-text-color-hover: $medium-gray;
-$sticky-anchor-link-border-size-hover:3px;
+$sticky-anchor-link-text-color-hover: $black;
+$sticky-anchor-link-border-size-hover:2px;
 $sticky-anchor-link-border-style-hover: solid;
-$sticky-anchor-link-border-color-hover: $medium-gray;
-$sticky-anchor-link-text-color-active: $primary-color;
-$sticky-anchor-link-border-size-active: 3px;
+$sticky-anchor-link-border-color-hover: $primary-color;
+$sticky-anchor-link-text-color-active: $black;
+$sticky-anchor-link-border-size-active: 2px;
 $sticky-anchor-link-border-style-active: solid;
 $sticky-anchor-link-border-color-active: $primary-color;
 
@@ -470,6 +470,19 @@ $bab-custom-color-part-tab-bkg-color: transparent;
 $bab-custom-color-part-tab-bkg-color-selected: $border-gray;
 
 //---------- GLOBAL ----------//
+
+.mobile-center {
+  @include breakpoint(small only) {
+    text-align: center!important;
+  }
+}
+
+// AEM Parsys Overrides
+
+.header.sub-header.top-content.i-content.bot-content.prefooter.iparfooter {
+  margin: 0px;
+  padding: 0px;
+}
 
 //These are used by numerous components but seldom change
 

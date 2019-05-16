@@ -1,4 +1,15 @@
 .heroArea {
+  h1 {
+    @include breakpoint(small) {
+      font-size: 36px;
+    }
+    @include breakpoint(medium) {
+      font-size: 48px;
+    }
+    @include breakpoint(large) {
+      font-size: 56px;
+    }
+  }
   position:relative;
   padding-top: $hero-top-padding;
   padding-bottom:$hero-bottom-padding;
