@@ -1,4 +1,15 @@
-,
+.gallery {
+  .media-item img {
+    @include breakpoint(medium) {
+      width: 98%;
+      padding-bottom: 0.5rem;
+    }
+    @include breakpoint(small) {
+      width: 100%;
+      padding-bottom: 0rem;
+    }
+  }
+}
 .lg-outer .lg-thumb-item {
     border-color: $gallery-thumbnail-border-color;
 
