@@ -5,6 +5,7 @@ jQuery(document).ready(function() {
         items: 1,
         loop: true,
         nav:true,
+        autoHeight: true,
         navText:['<i aria-label="Next"></i>','<i aria-label="Previous"></i>']
     });
 });
