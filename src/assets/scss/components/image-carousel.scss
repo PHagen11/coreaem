@@ -33,7 +33,7 @@
 			position: absolute;
 			border: $image-carousel-prevnext-border;
 			color: $image-carousel-prevnext-color;
-			background-color: $image-carousel-prevnext-background-color;
+			background: $image-carousel-prevnext-background-color;
 			margin: 0;
 			opacity: $image-carousel-prevnext-opacity-start;
 
@@ -82,6 +82,7 @@
 		text-align: center;
 		-webkit-tap-highlight-color: transparent;
 		transform: translateY($image-carousel-dots-y-move);
+		padding-bottom: 2rem;
 
 		.owl-dot {
 			display: inline-block;
@@ -98,14 +99,14 @@
 				border-radius: $image-carousel-dots-border-radius;
 				border: $image-carousel-dots-border-weight solid $image-carousel-dots-border-color;
 				opacity: $image-carousel-dots-opacity-start;
-				box-shadow: 0 0 2px 1px rgba(0, 0, 0, 1);
+				//box-shadow: 0 0 2px 1px rgba(0, 0, 0, 1);
 			}
 
 			&.active {
 				span {
 					background: $image-carousel-dots-color-active;
 					opacity: $image-carousel-dots-opacity-active;
-					box-shadow: 0 0 4px 1px rgba(0, 0, 0, 1);
+					//box-shadow: 0 0 4px 1px rgba(0, 0, 0, 1);
 				}
 			}
 

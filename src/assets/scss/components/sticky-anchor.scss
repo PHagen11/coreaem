@@ -28,9 +28,10 @@
         }
       }
         @include breakpoint(small) {
+          border-left: none;
           background-color: none;
           text-decoration: underline;
-          padding:0.8em;
+          padding:1.5rem 0 0 0rem;
         }
         &.is-active {
             border-left: $sticky-anchor-link-border-size-active $sticky-anchor-link-border-style-active $sticky-anchor-link-border-color-active;
@@ -40,7 +41,8 @@
 
     section {
       @include breakpoint(small) {
-        padding-top:2em;
+      padding-top:2em;
+      padding-bottom: 2rem;
       }
       @include breakpoint(medium) {
         padding-top: 0.8em;

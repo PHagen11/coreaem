@@ -1,28 +1,47 @@
 .international-dealer-list {
-    .dealer {
-        margin-top:2rem;
-        border-bottom:1px solid $border-gray;
-            .name {
-                font-weight:bold;
-            }
-            .address {
-                margin-top:1rem;
-            }
-            .links {
-                @include breakpoint(small) {
-                    margin-top:2em;
-                }
+  section {
+    h3 {
+      font-size: 1.5rem;
+      background-color: $light-gray;
+      padding: 1rem;
+      //border-bottom:1px solid $border-gray;
+    }
+  }
+  .sticky-anchor section {
+    padding-top: 0;
+  }
+  .dealer {
+    margin-top: 2.5rem;
+    border-bottom:1px solid $border-gray;
+    //margin-bottom: 1rem;
 
-                @include breakpoint(large) {
-                    margin-top:0;
-                }
-                div {
-                    margin-bottom:1.5em;
-                }
-                i {
-                    padding-left:0.5em;
-                }
-            }
+    .name {
+      font-weight: bold;
+      font-size: 1.2rem;
     }
 
+    .address {
+      margin-top: 1rem;
+
+    }
+
+    .links {
+      @include breakpoint(small) {
+        font-weight: 600;
+        margin-top: 2em;
+        margin-bottom: 1.5rem;
+      }
+      @include breakpoint(large) {
+        margin-top: 0;
+      }
+
+      div {
+        margin-bottom: 1.5em;
+      }
+
+      i {
+        padding-left: 0.5em;
+      }
+    }
+  }
 }
