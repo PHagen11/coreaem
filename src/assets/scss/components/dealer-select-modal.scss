@@ -1,15 +1,15 @@
 .dealer-select-modal {
-    border: 1px solid $border-gray;
+    //border: 1px solid $border-gray;
 
     .grid-x.grid-padding-x {
-        padding: 1rem;
+        //padding: 1rem;
     }
 
     .close-button,
     .close-button.medium {
         right: 1.5rem;
         top: 1rem;
-        color: $border-gray;
+        color: $medium-gray;
 
         &:hover {
             color: $medium-gray;
@@ -18,15 +18,18 @@
 
     .message {
         margin-bottom: 1rem;
+        font-size: 1.2rem;
+        font-weight:600
     }
     .results {
-        padding:1.5rem;
-        border-top: 1px solid $border-gray;
+        padding:2rem 0 1.5rem 0;
+        //border-top: 1px solid $border-gray;
     }
     .result-entry {
 
         .dealer-result-name {
             font-weight: bold;
+            font-size: 1.2rem;
             margin-bottom: 1em;
             line-height: 1.3em;
         }

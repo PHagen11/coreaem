@@ -1,6 +1,7 @@
 .brochure-request {
 
     .brochure-type-instructions {
+      font-size: 1.2rem;
         margin:0 0 2rem 0;
     }
     .submit-instructions {
@@ -8,6 +9,7 @@
     }
 
     .select-a-dealer-label {
+      font-size: 1.2rem;
         font-weight:bold;
         margin:1rem 0 0.5rem 0;
     }
@@ -19,11 +21,14 @@
     }
 
     .dealer-result {
-        background:$dealer-result-background;
-        padding:1rem;
+        background:$light-gray;
+        border:1px solid $border-gray;
+        padding:1.2rem;
+        margin-bottom: 2rem;
         label {
             cursor:pointer;
             .dealer-result-name {
+              font-size: 1.2rem;
                 font-weight:bold;
                 min-height:3em;
                 line-height:1.3em;
@@ -33,7 +38,7 @@
                 font-weight:bold;
             }
             .dealer-result-info {
-                min-height:7em;
+                min-height:6em;
                 line-height:1.4em;
             }
         }

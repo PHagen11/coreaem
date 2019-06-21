@@ -22,17 +22,17 @@
   }
   table {
     .spec-label {
+      width: 50%;
         text-transform: $model-specs-label-case;
+        border-right: 4px solid $white;
     }
     .metric,
     .standard {
-        display: none;
-        font-weight: bold;
-        width: 35%;
-        padding-left: 10px;
+      font-weight: 700;
+        //padding-left: 10px;
     }
     .active-always {
-        font-weight: bold;
+        //font-weight: bold;
         width: 35%;
         padding-left: 10px;
     }

@@ -1,4 +1,9 @@
 .dealer-search {
+  .search-box {
+    background-color: $light-gray;
+    padding:1.8rem 1rem 0.8rem 1rem;
+  }
+
     /* border: 1px solid $border-gray; */
     .grid-x.grid-padding-x {
         /* padding:1rem; */
@@ -19,19 +24,24 @@
         font-weight: $dealer-search-heading-weight;
         font-size: $dealer-search-heading-size;
         text-transform: $dealer-search-heading-transform;
+        padding-bottom: 1rem;
     }
 
     .search-by {
         white-space: nowrap;
-        padding-top: 0.5em;
+        padding-top: 0em;
 
         span {
-            margin-right: 0.25em;
-            white-space: nowrap;
+            margin-right: 0em;
+            //white-space: nowrap;
         }
 
         label {
-            font-size: 1em;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        [type='checkbox'] + label, [type='radio'] + label {
+          margin-right:0;
         }
     }
 
@@ -47,13 +57,14 @@
 
     .results {
         padding: $dealer-search-results-padding;
-        border-top: 1px solid $border-gray;
-
+        .fa-stack-2x {
+          font-size: 2.4em;
+        }
         .result-entry {
             padding: $dealer-search-result-entry-padding;
-            border-bottom: 1px solid $border-gray;
-
-
+            border: 1px solid $border-gray;
+            //box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
 
             .dealer-name {
                 font-weight: $dealer-search-dealer-name-weight;
@@ -84,12 +95,15 @@
 
             .map-marker {
                 color: $dealer-search-map-marker-color;
+                margin-left: 1vw;
             }
             .map-marker-counter {
                 color: $dealer-search-map-marker-counter-color;
                 font-size: $dealer-search-map-marker-counter-size;
                 font-weight: $dealer-search-map-marker-counter-weight;
                 line-height: $dealer-search-map-marker-counter-line-height;
+                margin-left: 1vw;
+                font-style: normal;
             }
             .accolades {
                 img {
@@ -127,6 +141,7 @@
             .links {
                 @include breakpoint(small) {
                     margin-top:2em;
+                    font-weight: 600;
                 }
                 @include breakpoint(medium) {
                     margin-top:0;
@@ -143,7 +158,5 @@
             }
 
         }
-
-
     }
 }

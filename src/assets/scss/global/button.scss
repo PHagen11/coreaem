@@ -24,6 +24,9 @@
 }
 .button.clear {
   @include button-clear;
+  &:hover {
+    box-shadow: none;
+  }
 }
 
 .right-arrow-icon:before {
