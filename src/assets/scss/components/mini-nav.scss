@@ -1,0 +1,92 @@
+.mini-nav {
+	position:relative;
+	background-color: $light-gray;
+	color: $dark-gray;
+	height: 38px;
+	width:100%;
+	font-size: 12px;
+	vertical-align: middle;
+	text-align: right;
+	#mini-nav-menu {
+		width: fit-content;
+		position:absolute;
+		left:auto;
+		right:21px;
+		margin:0;
+		padding:0.25em 0;
+		li {
+			margin-left:1em;
+		}
+		a {
+			border: none;
+			color: $secondary-color;
+			font-weight:bold;
+			height:36px;
+			&:hover {
+				border: none;
+			}
+		}
+		.your-store a {
+			color: $dark-gray;
+			font-weight:normal;
+			padding-right: 1em;
+			position:relative;
+			&::after {
+				font-family: "Font Awesome 5 Pro";
+				font-weight:700;
+				content:'\f107';
+				position: absolute;
+				right:0;
+			}
+		}
+		.store-name {
+			text-transform: uppercase;
+			font-weight:bold;
+			color:$black;
+		}
+	}
+	
+	#store-dropdown {
+		width: 250px;
+		border:none;
+		border-radius:0;
+		background-color: $white;
+		box-shadow: 0 2px 11px 0 rgba(0,0,0,0.07);
+		z-index:100;
+		padding:0;
+		margin:0;
+		.menu {
+			margin:1em;
+			padding:0;
+			a {
+				margin:1em 0 0;
+				border: none;
+				color:$black;
+				text-align: left;
+				font-size:1em;
+				font-weight:bold;
+			}
+			.store-link {
+				padding:0.5em 0.5em 0.5em 0.5em;
+				&::after {
+					font-family: "Font Awesome 5 Pro";
+					font-weight:700;
+					content:'\f054';
+					color: $primary-color;
+					position: absolute;
+					right:0;
+				}
+			}
+			
+		}
+		.change-store {
+			display:block;
+			margin: 2em 0 0;
+			padding:0.5em;
+			font-weight:bold;
+			background-color: $light-gray;
+			text-align: center;
+			color:$black;
+		}
+	}
+}
