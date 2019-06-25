@@ -25,6 +25,7 @@
     }
     .sticky-anchor .menu a {
       border:none;
+  
     }
     .accordion-menu .is-accordion-submenu-parent[aria-expanded='true'] > a::after {
         transform: rotate(-180deg);
