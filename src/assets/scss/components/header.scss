@@ -41,24 +41,33 @@
       color: $header-icon-color;
     }
   }
+  .link-list .dropdown.menu > li.is-dropdown-submenu-parent > a {
+    color: $black;
+  }
+  .link-list .dropdown.menu a {
+    color: $medium-gray;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
 
   .menu-dropdown-icon {
     //arrow menu icon "angle-down"
     &::after{
       @include breakpoint(small) {
-        content: "\f107";
-        font-family: 'Font Awesome 5 Pro';
-        font-weight: 500;
-        font-style: normal;
-        position: relative;
-        cursor: pointer;
-        float: right;
-        padding-right: 1rem;
-        margin: 1.4rem 1rem 1rem 1rem;
-        color: $primary-color;
+        //content: "\f107";
+        //font-family: 'Font Awesome 5 Pro';
+        //font-weight: 500;
+        //font-style: normal;
+        //position: relative;
+        //cursor: pointer;
+        //float: right;
+        //padding-right: 1rem;
+        //margin: 1.4rem 1rem 1rem 1rem;
+        //color: $primary-color;
       }
       @include breakpoint(large) {
-        margin: -3.9rem 0 0 0;
+        //margin: -3.9rem 0 0 0;
       }
       transition: $global-transition;
     }
@@ -106,7 +115,7 @@
           letter-spacing: 1px;
           color: $header-link-color-start;
           font-size: $header-link-font-size;
-          padding: $header-link-top-bottom-padding 2rem $header-link-top-bottom-padding 1vw;
+          padding: $header-link-top-bottom-padding 1vw $header-link-top-bottom-padding 1vw;
           //padding: $header-link-top-bottom-padding $header-link-left-right-padding;
           display: block;
           transition: $global-transition;
@@ -265,7 +274,7 @@
     .cta-container a {
       margin: 0 0 0 $header-cta-left-spacing;
       text-transform: uppercase;
-      color: $primary-color;
+      //color: $primary-color;
       font-weight: 700;
       padding-right: 2rem;
     }
