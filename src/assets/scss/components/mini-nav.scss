@@ -8,35 +8,56 @@
 	vertical-align: middle;
 	text-align: right;
 	#mini-nav-menu {
-		width: fit-content;
+		background-color:transparent;
 		position:absolute;
-		left:auto;
-		right:21px;
+		right:0;
+		padding-right: 21px;
+		border:none;
+		@include breakpoint(large) {
+			left:auto;	
+			width: fit-content;
+		}
+		@include breakpoint(small) {
+			left: 0;	
+			width: 100%;
+		}
 		margin:0;
 		padding:0.25em 0;
-		li {
+		tbody {
+			background-color:transparent;
+		}
+		td {
 			margin-left:1em;
+			white-space: nowrap;
+		}
+		td.spacer {
+			width:90%;
 		}
 		a {
 			border: none;
 			color: $secondary-color;
 			font-weight:bold;
 			height:36px;
+			text-decoration:none;
+			padding:0.7em;
 			&:hover {
 				border: none;
 			}
 		}
-		.your-store a {
-			color: $dark-gray;
-			font-weight:normal;
-			padding-right: 1em;
-			position:relative;
-			&::after {
-				font-family: "Font Awesome 5 Pro";
-				font-weight:700;
-				content:'\f107';
-				position: absolute;
-				right:0;
+		.your-store {
+			
+			a {
+				color: $dark-gray;
+				font-weight:normal;
+				padding-right: 1em;
+				position:relative;
+				&::after {
+					font-family: "Font Awesome 5 Pro";
+					font-weight:700;
+					content:'\f107';
+					position: absolute;
+					right:0;
+				}
 			}
 		}
 		.store-name {
@@ -48,6 +69,7 @@
 	
 	#store-dropdown {
 		width: 250px;
+		top:40px !important;
 		border:none;
 		border-radius:0;
 		background-color: $white;

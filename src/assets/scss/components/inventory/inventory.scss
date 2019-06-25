@@ -3,10 +3,19 @@
 	position:relative;
 	.heroArea{
 		h1 {
-			font-size:4em;
-			.half-size {
-				font-size:0.55em;
+			@include breakpoint(medium down) {
+				font-size:3em;
+				.half-size {
+					font-size:0.55em;
+				}
 			}
+			@include breakpoint(large) {
+				font-size:4em;
+				.half-size {
+					font-size:0.55em;
+				}
+			}
+			
 		}
 	} 
 	.cat-tabs {
@@ -46,7 +55,7 @@
 		}
 		select {
 			margin-right:1em;
-			border-radius: 0;
+			// border-radius: 0;
 			font-size:1em;
 			height:3.25em;
 		}
@@ -57,6 +66,9 @@
 		input[type=submit]{
 			margin-top:1em;
 			height:3.25em;
+			@include breakpoint(small only) {
+				width:100%;
+			}
 		}
 	} 
 }
