@@ -1,0 +1,62 @@
+.inventory {
+	background-color: $light-gray;
+	position:relative;
+	.heroArea{
+		h1 {
+			font-size:4em;
+			.half-size {
+				font-size:0.55em;
+			}
+		}
+	} 
+	.cat-tabs {
+		z-index:5;
+		position: absolute;
+		margin-top:-60px;
+		.category-tab {
+			display:block;
+			float:left;
+			background-color: $black;
+			color: $white;
+			height:60px;
+			text-align:center;
+			font-size: 1.0em;
+			font-weight: bold;
+			padding:1em 2em;
+			cursor: pointer;
+			&.selected {
+				background-color: $white;
+				color: $black;
+			}
+		}
+	}
+	
+	.make-type-search {
+		display:none;
+		&.selected {
+			display:block;
+		}
+	}
+	.search-form {
+		padding:2em;
+		background-color:$white;
+		box-shadow: 0 0 1em rgba($black, 0.25); 
+		.cell {
+			padding-right:1em;
+		}
+		select {
+			margin-right:1em;
+			border-radius: 0;
+			font-size:1em;
+			height:3.25em;
+		}
+		input {
+			font-size:1em;
+			height:3.25em;
+		}
+		input[type=submit]{
+			margin-top:1em;
+			height:3.25em;
+		}
+	} 
+}

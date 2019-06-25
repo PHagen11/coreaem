@@ -1,1 +1,4 @@
+
+window.$ = $;
+
 jQuery(document).foundation();

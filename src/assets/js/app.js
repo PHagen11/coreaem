@@ -4,7 +4,7 @@
 
 // window.$ = $;
 // window.jQuery = jQuery;
-//
+
 // import Foundation from 'foundation-sites';
 // If you want to pick and choose which modules to include, comment out the above and uncomment
 // the line below
@@ -88,5 +88,18 @@ jQuery(document).ready(function($) {
     });
 
 
+    //inventory functions
+    $('.inventory .category-tab').click (function() {
+        var mytype=$(this).attr('data-type');
+        $('.inventory .category-tab').removeClass('selected');
+        $('.inventory .make-type-search').removeClass('selected');
+        $(this).addClass('selected');
+        $('.inventory #'+mytype+'-search').addClass('selected');
+        $('.inventory .heroArea .heroImage').css('background-image','url('+$(this).attr('data-image')+')');
+        $('.inventory .heroArea .half-size').text($(this).attr('data-text-half'));
+        $('.inventory .heroArea .normal-size').text($(this).attr('data-text-normal'));
+        
+        
+    })
 
 });
