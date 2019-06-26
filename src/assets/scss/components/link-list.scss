@@ -1,8 +1,10 @@
 .link-list {
+  // border-left: none;
     .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a {
         font-weight:$link-list-title-font-weight;
         color: inherit;
         padding-left: 0;
+        border:none;
     }
     .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
         position: relative;
@@ -21,53 +23,58 @@
         transition: $global-transition;
         border:none;
     }
+    .sticky-anchor .menu a {
+      // border:none;
 
+    }
     .accordion-menu .is-accordion-submenu-parent[aria-expanded='true'] > a::after {
         transform: rotate(-180deg);
     }
-    .menu {
-      margin:0;
+    .llmenu {
+      // margin:0;
       ul {
         list-style: none;
       }
-    }
-    .dropdown.menu a {
-        padding:0.7rem 0;
-        border:none;
-        color: $secondary-color;
-        &:hover {
+
+      .dropdown.menu a {
+          padding:0.7rem 0;
           border:none;
-        }
-    }
-    .dropdown.menu > li.is-dropdown-submenu-parent > a {
-        color: inherit;
-        text-transform: uppercase;
-        font-weight:$link-list-title-font-weight;
-    }
-    .dropdown.menu > li.is-dropdown-submenu-parent > a:hover {
-        cursor: default;
-        border:none;
-    }
-    .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
-        border: none;
-    }
+          color: inherit;
+          &:hover {
+            border:none;
+          }
+      }
+      .dropdown.menu > li.is-dropdown-submenu-parent > a {
+          color: inherit;
+          text-transform: uppercase;
+          font-weight:$link-list-title-font-weight;
+      }
+      .dropdown.menu > li.is-dropdown-submenu-parent > a:hover {
+          cursor: default;
+          border:none;
+      }
 
-    .dropdown.menu > li.opens-right > .is-dropdown-submenu {
-        display: block;
-        position: relative;
-        top: 0;
-        min-width:inherit;
-        background:inherit;
-    }
+      //removes down arrow from dropdown mode
+      .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+          border: none;
+      }
 
-    .dropdown.menu .is-dropdown-submenu {
-        border: none;
+      .dropdown.menu > li.opens-right > .is-dropdown-submenu {
+          display: block;
+          position: relative;
+          top: 0;
+          min-width:inherit;
+          background:inherit;
+      }
 
-    }
+      .dropdown.menu .is-dropdown-submenu {
+          border: none;
+      }
 
-    i {
-        color: inherit;
-        margin-right: 0.5em;
+      i {
+          color: inherit;
+          margin-right: 0.5em;
+      }
     }
 
     .page-property {
@@ -77,4 +84,14 @@
         color: $alert-color;
         margin-left: 0.5em;
     }
+
+    .notitle {
+      .menuChooser {
+        display:block;
+      }
+      a.title {
+        display:none;
+      }
+    }
+
 }
