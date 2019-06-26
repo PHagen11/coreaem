@@ -54,21 +54,23 @@
 
   .menu-dropdown-icon {
     //arrow menu icon "angle-down"
+    padding-right: 1rem !important;
+    position:relative;
     &::after{
       @include breakpoint(small) {
         content: "\f107";
         font-family: 'Font Awesome 5 Pro';
         font-weight: 500;
         font-style: normal;
-        position: relative;
+        position: absolute;
         cursor: pointer;
         float: right;
-        padding-right: 0rem;
-      margin: -3.8rem 0rem 1rem 1rem;
-      color: $primary-color;
+        right: 0.75rem;
+        top: 1.25rem;
+        color: $primary-color;
       }
       @include breakpoint(large) {
-        //margin: -3.9rem 0 0 0;
+        top: 2.5rem;
       }
       transition: $global-transition;
     }
