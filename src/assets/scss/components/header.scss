@@ -41,6 +41,7 @@
       color: $header-icon-color;
     }
   }
+
   .link-list .dropdown.menu > li.is-dropdown-submenu-parent > a {
     color: $black;
   }
@@ -55,16 +56,16 @@
     //arrow menu icon "angle-down"
     &::after{
       @include breakpoint(small) {
-        //content: "\f107";
-        //font-family: 'Font Awesome 5 Pro';
-        //font-weight: 500;
-        //font-style: normal;
-        //position: relative;
-        //cursor: pointer;
-        //float: right;
-        //padding-right: 0rem;
-        //margin: -3.8rem 0rem 1rem 1rem;
-      //  color: $primary-color;
+        content: "\f107";
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 500;
+        font-style: normal;
+        position: relative;
+        cursor: pointer;
+        float: right;
+        padding-right: 0rem;
+      margin: -3.8rem 0rem 1rem 1rem;
+      color: $primary-color;
       }
       @include breakpoint(large) {
         //margin: -3.9rem 0 0 0;
@@ -300,7 +301,7 @@
     }
 
     .link-list {
-      padding-left: 1.4rem;
+      padding-left: 0rem;
       .sticky-anchor .menu a  {
         border:none;
       }
