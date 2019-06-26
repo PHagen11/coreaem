@@ -42,15 +42,15 @@
     }
   }
 
-  .link-list .dropdown.menu > li.is-dropdown-submenu-parent > a {
-    color: $black;
-  }
-  .link-list .dropdown.menu a {
-    color: $medium-gray;
-    &:hover {
-      color: $secondary-color;
-    }
-  }
+  // .link-list .dropdown.menu > li.is-dropdown-submenu-parent > a {
+  //   color: $black;
+  // }
+  // .link-list .dropdown.menu a {
+  //   color: $medium-gray;
+  //   &:hover {
+  //     color: $secondary-color;
+  //   }
+  // }
 
   .menu-dropdown-icon {
     //arrow menu icon "angle-down"

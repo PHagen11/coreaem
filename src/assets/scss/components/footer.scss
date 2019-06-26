@@ -1,78 +1,56 @@
 .footer {
-    padding-top: 1rem;
-    background-color: $footer-background-color;
-    color: $footer-text-color;
+  padding-top: 1rem;
+  background-color: $footer-background-color;
+  color: $footer-text-color;
 
-    a {
-        color: $footer-link-color-start !important;
+  .logo {
+    img {
+      width: 100%;
+      max-width: 130px;
+    }
+  }
+
+  .link-list {
+    margin-bottom: 1rem;
+    .title {
+      color: $black !important;
+      font-weight: 600;
+    }
+  }
+
+  a {
+    color: $footer-link-color-start;
+    transition: $global-transition;
+
+    &:hover {
+      color: $footer-link-color-hover !important;
+    }
+  }
+
+  .bottom {
+    padding: 1rem 0;
+    margin-top: 4rem;
+    background-color: $footer-bottom-nav-background-color;
+    font-size: $footer-bottom-nav-font-size;
+    color: $footer-bottom-nav-text-color;
+
+    .nav {
+      a {
+        padding: 0 0.5em;
+        color: $footer-bottom-nav-link-color-start;
+        text-transform: uppercase;
         transition: $global-transition;
 
         &:hover {
-            color: $footer-link-color-hover !important;
+          color: $footer-bottom-nav-link-color-hover;
         }
-    }
-
-    .logo {
-        img {
-            width: 100%;
-            max-width: 130px;
-        }
-    }
-
-    .dropdown.menu > li.is-dropdown-submenu-parent > a {
+      }
+      @include breakpoint(small) {
+        padding-top: 1rem;
+      }
+      @include breakpoint(large) {
         padding-top: 0;
-        line-height: 1.5;
+      }
     }
-    .link-list .menu a {
-      color: $black;
-    }
-
-    .link-list .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
-        border-color: $footer-link-color-start;
-        transition: $global-transition;
-    }
-
-    .link-list .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a:hover::after {
-        border-color: $footer-link-color-hover;
-    }
-
-    .link-list i {
-        color: $footer-link-color-start;
-        transition: $global-transition;
-    }
-
-    .link-list a:hover i {
-        color: $footer-link-color-hover;
-    }
-
-    .link-list .is-dropdown-submenu {
-        background: transparent;
-    }
-
-    .bottom {
-        padding: 1rem 0;
-        margin-top: 4rem;
-        background-color: $footer-bottom-nav-background-color;
-        font-size: $footer-bottom-nav-font-size;
-        color: $footer-bottom-nav-text-color;
-
-        .nav {
-            a {
-                padding: 0 0.5em;
-                color: $footer-bottom-nav-link-color-start;
-                text-transform: uppercase;
-                transition:$global-transition;
-
-                &:hover {
-                    color: $footer-bottom-nav-link-color-hover;
-                }
-            }
-            @include breakpoint(small) {
-                padding-top: 1rem;
-            }
-            @include breakpoint(large) {
-                padding-top: 0;
-            }
-        }
-    }
+  }
 }

@@ -312,7 +312,7 @@ $link-list-title-font-weight: 900;
 //----------- FOOTER -----------//
 $footer-background-color: $white;
 $footer-text-color: $black;
-$footer-link-color-start: $dark-gray;
+$footer-link-color-start: $medium-gray;
 $footer-link-color-hover: $secondary-color;
 $footer-bottom-nav-background-color: $black;
 $footer-bottom-nav-font-size: 0.7rem;
@@ -612,6 +612,7 @@ $bab-custom-color-part-tab-bkg-color-selected: $border-gray;
 @import 'components/build-your-own/bab-summary';
 @import 'components/build-your-own/bab-send-to-dealer';
 @import 'components/inventory/inventory';
+@import 'components/inventory/inventory-card';
 
 // VENDOR SCSS FILES
 @import 'vendor/lightgallery';

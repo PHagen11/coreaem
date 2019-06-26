@@ -34,6 +34,7 @@
 		// outline:1px dotted red;
 		// margin:0;
 		.title {
+			color: $black !important;
 			// outline:1px dashed black;
 			text-transform: uppercase;
 			font-weight:$link-list-title-font-weight;
@@ -50,7 +51,7 @@
 					padding:0.7rem 0;
 					// color:inherit;
 				}
-			}	
+			}
 		}
 
 		// &.dropdown a {
@@ -94,13 +95,13 @@
 		}
 	}
 
-	.page-property {
-			font-size: 0.7em;
-			font-weight: bold;
-			text-transform: uppercase;
-			color: $alert-color;
-			margin-left: 0.5em;
-	}
+	// .page-property {
+	// 		font-size: 0.7em;
+	// 		font-weight: bold;
+	// 		text-transform: uppercase;
+	// 		color: $alert-color;
+	// 		margin-left: 0.5em;
+	// }
 
 	.notitle {
 		.menuChooser {
