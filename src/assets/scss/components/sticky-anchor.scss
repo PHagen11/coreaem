@@ -5,7 +5,8 @@
 		font-size: 1.3rem;
 		text-transform: uppercase;
 	}
-	.sticky-container {
+	
+	.samenu{
 		.menu {
 			@include breakpoint(large) {
 				margin:1em 0;
@@ -13,33 +14,34 @@
 			@include breakpoint(small) {
 				margin-bottom:1em;
 			}
-		}
-		.menu a {
-			@include breakpoint(medium) {
-				background-color: none;
-				text-decoration: none;
-				padding: .7em;
-				color:$sticky-anchor-link-text-color;
-				border-left: $sticky-anchor-link-border-size $sticky-anchor-link-border-style $sticky-anchor-link-border-color;
-				text-transform: $sticky-anchor-link-text-transform;
-				transition: $global-transition;
-				&:hover {
-						border-left: $sticky-anchor-link-border-size-hover $sticky-anchor-link-border-style-hover $sticky-anchor-link-border-color-hover;
-						color:$sticky-anchor-link-text-color-hover;
+			a {
+				@include breakpoint(medium) {
+					// background-color: none;
+					text-decoration: none;
+					padding: .7em;
+					color:$sticky-anchor-link-text-color;
+					border-left: $sticky-anchor-link-border-size $sticky-anchor-link-border-style $sticky-anchor-link-border-color;
+					text-transform: $sticky-anchor-link-text-transform;
+					transition: $global-transition;
+					&:hover {
+							border-left: $sticky-anchor-link-border-size-hover $sticky-anchor-link-border-style-hover $sticky-anchor-link-border-color-hover;
+							color:$sticky-anchor-link-text-color-hover;
+					}
 				}
+					@include breakpoint(small) {
+						border-left: none;
+						// background-color: none;
+						text-decoration: underline;
+						padding:1.5rem 0 0 0rem;
+					}
+					&.is-active {
+							border-left: $sticky-anchor-link-border-size-active $sticky-anchor-link-border-style-active $sticky-anchor-link-border-color-active;
+							color:$sticky-anchor-link-text-color-active;
+					}
 			}
-				@include breakpoint(small) {
-					border-left: none;
-					background-color: none;
-					text-decoration: underline;
-					padding:1.5rem 0 0 0rem;
-				}
-				&.is-active {
-						border-left: $sticky-anchor-link-border-size-active $sticky-anchor-link-border-style-active $sticky-anchor-link-border-color-active;
-						color:$sticky-anchor-link-text-color-active;
-				}
 		}
-	}
+	}	
+	
 	section {
 		@include breakpoint(small) {
 		padding-top:2em;

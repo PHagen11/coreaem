@@ -1,97 +1,113 @@
 .link-list {
-  // border-left: none;
-    .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a {
-        font-weight:$link-list-title-font-weight;
-        color: inherit;
-        padding-left: 0;
-        border:none;
-    }
-    .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
-        position: relative;
-        display: inline-block;
-        content: "\f107";
-        font-family: 'Font Awesome 5 Pro';
-        font-weight: 700;
-        font-style: normal;
-        cursor: pointer;
-        padding: 0;
-        left: 0.5em;
-        top: 0;
-        margin:0;
-        width:auto;
-        height:auto;
-        transition: $global-transition;
-        border:none;
-    }
-    .sticky-anchor .menu a {
-      // border:none;
+	// border-left: none;
+	.accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a {
+		// font-weight:$link-list-title-font-weight;
+		// color: inherit;
+		// padding-left: 0;
+		// border:none;
+		transition: $global-transition;
+	}
+	.accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
+		position: relative;
+		display: inline-block;
+		content: "\f107";
+		font-family: 'Font Awesome 5 Pro';
+		font-weight: 700;
+		font-style: normal;
+		cursor: pointer;
+		padding: 0;
+		left: 0.5em;
+		top: 0;
+		margin:0;
+		width:auto;
+		height:auto;
+		transition: $global-transition;
+		border:none;
+	}
+	// .sticky-anchor .menu a {
+		// border:none;
+	// }
+	.accordion-menu .is-accordion-submenu-parent[aria-expanded='true'] > a::after {
+		transform: rotate(-180deg);
+	}
+	.llmenu {
+		// outline:1px dotted red;
+		// margin:0;
+		.title {
+			// outline:1px dashed black;
+			text-transform: uppercase;
+			font-weight:$link-list-title-font-weight;
+			padding:0.7rem 0;
+		}
+		ul {
+			// outline:1px dotted blue;
+			list-style: none;
+			border:none;
+			li {
+				// outline:1px dotted orange;
+				a {
+					// outline:2px double green;
+					padding:0.7rem 0;
+					// color:inherit;
+				}
+			}	
+		}
 
-    }
-    .accordion-menu .is-accordion-submenu-parent[aria-expanded='true'] > a::after {
-        transform: rotate(-180deg);
-    }
-    .llmenu {
-      // margin:0;
-      ul {
-        list-style: none;
-      }
+		// &.dropdown a {
+		//     padding:0.7rem 0;
+		//     border:none;
+		//     color: inherit;
+		//     &:hover {
+		//       border:none;
+		//     }
+		// }
+		// &.dropdown > li.is-dropdown-submenu-parent > a {
+		// 		color: inherit;
+		// 		text-transform: uppercase;
+		// 		font-weight:$link-list-title-font-weight;
+		// }
+		// &.dropdown > li.is-dropdown-submenu-parent > a:hover {
+		// 		cursor: default;
+		// 		border:none;
+		// }
 
-      &.dropdown.menu a {
-          padding:0.7rem 0;
-          border:none;
-          color: inherit;
-          &:hover {
-            border:none;
-          }
-      }
-      &.dropdown.menu > li.is-dropdown-submenu-parent > a {
-          color: inherit;
-          text-transform: uppercase;
-          font-weight:$link-list-title-font-weight;
-      }
-      &.dropdown.menu > li.is-dropdown-submenu-parent > a:hover {
-          cursor: default;
-          border:none;
-      }
+		//removes down arrow from dropdown mode
+		&.dropdown > li.is-dropdown-submenu-parent > a::after {
+				border: none;
+		}
+		//this keeps the dropdown open
+		&.dropdown > li.opens-right > .is-dropdown-submenu {
+				display: block;
+				position: relative;
+				top: 0;
+				// min-width:inherit;
+				// background:inherit;
+		}
 
-      //removes down arrow from dropdown mode
-      &.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
-          border: none;
-      }
+		// &.dropdown .is-dropdown-submenu {
+		// 		border: none;
+		// }
 
-      &.dropdown.menu > li.opens-right > .is-dropdown-submenu {
-          display: block;
-          position: relative;
-          top: 0;
-          min-width:inherit;
-          background:inherit;
-      }
+		i {
+				color: inherit;
+				margin-right: 0.5em;
+		}
+	}
 
-      &.dropdown.menu .is-dropdown-submenu {
-          border: none;
-      }
+	.page-property {
+			font-size: 0.7em;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: $alert-color;
+			margin-left: 0.5em;
+	}
 
-      i {
-          color: inherit;
-          margin-right: 0.5em;
-      }
-    }
-
-    .page-property {
-        font-size: 0.7em;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: $alert-color;
-        margin-left: 0.5em;
-    }
-
-    .notitle {
-      .menuChooser {
-        display:block;
-      }
-      a.title {
-        display:none;
-      }
-    }
-
+	.notitle {
+		.menuChooser {
+			display:block;
+		}
+		a.title {
+			display:none;
+		}
+	}
 }
