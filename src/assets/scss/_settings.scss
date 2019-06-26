@@ -119,7 +119,7 @@ $breakpoints: (
   xxlarge: 1440px,
 );
 $print-breakpoint: large;
-$breakpoint-classes: (small medium large);
+$breakpoint-classes: (small medium large xlarge xxlarge);
 
 // 3. The Grid
 // -----------
@@ -334,8 +334,8 @@ $callout-link-tint: 30%;
 
 $card-background: $white;
 $card-font-color: $body-font-color;
-$card-divider-background: $light-gray;
-$card-border: 1px solid $light-gray;
+$card-divider-background: $white;
+$card-border: none;
 $card-shadow: none;
 $card-border-radius: $global-radius;
 $card-padding: $global-padding;
