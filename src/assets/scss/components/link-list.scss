@@ -1,8 +1,10 @@
 .link-list {
+  border-left: none;
     .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a {
         font-weight:$link-list-title-font-weight;
         color: inherit;
         padding-left: 0;
+        border:none;
     }
     .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
         position: relative;
@@ -21,7 +23,10 @@
         transition: $global-transition;
         border:none;
     }
+    .sticky-anchor .menu a {
+      border:none;
 
+    }
     .accordion-menu .is-accordion-submenu-parent[aria-expanded='true'] > a::after {
         transform: rotate(-180deg);
     }
@@ -77,4 +82,13 @@
         color: $alert-color;
         margin-left: 0.5em;
     }
+    .notitle {
+      .menuChooser {
+        display:block;
+      }
+      a.title {
+        display:none;
+      }
+    }
+
 }
