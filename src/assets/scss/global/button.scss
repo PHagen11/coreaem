@@ -17,6 +17,7 @@
 }
 
 .button {
+  text-decoration: none;
   @include button-text ('Lato');
 }
 .button.hollow {

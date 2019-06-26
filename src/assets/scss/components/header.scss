@@ -54,30 +54,28 @@
 
   .menu-dropdown-icon {
     //arrow menu icon "angle-down"
-    padding-right: 1rem !important;
-    position:relative;
-    &::after{
+    //position:relative;
+    > a::after{
       @include breakpoint(small) {
         content: "\f107";
         font-family: 'Font Awesome 5 Pro';
-        font-weight: 500;
+        font-weight: 600;
         font-style: normal;
-        position: absolute;
         cursor: pointer;
         float: right;
-        right: 0.75rem;
-        top: 1.25rem;
+        margin:0 0.5rem 0 0.5rem ;
         color: $primary-color;
       }
       @include breakpoint(large) {
-        top: 2.5rem;
+        margin:0 0rem 0 0.4rem ;
+        float:none;
       }
       transition: $global-transition;
     }
   }
 
   .menu-dropdown-icon.opened {
-    &::before {
+    > a::after {
       transform: rotate(-180deg);
     }
   }
