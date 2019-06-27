@@ -1,5 +1,8 @@
+$card-margin-medium: 1rem;
+$card-margin-xlarge: 2rem;
 .inventory-card {
   .card {
+    
     @include breakpoint(small only) {
       padding:0.5rem 0 0.5rem 0;
       margin:0;
@@ -8,13 +11,13 @@
       border-bottom: 2px solid $border-gray;
     }
     @include breakpoint(medium) {
-      margin:0 0.6rem 0.6rem 0.6rem;
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
       &:hover {
         box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.12);
         transition: box-shadow 0.3s ease-in-out;
       }
     }
+
     .card-divider {
       padding: 0.6rem 1rem 0.5rem 1rem;
       font-size: 0.8em;
@@ -36,5 +39,46 @@
   }
   a {
     text-decoration: none;
+  }
+  
+  @include breakpoint(medium) {
+    &:nth-child(odd){
+      .card{
+        width:98%;
+        margin:0 2% 4% 0;
+      }
+    }
+    &:nth-child(even){
+      .card{
+        width:98%;
+        margin:0 0 4% 2%;
+      }
+    }
+  }
+  @include breakpoint(xlarge) {
+    &:nth-child(4n-3){
+      .card{
+        width:95%;
+        margin:0 5% 5% 0;
+      }
+    }
+    &:nth-child(4n-2){
+      .card{
+        width:95%;
+        margin:0 3.25% 5% 1.75%;
+      }
+    }
+    &:nth-child(4n-1){
+      .card{
+        width:95%;
+        margin:0 1.75% 5% 3.25%;
+      }
+    }
+    &:nth-child(4n){
+      .card{
+        width:95%;
+        margin:0 0 5% 5%;
+      } 
+    }
   }
 }
