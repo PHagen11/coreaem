@@ -98,8 +98,15 @@ jQuery(document).ready(function($) {
         $('.inventory .heroArea .heroImage').css('background-image','url('+$(this).attr('data-image')+')');
         $('.inventory .heroArea .half-size').text($(this).attr('data-text-half'));
         $('.inventory .heroArea .normal-size').text($(this).attr('data-text-normal'));
-        
-        
     })
 
+    $('.inventory .filter-toggle-button').click (function() {
+        $('.filter-panel').addClass('shown').removeClass('hidden');
+        $('#results-grid').removeClass('medium-up-2 xlarge-up-4 two-and-four-up').addClass('medium-up-1 xlarge-up-3 one-and-three-up');
+
+    });
+    $('.inventory .filter-form .close-button').click (function() {
+        $('.filter-panel').addClass('hidden').removeClass('shown');
+        $('#results-grid').removeClass('medium-up-1 xlarge-up-4 one-and-three-up').addClass('medium-up-2 xlarge-up-4 two-and-four-up');
+    });
 });
