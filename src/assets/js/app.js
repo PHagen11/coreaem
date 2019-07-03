@@ -109,4 +109,10 @@ jQuery(document).ready(function($) {
         $('.filter-panel').addClass('hidden').removeClass('shown');
         $('#results-grid').removeClass('medium-up-1 xlarge-up-4 one-and-three-up').addClass('medium-up-2 xlarge-up-4 two-and-four-up');
     });
+    
+
+
+
+
+
 });

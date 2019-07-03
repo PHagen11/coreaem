@@ -5,27 +5,81 @@
 		<form class="filter-form">
 			<div class="filter-heading">
 				<span class="title">Filter By:</span>
-				<button class="close-button" aria-label="Close menu" type="button>
+				<button class="close-button" aria-label="Close menu" type="button">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
 			<section class="stores">
 				<div class="title">Stores near <a href="">65721</a>:</div>
+				<input type="checkbox" id="springfield-mo"><label for="springfield-mo">Springfield, MO <span class="count">(Your Store)</span></label><br/>
+				<input type="checkbox" id="branson-mo"><label for="branson-mo">Branson, MO</label><br/>
+				<input type="checkbox" id="broken-arrow-ok"><label for="broken-arrow-ok">Broken Arrow, OK</label><br/>	
 			</section>
-			<section class="make">
-					<div class="title">Make:</div>
-			</section>
-			<section class="condition">
-				<input type="radio" class="button" value="used">
-				<input type="radio" class="button" value="new">
-			</section>
-			<section class="boatclass">
-				<input type="checkbox" id="jon-boats"><label for="jon-boats">Jon Boats <span class="count">(24)</span></label><br/>
-				<input type="checkbox" id="freshwater-fishing"><label for="freshwater-fishing">Freshwater Fishing <span class="count">(4)</span></label><br/>
-				<input type="checkbox" id="ski-and-fish"><label for="ski-and-fish">Ski and Fish <span class="count">(6)</span></label><br/>
-				<input type="checkbox" id="aluminum-fish-boats"><label for="aluminum-fish-boats">Aluminum Fish Boats <span class="count">(15)</span></label><br/>
-				<input type="checkbox" id="runabouts"><label for="runabouts">Runabouts <span class="count">(2)</span></label><br/>
-			</section>
+			<ul class="accordion" data-accordion data-allow-all-closed="true" data-multi-expand="true">
+				<li class="accordion-item is-active" data-accordion-item>
+					<a href="#" class="accordion-title">MAKE:</a>
+					<div class="accordion-content" data-tab-content>
+						<input type="checkbox" id="jon-boats"><label for="jon-boats">Jon Boats <span class="count">(24)</span></label><br/>
+						<input type="checkbox" id="freshwater-fishing"><label for="freshwater-fishing">Freshwater Fishing <span class="count">(4)</span></label><br/>
+						<input type="checkbox" id="ski-and-fish"><label for="ski-and-fish">Ski and Fish <span class="count">(6)</span></label><br/>
+						<input type="checkbox" id="aluminum-fish-boats"><label for="aluminum-fish-boats">Aluminum Fish Boats <span class="count">(15)</span></label><br/>
+					</div>
+				</li>
+				<li class="accordion-item is-active" data-accordion-item>
+					<a href="#" class="accordion-title">CONDITION:</a>
+					<div class="accordion-content" data-tab-content>
+						<input type="checkbox" id="jon-boats"><label for="jon-boats">Jon Boats <span class="count">(24)</span></label><br/>
+						<input type="checkbox" id="freshwater-fishing"><label for="freshwater-fishing">Freshwater Fishing <span class="count">(4)</span></label><br/>
+						<input type="checkbox" id="ski-and-fish"><label for="ski-and-fish">Ski and Fish <span class="count">(6)</span></label><br/>
+						<input type="checkbox" id="aluminum-fish-boats"><label for="aluminum-fish-boats">Aluminum Fish Boats <span class="count">(15)</span></label><br/>
+					</div>
+				</li>
+				<li class="accordion-item is-active" data-accordion-item>
+					<a href="#" class="accordion-title">BOAT CLASS:</a>
+					<div class="accordion-content" data-tab-content>
+						<input type="checkbox" id="jon-boats"><label for="jon-boats">Jon Boats <span class="count">(24)</span></label><br/>
+						<input type="checkbox" id="freshwater-fishing"><label for="freshwater-fishing">Freshwater Fishing <span class="count">(4)</span></label><br/>
+						<input type="checkbox" id="ski-and-fish"><label for="ski-and-fish">Ski and Fish <span class="count">(6)</span></label><br/>
+						<input type="checkbox" id="aluminum-fish-boats"><label for="aluminum-fish-boats">Aluminum Fish Boats <span class="count">(15)</span></label><br/>
+					</div>
+				</li>
+				<li class="accordion-item is-active" data-accordion-item>
+					<a href="#" class="accordion-title">PRICE RANGE:</a>
+					<div class="accordion-content" data-tab-content>
+						<div class="grid-x grid-margin-x">
+							<div class="cell auto">
+								<input id="priceMin" type="number">
+							</div>
+							<div class="cell auto">
+								<input id="priceMax" type="number">
+							</div>
+						</div>
+						<div class="slider" data-slider data-start="1000" data-end="100000" data-step="1000" data-initial-start="1000" data-initial-end="30000">
+							<span class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="priceMin"></span>
+							<span class="slider-fill" data-slider-fill></span>
+							<span class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="priceMax"></span>
+						</div>
+					</div>
+				</li>
+				<li class="accordion-item is-active" data-accordion-item>
+					<a href="#" class="accordion-title">LENGTH:</a>
+					<div class="accordion-content" data-tab-content>
+						<div class="grid-x grid-margin-x">
+							<div class="cell auto">
+								<input id="lengthMin" type="number">
+							</div>
+							<div class="cell auto">
+								<input id="lengthMax" type="number">
+							</div>
+						</div>
+						<div class="slider" data-slider data-start="1" data-end="100" data-step="1" data-initial-start="6" data-initial-end="14">
+							<span class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="lengthMin"></span>
+							<span class="slider-fill" data-slider-fill></span>
+							<span class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="lengthMax"></span>
+						</div>
+					</div>
+				</li>
+			</ul>
 		</form>
 	</div>
 	<div class="filter-results">
