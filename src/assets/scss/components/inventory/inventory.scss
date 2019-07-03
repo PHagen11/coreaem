@@ -71,22 +71,40 @@
 			}
 		}
 	} 
-	.filter-toggle-button {
-		cursor:pointer;
-		font-weight: bold;
-		float:left;
-		margin-right:1rem;
-	}
-	.off-canvas {
-		width: max-content;
-	}
+	
+	
 	.filter-panel {
+		float:left;
+		position:relative;
 		height:100%;
-		width: max-content;
-		background-color: $white;
-		padding:0.5rem 1rem 1rem;
-		[type='checkbox'], [type='radio'] {
-			 margin: 0;
+		padding:0.5rem 1rem 1rem 1.5rem;
+		margin-right:1rem; 
+		&.hidden {
+			background-color: transparent;
+			width: 120px;
+			.filter-form {
+				display:none;
+			}
+		}
+		&.shown {
+			background-color: $white;
+			width: 300px;
+			.filter-form {
+				display:block;
+			}
+			.filter-toggle-button{
+				display:none;
+			}
+		}
+		.filter-toggle-button {
+			cursor:pointer;
+			font-weight: bold;
+			padding-top:0.75em;
+		}
+		.filter-form {
+			[type='checkbox'], [type='radio'] {
+				margin: 0;
+			}
 		}
 		.filter-heading {
 			padding-bottom:0.5rem;
@@ -98,6 +116,7 @@
 			}
 			.close-button {
 				opacity:0.5;
+				top:0.5em;
 			}
 		}
 		section {
@@ -110,29 +129,35 @@
 			}
 		}
 	}
-	.results-heading {
-		padding:1rem;
-		.filter-list {
-			margin:1rem 0;
-			li {
-				font-size:0.75rem;
-				padding-right:1rem;
-				&::after {
-					content: '\f00d';
-					font-family: 'Font Awesome 5 Pro';
-					font-weight:700;
-					color: $alert-color;
-					margin-left:0.25em;
-				}
-				&:last-child{
-					color: $alert-color;
+	.filter-results {
+		
+		padding-left:1rem;
+	
+		.results-heading {
+			padding:1rem;
+			.filter-list {
+				margin:1rem 0;
+				li {
+					font-size:0.75rem;
+					margin-right:1.5em;
+					cursor:pointer;
 					&::after {
-						content:'';
+						content: '\f00d';
+						font-family: 'Font Awesome 5 Pro';
+						font-weight:700;
+						color: $alert-color;
+						margin-left:0.25em;
+					}
+					&:last-child{
+						color: $alert-color;
+						padding-right:0;
+						&::after {
+							content:'';
+						}
 					}
 				}
 			}
 		}
 	}
-	
 	
 }
