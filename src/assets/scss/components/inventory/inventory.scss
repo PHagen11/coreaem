@@ -74,28 +74,52 @@
 	
 	
 	.filter-panel {
-		float:left;
-		position:relative;
-		height:100%;
-		padding:0.5rem 1rem 1rem 1.5rem;
-		margin-right:1rem; 
-		&.hidden {
-			background-color: transparent;
-			width: 120px;
-			.filter-form {
-				display:none;
+		@include breakpoint(small only) {
+			width: 100%;
+			padding:0.5rem 1rem 1rem 1.5rem;
+			position:relative;
+			&.hidden {
+				background-color: transparent;
+				.filter-form {
+					display:none;
+				}
+			}
+			&.shown {
+				background-color: $white;
+				.filter-form {
+					display:block;
+				}
+				.filter-toggle-button{
+					display:none;
+				}
 			}
 		}
-		&.shown {
-			background-color: $white;
-			width: 300px;
-			.filter-form {
-				display:block;
+		@include breakpoint(medium) {
+			float:left;
+			margin-right:1rem; 
+			padding:0.5rem 1rem 1rem 1.5rem;
+			position:relative;
+			&.hidden {
+				background-color: transparent;
+				width: 120px;
+				height:100vh;
+				.filter-form {
+					display:none;
+				}
 			}
-			.filter-toggle-button{
-				display:none;
+			&.shown {
+				background-color: $white;
+				width: 350px;
+				.filter-form {
+					display:block;
+				}
+				.filter-toggle-button{
+					display:none;
+				}
 			}
 		}
+		
+		
 		.filter-toggle-button {
 			cursor:pointer;
 			font-weight: bold;
@@ -110,29 +134,144 @@
 			padding-bottom:0.5rem;
 			border-bottom:1px solid $border-gray;
 			.title{
-				font-size:2rem;
-				line-height:1.5em;
-				font-weight:200;
+				@include breakpoint(small only) {
+					font-size:1.25rem;
+					line-height:2em;
+					font-weight:200;
+				}
+				@include breakpoint(medium) {
+					font-size:2rem;
+					line-height:1.5em;
+					font-weight:200;
+				}
 			}
 			.close-button {
 				opacity:0.5;
-				top:0.5em;
+				@include breakpoint(small only) {
+					top:0.25em;
+				}
+				@include breakpoint(medium) {
+					top:0.5em;
+				}
 			}
 		}
-		section {
-			margin:1rem 0;
-			padding:1rem 0;
+		section, .accordion-item {
+			margin:0;
+			padding:1rem 0 1rem;
 			border-bottom:1px solid $border-gray;
-			.title {
+			.title, .accordion-title {
 				text-transform: uppercase;
 				font-weight: bold;
+				font-size:1rem;
+				line-height:2.5em;
+			}
+			&.is-active > .accordion-title::before {
+				transform: rotate(-180deg);
+			}
+		}
+		.accordion-title {
+			padding:0 0 0.5rem 0;
+			border:none;
+			color: $black;
+			text-decoration: none;
+			&:focus, &:hover {
+				background-color:transparent;
+				outline:none;
+			}
+			&::before {
+				content: '\f078';
+				font-family: 'Font Awesome 5 Pro';
+				top:15%;
+				transition: all ease-in-out 200ms;
+			}
+		}
+		
+		.accordion-content {
+			padding: 0;
+			border:none;
+		}
+		.subset {
+			margin-left:0.75rem;
+			padding:0.75rem 0;
+		}
+		.count {
+			color:$medium-gray;
+		}
+		.showmore {
+			font-size:0.85rem;
+		}
+		.condition-buttons {
+			input[type="radio"]{
+				display:none;
+			}
+			label {
+				color:$black;
+				text-transform: none;
+				border-width:2px;
+				border-radius: 4px;
+				border-color: $border-gray;
+				width:49%;
+				display: inline-block;
+				-webkit-user-select: none;
+				-moz-user-select: none;    
+				-ms-user-select: none;      
+				user-select: none;
+				&.selected {
+					border-color: $secondary-color;
+					box-shadow: 0 2px 4px 0 rgba($black, 0.15);
+				}
+			}
+		}
+		
+		.currencyinput, .lengthinput, .yearinput {
+			border:2px solid $border-gray;
+			display: inline-block;
+			width:49%;
+			height:2.5rem;
+			padding:0 1rem;
+			line-height: 2em;
+			position:relative;
+			margin: 0 0 1rem;
+		}
+		input[type=number]{
+			border: none;
+			display: inline-block;
+			box-shadow: none;
+			margin: 0;
+			padding: 0;
+			width: 90%;
+			height:2.25rem;
+			background-color:transparent;
+			&::-webkit-inner-spin-button, 
+			&::-webkit-outer-spin-button { 
+				-webkit-appearance: none; 
+				margin: 0;
+			}
+		}
+		.ft {
+			content:'ft';
+			position: absolute;
+			left: 2.25em;
+			top: 0.125em;
+		}
+	
+		.slider {
+			.slider-handle {
+				width:35px;
+				height:35px;
+				border-radius:50%;
+				border:10px solid $white;
+				box-shadow: 0 4px 10px rgba($black, 0.31);
+				outline:none;
+			}
+			.slider-fill {
+				background-color: $primary-color;
 			}
 		}
 	}
+
 	.filter-results {
-		
 		padding-left:1rem;
-	
 		.results-heading {
 			padding:1rem;
 			.filter-list {
