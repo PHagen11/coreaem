@@ -42,44 +42,50 @@ $card-margin-xlarge: 2rem;
 	}
 }	
 .inventory {
-	.two-and-four-up {
-		@include breakpoint(medium) {
-			&:nth-child(odd){
+	.two-and-four-up {	
+		@include breakpoint(medium) {	
+			.inventory-card:nth-child(2n-1){
 				.card{
-					width:96%;
+					width:98%;
 					margin:0 2% 4% 0;
+		
 				}
 			}
-			&:nth-child(even){
+			.inventory-card:nth-child(2n){	
 				.card{
-					width:96%;
+					width:98%;
 					margin:0 0 4% 2%;
+					
 				}
 			}
 		}
 		@include breakpoint(xlarge) {
-			&:nth-child(4n-3){
+			.inventory-card:nth-child(4n-3){
 				.card{
 					width:95%;
-					margin:0 5% 5% 0;
+					margin:0 5% 6.25% 0;
+					
 				}
 			}
-			&:nth-child(4n-2){
+			.inventory-card:nth-child(4n-2){
 				.card{
 					width:95%;
-					margin:0 3.25% 5% 1.75%;
+					margin:0 3.25% 6.25% 1.75%;
+					
 				}
 			}
-			&:nth-child(4n-1){
+			.inventory-card:nth-child(4n-1){
 				.card{
 					width:95%;
-					margin:0 1.75% 5% 3.25%;
+					margin:0 1.75% 6.5% 3.25%;
+					
 				}
 			}
-			&:nth-child(4n){
+			.inventory-card:nth-child(4n){
 				.card{
 					width:95%;
-					margin:0 0 5% 5%;
+					margin:0 0 6.25% 5%;
+					
 				} 
 			}
 		}
