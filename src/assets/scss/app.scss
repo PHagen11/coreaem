@@ -569,6 +569,7 @@ $bab-custom-color-part-tab-bkg-color-selected: $border-gray;
 }
 
 // GLOBAL SCSS FILES
+@import 'global/custom-classes';
 @import 'global/button';
 @import 'global/column';
 @import 'global/divider';

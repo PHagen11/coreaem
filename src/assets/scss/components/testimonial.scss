@@ -14,7 +14,7 @@
 .testimonial-quote {
   @include breakpoint(small) {
     font-size: 1.3rem;
-    font-weight: 300;
+    font-weight: 400;
     //font-style: italic;
   }
   @include breakpoint(medium) {

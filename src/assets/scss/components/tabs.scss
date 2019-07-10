@@ -39,8 +39,9 @@
                 border-bottom-color: $border-gray;
             }
             @include breakpoint(medium) {
-                margin: 0 2vw;
-                padding: 1vw 3vw;
+                //margin: 0 2vw;
+                padding: 1rem 2.5vw;
+                //max-width: 100px;
                 border-bottom-width: 6px;
                 border-right-width: 0;
                 border-bottom-color: transparent;
