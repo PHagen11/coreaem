@@ -17,3 +17,23 @@
     transition: box-shadow 0.3s ease-in-out;
   }
 }
+
+//This is a quick fix for preventing the lower parsys from being on top of others ie: a button not clickable
+
+.hero-content-top {
+  .grid-y {
+    .cell:nth-child(2) {
+      height: 0;
+    }
+    .cell:nth-child(3) {
+      height: 0;
+    }
+  }
+}
+.hero-content-middle {
+  .grid-y {
+    .cell:nth-child(3) {
+      height: 0;
+    }
+  }
+}
