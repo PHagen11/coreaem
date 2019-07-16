@@ -278,6 +278,18 @@
 				float:right;
 				margin-top:0.25em;
 				font-weight: bold;
+				cursor: pointer;
+			}
+			.sort-drop {
+				width:fit-content;
+				margin-top:0.5em;
+				background-color:$white;
+				border-radius:0;
+				border:none;
+				box-shadow:0 2px 24px 0 rgba(0,0,0,0.13);
+				a {
+					color:$black;
+				}
 			}
 			.filter-list {
 				margin:1rem 0;
