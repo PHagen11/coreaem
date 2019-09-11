@@ -15,9 +15,9 @@
 					font-size:0.55em;
 				}
 			}
-			
+
 		}
-	} 
+	}
 	.cat-tabs {
 		z-index:5;
 		position: absolute;
@@ -39,7 +39,7 @@
 			}
 		}
 	}
-	
+
 	.make-type-search {
 		display:none;
 		&.selected {
@@ -49,7 +49,7 @@
 	.search-form {
 		padding:2em;
 		background-color:$white;
-		box-shadow: 0 0 1em rgba($black, 0.25); 
+		box-shadow: 0 0 1em rgba($black, 0.25);
 		.cell {
 			padding-right:1em;
 		}
@@ -70,9 +70,9 @@
 				width:100%;
 			}
 		}
-	} 
-	
-	
+	}
+
+
 	.filter-panel {
 		@include breakpoint(small only) {
 			width: 100%;
@@ -96,13 +96,14 @@
 		}
 		@include breakpoint(medium) {
 			float:left;
-			margin-right:1rem; 
+			margin-right:4vw;
 			padding:0.5rem 1rem 1rem 1.5rem;
 			position:relative;
 			&.hidden {
 				background-color: transparent;
 				width: 120px;
 				height:100vh;
+				margin-right:0;
 				.filter-form {
 					display:none;
 				}
@@ -118,8 +119,8 @@
 				}
 			}
 		}
-		
-		
+
+
 		.filter-toggle-button {
 			cursor:pointer;
 			font-weight: bold;
@@ -185,7 +186,7 @@
 				transition: all ease-in-out 200ms;
 			}
 		}
-		
+
 		.accordion-content {
 			padding: 0;
 			border:none;
@@ -213,8 +214,8 @@
 				width:49%;
 				display: inline-block;
 				-webkit-user-select: none;
-				-moz-user-select: none;    
-				-ms-user-select: none;      
+				-moz-user-select: none;
+				-ms-user-select: none;
 				user-select: none;
 				&.selected {
 					border-color: $secondary-color;
@@ -222,7 +223,7 @@
 				}
 			}
 		}
-		
+
 		.currencyinput, .lengthinput, .yearinput {
 			border:2px solid $border-gray;
 			display: inline-block;
@@ -242,9 +243,9 @@
 			width: 90%;
 			height:2.25rem;
 			background-color:transparent;
-			&::-webkit-inner-spin-button, 
-			&::-webkit-outer-spin-button { 
-				-webkit-appearance: none; 
+			&::-webkit-inner-spin-button,
+			&::-webkit-outer-spin-button {
+				-webkit-appearance: none;
 				margin: 0;
 			}
 		}
@@ -254,7 +255,7 @@
 			left: 2.25em;
 			top: 0.125em;
 		}
-	
+
 		.slider {
 			.slider-handle {
 				width:35px;
@@ -269,8 +270,8 @@
 			}
 		}
 	}
-
 	.filter-results {
+	  padding-right: 4vw;
 		padding-left:1rem;
 		.results-heading {
 			padding:1rem 0;
@@ -303,5 +304,5 @@
 			}
 		}
 	}
-	
+
 }
