@@ -1,7 +1,7 @@
-<div class="inventory">
-	
+<div class="inventory in-submit">
+
 	<div class="filter-panel hidden">
-		<div class="filter-toggle-button" ><i class="fas fa-sliders-v"></i> FILTER</div>	
+		<div class="filter-toggle-button" ><i class="fas fa-sliders-v"></i> FILTER</div>
 		<form class="filter-form">
 			<div class="filter-heading">
 				<span class="title">Filter By:</span>
@@ -13,7 +13,7 @@
 				<div class="title">Stores near <a href="">65721</a>:</div>
 				<input type="checkbox" id="springfield-mo"><label for="springfield-mo">Springfield, MO <span class="count">(Your Store)</span></label><br/>
 				<input type="checkbox" id="branson-mo"><label for="branson-mo">Branson, MO</label><br/>
-				<input type="checkbox" id="broken-arrow-ok"><label for="broken-arrow-ok">Broken Arrow, OK</label><br/>	
+				<input type="checkbox" id="broken-arrow-ok"><label for="broken-arrow-ok">Broken Arrow, OK</label><br/>
 			</section>
 			<ul class="accordion" data-accordion data-allow-all-closed="true" data-multi-expand="true">
 				<li class="accordion-item is-active" data-accordion-item>
@@ -40,7 +40,7 @@
 					<div class="accordion-content" data-tab-content>
 						<div class="condition-buttons">
 							<input type="radio" id="used" name="condition"><label class="button hollow small expanded" for="used">Used</label>
-							<input type="radio" id="new" name="condition"><label class="button hollow small expanded" for="new">New</span></label> 
+							<input type="radio" id="new" name="condition"><label class="button hollow small expanded" for="new">New</span></label>
 						</div>
 					</div>
 				</li>
@@ -97,13 +97,13 @@
 					</div>
 				</li>
 			</ul>
-			<section class="submit">	
-				<input type="submit" class="button primary expanded" value="UPDATE RESULTS">	
+			<section class="submit">
+				<input type="submit" class="button primary expanded" value="UPDATE RESULTS">
 			</section>
 		</form>
 	</div>
 	<div class="filter-results">
-		<div class="grid-container">
+		<!-- <div class="grid-container"> -->
 			<div class="results-heading">
 				<div class="sort-toggle-button" data-toggle="sort-dropdown">
 					<i class="fas fa-sort-alt"></i> SORT : <span id="sort-selection">Highest Price</span>
@@ -129,10 +129,10 @@
 					</ul>
 				</div>
 			</div>
-			
-			<div id="results-grid" class="grid-x small-up-1 medium-up-2 xlarge-up-4 two-and-four-up small-bottom">
+
+			<div id="results-grid" class="grid-x small-up-1 medium-up-2 large-up-2 xlarge-up-4 xxlarge-up-4 two-and-four-up small-bottom">
 				<div class="cell inventory-card">
-					<a href="#">
+					<a href="/inventory/inventory-boat.html">
 						<div class="card">
 							<div class="grid-x">
 								<div class="small-6 medium-12">
@@ -152,7 +152,7 @@
 					</a>
 				</div>
 				<div class="cell inventory-card">
-					<a href="#">
+					<a href="/inventory/inventory-boat.html">
 						<div class="card">
 							<div class="grid-x">
 								<div class="small-6 medium-12">
@@ -172,7 +172,7 @@
 					</a>
 				</div>
 				<div class="cell inventory-card">
-					<a href="#">
+					<a href="/inventory/inventory-boat.html">
 					<div class="card">
 						<div class="grid-x">
 							<div class="small-6 medium-12">
@@ -192,7 +192,7 @@
 					</a>
 				</div>
 				<div class="cell inventory-card">
-					<a href="#">
+					<a href="/inventory/inventory-boat.html">
 						<div class="card last">
 							<div class="grid-x">
 								<div class="small-6 medium-12">
@@ -212,7 +212,7 @@
 					</a>
 				</div>
 				<div class="cell inventory-card">
-					<a href="#">
+					<a href="/inventory/inventory-boat.html">
 						<div class="card">
 							<div class="grid-x">
 								<div class="small-6 medium-12">
@@ -232,7 +232,7 @@
 					</a>
 				</div>
 				<div class="cell inventory-card">
-					<a href="#">
+					<a href="/inventory/inventory-boat.html">
 						<div class="card">
 							<div class="grid-x">
 								<div class="small-6 medium-12">
@@ -252,7 +252,7 @@
 					</a>
 				</div>
 				<div class="cell inventory-card">
-					<a href="#">
+					<a href="/inventory/inventory-boat.html">
 					<div class="card">
 						<div class="grid-x">
 						<div class="small-6 medium-12">
@@ -272,7 +272,7 @@
 					</a>
 				</div>
 				<div class="cell inventory-card">
-					<a href="#">
+					<a href="/inventory/inventory-boat.html">
 						<div class="card last">
 							<div class="grid-x">
 								<div class="small-6 medium-12">
@@ -293,5 +293,18 @@
 				</div>
 			</div>
 		</div>
+		<nav aria-label="Pagination">
+			<ul class="pagination text-center">
+				<li class="pagination-previous disabled">Previous</li>
+				<li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+				<li><a href="#" aria-label="Page 2">2</a></li>
+				<li><a href="#" aria-label="Page 3">3</a></li>
+				<li><a href="#" aria-label="Page 4">4</a></li>
+				<li class="ellipsis"></li>
+				<li><a href="#" aria-label="Page 12">12</a></li>
+				<li><a href="#" aria-label="Page 13">13</a></li>
+				<li class="pagination-next"><a href="#" aria-label="Next page">Next</a></li>
+			</ul>
+		</nav>
 	</div>
-</div>
+<!-- </div> -->
