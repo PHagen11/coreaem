@@ -105,7 +105,18 @@
 	<div class="filter-results">
 		<!-- <div class="grid-container"> -->
 			<div class="results-heading">
-				<div class="sort-toggle-button"><i class="fas fa-sort-alt"></i> SORT</div>
+				<div class="sort-toggle-button" data-toggle="sort-dropdown">
+					<i class="fas fa-sort-alt"></i> SORT : <span id="sort-selection">Highest Price</span>
+				</div>
+				<div class="dropdown-pane sort-drop" id="sort-dropdown" data-dropdown  data-close-on-click="true">
+					<ul class="vertical menu">
+						<li><a href="#">Nearest Distance</a></li>
+						<li><a href="#">Model Year</a></li>
+						<li><a href="#">Lowest Price</a></li>
+						<li><a href="#">Highest Price</a></li>
+						<li><a href="#">Listing Distance</a></li>
+					</ul>
+				</div>
 				<h3>31 Results:</h3>
 				<div class="filter-list">
 					<ul class="menu">
