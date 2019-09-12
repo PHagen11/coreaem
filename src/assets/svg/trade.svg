@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="84px" height="84px" viewBox="0 0 84 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 7</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="34" cy="34" r="34"></circle>
+        <filter x="-19.1%" y="-16.2%" width="138.2%" height="138.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.108242754 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Inventory" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="BPBC/Boat-Model" transform="translate(-1163.000000, -1060.000000)">
+            <g id="Group-7" transform="translate(1171.000000, 1066.000000)">
+                <g id="Oval-3">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="Group" transform="translate(11.000000, 16.000000)" stroke="#FFCC04" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+                    <polyline id="Stroke-2796" points="0 14 5.58144192 23 12 14.6766265"></polyline>
+                    <polyline id="Stroke-2797" points="46 24 40.4205607 15 34 23.3212048"></polyline>
+                    <path d="M40.720263,15 C42.4369123,24.2950679 36.0416732,33.4066804 27.3225767,35.5153619 C21.2422625,36.9893302 15.1454817,35.0092783 11,30.8235456" id="Stroke-2798"></path>
+                    <path d="M5.6168827,23 C2.84219449,12.7746419 9.77680337,2.74193855 19.4227514,0.482433866 C26.087071,-1.08183861 32.7598372,1.26142899 37,6.01288045" id="Stroke-2799"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
