@@ -1,4 +1,13 @@
 <div class="inv-item">
+  <div class="grid-x grid-padding-x inv-nav">
+    <div class="small-6 cell">
+      <a href="#"><img class="left-arrow" src="/assets/svg/left-arrow.svg">Back to Search Results</a>
+    </div>
+    <div class="small-6 cell text-right inv-lr">
+      <a href="#" class="lspace"><img class="left-arrow" src="/assets/svg/left-arrow.svg">Prev</a>
+      <a href="#">Next<img class="right-arrow" src="/assets/svg/right-arrow-2.svg"></a>
+    </div>
+  </div>
   <div class="mname">
     <div class="grid-container">
       <div class="grid-x">
@@ -12,7 +21,7 @@
   </div>
   <div class="grid-container">
     <div class="grid-x grid-margin-x">
-      <div class="small-12 medium-8 cell">
+      <div class="small-12 medium-6 large-8 cell">
         <div class="owl-carousel owl-theme" data-slider-id="1">
           <div><span class='zoom'><img src="/assets/img/tracker-bmt2.jpg"></span></div>
           <div><span class='zoom'><img src="/assets/img/tracker-oh.jpg"></span></div>
@@ -39,7 +48,6 @@
         <ul class="tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
           <li class="tabs-title is-active"><a href="#panel1c" aria-selected="true">Specifications</a></li>
           <li class="tabs-title"><a href="#panel2c">Standard Features</a></li>
-
         </ul>
         <div class="tabs-content" data-tabs-content="collapsing-tabs">
           <div class="tabs-panel is-active" id="panel1c">
@@ -244,7 +252,7 @@
           </div>
         </div>
       </div>
-      <div class="small-12 medium-4 cell">
+      <div class="small-12 medium-6 large-4 cell">
         <div class="price-block">
           <div class="total">
             <h5>total price</h5>
@@ -294,22 +302,35 @@
           <a class="button expanded secondary" href="#">VALUE YOUR TRADE-IN</a>
         </div>
         <div class="loan-calc">
-          <h4>Loan Calculator</h4>
+          <h4 class="text-center tiny-bottom">Loan Calculator</h4>
           <form>
-            <div class="input-group">
-              <span class="input-group-label">$</span>
-              <input class="input-group-field" type="number">
-            </div>
-            <div class="input-group">
-              <input class="input-group-field" type="number">
-              <span class="input-group-label">%</span>
-            </div>
-            <div class="input-group">
-              <input class="input-group-field" type="number">
-            </div>
+            <label>Loan Amount
+              <div class="input-group">
+                <span class="input-group-label">$</span>
+                <input class="input-group-field" type="number">
+              </div>
+            </label>
+            <label>Interest Rate
+              <div class="input-group">
+                <input class="input-group-field" type="number">
+                <span class="input-group-label">%</span>
+              </div>
+            </label>
+            <label>Loan Term (Years)
+              <div class="input-group">
+                <input class="input-group-field" type="number">
+              </div>
+            </label>
           </form>
-          <p>America’s favorite aluminum fishing boat for over a decade, the TRACKER® Pro Team™ 175 TXW is built with world-class manufacturing methods, materials and components to deliver top-level quality.</p>
-          <a class="button expanded secondary" href="#">VALUE YOUR TRADE-IN</a>
+          <div class="payment-block">
+            <h6>MONTHLY PAYMENT</h6>
+            <span class="payment-price">$1,454.25</span>
+          </div>
+          <div class="text-center">
+            <a class="button expanded secondary" href="#">Reset</a>
+            <a class="button expanded tiny-top" href="#">Get Pre-Qualified</a>
+            <a href="#"><small>Disclaimer</small></a>
+            </div>
         </div>
       </div>
     </div>
