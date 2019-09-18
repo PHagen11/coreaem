@@ -138,4 +138,26 @@
       padding: 1rem 0 1rem 0;
     }
   }
+  .loan-calc {
+    background: $light-gray;
+    //box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 4px;
+    text-align: center;
+    p {
+      padding: 1rem 0 1rem 0;
+    }
+  }
+  .dealer-callout {
+    background: $white;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 4px;
+    text-align: left;
+    p {
+      //padding: 1rem 0 1rem 0;
+    }
+  }
 }
