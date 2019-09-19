@@ -10,7 +10,6 @@
 // the line below
 //import './lib/foundation-explicit-pieces';
 
-
 // $(document).foundation();
 
 jQuery(document).ready(function($) {
@@ -73,7 +72,7 @@ jQuery(document).ready(function($) {
 		console.log("not ipad")
 
 		$(".header .header-menu > ul > li").on("mouseover", function (e) {
-			
+
 			if ($(window).width() >= 1024) {
 				$(this).addClass("opened");
 				$(this).children("ul").stop(true, false).fadeIn(150);
@@ -82,15 +81,15 @@ jQuery(document).ready(function($) {
 			});
 
 			jQuery(".header .header-menu > ul > li").on("mouseout", function (e) {
-			
+
 			if ($(window).width() >= 1024) {
-			
+
 				$(this).removeClass("opened");
 				$(this).children("ul").stop(true, false).fadeOut(150);
 				e.preventDefault();
 			}
 		});
-	}	
+	}
 	//If width is Large or more (1024px) dropdowns are displayed on hover
 
 	$(".header .header-menu > ul > li a").not(".title").click(function() {
@@ -139,5 +138,5 @@ jQuery(document).ready(function($) {
 		$('.condition-buttons label').removeClass('selected');
 		$(this).addClass('selected');
 	});
- 
+
 });
