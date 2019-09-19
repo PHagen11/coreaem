@@ -1,5 +1,8 @@
+
 jQuery(document).ready(function() {
     jQuery('.owl-carousel').owlCarousel({
+        thumbs: true,
+        thumbsPrerendered: true,
         center: true,
         lazyLoad: true,
         items: 1,

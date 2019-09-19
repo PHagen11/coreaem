@@ -69,7 +69,12 @@ $icon-weight: 300;
 a {
   color: $secondary-color
 }
-
+.input-group-label {
+  background:#EDEDED;
+  border-color: #DEDEDE;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
 
 //---------- THEMES ----------//
 
