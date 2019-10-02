@@ -2,10 +2,10 @@
 	position: relative;
 	.section-title {
 		font-weight: 900;
-		font-size: 1.3rem;
+		font-size: 1.8rem;
 		text-transform: uppercase;
 	}
-	
+
 	.samenu{
 		.menu {
 			@include breakpoint(large) {
@@ -38,10 +38,15 @@
 							border-left: $sticky-anchor-link-border-size-active $sticky-anchor-link-border-style-active $sticky-anchor-link-border-color-active;
 							color:$sticky-anchor-link-text-color-active;
 					}
+					.active {
+						border-left: $sticky-anchor-link-border-size-active $sticky-anchor-link-border-style-active $sticky-anchor-link-border-color-active;
+						color:$sticky-anchor-link-text-color-active;
+						font-weight: 700;
+					}
 			}
 		}
-	}	
-	
+	}
+
 	section {
 		@include breakpoint(small) {
 		padding-top:2em;
@@ -51,4 +56,7 @@
 			padding-top: 0.8em;
 		}
 	}
+}
+.sticky-anchor.is-anchored.is-at-bottom {
+	top: 0 !important;
 }
