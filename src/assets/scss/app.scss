@@ -69,7 +69,12 @@ $icon-weight: 300;
 a {
   color: $secondary-color
 }
-
+.input-group-label {
+  background:#EDEDED;
+  border-color: #DEDEDE;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
 
 //---------- THEMES ----------//
 
@@ -614,6 +619,7 @@ $bab-custom-color-part-tab-bkg-color-selected: $border-gray;
 @import 'components/build-your-own/bab-send-to-dealer';
 @import 'components/inventory/inventory-card';
 @import 'components/inventory/inventory';
+@import 'components/inventory/model';
 
 
 // VENDOR SCSS FILES
