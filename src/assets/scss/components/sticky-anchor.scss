@@ -37,8 +37,9 @@
 					&.is-active {
 							border-left: $sticky-anchor-link-border-size-active $sticky-anchor-link-border-style-active $sticky-anchor-link-border-color-active;
 							color:$sticky-anchor-link-text-color-active;
+							font-weight: 700;
 					}
-					.active {
+					&.active {
 						border-left: $sticky-anchor-link-border-size-active $sticky-anchor-link-border-style-active $sticky-anchor-link-border-color-active;
 						color:$sticky-anchor-link-text-color-active;
 						font-weight: 700;
