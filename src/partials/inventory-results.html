@@ -1,5 +1,37 @@
+<div class="inv-search-bar">
+	<div class="grid-x align-middle inv-search ">
+		<div class="small-12 medium-3 large-2 cell">
+			<span class="sale-text">Search within</span>
+		</div>
+		<div class="small-12 medium-3 large-2 cell">
+			<label>
+				<select name="distance" id="distanceSelect" required>
+					<option value="twenty-five" selected>25 Miles</option>
+					<option value="fifty">50 Miles</option>
+					<option value="seventy-five">75 Miles</option>
+					<option value="one-hundred">100 Miles</option>
+					<option value="two-hundred-fifty-miles">250 Miles</option>
+					<option value="five-hundred-miles">500 Miles</option>
+				</select>
+				<span class="form-error" data-form-error-for="countryInput">Country is required.</span>
+			</label>
+		</div>
+		<div class="small-12 medium-1 large-1  cell">
+			<span class="near">of</span>
+		</div>
+		<div class="small-12 medium-3 large-2 cell">
+			<label>
+				<input name="zip" type="number" id="zipInput" placeholder="Zip Code" required>
+				<span class="form-error" data-form-error-for="stateInput">State is required.</span>
+			</label>
+		</div>
+		<div class="small-12 medium-2 large-1 text-left cell">
+			<a class="button show-for-medium large" href="#">GO</a>
+			<a class="button tiny-top hide-for-medium expanded" href="#">GO</a>
+		</div>
+	</div>
+</div>
 <div class="inventory in-submit">
-
 	<div class="filter-panel hidden">
 		<div class="filter-toggle-button" ><i class="fas fa-sliders-v"></i> FILTER</div>
 		<form class="filter-form">
