@@ -140,5 +140,6 @@ jQuery(document).ready(function($) {
 	});
 	$('.inventory .filter-form .model-show').click (function() {
 		$(this).siblings('.subset').toggleClass('hide');
+		$(this).toggleClass('selected');
 	});
 });
