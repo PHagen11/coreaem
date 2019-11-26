@@ -138,5 +138,7 @@ jQuery(document).ready(function($) {
 		$('.condition-buttons label').removeClass('selected');
 		$(this).addClass('selected');
 	});
-
+	$('.inventory .filter-form .model-show').click (function() {
+		$(this).siblings('.subset').toggleClass('hide');
+	});
 });
