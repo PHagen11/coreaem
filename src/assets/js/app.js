@@ -139,6 +139,7 @@ jQuery(document).ready(function($) {
 		$(this).addClass('selected');
 	});
 	$('.inventory .filter-form .model-show').click (function() {
+		$(this).siblings('.subset').children(":checkbox").prop("checked", false);
 		$(this).siblings('.subset').toggleClass('hide');
 		$(this).toggleClass('selected');
 	});
