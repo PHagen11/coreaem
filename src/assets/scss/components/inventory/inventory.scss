@@ -248,16 +248,6 @@
 			margin-right:0;
 		}
 
-		.model-show i{
-			font-size:1.5em;
-			text-decoration:none;
-			color: $black;
-			transition: all ease-in-out 200ms;
-			padding:0 0.5em;
-		}
-		.model-show.selected i{
-			transform: rotate(-180deg);
-		}
 
 		.accordion-content {
 			padding: 0;
