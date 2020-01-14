@@ -48,13 +48,15 @@
 				input {
 					margin-bottom: 0;
 				}
+				label {
+					padding-right: 0;
+				}
 			}
 		}
 	}
 }
 .inventory {
-	margin-top: 6.4rem;
-	//padding-top: 2rem;
+	margin-top:6rem;
 	background-color: $light-gray;
 	position:relative;
 	.heroArea{
@@ -185,7 +187,7 @@
 		}
 		.filter-form {
 			[type='checkbox'], [type='radio'] {
-				margin: 0;
+				margin: 0 0.5rem 0 0;
 			}
 		}
 		.filter-heading {

@@ -23,12 +23,14 @@
   table {
     .spec-label {
       width: 50%;
-        text-transform: $model-specs-label-case;
-        border-right: 4px solid $white;
+      text-transform: $model-specs-label-case;
+      border-right: $model-specs-border-right;
+      font-size: 1.1rem;
     }
     .metric,
     .standard {
-      font-weight: 700;
+      //font-weight: 700;
+      font-size: 1.1rem;
         //padding-left: 10px;
     }
     .active-always {

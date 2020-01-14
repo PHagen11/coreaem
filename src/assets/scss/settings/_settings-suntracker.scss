@@ -1,3 +1,7 @@
+//IMPORTANT!!!! IF NEW SECTIONS ARE ADDED TO THIS FILE, MAKE SURE TO UPDATE ALL OTHER BRAND SETTINGS FILE WITH THE SAME SECTION//
+
+//---------------------THIS SECTION IS ZURB FOUNDATION VARIABLE SETTINGS----------------------//
+
 //  Foundation for Sites Settings
 //  -----------------------------
 //
@@ -69,27 +73,28 @@ $global-font-size: 100%;
 $global-width: rem-calc(1600);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #FFCC04,
-  secondary: #507594,
-  success: #8AC35F,
-  warning: #F3AC51,
-  alert: #EC5840,
-  border-gray: #EBEDF2,
-  light-gray: #F4F5F7,
+  primary: #DD532D,
+  secondary: #193568,
+  success: #69B347,
+  warning: #ED1D22,
+  alert: #FBA915,
+  border-gray: #DEE0E8,
+  light-gray: #F4F5F8,
   medium-gray: #80858F,
   dark-gray: #52555B,
   black: #303236,
   white: #FFFFFF
 );
-$border-gray: #EBEDF2;
-$light-gray: #F4F5F7;
+$border-gray: #DEE0E8;
+$light-gray: #F4F5F8;
 $medium-gray: #8B8B8B;
+$secondary-color: #1F2F54;
 $dark-gray: #52555B;
 $black: #303236;
 $white: #FFFFFF;
 $body-background: $light-gray;
-$body-font-color: $black;
-$body-font-family: 'Roboto', Helvetica, Arial, sans-serif;
+$body-font-color: $secondary-color;
+$body-font-family: 'Asap', Helvetica, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -128,7 +133,7 @@ $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
   small: 20px,
-  medium: 30px,
+  medium: 40px,
 );
 $grid-column-align-edge: true;
 $grid-column-alias: 'columns';
@@ -137,29 +142,31 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: $body-font-family;
-$header-font-weight: $global-weight-normal;
+@import url('https://fonts.googleapis.com/css?family=Asap+Condensed:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Asap:400,700&display=swap');
+$header-font-family: 'Asap Condensed', Helvetica, Arial, sans-serif;
+$header-font-weight: 500;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: inherit;
+$header-color: $secondary-color;
 $header-lineheight: 1.2;
 $header-margin-bottom: 0.6rem;
 $header-styles: (
   small: (
     'h1': ('font-size': 36),
     'h2': ('font-size': 30),
-    'h3': ('font-size': 24),
-    'h4': ('font-size': 20),
-    'h5': ('font-size': 20),
-    'h6': ('font-size': 16),
+    'h3': ('font-size': 28),
+    'h4': ('font-size': 26),
+    'h5': ('font-size': 24),
+    'h6': ('font-size': 20),
   ),
   medium: (
-    'h1': ('font-size': 48),
-    'h2': ('font-size': 40),
-    'h3': ('font-size': 31),
-    'h4': ('font-size': 25),
-    'h5': ('font-size': 20),
-    'h6': ('font-size': 16),
+    'h1': ('font-size': 52),
+    'h2': ('font-size': 44),
+    'h3': ('font-size': 35),
+    'h4': ('font-size': 29),
+    'h5': ('font-size': 24),
+    'h6': ('font-size': 20),
   ),
 );
 $header-text-rendering: optimizeLegibility;
@@ -202,6 +209,7 @@ $keystroke-background: $light-gray;
 $keystroke-padding: rem-calc(2 4 0);
 $keystroke-radius: $global-radius;
 $abbr-underline: 1px dotted $black;
+$icon-weight: 300;
 
 // 5. Typography Helpers
 // ---------------------
@@ -286,20 +294,20 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // ----------
 
 $button-font-family: inherit;
-$button-padding: 0.8em 1.6em;
+$button-padding: 0.6em 1.6em 0.8em 1.6em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
 $button-background-hover: scale-color($button-background, $lightness: 20%);
-$button-color: $black;
-$button-color-alt: $white;
-$button-radius: $global-radius;
+$button-color: $white;
+$button-color-alt: $black;
+$button-radius: 80px;
 $button-hollow-border-width: 3px;
 $button-sizes: (
-  tiny: 0.7rem,
-  small: 0.8rem,
-  default: 1rem,
-  large: 1.25rem,
+  tiny: 0.8rem,
+  small: 1rem,
+  default: 1.2rem,
+  large: 1.4rem,
 );
 $button-palette: $foundation-palette;
 $button-opacity-disabled: 0.25;
@@ -453,7 +461,12 @@ $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 $input-number-spinners: true;
 $input-radius: 0px;
 $form-button-radius: 4px;
-
+.input-group-label {
+  background:#EDEDED;
+  border-color: #DEDEDE;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
 // 21. Label
 // ---------
 
@@ -871,7 +884,7 @@ $grid-margin-gutters: (
 );
 $grid-padding-gutters: (
   small: 4rem,
-  medium: 6rem
+  medium: 8rem
 );
 $grid-container-padding: (
   small: 4rem,
@@ -879,3 +892,586 @@ $grid-container-padding: (
 );
 $grid-container-max: $global-width;
 $xy-block-grid-max: 8;
+
+
+//---------------------THIS SECTION IS WRMG VARIABLE SETTINGS. ADD NEW VARIABLE IN THIS SECTION----------------------//
+
+//  WRMG COMPONENT LIBRARY SETTINGS
+//  -----------------------------
+//
+//  Table of Contents:
+//
+//   1. Global
+//   2. Themes
+//   3. General
+//   4. Header Component
+//   5. Sub Navigation Component
+//   6. Sticky Anchor Component
+//   7. Divider Component
+//   8. Button Component
+//   9. Blockquote Component
+//  10. Hero Component
+//  11. Image Carousel Component
+//  12. Video Component
+//  13. Image Gallery Component
+//  14. Icon Component
+//  15. Link List Component
+//  16. Footer Component
+//  17. Model Specs Component
+//  18. Model Options Component
+//  19. Model Listing Component
+//  20. Model Price Component
+//  21. Dealer Results
+//  22. Dealer Search Component
+//  23. Build A Boat Component
+
+
+// 1. Global
+// -----------------------------
+
+// Icons
+$icon-weight: 300;
+
+// Links
+a {
+  color: $primary-color
+}
+.input-group-label {
+  background:#EDEDED;
+  border-color: #DEDEDE;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+
+// 2. Themes
+// -----------------------------
+
+@mixin minimal {
+  background-color: none;
+  padding: 0;
+}
+@mixin basic {
+  background-color: $light-gray;
+  padding: 1.4rem;
+}
+
+// 3. General
+// -----------------------------
+
+// Site
+$site-bkg-color: $light-gray;
+.site {
+  max-width: 1800px;
+  margin: auto;
+  background-color: $site-bkg-color;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  overflow-x: hidden;
+}
+$global-transition: all .25s ease-in-out;
+
+// Alignment
+$left: left;
+$center: center;
+$right: right;
+
+// Spacing
+$none:0;
+$tiny:20px;
+$small: 40px;
+$medium: 60px;
+$large: 80px;
+$xlarge: 100px;
+
+// Border
+$border: 2px solid $border-gray;
+
+// Mobile Alignment
+.mobile-center {
+  @include breakpoint(small only) {
+    text-align: center!important;
+  }
+}
+
+// AEM Parsys Overrides
+.header.sub-header.top-content.i-content.bot-content.prefooter.iparfooter {
+  margin: 0px;
+  padding: 0px;
+}
+
+// 4. Header Component
+// -----------------------------
+
+$header-plain-text-color: $secondary-color; //ex: Link List component titles.
+$header-background-color: $white;
+$header-background-hover: $light-gray;
+$header-link-background-color-hover: $black;
+$header-link-color-start: $secondary-color;
+$header-link-color-hover: $secondary-color;
+$header-link-top-bottom-padding: 2.5rem;
+$header-link-left-right-padding: 1vw;
+$header-link-font-size: 1.1rem;
+$header-menu-item-text-transform: none;
+$header-menu-item-letter-spacing: 0;
+$header-dropdown-width: 250px;
+$header-submenu-background-color: $light-gray;
+$header-submenu-link-font-size: 1rem;
+$header-logo-height: 56px;
+$header-logo-padding-top: 20px;
+$header-cta-left-spacing: 1rem;
+$header-icon-color: $black;
+
+// 5. Sub Navigation Component
+// -----------------------------
+$sub-navigation-background-color: $primary-color;
+$sub-navigation-text-color: $white;
+$sub-navigation-text-weight: 500;
+$sub-navigation-text-transform: uppercase;
+$sub-navigation-link-color-start: $light-gray;
+$sub-navigation-link-color-hover: $white;
+$sub-navigation-link-font-size: 1rem;
+$sub-navigation-selected-background-color: #1E2128;
+$sub-navigation-selected-text-color: $white;
+
+// 6. Sticky Anchor Component
+// -----------------------------
+
+$sticky-anchor-link-text-transform: none;
+$sticky-anchor-link-text-color: $medium-gray;
+$sticky-anchor-link-border-size: 2px;
+$sticky-anchor-link-border-style: solid;
+$sticky-anchor-link-border-color: $border-gray;
+$sticky-anchor-link-text-color-hover: $black;
+$sticky-anchor-link-border-size-hover:2px;
+$sticky-anchor-link-border-style-hover: solid;
+$sticky-anchor-link-border-color-hover: $primary-color;
+$sticky-anchor-link-text-color-active: $black;
+$sticky-anchor-link-border-size-active: 2px;
+$sticky-anchor-link-border-style-active: solid;
+$sticky-anchor-link-border-color-active: $primary-color;
+
+// 7. Divider Component
+// -----------------------------
+
+// Thickness
+$hairline: 1px;
+$thin: 2px;
+$thick: 3px;
+$heavy: 5px;
+
+// Width
+$size-small: 35px;
+$size-medium: 140px;
+$size-large: 250px;
+$size-full: 100%;
+
+// 8. Button Component
+// -----------------------------
+
+.button {
+  &:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    transition: 0.25s ease-out, color 0.25s ease-out;
+  }
+}
+// Text
+@mixin button-text ($font) {
+  text-transform: normal;
+  letter-spacing: 0px;
+  font-weight: 700;
+}
+
+// Hollow Button
+$hollow-radius: 80px;
+
+// Clear Button
+@mixin button-clear {
+  padding:1em 0 1em 0;
+}
+
+// 9. Blockquote Component
+// -----------------------------
+
+// Basic Theme
+@mixin blockquote-basic {
+  @include basic;
+}
+// Minimal Theme
+@mixin blockquote-minimal {
+  @include minimal;
+  @include breakpoint(small) {
+    border-left: none;
+  }
+  @include breakpoint(medium) {
+    padding-left: 1.5rem;
+    border-left: $border;
+  }
+}
+// Blockquote Text
+$blockquote-font-size: 1.1rem;
+$blockquote-weight: 500;
+$blockquote-color: $body-font-color;
+$author-weight: 600;
+$author-color: $secondary-color;
+
+// Blockquote Profile Image
+$profile-radius: 10%;
+$profile-size: 60px;
+
+// 10. Hero Component
+// -----------------------------
+
+// Desktop Sizes
+$small-desktop-hero: 380px;
+$medium-desktop-hero: 626px;
+$large-desktop-hero: 750px;
+
+// Tablet Sizes
+$small-tablet-hero: 380px;
+$medium-tablet-hero: 500px;
+$large-tablet-hero: 650px;
+
+// Mobile Sizes
+$small-mobile-hero: 300px;
+$medium-mobile-hero: 450px;
+$large-mobile-hero: 450px;
+
+// Hero Padding
+$hero-top-padding: 3rem;
+$hero-bottom-padding: 3rem;
+
+// 11. Image Carousel Component
+// -----------------------------
+
+// animation style and other OWL CAROUSEL options need to be set in /assets/js/imagecarousel.js\
+// view all Font Awesome icons here --> https://fontawesome.com/cheatsheet
+$image-carousel-prevnext-color: $border-gray;
+$image-carousel-prevnext-background-color: $light-gray;
+$image-carousel-prevnext-font-size: 30px;
+$image-carousel-prevnext-padding: 20px;
+$image-carousel-prevnext-border: solid 1px $light-gray;
+$image-carousel-prevnext-opacity-start: 1;
+$image-carousel-prevnext-opacity-hover: 1;
+$image-carousel-previous-icon: '\f053';
+$image-carousel-next-icon:'\f054';
+$image-carousel-dots-width: 1rem;
+$image-carousel-dots-height: 1rem;
+$image-carousel-dots-color-start: transparent;
+$image-carousel-dots-color-hover: $medium-gray;
+$image-carousel-dots-color-active: $medium-gray;
+$image-carousel-dots-border-weight: 2px;
+$image-carousel-dots-border-radius: 80%;
+$image-carousel-dots-border-color: $medium-gray;
+$image-carousel-dots-opacity-start: 0.5;
+$image-carousel-dots-opacity-hover: 0.85;
+$image-carousel-dots-opacity-active: 1;
+$image-carousel-dots-margin: 0.55rem;
+$image-carousel-dots-y-move: 1rem; //0 = right below images
+
+// 12. Video Component
+// -----------------------------
+
+$video-play-button-opacity-start: 0.5;
+$video-play-button-opacity-hover: 0.85;
+$video-play-button-icon: '\f144';
+$video-play-button-tiny: 2vw;
+$video-play-button-small: 5vw;
+$video-play-button-medium: 10vw;
+$video-play-button-large: 15vw;
+$video-play-button-xlarge: 20vw;
+$video-play-button-margin: 2vw;
+
+// 13. Image Gallery Component
+// -----------------------------
+
+$gallery-image-width: 95%;
+$gallery-image-margin-bottom: 1.2rem;
+$gallery-thumbnail-border-color: $light-gray;
+$gallery-thumbnail-border-color-active: $primary-color;
+$gallery-play-button-icon: '\f144';
+$gallery-play-button-color: $white;
+$gallery-prevnext-color-start: $primary-color;
+$gallery-prevnext-color-hover: $white;
+$gallery-prevnext-background-color: rgba(0, 0, 0, 0.45);
+$gallery-toolbar-icons-color-start:$primary-color;
+$gallery-toolbar-icons-color-hover:$white;
+
+// 14. Icon Component
+// -----------------------------
+$icon-padding: 0.25em;
+
+// 15. Link List Component
+// -----------------------------
+
+$link-list-title-font-weight: 900;
+
+// 16. Footer Component
+// -----------------------------
+
+$footer-background-color: $white;
+$footer-text-color: $black;
+$footer-link-color-start: $medium-gray;
+$footer-link-color-hover: $secondary-color;
+$footer-bottom-nav-background-color: $black;
+$footer-bottom-nav-font-size: 0.7rem;
+$footer-bottom-nav-text-color: $medium-gray;
+$footer-bottom-nav-link-color-start: $medium-gray;
+$footer-bottom-nav-link-color-hover: $black;
+
+// 17. Model Specs Component
+// -----------------------------
+
+$minimal-spacing: 1rem 1rem 1rem 0;
+$minimal-odd-background: $light-gray;
+$minimal-even-background: $border-gray;
+$basic-odd-background: $light-gray;
+$basic-even-background: $border-gray;
+$model-specs-label-case: normal;
+$model-specs-border-right: 0px;
+
+// 18. Model Options Component
+// -----------------------------
+$model-options-background-color: none;
+
+// 19. Model Listing Component
+// -----------------------------
+
+$model-listing-model-year-size: 1em;
+$model-listing-model-year-weight: bold;
+$model-listing-model-name-size: 1.5em;
+$model-listing-model-name-weight: bold;
+$model-listing-model-name-transform: uppercase;
+$model-listing-model-name-line-height: 1.2em;
+$model-listing-model-name-tag-color: $primary-color; //i.e.: NEW
+$model-listing-model-name-tag-weight: normal;
+$model-listing-package-detail-margin: 1rem 0;
+$model-listing-price-block-margin: 1rem 0;
+$model-listing-price-label-size: 0.85em; //i.e.: NO HAGGLE NO HASSLE National Price
+$model-listing-price-label-color: $medium-gray;
+$model-listing-price-sale-value-size: 1.5em;
+$model-listing-price-sale-value-weight: bold;
+$model-listing-price-sale-value-color: $alert-color;
+$model-listing-price-value-size: 1.5em;
+$model-listing-price-value-weight: bold;
+$model-listing-price-strike-color: $medium-gray;
+$model-listing-price-currency-size: 1.5em;
+$model-listing-price-currency-weight: 300;
+$model-listing-price-currency-color: $medium-gray;
+$model-listing-price-save-label-size: 1em;
+$model-listing-price-save-value-size: 1em;
+$model-listing-price-save-value-weight: bold;
+$model-listing-price-save-value-color: $alert-color;
+$model-listing-specs-block-margin: 1rem 0;
+$model-listing-specs-label-padding: 0.25em 0;
+$model-listing-specs-label-size: 1rem 0;
+$model-listing-specs-label-weight: normal;
+$model-listing-specs-value-padding: 0.25em 0  0.25em 2.25em;
+$model-listing-specs-value-size: 1rem 0;
+$model-listing-specs-value-weight: bold;
+
+// 20. Model Price Component
+// -----------------------------
+
+$model-price-model-year-size: 1em;
+$model-price-model-year-weight: bold;
+$model-price-model-name-size: 1.5em;
+$model-price-model-name-weight: bold;
+$model-price-model-name-transform: uppercase;
+$model-price-model-name-line-height: 1.2em;
+$model-price-model-name-tag-color: $primary-color; //i.e.: NEW
+$model-price-model-name-tag-weight: normal;
+$model-price-package-detail-margin: 1rem 0;
+$model-price-td-padding: 0.25rem 0;
+$model-price-block-margin: 1rem 0;
+$model-price-label-size: 1em; //i.e.: NO HAGGLE NO HASSLE National Price
+$model-price-label-color: inherit;
+$model-price-sale-value-size: 1em;
+$model-price-sale-value-weight: bold;
+$model-price-sale-value-color: $alert-color;
+$model-price-value-size: 1em;
+$model-price-value-weight: bold;
+$model-price-strike-color: inherit;
+$model-price-currency-size: 1em;
+$model-price-currency-weight: 300;
+$model-price-currency-color: $medium-gray;
+$model-price-save-label-size: 1em;
+$model-price-save-value-size: 1em;
+$model-price-save-value-weight: bold;
+$model-price-save-value-color: $alert-color;
+$model-price-save-label-size: 1em;
+$model-price-save-value-size: 1em;
+$model-price-save-value-weight: bold;
+$model-price-save-value-color: $alert-color;
+$model-price-dealer-select-label-size: 1em;
+$model-price-dealer-select-link-size: 1em;
+$model-price-dealer-name-size: 1em;
+$model-price-dealer-name-weight: bold;
+$model-price-dealer-name-link-size: 1em;
+$model-price-dealer-name-link-weight: normal;
+$model-price-prep-label-size: 1em;
+$model-price-prep-value-size: 1em;
+$model-price-freight-label-size: 1em;
+$model-price-freight-value-size: 1em;
+$model-price-your-price-label-size: 1em;
+$model-price-your-price-label-weight: bold;
+$model-price-your-price-label-color: inherit;
+$model-price-your-price-sub-label-size: 0.8em;
+$model-price-your-price-sub-label-weight: bold;
+$model-price-your-price-sub-label-color: $medium-gray;
+
+// 21. Dealer Results
+// -----------------------------
+
+$dealer-result-background: $light-gray;
+
+// 22. Dealer Search Component
+// -----------------------------
+
+$dealer-search-heading-size: 1.2em;
+$dealer-search-heading-weight: bold;
+$dealer-search-heading-transform: uppercase;
+$dealer-search-results-padding: 0;
+$dealer-search-result-entry-padding: 3rem 1.5rem;
+$dealer-search-map-marker-color: $primary-color;
+$dealer-search-map-marker-counter-color: $white;
+$dealer-search-map-marker-counter-size: 1.2rem;
+$dealer-search-map-marker-counter-weight: bold;
+$dealer-search-map-marker-counter-line-height: 1.4em;
+$dealer-search-dealer-name-size: 1.2rem;
+$dealer-search-dealer-name-line-height: 1.2em;
+$dealer-search-dealer-name-weight: bold;
+$dealer-search-dealer-distance-size: 1em;
+$dealer-search-dealer-distance-weight: bold;
+$dealer-search-dealer-address-size: 1em;
+$dealer-search-dealer-address-weight: normal;
+$dealer-search-dealer-city-state-zip-size: 1em;
+$dealer-search-dealer-city-state-zip-weight: normal;
+$dealer-search-dealer-phone-size: 1em;
+$dealer-search-dealer-phone-weight: bold;
+$boat-types-label-size: 1em;
+$boat-types-label-weight: bold;
+
+// 23. Build A Boat Component
+// -----------------------------
+
+$bab-header-background-color: $light-gray;
+$bab-header-boat-name-size: 1.1em;
+$bab-header-boat-name-weight: 900;
+$bab-header-price-total-color: $black;
+$bab-header-price-total-size: 1.1em;
+$bab-header-price-total-weight: 900;
+$bab-nav-bkg-color:$white;
+$bab-nav-item-color:$black;
+$bab-nav-item-size:1em;
+$bab-nav-item-weight:900;
+$bab-disclaimer-text-size: 0.6em;
+$bab-disclaimer-text-color: $medium-gray;
+$bab-custom-color-nav-tab-text-color: $black;
+$bab-custom-color-nav-tab-bkg-color: transparent;
+$bab-custom-color-nav-tab-text-color-selected: $white;
+$bab-custom-color-nav-tab-bkg-color-selected: $black;
+$bab-custom-color-part-tab-part-text-color: $black;
+$bab-custom-color-part-tab-selected-color-text-color: $medium-gray;
+$bab-custom-color-part-tab-bkg-color: transparent;
+$bab-custom-color-part-tab-bkg-color-selected: $border-gray;
+
+//These are used by numerous components but seldom change
+
+.background-primary {
+    background-color: $primary-color;
+}
+.background-secondary {
+    background-color: $secondary-color;
+}
+.background-success {
+    background-color: $success-color;
+}
+.background-warning {
+    background-color: $warning-color;
+}
+.background-alert {
+    background-color: $alert-color;
+}
+.background-light-gray {
+    background-color: $light-gray;
+}
+.background-border-gray {
+    background-color: $border-gray;
+}
+.background-medium-gray {
+    background-color: $medium-gray;
+}
+.background-dark-gray {
+    background-color: $dark-gray;
+}
+.background-black {
+    background-color: $black;
+}
+.background-white {
+    background-color: $white;
+}
+
+.opacity-90 {
+  opacity: 0.9;
+}
+.opacity-80 {
+  opacity: 0.8;
+}
+.opacity-70 {
+  opacity: 0.7;
+
+}
+.opacity-60 {
+  opacity: 0.6;
+}
+.opacity-50 {
+  opacity: 0.5;
+}
+.opacity-40 {
+  opacity: 0.4;
+}
+.opacity-30 {
+  opacity: 0.3;
+}
+.opacity-20 {
+  opacity: 0.2;
+
+}
+.opacity-10 {
+  opacity: 0.1;
+}
+
+.hide {
+    display:none;
+}
+.block {
+    display:block;
+}
+.inline-block {
+    display:inline-block;
+}
+.inline {
+    display:inline;
+}
+
+.spring-fever-logo {
+  margin-top: -30px;
+}
+
+// Custom Classes
+
+.st-border-radius-left {
+  @include breakpoint(large) {
+    border-radius: 200px 20px 200px 20px;
+  }
+  @include breakpoint(small) {
+    border-radius: 100px 20px 100px 20px;
+  }
+}
+.st-border-radius-right {
+  @include breakpoint(large) {
+    border-radius: 20px 200px 20px 200px;
+  }
+  @include breakpoint(small) {
+    border-radius: 20px 100px 20px 100px;
+  }
+}

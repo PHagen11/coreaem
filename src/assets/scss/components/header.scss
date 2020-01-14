@@ -101,8 +101,8 @@
         > a {
           text-decoration: none;
           font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 1px;
+          text-transform: $header-menu-item-text-transform;
+          letter-spacing: $header-menu-item-letter-spacing;
           color: $header-link-color-start;
           font-size: $header-link-font-size;
           padding: $header-link-top-bottom-padding 1vw $header-link-top-bottom-padding 1vw;
@@ -116,7 +116,7 @@
         }
 
         &:hover {
-          background-color: $light-gray;
+          background-color: $header-background-hover;
         }
       }
 
@@ -262,8 +262,9 @@
     }
 
     .cta-container a {
-      margin: 0 1.8rem 0 $header-cta-left-spacing;
-      text-transform: uppercase;
+      margin: 0 1.8rem 0.2rem $header-cta-left-spacing;
+      //text-transform: uppercase;
+      font-size: 1rem;
       //color: $primary-color;
       font-weight: 700;
       //padding-right: 2rem;

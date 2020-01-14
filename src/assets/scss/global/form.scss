@@ -12,3 +12,6 @@ form label {
     padding-left: 0;
   }
 }
+[type='checkbox'] + label, [type='radio'] + label {
+  margin-left: 0.1rem;
+}
