@@ -1,20 +1,67 @@
-<div class="grid-container build-a-boat">
-    <div class="grid-x grid-margin-x">
-        <div class="cell medium-7">
-            {{> bab-motor}}
-            <br/><br/><br/><br/>
-            {{> bab-options}}
-            <br/><br/><br/><br/>
-            {{> bab-send-to-dealer}}
-        </div>
-        <div class="cell medium-1"></div>
-        <div class="cell medium-4">
-            {{> bab-sum-column}}
-        </div>
-    </div>
+<div class="build-a-boat-navigation show-for-medium">
+	<div class="grid-container">
+		<ul class="tabs" data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-tabs id="bab-tabs">
+			<li class="tabs-title is-active"><a href="#motor" aria-selected="true">Motor</a></li>
+			<li class="tabs-title"><a data-tabs-target="options" href="#options">Options</a></li>
+			<li class="tabs-title"><a data-tabs-target="colors" href="#colors">Colors</a></li>
+			<li class="tabs-title"><a data-tabs-target="summary" href="#summary">Summary</a></li>
+		</ul>
+	</div>
+</div>
+<div class="build-a-boat">
+	<div class="tabs-content" data-tabs-content="bab-tabs">
+		<div class="tabs-panel is-active" id="motor">
+			<div class="grid-container">
+				<div class="grid-x grid-margin-x">
+					<div class="cell medium-7">
+						{{> bab-motor}}
+					</div>
+					<div class="cell medium-1"></div>
+					<div class="cell medium-4">
+						{{> bab-sum-column}}
+					</div>
+				</div>
+			</div>
+			<div class="hide-for-medium mobile-bab-nav">
+				<a class="button primary expanded" href="#options">Next: Options</a>
+			</div>
+		</div>
+		<div class="tabs-panel" id="options">
+			<div class="grid-container">
+				<div class="grid-x grid-margin-x">
+					<div class="cell medium-7">
+						{{> bab-options}}
+					</div>
+					<div class="cell medium-1"></div>
+					<div class="cell medium-4">
+						{{> bab-sum-column}}
+					</div>
+				</div>
+			</div>
+			<div class="hide-for-medium mobile-bab-nav">
+				<a class="button primary expanded" href="#colors">Next: Colors</a>
+				<a class="button back expanded" href="#motor">Back</a>
+			</div>
+		</div>
+		<div class="tabs-panel" id="colors">
+			<div class="grid-container">
+				{{> bab-color}}
+			</div>
+			<div class="hide-for-medium mobile-bab-nav">
+				<a class="button primary expanded" href="#summary">Next: Summary</a>
+				<a class="button back expanded" href="#options">Back</a>
+			</div>
+		</div>
+		<div class="tabs-panel" id="summary">
+			<div class="grid-container">
+				{{> bab-summary}}
+			</div>
+			<div class="hide-for-medium mobile-bab-nav">
+				<a class="button primary expanded">Next: Send To Dealer</a>
+				<a class="button back expanded" href="#colors">Back</a>
+			</div>
+		</div>
+	</div>
 </div>
 
-<div class="hide-for-medium mobile-bab-nav">
-    <a class="button primary expanded">Next: Options</a>
-    <a class="button back expanded">Back</a>
-</div>
+
