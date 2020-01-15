@@ -1,9 +1,10 @@
 .inv-search-bar {
 	background: $light-gray;
 	z-index: 100;
-	position: absolute;
+	//position: absolute;
 	width: 100%;
-	margin-bottom: 2rem;
+	border-bottom: 1px solid #EBEDF2;
+	//margin-bottom: 2rem;
 	//padding-bottom: 1.5rem;
 	.inv-search {
 		@include breakpoint(small) {
@@ -56,7 +57,7 @@
 	}
 }
 .inventory {
-	margin-top:6rem;
+	//margin-top:6rem;
 	background-color: $light-gray;
 	position:relative;
 	.heroArea{
@@ -133,7 +134,7 @@
 
 	.filter-panel {
 		@include breakpoint(small only) {
-			margin-top: 18rem;
+			//margin-top: 18rem;
 			width: 100%;
 			padding:0.5rem 1rem 1rem 1.5rem;
 			position:relative;
