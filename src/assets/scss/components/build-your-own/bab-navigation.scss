@@ -1,50 +1,67 @@
 .build-a-boat {
-    @include breakpoint(medium) {
-        padding-bottom:5rem;
-    }    
+	@include breakpoint(medium) {
+		padding-bottom:5rem;
+	}
+
+	.responsive-grid-container {
+		@include breakpoint(medium) {
+			@include xy-grid-container;
+		}
+	}
+	.reverse-responsive-grid-container {
+		@include breakpoint(small) {
+			@include xy-grid-container;
+		}
+		@include breakpoint(medium) {
+			padding-right: 0;
+			padding-left:0;
+			max-width:100%;
+		}
+	}
 }
 .build-a-boat-navigation {
-    border-top: $border;
-    border-bottom: $border;
-    background-color: $bab-nav-bkg-color;
-    margin-bottom:2em;
+	border-top: $border;
+	border-bottom: $border;
+	background-color: $bab-nav-bkg-color;
+	margin-bottom:2em;
 
-    a.bab-nav-item {
-        display: block;
-        padding: 0.75rem 0;
-        font-weight: $bab-nav-item-weight;
-        font-size: $bab-nav-item-size;
-        text-transform: uppercase;
-        text-align: center;
-        background-color: $bab-nav-bkg-color;
-        color: $bab-nav-item-color;
-        background-color: $bab-nav-bkg-color;
+	a.bab-nav-item {
+		display: block;
+		padding: 0.75rem 0;
+		font-weight: $bab-nav-item-weight;
+		font-size: $bab-nav-item-size;
+		text-transform: uppercase;
+		text-align: center;
+		background-color: $bab-nav-bkg-color;
+		color: $bab-nav-item-color;
+		background-color: $bab-nav-bkg-color;
 
-        &.active {
-            background-color: $bab-nav-item-color;
-            color: $bab-nav-bkg-color;
-            background-color: $bab-nav-item-color;
-        }
-    }
+		&.active {
+			background-color: $bab-nav-item-color;
+			color: $bab-nav-bkg-color;
+			background-color: $bab-nav-item-color;
+		}
+	}
 }
 .bab-step-heading {
-    font-size:1rem;
-    margin-bottom:1rem;
-    text-transform:uppercase;
-    font-weight:900;
+	font-size:1rem;
+	margin-bottom:2rem;
+	text-transform:uppercase;
+	font-weight:900;
 }
 
 .mobile-bab-nav {
-    width:100%;
-    position: fixed;
-    bottom:0;
-    a {
-        margin:0;
-        &.back {
-            background-color:$border-gray;
-            &:hover {
-                background-color:$medium-gray;
-            }
-        }
-    }
+	width:100%;
+	position: fixed;
+	bottom:0;
+	a {
+		margin:0;
+		&.back {
+			background-color:$border-gray;
+			&:hover {
+				background-color:$medium-gray;
+			}
+		}
+	}
 }
+

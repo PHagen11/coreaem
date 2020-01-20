@@ -7,7 +7,7 @@
     }
 
     .accordion {
-        margin: 0;
+        margin: 0 0 3rem 0;
     }
 
     .accordion-item > a.accordion-title {
@@ -17,32 +17,51 @@
         color: inherit;
         border: $border;
         border-width: 0 0 1px 0;
+        @include breakpoint(small) {
+            text-align: center;
+		}
+        @include breakpoint(medium) {
+            text-align: left;
+            
+		}
         padding-left: 0;
     }
 
     .accordion-item > a.accordion-title::before {
-        position: absolute;
-        display: block;
+        content:'';
+    }
+    .accordion-item > a.accordion-title::after {
         content: "\f107";
         font-family: 'Font Awesome 5 Pro';
         font-weight: 700;
         font-style: normal;
         cursor: pointer;
         padding: 0;
-        right: 0.5em;
-        top: 35%;
-        margin: 0;
         width: auto;
         height: auto;
         transition: $global-transition;
         border: none;
+        @include breakpoint(small) {
+            display: inline;
+			position: absolute;
+            right: inherit;
+            top: inherit;
+            margin: 0 0 0 0.5rem;
+        }
+        @include breakpoint(medium) {
+            display: block;
+        	position: absolute;
+            right: 0.5em;
+            top: 35%;
+            margin: 0;
+		}
     }
 
     .accordion-title {
-        background: transparent;
+          background: transparent;
     }
 
-    .accordion-item.is-active > a.accordion-title::before {
+    .accordion-item.is-active > a.accordion-title::after {
         transform: rotate(-180deg);
     }
 

@@ -1,38 +1,54 @@
 .bab-motors {
+	label {
+		line-height:1.3em;
+		cursor:pointer;
+	}
+	table thead {
+		background-color:transparent;
+		vertical-align: bottom;
+	}
+	table tbody {
+		vertical-align: top;
+	}
+	table thead th {
+		font-size:0.8em;
+	}
+	table tbody td [type="radio"] {
+		@include breakpoint(small) {
+			margin:0 0.5rem 0 0.5rem;
+			cursor:pointer;
+		}
+		@include breakpoint(medium) {
+			margin:0 1rem 0 0.5rem;
+		}
+	}
+	table tbody td label{
+		width:100%;
+	}
+	table tbody td.category {
+		background-color: smart-scale($table-background, $table-color-scale * 2);
+		padding:1em 1em;
+		font-weight: bold;
+	}
+	table tbody td.price-vals label{
+		font-weight: bold;
 
-    .headings {
-        font-size:0.8em;
-        font-weight:bold;
-
-    }
-    .category {
-        background-color: $border-gray;
-        padding:0.5em 1em;
-    }
-    label {
-        line-height:1.3em;
-        cursor:pointer;
-        padding:0.4em 0;
-    }
-    .motor-listing {
-        padding:0.5em;
-    }
-    .motor-listing:nth-child(2n+1) {
-        background-color:$light-gray;
-    }
-    .price-vals {
-        font-weight: 900;
-
-        .strike {
-            text-decoration: line-through;
-        }
-
-        .price-sale-value {
-            color: $alert-color;
-        }
-
-        .price-save-value {
-            white-space: nowrap;
-        }
-    }
+		.strike {
+			text-decoration: line-through;
+		}
+		.price-sale-value {
+			color: $alert-color;
+		}
+		.price-save-value {
+			white-space: nowrap;
+		}
+	}
+	table tbody td.speed label,table tbody td.price-vals label {
+		@include breakpoint(small) {
+			padding-left:2.5rem;
+		}  
+		@include breakpoint(large) {
+			padding-left:0;
+		}  
+	}
 }
