@@ -10,10 +10,10 @@
 		<div class="tabs-content" data-tabs-content="bab-tabs">
 			<div class="tabs-panel is-active" id="motor">
 				<div class="grid-x">
-					<div class="cell large-7">
+					<div class="cell large-8">
 						{{> bab-motor}}
 					</div>
-					<div class="cell large-5">
+					<div class="cell large-4">
 						<div clas="bab-sum-col">
 							{{> bab-sum-column}}
 						</div>
@@ -24,19 +24,13 @@
 				</div>
 			</div>
 			<div class="tabs-panel" id="options">
-				<div class="responsive-grid-container">
-					<div class="grid-x">
-						<div class="cell large-7">
-							{{> bab-options}}
-						</div>
-						<div class="cell large-5">
-							<div clas="bab-sum-col">
-								{{> bab-sum-column}}
-							</div>
-							<!-- <div class="bab-sum-col-dis">
-								{{> bab-help}}
-								{{> bab-disclaimer}}
-							</div> -->
+				<div class="grid-x">
+					<div class="cell large-8">
+						{{> bab-options}}
+					</div>
+					<div class="cell large-4">
+						<div clas="bab-sum-col">
+							{{> bab-sum-column}}
 						</div>
 					</div>
 				</div>
@@ -46,13 +40,17 @@
 				</div>
 			</div>
 			<div class="tabs-panel" id="colors">
-				<div class="grid-container">
-					{{> bab-color}}
+				<div class="grid-x">
+					<div class="cell large-8">
+						{{> bab-color}}
+					</div>
+					<div class="cell large-4">
+						<div clas="bab-sum-col">
+							{{> bab-sum-column}}
+						</div>
+					</div>
 				</div>
-				<div class="hide-for-medium mobile-bab-nav">
-					<a class="button primary expanded" href="#summary">Next: Summary</a>
-					<a class="button back expanded" href="#options">Back</a>
-				</div>
+
 			</div>
 			<div class="tabs-panel" id="summary">
 				<div class="grid-container">
