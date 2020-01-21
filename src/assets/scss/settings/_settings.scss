@@ -1352,18 +1352,18 @@ $boat-types-label-weight: bold;
 // 23. Build A Boat Component
 // -----------------------------
 
-$bab-header-background-color: $light-gray;
-$bab-header-boat-name-size: 1.1em;
+$bab-header-background-color: $black;
+$bab-header-boat-name-size: 1.3rem;
 $bab-header-boat-name-weight: 900;
-$bab-header-price-total-color: $black;
-$bab-header-price-total-size: 1.1em;
-$bab-header-price-total-weight: 900;
+$bab-header-price-total-color: $white;
+$bab-header-price-total-size: 1.3rem;
+$bab-header-price-total-weight: 500;
 $bab-nav-bkg-color:$white;
 $bab-nav-item-color:$black;
 $bab-nav-item-size:1em;
 $bab-nav-item-weight:900;
-$bab-disclaimer-text-size: 0.6em;
-$bab-disclaimer-text-color: $medium-gray;
+$bab-disclaimer-text-size: 2rem;
+$bab-disclaimer-text-color: #efefef;
 $bab-custom-color-nav-tab-text-color: $black;
 $bab-custom-color-nav-tab-bkg-color: transparent;
 $bab-custom-color-nav-tab-text-color-selected: $white;

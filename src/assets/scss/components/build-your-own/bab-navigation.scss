@@ -1,29 +1,39 @@
 .build-a-boat {
 	@include breakpoint(medium) {
 		padding-bottom:5rem;
+		background: $white;
+		padding-left: 2vw;
+		padding-right: 2vw;
+		background: $white;
 	}
-
-	.responsive-grid-container {
-		@include breakpoint(medium) {
-			@include xy-grid-container;
-		}
+	//
+	// .responsive-grid-container {
+	// 	@include breakpoint(medium) {
+	// 		@include xy-grid-container;
+	// 	}
+	// }
+	// .reverse-responsive-grid-container {
+	// 	@include breakpoint(small) {
+	// 		@include xy-grid-container;
+	// 	}
+	// 	@include breakpoint(medium) {
+	// 		padding-right: 0;
+	// 		padding-left:0;
+	// 		max-width:100%;
+	// 	}
+	// }
+	.tabs-panel {
+		padding:0;
 	}
-	.reverse-responsive-grid-container {
-		@include breakpoint(small) {
-			@include xy-grid-container;
-		}
-		@include breakpoint(medium) {
-			padding-right: 0;
-			padding-left:0;
-			max-width:100%;
-		}
+	.tabs-content {
+		border:none;
 	}
 }
 .build-a-boat-navigation {
 	border-top: $border;
 	border-bottom: $border;
 	background-color: $bab-nav-bkg-color;
-	margin-bottom:2em;
+	margin-bottom:0em;
 
 	a.bab-nav-item {
 		display: block;
@@ -42,11 +52,18 @@
 			background-color: $bab-nav-item-color;
 		}
 	}
+	.grid-container {
+		background: $light-gray;
+	}
+	.tabs .tabs-title a {
+		padding: 1.5rem 6vw 1rem 6vw;
+	}
 }
 .bab-step-heading {
-	font-size:1rem;
-	margin-bottom:2rem;
-	text-transform:uppercase;
+	font-size:1.5rem;
+	margin-bottom:1rem;
+	margin-top: 2rem;
+	//text-transform:uppercase;
 	font-weight:900;
 }
 
@@ -64,4 +81,3 @@
 		}
 	}
 }
-

@@ -1,97 +1,104 @@
 .bab-sum-col {
-    margin: 0 0 3em 0;
-
-    .bab-boat {
-        .bab-boat-name {
-            font-size:1.25rem;
-            font-weight:900;
-            text-transform: uppercase;
-        }
+  //margin: 0 0 2em;
+  background: $white;
+  position: scroll;
+  border-left: 2px solid $border-gray;
+  //box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  //border-radius: 6px;
+  padding: 2rem 1rem 3rem 3rem;
+  .bab-boat {
+    .bab-boat-name {
+      font-size: 1.8rem;
+      font-weight: 900;
+      text-transform: uppercase;
     }
-    .prices {
-        font-size: 0.85em;
-        border: $border;
-        border-width: 1px 0;
-        padding: 1em 0 2em;
-        margin-bottom: 1em;
+  }
 
-        .price-vals {
-            font-weight: 900;
-            text-align: right;
+  .prices {
+    font-size: 1rem;
+    border: $border;
+    border-width: 0px 0;
+    padding: 1em 0 2em;
+    //margin-bottom: 1em;
 
-            .price-reg {
-                white-space: nowrap;
-            }
+    .price-vals {
+      font-weight: 900;
+      text-align: right;
 
-            .strike {
-                text-decoration: line-through;
-            }
+      .price-reg {
+        white-space: nowrap;
+      }
 
-            .price-sale-value {
-                color: $alert-color;
-            }
+      .strike {
+        text-decoration: line-through;
+      }
 
-            .price-save-value {
-                white-space: nowrap;
-            }
-        }
+      .price-sale-value {
+        color: $alert-color;
+      }
+
+      .price-save-value {
+        white-space: nowrap;
+      }
     }
-    .dealer-info {
-        font-size: 0.85em;
-        line-height:1.5em;
-        .dealer-result-name {
-            font-weight:bold;
-            margin-bottom:1em;
-        }
-        .dealer-result-phone {
-            margin-bottom:1em;
-        }
-        .dealer-result-hours {
-            font-weight:bold;
-            margin-bottom:1em;
-        }
-        .dealer-result-address {
-            margin-bottom:1em;
-        }
-    }
-    .prep-freight {
-        font-size: 0.85em;
-        line-height:2em;
-        margin-bottom:1em;
-        .prep-value, .freight-value{
-            font-weight:bold;
-        }
-    }
-    .special-offers {
-        font-size: 0.85em;
-        border: $border;
-        border-width: 1px 0;
-        padding: 1em 0;
-        margin-bottom: 2em;
-        .special-offers-label {
-            font-weight:bold;
-            margin-bottom:1em;
-        }
+  }
+
+  .dealer-info {
+    background: $light-gray;
+    //box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.5em;
+
+    .dealer-result-name {
+      font-weight: bold;
+      margin-bottom: 1em;
     }
 
-    .price-total {
-        font-size:1.25em;
-        text-transform: uppercase;
-        font-weight:900;
-        margin-bottom: 1.5em;
+    .dealer-result-phone {
+      margin-bottom: 1em;
     }
 
-    .bab-help {
-        text-align:center;
-        .chat, .call {
-            margin-bottom:1em;
-        }
+    .dealer-result-hours {
+      font-weight: bold;
+      margin-bottom: 1em;
     }
-    .bab-disclaimer {
-        font-size:$bab-disclaimer-text-size;
-        text-align:center;
-        color:$bab-disclaimer-text-color;
-        margin-bottom:5rem;
+
+    .dealer-result-address {
+      margin-bottom: 1em;
     }
+  }
+
+  .prep-freight {
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 2em;
+    margin-bottom: 1em;
+
+    .freight-value,
+    .prep-value {
+      font-weight: bold;
+    }
+  }
+
+  .special-offers {
+    font-size: 1rem;
+    border: $border;
+    border-width: 1px 0;
+    padding: 1em 0;
+    margin-bottom: 2em;
+
+    .special-offers-label {
+      font-weight: bold;
+      margin-bottom: 1em;
+    }
+  }
+
+  .price-total {
+    font-size: 1.25em;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 1.5em;
+  }
 }
-
