@@ -1,6 +1,13 @@
 .bab-options {
-  padding-right: 6rem;
-  padding-left: 3rem;
+  @include breakpoint(small) {
+		padding-right: 2rem;
+		padding-left: 2rem;
+	}
+	@include breakpoint(large) {
+		padding-right: 6rem;
+		padding-left: 3rem;
+    height: 80vh;
+	}
 
   table.option-item {
     width: 100%;
@@ -23,7 +30,7 @@
     border: $border;
     border-width: 0 0 2px 0;
     @include breakpoint(small) {
-      text-align: center;
+      text-align: left;
     }
     @include breakpoint(medium) {
       text-align: left;
@@ -52,7 +59,7 @@
     @include breakpoint(small) {
       display: inline;
       position: absolute;
-      right: inherit;
+      right: 0.5em;
       top: inherit;
       margin: 0 0 0 0.5rem;
     }

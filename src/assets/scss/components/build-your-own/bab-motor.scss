@@ -1,102 +1,55 @@
 .bab-motors {
-	padding-right: 6rem;
-	padding-left: 3rem;
-		.motor {
-			padding: 1rem 1rem 1rem 1.4rem;
-			margin-top: 1rem;
-			border: 2px solid $border-gray;
-			border-radius: 6px;
-			.motor-name {
-				font-size: 1.2rem;
-				//font-weight: bold;
-				margin-bottom: 0;
-			}
-			.motor-speed {
-				margin-bottom: 0;
-				font-size: 0.8rem;
-			}
-			.motor-price {
-				font-size: 1.2rem;
-				//font-weight: bold;
-				text-align: right;
-				margin-bottom: 0;
-			}
-			.price-label {
-				margin-bottom: 0;
-				font-size: 0.8rem;
-			}
-			&:hover {
-				cursor: pointer;
-				box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-				transition: box-shadow 0.3s ease-in-out;
-			}
-		}
-		.motor.selected {
-			border:4px solid $primary-color;
-			font-weight: bold;
+	@include breakpoint(small) {
+		padding-right: 2rem;
+		padding-left: 2rem;
+	}
+	@include breakpoint(large) {
+		padding-right: 6rem;
+		padding-left: 3rem;
+		height: 90vh;
+	}
+	.bab-step-heading {
+			margin-bottom: 2rem;
+	}
+
+	.motor {
+		padding: 1rem 1rem 1rem 1.4rem;
+		margin-top: 1rem;
+		border: 2px solid $border-gray;
+		border-radius: 6px;
+
+		.motor-name {
+			font-size: 1.2rem;
+			//font-weight: bold;
+			margin-bottom: 0;
 		}
 
+		.motor-speed {
+			margin-bottom: 0;
+			font-size: 0.8rem;
+		}
 
-	// label {
-	// 	line-height:1.3em;
-	// 	cursor:pointer;
-	// }
-	// table thead {
-	// 	border: none;
-	// 	background-color:transparent;
-	// 	vertical-align: bottom;
-	// }
-	// table tbody {
-	// 	vertical-align: top;
-	// 	border:none;
-	// }
-	// tr.selected {
-	// 		//border: 2px solid $primary-color;
-	// 		//border-radius: 4px;
-	// }
-	// tbody tr:nth-child(even) {
-	// 	background: none;
-	// }
-	// table thead th {
-	// 	font-size:0.8em;
-	// }
-	// table tbody td [type="radio"] {
-	// 	@include breakpoint(small) {
-	// 		margin:0 0.5rem 0 0.5rem;
-	// 		cursor:pointer;
-	// 	}
-	// 	@include breakpoint(medium) {
-	// 		margin:1rem 1rem 1rem 0.5rem;
-	// 	}
-	// }
-	// table tbody td label{
-	// 	width:100%;
-	// 	font-size: 1rem;
-	// }
-	// table tbody td.category {
-	// 	background-color: smart-scale($table-background, $table-color-scale * 2);
-	// 	padding:1em 1em;
-	// 	font-weight: bold;
-	// }
-	// table tbody td.price-vals label{
-	// 	font-weight: bold;
-	// 	.strike {
-	// 		text-decoration: line-through;
-	// 	}
-	// 	.price-sale-value {
-	// 		color: $alert-color;
-	// 	}
-	// 	.price-save-value {
-	// 		white-space: nowrap;
-	// 	}
-	// }
-	// table tbody td.speed label,table tbody td.price-vals label {
-	// 	@include breakpoint(small) {
-	// 		padding-left:2.5rem;
-	// 	}
-	// 	@include breakpoint(large) {
-	// 		padding-left:0;
-	// 		vertical-align: middle;
-	// 	}
-	// }
+		.motor-price {
+			font-size: 1.2rem;
+			//font-weight: bold;
+			text-align: right;
+			margin-bottom: 0;
+		}
+
+		.price-label {
+			margin-bottom: 0;
+			font-size: 0.8rem;
+		}
+
+		&:hover {
+			cursor: pointer;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			transition: box-shadow 0.3s ease-in-out;
+		}
+	}
+
+	.motor.selected {
+		border: 4px solid $primary-color;
+		font-weight: bold;
+	}
 }

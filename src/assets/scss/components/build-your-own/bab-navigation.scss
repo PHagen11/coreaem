@@ -1,27 +1,11 @@
 .build-a-boat {
-	@include breakpoint(medium) {
+	@include breakpoint(large) {
 		padding-bottom:5rem;
 		background: $white;
 		padding-left: 2vw;
 		padding-right: 2vw;
 		background: $white;
 	}
-	//
-	// .responsive-grid-container {
-	// 	@include breakpoint(medium) {
-	// 		@include xy-grid-container;
-	// 	}
-	// }
-	// .reverse-responsive-grid-container {
-	// 	@include breakpoint(small) {
-	// 		@include xy-grid-container;
-	// 	}
-	// 	@include breakpoint(medium) {
-	// 		padding-right: 0;
-	// 		padding-left:0;
-	// 		max-width:100%;
-	// 	}
-	// }
 	.tabs-panel {
 		padding:0;
 	}

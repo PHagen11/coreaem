@@ -1,8 +1,18 @@
 .bab-sum-col {
-  background: $white;
-  position: scroll;
-  border-left: 2px solid $border-gray;
-  padding: 2rem 1rem 1rem 3rem;
+  @include breakpoint(small){
+    border-top: 4px solid $border-gray;
+    background: $white;
+    position: scroll;
+    padding:3rem;
+    margin-top:3rem;
+  }
+  @include breakpoint(large){
+    background: $white;
+    margin-top:0;
+    border-top:none;
+    border-left: 2px solid $border-gray;
+    padding: 2rem 1rem 1rem 3rem;
+  }
   .bab-boat {
     .bab-boat-name {
       font-size: 1.8rem;
@@ -55,9 +65,9 @@
     }
   }
   .prices {
-    border-top: 2px solid $border-gray;
-    font-size: 1.1rem;
-    padding: 1.5rem 0 0.7rem;
+  //  border-top: 2px solid $border-gray;
+    font-size: 1rem;
+    padding: 2.5rem 0 0.7rem;
 
     .price-vals {
       font-weight: bold;
@@ -88,7 +98,7 @@
 
   .prep-freight {
     margin-top: 0rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 2.4rem;
     margin-bottom: 1em;
 
@@ -97,9 +107,22 @@
       font-weight: bold;
     }
   }
+  .options {
+    .option-value {
+      font-weight: bold;
+    }
+    .option-label {
+      padding-bottom: 1rem;
+    }
+  }
 
   .special-offers {
-    background: $light-gray;
+    @include breakpoint(small){
+      background: $light-gray;
+    }
+    @include breakpoint(large){
+      background: $light-gray;
+    }
     font-size: 1rem;
     border-radius: 6px;
     //border: $border;

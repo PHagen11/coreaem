@@ -1,6 +1,14 @@
 .bab-color {
-  padding-right: 6rem;
-  padding-left: 3rem;
+  @include breakpoint(small) {
+		padding-right: 2rem;
+		padding-left: 2rem;
+	}
+	@include breakpoint(large) {
+		padding-right: 6rem;
+		padding-left: 3rem;
+    height: 90vh;
+    margin-bottom: 8rem;
+	}
     .boat-thumbnail {
         overflow: hidden;
         background-position:center;
@@ -33,15 +41,39 @@
             border-color: $black;
         }
     }
+    .owl-thumbs {
+      margin-top:2rem;
+    }
+    .owl-thumb-item {
+      @include breakpoint(small) {
+        border:2px solid $border-gray;
+        max-width: 100px;
+        margin: 0rem 0.6rem 1.1rem 0.6rem;
+        //-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        //filter: grayscale(100%);
+        //opacity: 0.5;
+      }
+      @include breakpoint(medium) {
+        max-width: 100px;
+      }
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+      //transform: scale(1.15);
+      //transition-timing-function: ease;
+      //ytransition: 0.3s;
+      }
+    }
 
     .bab-step-heading {
-        margin-bottom: 2rem;
+        //margin-bottom: 2rem;
     }
 
     .boat-image {
+      margin-top: 0vh;
         background-color:$site-bkg-color;
-        padding-bottom: 2rem;
-        border-bottom: 2px solid $border-gray;
+        //margin-bottom: 2rem;
+        //border-bottom: 2px solid $border-gray;
         img {
             width: 100%;
         }
@@ -177,7 +209,7 @@
         }
 
         &.selected .swatch-circle-highlight {
-            background-color: $border-gray;
+            background-color: #dedede;
         }
         .swatch-name {
             margin-top:0.8em;

@@ -10,7 +10,7 @@
   .cell {
     //border-left: 1px solid $dark-gray;
     //vertical-align: center;
-    margin: 0rem 1rem 0rem 1rem;
+    //margin: 0rem 1rem 0rem 1rem;
   }
   .button {
     margin-bottom: 0;
@@ -34,20 +34,29 @@
     color: $white;
   }
   .bab-price {
-    border-left: 1px solid $medium-gray;
+    @include breakpoint(small){
+      border:none;
+    }
+    @include breakpoint(large){
+      border-left:1px solid $medium-gray;
+    }
   }
 
   .bab-price-total {
+    @include breakpoint(small) {
+      padding-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    @include breakpoint(large){
+      font-size: 1.4rem;
+      padding-bottom: 0;
+    }
     font-weight: $bab-header-price-total-weight;
-    font-size: $bab-header-price-total-size;
     color: $bab-header-price-total-color;
-    text-transform: uppercase;
   }
 
   .bab-price-total-note {
-    font-size: 0.8rem;
-    line-height: 0.8em;
+    font-size: 0.9rem;
     color: $white;
-    //text-transform: uppercase;
   }
 }
