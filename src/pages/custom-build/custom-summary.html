@@ -3,7 +3,7 @@
     <li><a href="/custom-build/custom-motor.html">1. Motor</a></li>
     <li><a href="/custom-build/custom-color.html">2. Color</a></li>
     <li><a href="/custom-build/custom-options.html">3. Options</a></li>
-    <li><a class="active" href="/custom-build/custom-summary.htm">4. Summary</a></li>
+    <li><a class="active" href="/custom-build/custom-summary.html">4. Summary</a></li>
   </ul>
 </div>
 <div class="grid-x build-a-boat">
@@ -12,7 +12,7 @@
       <div class="bab-step-heading text-center large-text-left">Summary:</div>
       <img src="/assets/img/map.png">
       <div class="dealer-info small-bottom">
-        <h4 class="dealer-name"><i class="fas fa-map-marker fa-s primary"></i>Bass Pro Shops SPRINGFIELD, MO</h4>
+        <h4 class="dealer-name">Bass Pro Shops SPRINGFIELD, MO</h4>
         <div class="dealer-result-address">
           <div class="dealer-result-address1">
             1935 S Campbell
@@ -27,48 +27,55 @@
           Store Phone: <a href="tel:4178777334">(417) 887-7334</a>
         </div>
         <div class="dealer-hours center">
-          <div class="dealer-hours-title">
-            Showroom hours
-          </div>
-          <table>
-            <tbody>
-              <tr>
-                <td>Monday</td>
-                <td>8:00AM - 7:00PM</td>
-              </tr>
-              <tr>
-                <td>Tuesday</td>
-                <td>8:00AM - 7:00PM</td>
-              </tr>
-              <tr>
-                <td>Wednesday</td>
-                <td>8:00AM - 7:00PM</td>
-              </tr>
-              <tr>
-                <td>Thursday</td>
-                <td>8:00AM - 7:00PM</td>
-              </tr>
-              <tr>
-                <td>Friday</td>
-                <td>8:00AM - 6:00PM</td>
-              </tr>
-              <tr>
-                <td>Saturday</td>
-                <td>9:00AM - 6:00PM</td>
-              </tr>
-              <tr>
-                <td>Sunday</td>
-                <td>Closed</td>
-              </tr>
-            </tbody>
-          </table>
+          <ul class="accordion" data-accordion data-allow-all-closed="true">
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title">
+                <i class="fas fa-circle fa-s"></i>Open
+                <!-- if now is between hours of operation -->Now
+                <!-- end if -->: 7AM - 10PM</a>
+              <div class="accordion-content" data-tab-content>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>Monday</td>
+                      <td>8:00AM - 7:00PM</td>
+                    </tr>
+                    <tr>
+                      <td>Tuesday</td>
+                      <td>8:00AM - 7:00PM</td>
+                    </tr>
+                    <tr>
+                      <td>Wednesday</td>
+                      <td>8:00AM - 7:00PM</td>
+                    </tr>
+                    <tr>
+                      <td>Thursday</td>
+                      <td>8:00AM - 7:00PM</td>
+                    </tr>
+                    <tr>
+                      <td>Friday</td>
+                      <td>8:00AM - 6:00PM</td>
+                    </tr>
+                    <tr>
+                      <td>Saturday</td>
+                      <td>9:00AM - 6:00PM</td>
+                    </tr>
+                    <tr>
+                      <td>Sunday</td>
+                      <td>Closed</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </li>
+          </ul>
         </div>
         <div class="grid-x">
           <div class="small-12 medium-12 cell">
             <a class="button secondary expanded ">Print & Save</a>
           </div>
           <div class="small-12 medium-12 cell">
-            <a class="button expanded">Send To Dealer</a>
+            <a href="/custom-build/custom-send.html" class="button expanded">Send To Dealer</a>
           </div>
         </div>
       </div>
@@ -479,7 +486,7 @@
           <a class="button clear">Send to Dealer</a>
         </div> -->
         <div class="small-12 cell">
-          <a class="button expanded" href="/custom-build/custom-motor.html">Send to Dealer</a>
+          <a class="button expanded" href="/custom-build/custom-send.html">Send to Dealer</a>
         </div>
       </div>
     </div>

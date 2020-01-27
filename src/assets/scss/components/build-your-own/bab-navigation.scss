@@ -20,7 +20,7 @@
 
 .build-a-boat {
 	@include breakpoint(large) {
-		padding-bottom:5rem;
+		padding-bottom:2rem;
 		background: $white;
 		padding-left: 2vw;
 		padding-right: 2vw;
