@@ -1,96 +1,153 @@
 .bab-sum-col {
-    margin: 0 0 3em 0;
-
-    .bab-boat {
-        .bab-boat-name {
-            font-size:1.25rem;
-            font-weight:900;
-            text-transform: uppercase;
-        }
+  @include breakpoint(small){
+    border-top: 4px solid $border-gray;
+    background: $white;
+    position: scroll;
+    padding:3rem;
+    margin-top:3rem;
+  }
+  @include breakpoint(large){
+    background: $white;
+    margin-top:0;
+    border-top:none;
+    border-left: 2px solid $border-gray;
+    padding: 2rem 1rem 4rem 3rem;
+    height: 100%;
+  }
+  .bab-boat {
+    .bab-boat-name {
+      font-size: 1.8rem;
+      font-weight: 900;
+      text-transform: uppercase;
     }
-    .prices {
-        font-size: 0.85em;
-        border: $border;
-        border-width: 1px 0;
-        padding: 1em 0 2em;
-        margin-bottom: 1em;
-
-        .price-vals {
-            font-weight: 900;
-            text-align: right;
-
-            .price-reg {
-                white-space: nowrap;
-            }
-
-            .strike {
-                text-decoration: line-through;
-            }
-
-            .price-sale-value {
-                color: $alert-color;
-            }
-
-            .price-save-value {
-                white-space: nowrap;
-            }
-        }
+  }
+  .dealer-info {
+    //background: $light-gray;
+    border: 2px solid $border-gray;
+    margin-top: 1rem;
+    margin-bottom:0;
+    border-radius: 6px;
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.5em;
+    .accordion-title {
+      border: none;
+      color: $black;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0 ;
+      i {
+        padding-right: 0.4rem;
+        color: $primary-color;
+      }
+      &:hover, &:focus {
+        background: none;
+      }
     }
-    .dealer-info {
-        font-size: 0.85em;
-        line-height:1.5em;
-        .dealer-result-name {
-            font-weight:bold;
-            margin-bottom:1em;
-        }
-        .dealer-result-phone {
-            margin-bottom:1em;
-        }
-        .dealer-result-hours {
-            font-weight:bold;
-            margin-bottom:1em;
-        }
-        .dealer-result-address {
-            margin-bottom:1em;
-        }
+    .accordion-content {
+      border:none;
+      background: none;
+      padding: 1rem 0 0 0;
     }
-    .prep-freight {
-        font-size: 0.85em;
-        line-height:2em;
-        margin-bottom:1em;
-        .prep-value, .freight-value{
-            font-weight:bold;
-        }
-    }
-    .special-offers {
-        font-size: 0.85em;
-        border: $border;
-        border-width: 1px 0;
-        padding: 1em 0;
-        margin-bottom: 2em;
-        .special-offers-label {
-            font-weight:bold;
-            margin-bottom:1em;
-        }
+    .dealer-result-name {
+      font-weight: bold;
+      margin-bottom: 1em;
     }
 
-    .price-total {
-        font-size:1.25em;
-        text-transform: uppercase;
-        font-weight:900;
-        margin-bottom: 1.5em;
+    .dealer-result-phone {
+      margin-bottom: 1em;
     }
 
-    .bab-help {
-        text-align:center;
-        .chat, .call {
-            margin-bottom:1em;
-        }
+    .dealer-result-hours {
+      font-weight: bold;
+      margin-bottom: 1em;
     }
-    .bab-disclaimer {
-        font-size:$bab-disclaimer-text-size;
-        text-align:center;
-        color:$bab-disclaimer-text-color;
-        margin-bottom:5rem;
+
+    .dealer-result-address {
+      margin-bottom: 1em;
     }
+  }
+  .prices {
+  //  border-top: 2px solid $border-gray;
+    font-size: 1rem;
+    padding: 2.5rem 0 0.7rem;
+
+    .price-vals {
+      font-weight: bold;
+      text-align: right;
+
+
+      .price-reg {
+        white-space: nowrap;
+      }
+
+      .strike {
+        text-decoration: line-through;
+      }
+
+      .price-sale-value {
+        color: $alert-color;
+      }
+
+      .price-save-value {
+        white-space: nowrap;
+        font-style: italic;
+        font-weight: normal;
+        color: $medium-gray;
+      }
+    }
+  }
+
+
+  .prep-freight {
+    margin-top: 0rem;
+    font-size: 1rem;
+    line-height: 2.4rem;
+    margin-bottom: 1em;
+
+    .freight-value,
+    .prep-value {
+      font-weight: bold;
+    }
+  }
+  .options {
+    .option-value {
+      font-weight: bold;
+    }
+    .option-label {
+      padding-bottom: 1rem;
+    }
+  }
+
+  .special-offers {
+    @include breakpoint(small){
+      background: $light-gray;
+    }
+    @include breakpoint(large){
+      background: $light-gray;
+    }
+    font-size: 1rem;
+    border-radius: 6px;
+    //border: $border;
+    //border-width: 1px 0;
+    padding: 1rem;
+    margin-bottom: 2em;
+
+    .special-offers-label {
+      font-weight: bold;
+      margin-bottom: 0em;
+    }
+  }
+
+  .price-total {
+    //border-top: 2px solid $border-gray;
+    border-bottom: 2px solid $border-gray;
+    padding: 0rem 0 1.5rem 0;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-top: 1.2rem;
+    margin-bottom: 1.5em;
+  }
 }
