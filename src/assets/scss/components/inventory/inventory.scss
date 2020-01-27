@@ -37,6 +37,10 @@
 				.sale-text {
 					text-align: left;
 					font-size: 1.5rem;
+					i {
+						color: $primary-color;
+						margin-right: 0.5rem;
+					}
 				}
 				.near {
 					font-size: 1.5rem;
@@ -84,7 +88,7 @@
 				text-align: right;
 			}
 			a {
-				color: $primary-color;	
+				color: $primary-color;
 			}
 	}
 }
