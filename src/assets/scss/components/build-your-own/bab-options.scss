@@ -1,4 +1,4 @@
-.bab-options {
+.bab-options, .bab-sum {
   @include breakpoint(small) {
 		padding-right: 2rem;
 		padding-left: 2rem;
@@ -6,7 +6,7 @@
 	@include breakpoint(large) {
 		padding-right: 6rem;
 		padding-left: 3rem;
-    height: 80vh;
+    //height: 80vh;
 	}
 
   table.option-item {
@@ -81,7 +81,7 @@
   }
 
   .accordion-content {
-    background-color: $light-gray;
+    //background-color: $light-gray;
     padding: 1rem 0 1rem 0rem;
     border: none;
 
@@ -89,7 +89,7 @@
       tbody {
         border-color: transparent;
         border-spacing: 0;
-        background-color: $light-gray;
+        //background-color: $light-gray;
       }
 
       tr {
