@@ -93,8 +93,9 @@
 	}
 }
 .inventory {
-	//margin-top:6rem;
-	background-color: $light-gray;
+	height: 100%;
+	overflow: scroll;
+	background-color: $white;
 	position:relative;
 	.heroArea{
 		h1 {
@@ -124,7 +125,7 @@
 			color: $white;
 			height:60px;
 			text-align:center;
-			font-size: 1.0em;
+			font-size: 1rem;
 			font-weight: bold;
 			padding:1em 2em;
 			cursor: pointer;
@@ -169,8 +170,7 @@
 
 
 	.filter-panel {
-		@include breakpoint(small only) {
-			//margin-top: 18rem;
+		@include breakpoint(small) {
 			width: 100%;
 			padding:0.5rem 1rem 1rem 1.5rem;
 			position:relative;
@@ -181,6 +181,7 @@
 				}
 			}
 			&.shown {
+				position:relative;
 				background-color: $white;
 				.filter-form {
 					display:block;
@@ -190,10 +191,10 @@
 				}
 			}
 		}
-		@include breakpoint(medium) {
+		@include breakpoint(large) {
 			float:left;
 			margin-right:4vw;
-			padding:1.5rem 1rem 1rem 1.5rem;
+			padding:1.5rem 1.5rem 3rem 1.5rem;
 			position:relative;
 			&.hidden {
 				background-color: transparent;
@@ -205,8 +206,10 @@
 				}
 			}
 			&.shown {
+				overflow: scroll;
+				height:100vh;
 				background-color: $white;
-				width: 350px;
+				width: 370px;
 				.filter-form {
 					display:block;
 				}
@@ -215,7 +218,33 @@
 				}
 			}
 		}
-
+		.stores {
+			padding-bottom: 1.5rem;
+		}
+		label {
+			font-size: 1rem;
+			margin-left: 0;
+			margin-top: 0.2rem;
+			padding-top: 0.2rem;
+			margin-bottom: 0.2rem;
+			line-height: 1.5;
+		}
+		input[type='checkbox'] {
+			-webkit-appearance:none;
+			width:20px;
+			height:20px;
+			background:#F7F7F7;
+			border-radius:0px;
+			border:1px solid #DEDEDE;
+			//margin: 0.5rem 1rem 0 0;
+			vertical-align: middle;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+		input[type='checkbox']:checked {
+			background: $black;
+		}
 
 		.filter-toggle-button {
 			cursor:pointer;
@@ -229,7 +258,7 @@
 		}
 		.filter-heading {
 			padding-bottom:0.5rem;
-			border-bottom:1px solid $border-gray;
+			border-bottom:2px solid $border-gray;
 			.title{
 				@include breakpoint(small only) {
 					font-size:1.25rem;
@@ -237,9 +266,9 @@
 					font-weight:200;
 				}
 				@include breakpoint(medium) {
-					font-size:2rem;
+					font-size:1.5rem;
 					line-height:1.5em;
-					font-weight:200;
+					font-weight: bold;
 				}
 			}
 			.close-button {
@@ -248,14 +277,15 @@
 					top:0.25em;
 				}
 				@include breakpoint(medium) {
-					top:1em;
+					top:1.5rem;
+					right: 1.5rem;
 				}
 			}
 		}
 		section, .accordion-item {
 			margin:0;
-			padding:1rem 0 1rem;
-			border-bottom:1px solid $border-gray;
+			padding:0.75rem 0 0.75rem;
+			border-bottom:2px solid $border-gray;
 			.title, .accordion-title {
 				text-transform: uppercase;
 				font-weight: bold;
@@ -267,7 +297,7 @@
 			}
 		}
 		.accordion-title {
-			padding:0 0 0.5rem 0;
+			padding:0 0 0rem 0;
 			border:none;
 			color: $black;
 			text-decoration: none;
@@ -289,18 +319,20 @@
 
 
 		.accordion-content {
-			padding: 0;
+			padding: 0.5rem 0 0.5rem 0;
 			border:none;
 		}
 		.subset {
-			margin-left:0.75rem;
-			padding:0.75rem 0;
+			margin-left:1rem;
+			padding:0.8rem 0;
 		}
 		.count {
 			color:$medium-gray;
 		}
 		.showmore {
-			font-size:0.85rem;
+			font-weight: bold;
+			font-size:1rem;
+			line-height: 3;
 		}
 		.condition-buttons {
 			input[type="radio"]{
@@ -309,10 +341,12 @@
 			label {
 				color:$black;
 				text-transform: none;
-				border-width:2px;
-				border-radius: 4px;
+				border-width:3px;
+				border-radius: 0px;
 				border-color: $border-gray;
 				width:49%;
+				text-transform: uppercase;
+				padding-top: 0.8rem;
 				display: inline-block;
 				-webkit-user-select: none;
 				-moz-user-select: none;
@@ -320,7 +354,8 @@
 				user-select: none;
 				&.selected {
 					border-color: $secondary-color;
-					box-shadow: 0 2px 4px 0 rgba($black, 0.15);
+					//box-shadow: 0 2px 4px 0 rgba($black, 0.15);
+					color: $secondary-color;
 				}
 			}
 		}
@@ -370,12 +405,39 @@
 				background-color: $primary-color;
 			}
 		}
+		.submit {
+			z-index: 1000;
+			background: $white;
+			box-shadow:0 2px 10px 0 rgba(0,0,0,0.13);
+			//margin-top: 2rem;
+			padding:1rem 1rem 0 1rem;
+			position: absolute;
+			bottom: 0%;
+			left: 0%;
+			position: fixed;
+			@include breakpoint (small) {
+				width: 100%
+			}
+			@include breakpoint (large) {
+				width: 370px;
+			}
+		}
 	}
 	.filter-results {
+		@include breakpoint (small) {
+			margin-left: 0px;
+		}
+		@include breakpoint (large) {
+			margin-left: 370px;
+		}
+		background: $light-gray;
+		height: 100%;
+		min-height: 750px;
 	  padding-right: 4vw;
-		padding-left:1rem;
+		padding-left:4vw;
+		padding-bottom: 4rem;
 		.results-heading {
-			padding:2rem 0;
+			padding:2rem 0 1.5rem 0rem;
 			.sort-toggle-button {
 				float:right;
 				margin-top:0.25em;
@@ -394,9 +456,9 @@
 				}
 			}
 			.filter-list {
-				margin:1rem 0;
+				margin:0.5rem 0;
 				li {
-					font-size:0.75rem;
+					font-size:0.9rem;
 					margin-right:1.5em;
 					cursor:pointer;
 					&::after {
