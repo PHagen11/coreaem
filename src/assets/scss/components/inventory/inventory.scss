@@ -173,8 +173,9 @@
 		@include breakpoint(small) {
 			width: 100%;
 			padding:0.5rem 1rem 1rem 1.5rem;
-			position:relative;
+			//position:relative;
 			&.hidden {
+				display: none;
 				background-color: $white;
 				border-bottom:2px solid $border-gray;
 				.filter-form {
@@ -182,7 +183,15 @@
 				}
 			}
 			&.shown {
-				position:relative;
+				z-index: 1000;
+				display: block;
+				overflow: scroll;
+				position:absolute;
+				position:fixed;
+				top:0;
+				left:0;
+				height: 100%;
+				width:100%;
 				background-color: $white;
 				.filter-form {
 					display:block;
@@ -198,15 +207,15 @@
 			padding:1.5rem 1.5rem 0rem 1.5rem;
 			position:relative;
 			background-color: $white;
-			&.hidden {
-				background-color: transparent;
-				width: 120px;
-				height:100vh;
-				margin-right:0;
-				.filter-form {
-					display:none;
-				}
-			}
+			// &.hidden {
+			// 	background-color: transparent;
+			// 	width: 120px;
+			// 	height:100vh;
+			// 	margin-right:0;
+			// 	.filter-form {
+			// 		display:none;
+			// 	}
+			// }
 			&.shown {
 				position: absolute;
 				height:100%;
