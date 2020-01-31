@@ -1,8 +1,8 @@
 $card-margin-medium: 1rem;
-$card-margin-xlarge: 2rem;
+$card-margin-xlarge: 4rem;
 .inventory-card {
 	.card {
-		
+
 		@include breakpoint(small only) {
 			padding:0.5rem 0 0.5rem 0;
 			margin:0;
@@ -11,17 +11,20 @@ $card-margin-xlarge: 2rem;
 			border-bottom: 2px solid $border-gray;
 		}
 		@include breakpoint(medium) {
+			//margin-bottom: 0;
+			margin: 0.6rem;
 			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 			&:hover {
 				box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.12);
 				transition: box-shadow 0.3s ease-in-out;
 			}
 		}
-
 		.card-divider {
 			padding: 0.6rem 1rem 0.5rem 1rem;
 			font-size: 0.8em;
 			font-weight: 700;
+		}
+		.card-section {
 		}
 		.item-image {
 			@include breakpoint(small) {
@@ -40,56 +43,56 @@ $card-margin-xlarge: 2rem;
 	a {
 		text-decoration: none;
 	}
-}	
+}
 .inventory {
-	.two-and-four-up {	
-		@include breakpoint(medium) {	
-			.inventory-card:nth-child(2n-1){
-				.card{
-					width:98%;
-					margin:0 2% 4% 0;
-		
-				}
-			}
-			.inventory-card:nth-child(2n){	
-				.card{
-					width:98%;
-					margin:0 0 4% 2%;
-					
-				}
-			}
-		}
-		@include breakpoint(xlarge) {
-			.inventory-card:nth-child(4n-3){
-				.card{
-					width:95%;
-					margin:0 5% 6.25% 0;
-					
-				}
-			}
-			.inventory-card:nth-child(4n-2){
-				.card{
-					width:95%;
-					margin:0 3.25% 6.25% 1.75%;
-					
-				}
-			}
-			.inventory-card:nth-child(4n-1){
-				.card{
-					width:95%;
-					margin:0 1.75% 6.5% 3.25%;
-					
-				}
-			}
-			.inventory-card:nth-child(4n){
-				.card{
-					width:95%;
-					margin:0 0 6.25% 5%;
-					
-				} 
-			}
-		}
-	}
+	// .two-and-four-up {
+	// 	@include breakpoint(medium) {
+	// 		.inventory-card:nth-child(2n-1){
+	// 			.card{
+	// 				width:98%;
+	// 				margin:0 2% 4% 0;
+	//
+	// 			}
+	// 		}
+	// 		.inventory-card:nth-child(2n){
+	// 			.card{
+	// 				width:98%;
+	// 				margin:0 0 4% 2%;
+	//
+	// 			}
+	// 		}
+	// 	}
+	// 	// @include breakpoint(xlarge) {
+	// 	// 	.inventory-card:nth-child(4n-3){
+	// 	// 		.card{
+	// 	// 			width:95%;
+	// 	// 			margin:0 5% 6.25% 0;
+	// 	//
+	// 	// 		}
+	// 	// 	}
+	// 	// 	.inventory-card:nth-child(4n-2){
+	// 	// 		.card{
+	// 	// 			width:95%;
+	// 	// 			margin:0 3.25% 6.25% 1.75%;
+	// 	//
+	// 	// 		}
+	// 	// 	}
+	// 	// 	.inventory-card:nth-child(4n-1){
+	// 	// 		.card{
+	// 	// 			width:95%;
+	// 	// 			margin:0 1.75% 6.5% 3.25%;
+	// 	//
+	// 	// 		}
+	// 	// 	}
+	// 	// 	.inventory-card:nth-child(4n){
+	// 	// 		.card{
+	// 	// 			width:95%;
+	// 	// 			margin:0 0 6.25% 5%;
+	// 	//
+	// 	// 		}
+	// 	// 	}
+	// 	// }
+	// }
 	.one-and-three-up {
 		@include breakpoint(medium) {
 			.card {
@@ -115,7 +118,7 @@ $card-margin-xlarge: 2rem;
 				.card{
 					width:95%;
 					margin:0 0 5% 5%;
-				} 
+				}
 			}
 		}
 	}

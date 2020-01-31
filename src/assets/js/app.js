@@ -8,7 +8,6 @@
 // import Foundation from 'foundation-sites';
 // If you want to pick and choose which modules to include, comment out the above and uncomment
 // the line below
-//import './lib/foundation-explicit-pieces';
 
 // $(document).foundation();
 
@@ -35,6 +34,7 @@ jQuery(document).ready(function($) {
 		},
 
 	});
+
 
 	// $('.mega-menu-trigger a').click(function() {
 	//     var target = "." + $(this).data("target");
@@ -144,3 +144,26 @@ jQuery(document).ready(function($) {
 		$(this).toggleClass('selected');
 	});
 });
+
+	// var s = $(".submit-btn");
+	// var pos = s.position();
+	// $(window).scroll(function() {
+	// 	var windowpos = $(window).scrollTop();
+	// 	if (windowpos >= pos.top & windowpos <="end") {
+	// 		s.addClass("stick");
+	// 	} else {
+	// 		s.removeClass("stick");
+	// 	}
+	// });
+
+var s = $(".submit-btn");
+ var pos = s.position();
+ $(window).scroll(function() {
+		 var windowpos = $(window).scrollTop();
+
+		 if (windowpos <= pos.top) {
+				 s.addClass("stick");
+		 } else {
+				 s.removeClass("stick");
+		 }
+ });
