@@ -175,7 +175,8 @@
 			padding:0.5rem 1rem 1rem 1.5rem;
 			position:relative;
 			&.hidden {
-				background-color: transparent;
+				background-color: $white;
+				border-bottom:2px solid $border-gray;
 				.filter-form {
 					display:none;
 				}
@@ -438,19 +439,43 @@
 	.filter-results {
 		@include breakpoint (small) {
 			margin-left: 0px;
+			padding-right: 0;
+			padding-left:0;
 		}
 		@include breakpoint (large) {
 			margin-left: 370px;
+			padding-right: 4vw;
+			padding-left:4vw;
 		}
 		background: $light-gray;
 		height: 100%;
 		min-height: 750px;
-	  padding-right: 4vw;
-		padding-left:4vw;
 		padding-bottom: 4rem;
 		.results-heading {
-			padding:2rem 0 1.5rem 0rem;
+			@include breakpoint(small){
+				background: $white;
+				padding: 2rem 1rem 2rem 1rem;
+				margin:0 0 2rem 0;
+				//text-align: center;
+			}
+			@include breakpoint(large){
+				background: none;
+				padding:2rem 0 1.5rem 0.5rem;
+				text-align: left;
+				margin:0;
+			}
 			.sort-toggle-button {
+				@include breakpoint(small){
+					position: absolute;
+					text-align: right;
+					top: 1rem;
+					right:1rem;
+					//margin-top: -4rem;
+				}
+				@include breakpoint(large){
+					position: relative;
+					//margin-top: -4rem;
+				}
 				float:right;
 				margin-top:0.25em;
 				font-weight: bold;
@@ -470,25 +495,43 @@
 			.filter-list {
 				margin:0.5rem 0;
 				li {
+					background: $white;
+					padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+					border: 1px solid $border-gray;
 					font-size:0.9rem;
-					margin-right:1.5em;
+					margin-right:0.3rem;
+					margin-top: 0.3rem;
+					text-align:center;
 					cursor:pointer;
 					&::after {
 						content: '\f00d';
 						font-family: 'Font Awesome 5 Pro';
 						font-weight:700;
 						color: $alert-color;
-						margin-left:0.25em;
+						margin-left:0.4em;
 					}
 					&:last-child{
+						background: none;
+						border: none;
 						color: $alert-color;
-						padding-right:0;
+						//padding-right:0;
 						&::after {
 							content:'';
 						}
 					}
 				}
 			}
+		}
+	}
+	#results-grid {
+		@include breakpoint(small){
+			margin:0rem;
+		}
+		@include breakpoint(medium){
+			margin:2rem;
+		}
+		@include breakpoint(large){
+			margin:0;
 		}
 	}
 
