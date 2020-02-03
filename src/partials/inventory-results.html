@@ -2,10 +2,10 @@
 <form id="boat-search" class="make-type-search selected" action="/inventory/inventory-results-page.html">
 	<div class="inv-search-bar">
 		<div class="grid-x align-middle inv-search ">
-			<div class="small-12 medium-3 large-2 cell">
+			<div class="small-12 large-2 cell">
 				<span class="sale-text"><i class="fas fa-map-marker fa-s primary"></i>Search within</span>
 			</div>
-			<div class="small-12 medium-3 large-2 cell">
+			<div class="small-12 large-3 cell">
 				<label>
 					<select name="distance" id="distanceSelect" required>
 						<option value="twenty-five" selected>25 Miles</option>
@@ -17,23 +17,23 @@
 					</select>
 				</label>
 			</div>
-			<div class="small-12 medium-1 large-1  cell">
+			<div class="medium-1 show-for-large cell">
 				<span class="near">of</span>
 			</div>
-			<div class="small-12 medium-3 large-2 cell">
+			<div class="small-8 large-3 cell">
 				<label>
 					<input name="zip" type="number" id="zipInput" placeholder="Zip Code" required>
 					<span class="form-error" data-form-error-for="stateInput">State is required.</span>
 				</label>
 			</div>
-			<div class="small-12 medium-2 large-1 text-left cell">
-				<a class="button show-for-medium large" href="#">GO</a>
-				<a class="button tiny-top hide-for-medium expanded" href="#">GO</a>
+			<div class="small-4 large-2 text-left cell">
+				<a class="button show-for-large large" href="#">GO</a>
+				<a class="button large hide-for-large expanded secondary" href="#">GO</a>
 			</div>
 		</div>
 	</div>
 </form>
-<!--DEALER TITLE BAR-->
+<!--DEALER TITLE BAR
 <div class="grid-x grid-margin-x inv-dealer-bar align-middle">
 	<div class="small-12 large-8 cell">
 		<h1>Boats for sale at the <a>Springfield,&nbsp;MO</a> store.</h1>
@@ -46,7 +46,7 @@
 <div class="inventory in-submit" id="inv-start">
 	<button class="filter-toggle-button hide-for-large" data-toggle="filter-panel-reveal"><i class="fas fa-sliders-v"></i> FILTER</button>
 	<!-- <div class="full reveal" id="filter-panel-reveal" data-reveal data-full-screen="true" > -->
-	<div class="filter-panel shown">
+	<div class="filter-panel">
 		<form class="filter-form">
 			<div class="filter-heading">
 				<span class="title">Filter By:</span>
@@ -123,7 +123,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="accordion-item is-active" data-accordion-item>
+				<li class="accordion-item" data-accordion-item>
 					<a href="#" class="accordion-title">BOAT CLASS:</a>
 					<div class="accordion-content" data-tab-content>
 						<input type="checkbox" id="jon-boats"><label for="jon-boats">Jon Boats <span class="count">(24)</span></label><br/>
@@ -133,7 +133,7 @@
 						<a class="showmore" href="">Show More</a><br/>
 					</div>
 				</li>
-				<li class="accordion-item is-active" data-accordion-item>
+				<li class="accordion-item" data-accordion-item>
 					<a href="#" class="accordion-title">PRICE RANGE:</a>
 					<div class="accordion-content" data-tab-content>
 						<div class="price-range">
@@ -148,7 +148,7 @@
 					</div>
 				</li>
 						<div id="end"></div>
-				<li class="accordion-item is-active" data-accordion-item>
+				<li class="accordion-item" data-accordion-item>
 					<a href="#" class="accordion-title">LENGTH:</a>
 					<div class="accordion-content" data-tab-content>
 						<div class="length-range">
@@ -162,7 +162,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="accordion-item is-active" data-accordion-item>
+				<li class="accordion-item" data-accordion-item>
 					<a href="#" class="accordion-title">YEAR:</a>
 					<div class="accordion-content" data-tab-content>
 						<div class="length-range">
@@ -189,7 +189,7 @@
 		<!-- <div class="grid-container"> -->
 			<div class="results-heading">
 				<div class="sort-toggle-button" data-toggle="sort-dropdown">
-					<i class="fas fa-sort-alt"></i> SORT : <span id="sort-selection">Highest Price</span>
+					<i class="fas fa-sort-alt"></i> SORT<!--<span id="sort-selection show-for-large">: Highest Price</span>-->
 				</div>
 				<div class="dropdown-pane sort-drop" id="sort-dropdown" data-dropdown  data-close-on-click="true">
 					<ul class="vertical menu">
