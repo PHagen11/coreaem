@@ -73,28 +73,27 @@ $global-font-size: 100%;
 $global-width: rem-calc(1600);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #DD532D,
-  secondary: #193568,
-  success: #69B347,
-  warning: #ED1D22,
-  alert: #FBA915,
-  border-gray: #DEE0E8,
-  light-gray: #F4F5F8,
+  primary: #FFCC04,
+  secondary: #507594,
+  success: #8AC35F,
+  warning: #F3AC51,
+  alert: #EC5840,
+  border-gray: #EBEDF2,
+  light-gray: #F4F5F7,
   medium-gray: #80858F,
   dark-gray: #52555B,
   black: #303236,
   white: #FFFFFF
 );
-$border-gray: #DEE0E8;
-$light-gray: #F4F5F8;
+$border-gray: #EBEDF2;
+$light-gray: #F4F5F7;
 $medium-gray: #8B8B8B;
-$secondary-color: #1F2F54;
 $dark-gray: #52555B;
 $black: #303236;
 $white: #FFFFFF;
 $body-background: $light-gray;
-$body-font-color: $secondary-color;
-$body-font-family: 'Asap', Helvetica, Arial, sans-serif;
+$body-font-color: $black;
+$body-font-family: 'Roboto', Helvetica, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -133,7 +132,7 @@ $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
   small: 20px,
-  medium: 40px,
+  medium: 30px,
 );
 $grid-column-align-edge: true;
 $grid-column-alias: 'columns';
@@ -141,33 +140,31 @@ $block-grid-max: 8;
 
 // 4. Base Typography
 // ------------------
-
-@import url('https://fonts.googleapis.com/css?family=Asap+Condensed:400,500,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Asap:400,700&display=swap');
-$header-font-family: 'Asap Condensed', Helvetica, Arial, sans-serif;
-$header-font-weight: 500;
-$header-letter-spacing: 0;
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500i,700,900&display=swap');
+$header-font-family: $body-font-family;
+$header-font-weight: 900;
+$header-letter-spacing: -0.5px;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: $secondary-color;
+$header-color: inherit;
 $header-lineheight: 1.2;
 $header-margin-bottom: 0.6rem;
 $header-styles: (
   small: (
     'h1': ('font-size': 36),
     'h2': ('font-size': 30),
-    'h3': ('font-size': 28),
-    'h4': ('font-size': 26),
-    'h5': ('font-size': 24),
-    'h6': ('font-size': 20),
+    'h3': ('font-size': 24),
+    'h4': ('font-size': 20),
+    'h5': ('font-size': 20),
+    'h6': ('font-size': 16),
   ),
   medium: (
-    'h1': ('font-size': 52),
-    'h2': ('font-size': 44),
-    'h3': ('font-size': 35),
-    'h4': ('font-size': 29),
-    'h5': ('font-size': 24),
-    'h6': ('font-size': 20),
+    'h1': ('font-size': 48),
+    'h2': ('font-size': 40),
+    'h3': ('font-size': 31),
+    'h4': ('font-size': 25),
+    'h5': ('font-size': 20),
+    'h6': ('font-size': 16),
   ),
 );
 $header-text-rendering: optimizeLegibility;
@@ -295,20 +292,20 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // ----------
 
 $button-font-family: inherit;
-$button-padding: 0.6em 1.6em 0.8em 1.6em;
+$button-padding: 0.8em 1.6em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
 $button-background-hover: scale-color($button-background, $lightness: 20%);
-$button-color: $white;
-$button-color-alt: $black;
-$button-radius: 80px;
+$button-color: $black;
+$button-color-alt: $white;
+$button-radius: $global-radius;
 $button-hollow-border-width: 3px;
 $button-sizes: (
-  tiny: 0.8rem,
-  small: 1rem,
-  default: 1.2rem,
-  large: 1.4rem,
+  tiny: 0.7rem,
+  small: 0.8rem,
+  default: 1rem,
+  large: 1.25rem,
 );
 $button-palette: $foundation-palette;
 $button-opacity-disabled: 0.25;
@@ -885,7 +882,7 @@ $grid-margin-gutters: (
 );
 $grid-padding-gutters: (
   small: 4rem,
-  medium: 8rem
+  medium: 6rem
 );
 $grid-container-padding: (
   small: 4rem,
@@ -930,12 +927,13 @@ $xy-block-grid-max: 8;
 // 1. Global
 // -----------------------------
 
+
 // Icons
 $icon-weight: 300;
 
 // Links
 a {
-  color: $primary-color
+  color: $secondary-color
 }
 .input-group-label {
   background:#EDEDED;
@@ -960,9 +958,9 @@ a {
 // -----------------------------
 
 // Site
-$site-bkg-color: $light-gray;
+$site-bkg-color: $white;
 .site {
-  max-width: 1800px;
+  max-width: 2000px;
   margin: auto;
   background-color: $site-bkg-color;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
@@ -1002,17 +1000,17 @@ $border: 2px solid $border-gray;
 // 4. Header Component
 // -----------------------------
 
-$header-plain-text-color: $secondary-color; //ex: Link List component titles.
+$header-plain-text-color: $white; //ex: Link List component titles.
 $header-background-color: $white;
-$header-background-hover: $light-gray;
-$header-link-background-color-hover: $black;
-$header-link-color-start: $secondary-color;
-$header-link-color-hover: $secondary-color;
-$header-link-top-bottom-padding: 2.5rem;
+$header-link-background-color-hover: $white;
+$header-background-hover: $white;
+$header-link-color-start: $dark-gray;
+$header-link-color-hover: $black;
+$header-link-top-bottom-padding: 2.4rem;
 $header-link-left-right-padding: 1vw;
-$header-link-font-size: 1.1rem;
-$header-menu-item-text-transform: none;
-$header-menu-item-letter-spacing: 0;
+$header-link-font-size: 0.9rem;
+$header-menu-item-text-transform: uppercase;
+$header-menu-item-letter-spacing: 1px;
 $header-dropdown-width: 250px;
 $header-submenu-background-color: $light-gray;
 $header-submenu-link-font-size: 1rem;
@@ -1023,11 +1021,11 @@ $header-icon-color: $black;
 
 // 5. Sub Navigation Component
 // -----------------------------
-$sub-navigation-background-color: $primary-color;
+$sub-navigation-background-color: $black;
 $sub-navigation-text-color: $white;
 $sub-navigation-text-weight: 500;
 $sub-navigation-text-transform: uppercase;
-$sub-navigation-link-color-start: $light-gray;
+$sub-navigation-link-color-start: $medium-gray;
 $sub-navigation-link-color-hover: $white;
 $sub-navigation-link-font-size: 1rem;
 $sub-navigation-selected-background-color: #1E2128;
@@ -1076,13 +1074,13 @@ $size-full: 100%;
 }
 // Text
 @mixin button-text ($font) {
-  text-transform: normal;
-  letter-spacing: 0px;
-  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 900;
 }
 
 // Hollow Button
-$hollow-radius: 80px;
+$hollow-radius: 6px;
 
 // Clear Button
 @mixin button-clear {
@@ -1184,8 +1182,7 @@ $video-play-button-margin: 2vw;
 // 13. Image Gallery Component
 // -----------------------------
 
-$gallery-image-width: 95%;
-$gallery-image-margin-bottom: 1.2rem;
+$gallery-image-width: 98%;
 $gallery-thumbnail-border-color: $light-gray;
 $gallery-thumbnail-border-color-active: $primary-color;
 $gallery-play-button-icon: '\f144';
@@ -1195,6 +1192,7 @@ $gallery-prevnext-color-hover: $white;
 $gallery-prevnext-background-color: rgba(0, 0, 0, 0.45);
 $gallery-toolbar-icons-color-start:$primary-color;
 $gallery-toolbar-icons-color-hover:$white;
+$gallery-image-margin-bottom: 1.2rem;
 
 // 14. Icon Component
 // -----------------------------
@@ -1222,16 +1220,16 @@ $footer-bottom-nav-link-color-hover: $black;
 // -----------------------------
 
 $minimal-spacing: 1rem 1rem 1rem 0;
-$minimal-odd-background: $light-gray;
-$minimal-even-background: $border-gray;
+$minimal-odd-background: $white;
+$minimal-even-background: $white;
 $basic-odd-background: $light-gray;
-$basic-even-background: $border-gray;
+$basic-even-background: $white;
 $model-specs-label-case: normal;
-$model-specs-border-right: 0px;
+$model-specs-border-right: 4px solid $white;
 
 // 18. Model Options Component
 // -----------------------------
-$model-options-background-color: none;
+$model-options-background-color: $white;
 
 // 19. Model Listing Component
 // -----------------------------
@@ -1354,18 +1352,18 @@ $boat-types-label-weight: bold;
 // 23. Build A Boat Component
 // -----------------------------
 
-$bab-header-background-color: $light-gray;
-$bab-header-boat-name-size: 1.1em;
+$bab-header-background-color: $black;
+$bab-header-boat-name-size: 1.3rem;
 $bab-header-boat-name-weight: 900;
-$bab-header-price-total-color: $black;
-$bab-header-price-total-size: 1.1em;
-$bab-header-price-total-weight: 900;
+$bab-header-price-total-color: $white;
+$bab-header-price-total-size: 1.3rem;
+$bab-header-price-total-weight: 500;
 $bab-nav-bkg-color:$white;
 $bab-nav-item-color:$black;
 $bab-nav-item-size:1em;
 $bab-nav-item-weight:900;
-$bab-disclaimer-text-size: 0.6em;
-$bab-disclaimer-text-color: $medium-gray;
+$bab-disclaimer-text-size: 2rem;
+$bab-disclaimer-text-color: #efefef;
 $bab-custom-color-nav-tab-text-color: $black;
 $bab-custom-color-nav-tab-bkg-color: transparent;
 $bab-custom-color-nav-tab-text-color-selected: $white;
@@ -1456,23 +1454,4 @@ $bab-custom-color-part-tab-bkg-color-selected: $border-gray;
 
 .spring-fever-logo {
   margin-top: -30px;
-}
-
-// Custom Classes
-
-.st-border-radius-left {
-  @include breakpoint(large) {
-    border-radius: 200px 20px 200px 20px;
-  }
-  @include breakpoint(small) {
-    border-radius: 100px 20px 100px 20px;
-  }
-}
-.st-border-radius-right {
-  @include breakpoint(large) {
-    border-radius: 20px 200px 20px 200px;
-  }
-  @include breakpoint(small) {
-    border-radius: 20px 100px 20px 100px;
-  }
 }
