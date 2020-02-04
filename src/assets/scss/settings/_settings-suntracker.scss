@@ -73,8 +73,8 @@ $global-font-size: 100%;
 $global-width: rem-calc(1600);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #FFCC04,
-  secondary: #507594,
+  primary: #EE5826,
+  secondary: #FBA81D,
   success: #8AC35F,
   warning: #F3AC51,
   alert: #EC5840,
@@ -82,25 +82,25 @@ $foundation-palette: (
   light-gray: #F4F5F7,
   medium-gray: #80858F,
   dark-gray: #52555B,
-  black: #303236,
+  black: #000000,
   white: #FFFFFF
 );
 $border-gray: #EBEDF2;
 $light-gray: #F4F5F7;
 $medium-gray: #8B8B8B;
 $dark-gray: #52555B;
-$black: #303236;
+$black: #000000;
 $white: #FFFFFF;
 $body-background: $light-gray;
 $body-font-color: $black;
-$body-font-family: 'Roboto', Helvetica, Arial, sans-serif;
+$body-font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-position: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
-$global-radius: 4px;
+$global-radius: 30px;
 $global-menu-padding: 0.7rem 1rem;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
@@ -140,10 +140,11 @@ $block-grid-max: 8;
 
 // 4. Base Typography
 // ------------------
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500i,700,900&display=swap');
-$header-font-family: $body-font-family;
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Asap+Condensed&display=swap');
+$header-font-family: 'Asap Condensed';
 $header-font-weight: 900;
-$header-letter-spacing: -0.5px;
+$header-letter-spacing:0px;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
@@ -291,7 +292,7 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // 11. Button
 // ----------
 
-$button-font-family: inherit;
+$button-font-family: $header-font-family;
 $button-padding: 0.8em 1.6em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
@@ -1080,7 +1081,7 @@ $size-full: 100%;
 }
 
 // Hollow Button
-$hollow-radius: 6px;
+$hollow-radius: 40px;
 
 // Clear Button
 @mixin button-clear {

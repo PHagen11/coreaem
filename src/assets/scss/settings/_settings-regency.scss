@@ -65,7 +65,8 @@
 //  56. Xy Grid
 
 @import 'util/util';
-
+@import url('https://fonts.googleapis.com/css?family=Oranienbaum&display=swap');
+@import url("https://use.typekit.net/spj2fce.css");
 // 1. Global
 // ---------
 
@@ -73,34 +74,34 @@ $global-font-size: 100%;
 $global-width: rem-calc(1600);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #FFCC04,
-  secondary: #507594,
+  primary: #262624,
+  secondary: #A09174,
   success: #8AC35F,
   warning: #F3AC51,
   alert: #EC5840,
-  border-gray: #EBEDF2,
-  light-gray: #F4F5F7,
-  medium-gray: #80858F,
-  dark-gray: #52555B,
-  black: #303236,
+  border-gray: #ECEDF2,
+  light-gray: #F5F4F0,
+  medium-gray: #808285,
+  dark-gray: #595B58,
+  black: #262624,
   white: #FFFFFF
 );
-$border-gray: #EBEDF2;
-$light-gray: #F4F5F7;
-$medium-gray: #8B8B8B;
-$dark-gray: #52555B;
-$black: #303236;
+$border-gray: #ECEDF2;
+$light-gray: #F5F4F0;
+$medium-gray: #808285;
+$dark-gray: #595B58;
+$black: #262624;
 $white: #FFFFFF;
 $body-background: $light-gray;
 $body-font-color: $black;
-$body-font-family: 'Roboto', Helvetica, Arial, sans-serif;
+$body-font-family: 'Brandon Grotesque', Helvetica, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-position: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
-$global-radius: 4px;
+$global-radius: 0px;
 $global-menu-padding: 0.7rem 1rem;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
@@ -140,9 +141,9 @@ $block-grid-max: 8;
 
 // 4. Base Typography
 // ------------------
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500i,700,900&display=swap');
-$header-font-family: $body-font-family;
-$header-font-weight: 900;
+
+$header-font-family: 'Oranienbaum', serif;
+$header-font-weight: 400;
 $header-letter-spacing: -0.5px;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
@@ -297,7 +298,7 @@ $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
 $button-background-hover: scale-color($button-background, $lightness: 20%);
-$button-color: $black;
+$button-color: $white;
 $button-color-alt: $white;
 $button-radius: $global-radius;
 $button-hollow-border-width: 3px;
@@ -1008,7 +1009,7 @@ $header-link-color-start: $dark-gray;
 $header-link-color-hover: $black;
 $header-link-top-bottom-padding: 2.4rem;
 $header-link-left-right-padding: 1vw;
-$header-link-font-size: 0.9rem;
+$header-link-font-size: 0.8rem;
 $header-menu-item-text-transform: uppercase;
 $header-menu-item-letter-spacing: 1px;
 $header-dropdown-width: 250px;

@@ -73,11 +73,11 @@ $global-font-size: 100%;
 $global-width: rem-calc(1600);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #FFCC04,
-  secondary: #507594,
+  primary: #F1AB2C,
+  secondary: #313236,
   success: #8AC35F,
-  warning: #F3AC51,
-  alert: #EC5840,
+  warning: #F1AB2C,
+  alert: #D81111,
   border-gray: #EBEDF2,
   light-gray: #F4F5F7,
   medium-gray: #80858F,
@@ -98,9 +98,9 @@ $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-position: 1rem;
-$global-weight-normal: normal;
+$global-weight-normal: 500;
 $global-weight-bold: bold;
-$global-radius: 4px;
+$global-radius: 0px;
 $global-menu-padding: 0.7rem 1rem;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
@@ -141,12 +141,14 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500i,700,900&display=swap');
-$header-font-family: $body-font-family;
-$header-font-weight: 900;
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:300,300i,400,400i,700,700i&display=swap');
+
+$header-font-family: 'Roboto Condensed', sans-serif;
+$header-font-weight: 700i;
 $header-letter-spacing: -0.5px;
-$header-font-style: normal;
+$header-font-style: italic;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: inherit;
+$header-color: $secondary-color;
 $header-lineheight: 1.2;
 $header-margin-bottom: 0.6rem;
 $header-styles: (
@@ -1008,7 +1010,7 @@ $header-link-color-start: $dark-gray;
 $header-link-color-hover: $black;
 $header-link-top-bottom-padding: 2.4rem;
 $header-link-left-right-padding: 1vw;
-$header-link-font-size: 0.9rem;
+$header-link-font-size: 0.8rem;
 $header-menu-item-text-transform: uppercase;
 $header-menu-item-letter-spacing: 1px;
 $header-dropdown-width: 250px;
@@ -1080,7 +1082,7 @@ $size-full: 100%;
 }
 
 // Hollow Button
-$hollow-radius: 6px;
+$hollow-radius: 0px;
 
 // Clear Button
 @mixin button-clear {

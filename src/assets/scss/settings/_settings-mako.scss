@@ -75,32 +75,32 @@ $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #004E71,
   secondary: #94AE48,
-  success: #8AC35F,
-  warning: #F3AC51,
-  alert: #EC5840,
+  success: #94AE48,
+  warning: #FBD541,
+  alert: #D81111,
   border-gray: #EBEDF2,
   light-gray: #F4F5F7,
   medium-gray: #80858F,
-  dark-gray: #52555B,
-  black: #303236,
+  dark-gray: #52555C,
+  black: #000000,
   white: #FFFFFF
 );
 $border-gray: #EBEDF2;
 $light-gray: #F4F5F7;
-$medium-gray: #8B8B8B;
-$dark-gray: #52555B;
-$black: #303236;
+$medium-gray: #808285;
+$dark-gray: #52555C;
+$black: #000000;
 $white: #FFFFFF;
 $body-background: $light-gray;
-$body-font-color: $black;
-$body-font-family: 'Roboto', Helvetica, Arial, sans-serif;
+$body-font-color: $dark-gray;
+$body-font-family: 'Roboto', sans-serif, Helvetica, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-position: 1rem;
-$global-weight-normal: normal;
-$global-weight-bold: bold;
-$global-radius: 4px;
+$global-weight-normal: 500;
+$global-weight-bold: italic;
+$global-radius: 0px;
 $global-menu-padding: 0.7rem 1rem;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
@@ -141,12 +141,14 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500i,700,900&display=swap');
-$header-font-family: $body-font-family;
-$header-font-weight: 900;
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:300,300i,400,400i,700,700i&display=swap');
+
+$header-font-family: 'Roboto Condensed', sans-serif;
+$header-font-weight: $global-weight-bold;
 $header-letter-spacing: -0.5px;
-$header-font-style: normal;
+$header-font-style: $global-weight-bold;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: inherit;
+$header-color: $black;
 $header-lineheight: 1.2;
 $header-margin-bottom: 0.6rem;
 $header-styles: (
@@ -170,7 +172,7 @@ $header-styles: (
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 90%;
 $header-small-font-color: $medium-gray;
-$paragraph-lineheight: 1.6;
+$paragraph-lineheight: 1.9;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
 $code-color: $black;
@@ -291,13 +293,13 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // 11. Button
 // ----------
 
-$button-font-family: inherit;
+$button-font-family: $header-font-family;
 $button-padding: 0.8em 1.6em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
 $button-background-hover: scale-color($button-background, $lightness: 20%);
-$button-color: $black;
+$button-color: $white;
 $button-color-alt: $white;
 $button-radius: $global-radius;
 $button-hollow-border-width: 3px;
@@ -319,7 +321,7 @@ $button-transition: background-color 0.25s ease-out, color 0.25s ease-out;
 $buttongroup-margin: 1rem;
 $buttongroup-spacing: 1px;
 $buttongroup-child-selector: '.button';
-$buttongroup-expand-max: 6;
+$buttongroup-expand-max: ;
 $buttongroup-radius-on-each: true;
 
 // 13. Callout
@@ -1005,10 +1007,10 @@ $header-background-color: $white;
 $header-link-background-color-hover: $white;
 $header-background-hover: $white;
 $header-link-color-start: $dark-gray;
-$header-link-color-hover: $black;
+$header-link-color-hover: $primary-color;
 $header-link-top-bottom-padding: 2.4rem;
 $header-link-left-right-padding: 1vw;
-$header-link-font-size: 0.9rem;
+$header-link-font-size: 0.8rem;
 $header-menu-item-text-transform: uppercase;
 $header-menu-item-letter-spacing: 1px;
 $header-dropdown-width: 250px;
@@ -1080,7 +1082,7 @@ $size-full: 100%;
 }
 
 // Hollow Button
-$hollow-radius: 6px;
+$hollow-radius: 0px;
 
 // Clear Button
 @mixin button-clear {
