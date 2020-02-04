@@ -3,14 +3,15 @@
 	z-index: 100;
 	//position: absolute;
 	width: 100%;
-	border-bottom: 1px solid #EBEDF2;
+	border-top: 2px solid $border-gray;
+	border-bottom: 2px solid $border-gray;
 	//margin-bottom: 2rem;
 	//padding-bottom: 1.5rem;
 	.inv-search {
 		@include breakpoint(small) {
 			text-align: left;
 			background: $white;
-			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+			//box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 			padding: 1.5rem;
 			.sale-text {
 				text-align: center;
@@ -238,6 +239,7 @@
 			position:relative;
 			position: absolute;
 			background-color: $white;
+			box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.08)
 		}
 		// @include breakpoint(small) {
 		// 	width: 100%;
@@ -305,13 +307,14 @@
 			padding-top: 0.2rem;
 			margin-bottom: 0.2rem;
 			line-height: 1.5;
+			//color: $black;
 		}
 		input[type='checkbox'] {
 			-webkit-appearance:none;
 			width:20px;
 			height:20px;
 			background:#F7F7F7;
-			border-radius:0px;
+			border-radius:2px;
 			border:1px solid #DEDEDE;
 			//margin: 0.5rem 1rem 0 0;
 			vertical-align: middle;
@@ -320,7 +323,10 @@
 			}
 		}
 		input[type='checkbox']:checked {
-			background: $black;
+			background: $secondary-color;
+			.selected label {
+				color: $alert-color;
+			}
 		}
 
 		.filter-toggle-button {
@@ -532,10 +538,14 @@
 		padding-bottom: 4rem;
 		.results-heading {
 			@include breakpoint(small){
-				background: $white;
-				padding: 2rem 1rem 2rem 1.5rem;
+				//background: $white;
+				padding: 1rem 1rem 0rem 1rem;
 				margin:0 0 2rem 0;
+				//box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
 				//text-align: center;
+			}
+			@include breakpoint (medium) {
+				padding: 1rem 2rem 0rem 2.5rem;
 			}
 			@include breakpoint(large){
 				background: none;
