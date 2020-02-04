@@ -3,41 +3,54 @@
 	z-index: 100;
 	//position: absolute;
 	width: 100%;
-	border-bottom: 1px solid #EBEDF2;
+	border-top: 2px solid $border-gray;
+	border-bottom: 2px solid $border-gray;
 	//margin-bottom: 2rem;
 	//padding-bottom: 1.5rem;
 	.inv-search {
 		@include breakpoint(small) {
 			text-align: left;
 			background: $white;
-			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+			//box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 			padding: 1.5rem;
-			.sale-text {
-				text-align: left;
-				font-size: 1rem;
+			.search-title {
+				text-align: center;
+				font-size: auto;
+				font-weight: bold;
+				margin-bottom: 1rem;
+				i {
+					display: none;
+					color: $primary-color;
+					margin-right: 0.5rem;
+				}
 			}
-			.near {
-				font-size: 1rem;
-				text-transform: capitalize;
+			.button {
+				padding: 0.9rem;
+				margin-top:16px;
+				border-radius: 0px;
+			}
+			label {
+				padding: 0;
 			}
 			select {
-				margin-bottom: 1rem;
+				margin-bottom: 0rem;
 			}
 			input {
 				margin-bottom: 0;
 			}
-			@include breakpoint(medium) {
+			@include breakpoint(large) {
 				text-align: center;
-				padding: 1.5rem 1.5rem 1.5rem 0;
+				padding: 1rem 1.5rem 1rem 0;
 				.button {
-					margin-bottom: 0;
+					//margin-bottom: 0;
 					margin-left: 1rem;
 					padding: 1rem;
 				}
-				.sale-text {
+				.search-title {
 					text-align: left;
 					font-size: 1.5rem;
 					i {
+						display:inline;
 						color: $primary-color;
 						margin-right: 0.5rem;
 					}
@@ -67,7 +80,7 @@
 	h1 {
 		@include breakpoint (small) {
 			font-weight: lighter;
-			font-size: 1.6rem;
+			font-size: 1.9rem;
 			text-align: center;
 		}
 		@include breakpoint (large) {
@@ -168,57 +181,122 @@
 		}
 	}
 
-
+	.filter-toggle-button{
+		background: $white;
+		border:2px solid $border-gray;
+		//width: 50%;
+		border-radius: 0px;
+		color: $black;
+		font-weight: bold;
+		letter-spacing: 2px;
+		padding: 1.3rem;
+		margin: 1rem;
+		i {
+			color: $alert-color;
+		}
+		//top: 3rem;
+		//display:none;
+	}
 	.filter-panel {
-		@include breakpoint(small) {
-			width: 100%;
-			padding:0.5rem 1rem 1rem 1.5rem;
-			position:relative;
-			&.hidden {
-				background-color: $white;
-				border-bottom:2px solid $border-gray;
-				.filter-form {
-					display:none;
-				}
-			}
+		@include breakpoint (small) {
+			display: none;
 			&.shown {
-				position:relative;
+				width: 100%;
+				padding:2rem 1.5rem 5rem 1.5rem;
+				z-index: 1000;
+				display: block;
+				overflow: scroll;
+				position:absolute;
+				position:fixed;
+				top:0;
+				left:0;
+				height: 100%;
+				width:100%;
 				background-color: $white;
 				.filter-form {
 					display:block;
 				}
-				.filter-toggle-button{
-					display:none;
+				@include breakpoint (large) {
+					display: block;
+					width: 370px;
+					height:100%;
+					float:left;
+					margin-right:4vw;
+					padding:1.5rem 1.5rem 0rem 1.5rem;
+					position:relative;
+					position: absolute;
+					background-color: $white;
 				}
 			}
 		}
-		@include breakpoint(large) {
+		@include breakpoint (large) {
+			display: block;
+			width: 370px;
+			height:100%;
 			float:left;
 			margin-right:4vw;
 			padding:1.5rem 1.5rem 0rem 1.5rem;
 			position:relative;
+			position: absolute;
 			background-color: $white;
-			&.hidden {
-				background-color: transparent;
-				width: 120px;
-				height:100vh;
-				margin-right:0;
-				.filter-form {
-					display:none;
-				}
-			}
-			&.shown {
-				position: absolute;
-				height:100%;
-				width: 370px;
-				.filter-form {
-					display:block;
-				}
-				.filter-toggle-button{
-					display:none;
-				}
-			}
+			box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.08)
 		}
+		// @include breakpoint(small) {
+		// 	width: 100%;
+		// 	padding:2rem 1.5rem 5rem 1.5rem;
+		// 	//position:relative;
+		// 	&.hidden {
+		// 		display: none;
+		// 		background-color: $white;
+		// 		border-bottom:2px solid $border-gray;
+		// 		.filter-form {
+		// 			display:none;
+		// 		}
+		// 	}
+		// 	&.shown {
+		// 		padding:2rem 1.5rem 5rem 1.5rem;
+		// 		z-index: 1000;
+		// 		display: block;
+		// 		overflow: scroll;
+		// 		position:absolute;
+		// 		position:fixed;
+		// 		top:0;
+		// 		left:0;
+		// 		height: 100%;
+		// 		width:100%;
+		// 		background-color: $white;
+		// 		.filter-form {
+		// 			display:block;
+		// 		}
+		// 	}
+		// }
+		// @include breakpoint(large) {
+		// 	float:left;
+		// 	margin-right:4vw;
+		// 	padding:1.5rem 1.5rem 0rem 1.5rem;
+		// 	position:relative;
+		// 	background-color: $white;
+		// 	// &.hidden {
+		// 	// 	background-color: transparent;
+		// 	// 	width: 120px;
+		// 	// 	height:100vh;
+		// 	// 	margin-right:0;
+		// 	// 	.filter-form {
+		// 	// 		display:none;
+		// 	// 	}
+		// 	// }
+		// 	&.shown {
+		// 		position: absolute;
+		// 		height:100%;
+		// 		width: 370px;
+		// 		.filter-form {
+		// 			display:block;
+		// 		}
+		// 		.filter-toggle-button{
+		// 			display:none;
+		// 		}
+		// 	}
+		// }
 		.stores {
 			padding-bottom: 1.5rem;
 		}
@@ -229,13 +307,14 @@
 			padding-top: 0.2rem;
 			margin-bottom: 0.2rem;
 			line-height: 1.5;
+			//color: $black;
 		}
 		input[type='checkbox'] {
 			-webkit-appearance:none;
 			width:20px;
 			height:20px;
 			background:#F7F7F7;
-			border-radius:0px;
+			border-radius:2px;
 			border:1px solid #DEDEDE;
 			//margin: 0.5rem 1rem 0 0;
 			vertical-align: middle;
@@ -244,13 +323,16 @@
 			}
 		}
 		input[type='checkbox']:checked {
-			background: $black;
+			background: $secondary-color;
+			.selected label {
+				color: $alert-color;
+			}
 		}
 
 		.filter-toggle-button {
 			cursor:pointer;
 			font-weight: bold;
-			padding-top:0.75em;
+			padding-top:1em;
 		}
 		.filter-form {
 			[type='checkbox'], [type='radio'] {
@@ -267,7 +349,7 @@
 				@include breakpoint(small only) {
 					font-size:1.25rem;
 					line-height:2em;
-					font-weight:200;
+					font-weight: bold;
 				}
 				@include breakpoint(medium) {
 					font-size:1.5rem;
@@ -278,11 +360,12 @@
 			.close-button {
 				opacity:0.5;
 				@include breakpoint(small only) {
-					top:0.25em;
+					top:2rem;
+					right: 1.5rem;
 				}
 				@include breakpoint(medium) {
-					top:1.5rem;
-					right: 1.5rem;
+					top:2rem;
+					right: 2rem;
 				}
 			}
 		}
@@ -410,19 +493,21 @@
 			}
 		}
 		.submit-btn {
-			border:none;
-			z-index: 1000;
-			background: $white;
-			box-shadow:0 2px 10px 0 rgba(0,0,0,0.13);
-			padding:1rem 1rem 0.3rem 1rem;
-			margin-left: -24px;
-			vertical-align: bottom;
-			margin-top: 3rem;
 			@include breakpoint (small) {
-				width: 100%
+				width: 100%;
+				border:none;
+				z-index: 1000;
+				background: $white;
+				box-shadow:0 2px 10px 0 rgba(0,0,0,0.13);
+				padding:1rem 1rem 0.3rem 1rem;
+				margin-left: -24px;
+				margin-right: -24px;
+				position: absolute;
+				vertical-align: bottom;
 			}
 			@include breakpoint (large) {
 				width: 370px;
+				margin-top: 3rem;
 			}
 			section {
 				padding:0;
@@ -453,31 +538,47 @@
 		padding-bottom: 4rem;
 		.results-heading {
 			@include breakpoint(small){
-				background: $white;
-				padding: 2rem 1rem 2rem 1rem;
+				//background: $white;
+				padding: 1rem 1rem 0rem 1rem;
 				margin:0 0 2rem 0;
+				//box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
 				//text-align: center;
+			}
+			@include breakpoint (medium) {
+				padding: 1rem 2rem 0rem 2.5rem;
 			}
 			@include breakpoint(large){
 				background: none;
 				padding:2rem 0 1.5rem 0.5rem;
 				text-align: left;
 				margin:0;
+				//margin-top:0.25em;
 			}
 			.sort-toggle-button {
 				@include breakpoint(small){
 					position: absolute;
-					text-align: right;
-					top: 1rem;
-					right:1rem;
-					//margin-top: -4rem;
+					//width: 50%;
+					color: $black;
+					letter-spacing: 1px;
+					text-align: center;
+					//background: $border-gray
+					//border-radius:10px;
+					padding:1.1rem;
+					//border: 2px solid $medium-gray;
+					top: 0rem;
+					font-size: 1rem;
+					right:0rem;
+					margin:1rem;
+					i {
+						color: $alert-color;
+					}
 				}
 				@include breakpoint(large){
 					position: relative;
-					//margin-top: -4rem;
+					margin-right: 0.5rem;
+					padding:0;
 				}
 				float:right;
-				margin-top:0.25em;
 				font-weight: bold;
 				cursor: pointer;
 			}
@@ -534,5 +635,7 @@
 			margin:0;
 		}
 	}
-
+	.pagination {
+		padding-top: 3rem;
+	}
 }

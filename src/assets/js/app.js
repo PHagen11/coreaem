@@ -126,13 +126,13 @@ jQuery(document).ready(function($) {
 	})
 
 	$('.inventory .filter-toggle-button').click (function() {
-		$('.filter-panel').addClass('shown').removeClass('hidden');
-		$('#results-grid').removeClass('medium-up-2 xlarge-up-4 two-and-four-up').addClass('medium-up-1 xlarge-up-3 one-and-three-up');
+		$('.filter-panel').addClass('shown');
+		// $('#results-grid').removeClass('medium-up-2 xlarge-up-4 two-and-four-up').addClass('medium-up-1 xlarge-up-3 one-and-three-up');
 
 	});
 	$('.inventory .filter-form .close-button').click (function() {
 		$('.filter-panel').addClass('hidden').removeClass('shown');
-		$('#results-grid').removeClass('medium-up-1 xlarge-up-4 one-and-three-up').addClass('medium-up-2 xlarge-up-4 two-and-four-up');
+		// $('#results-grid').removeClass('medium-up-1 xlarge-up-4 one-and-three-up').addClass('medium-up-2 xlarge-up-4 two-and-four-up');
 	});
 	$('.inventory .filter-form .condition-buttons label').click (function() {
 		$('.condition-buttons label').removeClass('selected');
