@@ -234,6 +234,7 @@
 			display: block;
 			width: 370px;
 			height:100%;
+			min-height: 1300px;
 			float:left;
 			margin-right:4vw;
 			padding:1.5rem 1.5rem 0rem 1.5rem;
@@ -357,6 +358,14 @@
 		.accordion-content {
 			padding: 0.5rem 0 0.5rem 0;
 			border:none;
+			.showmoremodel {
+				font-size: 1rem;
+				font-weight: bold;
+			}
+			.showlessmodel {
+				font-size: 1rem !important;
+				font-weight: bold !important;
+			}
 		}
 		.subset {
 			margin-left:1rem;
@@ -489,7 +498,7 @@
 		}
 		background: $light-gray;
 		height: 100%;
-		min-height: 750px;
+		min-height: 1450px;
 		padding-bottom: 4rem;
 		.results-heading {
 			@include breakpoint(small){
