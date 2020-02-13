@@ -1,4 +1,3 @@
-
 <form id="boat-search" class="make-type-search selected" action="/inventory/inventory-results-page.html">
 	<div class="inv-search-bar">
 		<div class="grid-x align-middle inv-search ">
@@ -43,10 +42,10 @@
 	</div>
 </div>
 <!--END OF DEALER TITLE BAR-->
-<div class="inventory in-submit" id="inv-start">
+<div class="grid-y large-grid-frame inventory in-submit" id="inv-start">
 	<button class="filter-toggle-button hide-for-large" data-toggle="filter-panel-reveal"><i class="fas fa-sliders-v"></i> FILTER</button>
 	<!-- <div class="full reveal" id="filter-panel-reveal" data-reveal data-full-screen="true" > -->
-	<div class="filter-panel">
+	<div class="small-12 cell filter-panel">
 		<form class="filter-form">
 			<div class="filter-heading">
 				<span class="title">Filter By:</span>
@@ -186,13 +185,13 @@
 			</div>
 		</form>
 	</div>
-	<div class="filter-results">
+	<div class="small-12 cell filter-results">
 		<!-- <div class="grid-container"> -->
 			<div class="results-heading">
 				<div class="sort-toggle-button" data-toggle="sort-dropdown">
 					<i class="fas fa-sort-alt"></i> SORT<span id="sort-selection show-for-large">: Highest Price</span>
 				</div>
-				<div class="dropdown-pane sort-drop" id="sort-dropdown" data-dropdown  data-close-on-click="true">
+				<div class="dropdown-pane sort-drop" id="sort-dropdown" data-position="bottom" data-alignment="right" data-dropdown  data-close-on-click="true">
 					<ul class="vertical menu">
 						<li><a href="#">Nearest Distance</a></li>
 						<li><a href="#">Model Year</a></li>
@@ -663,4 +662,3 @@
 			</div>
 		</div>
 	</div>
-{{> footer}}
