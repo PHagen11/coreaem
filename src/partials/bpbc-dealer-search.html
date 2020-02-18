@@ -1,0 +1,260 @@
+<div class="dealer-search">
+  <form>
+    <div class="grid-x search-box">
+      <div class="cell auto"></div>
+      <div class="small-12 large-12 cell">
+        <div class="grid-x align-middle grid-margin-x">
+          <div class="cell small-12 medium-3">
+            <div class="heading text-right">
+              FIND A LOCATION:
+            </div>
+          </div>
+          <!-- <div class="cell small-12 large-3">
+            <div class="search-by">
+              <span class="search-location"><input type="radio" name="searchBy" id="sLocation" value="location" checked><label for="sLocation">Location</label></span>
+              <!-- <span class="search-name"><input type="radio" name="searchBy" id="sName" value="name"><label for="sName">Dealer Name</label></span>
+            </div>
+          </div> -->
+          <div class="cell small-12 medium-6">
+            <form>
+              <!-- <label for="zip">Zip/City/State</label> -->
+              <div class="input-group">
+                <input class="input-group-field" type="text" name="zip">
+                <div class="input-group-button">
+                  <input type="submit" class="button" value="Go">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="small-12 medium-3 text-center cell">
+            <a class="button small secondary hollow" href="#">Show All Dealers</a>
+          </div>
+        </div>
+        <div class="cell auto"></div>
+      </div>
+    </div>
+  </form>
+
+  <div class="dealer-search-map">
+    <div id="map">
+      <div class="mapouter">
+        <div class="gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="grid-x">
+    <div class="cell auto"></div>
+    <div class="small-12 large-10 cell">
+      <div id="dealer-search-results" class="results">
+        <div class="result-entry">
+          <div class="grid-x grid-margin-x">
+            <div class="cell small-2 medium-1">
+              <span class="fa-stack">
+                <i class="map-marker fas fa-map-marker fa-stack-2x"></i>
+                <i class="map-marker-counter fa-stack-1x">1</i>
+              </span>
+            </div>
+            <div class="cell small-10 medium-11">
+              <div class="grid-x grid-margin-x">
+                <div class="cell small-12 medium-12 large-4 medium-bottom">
+                  <div class="dealer-name tiny-bottom">Bass Pro Shops Tracker Boat Center SPRINGFIELD</div>
+                  <div class="links small-bottom">
+                    <div><a href="#">View Inventory</a></div>
+                    <div><a href="#">Get Directions</a></div>
+                    <div><a href="#">View Website</a></div>
+                    <div><a href="#">Contact Dealer</a></div>
+                  </div>
+                  <!-- <a href="#" class="set-store" style="text-decoration:none;"><i class="fas fa-heart fa-s icon-secondary-color"></i> Set As My Store</a> -->
+                  <a href="#" class="store-set inactive" style="text-decoration:none;"><i class="fas fa-heart fa-s icon-alert"></i> My Store</a>
+                </div>
+                <div class="cell small-12 medium-6 large-4 dealer-basic-info small-bottom">
+                  <h5>Showroom</h5>
+                  <h6>Address</h6>
+                  <p>1934 South Campbell,<br>
+                  Springfield, MO 65897</br>
+                  <a href="#">Get Directions</a>
+                  </p>
+                  <h6>Sales</h6>
+                  <p>888-888-8888</p>
+                  <h6>Store Hours</h6>
+                  <p>Mon - Sat : 7:00 AM - 10:00 PM<br>
+                  Sun : 8:00 AM - 8:00 PM</p>
+                </div>
+                <div class="cell small-12 medium-6 large-4 dealer-basic-info">
+                  <h5>Service Center</h5>
+                  <h6>Address</h6>
+                  <p>1934 South Campbell,<br>
+                  Springfield, MO 65897</br>
+                  <a href="#">Get Directions</a>
+                  </p>
+                  <h6>Sales</h6>
+                  <p>888-888-8888</p>
+                  <h6>Store Hours</h6>
+                  <p>Mon - Sat : 7:00 AM - 10:00 PM<br>
+                  Sun : 8:00 AM - 8:00 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-entry">
+          <div class="grid-x grid-margin-x">
+            <div class="cell small-2 medium-1">
+              <span class="fa-stack">
+                <i class="map-marker fas fa-map-marker fa-stack-2x"></i>
+                <i class="map-marker-counter fa-stack-1x">1</i>
+              </span>
+            </div>
+            <div class="cell small-10 medium-11">
+              <div class="grid-x grid-margin-x">
+                <div class="cell small-12 medium-12 large-4 medium-bottom">
+                  <div class="dealer-name tiny-bottom">Bass Pro Shops Tracker Boat Center SPRINGFIELD</div>
+                  <div class="links small-bottom">
+                    <div><a href="#">View Inventory</a></div>
+                    <div><a href="#">Get Directions</a></div>
+                    <div><a href="#">View Website</a></div>
+                    <div><a href="#">Contact Dealer</a></div>
+                  </div>
+                  <!-- <a href="#" class="set-store" style="text-decoration:none;"><i class="fas fa-heart fa-s icon-secondary-color"></i> Set As My Store</a> -->
+                  <a href="#" class="button primary" style="text-decoration:none;">Set As My Store</a>
+                </div>
+                <div class="cell small-12 medium-6 large-4 dealer-basic-info small-bottom">
+                  <h5>Showroom</h5>
+                  <h6>Address</h6>
+                  <p>1934 South Campbell,<br>
+                  Springfield, MO 65897</br>
+                  <a href="#">Get Directions</a>
+                  </p>
+                  <h6>Sales</h6>
+                  <p>888-888-8888</p>
+                  <h6>Store Hours</h6>
+                  <p>Mon - Sat : 7:00 AM - 10:00 PM<br>
+                  Sun : 8:00 AM - 8:00 PM</p>
+                </div>
+                <div class="cell small-12 medium-6 large-4 dealer-basic-info">
+                  <h5>Service Center</h5>
+                  <h6>Address</h6>
+                  <p>1934 South Campbell,<br>
+                  Springfield, MO 65897</br>
+                  <a href="#">Get Directions</a>
+                  </p>
+                  <h6>Sales</h6>
+                  <p>888-888-8888</p>
+                  <h6>Store Hours</h6>
+                  <p>Mon - Sat : 7:00 AM - 10:00 PM<br>
+                  Sun : 8:00 AM - 8:00 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-entry">
+          <div class="grid-x grid-margin-x">
+            <div class="cell small-2 medium-1">
+              <span class="fa-stack">
+                <i class="map-marker fas fa-map-marker fa-stack-2x"></i>
+                <i class="map-marker-counter fa-stack-1x">1</i>
+              </span>
+            </div>
+            <div class="cell small-10 medium-11">
+              <div class="grid-x grid-margin-x">
+                <div class="cell small-12 medium-12 large-4 medium-bottom">
+                  <div class="dealer-name tiny-bottom">Bass Pro Shops Tracker Boat Center SPRINGFIELD</div>
+                  <div class="links small-bottom">
+                    <div><a href="#">View Inventory</a></div>
+                    <div><a href="#">Get Directions</a></div>
+                    <div><a href="#">View Website</a></div>
+                    <div><a href="#">Contact Dealer</a></div>
+                  </div>
+                  <a href="#" class="button primary" style="text-decoration:none;">Set As My Store</a>
+                  <!-- <a href="#" class="store-set inactive" style="text-decoration:none;"><i class="fas fa-heart fa-s icon-alert"></i> My Store</a> -->
+                </div>
+                <div class="cell small-12 medium-6 large-4 dealer-basic-info small-bottom">
+                  <h5>Showroom</h5>
+                  <h6>Address</h6>
+                  <p>1934 South Campbell,<br>
+                  Springfield, MO 65897</br>
+                  <a href="#">Get Directions</a>
+                  </p>
+                  <h6>Sales</h6>
+                  <p>888-888-8888</p>
+                  <h6>Store Hours</h6>
+                  <p>Mon - Sat : 7:00 AM - 10:00 PM<br>
+                  Sun : 8:00 AM - 8:00 PM</p>
+                </div>
+                <div class="cell small-12 medium-6 large-4 dealer-basic-info">
+                  <h5>Service Center</h5>
+                  <h6>Address</h6>
+                  <p>1934 South Campbell,<br>
+                  Springfield, MO 65897</br>
+                  <a href="#">Get Directions</a>
+                  </p>
+                  <h6>Sales</h6>
+                  <p>888-888-8888</p>
+                  <h6>Store Hours</h6>
+                  <p>Mon - Sat : 7:00 AM - 10:00 PM<br>
+                  Sun : 8:00 AM - 8:00 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-entry">
+          <div class="grid-x grid-margin-x">
+            <div class="cell small-2 medium-1">
+              <span class="fa-stack">
+                <i class="map-marker fas fa-map-marker fa-stack-2x"></i>
+                <i class="map-marker-counter fa-stack-1x">4</i>
+              </span>
+            </div>
+            <div class="cell small-10 medium-11">
+              <div class="grid-x grid-margin-x">
+                <div class="cell small-12 medium-6 large-3">
+                  <div class="dealer-name">Bradford Marine & ATV</div>
+                  <div class="distance">Distance: 86.7 Miles</div>
+                  <div class="address">2325 N. Thompson</div>
+                  <div class="city-state-zip">Springdale, AR 72764</div>
+                  <div class="phone"><a href="tel:+14797501200">479-750-1200</a></div>
+                  <div class="accolades">
+                    <img src="https://www.nitro.com/etc/designs/tracker/clientlib-all/image/FiveStarMICD.png" alt="5 Star Marine Industry Certififed Dealership">
+                  </div>
+                </div>
+                <div class="cell small-12 medium-6 large-2">
+                  <div class="boat-types-label">Boat Type Available</div>
+                  <div class="boat-types">
+                    Fiberglass<br />
+                    Aluminun<br />
+                  </div>
+                </div>
+                <div class="cell small-12 medium-6 large-4">
+                  <div class="other-info">
+                    <strong>Store Hours</strong><br /> Mon - Sat: 10:00 AM - 9:00 PM<br /> Sun: 10:00 AM - 7:00 PM<br />
+                  </div>
+                </div>
+                <div class="cell small-12 medium-6 large-3 links">
+                  <div><a href="#">View Inventory <i class="fal fa-arrow-right"></i></a></div>
+                  <div><a href="#">Get Directions <i class="fal fa-arrow-right"></i></a></div>
+                  <div><a href="#">View Website <i class="fal fa-arrow-right"></i></a></div>
+                  <div><a href="#">Contact Dealer <i class="fal fa-arrow-right"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-x">
+          <div class="small-12 cell text-center">
+            <a class="button" href="#">Load More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cell auto"></div>
+  </div>
+</div>
