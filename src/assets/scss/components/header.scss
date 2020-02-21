@@ -53,7 +53,7 @@
         cursor: pointer;
         float: right;
         margin:0 0.5rem 0 0.5rem ;
-        color: $primary-color;
+        color: $header-dropdown-arrow-color;
       }
       @include breakpoint(large) {
         margin:0 0rem 0 0.4rem ;
@@ -72,6 +72,7 @@
   .header-menu {
     position: relative;
     z-index: 20;
+    font-family: $header-nav-font-family;
 
     > ul {
       margin: 0;
@@ -136,7 +137,7 @@
           display: none;
           width: 100%;
           height: auto;
-          background-color: $white;
+          background-color: $header-dropdown-background-color;
           padding: 1rem 0;
           border-top: 1px solid $border-gray;
           position: absolute;
@@ -210,8 +211,8 @@
                 line-height: 2.5em;
                 font-weight: 500;
                 font-size: $header-submenu-link-font-size;
-                color: $header-link-color-start;
-                border-left: 4px solid $white;
+                color: $header-submenu-link-color;
+                border-left: $header-dropdown-border-left;
 
                 &:hover {
                   color: $black;

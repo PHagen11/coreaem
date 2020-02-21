@@ -19,6 +19,11 @@ $card-margin-xlarge: 4rem;
 				transition: box-shadow 0.3s ease-in-out;
 			}
 		}
+		@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+   /* IE10+ specific styles go here */
+	 	height: auto;
+		}
+
 		.card-divider {
 			padding: 0.6rem 1rem 0.5rem 1rem;
 			font-size: 0.8em;

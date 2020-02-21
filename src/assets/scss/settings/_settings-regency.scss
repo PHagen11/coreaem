@@ -76,21 +76,21 @@ $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #262624,
   secondary: #A09174,
-  success: #8AC35F,
-  warning: #F3AC51,
-  alert: #EC5840,
+  success: #25AD79,
+  warning: #F1AB2C,
+  alert: #AA270F,
   border-gray: #ECEDF2,
   light-gray: #F5F4F0,
   medium-gray: #808285,
   dark-gray: #595B58,
-  black: #262624,
+  black: #1A1A1D,
   white: #FFFFFF
 );
 $border-gray: #ECEDF2;
 $light-gray: #F5F4F0;
 $medium-gray: #808285;
 $dark-gray: #595B58;
-$black: #262624;
+$black: #1A1A1D;
 $white: #FFFFFF;
 $body-background: $light-gray;
 $body-font-color: $black;
@@ -943,6 +943,9 @@ a {
   font-size: 1.3rem;
 }
 
+// Titles
+$title-text-transform:uppercase;
+
 // 2. Themes
 // -----------------------------
 
@@ -1001,20 +1004,25 @@ $border: 2px solid $border-gray;
 // 4. Header Component
 // -----------------------------
 
-$header-plain-text-color: $white; //ex: Link List component titles.
-$header-background-color: $white;
-$header-link-background-color-hover: $white;
-$header-background-hover: $white;
-$header-link-color-start: $dark-gray;
-$header-link-color-hover: $black;
+$header-nav-font-family: $body-font-family;
+$header-plain-text-color: $black; //ex: Link List component titles.
+$header-background-color: $black;
+$header-link-background-color-hover: $primary-color;
+$header-background-hover: $primary-color;
+$header-link-color-start: $border-gray;
+$header-link-color-hover: $white;
 $header-link-top-bottom-padding: 2.4rem;
 $header-link-left-right-padding: 1vw;
-$header-link-font-size: 0.8rem;
-$header-menu-item-text-transform: uppercase;
-$header-menu-item-letter-spacing: 1px;
+$header-link-font-size: 1.1rem;
+$header-menu-item-text-transform: capitalize;
+$header-menu-item-letter-spacing: 0px;
+$header-dropdown-arrow-color: $secondary-color;
 $header-dropdown-width: 250px;
-$header-submenu-background-color: $light-gray;
-$header-submenu-link-font-size: 1rem;
+$header-dropdown-background-color: $light-gray;
+$header-dropdown-border-left: 4px solid $light-gray;
+$header-submenu-background-color: $secondary-color;
+$header-submenu-link-color: $black;
+$header-submenu-link-font-size: 1.1rem;
 $header-logo-height: 56px;
 $header-logo-padding-top: 20px;
 $header-cta-left-spacing: 1rem;
@@ -1023,6 +1031,7 @@ $header-icon-color: $black;
 // 5. Sub Navigation Component
 // -----------------------------
 $sub-navigation-background-color: $black;
+$sub-navigation-font-family:$body-font-family;
 $sub-navigation-text-color: $white;
 $sub-navigation-text-weight: 500;
 $sub-navigation-text-transform: uppercase;
@@ -1073,6 +1082,7 @@ $size-full: 100%;
     transition: 0.25s ease-out, color 0.25s ease-out;
   }
 }
+$button-transform:none;
 // Text
 @mixin button-text ($font) {
   text-transform: uppercase;
@@ -1184,6 +1194,7 @@ $video-play-button-margin: 2vw;
 // -----------------------------
 
 $gallery-image-width: 98%;
+$gallery-image-border-radius: 0px;
 $gallery-thumbnail-border-color: $light-gray;
 $gallery-thumbnail-border-color-active: $primary-color;
 $gallery-play-button-icon: '\f144';
@@ -1203,6 +1214,8 @@ $icon-padding: 0.25em;
 // -----------------------------
 
 $link-list-title-font-weight: 900;
+$link-list-font-family:$header-font-family;
+$link-list-font-size: 1.1rem;
 
 // 16. Footer Component
 // -----------------------------
@@ -1237,6 +1250,7 @@ $model-options-background-color: $white;
 
 $model-listing-model-year-size: 1em;
 $model-listing-model-year-weight: bold;
+$model-listing-model-name-font: $header-font-family;
 $model-listing-model-name-size: 1.5em;
 $model-listing-model-name-weight: bold;
 $model-listing-model-name-transform: uppercase;

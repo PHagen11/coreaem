@@ -19,6 +19,8 @@
 .button {
   text-decoration: none;
   @include button-text ('Lato');
+  transform: $button-transform;
+
 }
 .button.hollow {
   border-radius: $hollow-radius;

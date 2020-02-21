@@ -942,6 +942,9 @@ a {
   font-size: 1.3rem;
 }
 
+// Titles
+$title-text-transform:normal;
+
 // 2. Themes
 // -----------------------------
 
@@ -1000,6 +1003,7 @@ $border: 2px solid $border-gray;
 // 4. Header Component
 // -----------------------------
 
+$header-nav-font-family: $body-font-family;
 $header-plain-text-color: $white; //ex: Link List component titles.
 $header-background-color: $white;
 $header-link-background-color-hover: $white;
@@ -1011,8 +1015,13 @@ $header-link-left-right-padding: 1vw;
 $header-link-font-size: 0.9rem;
 $header-menu-item-text-transform: uppercase;
 $header-menu-item-letter-spacing: 1px;
+$header-dropdown-arrow-color: $primary-color;
 $header-dropdown-width: 250px;
+$header-dropdown-background-color: $white;
+$header-dropdown-border-left: 4px solid $white;
+$header-submenu-background-color: $secondary-color;
 $header-submenu-background-color: $light-gray;
+$header-submenu-link-color: $black;
 $header-submenu-link-font-size: 1rem;
 $header-logo-height: 56px;
 $header-logo-padding-top: 20px;
@@ -1072,6 +1081,7 @@ $size-full: 100%;
     transition: 0.25s ease-out, color 0.25s ease-out;
   }
 }
+$button-transform:none;
 // Text
 @mixin button-text ($font) {
   text-transform: uppercase;
@@ -1183,6 +1193,7 @@ $video-play-button-margin: 2vw;
 // -----------------------------
 
 $gallery-image-width: 98%;
+$gallery-image-border-radius: 0px;
 $gallery-thumbnail-border-color: $light-gray;
 $gallery-thumbnail-border-color-active: $primary-color;
 $gallery-play-button-icon: '\f144';
@@ -1201,7 +1212,9 @@ $icon-padding: 0.25em;
 // 15. Link List Component
 // -----------------------------
 
-$link-list-title-font-weight: 900;
+$link-list-title-font-weight: bold;
+$link-list-font-family:$header-font-family;
+$link-list-font-size: 1.1rem;
 
 // 16. Footer Component
 // -----------------------------
@@ -1237,6 +1250,7 @@ $model-options-background-color: $white;
 $model-listing-model-year-size: 1em;
 $model-listing-model-year-weight: bold;
 $model-listing-model-name-size: 1.5em;
+$model-listing-model-name-font: $header-font-family;
 $model-listing-model-name-weight: bold;
 $model-listing-model-name-transform: uppercase;
 $model-listing-model-name-line-height: 1.2em;

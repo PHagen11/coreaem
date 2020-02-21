@@ -3,7 +3,7 @@
     opacity: 0.88;
     transition: $global-transition;
     @include breakpoint(medium) {
-      border-radius: 10px 10px 10px 10px;
+      border-radius: $gallery-image-border-radius;
       width: $gallery-image-width;
       margin-bottom: $gallery-image-margin-bottom;
     }

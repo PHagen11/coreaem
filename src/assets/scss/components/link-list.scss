@@ -39,6 +39,8 @@
 			text-transform: uppercase;
 			font-weight:$link-list-title-font-weight;
 			padding:0.7rem 0;
+			font-family: $link-list-font-family;
+			font-size: $link-list-font-size;
 		}
 		ul {
 			// outline:1px dotted blue;
