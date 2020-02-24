@@ -264,7 +264,19 @@
 			<div class="cell large-12 large-cell-block-y filter-results">
 				<!-- <div class="grid-container"> -->
 				<div class="results-heading">
-					<div class="sort-toggle-button" data-toggle="sort-dropdown">
+					<ul class="dropdown menu sort-toggle-button" data-dropdown-menu data-autoclose="true">
+					  <li >
+					    <a href="#"><i class="fas fa-sort-alt"></i><span id="sort-selection show-for-large"> Highest Price</a>
+							<ul class="vertical menu">
+								<li><a href="#">Nearest Distance</a></li>
+								<li><a href="#">Model Year</a></li>
+								<li><a href="#">Lowest Price</a></li>
+								<li><a href="#">Highest Price</a></li>
+								<li><a href="#">Listing Distance</a></li>
+					    </ul>
+					  </li>
+					</ul>
+					<!-- <div class="sort-toggle-button" data-toggle="sort-dropdown">
 						<i class="fas fa-sort-alt"></i><span id="sort-selection show-for-large"> Highest Price</span>
 					</div>
 					<div class="dropdown-pane sort-drop" id="sort-dropdown" data-position="bottom" data-alignment="right" data-dropdown data-close-on-click="true">
@@ -275,7 +287,7 @@
 							<li><a href="#">Highest Price</a></li>
 							<li><a href="#">Listing Distance</a></li>
 						</ul>
-					</div>
+					</div> -->
 					<h3>31 Matches:</h3>
 					<div class="filter-list">
 						<ul class="menu">

@@ -586,17 +586,34 @@
 			}
 			.sort-toggle-button {
 				@include breakpoint(small){
+					a {
+						color: $black;
+						&:after {
+							display: none;
+						}
+						&:hover {
+							background: $light-gray;
+						}
+					}
+					.is-dropdown-submenu {
+						letter-spacing: 0;
+						text-align: left;
+						text-transform: capitalize;
+						border:none;
+						padding: 1.2rem 1rem 1.2rem 1rem;
+						box-shadow:0 2px 24px 0 rgba(0,0,0,0.13);
+					}
 					position: absolute;
 					//width: 50%;
 					color: $black;
 					letter-spacing: 1px;
-					text-align: center;
+					text-align: right;
 					text-transform: uppercase;
 					//background: $white;
 					//border-radius:10px;
 					padding:0.8rem;
 					//border: 2px solid $border-gray;
-					top: 0rem;
+					top: -0.3rem;
 					font-size: 1rem;
 					right:0rem;
 					margin:1rem;
