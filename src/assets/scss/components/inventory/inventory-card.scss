@@ -2,6 +2,10 @@ $card-margin-medium: 1rem;
 $card-margin-xlarge: 4rem;
 .inventory-card {
 	.card {
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     /* IE10+ CSS styles go here */
+		 		flex:1 1 150px;
+			}
 
 		@include breakpoint(small only) {
 			padding:0.5rem 0 0.5rem 0;
@@ -19,10 +23,6 @@ $card-margin-xlarge: 4rem;
 				transition: box-shadow 0.3s ease-in-out;
 			}
 		}
-		@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
-   /* IE10+ specific styles go here */
-	 	height: auto;
-		}
 
 		.card-divider {
 			padding: 0.6rem 1rem 0.5rem 1rem;
@@ -30,6 +30,8 @@ $card-margin-xlarge: 4rem;
 			font-weight: 700;
 		}
 		.card-section {
+			max-height: 200px;
+			min-height: 1px;
 			.mname {
 				min-height:55px;
 				font-weight: bold;
@@ -53,6 +55,7 @@ $card-margin-xlarge: 4rem;
 		}
 		.item-image {
 			@include breakpoint(small) {
+				 min-height: 1px;
 				//width: 100%;
 				//height: 175px;
 				//object-fit:scale-down;

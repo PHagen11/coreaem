@@ -292,7 +292,7 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // ----------
 
 $button-font-family: inherit;
-$button-padding: 0.7em 1.6em;
+$button-padding: 0.8em 1.6em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
@@ -1294,8 +1294,8 @@ $model-price-model-name-line-height: 1.2em;
 $model-price-model-name-tag-color: $primary-color; //i.e.: NEW
 $model-price-model-name-tag-weight: normal;
 $model-price-package-detail-margin: 1rem 0;
-$model-price-td-padding: 0.25rem 0;
-$model-price-block-margin: 1rem 0;
+$model-price-td-padding: 0.15rem 0;
+$model-price-block-margin: 0rem 0;
 $model-price-label-size: 1em; //i.e.: NO HAGGLE NO HASSLE National Price
 $model-price-label-color: inherit;
 $model-price-sale-value-size: 1em;
@@ -1305,7 +1305,7 @@ $model-price-value-size: 1em;
 $model-price-value-weight: bold;
 $model-price-strike-color: inherit;
 $model-price-currency-size: 1em;
-$model-price-currency-weight: 300;
+$model-price-currency-weight: normal;
 $model-price-currency-color: $medium-gray;
 $model-price-save-label-size: 1em;
 $model-price-save-value-size: 1em;
