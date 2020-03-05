@@ -22,7 +22,7 @@ $card-margin-xlarge: 4rem;
 	--footer-position: 0 calc(var(--card-height) - var(--footer-height));
 	--footer-skeleton: linear-gradient(white var(--footer-height), transparent 0);
 	--blur-width: 200px;
-	--blur-size: var(--blur-width) calc(var(--card-height);
+	--blur-size: var(--blur-width) calc(var(--card-height));
 }
 
 .inventory-card {
