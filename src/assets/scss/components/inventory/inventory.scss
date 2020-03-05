@@ -227,6 +227,7 @@
 				display: block;
 				overflow-y: scroll;
 				overflow-x: hidden;
+				-webkit-overflow-scrolling: touch;
 				//position:absolute;
 				position:fixed;
 				top:0;
@@ -255,7 +256,8 @@
 			//flex-direction:column;
 			width: 370px;
 			height:100%;
-			overflow: scroll;
+			overflow-x: hidden;
+			overflow-y: scroll;
 			//min-height: 1400px;
 			float:left;
 			margin-bottom:45px;
@@ -428,7 +430,7 @@
 				font-size: 1rem;
 				font-weight: bold;
 			}
-			.showlessmodel {
+			.showlessmodel, .showless {
 				font-size: 1rem !important;
 				font-weight: bold !important;
 			}
@@ -551,6 +553,10 @@
 			margin-left: 0px;
 			padding-right: 0;
 			padding-left:0;
+			&.hidden {
+				display: none;
+				//overflow: hidden;
+			}
 		}
 		@include breakpoint (large) {
 			margin-left: 370px;
@@ -562,7 +568,7 @@
 		width: auto;
 		//height: 100%;
 		//min-height: 1450px;
-		padding-bottom: 4rem;
+		//padding-bottom: 4rem;
 		.results-heading {
 			@include breakpoint(small){
 				background: $white;
@@ -683,10 +689,88 @@
 			margin:2rem;
 		}
 		@include breakpoint(large){
-			margin:0;
+			margin:0 ;
 		}
 	}
 	.pagination {
-		padding-top: 3rem;
+		padding: 4rem 1rem 0 1rem;
+		height: 300px;
+		@include breakpoint(small) {
+			.pagination-previous {
+				display: block;
+				width: 80%;
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+				background: $white;
+				margin-bottom: 1.4rem;
+				padding: 0.5rem;
+				text-transform: uppercase;
+				font-weight: bold;
+				a {
+					color: $white;
+					text-decoration: none;
+				}
+			}
+			a {
+				background: $white;
+				text-decoration: none;
+			}
+			.pagination-next {
+				display: block;
+				width: 80%;
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+				background: $primary-color;
+				padding: 0.5rem;
+				margin-top: 1.4rem;
+				text-transform: uppercase;
+				font-weight: bold;
+				color: $white;
+				a {
+					text-decoration: none;
+					background: $primary-color;
+				}
+			}
+			@include breakpoint (large) {
+				.pagination-previous {
+					display: inline-block;
+					width: auto;
+					text-align: left;
+					margin-left: auto;
+					margin-right: 1.5rem;
+					vertical-align: center;
+					background: none;
+					margin-bottom: 0;
+					//padding: 0.5rem;
+					text-transform: uppercase;
+					font-weight: bold;
+									color: $medium-gray;
+					a {
+						text-decoration: none;
+					}
+				}
+				.pagination-next {
+					display: inline-block;
+					position: relative;
+					bottom: auto;
+					width: auto;
+					border-radius: 0;
+					text-align: inherit;
+					margin-left: 1rem;
+					margin-right: 0;
+					background: none;
+					margin-top: 0;
+					text-transform: uppercase;
+					font-weight: bold;
+					a {
+						text-decoration: none;
+						color: $secondary-color;
+												background: $white;
+					}
+				}
+			}
+		}
 	}
 }

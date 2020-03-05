@@ -127,12 +127,18 @@ jQuery(document).ready(function($) {
 
 	$('.inventory .filter-toggle-button').click (function() {
 		$('.filter-panel').addClass('shown');
-		// $('#results-grid').removeClass('medium-up-2 xlarge-up-4 two-and-four-up').addClass('medium-up-1 xlarge-up-3 one-and-three-up');
-
+		$('.filter-results').addClass('hidden');
+	});
+	$('.inventory .filter-toggle-button').click (function() {
+		$('.filter-results').addClass('hidden');
 	});
 	$('.inventory .filter-form .close-button').click (function() {
 		$('.filter-panel').addClass('hidden').removeClass('shown');
-		// $('#results-grid').removeClass('medium-up-1 xlarge-up-4 one-and-three-up').addClass('medium-up-2 xlarge-up-4 two-and-four-up');
+		$('.filter-results').removeClass('hidden');
+	});
+	$('.inventory .filter-form .submit-btn').click (function() {
+		$('.filter-panel').removeClass('shown');
+		$('.filter-results').removeClass('hidden');
 	});
 	$('.inventory .filter-form .condition-buttons label').click (function() {
 		$('.condition-buttons label').removeClass('selected');

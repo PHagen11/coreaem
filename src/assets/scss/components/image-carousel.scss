@@ -6,6 +6,7 @@
 		top: 50%;
 		width: 100%;
 		-webkit-tap-highlight-color: transparent;
+
 		/* height:$image-carousel-prevnext-font-size; */
 		margin-top:-($image-carousel-prevnext-font-size+$image-carousel-prevnext-padding*2);
 		@include breakpoint(small) {
@@ -26,6 +27,9 @@
 		.disabled {
 			opacity: 0.5;
 			cursor: default;
+		}
+		button {
+			background: $primary-color
 		}
 
 		button.owl-next,
