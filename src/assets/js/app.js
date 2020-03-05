@@ -127,7 +127,7 @@ jQuery(document).ready(function($) {
 
 	$('.inventory .filter-toggle-button').click (function() {
 		$('.filter-panel').addClass('shown');
-		$('.filter-results').addClass('hidden');
+		// $('.filter-results').addClass('hidden');
 	});
 	$('.inventory .filter-toggle-button').click (function() {
 		$('.filter-results').addClass('hidden');
