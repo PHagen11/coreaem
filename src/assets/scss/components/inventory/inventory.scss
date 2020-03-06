@@ -240,7 +240,7 @@
 				}
 				@include breakpoint (large) {
 					display: block;
-					width: 370px;
+					width: 300px;
 					height:auto;
 					float:left;
 					margin-right:4vw;
@@ -249,12 +249,15 @@
 					position: absolute;
 					background-color: $white;
 				}
+				@include breakpoint (xlarge) {
+					width: 370px;
+				}
 			}
 		}
 		@include breakpoint (large) {
 			display: block;
 			//flex-direction:column;
-			width: 370px;
+			width: 300px;
 			height:100%;
 			overflow-x: hidden;
 			overflow-y: scroll;
@@ -262,11 +265,15 @@
 			float:left;
 			margin-bottom:45px;
 			margin-right:4vw;
-			padding:1.5rem 1.5rem 4rem 1.5rem;
+			padding:1.5rem 1.5rem 2rem 1.5rem;
 			position:relative;
 			position: absolute;
 			background-color: $white;
 			box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.08)
+		}
+		@include breakpoint (xlarge) {
+			width: 370px;
+			padding-right: 4rem
 		}
 		.stores {
 			padding-bottom: 1.5rem;
@@ -539,8 +546,11 @@
 				bottom:0;
 			}
 			@include breakpoint (large) {
-				width: 370px;
+				width: 300px;
 				margin-top: 3rem;
+			}
+			@include breakpoint (xlarge) {
+				width: 370px;
 			}
 			section {
 				padding:0;
@@ -559,10 +569,13 @@
 			}
 		}
 		@include breakpoint (large) {
-			margin-left: 370px;
+			margin-left: 300px;
 			padding-right: 4vw;
 			padding-left:4vw;
 			overflow: scroll;
+		}
+		@include breakpoint (xlarge) {
+			margin-left: 370px;
 		}
 		background: $light-gray;
 		width: auto;
