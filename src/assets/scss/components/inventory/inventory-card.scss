@@ -1,29 +1,30 @@
 $card-margin-medium: 1rem;
 $card-margin-xlarge: 4rem;
 
-:root {
-	--card-padding: 20px;
-	--card-height: 400px;
-	--card-skeleton: linear-gradient($light-gray var(--card-height), transparent 0);
-	--avatar-size: 40px;
-	--avatar-position: var(--card-padding) var(--card-padding);
-	--avatar-skeleton: linear-gradient(white var(--title-height), transparent 0);
-	--title-height: 20px;
-	--title-width: 80%;
-	--title-position: var(--card-padding) 280px;
-	--title-skeleton: linear-gradient($light-gray var(--title-height), transparent 0);
-	--desc-line-height: 20px;
-	--desc-line-skeleton: linear-gradient($light-gray var(--desc-line-height), transparent 0);
-	--desc-line-1-width: 40%;
-	--desc-line-1-position: var(--card-padding) 330px;
-	--desc-line-2-width: 60%;
-	--desc-line-2-position: var(--card-padding) 360px;
-	--footer-height: 40px;
-	--footer-position: 0 calc(var(--card-height) - var(--footer-height));
-	--footer-skeleton: linear-gradient(white var(--footer-height), transparent 0);
-	--blur-width: 200px;
-	--blur-size: var(--blur-width) calc(var(--card-height));
-}
+// :root {
+// 	--card-padding: 20px;
+// 	--card-height: 400px;
+// 	--card-skeleton: linear-gradient($light-gray var(--card-height), transparent 0);
+// 	--avatar-size: 40px;
+// 	--avatar-position: var(--card-padding) var(--card-padding);
+// 	--avatar-skeleton: linear-gradient(white var(--title-height), transparent 0);
+// 	--title-height: 20px;
+// 	--title-width: 80%;
+// 	--title-position: var(--card-padding) 280px;
+// 	--title-skeleton: linear-gradient($light-gray var(--title-height), transparent 0);
+// 	--desc-line-height: 20px;
+// 	--desc-line-skeleton: linear-gradient($light-gray var(--desc-line-height), transparent 0);
+// 	--desc-line-1-width: 40%;
+// 	--desc-line-1-position: var(--card-padding) 330px;
+// 	--desc-line-2-width: 60%;
+// 	--desc-line-2-position: var(--card-padding) 360px;
+// 	--footer-height: 40px;
+// 	--footer-position: 0 calc(var(--card-height) - var(--footer-height));
+// 	--footer-skeleton: linear-gradient(white var(--footer-height), transparent 0);
+// 	--blur-width: 200px;
+// 	--blur-size: var(--blur-width) calc(var(--card-height));
+// }
+
 
 .inventory-card {
 	.card {
@@ -152,10 +153,11 @@ $card-margin-xlarge: 4rem;
 		}
 	}
 }
+
 .card.skeleton {
 	//padding:2rem;
 	//width: 280px; //demo
-	height: var(--card-height);
+	height: 400px;
 	content: "";
 	display: block;
 	//width: 100%;
@@ -164,30 +166,30 @@ $card-margin-xlarge: 4rem;
 	box-shadow: 0 10px 20px rgba(0,0,0, .1);
 	background-image:linear-gradient(90deg, rgba($light-gray, 0) 0, rgba($light-gray, .8) 50%, rgba($light-gray, 0) 100%),
 	//animation blur
-	var(--title-skeleton),
+	linear-gradient($light-gray 20px, transparent 0),
 	//title
-	var(--desc-line-skeleton),
+	linear-gradient($light-gray 20px, transparent 0),
 	//desc1
-	var(--desc-line-skeleton),
+	linear-gradient($light-gray 20px, transparent 0),
 	//desc2
-	var(--avatar-skeleton),
+	linear-gradient($white 20px, transparent 0),
 	//avatar
-	var(--footer-skeleton),
+	linear-gradient($white 40px, transparent 0),
 	//footer bar
 	//card
-	var(--card-skeleton);
-	background-size: var(--blur-size), var(--title-width) var(--title-height), var(--desc-line-1-width) var(--desc-line-height), var(--desc-line-2-width) var(--desc-line-height), var(--avatar-size) var(--avatar-size), 100% var(--footer-height), 100% 65%;
+	linear-gradient($light-gray 400px, transparent 0);
+	background-size: 200px calc(400px), 80% 20px, 40% 20px, 60% 20px, 40px 40px, 100% 40px, 100% 65%;
 	background-position:-150% 0,
 	//animation
-	var(--title-position),
+	20px 280px,
 	//title
-	var(--desc-line-1-position),
+	20px 330px,
 	//desc1
-	var(--desc-line-2-position),
+	20px 360px,
 	//desc2
-	var(--avatar-position),
+	20px 20px,
 	//avatar
-	var(--footer-position),
+	0 calc(400px - 40px),
 	//footer bar
 	//card
 	0 0;
@@ -200,6 +202,6 @@ $card-margin-xlarge: 4rem;
 
 @keyframes loading {
 	to {
-		background-position: 350% 0, var(--title-position), var(--desc-line-1-position), var(--desc-line-2-position), var(--avatar-position), var(--footer-position), 0 0;
+		background-position: 350% 0, 20px 280px, 20px 330px, 20px 360px, 20px 20px, 0 calc(400px - 40px), 0 0;
 	}
 }

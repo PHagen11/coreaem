@@ -51,6 +51,6 @@
     border-radius: 4px;
   }
   @include breakpoint(large) {
-    margin-top: -5rem;
+    margin-top: -5rem !important;
   }
 }
