@@ -1007,8 +1007,8 @@ $border: 2px solid $border-gray;
 $header-nav-font-family: $body-font-family;
 $header-plain-text-color: $white; //ex: Link List component titles.
 $header-background-color: $white;
-$header-link-background-color-hover: $white;
-$header-background-hover: $white;
+$header-link-background-color-hover: none;
+$header-background-hover: none;
 $header-link-color-start: $dark-gray;
 $header-link-color-hover: $black;
 $header-link-top-bottom-padding: 2.4rem;
@@ -1028,6 +1028,7 @@ $header-logo-height: 56px;
 $header-logo-padding-top: 20px;
 $header-cta-left-spacing: 1rem;
 $header-icon-color: $black;
+$header-menu-padding-right: 1.5rem;
 
 // 5. Sub Navigation Component
 // -----------------------------
