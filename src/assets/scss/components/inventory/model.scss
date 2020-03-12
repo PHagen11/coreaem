@@ -257,13 +257,15 @@
   }
   .owl-thumbs {
     padding-top:1.5rem;
-    max-height: 140px;
-    overflow: scroll;
+    //max-height: 140px;
+    //overflow: scroll;
     background: $light-gray;
     border-bottom: 2px solid $border-gray;
     border-left: 2px solid $border-gray;
     border-right: 2px solid $border-gray;
-
+    &.tiny-top {
+      margin-top: 0px !important;
+    }
     //box-shadow: inset 0 -10px 10px rgba(0, 0, 0, 0.6);
   }
 
