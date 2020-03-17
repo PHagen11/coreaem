@@ -127,7 +127,7 @@
 }
 .inventory {
 	height: 100%;
-	overflow: scroll;
+	overflow: hidden;
 	background-color: $light-gray;
 	position:relative;
 	.heroArea{
@@ -697,6 +697,7 @@
 	#results-grid {
 		@include breakpoint(small){
 			margin:0rem;
+			padding-bottom: 4rem;
 		}
 		@include breakpoint(medium){
 			margin:2rem;
@@ -706,7 +707,7 @@
 		}
 	}
 	.pagination {
-		padding: 4rem 1rem 0 1rem;
+		padding: 2rem 1rem 0 1rem;
 		height: 400px;
 		@include breakpoint(small) {
 			.pagination-previous {
