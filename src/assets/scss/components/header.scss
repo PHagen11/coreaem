@@ -192,11 +192,11 @@
 
             a {
               font-size: $header-submenu-link-font-size;
-              color: $header-link-color-start;
+              color: $header-submenu-link-color;
               height: auto;
 
               &:hover {
-                color: $header-link-color-hover;
+                color: $header-submenu-link-color;
               }
             }
           }
@@ -268,14 +268,16 @@
         background-color: transparent;
       }
     }
-
-    .cta-container a {
-      margin: 0 1.8rem 0.2rem $header-cta-left-spacing;
-      //text-transform: uppercase;
-      font-size: 0.9rem;
-      //color: $primary-color;
-      font-weight: 700;
-      //padding-right: 2rem;
+    .cta-container {
+      padding: 1.8rem 0 1.8rem 0;
+      a {
+        margin: 0 1.8rem 0.2rem $header-cta-left-spacing;
+        //text-transform: uppercase;
+        font-size: 0.9rem;
+        //color: $primary-color;
+        font-weight: 700;
+        //padding-right: 2rem;
+      }
     }
   }
   /* ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -289,6 +291,10 @@
     .menu-mobile {
       display: block;
       height: 80px;
+      &::after {
+        color: $header-hamburger-color;
+        font-weight: $header-hamburger-weight;
+      }
     }
 
     .menu-dropdown-icon {
@@ -320,7 +326,7 @@
           display: block;
 
           &:not(.cta-container) {
-            border-bottom: 1px solid $border-gray;
+            border-bottom: $header-mobile-bottom-border;
           }
 
           > a {
