@@ -192,11 +192,11 @@
 
             a {
               font-size: $header-submenu-link-font-size;
-              color: $header-link-color-start;
+              color: $header-submenu-link-color;
               height: auto;
 
               &:hover {
-                color: $header-link-color-hover;
+                color: $header-submenu-link-color;
               }
             }
           }
@@ -270,7 +270,7 @@
     }
 
     .cta-container a {
-      margin: 0 1.8rem 0.2rem $header-cta-left-spacing;
+      margin: auto;
       //text-transform: uppercase;
       font-size: 0.9rem;
       //color: $primary-color;
@@ -289,6 +289,10 @@
     .menu-mobile {
       display: block;
       height: 80px;
+      &::after {
+        color: $header-hamburger-color;
+        font-weight: $header-hamburger-weight;
+      }
     }
 
     .menu-dropdown-icon {
@@ -320,7 +324,7 @@
           display: block;
 
           &:not(.cta-container) {
-            border-bottom: 1px solid $border-gray;
+            border-bottom: $header-mobile-bottom-border;
           }
 
           > a {
@@ -364,6 +368,12 @@
           margin: 0;
         }
       }
+    }
+  }
+  .menu a {
+    padding-left:0;
+    &:hover {
+      color: $secondary-color !important;
     }
   }
 }

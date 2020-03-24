@@ -1,5 +1,5 @@
 .owl-theme {
-
+	//border: 2px solid $border-gray;
 	// Styling Next and Prev buttons
 	.owl-nav {
 		position: absolute;
@@ -103,6 +103,7 @@
 				border-radius: $image-carousel-dots-border-radius;
 				border: $image-carousel-dots-border-weight solid $image-carousel-dots-border-color;
 				opacity: $image-carousel-dots-opacity-start;
+				box-shadow: none;
 				//box-shadow: 0 0 2px 1px rgba(0, 0, 0, 1);
 			}
 
@@ -110,6 +111,7 @@
 				span {
 					background: $image-carousel-dots-color-active;
 					opacity: $image-carousel-dots-opacity-active;
+					box-shadow: none;
 					//box-shadow: 0 0 4px 1px rgba(0, 0, 0, 1);
 				}
 			}

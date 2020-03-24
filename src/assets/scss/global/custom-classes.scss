@@ -43,6 +43,11 @@
   padding: 2rem;
   border-radius: 4px;
 }
+.outline-style {
+  background: transparent;
+  border: 2px solid $secondary-color;
+  padding: 2rem;
+}
 .card-style-overlap {
   @include breakpoint(small) {
     background: $white;
@@ -53,5 +58,15 @@
   }
   @include breakpoint(large) {
     margin-top: -5rem !important;
+  }
+}
+.hero-fixed
+  .heroImage {
+    @include breakpoint (large) {
+      background-attachment: fixed !important;
+    }
+    @include breakpoint (small) {
+      background-attachment: scroll;
+    }
   }
 }

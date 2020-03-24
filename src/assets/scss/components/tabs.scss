@@ -12,7 +12,7 @@
     }
     .tabs-title {
         background: transparent;
-        font-weight: 900;
+        font-weight: bold;
         text-transform: uppercase;
         @include breakpoint(small) {
           float:none;

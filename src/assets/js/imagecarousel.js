@@ -9,7 +9,7 @@ jQuery(document).ready(function() {
         loop: true,
         nav:true,
         autoHeight: true,
-        dots:false,
+        dots:true,
         navText:['<i aria-label="Next"></i>','<i aria-label="Previous"></i>']
     });
 });
