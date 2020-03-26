@@ -152,6 +152,7 @@
           left: 0;
           margin: 0;
           list-style: none;
+          //transition-delay: 3s;
           @include breakpoint(large) {
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
@@ -368,10 +369,14 @@
 
       .cta-container {
         text-align: left;
-        padding: 1.5rem 1.4rem;
-
+        padding: 1.2rem 1.1rem;
+        border-bottom: 1px solid $border-gray;
         a {
           margin: 0;
+        }
+        .wide {
+          width: 100%;
+          background: $primary-color;
         }
       }
     }
