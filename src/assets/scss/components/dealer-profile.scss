@@ -42,6 +42,15 @@
   h6 {
     padding-top: 0.6rem;
   }
+  .phone {
+    background: $light-gray;
+    //width: ;
+    border: 1px solid $border-gray;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
 }
 .dealer-cta {
   @include breakpoint(small) {

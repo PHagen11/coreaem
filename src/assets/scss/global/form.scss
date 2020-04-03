@@ -15,3 +15,6 @@ form label {
 [type='checkbox'] + label, [type='radio'] + label {
   //margin-left: 0.3rem;
 }
+label > [type='checkbox'], label > [type='radio'] {
+  margin-right: 0;
+}
