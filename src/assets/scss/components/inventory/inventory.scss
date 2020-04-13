@@ -130,9 +130,15 @@
 	overflow: hidden;
 	background-color: $light-gray;
 	position:relative;
+	.grid-container {
+		@include breakpoint (small only) {
+			padding:0;
+		}
+	}
 	.heroArea{
 		h1 {
 			@include breakpoint(medium down) {
+				padding-left: 1.5rem;
 				font-size:3em;
 				.half-size {
 					font-size:0.55em;
@@ -151,6 +157,7 @@
 		z-index:5;
 		position: absolute;
 		margin-top:-60px;
+		width: 100%;
 		.category-tab {
 			display:block;
 			float:left;
@@ -162,6 +169,7 @@
 			font-weight: bold;
 			padding:1em 2em;
 			cursor: pointer;
+			//width: 50%;
 			&.selected {
 				background-color: $white;
 				color: $black;
@@ -180,7 +188,12 @@
 		background-color:$white;
 		box-shadow: 0 0 1em rgba($black, 0.25);
 		.cell {
-			padding-right:1em;
+			@include breakpoint (small) {
+				padding-right:0em;
+			}
+			@include breakpoint (medium) {
+				padding-right:1em;
+			}
 		}
 		select {
 			margin-right:1em;

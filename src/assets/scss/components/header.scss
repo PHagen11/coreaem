@@ -152,6 +152,7 @@
           left: 0;
           margin: 0;
           list-style: none;
+          //transition-delay: 3s;
           @include breakpoint(large) {
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
@@ -268,14 +269,20 @@
         background-color: transparent;
       }
     }
-
-    .cta-container a {
-      margin: auto;
-      //text-transform: uppercase;
-      font-size: 0.9rem;
-      //color: $primary-color;
-      font-weight: 700;
-      //padding-right: 2rem;
+    .cta-container {
+      //padding: 1.8rem 0 1.8rem 0;
+      a {
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+          padding: 2.4rem 0 2.4rem 0;
+          background:none;
+        }
+        margin: 0 1.8rem 0.2rem $header-cta-left-spacing;
+        //text-transform: uppercase;
+        font-size: 0.9rem;
+        //color: $primary-color;
+        font-weight: 700;
+        //padding-right: 2rem;
+      }
     }
   }
   /* ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -362,10 +369,14 @@
 
       .cta-container {
         text-align: left;
-        padding: 1.5rem 1.4rem;
-
+        padding: 1.2rem 1.1rem;
+        border-bottom: 1px solid $border-gray;
         a {
           margin: 0;
+        }
+        .wide {
+          width: 100%;
+          background: $primary-color;
         }
       }
     }

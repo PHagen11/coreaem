@@ -14,17 +14,23 @@
 		padding-right: 21px;
 		border:none;
 		@include breakpoint(large) {
-			left:auto;	
-			width: fit-content;
+			left:auto;
+			width:auto;
+			display: inline-block;
 		}
 		@include breakpoint(small) {
-			left: 0;	
+			left: 0;
 			width: 100%;
+			display: block;
 		}
 		margin:0;
 		padding:0.25em 0;
+		table {
+			border:none;
+		}
 		tbody {
 			background-color:transparent;
+			border:none;
 		}
 		td {
 			margin-left:1em;
@@ -45,7 +51,7 @@
 			}
 		}
 		.your-store {
-			
+
 			a {
 				color: $dark-gray;
 				font-weight:normal;
@@ -66,7 +72,7 @@
 			color:$black;
 		}
 	}
-	
+
 	#store-dropdown {
 		width: 250px;
 		top:40px !important;
@@ -99,7 +105,7 @@
 					right:0;
 				}
 			}
-			
+
 		}
 		.change-store {
 			display:block;
