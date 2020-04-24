@@ -1101,7 +1101,7 @@ $button-transform:none;
 
 // Hollow Button
 $hollow-radius: 0px;
-$button-hollow-padding:0.8em 1.6em;
+$button-hollow-padding:0.7em 1.6em;
 // Clear Button
 @mixin button-clear {
   padding:1em 0 1em 0;
@@ -1134,7 +1134,7 @@ $author-color: $secondary-color;
 $quote-font-tamily: $header-font-family;
 
 // Blockquote Profile Image
-$profile-radius: 10%;
+$profile-radius: 0%;
 $profile-size: 60px;
 
 // 10. Hero Component
@@ -1166,10 +1166,10 @@ $hero-bottom-padding: 3rem;
 // view all Font Awesome icons here --> https://fontawesome.com/cheatsheet
 $image-carousel-border: none;
 $image-carousel-prevnext-color: $primary-color;
-$image-carousel-prevnext-background-color: $light-gray;
+$image-carousel-prevnext-background-color: none;
 $image-carousel-prevnext-font-size: 30px;
 $image-carousel-prevnext-padding: 20px;
-$image-carousel-prevnext-border: solid 1px $light-gray;
+$image-carousel-prevnext-border: none;
 $image-carousel-prevnext-opacity-start: 1;
 $image-carousel-prevnext-opacity-hover: 1;
 $image-carousel-previous-icon: '\f053';
@@ -1177,15 +1177,15 @@ $image-carousel-next-icon:'\f054';
 $image-carousel-dots-width: 1rem;
 $image-carousel-dots-height: 1rem;
 $image-carousel-dots-color-start: transparent;
-$image-carousel-dots-color-hover: $primary-color;
-$image-carousel-dots-color-active: $primary-color;
+$image-carousel-dots-color-hover: $medium-gray;
+$image-carousel-dots-color-active: $medium-gray;
 $image-carousel-dots-border-weight: 2px;
 $image-carousel-dots-border-radius: 80%;
-$image-carousel-dots-border-color: $primary-color;
+$image-carousel-dots-border-color: $medium-gray;
 $image-carousel-dots-opacity-start: 0.5;
 $image-carousel-dots-opacity-hover: 0.85;
 $image-carousel-dots-opacity-active: 1;
-$image-carousel-dots-margin: 0.55rem;
+$image-carousel-dots-margin: 0.4rem;
 $image-carousel-dots-y-move: 1rem; //0 = right below images
 
 // 12. Video Component
@@ -1272,7 +1272,7 @@ $model-listing-model-name-transform: uppercase;
 $model-listing-model-name-line-height: 1.2em;
 $model-listing-model-name-tag-color: $primary-color; //i.e.: NEW
 $model-listing-model-name-tag-weight: normal;
-$model-listing-package-detail-margin: 1rem 0;
+$model-listing-package-detail-margin: 0.5rem 0;
 $model-listing-package-font-weight: bold;
 $model-listing-package-font-size: 1.1rem;
 $model-listing-price-block-margin: 1rem 0;
@@ -1291,11 +1291,11 @@ $model-listing-price-save-label-size: 1em;
 $model-listing-price-save-value-size: 1em;
 $model-listing-price-save-value-weight: bold;
 $model-listing-price-save-value-color: $alert-color;
-$model-listing-specs-block-margin: 1rem 0;
-$model-listing-specs-label-padding: 0.25em 0;
+$model-listing-specs-block-margin: 1rem 0 2rem 0;
+$model-listing-specs-label-padding: 0em 0;
 $model-listing-specs-label-size: 1rem 0;
 $model-listing-specs-label-weight: normal;
-$model-listing-specs-value-padding: 0.25em 0  0.25em 2.25em;
+$model-listing-specs-value-padding: 0em 0  0.25em 2.25em;
 $model-listing-specs-value-size: 1rem 0;
 $model-listing-specs-value-weight: bold;
 
@@ -1311,7 +1311,7 @@ $model-price-model-name-transform: uppercase;
 $model-price-model-name-line-height: 1.2em;
 $model-price-model-name-tag-color: $primary-color; //i.e.: NEW
 $model-price-model-name-tag-weight: normal;
-$model-price-package-detail-margin: 1rem 0;
+$model-price-package-detail-margin: 0.5rem 0;
 $model-price-td-padding: 0.25rem 0;
 $model-price-block-margin: 1rem 0;
 $model-price-label-size: 1em; //i.e.: NO HAGGLE NO HASSLE National Price

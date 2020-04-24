@@ -1025,6 +1025,7 @@ $header-submenu-background-color: $secondary-color;
 $header-submenu-link-color: $black;
 $header-submenu-link-color-hover: $primary-color;
 $header-link-arrow-color: $secondary-color;
+$header-link-arrow-margin-top: 5px;
 $header-submenu-line-height: 1.7rem;
 $header-submenu-link-font-size: 0.9rem;
 $header-logo-height: 56px;
@@ -1042,6 +1043,7 @@ $sub-navigation-background-color: $primary-color;
 $sub-navigation-font-family:$header-font-family;
 $sub-navigation-text-color: $white;
 $sub-navigation-text-weight: normal;
+$sub-navigation-letter-spacing:0px;
 $sub-navigation-text-transform: uppercase;
 $sub-navigation-link-color-start: $white;
 $sub-navigation-link-color-hover: $white;
@@ -1100,6 +1102,7 @@ $button-transform: skew(-8deg);
 
 // Hollow Button
 $hollow-radius: 0px;
+$button-hollow-padding:0.7em 1.6em;
 
 // Clear Button
 @mixin button-clear {
@@ -1163,28 +1166,28 @@ $hero-bottom-padding: 3rem;
 
 // animation style and other OWL CAROUSEL options need to be set in /assets/js/imagecarousel.js\
 // view all Font Awesome icons here --> https://fontawesome.com/cheatsheet
-$image-carousel-border:none;
-$image-carousel-prevnext-color: $border-gray;
-$image-carousel-prevnext-background-color: $light-gray;
-$image-carousel-prevnext-font-size: 30px;
-$image-carousel-prevnext-padding: 20px;
-$image-carousel-prevnext-border: solid 1px $light-gray;
-$image-carousel-prevnext-opacity-start: 1;
+$image-carousel-border: 1px solid $border-gray;
+$image-carousel-prevnext-color: $white;
+$image-carousel-prevnext-background-color: $primary-color;
+$image-carousel-prevnext-font-size: 22px;
+$image-carousel-prevnext-padding: 10px;
+$image-carousel-prevnext-border: none;
+$image-carousel-prevnext-opacity-start: 0.9;
 $image-carousel-prevnext-opacity-hover: 1;
 $image-carousel-previous-icon: '\f053';
 $image-carousel-next-icon:'\f054';
 $image-carousel-dots-width: 1rem;
 $image-carousel-dots-height: 1rem;
 $image-carousel-dots-color-start: transparent;
-$image-carousel-dots-color-hover: $medium-gray;
-$image-carousel-dots-color-active: $medium-gray;
+$image-carousel-dots-color-hover: $primary-color;
+$image-carousel-dots-color-active: $primary-color;
 $image-carousel-dots-border-weight: 2px;
 $image-carousel-dots-border-radius: 80%;
-$image-carousel-dots-border-color: $medium-gray;
+$image-carousel-dots-border-color: $primary-color;
 $image-carousel-dots-opacity-start: 0.5;
 $image-carousel-dots-opacity-hover: 0.85;
 $image-carousel-dots-opacity-active: 1;
-$image-carousel-dots-margin: 0.55rem;
+$image-carousel-dots-margin: 1.5rem 0.25rem 1rem 0.25rem;
 $image-carousel-dots-y-move: 1rem; //0 = right below images
 
 // 12. Video Component
@@ -1250,6 +1253,7 @@ $basic-odd-background: $light-gray;
 $basic-even-background: $white;
 $model-specs-label-case: normal;
 $model-specs-border-right: 4px solid $white;
+$model-specs-padding: 0.6rem 0.8rem 0.6rem 0.8rem;
 
 // 18. Model Options Component
 // -----------------------------
@@ -1271,6 +1275,8 @@ $model-listing-model-name-line-height: 1.2em;
 $model-listing-model-name-tag-color: $primary-color; //i.e.: NEW
 $model-listing-model-name-tag-weight: normal;
 $model-listing-package-detail-margin: 1rem 0;
+$model-listing-package-font-weight: bold;
+$model-listing-package-font-size: 1rem;
 $model-listing-price-block-margin: 1rem 0;
 $model-listing-price-label-size: 0.85em; //i.e.: NO HAGGLE NO HASSLE National Price
 $model-listing-price-label-color: $medium-gray;
@@ -1287,17 +1293,17 @@ $model-listing-price-save-label-size: 1em;
 $model-listing-price-save-value-size: 1em;
 $model-listing-price-save-value-weight: bold;
 $model-listing-price-save-value-color: $alert-color;
-$model-listing-specs-block-margin: 1rem 0;
-$model-listing-specs-label-padding: 0.25em 0;
+$model-listing-specs-block-margin: 1rem 0 2rem 0;
+$model-listing-specs-label-padding: 0em 0;
 $model-listing-specs-label-size: 1rem 0;
 $model-listing-specs-label-weight: normal;
-$model-listing-specs-value-padding: 0.25em 0  0.25em 2.25em;
+$model-listing-specs-value-padding: 0em 0  0.25em 2.25em;
 $model-listing-specs-value-size: 1rem 0;
 $model-listing-specs-value-weight: bold;
 
 // 20. Model Price Component
 // -----------------------------
-
+$model-price-name-font-family: $header-font-family;
 $model-price-model-year-size: 1em;
 $model-price-model-year-weight: bold;
 $model-price-model-name-size: 1.5em;

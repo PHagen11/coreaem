@@ -1181,11 +1181,11 @@ $image-carousel-next-icon:'\f054';
 $image-carousel-dots-width: 1rem;
 $image-carousel-dots-height: 1rem;
 $image-carousel-dots-color-start: transparent;
-$image-carousel-dots-color-hover: $primary-color;
-$image-carousel-dots-color-active: $primary-color;
+$image-carousel-dots-color-hover: $secondary-color;
+$image-carousel-dots-color-active: $secondary-color;
 $image-carousel-dots-border-weight: 2px;
 $image-carousel-dots-border-radius: 80%;
-$image-carousel-dots-border-color: $primary-color;
+$image-carousel-dots-border-color: $secondary-color;
 $image-carousel-dots-opacity-start: 0.5;
 $image-carousel-dots-opacity-hover: 0.85;
 $image-carousel-dots-opacity-active: 1;
@@ -1256,6 +1256,7 @@ $basic-odd-background: $light-gray;
 $basic-even-background: $white;
 $model-specs-label-case: normal;
 $model-specs-border-right: 4px solid $white;
+$model-specs-padding:0.6rem 0.8rem 0.6rem 0.8rem;
 
 // 18. Model Options Component
 // -----------------------------
@@ -1264,7 +1265,7 @@ $model-options-background-color: $white;
 // 19. Model Listing Component
 // -----------------------------
 $model-listing-bg-color: $white;
-$model-listing-box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+$model-listing-box-shadow: 0 0 20px rgba(0, 0, 0, 0.07);
 $model-listing-padding: 2rem;
 $model-listing-border-radius: 4px;
 $model-listing-model-year-size: 1em;
@@ -1277,12 +1278,14 @@ $model-listing-model-name-line-height: 1.2em;
 $model-listing-model-name-tag-color: $primary-color; //i.e.: NEW
 $model-listing-model-name-tag-weight: normal;
 $model-listing-package-detail-margin: 0.5rem 0;
+$model-listing-package-font-weight: bold;
+$model-listing-package-font-size: 1rem;
 $model-listing-price-block-margin: 1rem 0;
 $model-listing-price-label-size: 0.85em; //i.e.: NO HAGGLE NO HASSLE National Price
 $model-listing-price-label-color: $medium-gray;
 $model-listing-price-sale-value-size: 1.5em;
 $model-listing-price-sale-value-weight: bold;
-$model-listing-price-sale-value-color: $alert-color;
+$model-listing-price-sale-value-color: $primary-color;
 $model-listing-price-value-size: 1.5em;
 $model-listing-price-value-weight: bold;
 $model-listing-price-strike-color: $medium-gray;
@@ -1292,12 +1295,12 @@ $model-listing-price-currency-color: $medium-gray;
 $model-listing-price-save-label-size: 1em;
 $model-listing-price-save-value-size: 1em;
 $model-listing-price-save-value-weight: bold;
-$model-listing-price-save-value-color: $alert-color;
-$model-listing-specs-block-margin: 1rem 0;
-$model-listing-specs-label-padding: 0.25em 0;
+$model-listing-price-save-value-color: $primary-color;
+$model-listing-specs-block-margin: 1rem 0 2rem 0;
+$model-listing-specs-label-padding: 0em 0;
 $model-listing-specs-label-size: 1rem 0;
 $model-listing-specs-label-weight: normal;
-$model-listing-specs-value-padding: 0.25em 0  0.25em 2.25em;
+$model-listing-specs-value-padding: 0em 0  0.25em 2.25em;
 $model-listing-specs-value-size: 1rem 0;
 $model-listing-specs-value-weight: bold;
 
@@ -1320,7 +1323,7 @@ $model-price-label-size: 1em; //i.e.: NO HAGGLE NO HASSLE National Price
 $model-price-label-color: inherit;
 $model-price-sale-value-size: 1em;
 $model-price-sale-value-weight: bold;
-$model-price-sale-value-color: $alert-color;
+$model-price-sale-value-color: $primary-color;
 $model-price-value-size: 1em;
 $model-price-value-weight: bold;
 $model-price-strike-color: inherit;
@@ -1330,11 +1333,11 @@ $model-price-currency-color: $medium-gray;
 $model-price-save-label-size: 1em;
 $model-price-save-value-size: 1em;
 $model-price-save-value-weight: bold;
-$model-price-save-value-color: $alert-color;
+$model-price-save-value-color: $primary-color;
 $model-price-save-label-size: 1em;
 $model-price-save-value-size: 1em;
 $model-price-save-value-weight: bold;
-$model-price-save-value-color: $alert-color;
+$model-price-save-value-color: $primary-color;
 $model-price-dealer-select-label-size: 1em;
 $model-price-dealer-select-link-size: 1em;
 $model-price-dealer-name-size: 1em;
