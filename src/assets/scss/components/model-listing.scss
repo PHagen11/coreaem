@@ -1,4 +1,8 @@
 .model-listing {
+  background: $model-listing-bg-color;
+  box-shadow: $model-listing-box-shadow;
+  padding: $model-listing-padding;
+  border-radius: $model-listing-border-radius;
   .model-year {
     font-size: $model-listing-model-year-size;
     font-weight: $model-listing-model-year-weight;
@@ -19,6 +23,8 @@
 
   .package-details {
     margin: $model-listing-package-detail-margin;
+    font-weight: $model-listing-package-font-weight;
+    font-size: $model-listing-package-font-size;
   }
 
   .prices {

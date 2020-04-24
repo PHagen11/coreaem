@@ -1,9 +1,9 @@
 .owl-theme {
-	//border: 2px solid $border-gray;
+	border: $image-carousel-border;
 	// Styling Next and Prev buttons
 	.owl-nav {
 		position: absolute;
-		top: 50%;
+		top: 54%;
 		width: 100%;
 		-webkit-tap-highlight-color: transparent;
 
@@ -62,7 +62,7 @@
 		}
 
 		button.owl-prev {
-			left: 0;
+			left: -20px;
 
 			i::before {
 				content: $image-carousel-previous-icon;
@@ -70,7 +70,7 @@
 		}
 
 		button.owl-next {
-			right: 0;
+			right: -20px;
 
 			i::before {
 				content: $image-carousel-next-icon;

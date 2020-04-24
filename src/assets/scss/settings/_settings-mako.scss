@@ -1005,7 +1005,7 @@ $border: 2px solid $border-gray;
 // 4. Header Component
 // -----------------------------
 
-$header-nav-font-family: $body-font-family;
+$header-nav-font-family: $header-font-family;
 $header-plain-text-color: $black; //ex: Link List component titles.
 $header-background-color: $white;
 $header-link-background-color-hover: $light-gray;
@@ -1023,11 +1023,18 @@ $header-dropdown-background-color: $white;
 $header-dropdown-border-left: 4px solid $white;
 $header-submenu-background-color: $secondary-color;
 $header-submenu-link-color: $black;
+$header-submenu-link-color-hover: $primary-color;
+$header-link-arrow-color: $secondary-color;
+$header-submenu-line-height: 1.7rem;
 $header-submenu-link-font-size: 0.9rem;
 $header-logo-height: 56px;
 $header-logo-padding-top: 20px;
 $header-cta-left-spacing: 1rem;
 $header-icon-color: $black;
+$header-menu-padding-right: 0px;
+$header-hamburger-color: $primary-color;
+$header-hamburger-weight: 400;
+$header-mobile-bottom-border: 1px solid rgba(100,100,100, 0.2);
 
 // 5. Sub Navigation Component
 // -----------------------------
@@ -1123,6 +1130,7 @@ $blockquote-weight: 500;
 $blockquote-color: $body-font-color;
 $author-weight: 600;
 $author-color: $secondary-color;
+$quote-font-tamily: $header-font-family;
 
 // Blockquote Profile Image
 $profile-radius: 10%;
@@ -1155,6 +1163,7 @@ $hero-bottom-padding: 3rem;
 
 // animation style and other OWL CAROUSEL options need to be set in /assets/js/imagecarousel.js\
 // view all Font Awesome icons here --> https://fontawesome.com/cheatsheet
+$image-carousel-border:none;
 $image-carousel-prevnext-color: $border-gray;
 $image-carousel-prevnext-background-color: $light-gray;
 $image-carousel-prevnext-font-size: 30px;
@@ -1248,7 +1257,10 @@ $model-options-background-color: $white;
 
 // 19. Model Listing Component
 // -----------------------------
-
+$model-listing-bg-color: $white;
+$model-listing-box-shadow: none;
+$model-listing-padding: none;
+$model-listing-border-radius: none;
 $model-listing-model-year-size: 1em;
 $model-listing-model-year-weight: bold;
 $model-listing-model-name-font: $header-font-family;

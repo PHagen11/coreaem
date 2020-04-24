@@ -93,14 +93,14 @@ $black: #313236;
 $white: #FFFFFF;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+$body-font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-position: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
-$global-radius: 30px;
+$global-radius:4px;
 $global-menu-padding: 0.7rem 1rem;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
@@ -140,9 +140,10 @@ $block-grid-max: 8;
 
 // 4. Base Typography
 // ------------------
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Asap+Condensed&display=swap');
-$header-font-family: 'Asap Condensed';
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url("https://use.typekit.net/llr5tki.css");
+$header-font-family: 'utopia-std-headline', serif;
 $header-font-weight: bold;
 $header-letter-spacing:0px;
 $header-font-style: normal;
@@ -292,20 +293,20 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // 11. Button
 // ----------
 
-$button-font-family: $header-font-family;
-$button-padding: 0.8em 1.6em;
+$button-font-family: $body-font-family;
+$button-padding: 1.1em 1.6em 0.9em 1.6em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
 $button-background-hover: scale-color($button-background, $lightness: 20%);
 $button-color: $white;
 $button-color-alt: $white;
-$button-radius: $global-radius;
+$button-radius: 80px;
 $button-hollow-border-width: 3px;
 $button-sizes: (
   tiny: 0.7rem,
   small: 0.8rem,
-  default: 1rem,
+  default: 0.9rem,
   large: 1.25rem,
 );
 $button-palette: $foundation-palette;
@@ -944,7 +945,7 @@ a {
 }
 
 // Titles
-$title-text-transform:uppercase;
+$title-text-transform:capitalize;
 
 // 2. Themes
 // -----------------------------
@@ -962,14 +963,14 @@ $title-text-transform:uppercase;
 // -----------------------------
 
 // Site
-$site-bkg-color: $light-gray;
+$site-bkg-color: $white;
 .site {
   max-width: 2000px;
   margin: auto;
   background-color: $site-bkg-color;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
-  border-left:30px solid $white;
-  border-right:30px solid $white;
+  //border-left:30px solid $white;
+  //border-right:30px solid $white;
   overflow-x: hidden;
 }
 $global-transition: all .25s ease-in-out;
@@ -1006,41 +1007,51 @@ $border: 2px solid $border-gray;
 // 4. Header Component
 // -----------------------------
 
-$header-nav-font-family: 'Asap Condensed';
-$header-plain-text-color: $white; //ex: Link List component titles.
+$header-nav-font-family: 'Josefin Sans';
+$header-plain-text-color: $black; //ex: Link List component titles.
 $header-background-color: $white;
 $header-link-background-color-hover: $light-gray;
 $header-background-hover: $light-gray;
 $header-link-color-start: $black;
-$header-link-color-hover: $black;
+$header-link-color-hover: $primary-color;
 $header-link-top-bottom-padding: 2.4rem;
 $header-link-left-right-padding: 1vw;
-$header-link-font-size: 1rem;
+$header-link-font-size: 0.8rem;
 $header-menu-item-text-transform: uppercase;
 $header-menu-item-letter-spacing: 0px;
-$header-dropdown-arrow-color: $alert-color;
+$header-dropdown-arrow-color: $primary-color;
 $header-dropdown-width: 250px;
 $header-dropdown-background-color: $white;
 $header-dropdown-border-left: 4px solid $white;
 $header-submenu-background-color: $secondary-color;
 $header-submenu-link-color: $black;
 $header-submenu-link-font-size: 1rem;
+$header-submenu-line-height: 1.5rem;
+$header-submenu-link-color-hover: $primary-color;
+$header-link-arrow-color:$primary-color;
+$header-link-arrow-margin-top: 0.3rem;
 $header-logo-height: 56px;
 $header-logo-padding-top: 20px;
 $header-cta-left-spacing: 1rem;
-$header-icon-color: $black;
+$header-icon-color: $secondary-color;
+$header-menu-padding-right: 0px;
+$header-hamburger-color: $secondary-color;
+$header-hamburger-weight: 400;
+$header-mobile-bottom-border: 1px solid rgba(100,100,100, 0.2);
+
 
 // 5. Sub Navigation Component
 // -----------------------------
-$sub-navigation-background-color: $secondary-color;
-$sub-navigation-font-family: $header-font-family;
-$sub-navigation-text-color: $white;
-$sub-navigation-text-weight: normal;
-$sub-navigation-text-transform: uppercase;
-$sub-navigation-link-color-start: $white;
-$sub-navigation-link-color-hover: $white;
-$sub-navigation-link-font-size: 0.9rem;
-$sub-navigation-selected-background-color: #1E2128;
+$sub-navigation-background-color: $light-gray;
+$sub-navigation-font-family: $body-font-family;
+$sub-navigation-text-color: $black;
+$sub-navigation-text-weight: bold;
+$sub-navigation-text-transform: capitalize;
+$sub-navigation-letter-spacing: 0px;
+$sub-navigation-link-color-start: $black;
+$sub-navigation-link-color-hover: $primary-color;
+$sub-navigation-link-font-size: 0.95rem;
+$sub-navigation-selected-background-color: $primary-color;
 $sub-navigation-selected-text-color: $white;
 
 // 6. Sticky Anchor Component
@@ -1094,7 +1105,7 @@ $button-transform:none;
 
 // Hollow Button
 $hollow-radius: 40px;
-
+$button-hollow-padding: 1em 1.6em 0.8em 1.6em;
 // Clear Button
 @mixin button-clear {
   padding:1em 0 1em 0;
@@ -1124,9 +1135,10 @@ $blockquote-weight: 500;
 $blockquote-color: $body-font-color;
 $author-weight: 600;
 $author-color: $secondary-color;
+$quote-font-tamily: $header-font-family;
 
 // Blockquote Profile Image
-$profile-radius: 10%;
+$profile-radius: 100%;
 $profile-size: 60px;
 
 // 10. Hero Component
@@ -1156,11 +1168,12 @@ $hero-bottom-padding: 3rem;
 
 // animation style and other OWL CAROUSEL options need to be set in /assets/js/imagecarousel.js\
 // view all Font Awesome icons here --> https://fontawesome.com/cheatsheet
-$image-carousel-prevnext-color: $border-gray;
-$image-carousel-prevnext-background-color: $light-gray;
+$image-carousel-border: none;
+$image-carousel-prevnext-color: $secondary-color;
+$image-carousel-prevnext-background-color: none;
 $image-carousel-prevnext-font-size: 30px;
 $image-carousel-prevnext-padding: 20px;
-$image-carousel-prevnext-border: solid 1px $light-gray;
+$image-carousel-prevnext-border: none;
 $image-carousel-prevnext-opacity-start: 1;
 $image-carousel-prevnext-opacity-hover: 1;
 $image-carousel-previous-icon: '\f053';
@@ -1168,16 +1181,17 @@ $image-carousel-next-icon:'\f054';
 $image-carousel-dots-width: 1rem;
 $image-carousel-dots-height: 1rem;
 $image-carousel-dots-color-start: transparent;
-$image-carousel-dots-color-hover: $medium-gray;
-$image-carousel-dots-color-active: $medium-gray;
+$image-carousel-dots-color-hover: $primary-color;
+$image-carousel-dots-color-active: $primary-color;
 $image-carousel-dots-border-weight: 2px;
 $image-carousel-dots-border-radius: 80%;
-$image-carousel-dots-border-color: $medium-gray;
+$image-carousel-dots-border-color: $primary-color;
 $image-carousel-dots-opacity-start: 0.5;
 $image-carousel-dots-opacity-hover: 0.85;
 $image-carousel-dots-opacity-active: 1;
 $image-carousel-dots-margin: 0.55rem;
 $image-carousel-dots-y-move: 1rem; //0 = right below images
+
 
 // 12. Video Component
 // -----------------------------
@@ -1195,7 +1209,7 @@ $video-play-button-margin: 2vw;
 // 13. Image Gallery Component
 // -----------------------------
 
-$gallery-image-width: 98%;
+$gallery-image-width: 100%;
 $gallery-image-border-radius: 0px;
 $gallery-thumbnail-border-color: $light-gray;
 $gallery-thumbnail-border-color-active: $primary-color;
@@ -1206,7 +1220,7 @@ $gallery-prevnext-color-hover: $white;
 $gallery-prevnext-background-color: rgba(0, 0, 0, 0.45);
 $gallery-toolbar-icons-color-start:$primary-color;
 $gallery-toolbar-icons-color-hover:$white;
-$gallery-image-margin-bottom: 1.2rem;
+$gallery-image-margin-bottom: 0rem;
 
 // 14. Icon Component
 // -----------------------------
@@ -1225,12 +1239,12 @@ $link-list-font-size: 1.1rem;
 $footer-background-color: $white;
 $footer-text-color: $black;
 $footer-link-color-start: $medium-gray;
-$footer-link-color-hover: $secondary-color;
-$footer-bottom-nav-background-color: $black;
-$footer-bottom-nav-font-size: 0.7rem;
-$footer-bottom-nav-text-color: $medium-gray;
-$footer-bottom-nav-link-color-start: $medium-gray;
-$footer-bottom-nav-link-color-hover: $black;
+$footer-link-color-hover: $primary-color;
+$footer-bottom-nav-background-color: $secondary-color;
+$footer-bottom-nav-font-size: 0.8rem;
+$footer-bottom-nav-text-color: $white;
+$footer-bottom-nav-link-color-start: $white;
+$footer-bottom-nav-link-color-hover: $primary-color;
 
 // 17. Model Specs Component
 // -----------------------------
@@ -1249,17 +1263,20 @@ $model-options-background-color: $white;
 
 // 19. Model Listing Component
 // -----------------------------
-
+$model-listing-bg-color: $white;
+$model-listing-box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+$model-listing-padding: 2rem;
+$model-listing-border-radius: 4px;
 $model-listing-model-year-size: 1em;
 $model-listing-model-year-weight: bold;
-$model-listing-model-name-font: $header-font-family;
+$model-listing-model-name-font: $body-font-family;
 $model-listing-model-name-size: 1.5em;
 $model-listing-model-name-weight: bold;
-$model-listing-model-name-transform: uppercase;
+$model-listing-model-name-transform: capitalize;
 $model-listing-model-name-line-height: 1.2em;
 $model-listing-model-name-tag-color: $primary-color; //i.e.: NEW
 $model-listing-model-name-tag-weight: normal;
-$model-listing-package-detail-margin: 1rem 0;
+$model-listing-package-detail-margin: 0.5rem 0;
 $model-listing-price-block-margin: 1rem 0;
 $model-listing-price-label-size: 0.85em; //i.e.: NO HAGGLE NO HASSLE National Price
 $model-listing-price-label-color: $medium-gray;
@@ -1289,13 +1306,14 @@ $model-listing-specs-value-weight: bold;
 
 $model-price-model-year-size: 1em;
 $model-price-model-year-weight: bold;
+$model-price-name-font-family: $body-font-family;
 $model-price-model-name-size: 1.5em;
 $model-price-model-name-weight: bold;
-$model-price-model-name-transform: uppercase;
+$model-price-model-name-transform: capitalize;
 $model-price-model-name-line-height: 1.2em;
 $model-price-model-name-tag-color: $primary-color; //i.e.: NEW
 $model-price-model-name-tag-weight: normal;
-$model-price-package-detail-margin: 1rem 0;
+$model-price-package-detail-margin: 0.8rem 0;
 $model-price-td-padding: 0.25rem 0;
 $model-price-block-margin: 1rem 0;
 $model-price-label-size: 1em; //i.e.: NO HAGGLE NO HASSLE National Price

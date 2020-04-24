@@ -160,9 +160,9 @@ $header-styles: (
   ),
   medium: (
     'h1': ('font-size': 48),
-    'h2': ('font-size': 40),
-    'h3': ('font-size': 31),
-    'h4': ('font-size': 25),
+    'h2': ('font-size': 36),
+    'h3': ('font-size': 28),
+    'h4': ('font-size': 24),
     'h5': ('font-size': 20),
     'h6': ('font-size': 16),
   ),
@@ -1014,6 +1014,8 @@ $header-link-color-hover: $black;
 $header-link-top-bottom-padding: 2.4rem;
 $header-link-left-right-padding: 1vw;
 $header-link-font-size: 1rem;
+$header-link-arrow-color: $primary-color;
+$header-link-arrow-margin-top: 4px;
 $header-menu-item-text-transform: uppercase;
 $header-menu-item-letter-spacing: 0px;
 $header-dropdown-arrow-color: $primary-color;
@@ -1022,18 +1024,25 @@ $header-dropdown-background-color: $white;
 $header-dropdown-border-left: 4px solid $white;
 $header-submenu-background-color: $secondary-color;
 $header-submenu-link-color: $black;
-$header-submenu-link-font-size: 1.1rem;
+$header-submenu-link-color-hover: $primary-color;
+$header-submenu-line-height: 1.3rem;
+$header-submenu-link-font-size: 0.94rem;
 $header-logo-height: 56px;
 $header-logo-padding-top: 20px;
 $header-cta-left-spacing: 1rem;
 $header-icon-color: $black;
+$header-menu-padding-right: 0px;
+$header-hamburger-color: $black;
+$header-hamburger-weight: 400;
+$header-mobile-bottom-border: 1px solid rgba(100,100,100, 0.2);
 
 // 5. Sub Navigation Component
 // -----------------------------
 $sub-navigation-background-color: $primary-color;
 $sub-navigation-font-family:$body-font-family;
 $sub-navigation-text-color: $white;
-$sub-navigation-text-weight: 500;
+$sub-navigation-text-weight: bold;
+$sub-navigation-letter-spacing: 0px;
 $sub-navigation-text-transform: uppercase;
 $sub-navigation-link-color-start: $light-gray;
 $sub-navigation-link-color-hover: $white;
@@ -1092,6 +1101,7 @@ $button-transform:none;
 
 // Hollow Button
 $hollow-radius: 0px;
+$button-hollow-padding:0.7em 1.6em;
 
 // Clear Button
 @mixin button-clear {
@@ -1122,6 +1132,7 @@ $blockquote-weight: 500;
 $blockquote-color: $body-font-color;
 $author-weight: 600;
 $author-color: $secondary-color;
+$quote-font-tamily: $header-font-family;
 
 // Blockquote Profile Image
 $profile-radius: 10%;
@@ -1154,27 +1165,28 @@ $hero-bottom-padding: 3rem;
 
 // animation style and other OWL CAROUSEL options need to be set in /assets/js/imagecarousel.js\
 // view all Font Awesome icons here --> https://fontawesome.com/cheatsheet
-$image-carousel-prevnext-color: $border-gray;
-$image-carousel-prevnext-background-color: $light-gray;
-$image-carousel-prevnext-font-size: 30px;
-$image-carousel-prevnext-padding: 20px;
-$image-carousel-prevnext-border: solid 1px $light-gray;
-$image-carousel-prevnext-opacity-start: 1;
+$image-carousel-border: 1px solid $border-gray;
+$image-carousel-prevnext-color: $white;
+$image-carousel-prevnext-background-color: $primary-color;
+$image-carousel-prevnext-font-size: 22px;
+$image-carousel-prevnext-padding: 10px;
+$image-carousel-prevnext-border: none;
+$image-carousel-prevnext-opacity-start: 0.9;
 $image-carousel-prevnext-opacity-hover: 1;
 $image-carousel-previous-icon: '\f053';
 $image-carousel-next-icon:'\f054';
 $image-carousel-dots-width: 1rem;
 $image-carousel-dots-height: 1rem;
 $image-carousel-dots-color-start: transparent;
-$image-carousel-dots-color-hover: $medium-gray;
-$image-carousel-dots-color-active: $medium-gray;
+$image-carousel-dots-color-hover: $primary-color;
+$image-carousel-dots-color-active: $primary-color;
 $image-carousel-dots-border-weight: 2px;
 $image-carousel-dots-border-radius: 80%;
-$image-carousel-dots-border-color: $medium-gray;
+$image-carousel-dots-border-color: $primary-color;
 $image-carousel-dots-opacity-start: 0.5;
 $image-carousel-dots-opacity-hover: 0.85;
 $image-carousel-dots-opacity-active: 1;
-$image-carousel-dots-margin: 0.55rem;
+$image-carousel-dots-margin: 1.5rem 0.25rem 1rem 0.25rem;
 $image-carousel-dots-y-move: 1rem; //0 = right below images
 
 // 12. Video Component
@@ -1204,7 +1216,7 @@ $gallery-prevnext-color-hover: $white;
 $gallery-prevnext-background-color: rgba(0, 0, 0, 0.45);
 $gallery-toolbar-icons-color-start:$primary-color;
 $gallery-toolbar-icons-color-hover:$white;
-$gallery-image-margin-bottom: 1.2rem;
+$gallery-image-margin-bottom: 0.5rem;
 
 // 14. Icon Component
 // -----------------------------
@@ -1240,6 +1252,7 @@ $basic-odd-background: $light-gray;
 $basic-even-background: $white;
 $model-specs-label-case: normal;
 $model-specs-border-right: 4px solid $white;
+$model-specs-padding: 0.4rem 0.6rem 0.4rem 0.6rem;
 
 // 18. Model Options Component
 // -----------------------------
@@ -1247,7 +1260,10 @@ $model-options-background-color: $white;
 
 // 19. Model Listing Component
 // -----------------------------
-
+$model-listing-bg-color: $white;
+$model-listing-box-shadow: none;
+$model-listing-padding: none;
+$model-listing-border-radius: none;
 $model-listing-model-year-size: 1em;
 $model-listing-model-year-weight: bold;
 $model-listing-model-name-font: $header-font-family;
@@ -1257,28 +1273,30 @@ $model-listing-model-name-transform: uppercase;
 $model-listing-model-name-line-height: 1.2em;
 $model-listing-model-name-tag-color: $primary-color; //i.e.: NEW
 $model-listing-model-name-tag-weight: normal;
-$model-listing-package-detail-margin: 1rem 0;
+$model-listing-package-detail-margin: 0.5rem 0;
+$model-listing-package-font-weight: bold;
+$model-listing-package-font-size: 1.1rem;
 $model-listing-price-block-margin: 1rem 0;
 $model-listing-price-label-size: 0.85em; //i.e.: NO HAGGLE NO HASSLE National Price
 $model-listing-price-label-color: $medium-gray;
 $model-listing-price-sale-value-size: 1.5em;
 $model-listing-price-sale-value-weight: bold;
-$model-listing-price-sale-value-color: $alert-color;
+$model-listing-price-sale-value-color: $primary-color;
 $model-listing-price-value-size: 1.5em;
 $model-listing-price-value-weight: bold;
 $model-listing-price-strike-color: $medium-gray;
 $model-listing-price-currency-size: 1.5em;
-$model-listing-price-currency-weight: 300;
+$model-listing-price-currency-weight: normal;
 $model-listing-price-currency-color: $medium-gray;
 $model-listing-price-save-label-size: 1em;
 $model-listing-price-save-value-size: 1em;
 $model-listing-price-save-value-weight: bold;
-$model-listing-price-save-value-color: $alert-color;
-$model-listing-specs-block-margin: 1rem 0;
-$model-listing-specs-label-padding: 0.25em 0;
+$model-listing-price-save-value-color: $primary-color;
+$model-listing-specs-block-margin: 1rem 0 2rem 0;
+$model-listing-specs-label-padding: 0em 0;
 $model-listing-specs-label-size: 1rem 0;
 $model-listing-specs-label-weight: normal;
-$model-listing-specs-value-padding: 0.25em 0  0.25em 2.25em;
+$model-listing-specs-value-padding: 0em 0  0.25em 2.25em;
 $model-listing-specs-value-size: 1rem 0;
 $model-listing-specs-value-weight: bold;
 
@@ -1287,6 +1305,7 @@ $model-listing-specs-value-weight: bold;
 
 $model-price-model-year-size: 1em;
 $model-price-model-year-weight: bold;
+$model-price-name-font-family: $header-font-family;
 $model-price-model-name-size: 1.5em;
 $model-price-model-name-weight: bold;
 $model-price-model-name-transform: uppercase;
@@ -1300,7 +1319,7 @@ $model-price-label-size: 1em; //i.e.: NO HAGGLE NO HASSLE National Price
 $model-price-label-color: inherit;
 $model-price-sale-value-size: 1em;
 $model-price-sale-value-weight: bold;
-$model-price-sale-value-color: $alert-color;
+$model-price-sale-value-color: $primary-color;
 $model-price-value-size: 1em;
 $model-price-value-weight: bold;
 $model-price-strike-color: inherit;
@@ -1314,7 +1333,7 @@ $model-price-save-value-color: $alert-color;
 $model-price-save-label-size: 1em;
 $model-price-save-value-size: 1em;
 $model-price-save-value-weight: bold;
-$model-price-save-value-color: $alert-color;
+$model-price-save-value-color: $primary-color;
 $model-price-dealer-select-label-size: 1em;
 $model-price-dealer-select-link-size: 1em;
 $model-price-dealer-name-size: 1em;

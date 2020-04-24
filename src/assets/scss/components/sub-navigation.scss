@@ -19,7 +19,7 @@
       flex: 2 1 auto;
       color: $sub-navigation-text-color;
       text-transform: $sub-navigation-text-transform;
-      letter-spacing: 1px;
+      letter-spacing: $sub-navigation-letter-spacing;
       .menu {
         margin:0;
       }
