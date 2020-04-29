@@ -71,7 +71,7 @@
   .prices {
   //  border-top: 2px solid $border-gray;
     font-size: 1rem;
-    padding: 2.5rem 0 0.7rem;
+    padding: 1.5rem 0 0.7rem;
 
     .price-vals {
       font-weight: bold;
@@ -149,5 +149,21 @@
     font-weight: 900;
     margin-top: 1.2rem;
     margin-bottom: 1.5em;
+  }
+  .image-carousel {
+    margin-top: 1rem;
+    .owl-carousel {
+      border: none;
+    }
+    .owl-thumbs {
+      display: inline-flex;
+      //padding: 1rem;
+      button {
+        padding: 0.5rem;
+        margin: 0rem 0.5rem;
+        border: 1px solid $border-gray;
+      }
+      //width: 100px;
+    }
   }
 }

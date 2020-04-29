@@ -14,6 +14,9 @@
   }
   .button {
     margin-bottom: 0;
+    &.expanded {
+      background-color: $bab-header-expanded-color;
+    }
   }
 
   .bab-boat-name {
@@ -21,7 +24,7 @@
     font-size: $bab-header-boat-name-size;
     a {
       text-decoration: none;
-      color: $primary-color;
+      color:$bab-model-name-header-color;
     }
 
     i {
