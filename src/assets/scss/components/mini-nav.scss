@@ -1,7 +1,7 @@
 .mini-nav {
 	position:relative;
-	background-color: $light-gray;
-	color: $dark-gray;
+	background-color: $mini-nav-bg-color;
+	color: $mini-nav-text-color;
 	height: 38px;
 	width:100%;
 	font-size: 12px;
@@ -53,7 +53,7 @@
 		.your-store {
 
 			a {
-				color: $dark-gray;
+				color: $mini-nav-text-color;
 				font-weight:normal;
 				padding-right: 1em;
 				position:relative;
@@ -69,7 +69,7 @@
 		.store-name {
 			text-transform: uppercase;
 			font-weight:bold;
-			color:$black;
+			color:$mini-nav-text-color;
 		}
 	}
 
@@ -83,6 +83,14 @@
 		z-index:100;
 		padding:0;
 		margin:0;
+		color:$black;
+		text-align: left;
+		ul {
+			padding-top: 1rem;
+		}
+		li {
+			list-style: none;
+		}
 		.menu {
 			margin:1em;
 			padding:0;
@@ -109,7 +117,7 @@
 		}
 		.change-store {
 			display:block;
-			margin: 2em 0 0;
+			margin: 1em 0 0;
 			padding:0.5em;
 			font-weight:bold;
 			background-color: $light-gray;

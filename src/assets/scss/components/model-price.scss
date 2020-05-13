@@ -113,6 +113,9 @@
       text-decoration: underline;
       font-weight: 600;
     }
+    .dealer-result-address {
+      margin-bottom: 0.5rem;
+    }
 
     .prep-label {
       font-size: $model-price-prep-label-size;
@@ -155,10 +158,11 @@
     @include breakpoint(large) {
       width: auto;
       margin-right: 1rem;
+      margin-top: 1rem;
     }
   }
   .cta {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
   .dealer-info {
     border: 2px solid $border-gray;

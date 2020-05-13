@@ -748,13 +748,13 @@ $responsive-embed-ratios: (
 // ----------
 
 $reveal-background: $white;
-$reveal-width: 600px;
-$reveal-max-width: $global-width;
+$reveal-width: 400px;
+$reveal-max-width: 1200px;
 $reveal-padding: $global-padding;
 $reveal-border: 1px solid $medium-gray;
 $reveal-radius: $global-radius;
-$reveal-zindex: 1005;
-$reveal-overlay-background: rgba($black, 0.45);
+$reveal-zindex: 1000;
+$reveal-overlay-background: rgba($black, 0.90);
 
 // 48. Slider
 // ----------
@@ -1038,7 +1038,9 @@ $header-mobile-bottom-border: 1px solid rgba(100,100,100, 0.2);
 
 // 4.5 Mini Nav
 // -----------------------------
-$mini-nav-store-dropdown-margin:0; //1em 0 0 for boating center
+$mini-nav-store-dropdown-margin:0; //1em 0 0 for bpbc
+$mini-nav-bg-color: #000000; //light-gray for bpbc
+$mini-nav-text-color: $white; // $dark-gray for bpbc
 
 // 5. Sub Navigation Component
 // -----------------------------
