@@ -1036,6 +1036,12 @@ $header-hamburger-color: $black;
 $header-hamburger-weight: 400;
 $header-mobile-bottom-border: 1px solid rgba(100,100,100, 0.2);
 
+// 4.5 Mini Nav
+// -----------------------------
+$mini-nav-store-dropdown-margin:0;
+$mini-nav-bg-color: $light-gray;
+$mini-nav-text-color: $black;
+
 // 5. Sub Navigation Component
 // -----------------------------
 $sub-navigation-background-color: $primary-color;
@@ -1142,12 +1148,12 @@ $profile-size: 60px;
 // -----------------------------
 
 // Desktop Sizes
-$small-desktop-hero: 380px;
+$small-desktop-hero: 450px;
 $medium-desktop-hero: 626px;
 $large-desktop-hero: 750px;
 
 // Tablet Sizes
-$small-tablet-hero: 380px;
+$small-tablet-hero: 450px;
 $medium-tablet-hero: 500px;
 $large-tablet-hero: 650px;
 
