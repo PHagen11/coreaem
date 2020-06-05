@@ -1,5 +1,5 @@
 .heroArea {
-  background-color: $black;
+  background-color: $hero-default-bg-color;
   h1 {
     @include breakpoint(small) {
       font-size: 36px;
@@ -27,6 +27,9 @@
     padding-top: $hero-top-padding;
     padding-bottom:$hero-bottom-padding;
     z-index:0; position:absolute; top:0; bottom:0; height:inherit; width:100%;
+    @include breakpoint (xxxlarge) {
+      background-attachment: scroll !important;
+    }
 
   }
   .heroSmall {

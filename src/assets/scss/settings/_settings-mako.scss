@@ -121,9 +121,10 @@ $breakpoints: (
   large: 1024px,
   xlarge: 1200px,
   xxlarge: 1440px,
+  xxxlarge:1800px,
 );
 $print-breakpoint: large;
-$breakpoint-classes: (small medium large xlarge xxlarge);
+$breakpoint-classes: (small medium large xlarge xxlarge xxxlarge);
 
 // 3. The Grid
 // -----------
@@ -1037,6 +1038,13 @@ $header-hamburger-color: $primary-color;
 $header-hamburger-weight: 400;
 $header-mobile-bottom-border: 1px solid rgba(100,100,100, 0.2);
 
+// 4.5 Mini Nav
+// -----------------------------
+$mini-nav-store-dropdown-margin:0;
+$mini-nav-bg-color: $light-gray;
+$mini-nav-text-color: $black;
+$mini-nav-a-color: $primary-color;
+
 // 5. Sub Navigation Component
 // -----------------------------
 $sub-navigation-background-color: $primary-color;
@@ -1141,6 +1149,8 @@ $profile-size: 60px;
 
 // 10. Hero Component
 // -----------------------------
+
+$hero-default-bg-color: $black;
 
 // Desktop Sizes
 $small-desktop-hero: 380px;

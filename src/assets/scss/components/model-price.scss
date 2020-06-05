@@ -40,6 +40,12 @@
     margin: $model-price-package-detail-margin;
     font-weight: 600;
     font-size: 1.2rem;
+    :last-child {
+      font-size: 1rem;
+      font-weight: normal;
+      color: $medium-gray;
+      font-style: italic;
+    }
   }
 
   .prices {

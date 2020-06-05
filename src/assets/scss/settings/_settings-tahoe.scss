@@ -122,9 +122,10 @@ $breakpoints: (
   large: 1024px,
   xlarge: 1200px,
   xxlarge: 1440px,
+  xxxlarge: 1800px,
 );
 $print-breakpoint: large;
-$breakpoint-classes: (small medium large xlarge xxlarge);
+$breakpoint-classes: (small medium large xlarge xxlarge xxxlarge);
 
 // 3. The Grid
 // -----------
@@ -1036,16 +1037,23 @@ $header-hamburger-color: $primary-color;
 $header-hamburger-weight: 400;
 $header-mobile-bottom-border: 1px solid rgba(100,100,100, 0.2);
 
+// 4.5 Mini Nav
+// -----------------------------
+$mini-nav-store-dropdown-margin:0; //1em 0 0 for bpbc
+$mini-nav-bg-color: $light-gray; //light-gray for bpbc
+$mini-nav-text-color: $black; // $dark-gray for bpbc
+$mini-nav-a-color: $primary-color;
+
 // 5. Sub Navigation Component
 // -----------------------------
-$sub-navigation-background-color: $light-gray;
+$sub-navigation-background-color: $primary-color;
 $sub-navigation-font-family:$body-font-family;
-$sub-navigation-text-color: $black;
+$sub-navigation-text-color: $white;
 $sub-navigation-text-weight: 500;
 $sub-navigation-letter-spacing: 0px;
 $sub-navigation-text-transform: uppercase;
-$sub-navigation-link-color-start: $medium-gray;
-$sub-navigation-link-color-hover: $primary-color;
+$sub-navigation-link-color-start: $white;
+$sub-navigation-link-color-hover: $white;
 $sub-navigation-link-font-size: 1rem;
 $sub-navigation-selected-background-color: $primary-color;
 $sub-navigation-selected-text-color: $white;
@@ -1139,6 +1147,8 @@ $profile-size: 60px;
 
 // 10. Hero Component
 // -----------------------------
+
+$hero-default-bg-color: $secondary-color;
 
 // Desktop Sizes
 $small-desktop-hero: 380px;
@@ -1445,7 +1455,7 @@ $bab-header-expanded-color: $primary-color;
 }
 
 .opacity-90 {
-  opacity: 0.9;
+  opacity: 0.95;
 }
 .opacity-80 {
   opacity: 0.8;

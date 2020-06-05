@@ -3,14 +3,14 @@
         thead {
             background-color: $white;
             border: none;
-            font-size: 1.1rem;
+            //font-size: 1.1rem;
         }
 
         tbody {
             border: none;
 
             td {
-              font-size: 1.1rem;
+              //font-size: 1.1rem;
                 .price {
                     font-weight: bold;
                 }
@@ -62,6 +62,11 @@
             td,
             th {
                 padding: 0.5rem 0;
+            }
+            .motor-cat {
+              background: $light-gray;
+              font-weight: bold;
+              padding-left: 0.75rem;
             }
         }
 

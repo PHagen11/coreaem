@@ -66,7 +66,7 @@
 
 @import 'util/util';
 @import url('https://fonts.googleapis.com/css?family=Oranienbaum&display=swap');
-@import url("https://use.typekit.net/spj2fce.css");
+@import url("https://use.typekit.net/rsc2qhk.css");
 // 1. Global
 // ---------
 
@@ -74,8 +74,8 @@ $global-font-size: 105%;
 $global-width: rem-calc(1600);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #262624,
-  secondary: #A09174,
+  primary: #B4A68A,
+  secondary: #464F5D,
   success: #25AD79,
   warning: #F1AB2C,
   alert: #AA270F,
@@ -94,7 +94,7 @@ $black: #1A1A1D;
 $white: #FFFFFF;
 $body-background: $light-gray;
 $body-font-color: $black;
-$body-font-family: 'Brandon Grotesque', Helvetica, Arial, sans-serif;
+$body-font-family: 'brandon-grotesque', sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -122,9 +122,10 @@ $breakpoints: (
   large: 1024px,
   xlarge: 1200px,
   xxlarge: 1440px,
+  xxxlarge: 1800px,
 );
 $print-breakpoint: large;
-$breakpoint-classes: (small medium large xlarge xxlarge);
+$breakpoint-classes: (small medium large xlarge xxlarge xxxlarge);
 
 // 3. The Grid
 // -----------
@@ -296,9 +297,9 @@ $button-font-family: inherit;
 $button-padding: 0.8em 1.6em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
-$button-background: $primary-color;
+$button-background: $black;
 $button-background-hover: scale-color($button-background, $lightness: 20%);
-$button-color: $white;
+$button-color: $black;
 $button-color-alt: $white;
 $button-radius: $global-radius;
 $button-hollow-border-width: 3px;
@@ -1016,16 +1017,16 @@ $header-link-left-right-padding: 1vw;
 $header-link-font-size: 1.1rem;
 $header-menu-item-text-transform: capitalize;
 $header-menu-item-letter-spacing: 0px;
-$header-dropdown-arrow-color: $secondary-color;
+$header-dropdown-arrow-color: $primary-color;
 $header-dropdown-width: 250px;
 $header-dropdown-background-color: $white;
 $header-dropdown-border-left: 4px solid $light-gray;
-$header-submenu-background-color: $secondary-color;
+$header-submenu-background-color: $primary-color;
 $header-submenu-link-color: $black;
 $header-submenu-link-font-size: 1rem;
-$header-submenu-link-color-hover: $secondary-color;
+$header-submenu-link-color-hover: $primary-color;
 $header-submenu-line-height: 1.5rem;
-$header-link-arrow-color: $secondary-color;
+$header-link-arrow-color: $primary-color;
 $header-link-arrow-margin-top: 7px;
 $header-logo-height: 33px;
 $header-logo-padding-top: 35px;
@@ -1041,17 +1042,18 @@ $header-mobile-bottom-border: 1px solid rgba(100,100,100, 0.2);
 $mini-nav-store-dropdown-margin:0; //1em 0 0 for bpbc
 $mini-nav-bg-color: #000000; //light-gray for bpbc
 $mini-nav-text-color: $white; // $dark-gray for bpbc
+$mini-nav-a-color: $primary-color;
 
 // 5. Sub Navigation Component
 // -----------------------------
-$sub-navigation-background-color: $secondary-color;
+$sub-navigation-background-color: $primary-color;
 $sub-navigation-font-family: $body-font-family;
-$sub-navigation-text-color: $white;
+$sub-navigation-text-color: $black;
 $sub-navigation-text-weight: 500;
 $sub-navigation-letter-spacing: 1px;
 $sub-navigation-text-transform: uppercase;
-$sub-navigation-link-color-start: $white;
-$sub-navigation-link-color-hover: $white;
+$sub-navigation-link-color-start: $black;
+$sub-navigation-link-color-hover: $black;
 $sub-navigation-link-font-size: 1rem;
 $sub-navigation-selected-background-color: rgba(0,0,0, 0.2);
 $sub-navigation-selected-text-color: $white;
@@ -1137,7 +1139,7 @@ $blockquote-font-size: 1.1rem;
 $blockquote-weight: 500;
 $blockquote-color: $body-font-color;
 $author-weight: 600;
-$author-color: $secondary-color;
+$author-color: $white;
 $quote-font-tamily: $header-font-family;
 
 
@@ -1148,10 +1150,12 @@ $profile-size: 60px;
 // 10. Hero Component
 // -----------------------------
 
+$hero-default-bg-color: $black;
+
 // Desktop Sizes
-$small-desktop-hero: 380px;
+$small-desktop-hero: 400px;
 $medium-desktop-hero: 626px;
-$large-desktop-hero: 750px;
+$large-desktop-hero: 800px;
 
 // Tablet Sizes
 $small-tablet-hero: 380px;
@@ -1174,7 +1178,7 @@ $hero-bottom-padding: 3rem;
 // view all Font Awesome icons here --> https://fontawesome.com/cheatsheet
 $image-carousel-border: none;
 $image-carousel-prevnext-color: $secondary-color;
-$image-carousel-prevnext-background-color: none;
+$image-carousel-prevnext-background-color: $light-gray;
 $image-carousel-prevnext-font-size: 25px;
 $image-carousel-prevnext-padding: 15px;
 $image-carousel-prevnext-border: none;
@@ -1186,7 +1190,7 @@ $image-carousel-dots-width: 2rem;
 $image-carousel-dots-height: 0.3rem;
 $image-carousel-dots-color-start: $dark-gray;
 $image-carousel-dots-color-hover: $secondary-color;
-$image-carousel-dots-color-active: $secondary-color;
+$image-carousel-dots-color-active: $primary-color;
 $image-carousel-dots-border-weight: 0px;
 $image-carousel-dots-border-radius: 0%;
 $image-carousel-dots-border-color: $dark-gray;
@@ -1218,10 +1222,10 @@ $gallery-thumbnail-border-color: $light-gray;
 $gallery-thumbnail-border-color-active: $primary-color;
 $gallery-play-button-icon: '\f144';
 $gallery-play-button-color: $white;
-$gallery-prevnext-color-start: $primary-color;
+$gallery-prevnext-color-start: $medium-gray;
 $gallery-prevnext-color-hover: $white;
 $gallery-prevnext-background-color: rgba(0, 0, 0, 0.45);
-$gallery-toolbar-icons-color-start:$primary-color;
+$gallery-toolbar-icons-color-start:$medium-gray;
 $gallery-toolbar-icons-color-hover:$white;
 $gallery-image-margin-bottom: 0.4rem;
 
@@ -1252,7 +1256,7 @@ $footer-bottom-nav-link-color-hover: $black;
 // 17. Model Specs Component
 // -----------------------------
 
-$minimal-spacing: 1rem 1rem 1rem 0;
+$minimal-spacing: 0.5rem 0.5rem 0.5rem 0;
 $minimal-odd-background: $white;
 $minimal-even-background: $white;
 $basic-odd-background: $light-gray;

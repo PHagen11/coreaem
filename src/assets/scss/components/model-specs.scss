@@ -3,7 +3,7 @@
     padding: 1rem 0 1.5rem 0;
     font-size: 0.7rem;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: capitalize;
     a.active {
       color: $black;
       text-decoration: underline;
@@ -23,15 +23,15 @@
   table {
     .spec-label {
       width: 50%;
-      text-transform: $model-specs-label-case;
+      text-transform: capitalize !important;
       border-right: $model-specs-border-right;
-      font-size: 1.1rem;
+      //font-size: 1.1rem;
     }
     .metric,
     .standard {
       //font-weight: 700;
-      font-size: 1.1rem;
-      text-transform: capitalize;
+      //font-size: 1.1rem;
+      text-transform: lowercase;
         //padding-left: 10px;
     }
     .active-always {
@@ -133,7 +133,7 @@
         padding: 0.95rem 1em 0 0;
         margin: 0 0 1rem;
         font-weight: bold;
-        text-transform: uppercase;
+        text-transform: capitalize;
       }
     }
   }
@@ -146,7 +146,7 @@
     .accordion-item > a.accordion-title {
       font-weight: bold;
       font-size: 1.1rem;
-      text-transform: uppercase;
+      text-transform: capitalize;
       color: inherit;
       border-color: $border-gray;
       border-width: 0 0 1px 0;
