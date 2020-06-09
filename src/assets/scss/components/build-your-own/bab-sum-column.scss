@@ -154,6 +154,15 @@
     margin-top: 1rem;
     .owl-carousel {
       border: none;
+      cursor: pointer;
+      transition: ease;
+      &:hover {
+        opacity: 0.75;
+        transition: ease-in-out
+        i {
+          display: block;
+        }
+      }
     }
     .owl-thumbs {
       display: inline-flex;
@@ -164,6 +173,20 @@
         border: 1px solid $border-gray;
       }
       //width: 100px;
+    }
+  }
+  .expand-icon {
+    position: relative;
+    z-index: 20;
+    margin-bottom: -1rem;
+    cursor: pointer;
+    i {
+      opacity: 0.5;
+      padding: 0.4rem;
+      background: $light-gray;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }
