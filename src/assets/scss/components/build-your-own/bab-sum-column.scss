@@ -33,10 +33,18 @@
     .accordion-title {
       border: none;
       color: $black;
-      font-size: 1rem;
+      font-size: 1.1rem;
+      font-family: $body-font-family;
       text-decoration: none;
       font-weight: bold;
       padding: 0 ;
+      background: none;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
       i {
         padding-right: 0.4rem;
         color: $primary-color;
@@ -48,7 +56,8 @@
     .accordion-content {
       border:none;
       background: none;
-      padding: 1rem 0 0 0;
+      font-family: $body-font-family;
+      //padding: 1rem 0 0 0;
     }
     .dealer-result-name {
       font-weight: bold;
@@ -56,6 +65,7 @@
     }
 
     .dealer-result-phone {
+      margin-top: 1.5rem;
       margin-bottom: 1em;
     }
 
@@ -72,6 +82,8 @@
   //  border-top: 2px solid $border-gray;
     font-size: 1rem;
     padding: 1.5rem 0 0.7rem;
+    border: none;
+    margin-bottom: 0;
 
     .price-vals {
       font-weight: bold;
@@ -112,11 +124,18 @@
     }
   }
   .options {
+    h6 {
+      padding-bottom: 1rem;
+      border-bottom: 2px solid $border-gray;
+      margin-bottom: 1.3rem;
+      margin-top: 1.3rem;
+    }
     .option-value {
       font-weight: bold;
     }
     .option-label {
       padding-bottom: 1rem;
+      text-transform: capitalize;
     }
   }
 
@@ -129,6 +148,7 @@
     }
     font-size: 1rem;
     border-radius: 6px;
+    border:none;
     //border: $border;
     //border-width: 1px 0;
     padding: 1rem;
@@ -154,10 +174,10 @@
     margin-top: 1rem;
     .owl-carousel {
       border: none;
-      cursor: pointer;
+      cursor: zoom-in;
       transition: ease;
       &:hover {
-        opacity: 0.75;
+        opacity: 0.85;
         transition: ease-in-out
         i {
           display: block;
@@ -171,13 +191,14 @@
         padding: 0.5rem;
         margin: 0rem 0.5rem;
         border: 1px solid $border-gray;
+        cursor: pointer;
       }
       //width: 100px;
     }
   }
   .expand-icon {
     position: relative;
-    z-index: 20;
+    z-index: 10;
     margin-bottom: -1rem;
     cursor: pointer;
     i {
@@ -188,5 +209,25 @@
         opacity: 1;
       }
     }
+  }
+  .ui-icon-triangle-1-e {
+    display: none;
+  }
+  .ui-state-active .ui-icon, .ui-button:active .ui-icon {
+    display: none;
+  }
+  .ui-accordion .ui-accordion-content {
+    padding:0;
+  }
+  .reveal.full {
+    top:0% !important;
+  }
+  .circle {
+	border-radius: 50%;
+  }
+  .summary-swatch {
+  	width: 1em;
+  	height: 1em;
+  	margin-right: 0.5em;
   }
 }

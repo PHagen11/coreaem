@@ -70,7 +70,7 @@
     }
 
     .boat-image {
-      margin-top: 0vh;
+      margin-top: 10vh;
         background-color:$site-bkg-color;
         //margin-bottom: 2rem;
         //border-bottom: 2px solid $border-gray;
@@ -148,6 +148,11 @@
             width: 7em;
             margin: 1em 0.5em;
         }
+        .stripe {
+          background-position: center;
+          background-attachment: scroll;
+          background-size: cover;
+        }
 
         vertical-align:top;
         cursor: pointer;
@@ -215,6 +220,7 @@
             margin-top:0.8em;
             font-size: 0.8em;
             line-height: 1.2em;
+            text-transform: capitalize;
         }
 
 
@@ -222,7 +228,6 @@
     .custom-swatches {
         .swatch {
             display: inline-block;
-
             text-align: center;
             @include breakpoint(small) {
                 width: 5em;

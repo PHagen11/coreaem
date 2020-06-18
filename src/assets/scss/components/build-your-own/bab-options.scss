@@ -16,6 +16,54 @@
     border-collapse: collapse;
   }
 
+
+//---------START jquery UI accordion----------//
+
+.ui-accordion .ui-accordion-header {
+  padding: 1.5rem 0 1.5rem 0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 2px solid $border-gray;
+  font-family: $body-font-family;
+  color: $body-font-color;
+  font-weight: bold;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.ui-icon-triangle-1-e {
+  display: none;
+}
+.ui-state-active .ui-icon, .ui-button:active .ui-icon {
+  display: none;
+}
+.ui-accordion-content {
+  border: none;
+  padding: 1rem 0 1rem 0;
+  table tr {
+    margin-top: 0.5rem;
+    background-color: none;
+  }
+  table td {
+    padding: 1rem 0;
+  }
+}
+:last-child > .accordion-content:last-child {
+  border-bottom: none !important;
+}
+.ui-widget-content {
+  border:none;
+  font-family: $body-font-family;
+  color: $body-font-color;
+}
+
+//---------END jquery UI accordion----------//
+
+
   .accordion {
     margin: 0 0 3rem;
   }
@@ -102,7 +150,10 @@
         line-height: 1em;
       }
       tbody tr:nth-child(even) {
-        background: none;
+        background: none !important;
+      }
+      tbody tr:nth-child(odd) {
+        background: none !important;
       }
 
       .checkit {
@@ -122,7 +173,7 @@
 
         label {
           padding-left: 1.5em;
-          margin-top: -2px;
+          margin-top: -5px;
         }
       }
 

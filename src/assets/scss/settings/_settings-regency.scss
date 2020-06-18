@@ -299,8 +299,8 @@ $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $black;
 $button-background-hover: scale-color($button-background, $lightness: 20%);
-$button-color: $black;
-$button-color-alt: $white;
+$button-color: $white;
+$button-color-alt: $black;
 $button-radius: $global-radius;
 $button-hollow-border-width: 3px;
 $button-sizes: (
@@ -1420,7 +1420,8 @@ $bab-custom-color-part-tab-selected-color-text-color: $medium-gray;
 $bab-custom-color-part-tab-bkg-color: transparent;
 $bab-custom-color-part-tab-bkg-color-selected: $border-gray;
 $bab-model-name-header-color: $white;
-$bab-header-expanded-color: $secondary-color;
+$bab-header-expanded-color: $primary-color;
+$bab-header-expanded-text-color: $black;
 
 //These are used by numerous components but seldom change
 

@@ -11,9 +11,6 @@
 
 // $(document).foundation();
 
-$(document).ready(function() {
-  $("body").html().replace(/&reg;/gi, '<sup>&reg;</sup>').replace(/®/gi, '<sup>&reg;</sup>'));
-});
 
 jQuery(document).ready(function($) {
 
