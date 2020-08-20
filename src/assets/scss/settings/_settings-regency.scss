@@ -934,8 +934,10 @@ $xy-block-grid-max: 8;
 $icon-weight: 300;
 
 // Links
-a {
-  color: $secondary-color
+p a {
+  color: $secondary-color !important;
+  font-weight: 700;
+  text-decoration: underline;
 }
 .input-group-label {
   background:#EDEDED;
@@ -1056,7 +1058,7 @@ $sub-navigation-link-color-start: $black;
 $sub-navigation-link-color-hover: $black;
 $sub-navigation-link-font-size: 1rem;
 $sub-navigation-selected-background-color: rgba(0,0,0, 0.2);
-$sub-navigation-selected-text-color: $white;
+$sub-navigation-selected-text-color: $light-gray;
 
 // 6. Sticky Anchor Component
 // -----------------------------
@@ -1151,6 +1153,7 @@ $profile-size: 60px;
 // -----------------------------
 
 $hero-default-bg-color: $black;
+$hero-h1-line-height: 1;
 
 // Desktop Sizes
 $small-desktop-hero: 400px;
@@ -1197,7 +1200,7 @@ $image-carousel-dots-border-color: $dark-gray;
 $image-carousel-dots-opacity-start: 1;
 $image-carousel-dots-opacity-hover:1;
 $image-carousel-dots-opacity-active: 1;
-$image-carousel-dots-margin: 0.55rem;
+$image-carousel-dots-margin: 0.25rem;
 $image-carousel-dots-y-move: 1rem; //0 = right below images
 
 // 12. Video Component
@@ -1286,10 +1289,11 @@ $model-listing-model-name-transform: uppercase;
 $model-listing-model-name-line-height: 1.2em;
 $model-listing-model-name-tag-color: $primary-color; //i.e.: NEW
 $model-listing-model-name-tag-weight: normal;
+$model-listing-model-name-style: normal;
 $model-listing-package-detail-margin: 0.5rem 0;
 $model-listing-package-font-weight: regular;
 $model-listing-package-font-size: 1.1rem;
-$model-listing-price-block-margin: 1rem 0;
+$model-listing-price-block-margin: 0;
 $model-listing-price-label-size: 1em; //i.e.: NO HAGGLE NO HASSLE National Price
 $model-listing-price-label-color: $black;
 $model-listing-price-sale-value-size: 1.5em;
@@ -1327,7 +1331,7 @@ $model-price-model-name-tag-color: $primary-color; //i.e.: NEW
 $model-price-model-name-tag-weight: normal;
 $model-price-package-detail-margin: 0.5rem 0;
 $model-price-td-padding: 0.25rem 0;
-$model-price-block-margin: 1rem 0;
+$model-price-block-margin: 0;
 $model-price-label-size: 1em; //i.e.: NO HAGGLE NO HASSLE National Price
 $model-price-label-color: inherit;
 $model-price-sale-value-size: 1em;
@@ -1350,7 +1354,6 @@ $model-price-save-value-color: $alert-color;
 $model-price-dealer-select-label-size: 1em;
 $model-price-dealer-select-link-size: 1em;
 $model-price-dealer-name-size: 1em;
-$model-price-dealer-name-weight: bold;
 $model-price-dealer-name-link-size: 1em;
 $model-price-dealer-name-link-weight: normal;
 $model-price-prep-label-size: 1em;
@@ -1422,6 +1425,16 @@ $bab-custom-color-part-tab-bkg-color-selected: $border-gray;
 $bab-model-name-header-color: $white;
 $bab-header-expanded-color: $primary-color;
 $bab-header-expanded-text-color: $black;
+
+// 24. Scroll to Top Button
+// -----------------------------
+
+$scroll-top-bg-color: $primary-color;
+$scroll-top-text-color: $white;
+$scroll-top-left-radius: 0px;
+$scroll-top-right-radius: 0px;
+$scroll-bottom-right-radius: 0px;
+$scroll-bottom-left-radius: 0px;
 
 //These are used by numerous components but seldom change
 

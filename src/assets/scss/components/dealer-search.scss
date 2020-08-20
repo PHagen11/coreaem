@@ -1,7 +1,11 @@
 .dealer-search {
   .search-box {
-    background-color: $white;
+    background-color: $light-gray;
     padding:1.8rem 1rem 0.8rem 1rem;
+    .dealerSearchButton {
+      transform: none !important;
+      -webkit-transform:none !important;
+    }
   }
 
     /* border: 1px solid $border-gray; */
@@ -25,6 +29,9 @@
         font-size: $dealer-search-heading-size;
         text-transform: $dealer-search-heading-transform;
         padding-bottom: 1rem;
+        @include breakpoint (small only) {
+          text-align: center !important;
+        }
     }
 
     .search-by {

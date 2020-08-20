@@ -755,7 +755,7 @@ $reveal-max-width: $global-width;
 $reveal-padding: $global-padding;
 $reveal-border: 1px solid $medium-gray;
 $reveal-radius: $global-radius;
-$reveal-zindex: 1005;
+$reveal-zindex: 1000;
 $reveal-overlay-background: rgba($black, 0.45);
 
 // 48. Slider
@@ -935,8 +935,10 @@ $xy-block-grid-max: 8;
 $icon-weight: 300;
 
 // Links
-a {
-  color: $secondary-color
+p a {
+  color: $secondary-color !important;
+  font-weight: 700;
+  text-decoration: underline;
 }
 .input-group-label {
   background:#EDEDED;
@@ -1153,6 +1155,7 @@ $profile-size: 60px;
 // -----------------------------
 
 $hero-default-bg-color: $border-gray;
+$hero-h1-line-height: 1;
 
 // Desktop Sizes
 $small-desktop-hero: 380px;
@@ -1199,7 +1202,7 @@ $image-carousel-dots-border-color: $secondary-color;
 $image-carousel-dots-opacity-start: 0.5;
 $image-carousel-dots-opacity-hover: 0.85;
 $image-carousel-dots-opacity-active: 1;
-$image-carousel-dots-margin: 0.55rem;
+$image-carousel-dots-margin: 0.15rem;
 $image-carousel-dots-y-move: 1rem; //0 = right below images
 
 
@@ -1251,7 +1254,7 @@ $footer-text-color: $black;
 $footer-link-color-start: $medium-gray;
 $footer-link-color-hover: $primary-color;
 $footer-bottom-nav-background-color: $secondary-color;
-$footer-bottom-nav-font-size: 0.8rem;
+$footer-bottom-nav-font-size: 0.6rem;
 $footer-bottom-nav-text-color: $white;
 $footer-bottom-nav-link-color-start: $white;
 $footer-bottom-nav-link-color-hover: $primary-color;
@@ -1287,10 +1290,11 @@ $model-listing-model-name-transform: capitalize;
 $model-listing-model-name-line-height: 1.2em;
 $model-listing-model-name-tag-color: $primary-color; //i.e.: NEW
 $model-listing-model-name-tag-weight: normal;
+$model-listing-model-name-style: normal;
 $model-listing-package-detail-margin: 0.5rem 0;
 $model-listing-package-font-weight: bold;
 $model-listing-package-font-size: 1rem;
-$model-listing-price-block-margin: 1rem 0;
+$model-listing-price-block-margin: 0;
 $model-listing-price-label-size: 0.85em; //i.e.: NO HAGGLE NO HASSLE National Price
 $model-listing-price-label-color: $medium-gray;
 $model-listing-price-sale-value-size: 1.5em;
@@ -1320,20 +1324,20 @@ $model-listing-specs-value-weight: bold;
 $model-price-model-year-size: 1em;
 $model-price-model-year-weight: bold;
 $model-price-name-font-family: $body-font-family;
-$model-price-model-name-size: 1.5em;
-$model-price-model-name-weight: bold;
-$model-price-model-name-transform: capitalize;
+$model-price-model-name-size: 1.8em;
+$model-price-model-name-weight: normal;
+$model-price-model-name-transform: uppercase;
 $model-price-model-name-line-height: 1.2em;
 $model-price-model-name-tag-color: $primary-color; //i.e.: NEW
 $model-price-model-name-tag-weight: normal;
-$model-price-package-detail-margin: 0.8rem 0;
+$model-price-package-detail-margin: 0.5rem 0;
 $model-price-td-padding: 0.25rem 0;
-$model-price-block-margin: 1rem 0;
+$model-price-block-margin: 0;
 $model-price-label-size: 1em; //i.e.: NO HAGGLE NO HASSLE National Price
 $model-price-label-color: inherit;
 $model-price-sale-value-size: 1em;
 $model-price-sale-value-weight: bold;
-$model-price-sale-value-color: $primary-color;
+$model-price-sale-value-color: $alert-color;
 $model-price-value-size: 1em;
 $model-price-value-weight: bold;
 $model-price-strike-color: inherit;
@@ -1343,15 +1347,14 @@ $model-price-currency-color: $medium-gray;
 $model-price-save-label-size: 1em;
 $model-price-save-value-size: 1em;
 $model-price-save-value-weight: bold;
-$model-price-save-value-color: $primary-color;
+$model-price-save-value-color: $alert-color;
 $model-price-save-label-size: 1em;
 $model-price-save-value-size: 1em;
 $model-price-save-value-weight: bold;
-$model-price-save-value-color: $primary-color;
+$model-price-save-value-color: $alert-color;
 $model-price-dealer-select-label-size: 1em;
 $model-price-dealer-select-link-size: 1em;
 $model-price-dealer-name-size: 1em;
-$model-price-dealer-name-weight: bold;
 $model-price-dealer-name-link-size: 1em;
 $model-price-dealer-name-link-weight: normal;
 $model-price-prep-label-size: 1em;
@@ -1422,6 +1425,18 @@ $bab-custom-color-part-tab-bkg-color: transparent;
 $bab-custom-color-part-tab-bkg-color-selected: $border-gray;
 $bab-model-name-header-color: $white;
 $bab-header-expanded-color: $primary-color;
+$bab-header-expanded-text-color: $white;
+
+
+// 24. Scroll to Top Button
+// -----------------------------
+
+$scroll-top-bg-color: $primary-color;
+$scroll-top-text-color: $white;
+$scroll-top-left-radius: 50px;
+$scroll-top-right-radius: 50px;
+$scroll-bottom-right-radius: 50px;
+$scroll-bottom-left-radius: 50px;
 
 //These are used by numerous components but seldom change
 

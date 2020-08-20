@@ -34,6 +34,10 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  h3 {
+    font-family: $body-font-family;
+    letter-spacing: 0 !important;
+  }
 }
 .ui-icon-triangle-1-e {
   display: none;

@@ -3,7 +3,7 @@
   h1 {
     @include breakpoint(small) {
       font-size: 36px;
-      line-height: 0.9;
+      line-height: $hero-h1-line-height;
     }
     @include breakpoint(medium) {
       font-size: 48px;

@@ -76,7 +76,7 @@ jQuery(document).ready(function($) {
 
 			if ($(window).width() >= 1024) {
 				$(this).addClass("opened");
-				$(this).children("ul").stop(true, false).delay(350).fadeIn(150);
+				$(this).children("ul").stop(true, false).delay(500).fadeIn(150);
 				e.preventDefault();
 			}
 			});

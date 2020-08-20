@@ -62,8 +62,15 @@
 					font-weight:700;
 					content:'\f107';
 					position: absolute;
-					//right:0;
+					margin-left: 0.3rem;
 				}
+			}
+			@include breakpoint(small only) {
+				max-width: 50vw;
+				//word-wrap: break-word;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
 			}
 		}
 		.store-name {

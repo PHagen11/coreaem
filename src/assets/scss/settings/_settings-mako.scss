@@ -89,17 +89,17 @@ $border-gray: #EBEDF2;
 $light-gray: #F4F5F7;
 $medium-gray: #808285;
 $dark-gray: #52555C;
-$black: #000000;
+$black: #313236;
 $white: #FFFFFF;
 $body-background: $light-gray;
-$body-font-color: $dark-gray;
+$body-font-color: $black;
 $body-font-family: 'Roboto', sans-serif, Helvetica, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-position: 1rem;
 $global-weight-normal: 500;
-$global-weight-bold: italic;
+$global-weight-bold: 800;
 $global-radius: 0px;
 $global-menu-padding: 0.7rem 1rem;
 $global-menu-nested-margin: 1rem;
@@ -147,10 +147,10 @@ $block-grid-max: 8;
 $header-font-family: 'Oswald', sans-serif;
 $header-font-weight: 700;
 $header-letter-spacing: -0.5px;
-$header-font-style: $global-weight-bold;
+$header-font-style: italic;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: $black;
-$header-lineheight: 1.2;
+$header-lineheight: 1.1;
 $header-margin-bottom: 0.6rem;
 $header-styles: (
   small: (
@@ -755,7 +755,7 @@ $reveal-max-width: $global-width;
 $reveal-padding: $global-padding;
 $reveal-border: 1px solid $medium-gray;
 $reveal-radius: $global-radius;
-$reveal-zindex: 1005;
+$reveal-zindex: 1000;
 $reveal-overlay-background: rgba($black, 0.45);
 
 // 48. Slider
@@ -935,8 +935,10 @@ $xy-block-grid-max: 8;
 $icon-weight: 300;
 
 // Links
-a {
-  color: $secondary-color
+p a {
+  color: $secondary-color !important;
+  font-weight: 700;
+  text-decoration: underline;
 }
 .input-group-label {
   background:#EDEDED;
@@ -981,7 +983,7 @@ $right: right;
 
 // Spacing
 $none:0;
-$tiny:20px;
+$tiny: 12px;
 $small: 40px;
 $medium: 60px;
 $large: 80px;
@@ -1026,9 +1028,9 @@ $header-submenu-background-color: $secondary-color;
 $header-submenu-link-color: $black;
 $header-submenu-link-color-hover: $primary-color;
 $header-link-arrow-color: $secondary-color;
-$header-link-arrow-margin-top: 5px;
+$header-link-arrow-margin-top: 8px;
 $header-submenu-line-height: 1.7rem;
-$header-submenu-link-font-size: 0.9rem;
+$header-submenu-link-font-size: 1rem;
 $header-logo-height: 56px;
 $header-logo-padding-top: 20px;
 $header-cta-left-spacing: 1rem;
@@ -1056,7 +1058,7 @@ $sub-navigation-text-transform: uppercase;
 $sub-navigation-link-color-start: $white;
 $sub-navigation-link-color-hover: $white;
 $sub-navigation-link-font-size: 1rem;
-$sub-navigation-selected-background-color: #1E2128;
+$sub-navigation-selected-background-color: rgba(0,0,0, 0.25);
 $sub-navigation-selected-text-color: $white;
 
 // 6. Sticky Anchor Component
@@ -1151,6 +1153,7 @@ $profile-size: 60px;
 // -----------------------------
 
 $hero-default-bg-color: $black;
+$hero-h1-line-height:1.1;
 
 // Desktop Sizes
 $small-desktop-hero: 380px;
@@ -1227,7 +1230,7 @@ $gallery-prevnext-color-hover: $white;
 $gallery-prevnext-background-color: rgba(0, 0, 0, 0.45);
 $gallery-toolbar-icons-color-start:$primary-color;
 $gallery-toolbar-icons-color-hover:$white;
-$gallery-image-margin-bottom: 1.2rem;
+$gallery-image-margin-bottom: 0.5rem;
 
 // 14. Icon Component
 // -----------------------------
@@ -1278,16 +1281,17 @@ $model-listing-border-radius: none;
 $model-listing-model-year-size: 1em;
 $model-listing-model-year-weight: bold;
 $model-listing-model-name-font: $header-font-family;
-$model-listing-model-name-size: 1.5em;
+$model-listing-model-name-size: 1.75em;
 $model-listing-model-name-weight: bold;
 $model-listing-model-name-transform: uppercase;
 $model-listing-model-name-line-height: 1.2em;
 $model-listing-model-name-tag-color: $primary-color; //i.e.: NEW
-$model-listing-model-name-tag-weight: normal;
+$model-listing-model-name-tag-weight: bold;
+$model-listing-model-name-style: italic;
 $model-listing-package-detail-margin: 1rem 0;
 $model-listing-package-font-weight: bold;
 $model-listing-package-font-size: 1rem;
-$model-listing-price-block-margin: 1rem 0;
+$model-listing-price-block-margin: 0;
 $model-listing-price-label-size: 0.85em; //i.e.: NO HAGGLE NO HASSLE National Price
 $model-listing-price-label-color: $medium-gray;
 $model-listing-price-sale-value-size: 1.5em;
@@ -1313,18 +1317,19 @@ $model-listing-specs-value-weight: bold;
 
 // 20. Model Price Component
 // -----------------------------
-$model-price-name-font-family: $header-font-family;
+
 $model-price-model-year-size: 1em;
 $model-price-model-year-weight: bold;
-$model-price-model-name-size: 1.5em;
+$model-price-name-font-family: $header-font-family;
+$model-price-model-name-size: 1.75em;
 $model-price-model-name-weight: bold;
 $model-price-model-name-transform: uppercase;
 $model-price-model-name-line-height: 1.2em;
 $model-price-model-name-tag-color: $primary-color; //i.e.: NEW
 $model-price-model-name-tag-weight: normal;
-$model-price-package-detail-margin: 1rem 0;
+$model-price-package-detail-margin: 0.75rem 0;
 $model-price-td-padding: 0.25rem 0;
-$model-price-block-margin: 1rem 0;
+$model-price-block-margin: 0;
 $model-price-label-size: 1em; //i.e.: NO HAGGLE NO HASSLE National Price
 $model-price-label-color: inherit;
 $model-price-sale-value-size: 1em;
@@ -1347,7 +1352,6 @@ $model-price-save-value-color: $alert-color;
 $model-price-dealer-select-label-size: 1em;
 $model-price-dealer-select-link-size: 1em;
 $model-price-dealer-name-size: 1em;
-$model-price-dealer-name-weight: bold;
 $model-price-dealer-name-link-size: 1em;
 $model-price-dealer-name-link-weight: normal;
 $model-price-prep-label-size: 1em;
@@ -1396,7 +1400,7 @@ $boat-types-label-weight: bold;
 // 23. Build A Boat Component
 // -----------------------------
 
-$bab-header-background-color: $black;
+$bab-header-background-color: $primary-color;
 $bab-header-boat-name-size: 1.3rem;
 $bab-header-boat-name-weight: 900;
 $bab-header-price-total-color: $white;
@@ -1417,7 +1421,18 @@ $bab-custom-color-part-tab-selected-color-text-color: $medium-gray;
 $bab-custom-color-part-tab-bkg-color: transparent;
 $bab-custom-color-part-tab-bkg-color-selected: $border-gray;
 $bab-model-name-header-color: $white;
-$bab-header-expanded-color: $primary-color;
+$bab-header-expanded-color: $secondary-color;
+$bab-header-expanded-text-color: $white;
+
+// 24. Scroll to Top Button
+// -----------------------------
+
+$scroll-top-bg-color: $primary-color;
+$scroll-top-text-color: $white;
+$scroll-top-left-radius: 0px;
+$scroll-top-right-radius: 0px;
+$scroll-bottom-right-radius: 0px;
+$scroll-bottom-left-radius: 0px;
 
 //These are used by numerous components but seldom change
 

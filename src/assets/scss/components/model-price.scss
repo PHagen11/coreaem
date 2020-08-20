@@ -12,8 +12,9 @@
         vertical-align: bottom;
 
         td {
-          width: 50%;
+          width: 60%;
           padding: $model-price-td-padding;
+          margin-right: 10px;
         }
       }
     }
@@ -110,7 +111,7 @@
 
     .dealer-name {
       font-size: $model-price-dealer-name-size;
-      font-weight: $model-price-dealer-name-weight;
+      font-weight: bold !important;
     }
 
     .dealer-name-link {
@@ -167,6 +168,12 @@
       margin-top: 1rem;
     }
   }
+  .button.hollow.primary {
+    @include breakpoint (medium only) {
+      margin-left: 12px;
+      max-width: 45%;
+    }
+  }
   .cta {
     margin-top: 1rem;
   }
@@ -182,6 +189,16 @@
         color: $primary-color;
         padding-right: 0.6rem;
       }
+    }
+  }
+  #pfdealer {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px 20px 0px 20px;
+    border: 2px solid $border-gray;
+    .dealer-selected {
+      margin-bottom: 0.5rem;
     }
   }
 }

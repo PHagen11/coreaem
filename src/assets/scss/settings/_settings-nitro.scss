@@ -934,8 +934,10 @@ $xy-block-grid-max: 8;
 $icon-weight: 300;
 
 // Links
-a {
-  color: $secondary-color
+p a {
+  color: $secondary-color !important;
+  font-weight: 700;
+  text-decoration: underline;
 }
 .input-group-label {
   background:#EDEDED;

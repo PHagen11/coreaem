@@ -77,6 +77,10 @@
           border:none;
           background: none;
           padding: 1rem 0 0 0;
+          h6 {
+            text-align: left;
+            padding-top: 1rem
+          }
         }
 
       table {
@@ -144,6 +148,10 @@
     td:nth-child(even) {
       font-weight: bold;
     }
+  }
+  .model-specs .standard, .model-specs .standard-no-metric, .model-specs .metric {
+    width: 100%;
+    font-weight: bold;
   }
 }
 

@@ -1,13 +1,14 @@
 .build-a-boat-header {
   max-width: 2000px;
   width: 100%;
-  z-index: 1000;
+  z-index: 10000;
   //height: 90px;
   position: fixed;
   _postion: absolute;
   bottom: 0;
   background-color: $bab-header-background-color;
   padding: 0.8rem 0 ;
+  margin: 0 !important;
   .cell {
     //border-left: 1px solid $dark-gray;
     //vertical-align: center;

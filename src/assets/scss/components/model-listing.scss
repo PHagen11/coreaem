@@ -6,7 +6,9 @@
   .model-year {
     font-size: $model-listing-model-year-size;
     font-weight: $model-listing-model-year-weight;
+    margin-top: 0.75rem;
   }
+
 
   .model-name {
     font-family: $model-listing-model-name-font;
@@ -14,6 +16,7 @@
     font-weight: $model-listing-model-name-weight;
     line-height: $model-listing-model-name-line-height;
     text-transform: $model-listing-model-name-transform;
+    font-style: $model-listing-model-name-style;
 
     .tag {
       font-weight: $model-listing-model-name-tag-weight;

@@ -14,11 +14,20 @@
     padding: 2rem 1rem 4rem 3rem;
     height: 100%;
   }
+  .bab-boat-year-brand {
+    @include breakpoint (small) {
+      text-align: center;
+    }
+    @include breakpoint (large) {
+      text-align: left;
+    }
+  }
   .bab-boat {
     .bab-boat-name {
       font-size: 1.8rem;
       font-weight: 900;
       text-transform: uppercase;
+      line-height: 1.1;
     }
   }
   .dealer-info {
@@ -32,6 +41,7 @@
     line-height: 1.5em;
     .accordion-title {
       border: none;
+      line-height: 1.3;
       color: $black;
       font-size: 1.1rem;
       font-family: $body-font-family;
@@ -48,9 +58,16 @@
       i {
         padding-right: 0.4rem;
         color: $primary-color;
+        @include breakpoint (small only) {
+          display:none;
+        }
       }
       &:hover, &:focus {
         background: none;
+      }
+      .byoDealerName {
+        display: inline-block;
+        padding-right:2rem;
       }
     }
     .accordion-content {
@@ -99,7 +116,7 @@
       }
 
       .price-sale-value {
-        color: $alert-color;
+        color: $primary-color;
       }
 
       .price-save-value {
@@ -229,5 +246,16 @@
   	width: 1em;
   	height: 1em;
   	margin-right: 0.5em;
+  }
+  .is-active > .accordion-title::before {
+    content: '+';
+    top:35%;
+  }
+
+  #btnPrintSave {
+    @include breakpoint (xlarge) {
+      width: 17vw;
+      max-width: 350px;
+    }
   }
 }

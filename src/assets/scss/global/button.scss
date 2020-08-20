@@ -37,3 +37,23 @@
 .right-arrow-icon:before {
   //place right icon here
 }
+
+.scroll-top-wrapper {
+    text-align: center;
+    z-index: 900;
+    background-color: $scroll-top-bg-color;
+    color: $scroll-top-text-color;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    right: 30px;
+    bottom: 30px;
+    padding-top: 0px;
+    border-top-left-radius: $scroll-top-left-radius;
+    border-top-right-radius: $scroll-top-right-radius;
+    border-bottom-right-radius: $scroll-bottom-right-radius;
+    border-bottom-left-radius: $scroll-bottom-left-radius;
+    &:hover {
+      background-color: $secondary-color;
+    }
+}
