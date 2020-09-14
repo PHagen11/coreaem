@@ -18,6 +18,10 @@
 	}
 }
 
+#byoContainer {
+	min-height: 800px;
+}
+
 .build-a-boat {
 	@include breakpoint(large) {
 		padding-bottom:2rem;

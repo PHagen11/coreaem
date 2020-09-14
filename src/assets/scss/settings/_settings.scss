@@ -1024,6 +1024,10 @@ $header-submenu-background-color: $secondary-color;
 $header-submenu-background-color: $light-gray;
 $header-submenu-link-color: $black;
 $header-submenu-link-font-size: 1rem;
+$header-submenu-line-height: 1.5rem;
+$header-submenu-link-color-hover: $primary-color;
+$header-link-arrow-color: $primary-color;
+$header-link-arrow-margin-top: 7px;
 $header-logo-height: 56px;
 $header-logo-padding-top: 20px;
 $header-cta-left-spacing: 1rem;
@@ -1033,6 +1037,13 @@ $header-hamburger-color: $black;
 $header-hamburger-weight: 400;
 $header-mobile-bottom-border: 1px solid $border-gray;
 
+// 4.5 Mini Nav
+// -----------------------------
+$mini-nav-store-dropdown-margin:1em 0 0; //1em 0 0 for bpbc
+$mini-nav-bg-color: $light-gray; //light-gray for bpbc
+$mini-nav-text-color: $dark-gray; // $dark-gray for bpbc
+$mini-nav-a-color: $primary-color;
+
 // 5. Sub Navigation Component
 // -----------------------------
 $sub-navigation-background-color: $black;
@@ -1040,6 +1051,7 @@ $sub-navigation-font-family: $header-font-family;
 $sub-navigation-text-color: $white;
 $sub-navigation-text-weight: 500;
 $sub-navigation-text-transform: uppercase;
+$sub-navigation-letter-spacing: 0;
 $sub-navigation-link-color-start: $medium-gray;
 $sub-navigation-link-color-hover: $white;
 $sub-navigation-link-font-size: 1rem;
@@ -1097,6 +1109,7 @@ $button-transform:none;
 
 // Hollow Button
 $hollow-radius: 6px;
+$button-hollow-padding: 0.7em 1.6em;
 
 // Clear Button
 @mixin button-clear {
@@ -1127,6 +1140,7 @@ $blockquote-weight: 500;
 $blockquote-color: $body-font-color;
 $author-weight: 600;
 $author-color: $secondary-color;
+$quote-font-tamily: $header-font-family;
 
 // Blockquote Profile Image
 $profile-radius: 10%;
@@ -1134,6 +1148,9 @@ $profile-size: 60px;
 
 // 10. Hero Component
 // -----------------------------
+
+$hero-default-bg-color: $secondary-color;
+$hero-h1-line-height: 1;
 
 // Desktop Sizes
 $small-desktop-hero: 380px;
@@ -1159,6 +1176,7 @@ $hero-bottom-padding: 3rem;
 
 // animation style and other OWL CAROUSEL options need to be set in /assets/js/imagecarousel.js\
 // view all Font Awesome icons here --> https://fontawesome.com/cheatsheet
+$image-carousel-border: none;
 $image-carousel-prevnext-color: $border-gray;
 $image-carousel-prevnext-background-color: $light-gray;
 $image-carousel-prevnext-font-size: 30px;
@@ -1245,6 +1263,7 @@ $basic-odd-background: $light-gray;
 $basic-even-background: $white;
 $model-specs-label-case: normal;
 $model-specs-border-right: 4px solid $white;
+$model-specs-padding: 0.6rem 0.8rem 0.6rem 0.8rem;
 
 // 18. Model Options Component
 // -----------------------------
@@ -1252,7 +1271,10 @@ $model-options-background-color: $white;
 
 // 19. Model Listing Component
 // -----------------------------
-
+$model-listing-bg-color: $white;
+$model-listing-box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+$model-listing-padding: 0.5rem 2rem 2rem 2rem;
+$model-listing-border-radius: 4px;
 $model-listing-model-year-size: 1em;
 $model-listing-model-year-weight: bold;
 $model-listing-model-name-size: 1.5em;
@@ -1262,6 +1284,9 @@ $model-listing-model-name-transform: uppercase;
 $model-listing-model-name-line-height: 1.2em;
 $model-listing-model-name-tag-color: $primary-color; //i.e.: NEW
 $model-listing-model-name-tag-weight: normal;
+$model-listing-model-name-style: normal;
+$model-listing-package-font-weight: regular;
+$model-listing-package-font-size: 1.1rem;
 $model-listing-package-detail-margin: 1rem 0;
 $model-listing-price-block-margin: 1rem 0;
 $model-listing-price-label-size: 0.85em; //i.e.: NO HAGGLE NO HASSLE National Price
@@ -1292,6 +1317,7 @@ $model-listing-specs-value-weight: bold;
 
 $model-price-model-year-size: 1em;
 $model-price-model-year-weight: bold;
+$model-price-name-font-family: $header-font-family;
 $model-price-model-name-size: 1.5em;
 $model-price-model-name-weight: bold;
 $model-price-model-name-transform: uppercase;
@@ -1391,7 +1417,20 @@ $bab-custom-color-nav-tab-bkg-color-selected: $black;
 $bab-custom-color-part-tab-part-text-color: $black;
 $bab-custom-color-part-tab-selected-color-text-color: $medium-gray;
 $bab-custom-color-part-tab-bkg-color: transparent;
+$bab-header-expanded-color: $primary-color;
+$bab-model-name-header-color: $white;
 $bab-custom-color-part-tab-bkg-color-selected: $border-gray;
+$bab-header-expanded-text-color: $black;
+
+// 24. Scroll to Top Button
+// -----------------------------
+
+$scroll-top-bg-color: $primary-color;
+$scroll-top-text-color: $white;
+$scroll-top-left-radius: 0px;
+$scroll-top-right-radius: 0px;
+$scroll-bottom-right-radius: 0px;
+$scroll-bottom-left-radius: 0px;
 
 //These are used by numerous components but seldom change
 
