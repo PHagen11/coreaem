@@ -1,7 +1,8 @@
 @charset 'utf-8';
 //@import 'settings/settings';
-@import 'settings/settings-suntracker';
+//@import 'settings/settings-suntracker';
 //@import 'settings/settings-tracker';
+@import 'settings/settings-tracker-off-road';
 //@import 'settings/settings-regency';
 //@import 'settings/settings-tahoe';
 //@import 'settings/settings-nitro';
@@ -56,11 +57,13 @@
 //@import "global/foundation-icons";
 
 // Font Awesome files
-// @import "vendor/fontawesome/fontawesome.scss";
-// @import "vendor/fontawesome/solid.scss";
-// @import "vendor/fontawesome/regular.scss";
-// @import "vendor/fontawesome/light.scss";
-// @import "vendor/fontawesome/brands.scss";
+
+///***COMMENT THESE OUT BEFORE EXPORTING TO AEM***///
+@import "vendor/fontawesome/fontawesome.scss";
+@import "vendor/fontawesome/solid.scss";
+@import "vendor/fontawesome/regular.scss";
+@import "vendor/fontawesome/light.scss";
+@import "vendor/fontawesome/brands.scss";
 
 // GLOBAL SCSS FILES
 @import 'global/custom-classes';
@@ -118,9 +121,9 @@
 @import 'components/build-your-own/bab-color';
 @import 'components/build-your-own/bab-summary';
 @import 'components/build-your-own/bab-send-to-dealer';
-// @import 'components/inventory/inventory-card';
-// @import 'components/inventory/inventory';
-// @import 'components/inventory/model';
+@import 'components/inventory/inventory-card';
+@import 'components/inventory/inventory';
+@import 'components/inventory/model';
 
 // STYLEGUIDE SPECIFIC SCSS FILES
 @import 'styleguide/styleguide';
