@@ -1,17 +1,27 @@
 .custom-build-nav {
 	border-bottom: 2px solid $border-gray;
+
 	li a {
+		border-bottom: 6px solid $border-gray;
 		padding: 1.5rem 5vw 1.2rem 5vw;
 		color: $medium-gray;
-		font-weight: bold;
+		font-weight: bold;	
 		//text-transform: uppercase;
 		&:hover {
-			border-bottom: 6px solid $border-gray;
+			border-bottom: 6px solid $primary-color;
 		}
 	}
 	.active {
 		color:$black;
 		border-bottom: 6px solid $primary-color;
+		&:hover {
+			border-bottom: 6px solid $primary-color;
+		}
+	}
+	.visited-step {
+		color:$black;
+		border-bottom: 6px solid $primary-color;
+		opacity: .5;
 		&:hover {
 			border-bottom: 6px solid $primary-color;
 		}
