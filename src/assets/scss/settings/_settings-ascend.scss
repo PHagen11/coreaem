@@ -65,7 +65,8 @@
 //  56. Xy Grid
 
 @import 'util/util';
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&family=Work+Sans:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 // 1. Global
 // ---------
 
@@ -93,7 +94,7 @@ $black: #000000;
 $white: #FFFFFF;
 $body-background: $light-gray;
 $body-font-color: $black;
-$body-font-family: 'Source Sans Pro', Arial, sans-serif;
+$body-font-family: 'Lato', Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -142,10 +143,10 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: 'Work Sans', Arial, sans-serif;
-$header-font-weight: 900;
-$header-letter-spacing: -0.5px;
-$header-font-style: normal;
+$header-font-family: 'Barlow', Arial, sans-serif;
+$header-font-weight: 700;
+$header-letter-spacing: 0px;
+$header-font-style: bold;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
 $header-lineheight: 1.2;
@@ -1007,7 +1008,7 @@ $border: 2px solid $border-gray;
 
 $header-nav-font-family: $body-font-family;
 $header-plain-text-color: $black; //ex: Link List component titles.
-$header-background-color: $white;
+$header-background-color: transparent;
 $header-link-background-color-hover: $light-gray;
 $header-background-hover: $light-gray;
 $header-link-color-start: $black;

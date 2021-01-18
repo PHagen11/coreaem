@@ -48,6 +48,13 @@
   border: 2px solid $primary-color;
   padding: 2rem;
 }
+.outline-card-style {
+  background: transparent;
+  border: 2px solid $primary-color;
+  padding: 2rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
 .card-style-overlap {
   @include breakpoint(small) {
     background: $white;
