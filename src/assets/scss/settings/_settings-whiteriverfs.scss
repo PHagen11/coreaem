@@ -79,21 +79,21 @@ $foundation-palette: (
   warning: #FFC400,
   alert: #ED1C24,
   border-gray: #EBEDF2,
-  light-gray: #F4F5F7,
-  medium-gray: #808285,
-  dark-gray: #52555C,
-  black: #313236,
+  light-gray: #F2F7FF,
+  medium-gray: #354F7C,
+  dark-gray: #093254,
+  black: #000000,
   white: #FFFFFF
 );
 $border-gray: #EBEDF2;
-$light-gray: #F4F5F7;
-$medium-gray: #808285;
-$dark-gray: #52555C;
-$black: #313236;
+$light-gray: #F2F7FF;
+$medium-gray: #354F7C;
+$dark-gray: #093254;
+$black: #000000;
 $white: #FFFFFF;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+$body-font-family: 'Roboto', Helvetica, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -1006,7 +1006,7 @@ $border: 2px solid $border-gray;
 // 4. Header Component
 // -----------------------------
 
-$header-nav-font-family: 'Josefin Sans';
+$header-nav-font-family: 'Roboto';
 $header-plain-text-color: $black; //ex: Link List component titles.
 $header-background-color: $white;
 $header-link-background-color-hover: $light-gray;

@@ -49,11 +49,13 @@
   padding: 2rem;
 }
 .outline-card-style {
-  background: transparent;
-  border: 2px solid $primary-color;
+  background: light-gray;
   padding: 2rem;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+  &:hover{
+    transition: 0.3s ease-in-out;
+    background: transparent;
+  }
 }
 .card-style-overlap {
   @include breakpoint(small) {
