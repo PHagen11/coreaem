@@ -1009,7 +1009,7 @@ $border: 2px solid $border-gray;
 $header-nav-font-family: $header-font-family;
 $header-plain-text-color: $white; //ex: Link List component titles.
 $header-background-color: $black;
-$header-link-background-color-hover: $secondary-color;
+$header-link-background-color-hover: $white;
 $header-background-hover: $secondary-color;
 $header-link-color-start: $white;
 $header-link-color-hover: $white;
@@ -1083,10 +1083,10 @@ $sticky-anchor-link-border-color-active: $primary-color;
 $hairline: 1px;
 $thin: 2px;
 $thick: 3px;
-$heavy: 5px;
+$heavy: 7px;
 
 // Width
-$size-small: 35px;
+$size-small: 50px;
 $size-medium: 140px;
 $size-large: 250px;
 $size-full: 100%;

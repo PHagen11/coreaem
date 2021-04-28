@@ -67,6 +67,7 @@
 @import 'util/util';
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 // 1. Global
 // ---------
 
@@ -76,18 +77,18 @@ $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #3A4A00,
   secondary: #233262,
-  success: #5AA831,
+  success: #91A87B,
   warning: #FBC241,
   alert: #ED1B2E,
   border-gray: #F2ECE5,
-  light-gray: #F7F3EF,
+  light-gray: #F4F5F7,
   medium-gray: #867F7E,
   dark-gray: #444142,
   black: #000000,
   white: #FFFFFF
 );
 $border-gray: #F2ECE5;
-$light-gray: #F7F3EF;
+$light-gray: #F4F5F7;
 $medium-gray: #867F7E;
 $dark-gray: #444142;
 $black: #000000;
@@ -1008,9 +1009,9 @@ $border: 2px solid $border-gray;
 
 $header-nav-font-family: $body-font-family;
 $header-plain-text-color: $black; //ex: Link List component titles.
-$header-background-color: transparent;
+$header-background-color: $white;
 $header-link-background-color-hover: $light-gray;
-$header-background-hover: $light-gray;
+$header-background-hover: $white;
 $header-link-color-start: $black;
 $header-link-color-hover: $black;
 $header-link-top-bottom-padding: 2.4rem;
