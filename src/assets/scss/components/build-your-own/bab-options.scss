@@ -46,7 +46,7 @@
   padding: 1rem 0 1rem 0;
   table tr {
     margin-top: 0.5rem;
-    background-color: none;
+    background-color: $global-background-color; //none;
   }
   table td {
     padding: 1rem 0;

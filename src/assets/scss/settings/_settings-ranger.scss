@@ -79,14 +79,14 @@ $foundation-palette: (
   success: #8AC35F,
   warning: #F1AB2C,
   alert: #E51B23,
-  border-gray: #EBEDF2,
+  border-gray: #313236,//#EBEDF2,
   light-gray: #CCCCCC,
   medium-gray: #80858F,
   dark-gray: #313236,
   black: #000000,
   white: #FFFFFF
 );
-$border-gray: #EBEDF2;
+$border-gray: #313236;/*#EBEDF2;*/
 $light-gray: #CCCCCC;
 $medium-gray: #8B8B8B;
 $dark-gray: #313236;
@@ -94,7 +94,7 @@ $black: #000000;
 $white: #FFFFFF;
 $body-background: $dark-gray;
 $body-font-color: $light-gray;
-$body-font-family: 'Lato', Helvetica, Arial, sans-serif;
+$body-font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;//'Lato', Helvetica, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -110,6 +110,11 @@ $global-prototype-breakpoints: false;
 $global-button-cursor: auto;
 $global-color-pick-contrast-tolerance: 0;
 $print-transparent-backgrounds: true;
+
+$global-link-color: $white;
+$global-background-color: $black;
+$global-font-color: $white;
+$global-font-secondary-color: $black;
 
 @include add-foundation-colors;
 
@@ -278,12 +283,13 @@ $badge-font-size: 0.6rem;
 // 10. Breadcrumbs
 // ---------------
 
-$breadcrumbs-margin: 0 0 $global-margin 0;
+//$breadcrumbs-margin: 0 0 $global-margin 0;
+$breadcrumbs-margin: 0 0 0 0;
 $breadcrumbs-item-font-size: rem-calc(11);
-$breadcrumbs-item-color: $primary-color;
+$breadcrumbs-item-color: $light-gray; //$primary-color;
 $breadcrumbs-item-color-current: $primary-color;
 $breadcrumbs-item-color-disabled: $medium-gray;
-$breadcrumbs-item-margin: 0.75rem;
+$breadcrumbs-item-margin: 0.25rem; //0.75rem;
 $breadcrumbs-item-uppercase: true;
 $breadcrumbs-item-separator: true;
 $breadcrumbs-item-separator-item: '/';
@@ -748,7 +754,7 @@ $responsive-embed-ratios: (
 // 47. Reveal
 // ----------
 
-$reveal-background: $white;
+$reveal-background: $dark-gray; //$white;
 $reveal-width: 600px;
 $reveal-max-width: $global-width;
 $reveal-padding: $global-padding;
@@ -790,7 +796,8 @@ $switch-paddle-transition: all 0.25s ease-out;
 // 50. Table
 // ---------
 
-$table-background: $white;
+//$table-background: $white;
+$table-background: $black;
 $table-color-scale: 5%;
 $table-border: 1px solid smart-scale($table-background, $table-color-scale);
 $table-padding: rem-calc(8 10 10);
@@ -935,7 +942,7 @@ $icon-weight: 300;
 
 // Links
 a {
-  color: $secondary-color
+  color: $global-link-color; //$secondary-color
 }
 .input-group-label {
   background:#EDEDED;
@@ -1009,11 +1016,11 @@ $border: 2px solid $border-gray;
 $header-nav-font-family: $header-font-family;
 $header-plain-text-color: $white; //ex: Link List component titles.
 $header-background-color: $black;
-$header-link-background-color-hover: $white;
+$header-link-background-color-hover: $secondary-color;
 $header-background-hover: $secondary-color;
 $header-link-color-start: $white;
 $header-link-color-hover: $white;
-$header-link-top-bottom-padding: 1.5rem;
+$header-link-top-bottom-padding: 2.4rem;
 $header-link-left-right-padding: 1vw;
 $header-link-font-size: 0.9rem;
 $header-link-arrow-color: $primary-color;
@@ -1022,11 +1029,11 @@ $header-menu-item-text-transform: uppercase;
 $header-menu-item-letter-spacing: 1px;
 $header-dropdown-arrow-color: $primary-color;
 $header-dropdown-width: 250px;
-$header-dropdown-background-color: $white;
+$header-dropdown-background-color: $secondary-color;
 $header-dropdown-border-left: 4px solid $light-gray;
 $header-submenu-background-color: $white;
-$header-submenu-link-color: $black;
-$header-submenu-link-color-hover: $primary-color;
+$header-submenu-link-color: $white;
+$header-submenu-link-color-hover: $white;
 $header-submenu-line-height: 1.5rem;
 $header-submenu-link-font-size: 1rem;
 $header-logo-height: 56px;
@@ -1041,19 +1048,19 @@ $header-mobile-bottom-border: 1px solid rgba(100,100,100, 0.2);
 // 4.5 Mini Nav
 // -----------------------------
 $mini-nav-store-dropdown-margin:0;
-$mini-nav-bg-color: $light-gray;
-$mini-nav-text-color: $black;
+$mini-nav-bg-color: $secondary-color;
+$mini-nav-text-color: $white;
 $mini-nav-a-color: $primary-color;
 
 // 5. Sub Navigation Component
 // -----------------------------
-$sub-navigation-background-color: $primary-color;
+$sub-navigation-background-color: $secondary-color; //$primary-color;
 $sub-navigation-font-family:$body-font-family;
-$sub-navigation-text-color: $black;
+$sub-navigation-text-color: $white; //$black;
 $sub-navigation-text-weight: bold;
 $sub-navigation-letter-spacing: 0px;
 $sub-navigation-text-transform: uppercase;
-$sub-navigation-link-color-start: $black;
+$sub-navigation-link-color-start: $light-gray; //$black;
 $sub-navigation-link-color-hover: $white;
 $sub-navigation-link-font-size: 1rem;
 $sub-navigation-selected-background-color: #171717;
@@ -1063,11 +1070,11 @@ $sub-navigation-selected-text-color: $white;
 // -----------------------------
 
 $sticky-anchor-link-text-transform: none;
-$sticky-anchor-link-text-color: $medium-gray;
+$sticky-anchor-link-text-color: $white;//$medium-gray;
 $sticky-anchor-link-border-size: 2px;
 $sticky-anchor-link-border-style: solid;
 $sticky-anchor-link-border-color: $border-gray;
-$sticky-anchor-link-text-color-hover: $black;
+$sticky-anchor-link-text-color-hover: $white;//$black;
 $sticky-anchor-link-border-size-hover:2px;
 $sticky-anchor-link-border-style-hover: solid;
 $sticky-anchor-link-border-color-hover: $primary-color;
@@ -1243,15 +1250,15 @@ $link-list-font-size: 1.1rem;
 // 16. Footer Component
 // -----------------------------
 
-$footer-background-color: $white;
-$footer-text-color: $black;
-$footer-link-color-start: $medium-gray;
-$footer-link-color-hover: $secondary-color;
+$footer-background-color: $body-background;
+$footer-text-color: $white;
+$footer-link-color-start: $white;
+$footer-link-color-hover: $white;
 $footer-bottom-nav-background-color: $black;
 $footer-bottom-nav-font-size: 0.7rem;
-$footer-bottom-nav-text-color: $medium-gray;
-$footer-bottom-nav-link-color-start: $medium-gray;
-$footer-bottom-nav-link-color-hover: $black;
+$footer-bottom-nav-text-color: $white;
+$footer-bottom-nav-link-color-start: $white;
+$footer-bottom-nav-link-color-hover: $white;
 
 // 17. Model Specs Component
 // -----------------------------
@@ -1397,14 +1404,14 @@ $boat-types-label-weight: bold;
 // 23. Build A Boat Component
 // -----------------------------
 
-$bab-header-background-color: $black;
+$bab-header-background-color: $dark-gray;
 $bab-header-boat-name-size: 1.3rem;
 $bab-header-boat-name-weight: 900;
 $bab-header-price-total-color: $white;
 $bab-header-price-total-size: 1.3rem;
 $bab-header-price-total-weight: 500;
-$bab-nav-bkg-color:$white;
-$bab-nav-item-color:$black;
+$bab-nav-bkg-color:$black;//$white;
+$bab-nav-item-color:$white;
 $bab-nav-item-size:1em;
 $bab-nav-item-weight:900;
 $bab-disclaimer-text-size: 2rem;
@@ -1413,8 +1420,8 @@ $bab-custom-color-nav-tab-text-color: $white;
 $bab-custom-color-nav-tab-bkg-color: transparent;
 $bab-custom-color-nav-tab-text-color-selected: $white;
 $bab-custom-color-nav-tab-bkg-color-selected: $black;
-$bab-custom-color-part-tab-part-text-color: $black;
-$bab-custom-color-part-tab-selected-color-text-color: $black;
+$bab-custom-color-part-tab-part-text-color: $white;
+$bab-custom-color-part-tab-selected-color-text-color: $white;
 $bab-custom-color-part-tab-bkg-color: transparent;
 $bab-custom-color-part-tab-bkg-color-selected: $border-gray;
 $bab-model-name-header-color: $white;

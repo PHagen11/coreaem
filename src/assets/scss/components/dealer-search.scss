@@ -1,6 +1,6 @@
 .dealer-search {
   .search-box {
-    background-color: $white;
+    background-color: global-background-color; //$white;
     padding:1.8rem 1rem 0.8rem 1rem;
   }
 
@@ -65,6 +65,10 @@
             border: 2px solid $border-gray;
             //box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 3rem;
+
+            a {
+                color: $global-link-color;
+            }  
 
             .dealer-name {
                 font-weight: $dealer-search-dealer-name-weight;
@@ -161,7 +165,7 @@
     }
     .store-set {
       color: $black;
-      background: $light-gray;
+      background: $dark-gray; //$light-gray;
       text-transform: uppercase;
       font-size: 1rem;
       font-weight: bold;

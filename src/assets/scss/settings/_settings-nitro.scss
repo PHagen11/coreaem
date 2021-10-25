@@ -82,14 +82,14 @@ $foundation-palette: (
   light-gray: #F4F5F7,
   medium-gray: #80858F,
   dark-gray: #52555B,
-  black: #303236,
+  black: #000000,
   white: #FFFFFF
 );
 $border-gray: #EBEDF2;
 $light-gray: #F4F5F7;
 $medium-gray: #8B8B8B;
 $dark-gray: #52555B;
-$black: #303236;
+$black: #000000;
 $white: #FFFFFF;
 $body-background: $light-gray;
 $body-font-color: $black;
@@ -143,11 +143,11 @@ $block-grid-max: 8;
 // ------------------
 
 $header-font-family: 'Roboto Condensed', Arial, sans-serif;
-$header-font-weight: 700i;
+$header-font-weight: 700;
 $header-letter-spacing: -0.5px;
 $header-font-style: italic;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: $secondary-color;
+$header-color: inherit;
 $header-lineheight: 1.2;
 $header-margin-bottom: 0.6rem;
 $header-styles: (
@@ -1008,8 +1008,8 @@ $border: 2px solid $border-gray;
 $header-nav-font-family: $header-font-family;
 $header-plain-text-color: $black; //ex: Link List component titles.
 $header-background-color: $white;
-$header-link-background-color-hover: $secondary-color;
-$header-background-hover: $white;
+$header-link-background-color-hover: $light-gray;
+$header-background-hover: $light-gray;
 $header-link-color-start: $black;
 $header-link-color-hover: $black;
 $header-link-top-bottom-padding: 1.5rem;
@@ -1022,8 +1022,8 @@ $header-menu-item-letter-spacing: 1px;
 $header-dropdown-arrow-color: $primary-color;
 $header-dropdown-width: 250px;
 $header-dropdown-background-color: $white;
-$header-dropdown-border-left: 4px solid $light-gray;
-$header-submenu-background-color: $white;
+$header-dropdown-border-left: 4px solid $white;
+$header-submenu-background-color: $secondary-color;
 $header-submenu-link-color: $black;
 $header-submenu-link-color-hover: $primary-color;
 $header-submenu-line-height: 1.5rem;
@@ -1031,7 +1031,7 @@ $header-submenu-link-font-size: 1rem;
 $header-logo-height: 56px;
 $header-logo-padding-top: 20px;
 $header-cta-left-spacing: 1rem;
-$header-icon-color: $white;
+$header-icon-color: $black;
 $header-menu-padding-right: 0px;
 $header-hamburger-color: $primary-color;
 $header-hamburger-weight: 400;

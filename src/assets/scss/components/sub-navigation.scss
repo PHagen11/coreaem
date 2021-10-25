@@ -15,6 +15,14 @@
       font-size: $sub-navigation-link-font-size;
     }
 
+    /* Added this class to work specifically for the component with the breadcrumb. */
+    .sub-nav-title {
+      padding-left: 0;
+      padding-right: 0;
+      font-weight: $sub-navigation-text-weight;
+      font-size: $sub-navigation-link-font-size;
+    }    
+
     .title-bar-left {
       flex: 2 1 auto;
       color: $sub-navigation-text-color;
@@ -24,7 +32,7 @@
         margin:0;
       }
       li {
-        padding: 1em 2em 1em 0;
+        padding: 1em 0 1em 0;//1em 2em 1em 0;
       }
     }
 

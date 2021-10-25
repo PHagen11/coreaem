@@ -13,7 +13,7 @@
   .link-list {
     margin-bottom: 1rem;
     .title {
-      color: $black !important;
+      color: $footer-text-color !important; /*$black !important;*/
       font-weight: normal;
     }
   }
@@ -54,6 +54,6 @@
     }
   }
   .dropdown.menu a {
-    background: none;
+    background: transparent;
   }
 }

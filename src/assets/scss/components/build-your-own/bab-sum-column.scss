@@ -1,13 +1,13 @@
 .bab-sum-col {
   @include breakpoint(small){
     border-top: 4px solid $border-gray;
-    background: $white;
+    //background: $white;
     position: scroll;
     padding:3rem;
     margin-top:3rem;
   }
   @include breakpoint(large){
-    background: $white;
+    //background: $white;
     margin-top:0;
     border-top:none;
     border-left: 2px solid $border-gray;
@@ -32,7 +32,7 @@
     line-height: 1.5em;
     .accordion-title {
       border: none;
-      color: $black;
+      color: $global-font-color; //$black;
       font-size: 1.1rem;
       font-family: $body-font-family;
       text-decoration: none;
@@ -67,6 +67,11 @@
     .dealer-result-phone {
       margin-top: 1.5rem;
       margin-bottom: 1em;
+      color: $global-font-color;
+
+      a {
+        color: $global-font-color;
+      }
     }
 
     .dealer-result-hours {
@@ -141,10 +146,10 @@
 
   .special-offers {
     @include breakpoint(small){
-      background: $light-gray;
+      background: $medium-gray;//$light-gray;
     }
     @include breakpoint(large){
-      background: $light-gray;
+      background: $medium-gray;//$light-gray;
     }
     font-size: 1rem;
     border-radius: 6px;

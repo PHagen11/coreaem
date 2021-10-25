@@ -6,6 +6,7 @@
   table {
     tbody {
       border: none;
+      background-color: $global-background-color;
 
       tr {
         background-color: transparent;
@@ -172,16 +173,23 @@
   }
   .dealer-info {
     border: 2px solid $border-gray;
-    background: $white;
+    //background: $white;
     .accordion-title {
       font-size: 1rem;
       text-decoration: none;
       font-weight: bold;
-      color: $black;
+      color: $body-font-color; //$black;
       i {
         color: $primary-color;
         padding-right: 0.6rem;
       }
     }
   }
+  a {
+    color: $global-link-color;
+  }  
+
+  // .dealer-result-phone a {
+  //   color: $white;
+  // }
 }

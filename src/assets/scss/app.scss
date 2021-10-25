@@ -8,7 +8,8 @@
 //@import 'settings/settings-mako';
 //@import 'settings/settings-ascend';
 //@import 'settings/settings-whiteriverfs';
-//@import 'settings/settings-ranger';
+@import 'settings/settings-ranger';
+//@import 'settings/settings-triton';
 @import 'foundation';
 @import 'motion-ui';
 
@@ -112,6 +113,7 @@
 @import 'components/dealer-search';
 @import 'components/international-dealer-list';
 @import 'components/brochure-request';
+/* */
 @import 'components/build-your-own/bab-header';
 @import 'components/build-your-own/bab-navigation';
 @import 'components/build-your-own/bab-sum-column';
@@ -121,9 +123,10 @@
 @import 'components/build-your-own/bab-color';
 @import 'components/build-your-own/bab-summary';
 @import 'components/build-your-own/bab-send-to-dealer';
-@import 'components/inventory/inventory-card';
-@import 'components/inventory/inventory';
-@import 'components/inventory/model';
+
+//@import 'components/inventory/inventory-card';
+//@import 'components/inventory/inventory';
+//@import 'components/inventory/model';
 
 // STYLEGUIDE SPECIFIC SCSS FILES
-@import 'styleguide/styleguide';
+//@import 'styleguide/styleguide';
