@@ -322,7 +322,7 @@ $button-transition: background-color 0.25s ease-out, color 0.25s ease-out;
 $buttongroup-margin: 1rem;
 $buttongroup-spacing: 1px;
 $buttongroup-child-selector: '.button';
-$buttongroup-expand-max: ;
+$buttongroup-expand-max: 1px, bold;
 $buttongroup-radius-on-each: true;
 
 // 13. Callout
@@ -1143,7 +1143,7 @@ $blockquote-weight: 500;
 $blockquote-color: $body-font-color;
 $author-weight: 600;
 $author-color: $secondary-color;
-$quote-font-tamily: $header-font-family;
+$quote-font-family: $header-font-family;
 
 // Blockquote Profile Image
 $profile-radius: 10%;

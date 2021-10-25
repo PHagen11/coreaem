@@ -85,6 +85,8 @@
     tbody {
       border: none;
       margin: 0;
+      background-color: $global-background-color;
+      color: $global-font-color;
 
       tr {
         background-color: transparent;

@@ -1,7 +1,9 @@
 .model-motors {
     table {
         thead {
-            background-color: $white;
+            //background-color: $white;
+            background-color: $global-background-color;
+            color: $global-font-color;
             border: none;
             //font-size: 1.1rem;
         }
@@ -64,7 +66,7 @@
                 padding: 0.5rem 0;
             }
             .motor-cat {
-              background: $light-gray;
+              background: $dark-gray; //$light-gray;
               font-weight: bold;
               padding-left: 0.75rem;
             }
@@ -77,5 +79,9 @@
                 padding: 0.5rem 0;
             }
         }
+    }
+
+    a {
+        color: $global-link-color;
     }
 }

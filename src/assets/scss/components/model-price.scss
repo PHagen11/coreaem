@@ -6,6 +6,7 @@
   table {
     tbody {
       border: none;
+      background-color: $global-background-color;
 
       tr {
         background-color: transparent;
@@ -179,26 +180,23 @@
   }
   .dealer-info {
     border: 2px solid $border-gray;
-    background: $white;
+    //background: $white;
     .accordion-title {
       font-size: 1rem;
       text-decoration: none;
       font-weight: bold;
-      color: $black;
+      color: $body-font-color; //$black;
       i {
         color: $primary-color;
         padding-right: 0.6rem;
       }
     }
   }
-  #pfdealer {
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    padding: 15px 20px 0px 20px;
-    border: 2px solid $border-gray;
-    .dealer-selected {
-      margin-bottom: 0.5rem;
-    }
-  }
+  a {
+    color: $global-link-color;
+  }  
+
+  // .dealer-result-phone a {
+  //   color: $white;
+  // }
 }

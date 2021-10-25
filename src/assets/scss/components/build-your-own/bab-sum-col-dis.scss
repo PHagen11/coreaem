@@ -5,6 +5,10 @@
   .call,
   .chat {
     margin-bottom: 1em;
+
+    a {
+      color: $global-font-color;
+    }
   }
 }
 

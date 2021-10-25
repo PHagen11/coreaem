@@ -5,7 +5,7 @@
     font-weight: bold;
     text-transform: capitalize;
     a.active {
-      color: $black;
+      color: $primary-color; //$black;
       text-decoration: underline;
       padding: 0 .5rem;
       &:hover {
@@ -116,7 +116,7 @@
     }
 
     .option-price {
-      color: $black;
+      //color: $black;
       font-weight: 600;
       text-align: left;
       width: 4em;
@@ -187,7 +187,7 @@
 
       table {
         tr:nth-child(odd) {
-          background-color: $light-gray;
+          background-color: $basic-odd-background;//$light-gray;
         }
 
         .option-name {

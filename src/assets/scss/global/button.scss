@@ -21,11 +21,9 @@
   @include button-text ('Lato');
   transform: $button-transform;
   color: $white;
-
 }
 .button.hollow {
   border-radius: $hollow-radius;
-  padding: $button-hollow-padding;
 }
 .button.clear {
   @include button-clear;

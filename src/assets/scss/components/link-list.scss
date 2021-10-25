@@ -41,6 +41,7 @@
 			padding:0.7rem 0;
 			font-family: $link-list-font-family;
 			font-size: $link-list-font-size;
+			background-color: transparent;
 		}
 		ul {
 			// outline:1px dotted blue;
@@ -52,6 +53,7 @@
 					// outline:2px double green;
 					padding:0.7rem 0;
 					// color:inherit;
+					background-color: transparent;
 				}
 			}
 		}

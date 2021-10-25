@@ -106,7 +106,8 @@
         clear: both;
       }
 
-      > li:not(.cta-container, .logo-container) {
+      > /*li:not(.cta-container, .logo-container)*/ /* <- This doesn't work, need to seperate. */
+        li:not(.cta-container):not(.logo-container) {
         transition: $global-transition;
 
         > a {
@@ -123,12 +124,12 @@
 
           &:hover {
             color: $header-link-color-hover;
-          }
+          }                     
         }
 
         &:hover {
           background-color: $header-background-hover;
-        }
+        }         
       }
 
       > li {
@@ -364,8 +365,7 @@
               a {
                 /* padding: 0.5em 0 0.5em 1.5em; */
               }
-            }
-
+            }            
             > li {
               float: none;
               width: 100%;
