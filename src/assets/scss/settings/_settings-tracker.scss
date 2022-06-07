@@ -110,6 +110,11 @@ $global-button-cursor: auto;
 $global-color-pick-contrast-tolerance: 0;
 $print-transparent-backgrounds: true;
 
+$global-link-color: $black;
+$global-background-color: $white;
+$global-font-color: $black;
+$global-font-secondary-color: $black;
+
 @include add-foundation-colors;
 
 // 2. Breakpoints
