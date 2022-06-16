@@ -24,6 +24,7 @@
 }
 .button.hollow {
   border-radius: $hollow-radius;
+  padding: $button-hollow-padding;
 }
 .button.clear {
   @include button-clear;

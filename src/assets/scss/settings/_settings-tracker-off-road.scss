@@ -101,7 +101,7 @@ $global-padding: 1rem;
 $global-position: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
-$global-radius: px;
+$global-radius: 4px;
 $global-menu-padding: 0.7rem 1rem;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
@@ -1116,8 +1116,8 @@ $button-transform:none;
 }
 
 // Hollow Button
-$hollow-radius: 0px;
-$button-hollow-padding:0.7em 1.6em;
+$hollow-radius: $global-radius; //0px;
+$button-hollow-padding:0.7em 1.6em !important;
 
 // Clear Button
 @mixin button-clear {
@@ -1251,15 +1251,15 @@ $link-list-font-size: 1.1rem;
 // 16. Footer Component
 // -----------------------------
 
-$footer-background-color: $white;
-$footer-text-color: $black;
+$footer-background-color: $black;
+$footer-text-color: $white;
 $footer-link-color-start: $medium-gray;
-$footer-link-color-hover: $secondary-color;
-$footer-bottom-nav-background-color: $light-gray;
+$footer-link-color-hover: $primary-color;
+$footer-bottom-nav-background-color: $dark-gray;
 $footer-bottom-nav-font-size: 0.7rem;
-$footer-bottom-nav-text-color: $medium-gray;
-$footer-bottom-nav-link-color-start: $primary-color;
-$footer-bottom-nav-link-color-hover: $black;
+$footer-bottom-nav-text-color: $white;
+$footer-bottom-nav-link-color-start: $white;
+$footer-bottom-nav-link-color-hover: $secondary-color;
 
 // 17. Model Specs Component
 // -----------------------------
