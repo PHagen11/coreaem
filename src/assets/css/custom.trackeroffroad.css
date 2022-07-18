@@ -1,0 +1,62 @@
+/* Used in PDP of a model to display model name */
+.model-name-tor {
+    font-size: 48px;
+    font-weight: bold;
+}
+/* Used in PDP of a model to stick the navigation to the top of the page */
+.sticky-tabs-tor {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background: #FFF;
+    background-color: #FFF;
+    z-index: 20;
+}
+/* Overrides the blue on the product detail table */
+.option-price {
+    color: #101010
+}
+
+/* Sets the height of any component to fixed heights */
+.fixed-height-200 {
+    height: 200px;
+}
+.fixed-height-250 {
+    height: 250px;
+}
+.fixed-height-300 {
+    height: 300px;
+}
+.fixed-height-350 {
+    height: 350px;
+}
+.fixed-height-400 {
+    height: 400px;
+}
+.fixed-height-450 {
+    height: 450px;
+}
+.fixed-height-500 {
+    height: 500px;
+}
+.fixed-height-550 {
+    height: 550px;
+}
+.fixed-height-600 {
+    height: 600px;
+}
+.fixed-height-650 {
+    height: 650px;
+}
+.fixed-height-700 {
+    height: 700px;
+}
+.fixed-height-750 {
+    height: 750px;
+}
+.fixed-height-800 {
+    height: 800px;
+}
+.fixed-height-850 {
+    height: 850px;
+}
