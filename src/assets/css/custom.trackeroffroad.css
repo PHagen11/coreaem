@@ -1,5 +1,5 @@
 /* Used in PDP of a model to display model name */
-.model-name-tor {
+.model-price .model-name {
     font-size: 48px;
     font-weight: bold;
 }
