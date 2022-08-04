@@ -1,0 +1,914 @@
+
+
+/* Bass Pro Header */
+.bps-nav-container {
+    font-family: cabin;
+    max-width: 100%;
+  }
+  
+  .bps-nav-container .primary-nav-container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+  }
+  
+  .bps-nav-container a {
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .bps-nav-container a:hover {
+    color: #000;
+  }
+  
+  .bps-nav-container a:hover .primary-nav-item {
+    color: #1E1D19;
+  }
+  
+  .bps-nav-container a:hover .bargain-nav-item {
+    color: #8B0F0A;
+  }
+  
+  .bps-nav-container p {
+    color: #213629
+  }
+  
+  .bps-nav-container .secondary-left-links p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+    color: #213629
+  }
+  
+  .bps-nav-container .logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 5%;
+  }
+  
+  .bps-nav-container .logo {
+    height: 75px;
+  }
+  
+  .bps-nav-container .hamburger {
+    display: none;
+    height: 25px;
+    width: 25px;
+  }
+  
+  /* Responsive Desktop primary Nav */
+  @media only screen and (max-width: 1074px) {
+    .bps-nav-container .primary-nav-container {
+        width: 100%;
+        font-size: 15px;;
+    }
+    .bps-nav-container .logo-container {
+        margin-left: 0%;
+    }
+    .bps-nav-container .logo {
+        height: 60px;    
+    }
+  }
+  
+  
+  .bps-nav-container .secondary-nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    background-color: #F6F4F1;
+    font-weight: 700;
+  }
+  
+  /* .secondary-menu-item {
+    width: 30%;
+  } */
+  
+  .bps-nav-container .secondary-left-links {
+    width: 55%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 4%;
+    padding-right: 5%;
+    font-size: 14px;
+  }
+  
+  /* Modify primary font size to scale down size of nav */
+  @media only screen and (max-width: 1074px) {
+    .bps-nav-container .secondary-left-links {
+        font-size: 12px;
+    }
+  }
+  
+  @media only screen and (max-width: 1300px) {
+    .bps-nav-container .secondary-left-links {
+      width: 70%;
+    }
+  } 
+  
+  @media only screen and (max-width: 1195px) {
+    .bps-nav-container .secondary-left-links {
+      width: 80%;
+    }
+  }
+  @media only screen and (max-width: 1035px) {
+    .bps-nav-container .secondary-left-links {
+      width: 80%;
+    }
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .bps-nav-container .secondary-left-links {
+      width: 85%;
+    }
+  }
+   
+  /* Snap to mobile nav */
+  @media only screen and (max-width: 800px) {
+    .bps-nav-container .hamburger {
+      display: flex;
+      margin-right: 10%;
+      margin-left: 10%;
+    }
+  
+    .bps-nav-container .primary-nav-container p {
+      display: none;
+    }
+  
+    .bps-nav-container .secondary-nav-container {
+      display: none;
+    }
+  
+    .bps-nav-container .mobile-menu {
+      display: none;
+    }
+  
+  }
+  
+  @media only screen and (min-width: 800px) {
+    .bps-nav-container .mobile-menu {
+      display: none;
+    }
+  }
+  
+  .bps-nav-container .show {
+    display: block;
+  }
+  
+  .bps-nav-container .mobile-menu {
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    /* position: fixed; */
+    background-color: #FFF;
+    overflow: visible;
+  }
+  
+  .bps-nav-container .mobile-menu p {
+    font-size: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: cabin;
+  }
+  
+  .bps-nav-container .mobile-menu-item {
+    border-bottom: #E0E0E0;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 0.5px;
+    border-style: solid;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    flex-direction: row;
+  }
+  
+  
+  
+  /* Cabelas Global */
+  .bps-nav-container .cab p {
+    font-family: "Open Sans";
+    color: #616630
+  }
+  
+  .bps-nav-container .cab-phone {
+    background-color: #616630;
+    color: #FFF;
+  }
+  
+  .bps-nav-container .cab-phone p {
+    color: #FFF;
+  }
+  
+  
+  .bps-nav-container .navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+  }
+  
+  
+  /* Mega Menu Styles */
+  
+  .bps-nav-container .navbar a {
+    float: left;
+    font-size: 16px;
+    /* color: white; */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* The dropdown container */
+  .bps-nav-container .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .bps-nav-container .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font: inherit; 
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  
+  /* Dropdown content (hidden by default) */
+  .bps-nav-container .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    left: 0;
+    z-index: 999;
+    padding: 2%;
+  }
+  
+  .bps-nav-container .mega-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .bps-nav-container .mega-col {
+    align-self: flex-start;
+    justify-content: space-around;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bps-nav-container .mega-col h3 {
+    color: #213629;
+    line-height: 24px;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: 'Bebas Neue';
+  }
+  
+  
+  .bps-nav-container .mega-col h2 {
+    color: #213629;
+    font-weight: 400;
+    font-size: 34px;
+    font-family: 'Bebas Neue';
+  }
+  
+  .bps-nav-container .mega-col a {
+    color: #656464;
+    font-size: 16px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: left;
+    text-decoration: none;
+    font-family: 'Open Sans';
+    line-height: 24px;
+    font-weight: 400;
+  }
+  .bps-nav-container a:hover {
+    text-decoration: underline;
+  }
+  
+  .bps-nav-container .mega-col p {
+    font-weight: 400;
+    font-family: 'Open Sans';
+    color: #656464;
+    line-height: 24px;
+    font-size: 16px;
+  }
+  
+  .bps-nav-container .mega-cta {
+    background-color: #213629;
+    color: #FFF;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+    width: 200px;
+  }
+  
+  .bps-nav-container .mega-cta p {
+    color: #FFF;
+    font-size: 14px;
+    font-family: 'cabin';
+  }
+  
+  .bps-nav-container .mega-cta:hover {
+    background-color: #4A5A50;
+  }
+  
+  
+  /* Update Fonts on Mega Menu to allow it to be displayed cleanly on smaller displays */
+  @media only screen and (max-width: 1075px) {
+    .bps-nav-container .mega-col h3 {
+      font-size: 22px;
+    }
+  
+    .bps-nav-container .mega-col h2 {
+      font-size: 32px;
+    }
+  
+    .bps-nav-container .mega-col a {
+      font-size: 14px;
+    }
+  
+    .bps-nav-container .mega-col p {
+      font-size: 14px;
+    }
+  
+    .bps-nav-container .mega-cta {
+      /* width: 200px; */
+    }
+  
+  }
+  
+  @media only screen and (max-width: 915px) and (min-width: 800px) {
+    .bps-nav-container .mega-col h3 {
+      font-size: 20px;
+    }
+  
+    .bps-nav-container .mega-col h2 {
+      font-size: 30px;
+    }
+  
+    .bps-nav-container .mega-col a {
+      font-size: 11px;
+    }
+  
+    .bps-nav-container .mega-col p {
+      font-size: 12px;
+    }
+    
+    .bps-nav-container .mega-cta {
+      /* width: 220px; */
+    }
+  
+  }
+  
+  /* Show the dropdown menu on hover */
+  .bps-nav-container .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .bps-nav-container .dropdown:hover .chevron-icon:before {
+    content: "\f077";
+  }
+  
+  
+  
+  /* Add a background color on hover */
+  .bps-nav-container .column a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Clear floats after the columns */
+  .bps-nav-container .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  
+  /* Style the buttons that are used to open and close the accordion panel */
+  .bps-nav-container .accordion {
+    background-color: #FFF;
+    width: 100%;
+  }
+  
+  .bps-nav-container .active .chevron-icon:before{
+    content: "\f077";
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .bps-nav-container .active, .accordion:hover {
+    background-color: #FFF;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .bps-nav-container .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
+  
+  .bps-nav-container .mobile-menu h3 {
+    font-family: Bebas Neue;
+    color: #213629
+  }
+  
+  .bps-nav-container .mobile-external {
+    border-width: thin;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-style: solid;
+    color: gray;
+  }
+
+
+
+
+  /* Cabelas Header */
+.cab-nav-container {
+    font-family: cabin;
+    max-width: 100%;
+  }
+  
+  .cab-nav-container .primary-nav-container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+  }
+  
+  .cab-nav-container  a {
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .cab-nav-container a:hover {
+    color: #000;
+  }
+  
+  .cab-nav-container a:hover .primary-nav-item {
+    color: #616630;
+  }
+  
+  .cab-nav-container a:hover .bargain-nav-item {
+    color: #8B0F0A;
+  }
+  
+  .cab-nav-container  p {
+    color: #616630;
+    font-family: "Open Sans";
+  }
+  
+  .cab-nav-container .secondary-left-links p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+    color: #213629
+  }
+  
+  .cab-nav-container .logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 5%;
+  }
+  
+  .cab-nav-container .logo {
+    height: 55px;
+  }
+  
+  .cab-nav-container .hamburger {
+    display: none;
+    height: 25px;
+    width: 25px;
+  }
+  
+  /* Responsive Desktop primary Nav */
+  @media only screen and (max-width: 1074px) {
+    .cab-nav-container .primary-nav-container {
+        width: 100%;
+        font-size: 15px;;
+    }
+    .cab-nav-container .logo-container {
+        margin-left: 0%;
+    }
+    .cab-nav-container .logo {
+        height: 60px;    
+    }
+  }
+  
+  
+  .cab-nav-container .secondary-nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    background-color: #F6F4F1;
+    font-weight: 700;
+  }
+  
+  
+  .cab-nav-container .secondary-left-links {
+    width: 55%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 4%;
+    padding-right: 5%;
+    font-size: 14px;
+  }
+  
+  .cab-nav-container .secondary-left-links p {
+    color: #616630;
+  }
+  
+  /* Modify primary font size to scale down size of nav */
+  @media only screen and (max-width: 1074px) {
+    .cab-nav-container .secondary-left-links {
+        font-size: 12px;
+    }
+  }
+  
+  @media only screen and (max-width: 1300px) {
+    .cab-nav-container .secondary-left-links {
+      width: 70%;
+    }
+  } 
+  
+  @media only screen and (max-width: 1195px) {
+    .cab-nav-container .secondary-left-links {
+      width: 80%;
+    }
+  }
+  @media only screen and (max-width: 1035px) {
+    .cab-nav-container .secondary-left-links {
+      width: 80%;
+    }
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .cab-nav-container .secondary-left-links {
+      width: 85%;
+    }
+  }
+   
+  /* Snap to mobile nav */
+  @media only screen and (max-width: 800px) {
+    .cab-nav-container .hamburger {
+      display: flex;
+      margin-right: 10%;
+      margin-left: 10%;
+    }
+  
+    .cab-nav-container .primary-nav-container p {
+      display: none;
+    }
+  
+    .cab-nav-container .secondary-nav-container {
+      display: none;
+    }
+  
+    .cab-nav-container .mobile-menu {
+      display: none;
+    }
+  
+  }
+  
+  @media only screen and (min-width: 800px) {
+    .cab-nav-container .mobile-menu {
+      display: none;
+    }
+  }
+  
+  .cab-nav-container .show {
+    display: block;
+  }
+  
+  .cab-nav-container .mobile-menu {
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    /* position: fixed; */
+    background-color: #FFF;
+    overflow: visible;
+  }
+  
+  .cab-nav-container .mobile-menu p {
+    font-size: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: cabin;
+  }
+  
+  .cab-nav-container .mobile-menu-item {
+    border-bottom: #E0E0E0;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 0.5px;
+    border-style: solid;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    flex-direction: row;
+  }
+  
+  
+  
+  /* Cabelas Global */
+  .cab-nav-container .cab p {
+    font-family: "Open Sans";
+    color: #616630
+  }
+  
+  .cab-nav-container .cab-phone {
+    background-color: #616630;
+    color: #FFF;
+  }
+  
+  .cab-nav-container .cab-phone p {
+    color: #FFF;
+  }
+  
+  
+  .cab-nav-container .navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+  }
+  
+  
+  /* Mega Menu Styles */
+  
+  .cab-nav-container .navbar a {
+    float: left;
+    font-size: 16px;
+    /* color: white; */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* The dropdown container */
+  .cab-nav-container .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .cab-nav-container .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font: inherit; 
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  
+  /* Dropdown content (hidden by default) */
+  .cab-nav-container .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    left: 0;
+    z-index: 999;
+    padding: 2%;
+  }
+  
+  .cab-nav-container .mega-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .cab-nav-container .mega-col {
+    align-self: flex-start;
+    justify-content: space-around;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cab-nav-container .mega-col h3 {
+    color: #616630;
+    line-height: 24px;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: 'League Gothic';
+  }
+  
+  
+  .cab-nav-container .mega-col h2 {
+    color: #616630;
+    font-weight: 400;
+    font-size: 34px;
+    font-family: 'League Gothic';
+  }
+  
+  .cab-nav-container .mega-col a {
+    color: #656464;
+    font-size: 16px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: left;
+    text-decoration: none;
+    font-family: 'Open Sans';
+    line-height: 24px;
+    font-weight: 400;
+  }
+  .cab-nav-container a:hover {
+    text-decoration: underline;
+  }
+  
+  .cab-nav-container .mega-col p {
+    font-weight: 400;
+    font-family: 'Open Sans';
+    color: #656464;
+    line-height: 24px;
+    font-size: 16px;
+  }
+  
+  .cab-nav-container .mega-cta {
+    background-color: #616630;
+    color: #FFF;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+    width: 200px;
+  }
+  
+  .cab-nav-container .mega-cta p {
+    color: #FFF;
+    font-size: 14px;
+    font-family: 'cabin';
+  }
+  
+  .cab-nav-container .mega-cta:hover {
+    background-color: #4A5A50;
+  }
+  
+  
+  /* Update Fonts on Mega Menu to allow it to be displayed cleanly on smaller displays */
+  @media only screen and (max-width: 1075px) {
+    .cab-nav-container .mega-col h3 {
+      font-size: 22px;
+    }
+  
+    .cab-nav-container .mega-col h2 {
+      font-size: 32px;
+    }
+  
+    .cab-nav-container .mega-col a {
+      font-size: 14px;
+    }
+  
+    .cab-nav-container .mega-col p {
+      font-size: 14px;
+    }
+  
+    .cab-nav-container .mega-cta {
+      /* width: 200px; */
+    }
+  
+  }
+  
+  @media only screen and (max-width: 915px) and (min-width: 800px) {
+    .cab-nav-container .mega-col h3 {
+      font-size: 20px;
+    }
+  
+    .cab-nav-container .mega-col h2 {
+      font-size: 30px;
+    }
+  
+    .cab-nav-container .mega-col a {
+      font-size: 11px;
+    }
+  
+    .cab-nav-container .mega-col p {
+      font-size: 12px;
+    }
+    
+    .cab-nav-container .mega-cta {
+      /* width: 220px; */
+    }
+  
+  }
+  
+  /* Show the dropdown menu on hover */
+  .cab-nav-container .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .cab-nav-container .chevron-icon {
+    color: #616630;
+  }
+  
+  .cab-nav-container .dropdown:hover .chevron-icon:before {
+    content: "\f077";
+  }
+  
+  
+  
+  /* Add a background color on hover */
+  .cab-nav-container .column a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Clear floats after the columns */
+  .cab-nav-container .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  
+  /* Style the buttons that are used to open and close the accordion panel */
+  .cab-nav-container .accordion {
+    background-color: #FFF;
+    width: 100%;
+  }
+  
+  .cab-nav-container .active .chevron-icon:before{
+    content: "\f077";
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .cab-nav-container .active, .accordion:hover {
+    background-color: #FFF;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .cab-nav-container .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
+  
+  .cab-nav-container .mobile-menu h3 {
+    font-family: Bebas Neue;
+    color: #213629
+  }
+  
+  .cab-nav-container .mobile-external {
+    border-width: thin;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-style: solid;
+    color: gray;
+  }

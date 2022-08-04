@@ -1,0 +1,62 @@
+
+
+BPBC Custom Header Menu Navigation
+This custom navigation is to display specific html based on if the user is coming from the BPS or the CAB website.
+
+
+FILES INVOLVED
+
+HTML
+File: custom > bpbc > nav-bps-cab 
+    > BP-NAV.html 
+    > CAB-NAV.html
+These fies contain the custom html for the BPBC custom main navigation. These files are uploaded to the AEM Assets location here:
+/content/dam/wrmg-web/bpbc/...
+
+CSS
+File: custom > bpbc > nav-bps-cab > custom-header.css
+The css for the custom nav is contained within this custom css file. This css file is then uploaded to the AEM Assets located here:
+/content/dam/wrmg-web/bpbc/custom-header.css
+
+JS
+File: custom > bpbc > nav-bps-cab > custom-header.js
+The js for the custom nav is contained within this custom js file. This js file is then uploaded to the AEM Assets located here:
+/content/dam/wrmg-web/bpbc/custom-header.js
+
+
+
+
+AEM IMPLEMENTATION INSTRUCTIONS
+
+How to apply the html/css/js to the website within AEM.
+
+
+Apply these scripts in the Global page properties > Scripts > Head Section Script
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,500&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/94e937e5b9.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="/content/dam/wrmg-web/bpbc/custom-header.css">
+
+
+Apply these scripts in the Global page properties > Scripts > Footer Section Script
+
+<script src="/content/dam/wrmg-web/bpbc/custom-header.js" defer></script>
+
+
+
+Home Page Authoring
+
+Original Header Component
+    In the component dialog > Design tab > Unique ID field > add the value 'orgheader'
+
+Place an Injector component directly below the current Header component.
+
+Injector Component
+    In the component dialog > Geneal tab -- Apply the following within the code textarea:
+
+    <div id="div_content">
+    </div>

@@ -18,7 +18,7 @@
     }
   }
 
-  a {
+  .submenu a {
     color: $footer-link-color-start;
     transition: $global-transition;
 
@@ -41,9 +41,11 @@
         text-transform: uppercase;
         transition: $global-transition;
 
+        /*
         &:hover {
           color: $footer-bottom-nav-link-color-hover;
         }
+        */
       }
       @include breakpoint(small) {
         padding-top: 1rem;
