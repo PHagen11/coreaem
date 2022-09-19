@@ -395,7 +395,9 @@
   .bps-nav-container .dropdown:hover .dropdown-content {
     display: block;
   }
-  
+  .bps-nav-container .chevron-icon {
+    color: #213629
+  }
   .bps-nav-container .dropdown:hover .chevron-icon:before {
     content: "\f077";
   }

@@ -3,10 +3,10 @@
 Header Menu Navigation
 
 HTML
-File: custom > trackeroffroad > nav > header-nav.html 
+File: custom > brand-specific > trackeroffroad > nav > header-nav.html 
 This fie contains the custom html for the TOR main navigation. This html is copied and pasted into the site home page within the Injector component.
 
 CSS
-File: assets > css > custom-trackeroffroad.css
+File: custom > brand-specific > trackeroffroad > assets > css > custom-trackeroffroad.css
 The css for the custom nav is contained within this custom css file. This css file is then uploaded to the AEM Assets located here:
 /content/dam/wrmg/tracker-off-road/site/assets/css/custom-trackeroffroad.css

@@ -1,0 +1,29 @@
+
+FILES
+
+JS
+File: custom > global > js > custom.js
+This fie contains custom js to be applied to the site at the Global template page settings. Contains script such as copyright setting.
+
+
+JS
+File: custom > global > js > lead.js
+This fie contains js to be applied specificaly within the page settings on a page where a lead inquiry form resides. 
+This script captures the form submit and sends to the receiving api to save the lead and also connects with Trojan to send to Marketo.
+
+
+
+
+
+IMPLEMENTATION INSTRUCTIONS
+
+
+These files are located in the assets directory and can be referenced on a site like so:
+
+<script type="text/javascript" src="/content/dam/wrmg/global/js/custom.js"></script>
+<script type="text/javascript" src="/content/dam/wrmg/global/js/lead.js"></script>
+
+
+Can keep the script reference relative to the site it is on using the site domain.
+OR
+Can also use the cdn domain such as: https://assets.whiterivermg.com/
