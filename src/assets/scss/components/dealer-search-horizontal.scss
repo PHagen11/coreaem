@@ -1,0 +1,118 @@
+.dealer-search-horizontal {
+
+    .scrollable {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scrollbar-width: thin;
+        height: 500px;
+        max-height: 500px;
+        padding: 5px;
+        background-color: white;
+    }
+
+    .dealer-search-map {
+        width: 100%;
+        padding-bottom: 3rem;
+      //  height: 50vh;
+        background-size: cover;
+        background-position: center;
+    }    
+
+    .border-black {
+        //border: solid black 1px;
+    }
+    .border-yellow {
+        //border: solid yellow 1px;
+    } 
+
+    // Not used.
+    .result-card-style {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 0 !important;
+        border-radius: 4px !important;
+    }
+
+    .results 
+    {
+
+        max-height: 500px;
+
+        .result-entry
+        {
+
+            background: #FFFFFF;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 0 !important;
+            border: solid rgb(235, 234, 234) 1px;
+            border-radius: 4px !important;
+            margin-bottom: 3rem;
+
+
+            .pt-20 {
+                padding-top: 20px;
+            }            
+            .p-5 {
+                padding: 5px;
+            }
+            .br-1 {
+                border-right: solid rgb(235, 234, 234) 1px;
+            }
+            .bl-1 {
+                border-left: solid rgb(235, 234, 234) 1px;
+            }            
+
+            .map-marker {
+                color: $dealer-search-map-marker-color;
+                //margin-left: 1vw;
+            }
+            .map-marker-counter {
+                color: $dealer-search-map-marker-counter-color;
+                font-size: $dealer-search-map-marker-counter-size;
+                font-weight: $dealer-search-map-marker-counter-weight;
+                line-height: $dealer-search-map-marker-counter-line-height;
+                //margin-left: 1vw;
+                font-style: normal;
+            }
+
+            .dealer-name {
+                font-weight: $dealer-search-dealer-name-weight;
+                font-size: 1.0rem; //$dealer-search-dealer-name-size;
+                line-height: $dealer-search-dealer-name-line-height;
+                text-transform: uppercase;
+            }
+
+            .dealer-name > span {
+                font-weight: normal;
+                text-transform: none;
+            }
+
+            .my-dealer-btn > a 
+            {
+                font-size: 1.0rem;
+                text-decoration: none;
+            }
+            
+            .dealer-hours-title 
+            {
+                font-weight: bold;
+            }
+            .hours-open {
+                color: green;
+                font-weight: bold;
+            }
+            .hours-closed {
+                color: red;
+                font-weight: bold;
+            }
+            .hour-next {
+                font-weight: normal !important;
+            }   
+            
+            .button {
+                border-radius: 4px;
+            }
+        }
+    }
+
+}

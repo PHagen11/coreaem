@@ -1,0 +1,63 @@
+<div class="grid-x grid-padding-x page-title" id="page-title">
+  <div class="small-12 cell large-top large-bottom">
+    <h1>Dealer Search</h1>
+    <h4>Original Vertical Stack Layout</h4>
+    <a href="/dealer-search.html">< Back to Dealer Search page</a>
+  </div>
+</div>
+<div class="grid-container">
+  <div class="grid-x grid-margin-x sticky-anchor large-top" id="sticky-side-anchor-container">
+    <!-- Add a Sticky Menu -->
+    <!-- <div class="cell left small-12 medium-3 large-2 sticky-container" data-sticky-container>
+    <div class="samenu">
+      <div class="sticky" data-sticky data-anchor="sticky-side-anchor-container" data-margin-top="5" data-sticky-on="medium" data-deep-linking="true">
+        <ul class="vertical menu" data-magellan>
+          <li><a href="#model-listing">Model Listing</a></li>
+          <li><a href="#model-price">Model Price</a></li>
+          <li><a href="#model-specs">Model Specs</a></li>
+          <li><a href="#model-motors">Model Motors</a></li>
+          <li><a href="#model-features">Model Features</a></li>
+          <li><a href="#model-options">Model Options</a></li>
+          <li><a href="#dealer-search">Dealer Search</a></li>
+          <li><a href="#dealer-select">Dealer Select</a></li>
+          <li><a href="#international-dealers">Int. Dealers</a></li>
+        </ul>
+      </div>
+    </div>
+  </div> -->
+    <div class="cell small-12 large-12 sections" id="sections">
+
+
+      <!-- DEALERS NEARBY-->
+      <section id="dealer-search" data-magellan-target="dealer-search" class="large-bottom">
+        <h5 class="medium-bottom">Dealers Nearby</h5>
+        {{> dealer-nearby}}
+      </section>
+
+      <!-- BPBC DEALER SEARCH-->
+      <section id="bpbc-dealer-search" data-magellan-target="dealer-search" class="large-bottom">
+        <h5 class="medium-bottom">BPBC Dealer Search</h5>
+        {{> bpbc-dealer-search}}
+      </section>
+
+      <!-- DEALER SEARCH -->
+      <section id="dealer-search" data-magellan-target="dealer-search" class="large-bottom">
+        <h5 class="medium-bottom">Dealer Search</h5>
+        {{> dealer-search}}
+      </section>
+
+      <!-- DEALER SELECT -->
+      <section id="dealer-select" data-magellan-target="dealer-select" class="large-bottom">
+        <h5 class="medium-bottom">Dealer Select</h5>
+        {{> dealer-select-modal}}
+      </section>
+
+      <!-- INTERNATIONAL DEALERS -->
+      <section id="international-dealers" data-magellan-target="international-dealers" class="large-bottom">
+        <h5 class="medium-bottom">International Dealers</h5>
+        {{> international-dealer-list}}
+      </section>
+
+    </div>
+  </div>
+</div>

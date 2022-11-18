@@ -1,0 +1,4 @@
+
+This is custom css for the site as a whole. The css file is placed in the assets dam and referenced by the following url:
+
+https://assets.whiterivermg.com/content/dam/boating-center/css/custom.css
