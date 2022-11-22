@@ -13,11 +13,24 @@
         // .order-sm-only-2 {
         // order: 2;
         // }
-        
-        // .card-divider {
-        //     margin-bottom: 15px;
-        //     padding: 1px;
-        // }
+
+        .display-sm-none {
+            display: none;
+        }
+
+        .card-left-column {
+            width: calc(65.66667% - 1.875rem) !important;
+        }
+    
+        .card-divider {
+            // margin-bottom: 15px;
+            // padding: 1px;
+            display: none;
+        }
+  
+        .card-right-column {
+            width: calc(42.33333% - 1.875rem)!important;
+        }
     
         .checkmark {
             position: absolute;
@@ -25,6 +38,11 @@
             left: 0;
             right: 115px;
             margin: 0 4px;
+        }
+
+        .dealer-options-grid {
+            width: auto!important;
+            margin: 0 auto!important;
         }
     }
   
@@ -35,18 +53,19 @@
         }
     
         .card-divider {
-        width: calc(1% - 1.875rem) !important;
-        height: 140px;
-        padding: 1px;
-        position: absolute;
-        top: 50px;
-        right: 185px;
+            width: calc(1% - 1.875rem) !important;
+            height: 140px;
+            padding: 1px;
         }
   
         .card-right-column {
-        width: calc(42.33333% - 1.875rem)!important;
+            width: calc(42.33333% - 1.875rem)!important;
         }
     
+        .dealer-options-grid {
+            width: 150px!important;
+            margin: 0 auto!important;
+        }
     }
   
     /* Medium only */
@@ -87,6 +106,7 @@
         height: 500px;
         overflow-x: hidden;
         overflow-y: auto;
+        margin-right: 5px;
       }
 
     /* width */
@@ -117,10 +137,10 @@
       //  height: 50vh;
         background-size: cover;
         background-position: center;
-    }    
+    }
 
-    .border-black {
-        //border: solid black 1px;
+    .text-decoration-none {
+        text-decoration: none;
     }
 
     // Not used.
@@ -144,15 +164,21 @@
             padding: 0 !important;
             border: solid rgb(235, 234, 234) 1px;
             border-radius: 4px !important;
-            margin-right: 1rem;
+            // margin-right: 1rem;
             margin-bottom: 3rem;
 
 
             .pt-20 {
                 padding-top: 20px;
-            }            
+            }
+            .pt-10 {
+                padding-top: 10px;
+            }       
             .p-5 {
                 padding: 5px;
+            }
+            .p-20 {
+                padding: 20px;
             }
             .br-1 {
                 border-right: solid rgb(235, 234, 234) 1px;
@@ -178,6 +204,44 @@
                 font-style: normal;
             }
 
+            .dealer-badge {
+                max-width: 100%;
+                padding: .6rem .2rem 0 0;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+            }
+
+            .dealer-badge-container {
+                height: 30px;
+                width: auto;
+                border-radius: 0 30px 30px 0;
+                padding: 2px 5px;
+            }
+
+            .dealer-badge-entry {
+                height: 30px;
+                width: auto;
+                background-color: $light-gray;
+                margin-left: 5px;
+                padding: 2px 5px;
+                border-radius: 30px;
+                font-weight: 500;
+            }
+
+            .elite-dealer {
+                color: $white;
+                background-color: $black;
+            }
+
+            .info-unicode {
+                background-color: $light-gray;
+                color: $black;
+                font-size: 12px;
+                border: 1px solid $black;
+                border-radius: 100%;
+                padding: .3px 4px;
+            }
+
             .dealer-counter {
                 font-weight: $dealer-search-dealer-name-weight;
                 font-size: 1.3rem;
@@ -192,85 +256,7 @@
             }
 
             .dealer-name > span {
-                // font-weight: normal;
                 text-transform: none;
-            }
-
-            .my-dealer-btn > a 
-            {
-                font-size: 1.0rem;
-                text-decoration: none;
-            }
-            
-            .dealer-hours-title
-            {
-                font-weight: bold;
-            }
-            .hours-open {
-                color: green;
-                font-weight: bold;
-            }
-            .hours-closed {
-                color: red;
-                font-weight: bold;
-            }
-            .hour-next {
-                font-weight: normal !important;
-            }
-
-            .accordion-content {
-                border: none;
-                padding: 0;
-                max-width: 300px;
-            }
-
-            .accordion-content tbody tr {
-                // border: none;
-            }
-
-            .accordion-content tbody th, tbody td {
-                padding: 0.5rem 1rem 0.625rem;
-            }
-
-            .accordion-title {
-                border: 0;
-                padding: 0.75rem;
-            }
-            
-            .accordion-title:before {
-                content: "";
-            }
-            
-            .is-active > .accordion-title:before {
-                content: "";
-            }
-            
-            :last-child:not(.is-active) > .accordion-title {
-                border-bottom: 0;
-            }
-
-            .accordion-title {
-                color: #000;
-                font-size: 1rem;
-                display: inline-block;
-                padding: 0;
-                text-decoration: none;
-            }
-            
-            .accordion-title:hover,
-            .accordion-title:focus {
-                color: #000;
-                background-color: #fff;
-            }
-
-            .accordion-arrow {
-                color: $dealer-search-accordion-arrow-color;
-            }
-
-            .card-divider {
-                margin-bottom: 15px;
-                padding: 1px;
-                background-color: $light-gray;
             }
 
             /* Customize the label (the container) */
@@ -278,6 +264,7 @@
                 display: inline-block;
                 position: relative;
                 padding-left: 30px;
+                margin-bottom: 10px;
                 cursor: pointer;
                 font-size: 14px;
                 -webkit-user-select: none;
@@ -341,9 +328,118 @@
                 -ms-transform: rotate(45deg);
                 transform: rotate(45deg);
             }
+
+            .dealer-address {
+                margin-bottom: 15px;
+            }
+
+            .directions {
+                color: $black;
+                font-weight: 600;
+                text-decoration: underline;
+            }
+            
+            .dealer-hours-title
+            {
+                font-weight: bold;
+            }
+            .hours-open {
+                color: green;
+                font-weight: bold;
+            }
+            .hours-closed {
+                color: red;
+                font-weight: bold;
+            }
+            .hour-next {
+                font-weight: normal !important;
+            }
+
+            .accordion-content {
+                border: none;
+                padding: 0;
+                max-width: 300px;
+            }
+
+            .accordion-content tbody th, tbody td {
+                padding: 0.5rem 1rem 0.625rem;
+            }
+
+            .accordion-title {
+                border: 0;
+                padding: 0.75rem;
+            }
+            
+            .accordion-title:before {
+                content: "";
+            }
+            
+            .is-active > .accordion-title:before {
+                content: "";
+            }
+            
+            :last-child:not(.is-active) > .accordion-title {
+                border-bottom: 0;
+            }
+
+            .accordion-title {
+                color: #000;
+                font-size: 1rem;
+                display: inline-block;
+                padding: 0;
+                text-decoration: none;
+            }
+            
+            .accordion-title:hover,
+            .accordion-title:focus {
+                color: #000;
+                background-color: #fff;
+            }
+
+            .accordion-arrow {
+                color: $accordion-item-color;
+            }
+
+            .store-distance {
+                font-weight: $dealer-search-dealer-distance-weight;
+            }
+
+            .segments {
+                max-width: 100%;
+            }
+
+            .segment-main {
+                margin: 0 auto 15px;
+                padding: 3px 8px;
+                border-radius: 30px;
+                background-color: $light-gray;
+            }
+
+            .card-divider {
+                margin: 50px 5px 0 0;
+                padding: 1px;
+                background-color: $light-gray;
+                // position: absolute;
+                // top: 25px;
+                // right: 250px;
+            }
             
             .button {
                 border-radius: 4px;
+            }
+
+            .dealer-option-container {
+                margin-bottom: 10px;
+            }
+
+            a.dealer-option {
+                text-decoration: none;
+                font-size: 1.1rem;
+                color: $black;
+            }
+
+            a.dealer-option:hover {
+                color: $medium-gray;
             }
         }
     }

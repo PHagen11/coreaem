@@ -21,22 +21,25 @@
 
               <div class="result-entry">
 
-                <div class="grid-x border-black pt-20 pos-relative">
-                  <div class="cell small-2 medium-1 large-1 text-center p-5">
-                    <span class="fa-stack">
-                      <!-- <i class="map-marker fas fa-map-marker fa-stack-2x"></i>
-                      <i class="map-marker-counter fa-stack-1x">1</i> -->
-                      <div class="dealer-counter">1.</div>
-                    </span>
-                  </div>
-                  <div class="cell small-10 medium-9 large-8 p-5">
-                    <div class="dealer-name tiny-bottom">Bass Pro Shops Tracker Boat Center SPRINGFIELD, <span>City, State</span></div>
-                    <div class="dealer-address">49 Artisan Dr. Smyrna, DE 19977</div>
+                <div class="grid-x dealer-badge">
+                  <div class="cell shrink dealer-badge-container elite-dealer"><i class="fas fa-award"></i> Elite Dealer</div>
+                  <div class="cell shrink dealer-badge-entry">Offsite Service <span class="info-unicode">&#8505;</span></div>
+                </div>
+
+                <div class="grid-x pos-relative">
+                  <div class="cell medium-9 large-8 p-20">
+                    <div class="dealer-name tiny-bottom">1. Bass Pro Boating Center <span>Baltimore, MD</span></div>
+
+                    <label class="favorite" for="set-dealer-1">
+                      <input type="checkbox" id="set-dealer-1" name="set-dealer" value="favorite"><span id="favorite-1" class="semi-bold">SET AS MY DEALER</span>
+                    </input>
+
+                      <span class="checkmark"></span>
+                    </label>
+                    <div class="dealer-address">49 Artisan Dr. Smyrna, DE 19977 | <a href="#" class="directions">Get Directions</a></div>
 
                     <div class="grid-x">
                       <div class="cell large-12">
-                        <!-- <div><span class="dealer-hours-title">Store Open</span> <span class="hours-open">Now</span> &#x2022; <span class="hour-next">Closes 9:00 PM</span></div>
-                        <div><span class="dealer-hours-title">Service Center</span> <span class="hours-closed">Closed</span> &#x2022; <span class="hour-next">Opens Mon. 8:00 AM</span></div> -->
                         <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
                           <li class="accordion-item" data-accordion-item style="margin-bottom:10px;">
                             <a href="#" class="accordion-title"><span class="dealer-hours-title">Store Open</span> <span class="hours-open">Now</span> &#x25CF; Closes 9:00PM <i class="fas fa-chevron-down accordion-arrow"></i></a>
@@ -113,128 +116,48 @@
                             </div>
                           </li>
                         </ul>
+                        <div class="store-distance">00 Miles Away</div>
                       </div>
                     </div>
-
 
                   </div>
                   <div class="cell card-divider"></div>
                   <div class="cell auto p-5">
                     
-                    <div class="text-center"><a class="button tiny" href="#"><i class="fas fa-phone"></i> 000-000-000</a></div>
+                    <div class="display-sm-none text-center"><a class="button tiny" href="#">Contact Dealer</a></div>
 
-                    <div class="grid-x p-5">
-                      <div class="cell large-12">
-
-                        <!-- <div class="my-dealer-btn"><i class="fas fa-check-circle icon-primary"></i> <a href="#">My Dealer</a></div>
-                        <div class="my-dealer-btn tiny-bottom"><i class="far fa-circle icon-primary"></i> <a href="#">Set as My Dealer</a></div> -->
-
-                        <label class="favorite" for="set-dealer-1" style="margin-bottom:20px;">
-                          <input type="checkbox" id="set-dealer-1" name="set-dealer" value="favorite"><span id="favorite-1" class="semi-bold">SET AS MY DEALER</span></input>
-                          <span class="checkmark"></span>
-                        </label>
-
-                        <div class="links small-bottom">                  
-                          <div><i class="fas fa-globe"></i> <a href="#">View Website</a></div>
-                          <div><i class="fas fa-map-marker"></i> <a href="#">Get Directions</a></div>
+                      <div class="grid-x dealer-options-grid">                  
+                        <div class="cell small-1 medium-2 text-center">
+                          <i class="fas fa-phone"></i>
                         </div>
-
-                      </div>  
-                    </div>
+                        <div class="cell small-5 medium-10 dealer-option-container">
+                          <a href="#" class="dealer-option">1-000-000-0000</a>
+                        </div>
+                        <div class="cell small-1 medium-2 text-center">
+                          <i class="fas fa-wrench"></i>
+                        </div>
+                        <div class="cell small-5 medium-10 dealer-option-container">
+                          <a href="#" class="dealer-option">Service Inquiry</a>
+                        </div>
+                        <div class="cell small-1 medium-2 text-center">
+                          <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="cell small-5 medium-10 dealer-option-container">
+                          <a href="#" class="dealer-option">Visit Website</a>
+                        </div>
+                        <div class="cell small-1 medium-2 text-center">
+                          <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="cell small-5 medium-10 dealer-option-container">
+                          <a href="#" class="dealer-option">View Inventory</a>
+                        </div>
+                      </div>
 
                   </div>          
                 </div>
 
-              </div>
-
-              <div class="result-entry">
-
-                <div class="grid-x border-black pt-20">
-                  <div class="cell small-2 medium-1 large-1 text-center p-5">
-                    <span class="fa-stack">
-                      <i class="map-marker fas fa-map-marker fa-stack-2x"></i>
-                      <i class="map-marker-counter fa-stack-1x">1</i>
-                    </span>          
-                  </div>
-                  <div class="cell small-10 medium-9 large-8 p-5">
-                    
-                    <div class="dealer-name tiny-bottom">Bass Pro Shops Tracker Boat Center SPRINGFIELD, <span>City, State</span></div>
-                    <div class="dealer-address">2500 E. Kearney</div>
-
-                    <div class="grid-x">
-                      <div class="cell large-12">
-                        <div><span class="dealer-hours-title">Store Open</span> <span class="hours-open">Now</span> &#x2022; <span class="hour-next">Closes 9:00 PM</span></div>
-                        <div><span class="dealer-hours-title">Service Center</span> <span class="hours-closed">Closed</span> &#x2022; <span class="hour-next">Opens Mon. 8:00 AM</span></div>
-                      </div>
-                    </div>
-
-
-                  </div>
-                  <div class="cell auto p-5">
-                    
-                    <div class="text-center"><a class="button tiny" href="#"><i class="fas fa-phone"></i> 000-000-000</a></div>
-
-                    <div class="grid-x bl-1 p-5">
-                      <div class="cell large-12">
-
-                        <div class="my-dealer-btn"><i class="fas fa-check-circle icon-primary"></i> <a href="#">My Dealer</a></div>
-                        <div class="my-dealer-btn tiny-bottom"><i class="far fa-circle icon-primary"></i> <a href="#">Set as My Dealer</a></div>
-
-                        <div class="links small-bottom">                  
-                          <div><i class="fas fa-globe"></i> <a href="#">View Website</a></div>
-                          <div><i class="fas fa-map-marker"></i> <a href="#">Get Directions</a></div>
-                        </div>
-
-                      </div>  
-                    </div>
-
-                  </div>          
-                </div>
-
-              </div>
-
-              <div class="result-entry">
-
-                <div class="grid-x border-black pt-20">
-                  <div class="cell small-2 medium-1 large-1 text-center p-5">
-                    <span class="fa-stack">
-                      <i class="map-marker fas fa-map-marker fa-stack-2x"></i>
-                      <i class="map-marker-counter fa-stack-1x">1</i>
-                    </span>          
-                  </div>
-                  <div class="cell small-10 medium-9 large-8 p-5">
-                    
-                    <div class="dealer-name tiny-bottom">Bass Pro Shops Tracker Boat Center SPRINGFIELD, <span>City, State</span></div>
-                    <div class="dealer-address">2500 E. Kearney</div>
-
-                    <div class="grid-x">
-                      <div class="cell large-12">
-                        <div><span class="dealer-hours-title">Store Open</span> <span class="hours-open">Now</span> &#x2022; <span class="hour-next">Closes 9:00 PM</span></div>
-                        <div><span class="dealer-hours-title">Service Center</span> <span class="hours-closed">Closed</span> &#x2022; <span class="hour-next">Opens Mon. 8:00 AM</span></div>
-                      </div>
-                    </div>
-
-
-                  </div>
-                  <div class="cell auto p-5">
-                    
-                    <div class="text-center"><a class="button tiny" href="#"><i class="fas fa-phone"></i> 000-000-000</a></div>
-
-                    <div class="grid-x bl-1 p-5">
-                      <div class="cell large-12">
-
-                        <div class="my-dealer-btn"><i class="fas fa-check-circle icon-primary"></i> <a href="#">My Dealer</a></div>
-                        <div class="my-dealer-btn tiny-bottom"><i class="far fa-circle icon-primary"></i> <a href="#">Set as My Dealer</a></div>
-
-                        <div class="links small-bottom">                  
-                          <div><i class="fas fa-globe"></i> <a href="#">View Website</a></div>
-                          <div><i class="fas fa-map-marker"></i> <a href="#">Get Directions</a></div>
-                        </div>
-
-                      </div>  
-                    </div>
-
-                  </div>          
+                <div class="grid-x segments">
+                  <div class="cell shrink segment-main">Segments: Aluminum &#9679; Saltwater &#9679; Pontoons &#9679; Segm...<a href="#" class="text-decoration-none">View More <i class="far fa-chevron-down accordion-arrow"></i></a></div>
                 </div>
 
               </div>
@@ -262,6 +185,3 @@
 
 
 </div>
-
-
-
