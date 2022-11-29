@@ -1,6 +1,5 @@
 <div class="dealer-search-horizontal">
 
-
   <div class="grid-x">
     <div class="cell small-12 large-6">LEFT</div>
     <div class="cell small-12 large-6">RIGHT</div>
@@ -8,12 +7,56 @@
 
   <br/><br/><br/>
 
-  <!--<div class="grid-x grid-margin-x">-->
-  <div class="grid-y medium-grid-frame">    
-    <div class="cell medium-cell-block-container">
+  <div class="grid-container hero full">
+    <div class="grid-x align-middle align-center" style="height: 35vh; min-height: 300px;">
+      <div class="cell small-9 text-center">
+        <h1 class="header-text">Find Your Dealer</h1>
+        <p class="header-text">Enter the ZIP, City, or State of your location or preferred boating destination to view your nearest quality TRACKER dealer.</p>
+      </div>
+    </div>
+  </div>
 
+  <div class="grid-x dealer-search">
+    <div class="cell medium-6">
+      <form action="#" class="search-form">
+        <div class="search-type-container">
+          <ul class="vertical menu search-type-accordion" data-accordion-menu>
+            <li>
+              <a href="#" class="search-type-link" style="background-color:rgba(0,0,0,0); border-left:none;"><span class="bold">Search By</span> Zip Code <i class="fas fa-chevron-down search-type-arrow"></i></a>
+              <ul class="menu vertical nested" style="margin:0;">
+                <li><a href="#" style="border-left:none;">Zip Code</a></li>
+                <li><a href="#" style="border-left:none;">City</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="search-bar grid-x">
+          <i class="fas fa-search search-icon"></i>
+          <i class="fas fa-chevron-down arrow-icon"></i>
+          <select name="miles" class="miles align-self-middle" id="miles">
+            <option value="10">10 Miles</option>
+            <option value="25" selected>25 Miles</option>
+            <option value="50">50 Miles</option>
+            <option value="100">100 Miles</option>
+          </select>
+          <input class="input-field" type="text" id="dealer" name="dealer" placeholder="Zip, City">
+        </div>
+        <div class="use-location">
+          <a href="#"><i class="fas fa-crosshairs"></i> Use My Current Location</a>
+        </div>
+      </form>
+    </div>
+    <div class="cell medium-6 align-self-middle text-right show-all-dealers hide-for-small-only">
+      <a href="#"><i class="fas fa-globe-americas"></i> Show All Dealers</a>
+    </div>
+  </div>
+
+  <div class="grid-y medium-grid-frame dealer-results">    
+    <div class="cell dealer-results-column py-20 px-15">
+
+      <div class="results-text text-right">Viewing 1 - 12 of 50 results</div>
       <div class="grid-x">
-        <div class="cell small-12 large-6 medium-cell-block-y">
+        <div class="cell small-12 large-6 medium-cell-block-y order-sm-only-1 order-md-only-1">
           <div id="search-results-scrollable" class="scrollable">
 
 
@@ -42,7 +85,7 @@
                       <div class="cell large-12">
                         <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
                           <li class="accordion-item" data-accordion-item style="margin-bottom:10px;">
-                            <a href="#" class="accordion-title"><span class="dealer-hours-title">Store Open</span> <span class="hours-open">Now</span> &#x25CF; Closes 9:00PM <i class="fas fa-chevron-down accordion-arrow"></i></a>
+                            <a href="#" class="accordion-title"><span class="dealer-hours-title">Store Hours:</span> Open <span class="hours-open">Now</span> &#x25CF; Closes 9:00PM <i class="fas fa-chevron-down accordion-arrow"></i></a>
                             <div class="accordion-content" data-tab-content>
                               <table class="unstriped">
                                 <tbody class="border-none">
@@ -79,7 +122,7 @@
                             </div>
                           </li>
                           <li class="accordion-item" data-accordion-item>
-                            <a href="#" class="accordion-title"><span class="dealer-hours-title">Service Center</span> <span class="hours-closed">Closed</span> &#x25CF; Opens Mon. 8:00AM <i class="fas fa-chevron-down accordion-arrow"></i></a>
+                            <a href="#" class="accordion-title"><span class="dealer-hours-title">Service Hours:</span> <span class="hours-closed">Closed</span> &#x25CF; Opens 8:00AM <i class="fas fa-chevron-down accordion-arrow"></i></a>
                             <div class="accordion-content" data-tab-content>
                               <table class="unstriped">
                                 <tbody class="border-none">
@@ -157,7 +200,10 @@
                 </div>
 
                 <div class="grid-x segments">
-                  <div class="cell shrink segment-main">Segments: Aluminum &#9679; Saltwater &#9679; Pontoons &#9679; Segm...<a href="#" class="text-decoration-none">View More <i class="far fa-chevron-down accordion-arrow"></i></a></div>
+                  <div class="cell shrink segment-main">
+                    Aluminum &#9679; Inshore Saltwater &#9679; Pontoons &#9679; Segments
+                    <a href="#" class="text-decoration-none">View More <i class="far fa-chevron-down accordion-arrow"></i></a>
+                  </div>
                 </div>
 
               </div>
@@ -167,11 +213,12 @@
           </div>
         </div>
       
-        <div class="cell small-12 large-6 medium-cell-block-y">
-          <div class="dealer-search-map">
+        <div class="cell small-12 large-6 medium-cell-block-y order-sm-only-0 order-md-only-0">
+          <div class="dealer-results-map">
             <div id="map1">
               <div class="mapouter">
-                <div class="gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <div class="gmap_canvas">
+                  <iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                 </div>
               </div>
             </div>
@@ -181,7 +228,5 @@
 
     </div>    
   </div>  
-
-
 
 </div>

@@ -1,18 +1,20 @@
 .dealer-search-horizontal {
 
+    background-color: $body-background;
+
     /* Small only */
     @media screen and (max-width: 39.9375em) {
-        // .order-sm-only-0 {
-        // order: 0;
-        // }
+        .order-sm-only-0 {
+        order: 0;
+        }
     
-        // .order-sm-only-1 {
-        // order: 1;
-        // }
+        .order-sm-only-1 {
+        order: 1;
+        }
     
-        // .order-sm-only-2 {
-        // order: 2;
-        // }
+        .order-sm-only-2 {
+        order: 2;
+        }
 
         .display-sm-none {
             display: none;
@@ -23,8 +25,6 @@
         }
     
         .card-divider {
-            // margin-bottom: 15px;
-            // padding: 1px;
             display: none;
         }
   
@@ -66,6 +66,10 @@
             width: 150px!important;
             margin: 0 auto!important;
         }
+
+        .sticky-anchor .menu a {
+            background-color: transparent;
+        }
     }
   
     /* Medium only */
@@ -101,13 +105,162 @@
     /* Large only */
     @media screen and (min-width: 64em) and (max-width: 74.9375em) {
     }
+    
+    .pt-20 {
+        padding-top: 20px;
+    }
+    .pt-10 {
+        padding-top: 10px;
+    }
+    .py-20 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .px-15 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .p-5 {
+        padding: 5px;
+    }
+    .p-20 {
+        padding: 20px;
+    }
+    
+    .text-decoration-none {
+        text-decoration: none;
+    }
 
+    .bold {
+        font-weight: bold;
+    }
+
+    .hero {
+        background-color: $black;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .search-type-accordion a {
+        text-decoration: none;
+        padding: 0.7em;
+    }
+
+    .header-text {
+        color: $white;
+    }
+
+    .search-type-container {
+        position: relative;
+        width: 180px;
+    }
+
+    .search-type-text {
+        position: absolute;
+    }
+
+    .search-type-dropdown {
+        padding: 0 0 0 30px;
+        width: 200px;
+        height: 25px;
+        cursor: pointer;
+        background-color: transparent;
+    }
+
+    .search-type-arrow {
+        color: $primary-color;
+    }
+
+    .dealer-search {
+        margin: auto;
+        padding-top: 15px;
+        max-width: 95%;
+    }
+
+    .search-form {
+        max-width: 450px;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .search-bar i,
+    .search-bar select {
+        position: absolute;
+    }
+      
+    .search-icon {
+        top: 8px;
+        left: 0;
+        padding: 10px;
+        min-width: 50px;
+        text-align: center;
+        color: $primary-color;
+    }
+    
+    .arrow-icon {
+        z-index: 100;
+        top: 18px;
+        right: 15px;
+        color: $primary-color;
+    }
+      
+    select option {
+        cursor: pointer;
+    }
+          
+    select.miles {
+        right: 5px;
+        min-width: 100px;
+        width: auto;
+        height: auto;
+        border-radius: 0 25px 25px 0;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    select.miles:focus {
+        box-shadow: none;
+    }
+          
+    .input-field {
+        width: 100%;
+        color: #1a1a1a;
+        padding-left: 40px;
+        text-align: left;
+        border-radius: 25px;
+    }
+
+    .use-location a {
+        text-decoration: none;
+        color: $black;
+    }
+
+    .use-location i {
+        color: $primary-color;
+    }
+
+    .show-all-dealers a {
+        text-decoration: none;
+        color: $black;
+    }
+
+    .show-all-dealers i {
+        color: $primary-color;
+    }
+
+    /* scrollbar styles */
     div.scrollable {
-        height: 500px;
+        height: auto;
         overflow-x: hidden;
         overflow-y: auto;
         margin-right: 5px;
-      }
+        background-color: $light-gray;
+    }
 
     /* width */
     div.scrollable::-webkit-scrollbar {
@@ -131,16 +284,25 @@
         background: #555;
     }
 
-    .dealer-search-map {
-        width: 100%;
-        padding-bottom: 3rem;
-      //  height: 50vh;
-        background-size: cover;
-        background-position: center;
+    .dealer-results {
+        max-width: 95%;
+        margin: 20px auto;
+        border-radius: 10px;
     }
 
-    .text-decoration-none {
-        text-decoration: none;
+    .results-text {
+        margin-bottom: 10px;
+    }
+
+    .dealer-results-column {
+        background-color: #fff;
+    }
+
+    .dealer-results-map {
+        width: 100%;
+        padding-bottom: 2rem;
+        background-size: cover;
+        background-position: center;
     }
 
     // Not used.
@@ -162,24 +324,11 @@
             background: #FFFFFF;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             padding: 0 !important;
-            border: solid rgb(235, 234, 234) 1px;
+            border: solid 1px rgb(235, 234, 234);
             border-radius: 4px !important;
             // margin-right: 1rem;
             margin-bottom: 3rem;
 
-
-            .pt-20 {
-                padding-top: 20px;
-            }
-            .pt-10 {
-                padding-top: 10px;
-            }       
-            .p-5 {
-                padding: 5px;
-            }
-            .p-20 {
-                padding: 20px;
-            }
             .br-1 {
                 border-right: solid rgb(235, 234, 234) 1px;
             }
@@ -413,6 +562,20 @@
                 padding: 3px 8px;
                 border-radius: 30px;
                 background-color: $light-gray;
+                
+            }
+
+            .segment-main {
+                width: 300px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                text-transform: uppercase;
+                // display: inline;
+            }
+
+            .segment-view-more {
+                display: block;
             }
 
             .card-divider {
