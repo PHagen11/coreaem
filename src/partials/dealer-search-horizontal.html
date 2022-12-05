@@ -1,12 +1,5 @@
 <div class="dealer-search-horizontal">
 
-  <div class="grid-x">
-    <div class="cell small-12 large-6">LEFT</div>
-    <div class="cell small-12 large-6">RIGHT</div>
-  </div>
-
-  <br/><br/><br/>
-
   <div class="grid-container hero full">
     <div class="grid-x align-middle align-center" style="height: 35vh; min-height: 300px;">
       <div class="cell small-9 text-center">
@@ -18,22 +11,23 @@
 
   <div class="grid-x dealer-search">
     <div class="cell medium-6">
-      <form action="#" class="search-form">
+      <form class="search-form">
         <div class="search-type-container">
-          <ul class="vertical menu search-type-accordion" data-accordion-menu>
+          <i class="fas fa-chevron-down search-type-dropdown-icon"></i>
+          <ul class="dropdown menu search-type-accordion" data-dropdown-menu>
             <li>
-              <a href="#" class="search-type-link" style="background-color:rgba(0,0,0,0); border-left:none;"><span class="bold">Search By</span> Zip Code <i class="fas fa-chevron-down search-type-arrow"></i></a>
-              <ul class="menu vertical nested" style="margin:0;">
-                <li><a href="#" style="border-left:none;">Zip Code</a></li>
-                <li><a href="#" style="border-left:none;">City</a></li>
+              <a href="javascript: void();"><span class="bold">Search By</span> Zip Code</a>
+              <ul class="menu">
+                <li><a href="javascript: void();">Zip Code</a></li>
+                <li><a href="javascript: void();">City</a></li>
               </ul>
             </li>
           </ul>
         </div>
         <div class="search-bar grid-x">
           <i class="fas fa-search search-icon"></i>
-          <i class="fas fa-chevron-down arrow-icon"></i>
-          <select name="miles" class="miles align-self-middle" id="miles">
+          <i class="fas fa-chevron-down arrow-icon" id="dropdown-icon" onclick="toggleDropdown()"></i>
+          <select name="miles" class="miles align-self-middle" id="miles-dropdown">
             <option value="10">10 Miles</option>
             <option value="25" selected>25 Miles</option>
             <option value="50">50 Miles</option>
@@ -57,160 +51,178 @@
       <div class="results-text text-right">Viewing 1 - 12 of 50 results</div>
       <div class="grid-x">
         <div class="cell small-12 large-6 medium-cell-block-y order-sm-only-1 order-md-only-1">
-          <div id="search-results-scrollable" class="scrollable">
 
+          <div id="dealer-search-results" class="results scrollable">
 
-            <div id="dealer-search-results" class="results">
+            <div class="result-entry">
 
-              <div class="result-entry">
+              <div class="grid-x dealer-badge">
+                <div class="cell shrink dealer-badge-container elite-dealer"><i class="fas fa-award"></i> Elite Dealer</div>
+                <div class="cell shrink dealer-badge-entry">Offsite Service <i class="far fa-info-circle"></i></div>
+              </div>
 
-                <div class="grid-x dealer-badge">
-                  <div class="cell shrink dealer-badge-container elite-dealer"><i class="fas fa-award"></i> Elite Dealer</div>
-                  <div class="cell shrink dealer-badge-entry">Offsite Service <span class="info-unicode">&#8505;</span></div>
-                </div>
+              <div class="grid-x pos-relative">
+                <div class="cell card-left-column medium-9 large-8 py-20 px-15">
+                  <div class="dealer-name tiny-bottom">1. Bass Pro Boating Center <span>Baltimore, MD</span></div>
 
-                <div class="grid-x pos-relative">
-                  <div class="cell medium-9 large-8 p-20">
-                    <div class="dealer-name tiny-bottom">1. Bass Pro Boating Center <span>Baltimore, MD</span></div>
-
-                    <label class="favorite" for="set-dealer-1">
-                      <input type="checkbox" id="set-dealer-1" name="set-dealer" value="favorite"><span id="favorite-1" class="semi-bold">SET AS MY DEALER</span>
+                  <label class="favorite" for="set-dealer-1">
+                    <input type="checkbox" id="set-dealer-1" name="set-dealer" value="favorite"><span id="favorite-1" class="semi-bold">SET AS MY DEALER</span>
                     </input>
 
-                      <span class="checkmark"></span>
-                    </label>
-                    <div class="dealer-address">49 Artisan Dr. Smyrna, DE 19977 | <a href="#" class="directions">Get Directions</a></div>
+                    <span class="checkmark"></span>
+                  </label>
+                  <div class="dealer-address">49 Artisan Dr. Smyrna, DE 19977 | <a href="#" class="directions">Get Directions</a></div>
 
-                    <div class="grid-x">
-                      <div class="cell large-12">
-                        <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
-                          <li class="accordion-item" data-accordion-item style="margin-bottom:10px;">
-                            <a href="#" class="accordion-title"><span class="dealer-hours-title">Store Hours:</span> Open <span class="hours-open">Now</span> &#x25CF; Closes 9:00PM <i class="fas fa-chevron-down accordion-arrow"></i></a>
-                            <div class="accordion-content" data-tab-content>
-                              <table class="unstriped">
-                                <tbody class="border-none">
-                                  <tr class="border-bottom-none">
-                                    <td>Sunday</td>
-                                    <td>8AM - 8PM</td>
-                                  </tr>
-                                  <tr class="border-bottom-none">
-                                    <td>Monday</td>
-                                    <td>8AM - 8PM</td>
-                                  </tr>
-                                  <tr class="border-bottom-none">
-                                    <td>Tuesday</td>
-                                    <td>8AM - 8PM</td>
-                                  </tr>
-                                  <tr class="border-bottom-none">
-                                    <td>Wednesday</td>
-                                    <td>8AM - 8PM</td>
-                                  </tr>
-                                  <tr class="border-bottom-none">
-                                    <td>Thursday</td>
-                                    <td>8AM - 8PM</td>
-                                  </tr>
-                                  <tr class="border-bottom-none">
-                                    <td>Friday</td>
-                                    <td>8AM - 8PM</td>
-                                  </tr>
-                                  <tr class="border-bottom-none">
-                                    <td>Saturday</td>
-                                    <td>8AM - 8PM</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                          </li>
-                          <li class="accordion-item" data-accordion-item>
-                            <a href="#" class="accordion-title"><span class="dealer-hours-title">Service Hours:</span> <span class="hours-closed">Closed</span> &#x25CF; Opens 8:00AM <i class="fas fa-chevron-down accordion-arrow"></i></a>
-                            <div class="accordion-content" data-tab-content>
-                              <table class="unstriped">
-                                <tbody class="border-none">
-                                  <tr class="border-bottom-none">
-                                    <td>Sunday</td>
-                                    <td>10AM - 8PM</td>
-                                  </tr>
-                                  <tr class="border-bottom-none">
-                                    <td>Monday</td>
-                                    <td>8AM - 8PM</td>
-                                  </tr>
-                                  <tr class="border-bottom-none">
-                                    <td>Tuesday</td>
-                                    <td>8AM - 8PM</td>
-                                  </tr>
-                                  <tr class="border-bottom-none">
-                                    <td>Wednesday</td>
-                                    <td>8AM - 8PM</td>
-                                  </tr>
-                                  <tr class="border-bottom-none">
-                                    <td>Thursday</td>
-                                    <td>8AM - 8PM</td>
-                                  </tr>
-                                  <tr class="border-bottom-none">
-                                    <td>Friday</td>
-                                    <td>8AM - 8PM</td>
-                                  </tr>
-                                  <tr class="border-bottom-none">
-                                    <td>Saturday</td>
-                                    <td>8AM - 8PM</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                          </li>
-                        </ul>
-                        <div class="store-distance">00 Miles Away</div>
+                  <div class="grid-x">
+                    <div class="cell large-12">
+                      <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+                        <li class="accordion-item" data-accordion-item style="margin-bottom:10px;">
+                          <a href="#" class="accordion-title">
+                            <span class="dealer-hours-title">Store Hours:</span> <span class="hours-open">Open</span> &#x25CF; Closes 9:00PM 
+                            <!-- <i class="fas fa-chevron-down accordion-arrow"></i> -->
+                          </a>
+                          <div class="accordion-content" data-tab-content>
+                            <table class="unstriped">
+                              <tbody class="border-none">
+                                <tr class="border-bottom-none">
+                                  <td>Sunday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Monday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Tuesday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Wednesday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Thursday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Friday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Saturday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                          <a href="#" class="accordion-title">
+                            <span class="dealer-hours-title">Service Hours:</span> <span class="hours-closed">Closed</span> &#x25CF; Opens 8:00AM 
+                            <!-- <i class="fas fa-chevron-down accordion-arrow"></i> -->
+                          </a>
+                          <div class="accordion-content" data-tab-content>
+                            <table class="unstriped">
+                              <tbody class="border-none">
+                                <tr class="border-bottom-none">
+                                  <td>Sunday</td>
+                                  <td>10AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Monday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Tuesday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Wednesday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Thursday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Friday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Saturday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </li>
+                      </ul>
+                      <div class="store-distance">00 Miles Away</div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="cell card-divider"></div>
+                <div class="cell auto card-right-column p-5">
+                  
+                  <div class="display-sm-none text-center"><a class="button tiny" href="#">Contact Dealer</a></div>
+
+                    <div class="grid-x dealer-options-grid">                  
+                      <div class="cell small-1 medium-2 text-center">
+                        <i class="fas fa-phone"></i>
+                      </div>
+                      <div class="cell small-5 medium-10 dealer-option-container pl-5">
+                        <a href="#" class="dealer-option">1-000-000-0000</a>
+                      </div>
+                      <div class="cell small-1 medium-2 text-center">
+                        <i class="fas fa-wrench"></i>
+                      </div>
+                      <div class="cell small-5 medium-10 dealer-option-container pl-5">
+                        <a href="#" class="dealer-option">Service Inquiry</a>
+                      </div>
+                      <div class="cell small-1 medium-2 text-center">
+                        <i class="fas fa-globe"></i>
+                      </div>
+                      <div class="cell small-5 medium-10 dealer-option-container pl-5">
+                        <a href="#" class="dealer-option">Visit Website</a>
+                      </div>
+                      <div class="cell small-1 medium-2 text-center">
+                        <i class="fas fa-shopping-cart"></i>
+                      </div>
+                      <div class="cell small-5 medium-10 dealer-option-container pl-5">
+                        <a href="#" class="dealer-option">View Inventory</a>
                       </div>
                     </div>
 
-                  </div>
-                  <div class="cell card-divider"></div>
-                  <div class="cell auto p-5">
-                    
-                    <div class="display-sm-none text-center"><a class="button tiny" href="#">Contact Dealer</a></div>
-
-                      <div class="grid-x dealer-options-grid">                  
-                        <div class="cell small-1 medium-2 text-center">
-                          <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="cell small-5 medium-10 dealer-option-container">
-                          <a href="#" class="dealer-option">1-000-000-0000</a>
-                        </div>
-                        <div class="cell small-1 medium-2 text-center">
-                          <i class="fas fa-wrench"></i>
-                        </div>
-                        <div class="cell small-5 medium-10 dealer-option-container">
-                          <a href="#" class="dealer-option">Service Inquiry</a>
-                        </div>
-                        <div class="cell small-1 medium-2 text-center">
-                          <i class="fas fa-globe"></i>
-                        </div>
-                        <div class="cell small-5 medium-10 dealer-option-container">
-                          <a href="#" class="dealer-option">Visit Website</a>
-                        </div>
-                        <div class="cell small-1 medium-2 text-center">
-                          <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <div class="cell small-5 medium-10 dealer-option-container">
-                          <a href="#" class="dealer-option">View Inventory</a>
-                        </div>
-                      </div>
-
-                  </div>          
-                </div>
-
-                <div class="grid-x segments">
-                  <div class="cell shrink segment-main">
-                    Aluminum &#9679; Inshore Saltwater &#9679; Pontoons &#9679; Segments
-                    <a href="#" class="text-decoration-none">View More <i class="far fa-chevron-down accordion-arrow"></i></a>
-                  </div>
-                </div>
-
+                </div>          
               </div>
 
-            </div>        
+              <ul class="accordion segments" data-accordion data-allow-all-closed="true">
+                <li class="accordion-item grid-x" data-accordion-item>
+                  <div class="cell segment-names auto">Aluminum &#9679; Inshore Saltwater &#9679; Pontoons &#9679; Segments</div>
+                  <a href="#" class="cell accordion-title segment-view-more shrink">View More 
+                    <!-- <i class="far fa-chevron-down accordion-arrow"></i> -->
+                  </a>
+                  <div class="cell accordion-content align-self-center" data-tab-content>
+                    <p>Aluminum &#9679; Pontoons &#9679; Segments Aluminum &#9679; Pontoons &#9679; Segment Aluminum &#9679; Inshore Saltwater &#9679; Pontoons &#9679; Segment</p>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="grid-x">
+                <div class="cell mobile-contact-btn hide-for-medium text-center">
+                  <a href="#" class="button tiny">Contact Dealer</a>
+                </div>
+              </div>
+
+            </div>
 
           </div>
+          
+          <div class="load-more text-center">
+            <a href="javascript: void();" class="hollow button">Load More</a>
+          </div>
+            
         </div>
       
         <div class="cell small-12 large-6 medium-cell-block-y order-sm-only-0 order-md-only-0">

@@ -1,6 +1,6 @@
 .header {
   color: $header-plain-text-color;
-  z-index: 20;
+  // z-index: 20;
 
   .sticky-header {
     position: fixed;
@@ -12,7 +12,7 @@
   }
 
   .menu-container {
-    z-index: 20;
+    // z-index: 20;
     width: 100%;
     margin: 0;
     background: $header-background-color;
@@ -25,7 +25,7 @@
   }
 
   .menu-mobile {
-    z-index: 20;
+    // z-index: 20;
     width: 100%;
     display: none;
     padding: 1em 0;
@@ -74,7 +74,7 @@
 
   .header-menu {
     position: relative;
-    z-index: 20;
+    // z-index: 20;
     font-family: $header-nav-font-family;
 
     > ul {
@@ -149,7 +149,7 @@
           width: 100%;
           height: auto;
           background-color: $header-dropdown-background-color;
-          padding: 1rem 0;
+          padding: 1rem 0 0;
           border-top: 1px solid $border-gray;
           position: absolute;
           z-index: 99;
@@ -211,6 +211,27 @@
                 margin-top:$header-link-arrow-margin-top;
                 vertical-align: center;
               }
+            }
+
+            .shop-all {
+              padding: 1rem;
+              margin: 3rem 0 0 0;
+            }
+
+            .shop-all a {
+              font-weight: bold;
+              text-transform: uppercase;
+            }
+
+            .shop-all a::after {
+              content: '\f105';
+              font-family: 'Font Awesome 5 Pro';
+              font-weight: 600;
+              font-style: normal;
+              cursor: pointer;
+              margin: 0 0 0 0.5rem;
+              color: $primary-color;
+              transition: all 0.25s ease-in-out;
             }
           }
 
