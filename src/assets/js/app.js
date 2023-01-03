@@ -2,6 +2,8 @@
 // import jQuery from 'jquery';
 // import whatInput from 'what-input';
 
+const { isEmptyObject } = require("jquery");
+
 // window.$ = $;
 // window.jQuery = jQuery;
 
