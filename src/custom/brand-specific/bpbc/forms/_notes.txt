@@ -1,0 +1,23 @@
+
+
+On the page where the form is, place this in the page properties.
+
+Put in the Head Section Script.
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<style type="text/css">
+#loader {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.75) url(//www.basstrackerclassic.com/content/dam/tracker/landing-page/basstrackerclassic/loading2.gif) no-repeat center center;
+  z-index: 10000;
+}
+</style>
+
+
+Put the script in the bottom script section within the page properties. Get script contained within the folder where the form/js files are at.
