@@ -1,93 +1,573 @@
 <div class="dealer-search-horizontal">
 
-
-  <div class="grid-x">
-    <div class="cell small-12 large-6">LEFT</div>
-    <div class="cell small-12 large-6">RIGHT</div>
-  </div>
-
-  <br/><br/><br/>
-
-  <!--<div class="grid-x grid-margin-x">-->
-  <div class="grid-y medium-grid-frame">    
-    <div class="cell medium-cell-block-container">
-
-      <div class="grid-x">
-        <div class="cell small-12 large-6 medium-cell-block-y">
-          <div id="search-results-scrollable" class="scrollable">
-
-
-            <div id="dealer-search-results" class="results">
-
-              <div class="result-entry">
-
-                <div class="grid-x border-black pt-20">
-                  <div class="cell small-2 medium-1 large-1 text-center p-5 border-yellow">
-                    <span class="fa-stack">
-                      <i class="map-marker fas fa-map-marker fa-stack-2x"></i>
-                      <i class="map-marker-counter fa-stack-1x">1</i>
-                    </span>          
-                  </div>
-                  <div class="cell small-10 medium-9 large-8 p-5 border-yellow">
-                    
-                    <div class="dealer-name tiny-bottom">Bass Pro Shops Tracker Boat Center SPRINGFIELD, <span>City, State</span></div>
-                    <div class="dealer-address">2500 E. Kearney</div>
-
-                    <div class="grid-x">
-                      <div class="cell large-12">
-                        <div><span class="dealer-hours-title">Store Open</span> <span class="hours-open">Now</span> &#x2022; <span class="hour-next">Closes 9:00 PM</span></div>
-                        <div><span class="dealer-hours-title">Service Center</span> <span class="hours-closed">Closed</span> &#x2022; <span class="hour-next">Opens Mon. 8:00 AM</span></div>
+  <div class="reveal small" id="contact-dealer-modal-container"
+data-reveal data-close-on-click="true"
+data-animation-in="slide-in-up-custom"
+data-animation-out="slide-out-up-custom">
+    <div class="contact-dealer">
+      <div class="grid-x align-center">
+        <div class="cell small-1">
+          <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="cell small-12">
+          <div class="contact-dealer-heading">
+            <h3>Contact Information</h3>
+          </div>
+          <div class="form">
+            <form id="form4" data-abide novalidate>
+              <div data-abide-error class="alert callout" style="display: none;">
+                <p>
+                  <i class="fas fa-exclamation-triangle fa-xs">
+                  </i> There are some errors in your form.
+                </p>
+              </div>
+              <div class="grid-x">
+                <div class="small-12 medium-6 cell">
+                  <label>First Name * <input name="firstName" type="text" id="firstNameInput" placeholder="" required />
+                      <span class="form-error" data-form-error-for="firstNameInput">First Name is required.</span>
+                  </label>
+                </div>
+                <div class="small-12 medium-6 cell">
+                  <label>Last Name * <input name="lastName" type="text" id="lastNameInput" placeholder="" required />
+                      <span class="form-error" data-form-error-for="lastNameInput">Last Name is required.</span>
+                  </label>
+                </div>
+                <div class="small-12 medium-6 cell">
+                  <label>Phone * <input name="phone" type="text" id="phoneInput" placeholder="" required />
+                      <span class="form-error" data-form-error-for="phoneInput">Phone is required.</span>
+                  </label>
+                </div>
+                <div class="medium-4 medium-6 cell">
+                  <label>Zip/Postal Code * <input name="postalCode" type="text" id="postalCodeInput" placeholder=""
+                          required />
+                      <span class="form-error" data-form-error-for="postalCodeInput">Zip/Postal Code is required.</span>
+                  </label>
+                </div>
+                <div class="small-12 cell">
+                  <label>Email * <input name="email" type="text" id="emailInput" placeholder="" required pattern="email" />
+                      <span class="form-error" data-form-error-for="emailInput">Email address is required in standard
+                          email format.</span>
+                  </label>
+                </div>
+                <div class="medium-12 cell">
+                  <label for="subjectInput">Subject *
+                    <input name="subject" type="text" id="subjectInput" required />
+                    <span class="form-error" data-form-error-for="subjectInput">Subject is required.</span>
+                  </label>
+                </div>
+                <div class="medium-12 cell">
+                  <label for="questionInput">Question *
+                    <textarea name="message" id="questionInput" rows="3" required></textarea>
+                    <span class="form-error" data-form-error-for="questionInput">Question is required</span>
+                  </label>
+                </div>
+                <div class="small-12 cell preferred-contact-container">
+                  <!-- <div class="preferred-contact">
+                    <p>Preferred method of contact: *</p>
+                  </div> -->
+                  <!-- <div>
+                    <label class="contactType">
+                      <input required type="radio" name="preferredContactType" value="Email" id="preferredContactTypeEmail" class="checked"> Email
+                      <span class="checkmark"></span>
+                    </label>
+                  </div> -->
+                  <!-- <div>
+                    <label class="contactType">
+                      <input type="radio" name="preferredContactType" value="Phone" id="preferredContactTypePhone" class="checked"> Phone
+                      <span class="checkmark"></span>
+                    </label>
+                  </div> -->
+                  <fieldset>
+                    <legend>Preferred method of contact: *</legend>
+                    <input name="contactmethod" type="radio" id="callme" value="phone">
+                    <label for="callme">Call Me</label>
+                    <input name="contactmethod" type="radio" id="emailme" value="email">
+                    <label for="emailme">Email Me</label>
+                  </fieldset>
+                  <div class="grid-x optInContainer">
+                    <div class="cell small-12 optInCheckbox">
+                      <div class="optInCheckboxContainer">
+                        <label>
+                          <input type="checkbox" name="optIn" class="optIn" id="optIn">
+                          <span class="optInCheckmark"></span>
+                          <span class="optInText">Keep me posted about upcoming sales events, special promotions, or vehicle recalls</span>
+                        </label>
                       </div>
                     </div>
-
-
                   </div>
-                  <div class="cell auto p-5 border-yellow">
-                    
-                    <div class="text-center"><a class="button tiny" href="#"><i class="fas fa-phone"></i> 000-000-000</a></div>
-
-                    <div class="grid-x bl-1 p-5">
-                      <div class="cell large-12">
-
-                        <div class="my-dealer-btn"><i class="fas fa-check-circle icon-primary"></i> <a href="#">My Dealer</a></div>
-                        <div class="my-dealer-btn tiny-bottom"><i class="far fa-circle icon-primary"></i> <a href="#">Set as My Dealer</a></div>
-
-                        <div class="links small-bottom">                  
-                          <div><i class="fas fa-globe"></i> <a href="#">View Website</a></div>
-                          <div><i class="fas fa-map-marker"></i> <a href="#">Get Directions</a></div>
-                        </div>
-
-                      </div>  
-                    </div>
-
-                  </div>          
                 </div>
-
+                <div class="medium-12 cell">
+                  <div id="recaptcha_4" class="g-recaptcha" data-sitekey="6Ldrjo4UAAAAABY3ZWa0FAG529uHVwvxaNhQugCI"
+                        data-callback="onSubmit" data-size="invisible">
+                  </div>
+                </div>
+                <!-- hidden fields -->
+                <input name="leadTypeId" type="hidden" value="6" />
+                <input name="reasonForContactID" type="hidden" value="21" />
+                <input name="dealerId" type="hidden" value="508" />
+                <input name="formType" type="hidden" value="Contact" />
+                <input name="brand" type="hidden" value="Tracker" />
+                <input name="source" type="hidden" value="Tracker Website" />
+                <input name="url" type="hidden" value="/contact.html" />
+                <input name="captchaName" type="hidden" value="invisiblev2" />
+                <!-- end hidden fields -->
+                <div class="small-12 cell hide-for-medium text-center">
+                  <button class="button expanded formSubmit submitButton" type="submit" value="Submit">Send To Dealer</button>
+                </div>
+                <div class="small-12 cell show-for-medium text-center">
+                  <button class="button formSubmit submitButton" type="submit" value="Submit">Send To Dealer</button>
+                </div>
+                <div id="loader">
+                </div>
               </div>
-
-            </div>        
-
+            </form>
           </div>
         </div>
-      
-        <div class="cell small-12 large-6 medium-cell-block-y">
-          <div class="dealer-search-map">
-            <div id="map1">
-              <div class="mapouter">
-                <div class="gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-container hero full">
+    <div class="grid-x align-middle align-center main-header">
+      <div class="cell small-9 text-center">
+        <h1 class="header-text">Find Your Dealer</h1>
+        <p class="header-text">Enter the ZIP, City, or State of your location or preferred boating destination to view your nearest quality TRACKER dealer.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-x dealer-search">
+    <div class="cell medium-6">
+      <form class="search-form">
+
+        <div class="search-type-container">
+          <i class="fas fa-angle-down search-type-dropdown-icon"></i>
+          <span class="bold searchBy-text">Search By</span>
+          <select id="searchByMenu" class="searchBy-dropdown">
+            <option value="location" selected="">Location</option>
+            <option value="dealerName">Dealer Name</option>
+          </select>
+        </div>
+
+        <div class="search-bar grid-x">
+          <i class="fas fa-search search-icon" aria-hidden="true"></i>
+          <i class="fas fa-angle-down arrow-icon" aria-hidden="true" style="display:block;"></i>
+          <select id="radius-input" name="miles" class="miles align-self-middle" onchange="initMap()" style="display: block;">
+            <option value="100" selected="">100 Miles</option>
+            <option value="250">250 Miles</option>
+            <option value="500">500 Miles</option>
+          </select>
+          <input class="input-field pac-target-input" type="text" id="search-term" name="dealer" placeholder="Zip, City" autocomplete="off" style="display: block;">
+          <input class="input-field-dealer ui-autocomplete-input" type="text" id="dealer-search-term" name="dealer" placeholder="Dealer Name" style="display: none;" autocomplete="off">
+        </div>
+
+        <div class="use-location">
+          <a onclick="accessCurrentPosition()" class="icon-location"> Use My Current Location</a>
+        </div>
+      </form>
+    </div>
+    <div class="cell medium-6 align-self-middle text-right show-all-dealers hide-for-small-only">
+      <a href="javascript: void();"><i class="fas fa-globe-americas"></i> Show All Dealers</a>
+    </div>
+  </div>
+
+  <div class="grid-y medium-grid-frame dealer-results">    
+    <div class="cell dealer-results-column py-20 px-15">
+
+      <div class="results-text text-left">Viewing 1 - 12 of 50 results</div>
+      <div class="grid-x">
+        <div class="cell small-12 large-6 medium-cell-block-y order-sm-only-1 order-md-only-1">
+
+          <div id="dealer-search-results" class="results scrollable">
+
+            <div id="dealer-1" class="result-entry my-dealer-border">
+
+              <div class="grid-x dealer-badge">
+                <div class="cell shrink dealer-badge-container elite-dealer"><i class="fas fa-award"></i> Elite Dealer</div>
+                <div class="cell shrink dealer-badge-entry">Offsite Service <i class="far fa-info-circle"></i></div>
+              </div>
+
+              <div class="grid-x pos-relative">
+                <div class="cell card-left-column medium-9 large-8 p-20">
+                  <div class="dealer-name tiny-bottom">1. Bass Pro Boating Center <span>Baltimore, MD</span></div>
+
+                  <label class="favorite" for="set-dealer-1">
+                    <input type="radio" id="set-dealer-1" name="set-dealer" value="favorite" class="dealerRadio" checked>
+                    <span class="uppercase dealerProp">MY DEALER</span>
+                    <span class="checkmark"></span>
+                  </label>
+
+                  <div class="dealer-address">49 Artisan Dr. Smyrna, DE 19977 |
+                  <a href="javascript: void();" class="directions">Get Directions</a></div>
+
+                  <div class="grid-x">
+                    <div class="cell large-12">
+                      <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+                        <li class="accordion-item" data-accordion-item>
+                          <a href="#" class="accordion-title">
+                            <span class="dealer-hours-title">Store Hours:</span> <span class="hours-open">Open</span> &#x25CF; Closes 9:00PM
+                          </a>
+                          <div class="accordion-content" data-tab-content>
+                            <table class="unstriped">
+                              <tbody class="border-none">
+                                <tr class="border-bottom-none">
+                                  <td>Sunday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Monday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Tuesday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Wednesday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Thursday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Friday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Saturday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                          <a href="#" class="accordion-title">
+                            <span class="dealer-hours-title">Service Hours:</span> <span class="hours-closed">Closed</span> &#x25CF; Opens 8:00AM 
+                          </a>
+                          <div class="accordion-content" data-tab-content>
+                            <table class="unstriped">
+                              <tbody class="border-none">
+                                <tr class="border-bottom-none">
+                                  <td>Sunday</td>
+                                  <td>10AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Monday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Tuesday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Wednesday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Thursday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Friday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Saturday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </li>
+                      </ul>
+                      <div class="store-distance">00 Miles Away</div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="cell auto card-right-column">
+                  
+                  <div class="display-sm-none text-center"><a class="button tiny" data-open="contact-dealer-modal-container">Contact Dealer</a></div>
+
+                  <div class="cell card-divider">
+                    <div class="grid-x dealer-options-grid">
+                      <div class="cell small-6 medium-12 dealer-option-container pl-5">
+                        <a href="javascript: void();" class="dealer-option phone-icon">1-000-000-0000</a>
+                      </div>
+                      <div class="cell small-6 medium-12 dealer-option-container pl-5">
+                        <a href="javascript: void();" class="dealer-option wrench-icon">Service Inquiry</a>
+                      </div>
+                      <div class="cell small-6 medium-12 dealer-option-container pl-5">
+                        <a href="javascript: void();" class="dealer-option globe-icon">Visit Website</a>
+                      </div>
+                      <div class="cell small-6 medium-12 dealer-option-container pl-5">
+                        <a href="javascript: void();" class="dealer-option cart-icon">View Inventory</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>          
+              </div>
+
+              <!-- <ul class="accordion segments" data-accordion data-allow-all-closed="true">
+                <li class="accordion-item grid-x" data-accordion-item>
+                  <div class="cell segment-names small-9"><b>Brand Segments</b></div>
+                  <a href="#" class="cell accordion-title small-3 text-right"><span class="hide-for-small-only">View</span> More
+                  </a>
+                  <div class="cell accordion-content align-self-center" data-tab-content>
+                    <p>Aluminum &#9679; Pontoons &#9679; Segments Aluminum</p>
+                  </div>
+                </li>
+              </ul> -->
+
+              <!-- <div class="segments">
+                <div class="grid-x">
+                  <div id="segmentExpand01" class="cell auto segmentContainer">
+                    <p id="moreText01" class="segmentList segment-collapse">
+                      <span id="span01" class="spanText">Aluminum &#9679; Pontoons &#9679; Fiberglass &#9679; Pontoons &#9679; Fiberglass Aluminum &#9679; Pontoons &#9679; Fiberglass &#9679; Pontoons &#9679; Fiberglass</span>
+                    </p>
+                  </div>
+                  <div id="btnContainer01" class="segmentBtnContainer">
+                    <a onclick="toggleText(this)" id="segmentBtn01" class="cell shrink segmentBtn">Show More </a>
+                  </div>
+                </div>
+              </div> -->
+
+              <div class="grid-x hide-for-medium">
+                <div class="cell mobile-contact-btn align-middle text-center">
+                  <a class="button small expanded" data-open="contact-dealer-modal-container">Contact Dealer</a>
                 </div>
               </div>
+
+              <div class="segmentsNew">
+                <div class="segmentsDivider"></div>
+                <div class="segmentsTitle">
+                  Dealer Segments
+                </div>
+                <div class="segmentsList">
+                  <p>Aluminum <i class="fas fa-circle"></i> Pontoons <i class="fas fa-circle"></i>  Fiberglass <i class="fas fa-circle"></i>  Pontoons</p>
+                </div>
+              </div>
+
             </div>
-          </div>      
+
+            <div id="dealer-2" class="result-entry">
+
+              <div class="grid-x dealer-badge">
+                <div class="cell shrink dealer-badge-container elite-dealer"><i class="fas fa-award"></i> Elite Dealer</div>
+                <div class="cell shrink dealer-badge-entry">Offsite Service <i class="far fa-info-circle"></i></div>
+              </div>
+
+              <div class="grid-x pos-relative">
+                <div class="cell card-left-column medium-9 large-8 p-20">
+                  <div class="dealer-name tiny-bottom">1. Bass Pro Boating Center <span>Baltimore, MD</span></div>
+
+                  <label class="favorite" for="set-dealer-2">
+                    <input type="radio" id="set-dealer-2" name="set-dealer" value="favorite" class="dealerRadio">
+                    <span class="uppercase dealerProp">SET AS MY DEALER</span>
+                    <span class="checkmark"></span>
+                  </label>
+
+                  <div class="dealer-address">49 Artisan Dr. Smyrna, DE 19977 |
+                  <a href="javascript: void();" class="directions">Get Directions</a></div>
+
+                  <div class="grid-x">
+                    <div class="cell large-12">
+                      <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+                        <li class="accordion-item" data-accordion-item>
+                          <a href="#" class="accordion-title">
+                            <span class="dealer-hours-title">Store Hours:</span> <span class="hours-open">Open</span> &#x25CF; Closes 9:00PM
+                          </a>
+                          <div class="accordion-content" data-tab-content>
+                            <table class="unstriped">
+                              <tbody class="border-none">
+                                <tr class="border-bottom-none">
+                                  <td>Sunday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Monday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Tuesday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Wednesday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Thursday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Friday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Saturday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                          <a href="#" class="accordion-title">
+                            <span class="dealer-hours-title">Service Hours:</span> <span class="hours-closed">Closed</span> &#x25CF; Opens 8:00AM 
+                          </a>
+                          <div class="accordion-content" data-tab-content>
+                            <table class="unstriped">
+                              <tbody class="border-none">
+                                <tr class="border-bottom-none">
+                                  <td>Sunday</td>
+                                  <td>10AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Monday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Tuesday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Wednesday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Thursday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Friday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                                <tr class="border-bottom-none">
+                                  <td>Saturday</td>
+                                  <td>8AM - 8PM</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </li>
+                      </ul>
+                      <div class="store-distance">00 Miles Away</div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="cell auto card-right-column">
+                  
+                  <div class="display-sm-none text-center"><a class="button tiny" data-open="contact-dealer-modal-container">Contact Dealer</a></div>
+
+                  <div class="cell card-divider">
+                    <div class="grid-x dealer-options-grid">
+                      <div class="cell small-6 medium-12 dealer-option-container pl-5">
+                        <a href="javascript: void();" class="dealer-option phone-icon">1-000-000-0000</a>
+                      </div>
+                      <div class="cell small-6 medium-12 dealer-option-container pl-5">
+                        <a href="javascript: void();" class="dealer-option wrench-icon">Service Inquiry</a>
+                      </div>
+                      <div class="cell small-6 medium-12 dealer-option-container pl-5">
+                        <a href="javascript: void();" class="dealer-option globe-icon">Visit Website</a>
+                      </div>
+                      <div class="cell small-6 medium-12 dealer-option-container pl-5">
+                        <a href="javascript: void();" class="dealer-option cart-icon">View Inventory</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>          
+              </div>
+
+              <!-- <ul class="accordion segments" data-accordion data-allow-all-closed="true">
+                <li class="accordion-item grid-x" data-accordion-item>
+                  <div class="cell segment-names auto">Aluminum &#9679; Inshore Saltwater &#9679; Pontoons</div>
+                  <a href="#" class="cell accordion-title shrink"><span class="hide-for-small-only">View</span> More
+                  </a>
+                  <div class="cell accordion-content align-self-center" data-tab-content>
+                    <p>Aluminum &#9679; Pontoons &#9679; Segments Aluminum &#9679; Pontoons &#9679; Segment Aluminum &#9679; Inshore Saltwater &#9679; Pontoons &#9679; Segment</p>
+                  </div>
+                </li>
+              </ul> -->
+
+              <div class="segments">
+                <div class="grid-x">
+                  <div id="segmentExpand02" class="cell auto segmentContainer">
+                    <p id="moreText02" class="segmentList segment-collapse">
+                      <span id="span02" class="spanText">Aluminum &#9679; Pontoons &#9679; Fiberglass</span>
+                    </p>
+                  </div>
+                  <div id="btnContainer02" class="segmentBtnContainer">
+                    <a onclick="toggleText(this)" id="segmentBtn02" class="cell shrink segmentBtn">Show More </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid-x">
+                <div class="cell mobile-contact-btn hide-for-medium text-center">
+                  <a class="button tiny" data-open="contact-dealer-modal-container">Contact Dealer</a>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- <div class="no-results">
+              <div class="grid-x align-middle">
+                <div class="cell small-6">
+                  <div class="no-results-text">
+                  No Dealers Found (0)
+                  </div>
+                </div>
+                <div class="cell small-6 text-right">
+                  <a href="javascript: void();" class="hollow button tiny">Reset Search</a>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- <div class="new-search">
+              <div class="grid-x align-middle">
+                <div class="cell">
+                  <div class="new-search-text">
+                  Perform Search Above
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+          </div>
+
+          <div class="load-more text-center">
+            <a href="#" id="load-more" class="hollow button loadMore" style="display:block;">Load More</a>
+          </div>
+
+        </div>
+      
+        <div class="cell small-12 large-6 medium-cell-block-y order-sm-only-0 order-md-only-0">
+
+          <div class="dealer-search-map">
+
+            <div id="map-location" class="map-location">
+              <iframe src="https://www.google.com/maps/embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+          </div>   
+
         </div>
       </div>
 
-    </div>    
-  </div>  
-
-
+    </div>
+  </div>
 
 </div>
 
-
-
+<script>
+  $(".accordion-item").click(function() {
+    $("accordion-item").toggleClass("active")
+  })
+</script>

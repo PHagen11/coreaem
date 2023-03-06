@@ -2,6 +2,8 @@
 // import jQuery from 'jquery';
 // import whatInput from 'what-input';
 
+// const { isEmptyObject } = require("jquery");
+
 // window.$ = $;
 // window.jQuery = jQuery;
 
@@ -150,6 +152,7 @@ jQuery(document).ready(function($) {
 		$(this).siblings('.subset').toggleClass('hide');
 		$(this).toggleClass('selected');
 	});
+
 });
 
 	// var s = $(".submit-btn");

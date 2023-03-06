@@ -1,83 +1,532 @@
+.ui-menu {
+    max-height: 300px;
+    overflow: hidden auto;
+}
+
+.reveal.small {
+
+    .contact-dealer-heading {
+        margin-bottom: 20px;
+        padding-right: 15px;
+    }
+
+    .preferred-contact-container {
+        padding-left: 10px;
+    }
+
+    p {
+        margin-bottom: .3rem;
+    }
+
+    input[type="radio"] {
+        margin: 0 0 1rem;
+    }
+
+    input[type="checkbox"] {
+        margin: 0 0 .25rem;
+    }
+
+    .optInContainer {
+        height: 50px;
+        margin: 10px 0 20px;
+    }
+
+    .optInLabel {
+        margin-left: 5px;
+    }
+
+    /* Customize the label (the container) */
+    .optInCheckboxContainer {
+        display: block;
+        position: relative;
+        width: auto;
+        height: 100%;
+        margin-bottom: 10px;
+        font-size: 14px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .optInCheckboxContainer label {
+        cursor: pointer;
+    }
+
+    .optInLabel {
+        position: relative;
+        height: 50px;
+    }
+
+    .optInText {
+        position: absolute;
+        top: 0;
+        left: 23px;
+        padding-left: 5px;
+    }
+
+    /* Email opt in checkbox */
+
+    /* Hide the browser's default checkbox */
+    .optInCheckboxContainer input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    /* Create a custom checkbox */
+    .optInCheckmark {
+        position: absolute;
+        top: 2px;
+        left: 3px;
+        height: 18px;
+        width: 18px;
+        background-color: #fff;
+        border-radius: 20%;
+        border: 2px solid $primary-color;
+    }
+    
+    /* On mouse-over, add a grey background color */
+    .optInCheckboxContainer input:hover ~ .optInCheckmark {
+        background-color: #ccc;
+    }
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .optInCheckmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    /* Show the checkmark when checked */
+    .optInCheckboxContainer input:checked ~ .optInCheckmark:after {
+        display: block;
+    }
+
+    /* Style the checkmark/indicator */
+    .optInCheckboxContainer input ~ .optInCheckmark:after {
+        left: 4px;
+        top: -1px;
+        width: 7px;
+        height: 13px;
+        border: solid rgb(255, 255, 255);
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    /* When the checkbox is checked, add a primary color background */
+    .optInCheckboxContainer input:checked ~ .optInCheckmark {
+        background-color: $primary-color;
+    }
+
+    /* Customize the label (the container) */
+    .contactType {
+        display: inline-block;
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        font-size: 14px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    /* Hide the browser's default radio */
+    .contactType input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    /* Email opt in checkbox */
+    
+    /* Create a custom radio */
+    .checkmark {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        height: 18px;
+        width: 18px;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 2px solid $primary-color;
+    }
+    
+    /* On mouse-over, add a grey background color */
+    .contactType:hover input ~ .checkmark {
+        background-color: #ccc;
+    }
+    
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    /* Show the checkmark when checked */
+    .contactType input:checked ~ .checkmark:after {
+        display: block;
+    }
+    
+    /* Style the checkmark/indicator */
+    .contactType input ~ .checkmark:after {
+        left: 4px;
+        top: -1px;
+        width: 7px;
+        height: 13px;
+        border: solid rgb(255, 255, 255);
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    /* When the checkbox is checked, add a primary color background */
+    .contactType input:checked ~ .checkmark {
+        background-color: $primary-color;
+    }
+
+}
+
 .dealer-search-horizontal {
 
-    .scrollable {
-        overflow-y: scroll;
-        overflow-x: hidden;
-        scrollbar-width: thin;
-        height: 500px;
-        max-height: 500px;
-        padding: 5px;
-        background-color: white;
+    background-color: $body-background;
+    padding-bottom: 20px;
+
+    .pl-5 {
+        padding-left: 5px;
+    }
+    .p-20 {
+        padding: 20px;
+    }
+    .pt-20 {
+        padding-top: 20px;
+    }
+    .pb-20 {
+        padding-bottom: 20px;
+    }
+    .py-20 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .px-15 {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
-    .dealer-search-map {
-        width: 100%;
-        padding-bottom: 3rem;
-      //  height: 50vh;
-        background-size: cover;
+    .m-0 {
+        margin: 0;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .border-none {
+        border: none;
+    }
+
+    .border-bottom-none {
+        border-bottom: none;
+    }
+
+    .uppercase {
+        text-transform: uppercase;
+    }
+
+    .hero {
+        background-color: $black;
+        background-repeat: no-repeat;
         background-position: center;
-    }    
-
-    .border-black {
-        //border: solid black 1px;
-    }
-    .border-yellow {
-        //border: solid yellow 1px;
-    } 
-
-    // Not used.
-    .result-card-style {
-        background: #FFFFFF;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        padding: 0 !important;
-        border-radius: 4px !important;
     }
 
-    .results 
-    {
+    .search-type-accordion a {
+        text-decoration: none;
+        padding: 0.7em;
+        color: $black;
+        background-color: transparent;
+    }
 
-        max-height: 500px;
+    .main-header {
+        height: 35vh;
+        min-height: 300px;
+    }
 
-        .result-entry
-        {
+    .header-text {
+        color: $white;
+    }
 
-            background: #FFFFFF;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 0 !important;
-            border: solid rgb(235, 234, 234) 1px;
-            border-radius: 4px !important;
-            margin-bottom: 3rem;
+    .search-type-container {
+        position: relative;
+        width: 180px;
+    }
 
+    .search-type-dropdown-icon {
+        color: $primary-color;
+        position: absolute;
+        top: 4px;
+        right: -2px;
+    }
 
-            .pt-20 {
-                padding-top: 20px;
-            }            
-            .p-5 {
-                padding: 5px;
+    .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+        border: none;
+    }
+
+    .search-type-dropdown {
+        padding: 0 0 0 30px;
+        width: 200px;
+        height: 25px;
+        cursor: pointer;
+        background-color: transparent;
+    }
+
+    .searchBy-text {
+        display: inline;
+    }
+
+    .searchBy-dropdown {
+        display: inline;
+        cursor: pointer;
+        border: none;
+        padding: 0;
+        min-width: 107px;
+        width: auto;
+        height: auto;
+        z-index: 10;
+        background-color: transparent;
+        position: relative;
+    }
+
+    select.searchBy-dropdown:focus {
+        box-shadow: 0 0 0;
+    }
+
+    // .searchBy-dropdown option {
+    //     min-height: 5em;
+    // }
+
+    .dealer-search {
+        margin: auto;
+        padding-top: 15px;
+        max-width: 95%;
+    }
+
+    .search-form {
+        padding-top: 2rem;
+        max-width: 450px;
+    }
+
+    .search-bar,
+    .search-bar .cell {
+        width: 100%;
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .search-bar i,
+    .search-bar select {
+        position: absolute;
+    }
+      
+    .search-icon {
+        top: 17px;
+        left: 15px;
+        color: $primary-color;
+    }
+    
+    .arrow-icon {
+        z-index: 100;
+        top: 16px;
+        right: 15px;
+        color: $primary-color;
+        pointer-events: none;
+    }
+
+    select.miles {
+        right: 5px;
+        min-width: 100px;
+        width: auto;
+        height: auto;
+        border-radius: 0 25px 25px 0;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        margin-bottom: 0px;
+    }
+
+    select.miles:focus {
+        box-shadow: none;
+    }
+          
+    .input-field {
+        width: 100%;
+        color: #1a1a1a;
+        padding-left: 40px;
+        padding-right: 110px;
+        text-align: left;
+        border-radius: 25px;
+        margin-bottom: 0px;
+    }
+
+    .input-field-dealer {
+        width: 100%;
+        color: #1a1a1a;
+        padding-left: 40px;
+        text-align: left;
+        border-radius: 25px;
+        margin-bottom: 0px;
+    }
+
+    .use-location a {
+        text-decoration: none;
+        color: $black;
+    }
+
+    a.icon-location::before {
+        content: "\f05b";
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 600;
+        font-style: normal;
+        color: $primary-color;
+    }
+
+    a i.fas {
+        color: $primary-color;
+    }
+
+    .show-all-dealers a {
+        text-decoration: none;
+        color: $black;
+    }
+
+    .show-all-dealers i {
+        color: $primary-color;
+    }
+
+    /* scrollbar styles */
+    div.scrollable {
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-color: $light-gray;
+    }
+
+    /* width */
+    div.scrollable::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    div.scrollable::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background: #DEDEDE;
+    }
+    
+    /* Handle */
+    div.scrollable::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: #888;
+    }
+    
+    /* Handle on hover */
+    div.scrollable::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    .dealer-results {
+        max-width: 95%;
+        margin: 20px auto;
+        border-radius: 8px;
+    }
+
+    .results-text {
+        margin: 0 0 10px 5px;
+    }
+
+    .dealer-results-column {
+        background-color: #fff;
+    }
+
+    .results {
+
+        padding: 10px 0 20px;
+        border: 4px solid $light-gray;
+
+        .currentSelection {
+            border: 4px solid $primary-color;
+        }
+
+        .result-entry {
+
+            background: #ffffff;
+            // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            margin: 0 10px;
+            border-radius: 4px;
+            
+            &:hover {
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, .1);
+                transition: box-shadow 0.3s ease-in-out;
             }
-            .br-1 {
-                border-right: solid rgb(235, 234, 234) 1px;
+
+            &:not(:last-child) {
+                margin-bottom: 2rem;
             }
-            .bl-1 {
-                border-left: solid rgb(235, 234, 234) 1px;
-            }            
+
+            .pos-relative {
+                position: relative;
+            }
 
             .map-marker {
                 color: $dealer-search-map-marker-color;
-                //margin-left: 1vw;
             }
-            .map-marker-counter {
-                color: $dealer-search-map-marker-counter-color;
-                font-size: $dealer-search-map-marker-counter-size;
-                font-weight: $dealer-search-map-marker-counter-weight;
-                line-height: $dealer-search-map-marker-counter-line-height;
-                //margin-left: 1vw;
-                font-style: normal;
+
+            .dealer-badge {
+
+                max-width: 100%;
+                padding: .6rem .2rem 0 0;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+
+                .fa-info-circle {
+                    color: rgba(68,65,66,.5);
+                }
+
+            }
+
+            .dealer-badge-container {
+                height: 30px;
+                width: auto;
+                border-radius: 0 30px 30px 0;
+                padding: 2px 10px;
+            }
+
+            .dealer-badge-entry {
+                height: 30px;
+                width: auto;
+                background-color: $light-gray;
+                margin-left: 5px;
+                padding: 2px 5px;
+                border-radius: 30px;
+                font-weight: 500;
+            }
+
+            .elite-dealer {
+                color: $white;
+                background-color: $secondary-color;
             }
 
             .dealer-name {
                 font-weight: $dealer-search-dealer-name-weight;
-                font-size: 1.0rem; //$dealer-search-dealer-name-size;
+                font-size: 1.0rem;
                 line-height: $dealer-search-dealer-name-line-height;
                 text-transform: uppercase;
             }
@@ -87,14 +536,131 @@
                 text-transform: none;
             }
 
-            .my-dealer-btn > a 
-            {
-                font-size: 1.0rem;
+            .tiny-bottom {
+                margin-bottom: 10px;
+            }
+
+            /* Customize the label (the container) */
+            .favorite {
+                display: inline-block;
+                position: relative;
+                padding-left: 30px;
+                margin: 10px 0;
+                cursor: pointer;
+                font-size: 14px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            .dealerProp {
+                padding: 10px 0;
+            }
+            
+            /* Hide the browser's default checkbox */
+            .favorite input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+            
+            /* Create a custom checkbox */
+            .checkmark {
+                position: absolute;
+                top: 1px;
+                left: 0;
+                height: 20px;
+                width: 20px;
+                background-color: #fff;
+                border-radius: 50%;
+                border: 2px solid $primary-color;
+            }
+
+            input:checked ~ .checkmark {
+                border: 2px solid $success-color;
+            }
+            
+            /* On mouse-over, add a grey background color */
+            .favorite:hover input ~ .checkmark {
+                background-color: #ccc;
+            }
+            
+            /* Create the checkmark/indicator (hidden when not checked) */
+            .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+
+            /* Show the checkmark when checked */
+            .favorite input:checked ~ .checkmark:after {
+                display: block;
+            }
+            
+            /* Style the checkmark/indicator */
+            .favorite input ~ .checkmark:after {
+                left: 4px;
+                top: 0px;
+                width: 7px;
+                height: 13px;
+                border: solid rgb(255, 255, 255);
+                border-width: 0 2px 2px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+
+            /* When the checkbox is checked, add a primary color background */
+            .favorite input:checked ~ .checkmark {
+                background-color: $success-color;
+            }
+
+            .dealer-address {
+                margin-bottom: 15px;
+            }
+
+            .directions {
+                color: $primary-color;
+                font-weight: 600;
                 text-decoration: none;
             }
             
-            .dealer-hours-title 
-            {
+            .dropdown.menu .is-active > a {
+                color: $black;
+            }
+
+            .is-active > .accordion-title::before {
+                content: "";
+            }
+
+            /* accordion arrow */
+            .accordion-item .accordion-title::after {
+                content: "\f078";
+                font-family: 'Font Awesome 5 Pro';
+                font-weight: 600;
+                font-size: 15px;
+                margin-left: 5px;
+                float: right;
+                color: $primary-color;
+                transition: all 0.25s ease-in-out;
+            }
+
+            .is-active > .accordion-title::after {
+                transform: rotate(-180deg);
+            }
+
+            :last-child:not(.is-active) > .accordion-title {
+                border-bottom: 0;
+            }
+
+            .accordion-item {
+                margin-bottom: 10px;
+            }
+
+            .dealer-hours-title {
                 font-weight: bold;
             }
             .hours-open {
@@ -105,14 +671,503 @@
                 color: red;
                 font-weight: bold;
             }
-            .hour-next {
-                font-weight: normal !important;
-            }   
-            
-            .button {
-                border-radius: 4px;
+
+            .accordion-content {
+                border: none;
+                padding: 0;
+                max-width: 300px;
             }
+
+            .accordion-content tbody th, 
+            .accordion-content tbody td {
+                padding: 0.5rem .5rem 0.2rem;
+            }
+            
+            .accordion-title:before {
+                content: "";
+            }
+
+            .accordion-title {
+                color: #000;
+                font-size: 1rem;
+                display: inline-block;
+                padding: 0;
+                text-decoration: none;
+                border: 0;
+            }
+
+            .accordion-title:hover,
+            .accordion-title:focus {
+                color: #000;
+                background-color: inherit;
+            }
+
+            .store-distance {
+                font-weight: $dealer-search-dealer-distance-weight;
+            }
+
+            .mobile-contact-btn {
+                margin: 20px 0 10px;
+                padding: 0 20px;
+
+                .button {
+                    margin-bottom: 0;
+                    // padding: 10px 25.6px;
+                }
+
+            }
+
+            .segmentsNew {
+
+                position: relative;
+                padding: 20px;
+                width: 100%;
+
+                .segmentsTitle {
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    color: $dark-gray;
+                }
+
+                .segmentsDivider {
+                    border-bottom: 2px solid $light-gray;
+                    margin: 5px 0 16px;
+                }
+
+                p {
+                    margin-bottom: 0;
+                    line-height: 1.8;
+                    word-spacing: .5rem;
+                }
+
+                i {
+                    font-size: 6px;
+                    position: relative;
+                    bottom: 2px;
+
+                    &:before {
+                        color: #DEDEDE;
+                    }
+                }
+
+            }
+
+            .segments {
+
+                position: relative;
+                margin: 10px auto;
+                padding: 5px 8px;
+                border-radius: 30px;
+                background-color: $light-gray;
+                // width: 100%;
+                max-width: 500px;
+
+                .accordion-item {
+                    margin-bottom: 0px;
+                }
+
+                .segment-names {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    text-transform: uppercase;
+                    margin: 5px 0;
+                }
+
+                a.accordion-title {
+                    margin: 5px 0;
+                    padding-top: 5px;
+
+                    &:hover,
+                    &:focus {
+                        background-color: transparent;
+                    }
+                    
+                }
+
+                .accordion-content {
+                    background-color: $light-gray;
+                    margin: auto;
+                    width: auto;
+                    max-width: 100%;
+                    border-radius: 0px 0px 30px 30px;
+                    padding: 5px 10px;
+                }
+
+                p {
+                    margin-bottom: .3rem;
+                }
+
+                .segment-collapse {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+
+                    height: 25px; 
+                    max-height: 50px;
+                    transition: max-height .5s;
+                }
+
+                .segment-expand {
+                    height: 100%; 
+                    max-height: 200px;
+                    transition: max-height .5s;
+                }
+
+                .segmentBtn {
+                    margin: 0 5px;
+                    color: #000;
+                    text-decoration: none;
+                }
+
+                .segmentBtn::after {
+                    content: '  \f078';
+                    font-family: 'Font Awesome 5 Pro';
+                    font-weight: 600;
+                    font-style: normal;
+                    color: $primary-color;
+                }
+
+                .btnClicked > .segmentBtn::after {
+                    content: '  \f077';
+                    font-family: 'Font Awesome 5 Pro';
+                }
+
+                .arrow-icon {
+                    color: $primary-color;
+                }
+
+            }
+
+            .card-divider {
+                border-left: 2px solid $light-gray;
+                padding: 0;
+            }
+
+            .card-right-column {
+                padding: 20px 5px 5px 5px;
+            }
+
+            .dealer-option-container {
+                margin: 8px 0;
+            }
+
+            a.dealer-option {
+                text-decoration: none;
+                font-size: 1.1rem;
+                color: $black;
+            }
+
+            a.phone-icon::before {
+                content: "\f095  ";
+                font-family: 'Font Awesome 5 Pro';
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            a.wrench-icon::before {
+                content: "\f0ad  ";
+                font-family: 'Font Awesome 5 Pro';
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            a.globe-icon::before {
+                content: "\f0ac  ";
+                font-family: 'Font Awesome 5 Pro';
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            a.cart-icon::before {
+                content: "\f07a  ";
+                font-family: 'Font Awesome 5 Pro';
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            a.dealer-option:hover {
+                color: $medium-gray;
+            }
+        }
+
+        .new-search {
+
+            margin: 0 10px;
+            padding: 20px 15px;
+            background-color: $white;
+            border-radius: 6px;
+
+            .new-search-text {
+                font-size: 1rem;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+        }
+
+        .no-results {
+
+            margin: 0 10px;
+            background-color: $white;
+            border-radius: 6px;
+
+            .no-results-text {
+                font-size: 1rem;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            a {
+                margin-bottom: 0;
+            }
+
+            a:before {
+                content: "\f2ea";
+                font-family: 'Font Awesome 5 Pro';
+                margin-right: 5px;
+                transform: rotate(0.5turn);
+            }
+
         }
     }
 
+    .loadMore {
+        margin: 20px 10px;
+    }
+
+    .load-more {
+        margin: 0 auto;
+        width: 185px;
+
+    }
+
+    .dealer-search-map {
+
+        .map-location {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .info-window {
+
+            width: 250px;
+
+            .break {
+                margin: 0 5px;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+
+            a {
+                color: $primary-color;
+                text-decoration: none;
+                font-weight: 600;
+            }
+        }
+
+    }
+
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+
+    .reveal.medium {
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    .dealer-search-horizontal {
+
+        .order-sm-only-0 {
+            order: 0;
+        }
+
+        .order-sm-only-1 {
+            order: 1;
+        }
+
+        .order-sm-only-2 {
+            order: 2;
+        }
+
+        .display-sm-none {
+            display: none;
+        }
+
+        .dealer-results {
+            max-width: 100%;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 115px;
+            margin: 0 4px;
+        }
+
+        .dealer-options-grid {
+            width: auto;
+        }
+
+        .dealer-badge {
+            overflow-x: scroll;
+            flex-wrap: nowrap;
+        }
+
+        .dealer-search-map {
+            height: 400px;
+        }
+
+        .results {
+
+            height: 600px;
+            max-height: 600px;
+
+            .my-dealer-border {
+                border-bottom: 4px solid $success-color;
+            }
+
+            .result-entry {
+
+                .card-divider {
+                    border-left: 0;
+                    // display: none;
+                }
+
+                .card-right-column {
+                    padding: 10px 5px;
+                }
+
+            }
+
+            .no-results {
+
+                margin: 0 10px;
+                padding: 10px;
+
+                .no-results-text {
+                    font-size: .85rem;
+                }
+
+                a {
+                    padding: 5px;
+                }
+
+            }
+
+        }
+
+        .dealer-search-map {
+    
+            .info-window {
+    
+                width: 100%;
+
+            }
+    
+        }
+
+    }
+
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+
+    .dealer-search-horizontal {
+
+        .order-md-only-0 {
+            order: 0;
+        }
+
+        .order-md-only-1 {
+            order: 1;
+        }
+
+        .card-left-column {
+            width: 70%;
+        }
+
+        .dealer-search-map {
+            height: 500px;
+        }
+
+    }
+
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+
+    .dealer-search-horizontal {
+    
+        // .card-divider-1 {
+        //     width: calc(1% - 1.875rem);
+        //     height: 140px;
+        //     padding: 1px;
+        // }
+
+        .dealer-results {
+            height: 100%;
+        }
+
+        .dealer-options-grid {
+            width: 145px;
+            margin: 0 auto;
+        }
+
+        .results {
+
+            height: 600px;
+            max-height: 800px;
+
+            .my-dealer-border {
+                border-right: 4px solid $success-color;
+            }
+
+            .no-results {
+
+                margin: 0 10px;
+                padding: 20px;
+
+                .no-results-text {
+                    font-size: 1rem;
+                }
+
+                a {
+                    padding: 5px;
+                }
+
+            }
+
+        }
+
+    }
+    
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+
+    .dealer-search-horizontal {
+
+        .card-left-column {
+            width: 65%;
+        }
+
+        .dealer-search-map {
+            height: 100%;
+        }
+
+        .results {
+            border-radius: 8px 0 0 8px;
+        }
+
+    }
+    
 }
