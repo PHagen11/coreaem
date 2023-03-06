@@ -1,0 +1,223 @@
+$card-margin-medium: 1rem;
+$card-margin-xlarge: 4rem;
+
+// :root {
+// 	--card-padding: 20px;
+// 	--card-height: 400px;
+// 	--card-skeleton: linear-gradient($light-gray var(--card-height), transparent 0);
+// 	--avatar-size: 40px;
+// 	--avatar-position: var(--card-padding) var(--card-padding);
+// 	--avatar-skeleton: linear-gradient(white var(--title-height), transparent 0);
+// 	--title-height: 20px;
+// 	--title-width: 80%;
+// 	--title-position: var(--card-padding) 280px;
+// 	--title-skeleton: linear-gradient($light-gray var(--title-height), transparent 0);
+// 	--desc-line-height: 20px;
+// 	--desc-line-skeleton: linear-gradient($light-gray var(--desc-line-height), transparent 0);
+// 	--desc-line-1-width: 40%;
+// 	--desc-line-1-position: var(--card-padding) 330px;
+// 	--desc-line-2-width: 60%;
+// 	--desc-line-2-position: var(--card-padding) 360px;
+// 	--footer-height: 40px;
+// 	--footer-position: 0 calc(var(--card-height) - var(--footer-height));
+// 	--footer-skeleton: linear-gradient(white var(--footer-height), transparent 0);
+// 	--blur-width: 200px;
+// 	--blur-size: var(--blur-width) calc(var(--card-height));
+// }
+
+
+.inventory-card {
+	.card {
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			/* IE10+ CSS styles go here */
+			flex: 1 1 150px;
+		}
+		@include breakpoint(small only) {
+			padding: 0.5rem 0;
+			margin: 0;
+			box-shadow: none;
+			border-radius: 0;
+			border-bottom: 2px solid $border-gray;
+		}
+		@include breakpoint(medium) {
+			//min-height: 210px;
+			margin: 0.6rem;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+			&:hover {
+				box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+				transition: box-shadow 0.3s ease-in-out;
+			}
+		}
+
+		.card-divider {
+			padding: 0.6rem 1rem 0.5rem;
+			font-size: 0.8em;
+			font-weight: 700;
+			.condition {
+				text-transform: capitalize;
+			}
+		}
+
+		.card-section {
+			max-height: 200px;
+			min-height: 1px;
+
+			.mname {
+				min-height: 55px;
+				font-weight: bold;
+				margin-bottom: 0;
+			}
+
+			.locname {
+				margin-bottom: 0;
+				color: $medium-gray;
+			}
+
+			.price {
+				font-size: 1.4rem;
+				color: $black;
+				font-weight: bold;
+				margin-bottom: 0;
+
+				.currency {
+					font-weight: lighter;
+					font-size: 1rem;
+					color: $medium-gray;
+				}
+			}
+		}
+
+		.item-image {
+			@include breakpoint(small) {
+				min-height: 1px;
+				padding: 0 1rem 1rem;
+				border-bottom: none;
+				object-fit: cover;
+				object-position: 100% 0 100% 0;
+				width: 100%;
+				height: 120px;
+			}
+			@include breakpoint(medium) {
+				padding: 0 1rem 1rem;
+				border-bottom: 1px solid $border-gray;
+				height: 180px;
+			}
+			@include breakpoint(large) {
+				height: 200px;
+			}
+			@include breakpoint(xlarge) {
+				height: 220px;
+			}
+			@include breakpoint(xxlarge) {
+				height: 230px;
+			}
+			@include breakpoint(xxxlarge) {
+				height: 220px;
+			}
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.inventory {
+		.one-and-three-up {
+			@include breakpoint(medium) {
+				.card {
+					width: 95%;
+					margin: 0 5% 5% 0;
+				}
+			}
+			@include breakpoint(xlarge) {
+				&:nth-child(3n-2) {
+					.card {
+						outline: 1px dotted red;
+						width: 95%;
+						margin: 0 5% 5% 0;
+					}
+				}
+
+				&:nth-child(3n-1) {
+					.card {
+						width: 95%;
+						margin: 0 1.75% 5% 3.25%;
+					}
+				}
+
+				&:nth-child(3n) {
+					.card {
+						width: 95%;
+						margin: 0 0 5% 5%;
+					}
+				}
+			}
+		}
+	}
+}
+
+.card.skeleton {
+	//padding:2rem;
+	//width: 280px; //demo
+	height: 400px;
+	content: "";
+	display: block;
+	//width: 100%;
+	//height: 100%;
+	border-radius: 6px;
+	box-shadow: 0 10px 20px rgba(0,0,0, .1);
+	background-image:linear-gradient(90deg, rgba($light-gray, 0) 0, rgba($light-gray, .8) 50%, rgba($light-gray, 0) 100%),
+	//animation blur
+	linear-gradient($light-gray 20px, transparent 0),
+	//title
+	linear-gradient($light-gray 20px, transparent 0),
+	//desc1
+	linear-gradient($light-gray 20px, transparent 0),
+	//desc2
+	linear-gradient($white 20px, transparent 0),
+	//avatar
+	linear-gradient($white 40px, transparent 0),
+	//footer bar
+	//card
+	linear-gradient($light-gray 400px, transparent 0);
+	background-size: 200px calc(400px),
+	// animation
+	80% 20px,
+	// title
+	40% 20px,
+	// desc1
+	60% 20px,
+	// desc2
+	40px 40px,
+	// avatar
+	100% 40px,
+	// footer bar
+	// card
+	100% 65%;
+	background-position:-150% 0,
+	//animation
+	20px 280px,
+	//title
+	20px 330px,
+	//desc1
+	20px 360px,
+	//desc2
+	20px 20px,
+	//avatar
+	0 calc(400px - 40px),
+	//footer bar
+	//card
+	0 0;
+	background-repeat: no-repeat;
+	animation: loading 1.5s infinite;
+	.card-divider {
+		padding:0;
+	}
+}
+
+@keyframes loading {
+	to {
+		background-position: 350% 0, 20px 280px, 20px 330px, 20px 360px, 20px 20px, 0 calc(400px - 40px), 0 0;
+	}
+}

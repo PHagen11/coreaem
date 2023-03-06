@@ -152,6 +152,7 @@ jQuery(document).ready(function($) {
 		$(this).siblings('.subset').toggleClass('hide');
 		$(this).toggleClass('selected');
 	});
+
 });
 
 	// var s = $(".submit-btn");
@@ -176,5 +177,3 @@ jQuery(document).ready(function($) {
 // 				 s.removeClass("stick");
 // 		 }
 //  });
-
-// let dealersArr = [];

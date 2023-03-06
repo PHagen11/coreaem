@@ -185,181 +185,194 @@
             margin-left: 10px;
         }
 
-    }
-
-    .result-entry {
-
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0px 5px 16px -6px rgb(192,192,192);
-        // width: 100%;
-        max-width: 350px;
-        margin: 10px;
-        padding-top: 10px;
-
-        &:focus {
-            border: 2px solid $primary-color;
+        .my-dealer-border {
+            border-bottom: 4px solid $success-color;
         }
 
-        .dealer-badge {
-            max-width: 100%;
-            padding: 0 .2rem 0 0;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            overflow-x: auto;
-            flex-wrap: nowrap;
-        }
+        .result-entry {
 
-        .dealer-badge-container {
-            height: 30px;
-            width: auto;
-            border-radius: 0 30px 30px 0;
-            padding: 2px 5px;
-        }
-
-        .elite-dealer {
-            color: $white;
-            background-color: $black;
-        }
-
-        .dealer-badge-entry {
-            height: 30px;
-            width: auto;
-            background-color: $light-gray;
-            margin-left: 5px;
-            padding: 2px 5px;
-            border-radius: 30px;
-            font-weight: 500;
-        }
-
-        /* scrollbar styles */
-        /* width */
-        div.dealer-badge::-webkit-scrollbar {
-            height: 5px;
-            margin-top: 10px;
-        }
-        
-        /* Track */
-        div.dealer-badge::-webkit-scrollbar-track {
-            border-radius: 10px;
-            background: #DEDEDE;
-        }
-        
-        /* Handle */
-        div.dealer-badge::-webkit-scrollbar-thumb {
-            border-radius: 10px;
-            background: #888;
-        }
-        
-        /* Handle on hover */
-        div.dealer-badge::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-
-        .pos-relative {
-            position: relative;
-        }
-
-        .dealer-name {
-            margin: 15px 0;
-            font-weight: $dealer-search-dealer-name-weight;
-            font-size: 1.0rem;
-            line-height: $dealer-search-dealer-name-line-height;
-            text-transform: uppercase;
-        }
-
-        .dealer-name > span {
-            font-weight: normal;
-            text-transform: none;
-        }
-
-        /* Customize the label (the container) */
-        .favorite {
-            display: inline-block;
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 10px;
-            cursor: pointer;
-            font-size: 14px;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-        
-        /* Hide the browser's default checkbox */
-        .favorite input {
-            position: absolute;
-            opacity: 0;
-            cursor: pointer;
-            height: 0;
-            width: 0;
-        }
-
-        /* Create a custom checkbox */
-        .checkmark {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 20px;
-            width: 20px;
             background-color: #fff;
-            border-radius: 50%;
-            border: 2px solid $primary-color;
-        }
+            border-radius: 4px;
+            max-width: 350px;
+            margin: 10px;
+            padding-top: 10px;
 
-        /* On mouse-over, add a grey background color */
-        .favorite:hover input ~ .checkmark {
-            background-color: #ccc;
-        }
+            &:hover {
+                box-shadow: 0px 5px 16px -6px rgb(192,192,192);
+                transition: box-shadow 0.3s ease-in-out;
+            }
 
-        /* Create the checkmark/indicator (hidden when not checked) */
-        .checkmark:after {
-            content: "";
-            position: absolute;
-            display: none;
-        }
+            .dealer-badge {
+                max-width: 100%;
+                padding: 0 .2rem 0 0;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+            }
 
-        /* Show the checkmark when checked */
-        .favorite input:checked ~ .checkmark:after {
-            display: block;
-        }
+            .dealer-badge-container {
+                height: 30px;
+                width: auto;
+                border-radius: 0 30px 30px 0;
+                padding: 2px 5px;
+            }
 
-        /* Style the checkmark/indicator */
-        .favorite input ~ .checkmark:after {
-            left: 4px;
-            top: 0px;
-            width: 7px;
-            height: 13px;
-            border: solid rgb(255, 255, 255);
-            border-width: 0 2px 2px 0;
-            -webkit-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-        }
+            .elite-dealer {
+                color: $white;
+                background-color: $secondary-color;
+            }
 
-        /* When the checkbox is checked, add a primary color background */
-        .favorite input:checked ~ .checkmark {
-            background-color: $primary-color;
-        }
+            .dealer-badge-entry {
 
-        .dealer-address {
-            margin-bottom: 15px;
-        }
+                height: 30px;
+                width: auto;
+                background-color: $light-gray;
+                margin-left: 5px;
+                padding: 2px 5px;
+                border-radius: 30px;
+                font-weight: 500;
 
-        .directions {
-            color: $black;
-            font-weight: 600;
-            text-decoration: underline;
-        }
+                .fa-info-circle {
+                    color: rgba(68,65,66,.5);
+                }
 
-        .store-distance {
-            margin-bottom: 15px;
-            font-weight: $dealer-search-dealer-distance-weight;
-        }
+            }
 
-        .set-dealer-btn a {
-            margin-bottom: 15px;
+            /* scrollbar styles */
+            /* width */
+            div.dealer-badge::-webkit-scrollbar {
+                height: 5px;
+                margin-top: 10px;
+            }
+            
+            /* Track */
+            div.dealer-badge::-webkit-scrollbar-track {
+                border-radius: 10px;
+                background: #DEDEDE;
+            }
+            
+            /* Handle */
+            div.dealer-badge::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                background: #888;
+            }
+            
+            /* Handle on hover */
+            div.dealer-badge::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+
+            .pos-relative {
+                position: relative;
+            }
+
+            .dealer-name {
+                margin: 15px 0;
+                font-weight: $dealer-search-dealer-name-weight;
+                font-size: 1.0rem;
+                line-height: $dealer-search-dealer-name-line-height;
+                text-transform: uppercase;
+            }
+
+            .dealer-name > span {
+                font-weight: normal;
+                text-transform: none;
+            }
+
+            /* Customize the label (the container) */
+            .favorite {
+                display: inline-block;
+                position: relative;
+                padding-left: 30px;
+                margin-bottom: 10px;
+                cursor: pointer;
+                font-size: 14px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            
+            /* Hide the browser's default checkbox */
+            .favorite input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+
+            /* Create a custom checkbox */
+            .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 20px;
+                width: 20px;
+                background-color: #fff;
+                border-radius: 50%;
+                border: 2px solid $primary-color;
+            }
+
+            input:checked ~ .checkmark {
+                border: 2px solid $success-color;
+            }
+
+            /* On mouse-over, add a grey background color */
+            .favorite:hover input ~ .checkmark {
+                background-color: #ccc;
+            }
+
+            /* Create the checkmark/indicator (hidden when not checked) */
+            .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+
+            /* Show the checkmark when checked */
+            .favorite input:checked ~ .checkmark:after {
+                display: block;
+            }
+
+            /* Style the checkmark/indicator */
+            .favorite input ~ .checkmark:after {
+                left: 4px;
+                top: 0px;
+                width: 7px;
+                height: 13px;
+                border: solid rgb(255, 255, 255);
+                border-width: 0 2px 2px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+
+            /* When the checkbox is checked, add a primary color background */
+            .favorite input:checked ~ .checkmark {
+                background-color: $success-color;
+            }
+
+            .dealer-address {
+                margin-bottom: 15px;
+            }
+
+            .directions {
+                color: $black;
+                font-weight: 600;
+                text-decoration: underline;
+            }
+
+            .store-distance {
+                margin-bottom: 15px;
+                font-weight: $dealer-search-dealer-distance-weight;
+            }
+
+            .set-dealer-btn a {
+                margin-bottom: 15px;
+            }
+
         }
 
     }

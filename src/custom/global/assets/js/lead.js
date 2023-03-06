@@ -10,7 +10,7 @@ $(document).ready(function () {
         parentForm = $(this).parents("form");
         var stopSubmit = [];
         $(parentForm).foundation('validateForm')
-        $("input").each(function (e) {
+        $("input, select, textarea").each(function (e) {
             if ($(this).hasClass("is-invalid-input")) {
                 stopSubmit[e] = 1;
             } else {
