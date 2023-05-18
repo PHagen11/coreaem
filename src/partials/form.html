@@ -227,3 +227,215 @@
     </div>
   </form>
 </div>
+
+
+<br>
+<br>
+<br>
+
+
+<div class="form">
+  <form id="form4" data-abide novalidate>
+    <div data-abide-error class="alert callout" style="display: none;">
+      <p>
+        <i class="fas fa-exclamation-triangle fa-xs">
+        </i> There are some errors in your form.
+      </p>
+    </div>
+    <div class="grid-x">
+      <div class="small-12 cell">
+        <h5 style="margin-bottom: 20px;">Current Owner Information</h5>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>First Name * 
+          <input name="firstName" type="text" id="firstNameInput" maxlength="25" required />
+          <span class="form-error" data-form-error-for="firstNameInput">First Name is required.</span>
+        </label>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>Last Name * 
+          <input name="lastName" type="text" id="lastNameInput" maxlength="25" required />
+          <span class="form-error" data-form-error-for="lastNameInput">Last Name is required.</span>
+        </label>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>Phone * 
+          <input name="phone" type="text" id="phoneInput" maxlength="20" required />
+          <span class="form-error" data-form-error-for="phoneInput">Phone is required.</span>
+        </label>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>Email * 
+          <input name="email" type="text" id="emailInput" pattern="email" maxlength="50" required />
+          <span class="form-error" data-form-error-for="emailInput">Email address is required in standard email format.</span>
+        </label>
+      </div>
+      <div class="small-12 cell">
+        <h5 style="margin-top: 20px; margin-bottom: 20px;">Owner Address</h5>
+      </div>
+      <div class="small-12 cell">
+        <label>Street Address * 
+          <input name="streetAddress" type="text" id="streetAddressInput" maxlength="50" required />
+          <span class="form-error" data-form-error-for="streetAddressInput">Street Address is required.</span>
+        </label>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>City * 
+          <input name="city" type="text" id="cityInput" maxlength="50" required />
+          <span class="form-error" data-form-error-for="cityInput">City is required.</span>
+        </label>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>State * 
+          <input name="state" type="text" id="stateInput" maxlength="20" required />
+          <span class="form-error" data-form-error-for="stateInput">State is required.</span>
+        </label>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>Zip/Postal Code * 
+          <input name="postalCode" type="text" id="postalCodeInput" maxlength="10" required />
+          <span class="form-error" data-form-error-for="postalCodeInput">Zip/Postal Code is required.</span>
+        </label>
+      </div>
+      <div class="small-6 cell">
+        <label>Country *
+          <select name="country" id="countryInput" required>
+            <option value="" selected>--</option>
+            <option value="us">United States</option>
+            <option value="ca">Canada</option>
+          </select>
+          <span class="form-error" data-form-error-for="categoryInput">Country is required</span>
+        </label>
+      </div>
+      <div class="small-12 cell">
+        <h5 style="margin-top: 20px; margin-bottom: 20px;">Purchase Information</h5>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>Date of Purchase * 
+          <input name="dateOfPurchase" type="date" id="dateOfPurchaseInput" maxlength="10" required />
+          <span class="form-error" data-form-error-for="dateOfPurchaseInput">Date of Purchase is required.</span>
+        </label>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>Name of Seller or Dealership * 
+          <input name="dealerSearch" type="text" id="dealer-search-term" autocomplete="off" required />
+          <span class="form-error" data-form-error-for="dealer-search-term">Dealer Search is required.</span>
+        </label>
+      </div>
+      <div class="small-12 cell">
+        <h5 style="margin-top: 20px; margin-bottom: 20px;">Boat Information</h5>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>Boat Model * 
+          <input name="boatModel" type="text" id="boatModelInput" maxlength="50" required />
+          <span class="form-error" data-form-error-for="boatModelInput">Boat Model is required.</span>
+        </label>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>Boat Year *
+          <select name="boatYear" id="boatYearInput" required>
+            <option value="" selected>--</option>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+          </select>
+          <span class="form-error" data-form-error-for="boatYearInput">Boat Year is required</span>
+        </label>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>Boat Serial Number * 
+          <input name="dealerSearch" type="text" id="boatSerialNumberInput" maxlength="50" required />
+          <span class="form-error" data-form-error-for="boatSerialNumberInput">Dealer Search is required.</span>
+        </label>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>Engine Brand
+          <input name="dealerSearch" type="text" id="engineBrandInput" maxlength="50" />
+        </label>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>Engine Model
+          <input name="dealerSearch" type="text" id="engineModelInput" maxlength="50" />
+        </label>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>Engine Year
+          <select name="engineYear" id="engineYearInput">
+            <option value="" selected>--</option>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+          </select>
+        </label>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>Engine HP
+          <input name="dealerSearch" type="text" id="engineHpInput" maxlength="50" />
+        </label>
+      </div>
+      <div class="small-12 cell">
+        <div id="recaptcha_4" class="g-recaptcha" data-sitekey="6Ldrjo4UAAAAABY3ZWa0FAG529uHVwvxaNhQugCI"
+              data-callback="onSubmit" data-size="invisible">
+        </div>
+      </div>
+      <!-- hidden fields -->
+      <input name="leadTypeId" type="hidden" value="6" />      
+      <input name="formType" type="hidden" value="CustomerHelp" />
+      <input name="brand" type="hidden" value="Tracker" />
+      <input name="source" type="hidden" value="Tracker Website" />
+      <input name="url" type="hidden" value="/contact/question.html" />
+      <input name="captchaName" type="hidden" value="invisiblev2" />
+      <!-- end hidden fields -->
+      <div class="small-12 cell hide-for-medium text-center">
+        <button class="button expanded formSubmit submitButton" type="submit" value="Submit">Submit</button>
+      </div>
+      <div class="small-12 cell show-for-medium text-center">
+          <button class="button formSubmit submitButton" type="submit" value="Submit">Submit</button>
+      </div>
+      <div id="loader">
+      </div> 
+    </div>
+  </form>
+</div>

@@ -55,23 +55,43 @@ data-animation-out="slide-out-up-custom">
 
     <div class="results grid-x" id="dealer-select-modal">
       <div class="cell small-12 medium-6 large-4 result-container">
-        <div id="dealer-1" class="result-entry my-dealer-border">
+        <div id="dealer-1" class="result-entry">
           <div class="grid-x dealer-badge">
-            <div class="cell shrink dealer-badge-container elite-dealer"><i class="fas fa-award"></i> Elite Dealer</div>
-            <div class="cell shrink dealer-badge-entry">Offsite Service <i class="far fa-info-circle"></i></div>
+            <div class="cell shrink dealer-badge-container elite-dealer">
+              <span data-tooltip class="top" tabindex="1" title="Elite Dealer Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">
+                <i class="fas fa-award"></i>Elite Dealer
+              </span>
+            </div>
+            <div class="cell shrink dealer-badge-entry">
+              <span data-tooltip class="top" tabindex="1" title="Offsite Service Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">
+                <i class="far fa-info-circle"></i>Offsite Service
+              </span>
+            </div>
           </div>
 
           <div class="grid-x pos-relative">
             <div class="cell px-15">
               <div class="dealer-name">1. Bass Pro Boating Center <span>Baltimore, MD</span></div>
 
-              <label class="favorite" for="my-dealer-1">
+              <div class="grid-x">
+                <div class="cell shrink my-dealer-container">
+                  <label class="favorite" for="my-dealer-1">
+                    <input type="checkbox" id="my-dealer-1" name="my-dealer" value="favorite" class="dealerRadio my-dealer" checked>
+                    <span class="uppercase dealerProp">MY DEALER</span>
+                    <span class="checkmark my-dealer-checkmark"></span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- <label class="favorite" for="my-dealer-1">
                 <input type="radio" id="my-dealer-1" name="my-dealer" value="my-dealer" class="checked" checked>
                 <span id="favorite-1" class="uppercase dealerProp">MY DEALER</span>
                 <span class="checkmark"></span>
-              </label>
+              </label> -->
 
-              <div class="dealer-address">49 Artisan Dr. Smyrna, DE 19977 | <a href="javascript: void();" class="directions">Get Directions</a></div>
+              <div class="dealer-address">49 Artisan Dr. Smyrna, DE 19977 | 
+                <a href="javascript: void();" class="directions" target="_blank">Directions<i class="fas fa-external-link-alt"></i></a>
+              </div>
 
               <div class="store-distance">00 Miles Away</div>
 
@@ -89,9 +109,21 @@ data-animation-out="slide-out-up-custom">
         <div id="dealer-2" class="result-entry">
 
           <div class="grid-x dealer-badge">
-            <div class="cell shrink dealer-badge-container elite-dealer"><i class="fas fa-award"></i> Elite Dealer</div>
-            <div class="cell shrink dealer-badge-entry">Offsite Service <i class="far fa-info-circle"></i></div>
-            <div class="cell shrink dealer-badge-entry">Offsite Service <i class="far fa-info-circle"></i></div>
+            <div class="cell shrink dealer-badge-container elite-dealer">
+              <span data-tooltip class="top" tabindex="1" title="Elite Dealer Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">
+                <i class="fas fa-award"></i>Elite Dealer
+              </span>
+            </div>
+            <div class="cell shrink dealer-badge-entry">
+              <span data-tooltip class="top" tabindex="1" title="Offsite Service Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">
+                <i class="far fa-info-circle"></i>Offsite Service
+              </span>
+            </div>
+            <div class="cell shrink dealer-badge-entry">
+              <span data-tooltip class="top" tabindex="1" title="Offsite Service Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">
+                <i class="far fa-info-circle"></i>Offsite Service
+              </span>
+            </div>
           </div>
 
           <div class="grid-x pos-relative">
@@ -104,7 +136,7 @@ data-animation-out="slide-out-up-custom">
                 <span class="checkmark"></span>
               </label> -->
 
-              <div class="dealer-address">49 Artisan Dr. Smyrna, DE 19977 | <a href="javascript: void();" class="directions">Get Directions</a></div>
+              <div class="dealer-address">49 Artisan Dr. Smyrna, DE 19977 | <a href="javascript: void();" class="directions">Directions</a></div>
 
               <div class="store-distance">00 Miles Away</div>
 
@@ -136,7 +168,7 @@ data-animation-out="slide-out-up-custom">
                 <span class="checkmark"></span>
               </label> -->
 
-              <div class="dealer-address">49 Artisan Dr. Smyrna, DE 19977 | <a href="javascript: void();" class="directions">Get Directions</a></div>
+              <div class="dealer-address">49 Artisan Dr. Smyrna, DE 19977 | <a href="javascript: void();" class="directions">Directions</a></div>
 
               <div class="store-distance">00 Miles Away</div>
 
@@ -154,8 +186,16 @@ data-animation-out="slide-out-up-custom">
         <div id="dealer-4" class="result-entry">
 
           <div class="grid-x dealer-badge">
-            <div class="cell shrink dealer-badge-container elite-dealer"><i class="fas fa-award"></i> Elite Dealer</div>
-            <div class="cell shrink dealer-badge-entry">Offsite Service <i class="far fa-info-circle"></i></div>
+            <div class="cell shrink dealer-badge-container elite-dealer">
+              <span data-tooltip class="top" tabindex="1" title="Elite Dealer Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">
+                <i class="fas fa-award"></i>Elite Dealer
+              </span>
+            </div>
+            <div class="cell shrink dealer-badge-entry">
+              <span data-tooltip class="top" tabindex="1" title="Offsite Service Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">
+                <i class="far fa-info-circle"></i>Offsite Service
+              </span>
+            </div>
           </div>
 
           <div class="grid-x pos-relative">
@@ -168,7 +208,7 @@ data-animation-out="slide-out-up-custom">
                 <span class="checkmark"></span>
               </label> -->
 
-              <div class="dealer-address">49 Artisan Dr. Smyrna, DE 19977 | <a href="javascript: void();" class="directions">Get Directions</a></div>
+              <div class="dealer-address">49 Artisan Dr. Smyrna, DE 19977 | <a href="javascript: void();" class="directions">Directions</a></div>
 
               <div class="store-distance">00 Miles Away</div>
 

@@ -16,7 +16,7 @@ data-animation-out="slide-out-up-custom">
             <h3>Contact Information</h3>
           </div>
           <div class="form">
-            <form id="form4" data-abide novalidate>
+            <form id="form4" data-abide novalidate data-thankyou="${form.thankYouPage}">
               <div data-abide-error class="alert callout" style="display: none;">
                 <p>
                   <i class="fas fa-exclamation-triangle fa-xs">
@@ -25,67 +25,57 @@ data-animation-out="slide-out-up-custom">
               </div>
               <div class="grid-x">
                 <div class="small-12 medium-6 cell">
-                  <label>First Name * <input name="firstName" type="text" id="firstNameInput" placeholder="" required />
-                      <span class="form-error" data-form-error-for="firstNameInput">First Name is required.</span>
+                  <label>First Name * 
+                    <input name="firstName" type="text" id="firstNameInput" placeholder="" maxlength="25" required />
+                    <span class="form-error" data-form-error-for="firstNameInput">First Name is required.</span>
                   </label>
                 </div>
                 <div class="small-12 medium-6 cell">
-                  <label>Last Name * <input name="lastName" type="text" id="lastNameInput" placeholder="" required />
-                      <span class="form-error" data-form-error-for="lastNameInput">Last Name is required.</span>
+                  <label>Last Name * 
+                    <input name="lastName" type="text" id="lastNameInput" placeholder="" maxlength="25" required />
+                    <span class="form-error" data-form-error-for="lastNameInput">Last Name is required.</span>
                   </label>
                 </div>
                 <div class="small-12 medium-6 cell">
-                  <label>Phone * <input name="phone" type="text" id="phoneInput" placeholder="" required />
-                      <span class="form-error" data-form-error-for="phoneInput">Phone is required.</span>
+                  <label>Phone * 
+                    <input name="phone" type="text" id="phoneInput" placeholder="" maxlength="20" required />
+                    <span class="form-error" data-form-error-for="phoneInput">Phone is required.</span>
                   </label>
                 </div>
                 <div class="medium-4 medium-6 cell">
-                  <label>Zip/Postal Code * <input name="postalCode" type="text" id="postalCodeInput" placeholder=""
-                          required />
-                      <span class="form-error" data-form-error-for="postalCodeInput">Zip/Postal Code is required.</span>
+                  <label>Zip/Postal Code * 
+                    <input name="postalCode" type="text" id="postalCodeInput" placeholder="" maxlength="10" required />
+                    <span class="form-error" data-form-error-for="postalCodeInput">Zip/Postal Code is required.</span>
                   </label>
                 </div>
                 <div class="small-12 cell">
-                  <label>Email * <input name="email" type="text" id="emailInput" placeholder="" required pattern="email" />
-                      <span class="form-error" data-form-error-for="emailInput">Email address is required in standard
-                          email format.</span>
-                  </label>
-                </div>
-                <div class="medium-12 cell">
-                  <label for="subjectInput">Subject *
-                    <input name="subject" type="text" id="subjectInput" required />
-                    <span class="form-error" data-form-error-for="subjectInput">Subject is required.</span>
+                  <label>Email * 
+                    <input name="email" type="text" id="emailInput" placeholder="" maxlength="50" required pattern="email" />
+                    <span class="form-error" data-form-error-for="emailInput">Email address is required in standard email format.</span>
                   </label>
                 </div>
                 <div class="medium-12 cell">
                   <label for="questionInput">Question *
-                    <textarea name="message" id="questionInput" rows="3" required></textarea>
+                    <textarea name="message" id="questionInput" maxlength="250" rows="3" required></textarea>
                     <span class="form-error" data-form-error-for="questionInput">Question is required</span>
                   </label>
                 </div>
                 <div class="small-12 cell preferred-contact-container">
-                  <!-- <div class="preferred-contact">
+                  <div class="preferred-contact">
                     <p>Preferred method of contact: *</p>
-                  </div> -->
-                  <!-- <div>
+                  </div>
+                  <div>
                     <label class="contactType">
                       <input required type="radio" name="preferredContactType" value="Email" id="preferredContactTypeEmail" class="checked"> Email
                       <span class="checkmark"></span>
                     </label>
-                  </div> -->
-                  <!-- <div>
+                  </div>
+                  <div>
                     <label class="contactType">
                       <input type="radio" name="preferredContactType" value="Phone" id="preferredContactTypePhone" class="checked"> Phone
                       <span class="checkmark"></span>
                     </label>
-                  </div> -->
-                  <fieldset>
-                    <legend>Preferred method of contact: *</legend>
-                    <input name="contactmethod" type="radio" id="callme" value="phone">
-                    <label for="callme">Call Me</label>
-                    <input name="contactmethod" type="radio" id="emailme" value="email">
-                    <label for="emailme">Email Me</label>
-                  </fieldset>
+                  </div>
                   <div class="grid-x optInContainer">
                     <div class="cell small-12 optInCheckbox">
                       <div class="optInCheckboxContainer">
@@ -106,7 +96,7 @@ data-animation-out="slide-out-up-custom">
                 <!-- hidden fields -->
                 <input name="leadTypeId" type="hidden" value="6" />
                 <input name="reasonForContactID" type="hidden" value="21" />
-                <input name="dealerId" type="hidden" value="508" />
+                <input name="dealerId" type="hidden" value="" id="dealerId" />
                 <input name="formType" type="hidden" value="Contact" />
                 <input name="brand" type="hidden" value="Tracker" />
                 <input name="source" type="hidden" value="Tracker Website" />
@@ -114,10 +104,10 @@ data-animation-out="slide-out-up-custom">
                 <input name="captchaName" type="hidden" value="invisiblev2" />
                 <!-- end hidden fields -->
                 <div class="small-12 cell hide-for-medium text-center">
-                  <button class="button expanded formSubmit submitButton" type="submit" value="Submit">Send To Dealer</button>
+                  <button id="submit" class="button expanded formSubmit submitButton" type="submit" value="Submit">Send To Dealer</button>
                 </div>
                 <div class="small-12 cell show-for-medium text-center">
-                  <button class="button formSubmit submitButton" type="submit" value="Submit">Send To Dealer</button>
+                  <button id="submit" class="button formSubmit submitButton" type="submit" value="Submit">Send To Dealer</button>
                 </div>
                 <div id="loader">
                 </div>
@@ -154,7 +144,7 @@ data-animation-out="slide-out-up-custom">
         <div class="search-bar grid-x">
           <i class="fas fa-search search-icon" aria-hidden="true"></i>
           <i class="fas fa-angle-down arrow-icon" aria-hidden="true" style="display:block;"></i>
-          <select id="radius-input" name="miles" class="miles align-self-middle" onchange="initMap()" style="display: block;">
+          <select id="radius-input" name="miles" class="miles align-self-middle" style="display: block;">
             <option value="100" selected="">100 Miles</option>
             <option value="250">250 Miles</option>
             <option value="500">500 Miles</option>
@@ -164,12 +154,9 @@ data-animation-out="slide-out-up-custom">
         </div>
 
         <div class="use-location">
-          <a onclick="accessCurrentPosition()" class="icon-location"> Use My Current Location</a>
+          <a><i class="fas fa-crosshairs"></i> Use My Current Location</a>
         </div>
       </form>
-    </div>
-    <div class="cell medium-6 align-self-middle text-right show-all-dealers hide-for-small-only">
-      <a href="javascript: void();"><i class="fas fa-globe-americas"></i> Show All Dealers</a>
     </div>
   </div>
 
@@ -182,25 +169,34 @@ data-animation-out="slide-out-up-custom">
 
           <div id="dealer-search-results" class="results scrollable">
 
-            <div id="dealer-1" class="result-entry my-dealer-border">
+            <div id="dealer-1" class="result-entry">
 
-              <div class="grid-x dealer-badge">
-                <div class="cell shrink dealer-badge-container elite-dealer"><i class="fas fa-award"></i> Elite Dealer</div>
-                <div class="cell shrink dealer-badge-entry">Offsite Service <i class="far fa-info-circle"></i></div>
-              </div>
+              <!-- <div class="grid-x dealer-badge">
+                <div class="cell shrink dealer-badge-container elite-dealer">
+                  <span data-tooltip class="top" tabindex="1" title="Elite Dealer Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">
+                    <i class="fas fa-award"></i>Elite Dealer<i class="far fa-info-circle"></i>
+                  </span>
+                </div>
+                <div class="cell shrink dealer-badge-entry">
+                  <span data-tooltip class="top" tabindex="1" title="Offsite Service Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">
+                    <i class="far fa-info-circle"></i>Offsite Service
+                  </span>
+                </div>
+              </div> -->
 
               <div class="grid-x pos-relative">
                 <div class="cell card-left-column medium-9 large-8 p-20">
                   <div class="dealer-name tiny-bottom">1. Bass Pro Boating Center <span>Baltimore, MD</span></div>
 
-                  <label class="favorite" for="set-dealer-1">
+                  <!-- <label class="favorite" for="set-dealer-1">
                     <input type="radio" id="set-dealer-1" name="set-dealer" value="favorite" class="dealerRadio" checked>
                     <span class="uppercase dealerProp">MY DEALER</span>
                     <span class="checkmark"></span>
-                  </label>
+                  </label> -->
 
-                  <div class="dealer-address">49 Artisan Dr. Smyrna, DE 19977 |
-                  <a href="javascript: void();" class="directions">Get Directions</a></div>
+                  <div class="dealer-address">49 Artisan Dr. Smyrna, DE 19977 | 
+                    <a href="javascript: void();" class="directions" target="_blank">Directions<i class="fas fa-external-link-alt"></i></a>
+                  </div>
 
                   <div class="grid-x">
                     <div class="cell large-12">
@@ -284,7 +280,19 @@ data-animation-out="slide-out-up-custom">
                           </div>
                         </li>
                       </ul>
+
                       <div class="store-distance">00 Miles Away</div>
+
+                      <div class="grid-x">
+                        <div class="cell shrink set-dealer-container">
+                          <label class="favorite" for="set-dealer-1">
+                            <input type="checkbox" id="set-dealer-1" name="set-dealer" value="favorite" class="dealerRadio set-dealer" checked>
+                            <span class="uppercase dealerProp">SET AS MY DEALER</span>
+                            <span class="set-dealer-checkmark checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
 
@@ -292,88 +300,69 @@ data-animation-out="slide-out-up-custom">
 
                 <div class="cell auto card-right-column">
                   
-                  <div class="display-sm-none text-center"><a class="button tiny" data-open="contact-dealer-modal-container">Contact Dealer</a></div>
+                  <div class="display-sm-none text-center"><a class="button tiny" data-open="contact-dealer-modal-container">Email Dealer</a></div>
 
                   <div class="cell card-divider">
                     <div class="grid-x dealer-options-grid">
                       <div class="cell small-6 medium-12 dealer-option-container pl-5">
-                        <a href="javascript: void();" class="dealer-option phone-icon">1-000-000-0000</a>
+                        <a href="javascript: void();" class="dealer-option"><i class="fas fa-phone" aria-hidden="true"></i>1-000-000-0000</a>
                       </div>
                       <div class="cell small-6 medium-12 dealer-option-container pl-5">
-                        <a href="javascript: void();" class="dealer-option wrench-icon">Service Inquiry</a>
+                        <a href="javascript: void();" class="dealer-option"><i class="fas fa-wrench" aria-hidden="true"></i>Service Inquiry</a>
                       </div>
                       <div class="cell small-6 medium-12 dealer-option-container pl-5">
-                        <a href="javascript: void();" class="dealer-option globe-icon">Visit Website</a>
+                        <a href="javascript: void();" class="dealer-option"><i class="fas fa-globe" aria-hidden="true"></i>Visit Website</a>
                       </div>
                       <div class="cell small-6 medium-12 dealer-option-container pl-5">
-                        <a href="javascript: void();" class="dealer-option cart-icon">View Inventory</a>
+                        <a href="javascript: void();" class="dealer-option"><i class="fas fa-list" aria-hidden="true"></i>View Inventory</a>
                       </div>
                     </div>
                   </div>
                 </div>          
               </div>
 
-              <!-- <ul class="accordion segments" data-accordion data-allow-all-closed="true">
-                <li class="accordion-item grid-x" data-accordion-item>
-                  <div class="cell segment-names small-9"><b>Brand Segments</b></div>
-                  <a href="#" class="cell accordion-title small-3 text-right"><span class="hide-for-small-only">View</span> More
-                  </a>
-                  <div class="cell accordion-content align-self-center" data-tab-content>
-                    <p>Aluminum &#9679; Pontoons &#9679; Segments Aluminum</p>
-                  </div>
-                </li>
-              </ul> -->
-
-              <!-- <div class="segments">
-                <div class="grid-x">
-                  <div id="segmentExpand01" class="cell auto segmentContainer">
-                    <p id="moreText01" class="segmentList segment-collapse">
-                      <span id="span01" class="spanText">Aluminum &#9679; Pontoons &#9679; Fiberglass &#9679; Pontoons &#9679; Fiberglass Aluminum &#9679; Pontoons &#9679; Fiberglass &#9679; Pontoons &#9679; Fiberglass</span>
-                    </p>
-                  </div>
-                  <div id="btnContainer01" class="segmentBtnContainer">
-                    <a onclick="toggleText(this)" id="segmentBtn01" class="cell shrink segmentBtn">Show More </a>
-                  </div>
-                </div>
-              </div> -->
-
               <div class="grid-x hide-for-medium">
                 <div class="cell mobile-contact-btn align-middle text-center">
-                  <a class="button small expanded" data-open="contact-dealer-modal-container">Contact Dealer</a>
+                  <a class="button small" data-open="contact-dealer-modal-container">Email Dealer</a>
                 </div>
               </div>
 
-              <div class="segmentsNew">
+              <!-- <div class="segmentsNew">
                 <div class="segmentsDivider"></div>
-                <div class="segmentsTitle">
-                  Dealer Segments
+                <div class="segmentsList grid-x">
+                  <p class="cell shrink">Aluminum</p> <p class="cell shrink">Pontoons</p>  <p class="cell shrink">Fiberglass</p> <p class="cell shrink">Pontoons</p>
                 </div>
-                <div class="segmentsList">
-                  <p>Aluminum <i class="fas fa-circle"></i> Pontoons <i class="fas fa-circle"></i>  Fiberglass <i class="fas fa-circle"></i>  Pontoons</p>
-                </div>
-              </div>
+              </div> -->
 
             </div>
 
             <div id="dealer-2" class="result-entry">
 
               <div class="grid-x dealer-badge">
-                <div class="cell shrink dealer-badge-container elite-dealer"><i class="fas fa-award"></i> Elite Dealer</div>
-                <div class="cell shrink dealer-badge-entry">Offsite Service <i class="far fa-info-circle"></i></div>
+                <div class="cell shrink dealer-badge-container elite-dealer">
+                  <span data-tooltip class="top" tabindex="1" title="Elite Dealer Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">
+                    <i class="fas fa-award"></i>Elite Dealer
+                  </span>
+                </div>
+                <div class="cell shrink dealer-badge-entry">
+                  <span data-tooltip class="top" tabindex="1" title="Offsite Service Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">
+                    Offsite Service<i class="far fa-info-circle"></i>
+                  </span>
+                </div>
               </div>
 
               <div class="grid-x pos-relative">
                 <div class="cell card-left-column medium-9 large-8 p-20">
                   <div class="dealer-name tiny-bottom">1. Bass Pro Boating Center <span>Baltimore, MD</span></div>
 
-                  <label class="favorite" for="set-dealer-2">
+                  <!-- <label class="favorite" for="set-dealer-2">
                     <input type="radio" id="set-dealer-2" name="set-dealer" value="favorite" class="dealerRadio">
                     <span class="uppercase dealerProp">SET AS MY DEALER</span>
                     <span class="checkmark"></span>
-                  </label>
+                  </label> -->
 
                   <div class="dealer-address">49 Artisan Dr. Smyrna, DE 19977 |
-                  <a href="javascript: void();" class="directions">Get Directions</a></div>
+                  <a href="javascript: void();" class="directions" target="_blank">Get Directions</a></div>
 
                   <div class="grid-x">
                     <div class="cell large-12">
@@ -458,13 +447,24 @@ data-animation-out="slide-out-up-custom">
                         </li>
                       </ul>
                       <div class="store-distance">00 Miles Away</div>
+
+                      <div class="grid-x">
+                        <div class="cell shrink my-dealer-container">
+                          <label class="favorite" for="my-dealer-1">
+                            <input type="checkbox" id="my-dealer-1" name="my-dealer" value="favorite" class="dealerRadio my-dealer" checked>
+                            <span class="uppercase dealerProp">MY DEALER</span>
+                            <span class="my-dealer-checkmark checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
 
                 </div>
                 <div class="cell auto card-right-column">
                   
-                  <div class="display-sm-none text-center"><a class="button tiny" data-open="contact-dealer-modal-container">Contact Dealer</a></div>
+                  <div class="display-sm-none text-center"><a class="button tiny" data-open="contact-dealer-modal-container">Email Dealer</a></div>
 
                   <div class="cell card-divider">
                     <div class="grid-x dealer-options-grid">
@@ -485,33 +485,16 @@ data-animation-out="slide-out-up-custom">
                 </div>          
               </div>
 
-              <!-- <ul class="accordion segments" data-accordion data-allow-all-closed="true">
-                <li class="accordion-item grid-x" data-accordion-item>
-                  <div class="cell segment-names auto">Aluminum &#9679; Inshore Saltwater &#9679; Pontoons</div>
-                  <a href="#" class="cell accordion-title shrink"><span class="hide-for-small-only">View</span> More
-                  </a>
-                  <div class="cell accordion-content align-self-center" data-tab-content>
-                    <p>Aluminum &#9679; Pontoons &#9679; Segments Aluminum &#9679; Pontoons &#9679; Segment Aluminum &#9679; Inshore Saltwater &#9679; Pontoons &#9679; Segment</p>
-                  </div>
-                </li>
-              </ul> -->
-
-              <div class="segments">
-                <div class="grid-x">
-                  <div id="segmentExpand02" class="cell auto segmentContainer">
-                    <p id="moreText02" class="segmentList segment-collapse">
-                      <span id="span02" class="spanText">Aluminum &#9679; Pontoons &#9679; Fiberglass</span>
-                    </p>
-                  </div>
-                  <div id="btnContainer02" class="segmentBtnContainer">
-                    <a onclick="toggleText(this)" id="segmentBtn02" class="cell shrink segmentBtn">Show More </a>
-                  </div>
+              <div class="segmentsNew">
+                <div class="segmentsDivider"></div>
+                <div class="segmentsList grid-x">
+                  <p class="cell shrink">Aluminum</p> <p class="cell shrink">Pontoons</p>  <p class="cell shrink">Fiberglass</p> <p class="cell shrink">Pontoons</p>
                 </div>
               </div>
 
               <div class="grid-x">
                 <div class="cell mobile-contact-btn hide-for-medium text-center">
-                  <a class="button tiny" data-open="contact-dealer-modal-container">Contact Dealer</a>
+                  <a class="button tiny" data-open="contact-dealer-modal-container">Email Dealer</a>
                 </div>
               </div>
 
@@ -540,11 +523,15 @@ data-animation-out="slide-out-up-custom">
               </div>
             </div> -->
 
+            <div class="load-more text-center">
+              <a href="javascript:void;" id="load-more" class="hollow button loadMore" style="display:block;">Load More</a>
+            </div>
+
           </div>
 
-          <div class="load-more text-center">
+          <!-- <div class="load-more text-center">
             <a href="#" id="load-more" class="hollow button loadMore" style="display:block;">Load More</a>
-          </div>
+          </div> -->
 
         </div>
       
@@ -565,9 +552,3 @@ data-animation-out="slide-out-up-custom">
   </div>
 
 </div>
-
-<script>
-  $(".accordion-item").click(function() {
-    $("accordion-item").toggleClass("active")
-  })
-</script>

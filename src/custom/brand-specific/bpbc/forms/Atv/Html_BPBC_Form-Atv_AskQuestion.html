@@ -11,69 +11,75 @@ http://aem-sites.basspro.com/editor.html/content/bp-boating-center/home/atvs-for
   <form id="form4" data-abide novalidate>
     <div data-abide-error class="alert callout" style="display: none;">
       <p>
-        <i class="fas fa-exclamation-triangle fa-xs">
-          </i> There are some errors in your form.</p>
-        </div>
-        <div class="grid-x">
-          <div class="small-12 medium-6 cell">
-            <label>First Name*          <input name="firstName" type="text" id="firstNameInput" placeholder="" required />
-            <span class="form-error" data-form-error-for="fnameInput">First Name is required.</span>
-          </label>
-        </div>
-        <div class="small-12 medium-6 cell">
-          <label>Last Name*          <input name="lastName" type="text" id="lastNameInput" placeholder="" required />
+        <i class="fas fa-exclamation-triangle fa-xs"></i> There are some errors in your form.
+      </p>
+    </div>
+    <div class="grid-x">
+      <div class="small-12 medium-6 cell">
+        <label>First Name*
+          <input name="firstName" type="text" id="firstNameInput" placeholder="" required />
+          <span class="form-error" data-form-error-for="fnameInput">First Name is required.</span>
+        </label>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>Last Name*
+          <input name="lastName" type="text" id="lastNameInput" placeholder="" required />
           <span class="form-error" data-form-error-for="lastNameInput">Last Name is required.</span>
         </label>
       </div>
       <div class="small-12 medium-6 cell">
-        <label>Phone*          <input name="phone" type="text" id="phoneInput" placeholder="" required />
-        <span class="form-error" data-form-error-for="phoneInput">Phone is required.</span>
-      </label>
+        <label>Phone *
+          <input name="phone" type="text" id="phoneInput" placeholder="" required />
+          <span class="form-error" data-form-error-for="phoneInput">Phone is required.</span>
+        </label>
+      </div>
+      <div class="medium-4 medium-6 cell">
+        <label>Zip/Postal Code *
+          <input name="postalCode" type="text" id="postalCodeInput" placeholder="" required />
+          <span class="form-error" data-form-error-for="postalCodeInput">Zip/Postal Code is required.</span>
+        </label>
+      </div>
+      <div class="small-12 cell">
+        <label>Email *
+          <input name="email" type="text" id="emailInput" placeholder="" required pattern="email" />
+          <span class="form-error" data-form-error-for="emailInput">Email address is required in standard email format.</span>
+        </label>
+      </div>
+      <div class="medium-12 cell">
+        <label>Question:
+          <textarea name="message" placeholder="" id="messageInput" rows="3"></textarea>
+        </label>
+      </div>
+      <!--<div class="small-12 cell">
+        <fieldset>
+          <legend>Preferred method of contact:</legend>
+          <input name="contactmethod" type="radio" id="callme" value="phone" required />
+          <label for="callme">Call Me</label>
+          <input name="contactmethod" type="radio" id="emailme" value="email" />
+          <label for="emailme">Email Me</label>
+        </fieldset>
+      </div>-->
+      <div class="medium-12 cell">
+        <div id="recaptcha_4" class="g-recaptcha" data-sitekey="6Ldrjo4UAAAAABY3ZWa0FAG529uHVwvxaNhQugCI" data-callback="onSubmit" data-size="invisible">
+        </div>
+      </div>
+      <!-- hidden fields -->
+      <input name="leadTypeId" type="hidden" value="2" />
+      <input name="reasonForContactID" type="hidden" value="403"/>
+      <input name="formType" type="hidden" value="ATVAskQuestion" />
+      <input name="brand" type="hidden" value="BassProBoatingCenters" />
+      <input name="source" type="hidden" value="Bass Pro Boating Centers Website" />
+      <input name="url" type="hidden" value="/atvs-for-sale/atvmodel/ask-a-question.html" />
+      <input name="captchaName" type="hidden" value="invisiblev2"/>
+      <!-- end hidden fields -->
+      <div class="small-12 cell hide-for-medium">
+        <button class="button expanded formSubmit submitButton" type="submit" value="Submit">Submit</button>
+      </div>
+      <div class="small-12 cell show-for-medium">
+        <button class="button formSubmit submitButton" type="submit" value="Submit">Submit</button>
+      </div>
+      <div id="loader">
+      </div>
     </div>
-    <div class="medium-4 medium-6 cell">
-      <label>Zip/Postal Code*          <input name="postalCode" type="text" id="postalCodeInput" placeholder="" required />
-      <span class="form-error" data-form-error-for="postalCodeInput">Zip/Postal Code is required.</span>
-    </label>
-  </div>
-  <div class="small-12 cell">
-    <label>Email*          <input name="email" type="text" id="emailInput" placeholder="" required pattern="email" />
-    <span class="form-error" data-form-error-for="emailInput">Email address is required in standard email format.</span>
-  </label>
-</div>
-<div class="medium-12 cell">
-  <label>Question:          <textarea name="message" placeholder="" id="messageInput" rows="3"></textarea>
-</label>
-</div>
-<!--<div class="small-12 cell">
-  <fieldset>
-    <legend>Preferred method of contact:</legend>
-    <input name="contactmethod" type="radio" id="callme" value="phone" required />
-    <label for="callme">Call Me</label>
-    <input name="contactmethod" type="radio" id="emailme" value="email" />
-    <label for="emailme">Email Me</label>
-  </fieldset>
-</div>-->
-<div class="medium-12 cell">
-  <div id="recaptcha_4" class="g-recaptcha" data-sitekey="6Ldrjo4UAAAAABY3ZWa0FAG529uHVwvxaNhQugCI" data-callback="onSubmit" data-size="invisible">
-  </div>
-</div>
-<!-- hidden fields -->
-        <input name="leadTypeId" type="hidden" value="2" />
-	<input name="reasonForContactID" type="hidden" value="403"/>
-        <input name="formType" type="hidden" value="ATVAskQuestion" />
-        <input name="brand" type="hidden" value="BassProBoatingCenters" />
-        <input name="source" type="hidden" value="Bass Pro Boating Centers Website" />
-        <input name="url" type="hidden" value="/atvs-for-sale/atvmodel/ask-a-question.html" />
-<input name="captchaName" type="hidden" value="invisiblev2"/>
-<!-- end hidden fields -->
-<div class="small-12 cell hide-for-medium">
-  <button class="button expanded formSubmit submitButton" type="submit" value="Submit">Submit</button>
-</div>
-<div class="small-12 cell show-for-medium">
-  <button class="button formSubmit submitButton" type="submit" value="Submit">Submit</button>
-</div>
-<div id="loader">
-</div>
-</div>
-</form>
+  </form>
 </div>
