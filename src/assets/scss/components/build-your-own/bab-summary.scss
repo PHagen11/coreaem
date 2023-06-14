@@ -23,6 +23,7 @@
     background: $white;
     .dealer-name {
       //padding-top: 1rem;
+      color: $bab-sum-dealer-card-header-color;
       i {
         color: $primary-color;
         padding-right: 0.6rem;
@@ -34,21 +35,24 @@
       margin: 1em 0;
     }
 
+    .dealer-result-address {
+      padding-top: 0.5rem;
+      font-size: 1.2rem;
+      color: $bab-sum-dealer-card-text-color;
+    }
+
     .dealer-result-phone {
       //margin-top: 1rem;
       //background: $light-gray;
       font-weight: bold;
       font-size: 1.2rem;
+      color: $bab-sum-dealer-card-text-color;
       padding: 1rem;
       border-radius: 6px;
     }
 
-    .dealer-result-address {
-      padding-top: 0.5rem;
-      font-size: 1.2rem;
-    }
-
     .dealer-hours {
+        background-color: $bab-sum-dealer-card-hours-accordion-bkg-color;
         border: 2px solid $border-gray;
         margin-top: 1rem;
         margin-bottom:3rem;
@@ -61,7 +65,7 @@
         }
         .accordion-title {
           border: none;
-          color: $black;
+          color: $bab-sum-dealer-card-hours-accordion-text-color;;
           font-size: 1rem;
           text-decoration: none;
           font-weight: bold;

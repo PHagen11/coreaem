@@ -109,7 +109,7 @@
 
       table {
         tr:nth-child(odd) {
-          background-color: $dark-gray;//$light-gray;
+          background-color: $model-options-accordion-background-odd; //$dark-gray;
         }
         tr:nth-child(even) {
           background-color: $global-background-color;

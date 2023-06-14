@@ -14,7 +14,7 @@
   section {
     h3 {
       font-size: 1.5rem;
-      background-color: $light-gray;
+      background-color: $internation-dealer-list-body-bg;
       padding: 1rem;
       text-transform: capitalize !important;
       //border-bottom:1px solid $border-gray;
@@ -38,6 +38,12 @@
 
     }
 
+    .phone {
+      a {
+        color: $internation-dealer-list-link-color;
+      }
+    }
+
     .links {
       @include breakpoint(small) {
         font-weight: 600;
@@ -52,8 +58,14 @@
         margin-bottom: 1.5em;
       }
 
-      i {
-        padding-left: 0.5em;
+      a {
+
+        color: $internation-dealer-list-link-color;
+
+        i {
+          padding-left: 0.5em;
+        }
+
       }
     }
   }

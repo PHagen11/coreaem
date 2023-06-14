@@ -162,10 +162,10 @@
 
   .special-offers {
     @include breakpoint(small){
-      background: $medium-gray;//$light-gray;
+      background: $bab-sum-special-offers-bkg-color
     }
     @include breakpoint(large){
-      background: $medium-gray;//$light-gray;
+      background: $bab-sum-special-offers-bkg-color
     }
     font-size: 1rem;
     border-radius: 6px;
