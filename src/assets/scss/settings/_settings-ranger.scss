@@ -1434,7 +1434,6 @@ $boat-types-label-weight: bold;
 // 26. Dealer Search Horizontal Component
 // -----------------------------
 
-$dealer-search-horizontal-dealer-card-bg: $dark-gray;
 $dealer-search-horizontal-font-color: $white;
 $dealer-search-horizontal-icon-color: $primary-color;
 $dealer-search-horizontal-divider-color: #cccccc40;
@@ -1450,15 +1449,22 @@ $dealer-search-horizontal-input-field-bg: $black;
 $dealer-search-horizontal-input-field-border-color: $light-gray;
 $dealer-search-horizontal-input-field-border-color-hover: $white;
 $dealer-search-horizontal-input-field-border-radius: 2em;
+$dealer-search-horizontal-location-input-field-padding-right: 125px;
 $dealer-search-horizontal-search-radius-dropdown-min-width: 110px;
+$dealer-search-horizontal-search-radius-top-position: 12px;
+$dealer-search-horizontal-search-radius-right-position: 12px;
 $dealer-search-horizontal-my-location-button: $white;
 $dealer-search-horizontal-results-font-color: $black;
 $dealer-search-horizontal-dealer-card-border-radius: 0.25em;
+$dealer-search-horizontal-dealer-card-selected-border-radius: inherit;
 $dealer-search-horizontal-dealer-card-box-shadow: 0px 4px 10px rgba(0, 0, 0, .3);
 $dealer-search-horizontal-dealer-card-font-color: $white;
+$dealer-search-horizontal-dealer-card-bg: $dark-gray;
 $dealer-search-horizontal-dealer-card-col-bg: $light-gray;
 $dealer-search-horizontal-elite-dealer-badge-font-color: $black;
 $dealer-search-horizontal-elite-dealer-badge-bg: $white;
+$dealer-search-horizontal-elite-dealer-badge-border-radius: .25em 0 .75em;
+$dealer-search-horizontal-elite-dealer-badge-padding: 3px 12px;
 $dealer-search-horizontal-address-font-color: $light-gray;
 $dealer-search-horizontal-directions-link-color: $light-gray;
 $dealer-search-horizontal-directions-icon-color: $primary-color;
@@ -1468,9 +1474,11 @@ $dealer-search-horizontal-accordion-closed-font-color: #EE8789;
 $dealer-search-horizontal-accordion-bg: $dark-gray;
 $dealer-search-horizontal-set-dealer-font-color: $black;
 $dealer-search-horizontal-set-dealer-bg: #F7F7F7;
+$dealer-search-horizontal-set-dealer-padding-top: 2px;
 $dealer-search-horizontal-my-dealer-font-color: $white;
 $dealer-search-horizontal-my-dealer-bg: $dark-gray;
 $dealer-search-horizontal-card-divider-bg: $dark-gray;
+$dealer-search-horizontal-email-dealer-btn-font-color: inherit;
 $dealer-search-horizontal-dealer-option-link-color: $white;
 $dealer-search-horizontal-segment-font-color: $light-gray;
 $dealer-search-horizontal-map-marker-color: $primary-color;
@@ -1479,8 +1487,9 @@ $dealer-search-horizontal-load-more-button-font-color: $white;
 $dealer-search-horizontal-load-more-button-hover-color: $button-background-hover;
 $dealer-search-horizontal-load-more-button-border-color: $primary-color;
 $dealer-search-horizontal-load-more-button-bg: $primary-color;
-$dealer-search-horizontal-no-results-card-bg: $dark-gray;
-$dealer-search-horizontal-no-results-button-font-color: $primary-color;
+$dealer-search-horizontal-map-marker-tooltip-font-color: $black;
+$dealer-search-horizontal-map-marker-link-color: $primary-color;
+$dealer-search-horizontal-reset-search-button-font-color: $primary-color;
 
 // 27. International Dealer List
 // -----------------------------
@@ -1548,10 +1557,11 @@ $bab-model-name-header-color: $white;
 $bab-header-expanded-color: $primary-color;
 $bab-header-expanded-text-color: $white;
 $bab-sum-special-offers-bkg-color: $dark-gray;
-$bab-sum-dealer-card-header-color: $black;
+$bab-sum-dealer-card-font-color: $light-gray;
 $bab-sum-dealer-card-text-color: $dark-gray;
+$bab-sum-dealer-card-link-color: $global-link-color;
 $bab-sum-dealer-card-hours-accordion-text-color: $white;
-$bab-sum-dealer-card-hours-accordion-bkg-color: $black;
+$bab-sum-dealer-card-bkg-color: $black;
 
 // 30. Scroll to Top Button
 // -----------------------------

@@ -915,25 +915,28 @@ $xy-block-grid-max: 8;
 //   7. Divider Component
 //   8. Button Component
 //   9. Blockquote Component
-//  10. Hero Component
-//  11. Image Carousel Component
-//  12. Video Component
-//  13. Image Gallery Component
-//  14. Icon Component
-//  15. Link List Component
-//  16. Footer Component
-//  17. Model Specs Component
-//  18. Model Options Component
-//  19. Model Features Component
-//  20. Model Listing Component
-//  21. Model Motors Component
-//  22. Model Price Component
-//  23. Dealer Results
-//  24. Dealer Search Component
-//  25. Dealer Search Horizontal Component
-//  26. Dealer Selector Modal
-//  27. Build A Boat Component
-//  28. Scroll to Top Button
+//  10. Tabs Component
+//  11. Hero Component
+//  12. Image Carousel Component
+//  13. Video Component
+//  14. Image Gallery Component
+//  15. Icon Component
+//  16. Link List Component
+//  17. Footer Component
+//  18. Model Specs Component
+//  19. Model Options Component
+//  20. Model Features Component
+//  21. Model Listing Component
+//  22. Model Motors Component
+//  23. Model Price Component
+//  24. Dealer Results
+//  25. Dealer Search Component
+//  26. Dealer Search Horizontal Component
+//  27. International Dealer List
+//  28. Dealer Selector Modal
+//  29. Build A Boat Component
+//  30. Scroll to Top Button
+//  31. Inventory Component
 
 
 // 1. Global
@@ -1146,6 +1149,10 @@ $button-hollow-padding:0.7em 1.6em;
     border-left: $border;
   }
 }
+
+// Blockquote Basic
+$blockquote-bg: $light-gray;
+
 // Blockquote Text
 $blockquote-font-size: 1.1rem;
 $blockquote-weight: 500;
@@ -1158,7 +1165,11 @@ $quote-font-family: $header-font-family;
 $profile-radius: 10%;
 $profile-size: 60px;
 
-// 10. Hero Component
+// 10. Tabs Component
+
+$tabs-bg: $dark-gray;
+
+// 11. Hero Component
 // -----------------------------
 
 $hero-default-bg-color: $black;
@@ -1183,7 +1194,7 @@ $large-mobile-hero: 450px;
 $hero-top-padding: 3rem;
 $hero-bottom-padding: 3rem;
 
-// 11. Image Carousel Component
+// 12. Image Carousel Component
 // -----------------------------
 
 // animation style and other OWL CAROUSEL options need to be set in /assets/js/imagecarousel.js\
@@ -1212,7 +1223,7 @@ $image-carousel-dots-opacity-active: 1;
 $image-carousel-dots-margin: 1.5rem 0.25rem 1rem 0.25rem;
 $image-carousel-dots-y-move: 1rem; //0 = right below images
 
-// 12. Video Component
+// 13. Video Component
 // -----------------------------
 
 $video-play-button-opacity-start: 0.5;
@@ -1225,7 +1236,7 @@ $video-play-button-large: 15vw;
 $video-play-button-xlarge: 20vw;
 $video-play-button-margin: 2vw;
 
-// 13. Image Gallery Component
+// 14. Image Gallery Component
 // -----------------------------
 
 $gallery-image-width: 98%;
@@ -1241,18 +1252,19 @@ $gallery-toolbar-icons-color-start:$primary-color;
 $gallery-toolbar-icons-color-hover:$white;
 $gallery-image-margin-bottom: 0.5rem;
 
-// 14. Icon Component
+// 15. Icon Component
 // -----------------------------
 $icon-padding: 0.25em;
 
-// 15. Link List Component
+// 16. Link List Component
 // -----------------------------
 
 $link-list-title-font-weight: bold;
 $link-list-font-family:$header-font-family;
 $link-list-font-size: 1.1rem;
+$link-list-title-color: $black;
 
-// 16. Footer Component
+// 17. Footer Component
 // -----------------------------
 
 $footer-background-color: $white;
@@ -1265,7 +1277,7 @@ $footer-bottom-nav-text-color: $white;
 $footer-bottom-nav-link-color-start: $white;
 $footer-bottom-nav-link-color-hover: $black;
 
-// 17. Model Specs Component
+// 18. Model Specs Component
 // -----------------------------
 
 $minimal-spacing: 1rem 1rem 1rem 0;
@@ -1277,16 +1289,16 @@ $model-specs-label-case: normal;
 $model-specs-border-right: 4px solid $white;
 $model-specs-padding: 0.6rem 0.8rem 0.6rem 0.8rem;
 
-// 18. Model Options Component
+// 19. Model Options Component
 // -----------------------------
 $model-options-background-color: $white;
 $model-options-accordion-background-odd: $light-gray;
 
-// 19. Model Features Component
+// 20. Model Features Component
 // -----------------------------
 $model-features-background-odd: $light-gray;
 
-// 20. Model Listing Component
+// 21. Model Listing Component
 // -----------------------------
 $model-listing-bg-color: $white;
 $model-listing-box-shadow: none;
@@ -1329,11 +1341,11 @@ $model-listing-specs-value-padding: 0em 0  0.25em 2.25em;
 $model-listing-specs-value-size: 1rem 0;
 $model-listing-specs-value-weight: bold;
 
-// 21. Model Motors Component
+// 22. Model Motors Component
 // -----------------------------
 $model-motors-table-motor-cat-background: $light-gray;
 
-// 22. Model Price Component
+// 23. Model Price Component
 // -----------------------------
 
 $model-price-model-year-size: 1em;
@@ -1383,14 +1395,15 @@ $model-price-your-price-sub-label-size: 0.8em;
 $model-price-your-price-sub-label-weight: bold;
 $model-price-your-price-sub-label-color: $medium-gray;
 
-// 23. Dealer Results
+// 24. Dealer Results
 // -----------------------------
 
 $dealer-result-background: $light-gray;
 
-// 24. Dealer Search Component
+// 25. Dealer Search Component
 // -----------------------------
 
+$dealer-search-font-color: $black;
 $dealer-search-heading-size: 1.2em;
 $dealer-search-heading-weight: bold;
 $dealer-search-heading-transform: uppercase;
@@ -1417,9 +1430,10 @@ $dealer-search-dealer-phone-weight: bold;
 $boat-types-label-size: 1em;
 $boat-types-label-weight: bold;
 
-// 25. Dealer Search Horizontal Component
+// 26. Dealer Search Horizontal Component
 // -----------------------------
 
+$dealer-search-horizontal-dealer-card-bg: $white;
 $dealer-search-horizontal-font-color: $black;
 $dealer-search-horizontal-icon-color: $primary-color;
 $dealer-search-horizontal-divider-color: $light-gray;
@@ -1434,18 +1448,52 @@ $dealer-search-horizontal-input-field-bg: $white;
 $dealer-search-horizontal-input-field-border-color: $medium-gray;
 $dealer-search-horizontal-input-field-border-color-hover: $secondary-color;
 $dealer-search-horizontal-input-field-border-radius: 2em;
+$dealer-search-horizontal-location-input-field-padding-right: 124px;
 $dealer-search-horizontal-search-radius-dropdown-min-width: 110px;
+$dealer-search-horizontal-search-radius-top-position: 12px;
+$dealer-search-horizontal-search-radius-right-position: 12px;
+$dealer-search-horizontal-input-field-font-color: $black;
 $dealer-search-horizontal-my-location-button: $black;
+$dealer-search-horizontal-results-font-color: $black;
 $dealer-search-horizontal-dealer-card-col-bg: $body-background;
 $dealer-search-horizontal-dealer-card-font-color: $black;
 $dealer-search-horizontal-dealer-card-border-radius: 0.25em;
+$dealer-search-horizontal-dealer-card-selected-border-radius: inherit;
+$dealer-search-horizontal-dealer-card-box-shadow: 0px 4px 10px rgba(0, 0, 0, .1);
+$dealer-search-horizontal-elite-dealer-badge-font-color: $black;
+$dealer-search-horizontal-elite-dealer-badge-bg: $secondary-color;
+$dealer-search-horizontal-elite-dealer-badge-border-radius: .25em 0 .75em;
+$dealer-search-horizontal-elite-dealer-badge-padding: 4px 12px;
+$dealer-search-horizontal-address-font-color: $black;
 $dealer-search-horizontal-directions-link-color: $primary-color;
+$dealer-search-horizontal-directions-icon-color: $primary-color;
+$dealer-search-horizontal-accordion-font-color: $black;
+$dealer-search-horizontal-accordion-open-font-color: #05672A;
 $dealer-search-horizontal-accordion-bg: $white;
-$dealer-search-horizontal-load-more-button-color: $primary-color;
-$dealer-search-horizontal-load-more-button-hover-color: $button-background-hover;
+$dealer-search-horizontal-set-dealer-font-color: $black;
+$dealer-search-horizontal-set-dealer-bg: #F7F7F7;
+$dealer-search-horizontal-set-dealer-padding-top: 2px;
+$dealer-search-horizontal-my-dealer-font-color: $black;
+$dealer-search-horizontal-my-dealer-bg: $white;
+$dealer-search-horizontal-card-divider-bg: $white;
+$dealer-search-horizontal-email-dealer-btn-font-color: $white;
+$dealer-search-horizontal-dealer-option-link-color: $black;
+$dealer-search-horizontal-segment-font-color: $dark-gray;
+$dealer-search-horizontal-load-more-button-font-color: $primary-color;
+$dealer-search-horizontal-load-more-button-border-color: $primary-color;
+$dealer-search-horizontal-load-more-button-bg: $light-gray;
 $dealer-search-horizontal-map-marker-color: $primary-color;
+$dealer-search-horizontal-map-marker-tooltip-font-color: $black;
+$dealer-search-horizontal-map-marker-link-color: $primary-color;
+$dealer-search-horizontal-reset-search-button-font-color: $primary-color;
 
-// 26. Dealer Selector Modal
+// 27. International Dealer List
+// -----------------------------
+
+$internation-dealer-list-link-color: $secondary-color;
+$internation-dealer-list-body-bg: $light-gray;
+
+// 28. Dealer Selector Modal
 // -----------------------------
 
 $dealer-selector-modal-overlay-bg-color: rgba(0,0,0,0.45);
@@ -1456,6 +1504,7 @@ $dealer-selector-modal-header-font: "Oswald", sans-serif;
 $dealer-selector-modal-header-font-weight: 800;
 $dealer-selector-modal-close-button: $primary-color;
 $dealer-selector-modal-search-radius-font-color: $black;
+$dealer-selector-modal-input-field-font-color: $black;
 $dealer-selector-modal-input-field-bg: $white;
 $dealer-selector-modal-input-field-border-color: $medium-gray;
 $dealer-selector-modal-input-field-border-color-hover: $secondary-color;
@@ -1463,14 +1512,21 @@ $dealer-selector-modal-dealer-search-input-border-radius: 2em;
 $dealer-selector-modal-dealer-search-input-padding-right: 125px;
 $dealer-selector-modal-radius-dropdown-min-width: 110px;
 $dealer-selector-modal-dealer-card-font-color: $black;
+$dealer-selector-modal-dealer-card-bg-color: $white;
 $dealer-selector-modal-dealer-card-border-radius: .5em;
-$dealer-selector-modal-elite-dealer-badge-border-radius: 0 0 .75em 0;
+$dealer-selector-modal-dealer-card-box-shadow: 0px 4px 10px rgba(0, 0, 0, .1);
+$dealer-selector-modal-elite-dealer-badge-font-color: $black;
+$dealer-selector-modal-elite-dealer-badge-bg: $secondary-color;
+$dealer-selector-modal-elite-dealer-badge-border-radius: .25em 0 .75em;
+$dealer-selector-modal-address-font-color: $black;
 $dealer-selector-modal-directions-link-color: $primary-color;
+$dealer-selector-modal-directions-icon-color: $primary-color;
+$dealer-selector-modal-my-dealer-bg: $white;
 $dealer-selector-modal-select-dealer-button-color: $primary-color;
 $dealer-selector-modal-select-dealer-button-border-color: $primary-color;
 $dealer-selector-modal-select-dealer-button-bg-color: rgba(0,78,113,0);
 
-// 27. Build A Boat Component
+// 29. Build A Boat Component
 // -----------------------------
 
 $bab-header-background-color: $primary-color;
@@ -1497,8 +1553,13 @@ $bab-model-name-header-color: $white;
 $bab-header-expanded-color: $secondary-color;
 $bab-header-expanded-text-color: $white;
 $bab-sum-special-offers-bkg-color: $light-gray;
+$bab-sum-dealer-card-header-color: $black;
+$bab-sum-dealer-card-font-color: $dark-gray;
+$bab-sum-dealer-card-link-color: $global-link-color;
+$bab-sum-dealer-card-hours-accordion-text-color: $black;
+$bab-sum-dealer-card-bkg-color: $white;
 
-// 28. Scroll to Top Button
+// 30. Scroll to Top Button
 // -----------------------------
 
 $scroll-top-bg-color: $primary-color;
@@ -1507,6 +1568,14 @@ $scroll-top-left-radius: 0px;
 $scroll-top-right-radius: 0px;
 $scroll-bottom-right-radius: 0px;
 $scroll-bottom-left-radius: 0px;
+
+// 31. Inventory Component
+// -----------------------------
+
+$inventory-body-bg-color: $body-background;
+$inventory-text-color: $white;
+$inventory-text-hover-color: $medium-gray;
+$inventory-sort-order-menu-text-color: $dark-gray;
 
 //These are used by numerous components but seldom change
 
