@@ -177,3 +177,71 @@ jQuery(document).ready(function($) {
 // 				 s.removeClass("stick");
 // 		 }
 //  });
+
+$(window).on('load', function() {
+	technicalQuestion();
+});
+
+$("#categoryInput").on("change", function() {
+
+	if ($("#categoryInput").val() === "102") {
+		$("#snInput").prop('required', true);
+		$(".snRequired").show();
+		$(".snNotRequired").hide();
+	} else {
+		$("#snInput").parent().removeClass('is-invalid-label');
+		$("#snInput").removeClass('is-invalid-input');
+		$("#snInput").siblings().removeClass('is-visible');
+		$("#snInput").prop('required', false);
+		$(".snRequired").hide();
+		$(".snNotRequired").show();
+	}
+
+	technicalQuestion();
+
+});
+
+function technicalQuestion() {
+
+	if ($("#categoryInput").val() === "107") {
+		$("#firstNameInput, #lastNameInput, #phoneInput, #postalCodeInput, #emailInput, #subjectInput, #questionInput, #snInput").parent().hide();
+		$(".submitButton, #errorCallout, #form-instructions, .snNotRequired").hide();
+		$("#supportCallout").show();
+	} else {
+		$("#firstNameInput, #lastNameInput, #phoneInput, #postalCodeInput, #emailInput, #subjectInput, #questionInput, #snInput").parent().show();
+		$(".submitButton, #form-instructions, .snNotRequired").show();
+		$("#supportCallout").hide();
+	}
+
+}
+
+var formRedirectPage = "/dealers/service-inquiry/thank-you.html";
+var formId = "form4";
+
+function dealerWebsiteRedirect(dealerId, url) {
+	//var formRedirectPage = "/dealers/service-inquiry/thank-you.html";
+	//var formId = "form4";
+
+	console.log("dealer id is: " + dealerId);
+
+	if (dealerId != '') {
+		console.log("add hidden dealerid");
+		var field = $(document.createElement("input"));
+		field.attr("name", "selectdid").attr("type", "hidden");
+		field.val(dealerId);
+		$("#"+formId).append(field);
+	}
+
+	try {
+		// var thisurl = new URL(window.location.toLocaleString());
+		//var thisurlparams = thisurl.searchParams;
+		if (url) {
+			//var wparam = url.get('w');
+			formRedirectPage = url;
+			console.log("W Param = " + url);
+		}
+	}
+	catch {}
+}
+
+//$(".dealer-option").on("click", dealerWebsiteRedirect);

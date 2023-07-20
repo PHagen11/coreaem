@@ -110,14 +110,14 @@
         
         .arrow-icon {
             z-index: 100;
-            top: 17px;
+            top: $dealer-selector-modal-radius-dropdown-arrow-top; // 17px;
             right: 15px;
             color: $dealer-selector-modal-icon-color;
             pointer-events: none;
         }
 
         select.miles {
-            top: 12px;
+            top: $dealer-selector-modal-radius-dropdown-top; // 12px;
             right: 12px;
             min-width: $dealer-selector-modal-radius-dropdown-min-width;
             width: auto;
@@ -134,7 +134,7 @@
         select.miles:focus {
             box-shadow: none;
         }
-            
+
         .input-field {
 
             width: 100%;
@@ -193,10 +193,6 @@
 
         .advanced-btn {
             margin-left: 10px;
-        }
-
-        .my-dealer-border {
-            border-bottom: 4px solid $success-color;
         }
 
         .result-container {

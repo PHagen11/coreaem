@@ -12,7 +12,6 @@
 
     color: $black!important;
     background-color: $white!important;
-    // box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.5);
     border: 1px solid $medium-gray!important;
     border-radius: .5em!important;
     width: 100%!important;
@@ -82,132 +81,132 @@
     /* Email opt in checkbox */
 
     /* Hide the browser's default checkbox */
-    .optInCheckboxContainer input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0;
-    }
+    // .optInCheckboxContainer input {
+    //     position: absolute;
+    //     opacity: 0;
+    //     cursor: pointer;
+    //     height: 0;
+    //     width: 0;
+    // }
 
     /* Create a custom checkbox */
-    .optInCheckmark {
-        position: absolute;
-        top: 2px;
-        left: 3px;
-        height: 18px;
-        width: 18px;
-        background-color: #fff;
-        border-radius: 20%;
-        border: 2px solid $primary-color;
-    }
+    // .optInCheckmark {
+    //     position: absolute;
+    //     top: 2px;
+    //     left: 3px;
+    //     height: 18px;
+    //     width: 18px;
+    //     background-color: #fff;
+    //     border-radius: 20%;
+    //     border: 2px solid $primary-color;
+    // }
 
     /* On mouse-over, add a grey background color */
-    .optInCheckboxContainer input:hover ~ .optInCheckmark {
-        background-color: #ccc;
-    }
+    // .optInCheckboxContainer input:hover ~ .optInCheckmark {
+    //     background-color: #ccc;
+    // }
 
     /* Create the checkmark/indicator (hidden when not checked) */
-    .optInCheckmark:after {
-        content: "";
-        position: absolute;
-        display: none;
-    }
+    // .optInCheckmark:after {
+    //     content: "";
+    //     position: absolute;
+    //     display: none;
+    // }
 
     /* Show the checkmark when checked */
-    .optInCheckboxContainer input:checked ~ .optInCheckmark:after {
-        display: block;
-    }
+    // .optInCheckboxContainer input:checked ~ .optInCheckmark:after {
+    //     display: block;
+    // }
 
     /* Style the checkmark/indicator */
-    .optInCheckboxContainer input ~ .optInCheckmark:after {
-        left: 4px;
-        top: -1px;
-        width: 7px;
-        height: 13px;
-        border: solid rgb(255, 255, 255);
-        border-width: 0 2px 2px 0;
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
+    // .optInCheckboxContainer input ~ .optInCheckmark:after {
+    //     left: 4px;
+    //     top: -1px;
+    //     width: 7px;
+    //     height: 13px;
+    //     border: solid rgb(255, 255, 255);
+    //     border-width: 0 2px 2px 0;
+    //     -webkit-transform: rotate(45deg);
+    //     -ms-transform: rotate(45deg);
+    //     transform: rotate(45deg);
+    // }
 
     /* When the checkbox is checked, add a primary color background */
-    .optInCheckboxContainer input:checked ~ .optInCheckmark {
-        background-color: $primary-color;
-    }
+    // .optInCheckboxContainer input:checked ~ .optInCheckmark {
+    //     background-color: $primary-color;
+    // }
 
     /* Customize the label (the container) */
-    .contactType {
-        display: inline-block;
-        position: relative;
-        padding-left: 30px;
-        margin-bottom: 10px;
-        cursor: pointer;
-        font-size: 14px;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
+    // .contactType {
+    //     display: inline-block;
+    //     position: relative;
+    //     padding-left: 30px;
+    //     margin-bottom: 10px;
+    //     cursor: pointer;
+    //     font-size: 14px;
+    //     -webkit-user-select: none;
+    //     -moz-user-select: none;
+    //     -ms-user-select: none;
+    //     user-select: none;
+    // }
 
     /* Hide the browser's default radio */
-    .contactType input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0;
-    }
+    // .contactType input {
+    //     position: absolute;
+    //     opacity: 0;
+    //     cursor: pointer;
+    //     height: 0;
+    //     width: 0;
+    // }
 
     /* Email opt in checkbox */
     
     /* Create a custom radio */
-    .checkmark {
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        height: 18px;
-        width: 18px;
-        background-color: #fff;
-        border-radius: 50%;
-        border: 2px solid $primary-color;
-    }
+    // .checkmark {
+    //     position: absolute;
+    //     top: 3px;
+    //     left: 3px;
+    //     height: 18px;
+    //     width: 18px;
+    //     background-color: #fff;
+    //     border-radius: 50%;
+    //     border: 2px solid $primary-color;
+    // }
     
     /* On mouse-over, add a grey background color */
-    .contactType:hover input ~ .checkmark {
-        background-color: #ccc;
-    }
+    // .contactType:hover input ~ .checkmark {
+    //     background-color: #ccc;
+    // }
     
     /* Create the checkmark/indicator (hidden when not checked) */
-    .checkmark:after {
-        content: "";
-        position: absolute;
-        display: none;
-    }
+    // .checkmark:after {
+    //     content: "";
+    //     position: absolute;
+    //     display: none;
+    // }
 
     /* Show the checkmark when checked */
-    .contactType input:checked ~ .checkmark:after {
-        display: block;
-    }
+    // .contactType input:checked ~ .checkmark:after {
+    //     display: block;
+    // }
     
     /* Style the checkmark/indicator */
-    .contactType input ~ .checkmark:after {
-        left: 4px;
-        top: -1px;
-        width: 7px;
-        height: 13px;
-        border: solid rgb(255, 255, 255);
-        border-width: 0 2px 2px 0;
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
+    // .contactType input ~ .checkmark:after {
+    //     left: 4px;
+    //     top: -1px;
+    //     width: 7px;
+    //     height: 13px;
+    //     border: solid rgb(255, 255, 255);
+    //     border-width: 0 2px 2px 0;
+    //     -webkit-transform: rotate(45deg);
+    //     -ms-transform: rotate(45deg);
+    //     transform: rotate(45deg);
+    // }
 
     /* When the checkbox is checked, add a primary color background */
-    .contactType input:checked ~ .checkmark {
-        background-color: $primary-color;
-    }
+    // .contactType input:checked ~ .checkmark {
+    //     background-color: $primary-color;
+    // }
 
 }
 
@@ -218,15 +217,6 @@
 
     .pl-5 {
         padding-left: 5px;
-    }
-    .pt-20 {
-        padding-top: 20px;
-    }
-    .pb-20 {
-        padding-bottom: 20px;
-    }
-    .m-0 {
-        margin: 0;
     }
 
     .bold {
@@ -251,12 +241,12 @@
         background-position: center;
     }
 
-    .search-type-accordion a {
-        text-decoration: none;
-        padding: 0.7em;
-        color: $black;
-        background-color: transparent;
-    }
+    // .search-type-accordion a {
+    //     text-decoration: none;
+    //     padding: 0.7em;
+    //     color: $black;
+    //     background-color: transparent;
+    // }
 
     .accordion {
         margin-bottom: 0;
@@ -266,10 +256,6 @@
     .main-header {
         height: 35vh;
         min-height: 300px;
-    }
-
-    .header-text {
-        color: $dealer-search-horizontal-font-color;
     }
 
     .search-type-container {
@@ -284,26 +270,27 @@
         left: $dealer-search-horizontal-search-by-icon-left-position;
     }
 
-    .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
-        border: none;
-    }
+    // .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+    //     border: none;
+    // }
 
-    .search-type-dropdown {
-        padding: 0 0 0 30px;
-        width: 200px;
-        height: 25px;
-        cursor: pointer;
-        background-color: transparent;
-    }
+    // .search-type-dropdown {
+    //     padding: 0 0 0 30px;
+    //     width: 200px;
+    //     height: 25px;
+    //     cursor: pointer;
+    //     background-color: transparent;
+    // }
 
     .searchBy-text {
         display: inline;
         text-transform: uppercase;
         font-weight: 600;
-        color: $dealer-search-horizontal-font-color;
+        color: $dealer-search-horizontal-search-by-font-color;
     }
 
     .searchBy-dropdown {
+
         display: inline;
         cursor: pointer;
         border: none;
@@ -317,12 +304,13 @@
         z-index: 10;
         background-color: transparent;
         position: relative;
-        color: $dealer-search-horizontal-search-by-color;
+        color: $dealer-search-horizontal-search-by-dropdown-font-color;
         font-weight: 600;
-    }
 
-    select.searchBy-dropdown:focus {
-        box-shadow: 0 0 0;
+        &:focus {
+            box-shadow: 0 0 0;
+        }
+
     }
 
     .dealer-search {
@@ -363,6 +351,7 @@
     }
 
     select.miles {
+
         top: $dealer-search-horizontal-search-radius-top-position; // 12px;
         right: $dealer-search-horizontal-search-radius-right-position; // 12px;
         min-width: $dealer-search-horizontal-search-radius-dropdown-min-width;
@@ -375,10 +364,11 @@
         cursor: pointer;
         padding: 0;
         margin-bottom: 0px;
-    }
 
-    select.miles:focus {
-        box-shadow: none;
+        &:focus {
+            box-shadow: none;
+        }
+
     }
           
     .input-field {
@@ -387,7 +377,7 @@
         background-color: $dealer-search-horizontal-input-field-bg;
         border-color: $dealer-search-horizontal-input-field-border-color;
         padding-left: 40px;
-        padding-right: $dealer-search-horizontal-location-input-field-padding-right;
+        padding-right: $dealer-search-horizontal-input-field-padding-right;
         text-align: left;
         border-radius: $dealer-search-horizontal-input-field-border-radius;
         margin-bottom: 0px;
@@ -424,28 +414,27 @@
         color: $dealer-search-horizontal-icon-color;
     }
 
-    a.icon-location::before {
-        content: "\f05b";
-        font-family: 'Font Awesome 5 Pro';
-        font-weight: 600;
-        font-style: normal;
-        color: $primary-color;
-    }
+    // a.icon-location::before {
+    //     content: "\f05b";
+    //     font-family: 'Font Awesome 5 Pro';
+    //     font-weight: 600;
+    //     font-style: normal;
+    //     color: $primary-color;
+    // }
 
-    .show-all-dealers a {
-        text-decoration: none;
-        color: $black;
-    }
+    // .show-all-dealers a {
+    //     text-decoration: none;
+    //     color: $black;
+    // }
 
-    .show-all-dealers i {
-        color: $primary-color;
-    }
+    // .show-all-dealers i {
+    //     color: $primary-color;
+    // }
 
     /* scrollbar styles */
     div.scrollable {
         overflow-x: hidden;
         overflow-y: auto;
-        background-color: $dealer-search-horizontal-dealer-card-col-bg;
     }
 
     /* width */
@@ -489,7 +478,8 @@
     .results {
 
         padding: 10px 0 20px;
-        border: 4px solid $dealer-search-horizontal-dealer-card-col-bg;
+        background-color: $dealer-search-horizontal-results-col-bg;
+        border: 4px solid $dealer-search-horizontal-results-col-bg;
         color: $dealer-search-horizontal-dealer-card-font-color;
 
         .currentSelection {
@@ -529,10 +519,10 @@
                 letter-spacing: 1px;
                 text-transform: uppercase;
 
-                .has-tip {
-                    font-weight: 400;
-                    border-bottom: none;
-                }
+                // .has-tip {
+                //     font-weight: 400;
+                //     border-bottom: none;
+                // }
 
                 .dealer-badge-container {
 
@@ -881,91 +871,8 @@
 
             }
 
-            .segments {
-
-                position: relative;
-                margin: 10px auto;
-                padding: 5px 8px;
-                border-radius: 30px;
-                background-color: $light-gray;
-                // width: 100%;
-                max-width: 500px;
-
-                .accordion-item {
-                    margin-bottom: 0px;
-                }
-
-                .segment-names {
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    text-transform: uppercase;
-                    margin: 5px 0;
-                }
-
-                a.accordion-title {
-                    margin: 5px 0;
-                    padding-top: 5px;
-
-                    &:hover,
-                    &:focus {
-                        background-color: transparent;
-                    }
-                    
-                }
-
-                .accordion-content {
-                    background-color: $light-gray;
-                    margin: auto;
-                    width: auto;
-                    max-width: 100%;
-                    border-radius: 0px 0px 30px 30px;
-                    padding: 5px 10px;
-                }
-
-                p {
-                    margin-bottom: .3rem;
-                }
-
-                .segment-collapse {
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-
-                    height: 25px; 
-                    max-height: 50px;
-                    transition: max-height .5s;
-                }
-
-                .segment-expand {
-                    height: 100%; 
-                    max-height: 200px;
-                    transition: max-height .5s;
-                }
-
-                .segmentBtn {
-                    margin: 0 5px;
-                    color: #000;
-                    text-decoration: none;
-                }
-
-                .segmentBtn::after {
-                    content: '  \f078';
-                    font-family: 'Font Awesome 5 Pro';
-                    font-weight: 600;
-                    font-style: normal;
-                    color: $primary-color;
-                }
-
-                .btnClicked > .segmentBtn::after {
-                    content: '  \f077';
-                    font-family: 'Font Awesome 5 Pro';
-                }
-
-            }
-
             .card-divider {
-                background-color: $dealer-search-horizontal-card-divider-bg;
+                background-color: $dealer-search-horizontal-dealer-option-bg;
                 border-left: 2px solid $dealer-search-horizontal-divider-color;
                 border-bottom-right-radius: $dealer-search-horizontal-dealer-card-border-radius;
                 padding: 0;
@@ -1113,11 +1020,6 @@
 /* Small only */
 @media screen and (max-width: 39.9375em) {
 
-    .reveal.medium {
-        margin: 20px auto;
-        width: 90%;
-    }
-
     .dealer-search-horizontal {
 
         .order-sm-only-0 {
@@ -1126,10 +1028,6 @@
 
         .order-sm-only-1 {
             order: 1;
-        }
-
-        .order-sm-only-2 {
-            order: 2;
         }
 
         .display-sm-none {
@@ -1177,10 +1075,6 @@
 
             height: 600px;
             max-height: 600px;
-
-            .my-dealer-border {
-                border: 3px solid $success-color;
-            }
 
             .result-entry {
 
@@ -1273,10 +1167,6 @@
 
             height: 600px;
             max-height: 800px;
-
-            .my-dealer-border {
-                border: 3px solid $success-color;
-            }
 
             .card-left-column {
                 padding: 16px 20px;

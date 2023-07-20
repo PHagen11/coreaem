@@ -1,9 +1,7 @@
 <div class="dealer-search-horizontal">
 
-  <div class="reveal small" id="contact-dealer-modal-container"
-data-reveal data-close-on-click="true"
-data-animation-in="slide-in-up-custom"
-data-animation-out="slide-out-up-custom">
+  <div class="reveal small" id="contact-dealer-modal-container" data-animation-in="slide-in-up-custom" data-animation-out="slide-out-up-custom"
+data-reveal data-close-on-click="true">
     <div class="contact-dealer">
       <div class="grid-x align-center">
         <div class="cell small-1">
@@ -16,7 +14,7 @@ data-animation-out="slide-out-up-custom">
             <h3>Contact Information</h3>
           </div>
           <div class="form">
-            <form id="form4" data-abide novalidate data-thankyou="${form.thankYouPage}">
+            <form id="form4" data-abide novalidate>
               <div data-abide-error class="alert callout" style="display: none;">
                 <p>
                   <i class="fas fa-exclamation-triangle fa-xs">
@@ -42,7 +40,7 @@ data-animation-out="slide-out-up-custom">
                     <span class="form-error" data-form-error-for="phoneInput">Phone is required.</span>
                   </label>
                 </div>
-                <div class="medium-4 medium-6 cell">
+                <div class="small-12 medium-6 cell">
                   <label>Zip/Postal Code * 
                     <input name="postalCode" type="text" id="postalCodeInput" placeholder="" maxlength="10" required />
                     <span class="form-error" data-form-error-for="postalCodeInput">Zip/Postal Code is required.</span>
@@ -60,54 +58,25 @@ data-animation-out="slide-out-up-custom">
                     <span class="form-error" data-form-error-for="questionInput">Question is required</span>
                   </label>
                 </div>
-                <div class="small-12 cell preferred-contact-container">
-                  <div class="preferred-contact">
-                    <p>Preferred method of contact: *</p>
-                  </div>
-                  <div>
-                    <label class="contactType">
-                      <input required type="radio" name="preferredContactType" value="Email" id="preferredContactTypeEmail" class="checked"> Email
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                  <div>
-                    <label class="contactType">
-                      <input type="radio" name="preferredContactType" value="Phone" id="preferredContactTypePhone" class="checked"> Phone
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                  <div class="grid-x optInContainer">
-                    <div class="cell small-12 optInCheckbox">
-                      <div class="optInCheckboxContainer">
-                        <label>
-                          <input type="checkbox" name="optIn" class="optIn" id="optIn">
-                          <span class="optInCheckmark"></span>
-                          <span class="optInText">Keep me posted about upcoming sales events, special promotions, or vehicle recalls</span>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
                 <div class="medium-12 cell">
                   <div id="recaptcha_4" class="g-recaptcha" data-sitekey="6Ldrjo4UAAAAABY3ZWa0FAG529uHVwvxaNhQugCI"
                         data-callback="onSubmit" data-size="invisible">
                   </div>
                 </div>
                 <!-- hidden fields -->
-                <input name="leadTypeId" type="hidden" value="6" />
-                <input name="reasonForContactID" type="hidden" value="21" />
-                <input name="dealerId" type="hidden" value="" id="dealerId" />
-                <input name="formType" type="hidden" value="Contact" />
+                <input name="leadTypeId" type="hidden" value="3" />
+                <input name="reasonForContactID" type="hidden" value="54" />
+                <input name="formType" type="hidden" value="Service Inquiry" />
                 <input name="brand" type="hidden" value="Tracker" />
                 <input name="source" type="hidden" value="Tracker Website" />
-                <input name="url" type="hidden" value="/contact.html" />
+                <input name="url" type="hidden" value="/dealers/service-inquiry.html" />
                 <input name="captchaName" type="hidden" value="invisiblev2" />
                 <!-- end hidden fields -->
                 <div class="small-12 cell hide-for-medium text-center">
-                  <button id="submit" class="button expanded formSubmit submitButton" type="submit" value="Submit">Send To Dealer</button>
+                  <button id="submit" class="button expanded formSubmit submitButton" type="submit" value="Submit" href="/dealers/email-dealer/thank-you.html">Send To Dealer</button>
                 </div>
                 <div class="small-12 cell show-for-medium text-center">
-                  <button id="submit" class="button formSubmit submitButton" type="submit" value="Submit">Send To Dealer</button>
+                  <button id="submit" class="button formSubmit submitButton" type="submit" value="Submit" href="/dealers/email-dealer/thank-you.html">Send To Dealer</button>
                 </div>
                 <div id="loader">
                 </div>
@@ -145,7 +114,7 @@ data-animation-out="slide-out-up-custom">
           <i class="fas fa-search search-icon" aria-hidden="true"></i>
           <i class="fas fa-angle-down arrow-icon" aria-hidden="true" style="display:block;"></i>
           <select id="radius-input" name="miles" class="miles align-self-middle" style="display: block;">
-            <option value="100" selected="">100 Miles</option>
+            <option value="100" selected>100 Miles</option>
             <option value="250">250 Miles</option>
             <option value="500">500 Miles</option>
             <option value="1000">1000 Miles</option>
@@ -311,7 +280,9 @@ data-animation-out="slide-out-up-custom">
 
                 <div class="cell auto card-right-column">
                   
-                  <div class="display-sm-none text-center"><a class="button tiny" data-open="contact-dealer-modal-container">Email Dealer</a></div>
+                  <div class="display-sm-none text-center">
+                    <a href="javascript:dealerWebsiteRedirect('508', 'https%3a%2f%2fwww.bassproboatingcenters.com%2flocations%2fspringfield.html');" class="button tiny" data-open="contact-dealer-modal-container">Email Dealer</a>
+                  </div>
 
                   <div class="cell card-divider">
                     <div class="grid-x dealer-options-grid">
@@ -322,14 +293,14 @@ data-animation-out="slide-out-up-custom">
                         <a href="javascript: void();" class="dealer-option"><i class="fas fa-wrench" aria-hidden="true"></i>Service Inquiry</a>
                       </div>
                       <div class="cell small-6 medium-12 dealer-option-container pl-5">
-                        <a href="javascript: void();" class="dealer-option"><i class="fas fa-globe" aria-hidden="true"></i>Visit Website</a>
+                        <a class="dealer-option visit-dealer"><i class="fas fa-globe" aria-hidden="true"></i>Visit Website</a>
                       </div>
                       <div class="cell small-6 medium-12 dealer-option-container pl-5">
                         <a href="javascript: void();" class="dealer-option"><i class="fas fa-list" aria-hidden="true"></i>View Inventory</a>
                       </div>
                     </div>
                   </div>
-                </div>          
+                </div>
               </div>
 
               <div class="grid-x hide-for-medium">
@@ -500,7 +471,7 @@ data-animation-out="slide-out-up-custom">
                         <a href="javascript: void();" class="dealer-option wrench-icon"><i class="fas fa-wrench" aria-hidden="true"></i>Service Inquiry</a>
                       </div>
                       <div class="cell small-6 medium-12 dealer-option-container pl-5">
-                        <a href="javascript: void();" class="dealer-option globe-icon"><i class="fas fa-globe" aria-hidden="true"></i>Visit Website</a>
+                        <a class="dealer-option globe-icon visit-dealer"><i class="fas fa-globe" aria-hidden="true"></i>Visit Website</a>
                       </div>
                       <div class="cell small-6 medium-12 dealer-option-container pl-5">
                         <a href="javascript: void();" class="dealer-option cart-icon"><i class="fas fa-list" aria-hidden="true"></i>View Inventory</a>
@@ -568,8 +539,11 @@ data-animation-out="slide-out-up-custom">
               <iframe src="https://www.google.com/maps/embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
-          </div>   
+          </div>
 
+        </div>
+        <div class="cell small-12" style="padding: 10px;">
+          <a class="button visit-dealer" data-open="contact-dealer-modal-container">Open Modal</a>
         </div>
       </div>
 
