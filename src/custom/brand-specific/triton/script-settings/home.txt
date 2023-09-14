@@ -1,0 +1,6 @@
+<!-- Head Section -->
+
+<meta name="google-site-verification" content="lr0FTCDWrJYh_5uyU42lc01FK8zVIZOlDcb35QwTJeY" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/content/dam/wrmg/global/css/custom.css">
+<meta name="facebook-domain-verification" content="fbo3o5wosyosw0y13lm7kffoief4tf" />

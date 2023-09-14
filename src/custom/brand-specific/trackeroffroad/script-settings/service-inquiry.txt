@@ -1,0 +1,29 @@
+<!-- Head Section Scripts -->
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<link rel="stylesheet" href="/content/dam/wrmg/global/css/leadform.css"/>
+
+<!--
+<style type="text/css">
+#loader {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.75) url(//assets.whiterivermg.com/content/dam/tracker/landing-page/basstrackerclassic/loading2.gif) no-repeat center center;
+  z-index: 10000;
+}
+</style>
+-->
+
+<!-- Footer Section Scripts -->
+
+<script>
+var formId = 'form4';
+//var formRedirectPage  = '/content/trackeroffroad/home/service/inquiry/thank-you.html';
+var formRedirectPage  = './inquiry/thank-you.html';
+</script>
+<script type="text/javascript" src="/content/dam/wrmg/global/js/lead.js"></script>

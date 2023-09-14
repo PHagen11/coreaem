@@ -14,29 +14,53 @@
 // $(document).foundation();
 
 
-jQuery(document).ready(function($) {
+$(document).ready(function($) {
 
-	$('#gallery-1').lightGallery({
-		selector: '.media-item',
-		mode: 'lg-fade',
-		thumbnail: true,
-		loadYoutubeThumbnail: true,
-		youtubeThumbSize: 'default',
-		loadVimeoThumbnail: true,
-		vimeoThumbSize: 'thumbnail_medium',
-		youtubePlayerParams: {
-			modestbranding: 0,
-			showinfo: 0,
-			rel: 0,
-			controls: 0
-		},
-		vimeoPlayerParams: {
-			byline: 0,
-			portrait: 0,
-			color: 'A90707'
-		},
+	// $(".gallery").each(function() {
+	// 	$(this).lightGallery({
+	// 		selector: '.media-item',
+	// 		mode: 'lg-fade',
+	// 		thumbnail: true,
+  //     download: false,
+	// 		loadYouTubeThumbnail: true,
+	// 		youTubeThumbSize: 'default',
+	// 		loadVimeoThumbnail: true,
+	// 		vimeoThumbSize: 'thumbnail_medium',
+	// 		youTubePlayerParams: {
+	// 			modestbranding: 0,
+	// 			showinfo: 0,
+	// 			rel: 0,
+	// 			controls: 0
+	// 		},
+	// 		vimeoPlayerParams: {
+	// 			byline: 0,
+	// 			portrait: 0,
+	// 			color: 'A90707'
+	// 		},
+	// 	});
+	// });
+	
+	// $('#gallery-1').lightGallery({
+	// 	selector: '.media-item',
+	// 	mode: 'lg-fade',
+	// 	thumbnail: true,
+	// 	loadYoutubeThumbnail: true,
+	// 	youtubeThumbSize: 'default',
+	// 	loadVimeoThumbnail: true,
+	// 	vimeoThumbSize: 'thumbnail_medium',
+	// 	youtubePlayerParams: {
+	// 		modestbranding: 0,
+	// 		showinfo: 0,
+	// 		rel: 0,
+	// 		controls: 0
+	// 	},
+	// 	vimeoPlayerParams: {
+	// 		byline: 0,
+	// 		portrait: 0,
+	// 		color: 'A90707'
+	// 	},
 
-	});
+	// });
 
 
 	// $('.mega-menu-trigger a').click(function() {
@@ -178,6 +202,7 @@ jQuery(document).ready(function($) {
 // 		 }
 //  });
 
+// customer service start
 $(window).on('load', function() {
 	technicalQuestion();
 });
@@ -186,15 +211,13 @@ $("#categoryInput").on("change", function() {
 
 	if ($("#categoryInput").val() === "102") {
 		$("#snInput").prop('required', true);
-		$(".snRequired").show();
-		$(".snNotRequired").hide();
+		$("#snLabel").text("Boat Serial Number *");
 	} else {
 		$("#snInput").parent().removeClass('is-invalid-label');
 		$("#snInput").removeClass('is-invalid-input');
 		$("#snInput").siblings().removeClass('is-visible');
+		$("#snLabel").text("Boat Serial Number (if applicable)");
 		$("#snInput").prop('required', false);
-		$(".snRequired").hide();
-		$(".snNotRequired").show();
 	}
 
 	technicalQuestion();
@@ -214,6 +237,8 @@ function technicalQuestion() {
 	}
 
 }
+
+// customer service end
 
 var formRedirectPage = "/dealers/service-inquiry/thank-you.html";
 var formId = "form4";
@@ -241,7 +266,53 @@ function dealerWebsiteRedirect(dealerId, url) {
 			console.log("W Param = " + url);
 		}
 	}
-	catch {}
+	catch (error) {}
 }
 
-//$(".dealer-option").on("click", dealerWebsiteRedirect);
+// $("a").on("click", function() {
+//   if ($(".is-accordion-submenu").attr("aria-hidden") == "false") {
+//     console.log("display is not none")
+//     clearTimeout($.data(this, 'scrollTimer'));
+//     $.data(this, 'scrollTimer', setTimeout(function() {
+//       setTimeout(function() {
+//         console.log("Haven't scrolled in 250ms!");
+//       $('.accordion-menu').foundation('hideAll');
+//       }, 2000)
+//     }, 250));
+//   }
+// });
+
+// $(".anchor-menu .is-accordion-submenu a").on("click", function() {
+// 	console.log("click event run");
+// 	setTimeout(function() {
+//     $('.accordion-menu').foundation('hideAll');
+//   }, 300)
+// });
+
+document.onscrollend = () => {
+	if ($(".is-accordion-submenu").attr("aria-hidden") == "false") {
+		$('.accordion-menu').foundation('hideAll');
+	}
+};
+
+// var timer = null;
+// document.addEventListener('scroll', function() {
+//     if(timer !== null) {
+//         clearTimeout(timer);        
+//     }
+//     timer = setTimeout(function() {
+//       if ($(".is-accordion-submenu").attr("aria-hidden") == "true") {
+//         console.log("no scrolls for 500ms")
+//         $('.accordion-menu').foundation('hideAll');
+//       }
+      
+//     }, 500);
+// }, false);
+
+$(".menu-option").on("click", function() {
+  var linkValue = $(this).text();
+  console.log("link value: " + linkValue);
+  $("#model-year").html(linkValue + " Model Year");
+});
+
+$(".package-details").css("display", "none");

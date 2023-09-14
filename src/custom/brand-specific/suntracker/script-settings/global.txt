@@ -1,0 +1,78 @@
+<!-- Head Section -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/content/dam/wrmg/sun-tracker/site/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/content/dam/wrmg/sun-tracker/site/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/content/dam/wrmg/sun-tracker/site/favicon/favicon-16x16.png">
+<link rel="manifest" href="/content/dam/wrmg/sun-tracker/site/favicon/site.webmanifest">
+<link rel="mask-icon" href="/content/dam/wrmg/sun-tracker/site/favicon/safari-pinned-tab.svg" color="#1a1a1d">
+<meta name="msapplication-TileColor" content="#1a1a1d">
+<meta name="theme-color" content="#ffffff">
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N4RTZCG');</script>
+<!-- End Google Tag Manager -->
+
+<script src="https://kit.fontawesome.com/71b9391493.js" crossorigin="anonymous"></script>
+
+
+<style>
+    @media all and (-ms-high-contrast:none), all and (-ms-high-contrast:active)
+    {
+        /* IE11 */
+	/* Fixes the main menu alignment with logo and displays the Find a Dealer button. */
+        .header .header-menu .cta-container a {
+            padding: 0.8em 1.6em !important;
+        }     
+	.header .header-menu .cta-container .cta .button.primary {
+	    background-color: #EE5826 !important;
+	    color: #FFFFFF !important;
+	}
+	/* Fixes the carousel thumbnail images on the BYO right column. */
+       .build-a-boat .owl-thumbs .owl-thumb-item img {
+            max-width: 100px !important;
+        }
+	/* Fixes the BYO Options tab accordions to show. */
+        #byoContainer .build-a-boat .bab-options .accordion-content {
+            display: inline-block !important;
+        }
+    }
+.model-price .price-save-value {
+color:#EE5826 !important;
+}
+.model-motors table tbody td .promoPrice {
+color: #EE5826 !important;
+}
+.model-price .price-sale-value {
+color: #EE5826 !important;
+}
+</style>
+
+<script> 
+var $buoop = {required:{e:-4,f:-3,o:-3,s:-1,c:-3},insecure:true,unsupported:true,api:2020.11 }; 
+function $buo_f(){ 
+ var e = document.createElement("script"); 
+ e.src = "//browser-update.org/update.min.js"; 
+ document.body.appendChild(e);
+};
+try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+catch(e){window.attachEvent("onload", $buo_f)}
+</script>
+
+
+<script src="https://assets.adobedtm.com/73e21ea9c8f9/962e188475f1/launch-414f276b9747.min.js" async></script>
+
+
+<script type="text/javascript" src="/content/dam/wrmg/global/js/custom.js"></script>
+
+
+<!-- Start Body Section -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4RTZCG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->

@@ -1,0 +1,82 @@
+<!-- Head Section -->
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/content/dam/wrmg-general-assets/web/ranger/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/content/dam/wrmg-general-assets/web/ranger/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/content/dam/wrmg-general-assets/web/ranger/favicon/favicon-16x16.png">
+<link rel="manifest" href="/content/dam/wrmg-general-assets/web/ranger/favicon/site.webmanifest">
+<link rel="mask-icon" href="/content/dam/wrmg-general-assets/web/ranger/favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KG2WS7D');</script>
+<!-- End Google Tag Manager -->
+
+<script src="https://kit.fontawesome.com/71b9391493.js" crossorigin="anonymous"></script>
+
+<style>
+
+div.site > div:nth-child(5) > div:nth-child(4) > div:nth-child(3) > div > div > div > div > div > div.grid-container.childIndex > div > div:nth-child(1) {
+min-height: 33.33%;
+height: fit-content;
+}
+
+div.site > div:nth-child(5) > div:nth-child(4) > div:nth-child(3) > div > div > div > div > div > div.grid-container.childIndex > div > div:nth-child(2) {
+min-height: 33.33%;
+height: fit-content;
+}
+
+</style>
+
+
+<style>
+.breadcrumbs {
+  margin: 0 0 0 0;
+  list-style: none; }
+  .breadcrumbs::before, .breadcrumbs::after {
+    display: table;
+    content: ' ';
+    -webkit-flex-basis: 0;
+        -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1; }
+  .breadcrumbs::after {
+    clear: both; }
+  .breadcrumbs li {
+    float: left;
+    font-size: 0.6875rem;
+    color: #E51B23;
+    cursor: default;
+    text-transform: uppercase; }
+    .breadcrumbs li:not(:last-child)::after {
+      position: relative;
+      margin: 0 0.25rem;
+      opacity: 1;
+      content: "/";
+      color: #8B8B8B; }
+  .breadcrumbs a {
+    color: #CCCCCC; }
+    .breadcrumbs a:hover {
+      text-decoration: underline; }
+  .breadcrumbs .disabled {
+    color: #8B8B8B;
+    cursor: not-allowed; }
+</style>
+
+
+<script src="https://assets.adobedtm.com/73e21ea9c8f9/962e188475f1/launch-414f276b9747.min.js" async></script>
+
+
+<script type="text/javascript" src="/content/dam/wrmg/global/js/custom.js"></script>
+
+<!-- Start Body Section -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KG2WS7D"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->

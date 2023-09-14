@@ -1,0 +1,2 @@
+<!-- Head Section Scripts -->
+<link rel="canonical" href="https://trackeroffroad.com/build-my-tracker.html" />

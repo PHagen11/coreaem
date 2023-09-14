@@ -1,0 +1,26 @@
+<!-- Head Section Script -->
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<link rel="stylesheet" href="/content/dam/wrmg/global/css/leadform.css" type="text/css">
+
+<style>
+.heroArea .heroLarge {
+    height: 100%;
+}
+
+@media print, screen and (min-width: 40em)
+.heroArea .heroLarge {
+    height: 100%;
+}
+
+@media print, screen and (min-width: 64em)
+.heroArea .heroLarge {
+    height: 100%;
+}
+</style>
+
+<!-- Footer Section Script -->
+<script>
+    var formRedirectPage = "/dealers/email-dealer/thank-you.html";
+    var formId = "form4";
+</script>
+<script type="text/javascript" src="/content/dam/wrmg/global/js/lead.js"></script>

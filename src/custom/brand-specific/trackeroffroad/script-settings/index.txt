@@ -1,0 +1,6 @@
+<!-- Head Section -->
+<script>
+window.onload = function() {
+    location.href = "https://www.trackeroffroad.com/";
+}
+</script>

@@ -1,0 +1,42 @@
+.model-year-dropdown {
+
+  max-width: 215px;
+
+  .is-accordion-submenu-parent {
+
+    border: 2px solid #f7f3ef;
+
+    .menu {
+      margin: 0;
+    }
+
+    a {
+
+      border-left: none;
+
+      &:hover {
+        border-left: none;
+      }
+
+    }
+
+    .is-accordion-submenu {
+
+      .is-accordion-submenu-item {
+
+        a {
+        
+          &:hover {
+            border-left: none;
+            background-color: #fdfaf7;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,10 @@
+<!-- Head Section -->
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<link rel="stylesheet" href="/content/dam/wrmg/global/css/leadform.css"/>
+
+<!-- Footer Section -->
+<script>
+var formId = 'form4';
+var formRedirectPage  = './ready-to-buy/thank-you.html';
+</script>
+<script type="text/javascript" src="/content/dam/wrmg/global/js/lead.js"></script>

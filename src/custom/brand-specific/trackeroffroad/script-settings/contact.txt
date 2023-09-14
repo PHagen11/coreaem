@@ -1,0 +1,51 @@
+<!-- Head Section Scripts -->
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<link rel="stylesheet" href="/content/dam/wrmg/global/css/leadform.css"/>
+
+<!-- Footer Section Scripts -->
+
+<script>
+
+$(window).on('load', function() {
+	technicalQuestion();
+});
+
+$("#categoryInput").on("change", function() {
+
+	if ($("#categoryInput").val() === "102") {
+		$("#snInput").prop('required', true);
+		$("#snLabel").text("Boat Serial Number *");
+	} else {
+		$("#snInput").parent().removeClass('is-invalid-label');
+		$("#snInput").removeClass('is-invalid-input');
+		$("#snInput").siblings().removeClass('is-visible');
+		$("#snLabel").text("Boat Serial Number (if applicable)");
+		$("#snInput").prop('required', false);
+	}
+
+	technicalQuestion();
+
+});
+
+function technicalQuestion() {
+
+	if ($("#categoryInput").val() === "107") {
+		$("#firstNameInput, #lastNameInput, #phoneInput, #postalCodeInput, #emailInput, #subjectInput, #questionInput, #snInput").parent().hide();
+		$(".submitButton, #errorCallout, #form-instructions, .snNotRequired").hide();
+		$("#supportCallout").show();
+	} else {
+		$("#firstNameInput, #lastNameInput, #phoneInput, #postalCodeInput, #emailInput, #subjectInput, #questionInput, #snInput").parent().show();
+		$(".submitButton, #form-instructions, .snNotRequired").show();
+		$("#supportCallout").hide();
+	}
+
+}
+
+</script>
+
+<script>
+var formId = 'form4';
+var formRedirectPage  = './contact/thank-you.html';
+</script>
+<script type="text/javascript" src="/content/dam/wrmg/global/js/lead.js"></script>

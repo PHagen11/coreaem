@@ -1,0 +1,43 @@
+<!-- Head Section -->
+
+<link rel="icon" href="/content/dam/wrmg/ascend/site/favicon/favicon.ico" sizes="32x32">
+<link rel="icon" href="/content/dam/wrmg/ascend/site/favicon/safari-pinned-tab.svg" type="image/svg+xml" color="#3A4A00">
+<link rel="apple-touch-icon" href="/content/dam/wrmg/ascend/site/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/content/dam/wrmg/ascend/site/favicon/site.webmanifest">
+
+
+
+<script type="text/javascript" src="/content/dam/wrmg/global/js/custom.js"></script>
+<link href="https://assets.whiterivermg.com/content/dam/wrmg/global/css/removeNoHaggle.css" rel="stylesheet"/>
+
+
+<script type="text/javascript" src="/content/dam/wrmg/global/js/custom.js"></script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PHVRT5J');</script>
+<!-- End Google Tag Manager -->
+
+<script src="https://kit.fontawesome.com/71b9391493.js" crossorigin="anonymous"></script>
+
+
+<script src="https://assets.adobedtm.com/73e21ea9c8f9/962e188475f1/launch-414f276b9747.min.js" async></script>
+
+<!-- Start Body Section -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHVRT5J"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Footer Section -->
+
+<script>
+$(document).ready(function () {
+    $('.heroArea .flex-container:nth-child(2)').height('fit-content');
+console.log("flex height correction");
+});
+</script>
