@@ -16,53 +16,6 @@
 
 $(document).ready(function($) {
 
-	// $(".gallery").each(function() {
-	// 	$(this).lightGallery({
-	// 		selector: '.media-item',
-	// 		mode: 'lg-fade',
-	// 		thumbnail: true,
-  //     download: false,
-	// 		loadYouTubeThumbnail: true,
-	// 		youTubeThumbSize: 'default',
-	// 		loadVimeoThumbnail: true,
-	// 		vimeoThumbSize: 'thumbnail_medium',
-	// 		youTubePlayerParams: {
-	// 			modestbranding: 0,
-	// 			showinfo: 0,
-	// 			rel: 0,
-	// 			controls: 0
-	// 		},
-	// 		vimeoPlayerParams: {
-	// 			byline: 0,
-	// 			portrait: 0,
-	// 			color: 'A90707'
-	// 		},
-	// 	});
-	// });
-	
-	// $('#gallery-1').lightGallery({
-	// 	selector: '.media-item',
-	// 	mode: 'lg-fade',
-	// 	thumbnail: true,
-	// 	loadYoutubeThumbnail: true,
-	// 	youtubeThumbSize: 'default',
-	// 	loadVimeoThumbnail: true,
-	// 	vimeoThumbSize: 'thumbnail_medium',
-	// 	youtubePlayerParams: {
-	// 		modestbranding: 0,
-	// 		showinfo: 0,
-	// 		rel: 0,
-	// 		controls: 0
-	// 	},
-	// 	vimeoPlayerParams: {
-	// 		byline: 0,
-	// 		portrait: 0,
-	// 		color: 'A90707'
-	// 	},
-
-	// });
-
-
 	// $('.mega-menu-trigger a').click(function() {
 	//     var target = "." + $(this).data("target");
 	//     $('.mega-menu-panel').not(target).removeClass('mega-menu-panel-open');
@@ -96,7 +49,7 @@ $(document).ready(function($) {
 	New below here:
 	*/
 	if (navigator.userAgent.match(/iPad/i) == null) {
-		console.log("not ipad")
+		console.log("not ipad");
 
 		$(".header .header-menu > ul > li").on("mouseover", function (e) {
 
@@ -105,9 +58,9 @@ $(document).ready(function($) {
 				$(this).children("ul").stop(true, false).delay(500).fadeIn(150);
 				e.preventDefault();
 			}
-			});
+		});
 
-			jQuery(".header .header-menu > ul > li").on("mouseout", function (e) {
+		jQuery(".header .header-menu > ul > li").on("mouseout", function (e) {
 
 			if ($(window).width() >= 1024) {
 

@@ -1,8 +1,8 @@
 @charset 'utf-8';
 // @import 'settings/settings';
-// @import 'settings/settings-bpbc';
+@import 'settings/settings-bpbc';
 // @import 'settings/settings-suntracker';
-@import 'settings/settings-tracker';
+// @import 'settings/settings-tracker';
 // @import 'settings/settings-regency';
 // @import 'settings/settings-tahoe';
 // @import 'settings/settings-nitro';
@@ -132,13 +132,13 @@
 @import 'components/build-your-own/bab-summary';
 @import 'components/build-your-own/bab-send-to-dealer';
 
-@import 'components/inventory/inventory-card';
-@import 'components/inventory/inventory';
-@import 'components/inventory/model';
+// @import 'components/inventory/inventory-card';
+// @import 'components/inventory/inventory';
+// @import 'components/inventory/model';
 
-// @import 'components/inventory-v2/inventory-card-v2';
-// @import 'components/inventory-v2/inventory-v2';
-// @import 'components/inventory-v2/model-v2';
+@import 'components/inventory-v2/inventory-card-v2';
+@import 'components/inventory-v2/inventory-v2';
+@import 'components/inventory-v2/model-v2';
 
 // STYLEGUIDE SPECIFIC SCSS FILES
 //@import 'styleguide/styleguide';

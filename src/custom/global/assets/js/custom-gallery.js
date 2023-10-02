@@ -1,4 +1,11 @@
-$(".gallery").each(function() {
+var galleryId = 1;
+
+$(".gallery-1").each(function() {
+
+  $(this).attr("id", function() {
+    return "gallery-" + galleryId;
+  });
+
   $(this).lightGallery({
     selector: '.media-item',
     mode: 'lg-fade',
@@ -20,4 +27,6 @@ $(".gallery").each(function() {
       color: 'A90707'
     },
   });
+  galleryId++;
+  console.log(this);
 });

@@ -40,7 +40,7 @@ $card-margin-xlarge: 4rem;
 			border-bottom: 2px solid $border-gray;
 		}
 		@include breakpoint(medium) {
-			//min-height: 210px;
+			min-height: 210px;
 			margin: 0.6rem;
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
@@ -60,21 +60,96 @@ $card-margin-xlarge: 4rem;
 		}
 
 		.card-section {
-			max-height: 200px;
+			// max-height: 200px;
 			min-height: 1px;
 
+      p {
+        margin-bottom: 0;
+      }
+
 			.mname {
-				min-height: 55px;
+				min-height: 40px;
+        font-size: 1.2rem;
 				font-weight: bold;
 				margin-bottom: 0;
 			}
 
+      .motorname {
+        min-height: 20px;
+        font-weight: 500;
+        font-size: 15px;
+        color: $dark-gray;
+        margin-bottom: 5px;
+      }
+
 			.locname {
-				margin-bottom: 0;
+				margin-bottom: 10px;
 				color: $medium-gray;
+        font-size: 1.1rem;
 			}
 
-			.price {
+      .no-haggle-label {
+        color: $medium-gray;
+        font-size: .9rem;
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+
+      .price-equipped-label {
+        color: $medium-gray;
+        font-size: .9rem;
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+
+      .price-equipped {
+        font-size: 1.4rem;
+        font-weight: bold;
+      }
+
+      .price-sale-label {
+        font-size: 1.4rem;
+        color: $alert-color;
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+
+      .price-sale-value {
+        font-size: 1.4rem;
+        color: $alert-color;
+        font-weight: bold;
+        margin-bottom: 0;
+
+        .currency {
+          font-weight: lighter;
+          font-size: 1rem;
+          color: $medium-gray;
+        }
+      }
+
+      .no-haggle-price {
+        font-size: 1.4rem;
+        color: $medium-gray;
+        font-weight: bold;
+        margin-bottom: 0;
+
+        .currency {
+          font-weight: lighter;
+          font-size: 1rem;
+          color: $medium-gray;
+        }
+      }
+
+      .you-save-text {
+        margin-bottom: 10px;
+
+        .save-price {
+          color: $alert-color;
+          font-weight: bold;
+        }
+      }
+
+      .price {
 				font-size: 1.4rem;
 				color: $black;
 				font-weight: bold;
@@ -86,6 +161,69 @@ $card-margin-xlarge: 4rem;
 					color: $medium-gray;
 				}
 			}
+
+      .price-table {
+
+        tbody {
+
+          border: none;
+
+          tr {
+
+            border-bottom: none;
+
+            .price-sale-text {
+              font-size: 1.4rem;
+              color: $alert-color;
+              font-weight: bold;
+              margin-bottom: 0;
+            }
+
+            .price-sale-value {
+              font-size: 1.4rem;
+              color: $alert-color;
+              font-weight: bold;
+              margin-bottom: 0;
+
+              .currency {
+                font-weight: lighter;
+                font-size: 1rem;
+                color: $medium-gray;
+              }
+            }
+
+            .no-haggle-price {
+              font-size: 1.4rem;
+              color: $medium-gray;
+              font-weight: bold;
+              margin-bottom: 0;
+      
+              .currency {
+                font-weight: lighter;
+                font-size: 1rem;
+                color: $medium-gray;
+              }
+            }
+
+          }
+
+          .price-sale {
+            font-size: 1.4rem;
+            color: $black;
+            font-weight: bold;
+            margin-bottom: 0;
+    
+            .currency {
+              font-weight: lighter;
+              font-size: 1rem;
+              color: $medium-gray;
+            }
+          }
+
+        }
+
+      }
+
 		}
 
 		.item-image {
@@ -96,7 +234,8 @@ $card-margin-xlarge: 4rem;
 				object-fit: cover;
 				object-position: 100% 0 100% 0;
 				width: 100%;
-				height: 120px;
+				height: auto;
+        max-height: 300px;
 			}
 			@include breakpoint(medium) {
 				padding: 0 1rem 1rem;
