@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
 	window.onSubmit = onSubmit;
 	var parentForm = "";
@@ -60,12 +61,21 @@ $(document).ready(function () {
 			// if this is the production server, then go ahead and post the form ...
 			// if(document.location.host.includes('.com')){
 
+      var postUrl = '';
+
+      if (window.location.href.includes('.test')) {
+        console.log("posting to dev url")
+        postUrl = 'https://api.whiterivermg.test/leads/FormService.asmx/SubmitFormVarsAndValidate'
+      } else {
+        console.log("posting to production url")
+        postUrl = 'https://api.whiterivermg.com/leads/FormService.asmx/SubmitFormVarsAndValidate'
+      }
+
 			$.ajax({
 
 				crossDomain: true,
 				type: 'POST',
-				url: 'https://api.whiterivermg.test/leads/FormService.asmx/SubmitFormVarsAndValidate',
-				// url: 'https://api.whiterivermg.com/leadstest/FormService.asmx/SubmitFormVarsAndValidate',
+        url: postUrl,
 				contentType: 'application/json; charset=utf-8',
 				data: JSON.stringify({ formVars: formData }),
 				dataType: 'json',
