@@ -269,3 +269,21 @@ $(".menu-option").on("click", function() {
 });
 
 $(".package-details").css("display", "none");
+
+
+
+window.onload = function() {
+  var date = new Date();
+  var currentYear = date.getFullYear();
+  var addYear = 2000;
+  console.log("current year is: " + currentYear);
+
+  var minYear = document.getElementById("yearMin");
+  var maxYear = document.getElementById("yearMax");
+
+  for (var i = 1; addYear <= currentYear + 1; i++) {
+    minYear[i] = new Option(addYear, addYear);
+    maxYear[i] = new Option(addYear, addYear);
+    addYear++
+  }
+}

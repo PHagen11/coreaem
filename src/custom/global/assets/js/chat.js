@@ -1,9 +1,10 @@
 function onOpenChatLink(profile){
   var url = window.location.host;
   var logoUrl = "";
-  console.log(url)
   var cssPath = "";
   var brandValue = "";
+
+  console.log(url)
 
   switch(url) {
     case "www.trackerboats.com":
@@ -79,8 +80,8 @@ function onOpenChatLink(profile){
       break;
   }
 
-  var chatUrl = 'https://app.five9.com/consoles/ChatConsole/index.html?title=Contact%20Tracker&tenant=Bass%20Pro%2C%20LLC%20-%20Non%20E.164&profiles='+profile+'&showProfiles=true&autostart=true&profileLabel=Select%20a%20Department&theme=https%3A%2F%2Fassets.whiterivermg.com%2F'+cssPath+'&logo=https%3A%2F%2Fassets.whiterivermg.com'+logoUrl+'&surveyOptions=%7B%22showComment%22%3Atrue%2C%22requireComment%22%3Afalse%7D&fields=%7B%22name%22%3A%7B%22value%22%3A%22%22%2C%22show%22%3Atrue%2C%22label%22%3A%22Name%22%7D%2C%22email%22%3A%7B%22value%22%3A%22%22%2C%22show%22%3Atrue%2C%22label%22%3A%22Email%22%7D%2C%22brand%22%3A%7B%22value%22%3A%22'+brandValue+'%22%2C%22show%22%3Afalse%2C%22label%22%3A%22Brand%22%2C%22required%22%3Afalse%7D%2C%22UserLocale%22%3A%7B%22value%22%3A%22en%22%2C%22show%22%3Afalse%7D%7D&playSoundOnMessage=true&allowCustomerToControlSoundPlay=false&showEmailButton=true&useBusinessHours=false&showPrintButton=false&allowUsabilityMenu=false&enableCallback=false&callbackList=&allowRequestLiveAgent=false';
-  var props = 'width=350,height=550,location=no,menubar=no,resizable=yes,scrollbars=no,status=no,titlebar=no,toolbar=no';
+  var chatUrl = 'https://app.five9.com/consoles/ChatConsole/index.html?title=Contact%20Tracker&tenant=Bass%20Pro%2C%20LLC%20-%20Non%20E.164&profiles='+profile+'&showProfiles=true&autostart=true&profileLabel=Select%20a%20Department&theme=https%3A%2F%2Fassets.whiterivermg.com%2F'+cssPath+'&logo=https%3A%2F%2Fassets.whiterivermg.com'+logoUrl+'&surveyOptions=%7B%22showComment%22%3Atrue%2C%22requireComment%22%3Afalse%7D&fields=%7B%22name%22%3A%7B%22value%22%3A%22%22%2C%22show%22%3Atrue%2C%22label%22%3A%22Name%22%7D%2C%22email%22%3A%7B%22value%22%3A%22%22%2C%22show%22%3Atrue%2C%22label%22%3A%22Email%22%7D%2C%22Serial%20Number%22%3A%7B%22value%22%3A%22%22%2C%22show%22%3Atrue%2C%22label%22%3A%22Serial%20Number%22%2C%22required%22%3Afalse%7D%2C%22brand%22%3A%7B%22value%22%3A%22'+brandValue+'%22%2C%22show%22%3Afalse%2C%22label%22%3A%22Brand%22%2C%22required%22%3Afalse%7D%2C%22UserLocale%22%3A%7B%22value%22%3A%22en%22%2C%22show%22%3Afalse%7D%7D&playSoundOnMessage=true&allowCustomerToControlSoundPlay=false&showEmailButton=true&useBusinessHours=false&showPrintButton=false&allowUsabilityMenu=false&enableCallback=false&callbackList=&allowRequestLiveAgent=false';
+  var props = 'width=350,height=600,location=no,menubar=no,resizable=yes,scrollbars=no,status=no,titlebar=no,toolbar=no';
 
   window.open(chatUrl,'Five9Chat',props);
 }

@@ -1157,7 +1157,7 @@ $blockquote-font-size: 1.1rem;
 $blockquote-weight: 500;
 $blockquote-color: $body-font-color;
 $author-weight: 600;
-$author-color: $white;
+$author-color: $dark-gray;
 $quote-font-family: $header-font-family;
 
 
@@ -1167,7 +1167,7 @@ $profile-size: 60px;
 
 // 10. Tabs Component
 
-$tabs-bg: $dark-gray;
+$tabs-bg: $light-gray;
 
 // 11. Hero Component
 // -----------------------------
@@ -1441,6 +1441,8 @@ $dealer-search-horizontal-divider-color: $light-gray;
 $dealer-search-horizontal-body-bg: $white;
 $dealer-search-horizontal-hero-bg: $light-gray;
 $dealer-search-horizontal-results-column-bg: $light-gray;
+$dealer-search-horizontal-search-by-font-color: $black;
+$dealer-search-horizontal-search-by-dropdown-font-color: $dark-gray;
 $dealer-search-horizontal-search-by-color: $secondary-color;
 $dealer-search-horizontal-search-by-icon-left-position: 212px;
 $dealer-search-horizontal-search-by-min-width: 130px;
@@ -1453,9 +1455,11 @@ $dealer-search-horizontal-input-field-bg: $white;
 $dealer-search-horizontal-input-field-border-color: $medium-gray;
 $dealer-search-horizontal-input-field-border-color-hover: $secondary-color;
 $dealer-search-horizontal-input-field-border-radius: 0;
+$dealer-search-horizontal-input-field-padding-right: 115px;
 $dealer-search-horizontal-location-input-field-padding-right: 115px;
 $dealer-search-horizontal-my-location-button: $dark-gray;
 $dealer-search-horizontal-results-font-color: $black;
+$dealer-search-horizontal-results-col-bg: $body-background;
 $dealer-search-horizontal-dealer-card-col-bg: $body-background;
 $dealer-search-horizontal-dealer-card-font-color: $black;
 $dealer-search-horizontal-dealer-card-bg: $white;
@@ -1481,6 +1485,7 @@ $dealer-search-horizontal-email-dealer-btn-font-color: $black;
 $dealer-search-horizontal-dealer-option-link-color: $black;
 $dealer-search-horizontal-dealer-option-bg: $white;
 $dealer-search-horizontal-segment-font-color: $dark-gray;
+$dealer-search-horizontal-load-more-button-margin: 20px 6px;
 $dealer-search-horizontal-load-more-button-font-color: $black;
 $dealer-search-horizontal-load-more-button-border-color: $primary-color;
 $dealer-search-horizontal-load-more-button-bg: $primary-color;
@@ -1511,7 +1516,9 @@ $dealer-selector-modal-input-field-border-color: $medium-gray;
 $dealer-selector-modal-input-field-border-color-hover: $secondary-color;
 $dealer-selector-modal-dealer-search-input-border-radius: 0;
 $dealer-selector-modal-dealer-search-input-padding-right: 120px;
+$dealer-selector-modal-radius-dropdown-top: 12px;
 $dealer-selector-modal-radius-dropdown-min-width: 105px;
+$dealer-selector-modal-radius-dropdown-arrow-top: 17px;
 $dealer-selector-modal-dealer-card-font-color: $black;
 $dealer-selector-modal-dealer-card-bg-color: $white;
 $dealer-selector-modal-dealer-card-border-radius: .25em;

@@ -12,7 +12,7 @@
 		}
 	}
 	.active {
-		//color:$black;
+		color:$primary-color;
 		border-bottom: 6px solid $primary-color;
 		&:hover {
 			border-bottom: 6px solid $primary-color;

@@ -333,6 +333,7 @@ $buttongroup-radius-on-each: true;
 // 13. Callout
 // -----------
 
+$callout-font-family: inherit;
 $callout-background: $white;
 $callout-background-fade: 85%;
 $callout-border: 1px solid rgba($black, 0.25);
@@ -1484,6 +1485,7 @@ $dealer-search-horizontal-email-dealer-btn-font-color: $white;
 $dealer-search-horizontal-dealer-option-link-color: $black;
 $dealer-search-horizontal-dealer-option-bg: $white;
 $dealer-search-horizontal-segment-font-color: $dark-gray;
+$dealer-search-horizontal-load-more-button-margin: 20px 6px;
 $dealer-search-horizontal-load-more-button-font-color: $primary-color;
 $dealer-search-horizontal-load-more-button-border-color: $primary-color;
 $dealer-search-horizontal-load-more-button-bg: $light-gray;

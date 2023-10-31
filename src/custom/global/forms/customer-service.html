@@ -1,0 +1,100 @@
+<div class="form">
+  <form id="form4" data-abide novalidate>
+    <div data-abide-error class="alert callout" id="errorCallout" style="display: none;">
+      <p>
+        <i class="fas fa-exclamation-triangle fa-xs">
+        </i> There are some errors in your form.
+      </p>
+    </div>
+    <div class="callout medium-gray text-center" id="supportCallout" style="display: none;">
+      <h6>
+        For inquiries involving technical questions, please contact your dealer directly.
+        <br>
+        <br>
+        Click the button below to locate a dealer near you.
+        <br>
+        <br>
+        <a class="button none-bottom" href="https://www.trackerboats.com/dealers.html">Contact Dealer</a>
+      </h6>
+    </div>
+    <div class="grid-x">
+      <div class="small-12 cell">
+        <label for="categoryInput">Category *
+          <select name="category" id="categoryInput" required>
+            <option value="" selected>--</option>
+            <option value="105">Request an Owner's Manual</option>
+            <option value="102">Request a Part#</option>
+            <option value="106">Request a Wiring Diagram</option>
+            <option value="101">Customer Service</option>
+            <option value="103">Sales</option>
+            <option value="107">Technical Question</option>
+          </select>
+          <span class="form-error" data-form-error-for="categoryInput">Category is required</span>
+        </label>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>First Name * <input name="firstName" type="text" id="firstNameInput" placeholder="" maxlength="25" required />
+          <span class="form-error" data-form-error-for="firstNameInput">First Name is required.</span>
+        </label>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>Last Name * <input name="lastName" type="text" id="lastNameInput" placeholder="" maxlength="25" required />
+          <span class="form-error" data-form-error-for="lastNameInput">Last Name is required.</span>
+        </label>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>Phone * <input name="phone" type="text" id="phoneInput" placeholder="" maxlength="20" required />
+          <span class="form-error" data-form-error-for="phoneInput">Phone is required.</span>
+        </label>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>Zip/Postal Code * <input name="postalCode" type="text" id="postalCodeInput" placeholder="" maxlength="10" required />
+          <span class="form-error" data-form-error-for="postalCodeInput">Zip/Postal Code is required.</span>
+        </label>
+      </div>
+      <div class="small-12 cell">
+        <label>Email * <input name="email" type="text" id="emailInput" placeholder="" pattern="email" maxlength="50" required />
+          <span class="form-error" data-form-error-for="emailInput">Email address is required in standard email format.</span>
+        </label>
+      </div>
+      <div class="small-12 cell">
+        <label for="subjectInput">Subject *
+          <input name="subject" type="text" id="subjectInput" maxlength="100" required />
+          <span class="form-error" data-form-error-for="subjectInput">Subject is required.</span>
+        </label>
+      </div>
+      <div class="small-12 cell">
+        <label for="questionInput">Question *
+          <textarea name="message" id="questionInput" rows="3" value="" maxlength="250" required></textarea>
+          <span class="form-error" data-form-error-for="questionInput">Question is required</span>
+        </label>
+      </div>
+      <div class="small-12 cell">
+        <label for="snInput" data-show-if="category:105"><span id="snLabel">Boat Serial Number (if applicable)</span>
+          <input name="serialNumber" type="text" id="snInput" maxlength="50" />
+          <span class="form-error" data-form-error-for="snInput">Boat Serial Number is required for parts inquiry</span>
+        </label>
+      </div>
+      <div class="small-12 cell">
+        <div id="recaptcha_4" class="g-recaptcha" data-sitekey="6Ldrjo4UAAAAABY3ZWa0FAG529uHVwvxaNhQugCI" data-callback="onSubmit" data-size="invisible">
+        </div>
+      </div>
+      <!-- hidden fields -->
+      <input name="leadTypeId" type="hidden" value="6" />      
+      <input name="formType" type="hidden" value="CustomerHelp" />
+      <input name="brand" type="hidden" value="Tracker" />
+      <input name="source" type="hidden" value="Tracker Website" />
+      <input name="url" type="hidden" value="/contact/question.html" />
+      <input name="captchaName" type="hidden" value="invisiblev2" />
+      <!-- end hidden fields -->
+      <div class="small-12 cell hide-for-medium text-center">
+        <button class="button expanded formSubmit submitButton" type="submit" value="Submit">Submit</button>
+      </div>
+      <div class="small-12 cell show-for-medium text-center">
+        <button class="button formSubmit submitButton" type="submit" value="Submit">Submit</button>
+      </div>
+      <div id="loader">
+      </div> 
+    </div>
+  </form>
+</div>
