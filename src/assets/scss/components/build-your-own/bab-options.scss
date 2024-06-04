@@ -4,8 +4,9 @@
 		padding-left: 2rem;
 	}
 	@include breakpoint(large) {
-		padding-right: 6rem;
-		padding-left: 3rem;
+        padding-top: 2rem;
+		padding-right: 1rem;
+		padding-left: 2rem;
     //height: 80vh;
 	}
 
@@ -69,7 +70,7 @@
 
 
   .accordion {
-    margin: 0 0 3rem;
+    margin: 0 0 1rem;
   }
 
   .accordion-item > a.accordion-title {

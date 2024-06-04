@@ -105,11 +105,14 @@
 }
 .hero-fixed
   .heroImage {
-    @media only screen and (min-width: 1025px) {
-      background-attachment: fixed !important;
-    }
+    // @media only screen and (min-width: 1025px) {
+    //   background-attachment: fixed !important;
+    // }
     @include breakpoint (small) {
-      background-attachment: scroll;
+      background-attachment: scroll!important;
+    }
+    @include breakpoint (xlarge) {
+      background-attachment: fixed!important;
     }
   }
   .ex-large-text {

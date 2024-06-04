@@ -988,7 +988,7 @@ $site-bkg-color: $white;
   margin: auto;
   background-color: $site-bkg-color;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 $global-transition: all .25s ease-in-out;
 
@@ -1028,6 +1028,7 @@ $border: 2px solid $border-gray;
 $header-nav-font-family: $body-font-family;
 $header-plain-text-color: $black; //ex: Link List component titles.
 $header-background-color: $white;
+$header-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
 $header-link-background-color-hover: $light-gray;
 $header-background-hover: $light-gray;
 $header-link-color-start: $black;
@@ -1042,6 +1043,7 @@ $header-menu-item-letter-spacing: 0px;
 $header-dropdown-arrow-color: $primary-color;
 $header-dropdown-width: 250px;
 $header-dropdown-background-color: $white;
+$header-dropdown-border-top: 1px solid rgba(0,0,0,.9);
 $header-dropdown-border-left: 4px solid $white;
 $header-submenu-background-color: $secondary-color;
 $header-submenu-link-color: $black;
@@ -1172,7 +1174,7 @@ $profile-size: 60px;
 
 // 10. Tabs Component
 
-$tabs-bg: $dark-gray;
+$tabs-bg: $light-gray;
 
 // 11. Hero Component
 // -----------------------------

@@ -2,148 +2,197 @@
 <!doctype html>
 <html class="no-js" lang="en">
 
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Components Library</title>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Components Library</title>
 
-    <link rel="stylesheet" href="{{root}}assets/css/app.css">
-    <link rel="stylesheet" href="{{root}}assets/css/custom.trackeroffroad.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+		<link rel="stylesheet" href="{{root}}assets/css/app.css">
+		<!-- <link rel="stylesheet" href="{{root}}assets/css/custom.trackeroffroad.css"> -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous"> -->
+        <script src="https://kit.fontawesome.com/961f4edefa.js" crossorigin="anonymous"></script>
+		<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous"> -->
 
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-    </style>
+		<style>
+			html {
+				scroll-behavior: smooth;
+			}
+		</style>
 
-    <!-- Hatteras font imports -->
-    <script src="//use.typekit.net/iwq0snr.js"></script>
-    <script>try { Typekit.load(); } catch (e) { }</script>
+		<style>
+			.media-item {
+				width: 33%;
+			}
+			.media-item img {
+				width: 100%!important;
+				height: auto!important;
+			}
+		</style>
 
-  </head>
-  <body>
+		<!-- Hatteras font imports -->
+		<script src="//use.typekit.net/iwq0snr.js"></script>
+		<script>try { Typekit.load(); } catch (e) { }</script>
 
-    <div class="site">
-      <!-- <div class="sub-navigation anchor-menu">
-        <div data-sticky-container>
-          <div class="title-bar" data-sticky data-sticky-on="small" data-options="marginTop:0;" data-top-anchor="page-title"> -->
-            <!-- background color based on predefined background-xxxxx classes -->
-            <!-- <div class="grid-x inner-width" style="padding-left: 1rem; padding-right: 1rem;"> -->
-              <!-- shows on LARGE, XLARGE -->
-              <!-- <div class="title-bar-left show-for-large">
-                <ul class="menu horizontal align-left">
-                  <li class="menu-text text-white">AEM Component Library</li>
-                </ul>
-              </div>
-              <div class="title-bar-right show-for-large">
-                <ul class="menu horizontal align-right">
-                  <li><a href="#inventory-card">Inventory Card</a></li>
-                  <li><a href="#model-listing">Model Listing</a></li>
-                  <li><a href="#model-price">Model Price</a></li>
-                  <li><a href="#model-specs">Model Specs</a></li>
-                  <li><a href="#model-price">Model Price</a></li> -->
-                  <!--- target="_blank" and <i></i> tags added for external links --->
-                <!-- </ul>
-              </div> -->
-              <!-- shows on SMALL, MEDIUM -->
-              <!-- <ul class="vertical menu accordion-menu hide-for-large" data-accordion-menu>
-                <li>
-                  <a href="#">Some Title</a>
-                  <ul class="menu vertical">
-                    <li><a href="#inventory-card">Inventory Card</a></li>
-                    <li><a href="#model-listing">Model Listing</a></li>
-                    <li><a href="#model-price">Model Price</a></li>
-                    <li><a href="#model-specs">Model Specs</a></li>
-                    <li><a href="#model-price">Model Price</a></li> -->
-                    <!--- target="_blank" and <i></i> tags added for external links --->
-                  <!-- </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div> -->
-      <div class="sub-navigation">
-        <div data-sticky-container>
-          <div class="title-bar" data-sticky data-sticky-on="small" data-options="marginTop:0;" data-top-anchor="page-title">
-            <!-- background color based on predefined background-xxxxx classes -->
-            <div class="grid-x inner-width" style="padding-left: 1rem; padding-right: 1rem;">
-              <!-- shows on LARGE, XLARGE -->
-              <div class="title-bar-left show-for-large">
-                <ul class="menu horizontal align-left">
-                  <li class="menu-text text-white">AEM Component Library</li>
-                </ul>
-              </div>
-              <div class="title-bar-right show-for-large">
-                <ul class="menu horizontal align-right">
-                  <li><a href="/index.html">General</a></li>
-                  <li><a href="/components/layout.html">Layout</a></li>
-                  <li><a href="/components/navigation.html">Navigation</a></li>
-                  <li><a href="/components/media.html">Media</a></li>
-                  <li><a href="/components/hero-component.html">Hero</a></li>
-                  <li><a href="/components/data-display.html">Data Display</a></li>
-                  <li><a href="/components/data-entry.html">Data Entry</a></li>
-                  <li><a href="/custom-build/custom-motor.html">Custom Build</a></li>
-                  <li><a href="/inventory.html">Inventory</a></li>
-                  
-                  <li><a href="/dealer-search.html">Dealer Search</a></li>
-                  
-                  <li><a href="/dealer-profile.html">Dealer Profile</a></li>
-                  
-                  <!--- target="_blank" and <i></i> tags added for external links --->
-                </ul>
-              </div>
-              <!-- shows on SMALL, MEDIUM -->
-              <ul class="vertical menu accordion-menu hide-for-large" data-accordion-menu>
-                <li>
-                  <a href="#">Some Title</a>
-                  <ul class="menu vertical">
-                    <li class="selected"><a href="index.html">General</a></li>
-                    <li><a href="/components/layout.html">Layout</a></li>
-                    <li><a href="/components/navigation.html">Navigation</a></li>
-                    <li><a href="/components/media.html">Media</a></li>
-                    <li><a href="/components/data-display.html">Data Display</a></li>
-                    <li><a href="/components/data-entry.html">Data Entry</a></li>
-                    <li><a href="/custom-build/custom-motor.html">Custom Build</a></li>
-                    <li><a href="/inventory/inventory-page.html">Inventory</a></li>
-                    <li><a href="/dealer-profile.html">Dealer Profile</a></li>
-                    <li><a href="/dealerSearchCompare/dealerSearchUsCaV2.html">Dealer Search Test</a></li>
-                    <!--- target="_blank" and <i></i> tags added for external links --->
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+	</head>
+	<body>
 
-      {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}} {{> body}}
-      
-      
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="{{root}}assets/js/app.js"></script>
-      <!-- <script src="{{root}}assets/js/credit-app-lead.js"></script> -->
-      <script src="{{root}}assets/js/dealer-search-lead.js"></script>
-      <script src="https://kit.fontawesome.com/78d9c12a93.js" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
-      <script src="{{root}}assets/js/foundationLoad.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/plugins/foundation.core.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/plugins/foundation.reveal.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
-      <script src="{{root}}assets/js/imagecarousel.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.10/js/lightgallery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/lg-thumbnail/1.1.0/lg-thumbnail.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/lg-video/1.2.2/lg-video.min.js"></script>
-      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
-      <script src="{{root}}assets/js/lib/owl.carousel2.thumbs.js"></script>
-      
-    </div>
+		<div class="site" id="site">
+			<!-- <div class="sub-navigation anchor-menu">
+			<div data-sticky-container>
+			<div class="title-bar" data-sticky data-sticky-on="small" data-options="marginTop:0;" data-top-anchor="page-title"> -->
+				<!-- background color based on predefined background-xxxxx classes -->
+				<!-- <div class="grid-x inner-width" style="padding-left: 1rem; padding-right: 1rem;"> -->
+				<!-- shows on LARGE, XLARGE -->
+				<!-- <div class="title-bar-left show-for-large">
+					<ul class="menu horizontal align-left">
+					<li class="menu-text text-white">AEM Component Library</li>
+					</ul>
+				</div>
+				<div class="title-bar-right show-for-large">
+					<ul class="menu horizontal align-right">
+					<li><a href="#inventory-card">Inventory Card</a></li>
+					<li><a href="#model-listing">Model Listing</a></li>
+					<li><a href="#model-price">Model Price</a></li>
+					<li><a href="#model-specs">Model Specs</a></li>
+					<li><a href="#model-price">Model Price</a></li> -->
+					<!--- target="_blank" and <i></i> tags added for external links --->
+					<!-- </ul>
+				</div> -->
+				<!-- shows on SMALL, MEDIUM -->
+				<!-- <ul class="vertical menu accordion-menu hide-for-large" data-accordion-menu>
+					<li>
+					<a href="#">Some Title</a>
+					<ul class="menu vertical">
+						<li><a href="#inventory-card">Inventory Card</a></li>
+						<li><a href="#model-listing">Model Listing</a></li>
+						<li><a href="#model-price">Model Price</a></li>
+						<li><a href="#model-specs">Model Specs</a></li>
+						<li><a href="#model-price">Model Price</a></li> -->
+						<!--- target="_blank" and <i></i> tags added for external links --->
+					<!-- </ul>
+					</li>
+				</ul>
+				</div>
+			</div>
+			</div>
+		</div> -->
+			<div class="sub-navigation" id="sub-navigation">
+				<!-- <div data-sticky-container> -->
+				<div class="title-bar" data-options="marginTop:0;">
+					<!-- background color based on predefined background-xxxxx classes -->
+					<div class="grid-x inner-width" style="padding-left: 1rem; padding-right: 1rem;">
+						<!-- shows on LARGE, XLARGE -->
+						<div class="title-bar-left show-for-large">
+							<ul class="menu horizontal align-left">
+								<li class="menu-text text-white">AEM Component Library</li>
+							</ul>
+						</div>
+						<div class="title-bar-right show-for-large">
+							<ul class="menu horizontal align-right">
+								<li><a href="/index.html">General</a></li>
+								<li><a href="/components/layout.html">Layout</a></li>
+								<li><a href="/components/navigation.html">Navigation</a></li>
+								<li><a href="/components/media.html">Media</a></li>
+								<li><a href="/components/hero-component.html">Hero</a></li>
+								<li><a href="/components/data-display.html">Data Display</a></li>
+								<li><a href="/components/data-entry.html?test=123&id=12345">Data Entry</a></li>
+								<li><a href="/custom-build/custom-motor.html">Custom Build</a></li>
+								<li><a href="/inventory.html">Inventory</a></li>
+								
+								<li><a href="/dealer-search.html">Dealer Search</a></li>
+								
+								<li><a href="/dealer-profile.html">Dealer Profile</a></li>
+								
+								<!--- target="_blank" and <i></i> tags added for external links --->
+							</ul>
+						</div>
+						<!-- shows on SMALL, MEDIUM -->
+						<ul class="vertical menu accordion-menu hide-for-large" data-accordion-menu>
+							<li>
+								<a href="#">Some Title</a>
+								<ul class="menu vertical">
+									<li class="selected"><a href="index.html">General</a></li>
+									<li><a href="/components/layout.html">Layout</a></li>
+									<li><a href="/components/navigation.html">Navigation</a></li>
+									<li><a href="/components/media.html">Media</a></li>
+									<li><a href="/components/data-display.html">Data Display</a></li>
+									<li><a href="/components/data-entry.html">Data Entry</a></li>
+									<li><a href="/custom-build/custom-motor.html">Custom Build</a></li>
+									<li><a href="/inventory/inventory-page.html">Inventory</a></li>
+									<li><a href="/dealer-profile.html">Dealer Profile</a></li>
+									<!--- target="_blank" and <i></i> tags added for external links --->
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- </div> -->
+			</div>
 
-  </body>
+			{{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}} {{> body}}
+			
+			<div id="end-sticky-nav"></div>
+			
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+			<script src="{{root}}assets/js/app.js"></script>
+			<!-- <script src="{{root}}assets/js/credit-app-lead.js"></script> -->
+			<!-- <script src="{{root}}assets/js/dealer-search-lead.js"></script> -->
+			<!-- <script src="{{root}}assets/js/lead.js"></script> -->
+			<script src="{{root}}assets/js/rockBottomClearance-promo.js"></script>
+			<script src="https://kit.fontawesome.com/78d9c12a93.js" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+			<script src="{{root}}assets/js/foundationLoad.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/plugins/foundation.core.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/plugins/foundation.reveal.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/plugins/foundation.sticky.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/plugins/foundation.util.triggers.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/plugins/foundation.util.mediaQuery.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+			<script src="{{root}}assets/js/imagecarousel.js"></script>
+			<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
+			<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.10/js/lightgallery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/lg-thumbnail/1.1.0/lg-thumbnail.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/lg-video/1.2.2/lg-video.min.js"></script>
+			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+			<script src="{{root}}assets/js/lib/owl.carousel2.thumbs.js"></script>
+			<script src="{{root}}assets/js/custom-gallery.js"></script>
+		</div>
+
+		<!-- <script type="text/javascript">
+            $(document).ready(function(){
+                // $('.owl-carousel').owlCarousel({
+                //     dots: false,
+                // });
+                Navigation.Defaults = {
+                    nav: false,
+                    navText: [
+                        '<span aria-label="' + 'Previous' + '">&#x2039;</span>',
+                        '<span aria-label="' + 'Next' + '">&#x203a;</span>'
+                    ],
+                    navSpeed: false,
+                    navElement: 'button type="button" role="presentation"',
+                    navContainer: false,
+                    navContainerClass: 'owl-nav',
+                    navClass: [
+                        'owl-prev',
+                        'owl-next'
+                    ],
+                    slideBy: 1,
+                    dotClass: 'owl-dot',
+                    dotsClass: 'owl-dots',
+                    dots: true,
+                    dotsEach: false,
+                    dotsData: false,
+                    dotsSpeed: false,
+                    dotsContainer: false
+                };
+            });
+        </script> -->
+
+	</body>
 
 </html>

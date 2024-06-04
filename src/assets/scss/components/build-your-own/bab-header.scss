@@ -1,69 +1,112 @@
 .build-a-boat-header {
-  max-width: 2000px;
-  width: 100%;
-  z-index: 10000;
-  //height: 90px;
-  position: fixed;
-  _postion: absolute;
-  bottom: 0;
-  background-color: $bab-header-background-color;
-  padding: 0.8rem 0 ;
-  margin: 0 !important;
-  .cell {
-    //border-left: 1px solid $dark-gray;
-    //vertical-align: center;
-    //margin: 0rem 1rem 0rem 1rem;
-  }
-  .button {
-    margin-bottom: 0;
-    &.expanded {
-      background-color: $bab-header-expanded-color;
-      //color: $bab-header-expanded-color;
+    max-width: 2000px;
+    width: 100%;
+    z-index: 10000;
+    //height: 90px;
+    position: fixed;
+    _postion: absolute;
+    bottom: 0;
+    background-color: $bab-header-background-color;
+    // padding: 0.8rem 0 ;
+    padding-top: .5rem;
+    margin: 0 !important;
+    @include breakpoint(large) {
+        padding: .5rem 1.2rem;
     }
-  }
-
-  .bab-boat-name {
-    font-weight: $bab-header-boat-name-weight;
-    font-size: $bab-header-boat-name-size;
-    a {
-      text-decoration: none;
-      color:$bab-model-name-header-color;
+    .cell {
+        //border-left: 1px solid $dark-gray;
+        //vertical-align: center;
+        //margin: 0rem 1rem 0rem 1rem;
+    }
+    .button {
+        margin-bottom: 0;
+        &.expanded {
+        // background-color: $bab-header-expanded-color;
+        //color: $bab-header-expanded-color;
+        }
     }
 
-    i {
-      margin-right: 0.3em;
-    }
-  }
+    .bab-boat-name {
+        font-weight: $bab-header-boat-name-weight;
+        font-size: $bab-header-boat-name-size;
+        a {
+            text-decoration: none;
+            color:$bab-model-name-header-color;
+        }
 
-  .bab-boat-package-info {
-    font-size: 0.9em;
-    color: $white;
-  }
-  .bab-price {
-    @include breakpoint(small){
-      border:none;
+        i {
+            margin-right: 0.3em;
+        }
     }
-    @include breakpoint(large){
-      border-left:1px solid $medium-gray;
-    }
-  }
 
-  .bab-price-total {
-    @include breakpoint(small) {
-      padding-bottom: 1rem;
-      font-size: 1.2rem;
+    .bab-boat-package-info {
+        font-size: 0.9em;
+        color: $white;
     }
-    @include breakpoint(large){
-      font-size: 1.4rem;
-      padding-bottom: 0;
+    .bab-price {
+        @include breakpoint(small){
+            border:none;
+        }
+        @include breakpoint(large){
+            border-left: 2px solid $medium-gray;
+            padding-left: .8rem;
+        }
     }
-    font-weight: $bab-header-price-total-weight;
-    color: $bab-header-price-total-color;
-  }
 
-  .bab-price-total-note {
-    font-size: 0.9rem;
-    color: $white;
-    text-transform: capitalize;
-  }
+    .bab-price-total {
+        @include breakpoint(small) {
+            padding-bottom: .8rem;
+            font-size: 1.2rem;
+        }
+        @include breakpoint(large){
+            font-size: 1.4rem;
+            padding-bottom: 0;
+        }
+        font-weight: $bab-header-price-total-weight;
+        color: $bab-header-price-total-color;
+    }
+
+    .icon-button {
+        // border-radius: 50%;
+        padding: .9rem;
+
+        &:before {
+            content: '\f02f';
+            font-family: "Font Awesome 6 Free";
+        }
+    }
+
+    .send-button {
+        &:before {
+            content: '\f1d8';
+            font-family: "Font Awesome 6 Free";
+        }
+    }
+
+    .color-button {
+        &:before {
+            content: '\f53f';
+            font-family: "Font Awesome 6 Free";
+        }
+    }
+
+    .options-button {
+        &:before {
+            content: '\f03a';
+            font-family: "Font Awesome 6 Free";
+        }
+    }
+
+    .summary-button {
+        &:before {
+            content: '\f46d';
+            font-family: "Font Awesome 6 Free";
+        }
+    }
+
+    .bab-price-total-note {
+        font-size: 0.9rem;
+        color: $white;
+        text-transform: capitalize;
+    }
 }

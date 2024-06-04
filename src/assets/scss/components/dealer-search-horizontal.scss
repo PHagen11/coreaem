@@ -303,43 +303,66 @@
   //     color: $primary-color;
   // }
 
-  div.scrollable {
-    scrollbar-color: #888 #DEDEDE;
-    scrollbar-width: thin;
-  }
+  
+
+  // @mixin scrollbar {
+  //   @supports selector(::-webkit-scrollbar) {
+  //     /* scrollbar styles for firefox */
+  //     // div.scrollable {
+  //       scrollbar-color: #888 #DEDEDE;
+  //       scrollbar-width: thin;
+  //     // }
+  //   }
+  // }
+
+  // @mixin scrollbar($scrollbar-custom: false) {
+  //   @if $scrollbar-custom {
+  //     /* scrollbar styles for firefox */
+  //     // div.scrollable {
+  //       width: 10px!important;
+  //     // }
+  //   }
+  //   @else {
+  //     scrollbar-color: #888 #DEDEDE;
+  //     scrollbar-width: thin;
+  //   }
+  // }
 
   /* scrollbar styles */
   div.scrollable {
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
 
     /* scrollbar styles for firefox */
     scrollbar-color: #888 #DEDEDE;
     scrollbar-width: thin;
+
+    // @include scrollbar;
   }
 
 
   /* scrollbar styles for chrome, edge and safari */
   /* width */
   div.scrollable::-webkit-scrollbar {
-    width: 10px;
+    width: 10px!important;
+    // @include scrollbar($scrollbar-custom: true);
   }
 
   /* Track */
   div.scrollable::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background: #DEDEDE;
+    border-radius: 10px!important;
+    background: #DEDEDE!important;
   }
 
   /* Handle */
   div.scrollable::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: #888;
+    border-radius: 10px!important;
+    background: #888!important;
   }
   
   /* Handle on hover */
   div.scrollable::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #555!important;
   }
 
   .dealer-results {
@@ -902,6 +925,7 @@
 
 /* Small only */
 @media screen and (max-width: 39.9375em) {
+// @include breakpoint(small) {
 
   .dealer-search-horizontal {
 

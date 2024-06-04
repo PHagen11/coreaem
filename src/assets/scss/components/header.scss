@@ -16,11 +16,11 @@
     width: 100%;
     margin: 0;
     background: $header-background-color;
-    -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+    -webkit-box-shadow: $header-box-shadow; // 0 1px 10px rgba(0,0,0,0.1);
     /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+    -moz-box-shadow: $header-box-shadow; // 0 1px 10px rgba(0,0,0,0.1);
     /* Firefox 3.5 - 3.6 */
-    box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+    box-shadow: $header-box-shadow; // 0 1px 10px rgba(0,0,0,0.1);
     /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
   }
 
@@ -150,7 +150,7 @@
           height: auto;
           background-color: $header-dropdown-background-color;
           padding: 1rem 0 0;
-          border-top: 1px solid $border-gray;
+          border-top: $header-dropdown-border-top;
           position: absolute;
           z-index: 99;
           left: 0;
@@ -383,9 +383,9 @@
             &.normal-sub {
               width: 100%;
 
-              a {
+              // a {
                 /* padding: 0.5em 0 0.5em 1.5em; */
-              }
+              // }
             }            
             > li {
               float: none;

@@ -25,275 +25,289 @@ $card-margin-xlarge: 4rem;
 // 	--blur-size: var(--blur-width) calc(var(--card-height));
 // }
 
+#results-grid {
 
-.inventory-card {
-	.card {
-		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-			/* IE10+ CSS styles go here */
-			flex: 1 1 150px;
-		}
-		@include breakpoint(small only) {
-			padding: 0.5rem 0;
-			margin: 0;
-			box-shadow: none;
-			border-radius: 0;
-			border-bottom: 2px solid $border-gray;
-		}
-		@include breakpoint(medium) {
-			min-height: 210px;
-			margin: 0.6rem;
-			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    a {
+        text-decoration: none;
+    }
 
-			&:hover {
-				box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
-				transition: box-shadow 0.3s ease-in-out;
-			}
-		}
+    .inventory-card {
+        .card {
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                /* IE10+ CSS styles go here */
+                flex: 1 1 150px;
+            }
+            @include breakpoint(small only) {
+                padding: 0.5rem 0;
+                margin: 0.6rem;
+                box-shadow: none;
+                border-radius: 0;
+                border-bottom: 2px solid $border-gray;
+            }
+            @include breakpoint(medium) {
+                min-height: 210px;
+                margin: 0.6rem;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-		.card-divider {
-			padding: 0.6rem 1rem 0.5rem;
-			font-size: 0.8em;
-			font-weight: 700;
-			.condition {
-				text-transform: capitalize;
-			}
-		}
-
-		.card-section {
-			// max-height: 200px;
-			min-height: 1px;
-
-      p {
-        margin-bottom: 0;
-      }
-
-			.mname {
-				min-height: 40px;
-        font-size: 1.2rem;
-				font-weight: bold;
-				margin-bottom: 0;
-			}
-
-      .motorname {
-        min-height: 20px;
-        font-weight: 500;
-        font-size: 15px;
-        color: $dark-gray;
-        margin-bottom: 5px;
-      }
-
-			.locname {
-				margin-bottom: 10px;
-				color: $medium-gray;
-        font-size: 1.1rem;
-			}
-
-      .no-haggle-label {
-        color: $medium-gray;
-        font-size: .9rem;
-        font-weight: bold;
-        margin-bottom: 0;
-      }
-
-      .price-equipped-label {
-        color: $medium-gray;
-        font-size: .9rem;
-        font-weight: bold;
-        margin-bottom: 0;
-      }
-
-      .price-equipped {
-        font-size: 1.4rem;
-        font-weight: bold;
-      }
-
-      .price-sale-label {
-        font-size: 1.4rem;
-        color: $alert-color;
-        font-weight: bold;
-        margin-bottom: 0;
-      }
-
-      .price-sale-value {
-        font-size: 1.4rem;
-        color: $alert-color;
-        font-weight: bold;
-        margin-bottom: 0;
-
-        .currency {
-          font-weight: lighter;
-          font-size: 1rem;
-          color: $medium-gray;
-        }
-      }
-
-      .no-haggle-price {
-        font-size: 1.4rem;
-        color: $medium-gray;
-        font-weight: bold;
-        margin-bottom: 0;
-
-        .currency {
-          font-weight: lighter;
-          font-size: 1rem;
-          color: $medium-gray;
-        }
-      }
-
-      .you-save-text {
-        margin-bottom: 10px;
-
-        .save-price {
-          color: $alert-color;
-          font-weight: bold;
-        }
-      }
-
-      .price {
-				font-size: 1.4rem;
-				color: $black;
-				font-weight: bold;
-				margin-bottom: 0;
-
-				.currency {
-					font-weight: lighter;
-					font-size: 1rem;
-					color: $medium-gray;
-				}
-			}
-
-      .price-table {
-
-        tbody {
-
-          border: none;
-
-          tr {
-
-            border-bottom: none;
-
-            .price-sale-text {
-              font-size: 1.4rem;
-              color: $alert-color;
-              font-weight: bold;
-              margin-bottom: 0;
+                &:hover {
+                    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+                    transition: box-shadow 0.3s ease-in-out;
+                }
             }
 
-            .price-sale-value {
-              font-size: 1.4rem;
-              color: $alert-color;
-              font-weight: bold;
-              margin-bottom: 0;
-
-              .currency {
-                font-weight: lighter;
-                font-size: 1rem;
-                color: $medium-gray;
-              }
+            .card-divider {
+                padding: 0.6rem 1rem 0.5rem;
+                font-size: 0.8em;
+                font-weight: 700;
+                .locname {
+                    margin-bottom: 10px;
+                    // color: $medium-gray;
+                    font-size: .9rem;
+                    float: left;
+                    i {
+                        margin-right: 5px;
+                    }
+                }
+                .condition {
+                    text-transform: capitalize;
+                    float: right;
+                }
             }
 
-            .no-haggle-price {
-              font-size: 1.4rem;
-              color: $medium-gray;
-              font-weight: bold;
-              margin-bottom: 0;
-      
-              .currency {
-                font-weight: lighter;
-                font-size: 1rem;
-                color: $medium-gray;
-              }
+            .card-section {
+                .mname {
+                    min-height: 40px;
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                    margin-bottom: 0;
+                }
+                .motorname {
+                    min-height: 20px;
+                    font-weight: 500;
+                    font-size: .95rem;
+                    color: $dark-gray;
+                    margin-bottom: 5px;
+                }
+                .locname {
+                    margin-bottom: 10px;
+                    color: $medium-gray;
+                    font-size: 1.1rem;
+                    i {
+                        margin-right: 5px;
+                    }
+                }
+                .no-haggle-label {
+                    color: $medium-gray;
+                    font-size: .9rem;
+                    font-weight: bold;
+                    // margin-bottom: .5rem;
+                    margin-bottom: 0;
+                }
+                .national-price-label {
+                    color: $medium-gray;
+                    font-size: .9rem;
+                    font-weight: bold;
+                    margin-bottom: 0;
+                }
+                .price-equipped-label {
+                    // color: $dark-gray;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    // margin-top: 10px;
+                    margin-bottom: 0;
+                    color: $black;
+                }
+                .price-equipped-sublabel {
+                    font-size: .85rem;
+                    margin-top: -6px;
+                    margin-bottom: 0;
+                }
+                // .price-equipped {
+                //     font-size: 1.4rem;
+                //     font-weight: bold;
+                //     // margin-top: 10px;
+                // }
+                .price-sale-label {
+                    font-size: 1.4rem;
+                    color: $alert-color;
+                    font-weight: bold;
+                    margin-bottom: 0;
+                }
+                .price-sale-value {
+                    font-size: 1.4rem;
+                    color: $alert-color;
+                    font-weight: bold;
+                    // margin-top: -12px;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    min-width: 120px;
+                    .currency {
+                        font-weight: lighter;
+                        font-size: 1rem;
+                        color: $medium-gray;
+                    }
+                }
+                .price-divider {
+                    border-color: $light-gray;
+                    margin-top: 8px;
+                    margin-bottom: 8px;
+                }
+                .no-haggle-value {
+                    margin-bottom: .5rem;
+                    font-size: 1.4rem;
+                    color: $medium-gray;
+                    font-weight: bold;
+                    // margin-bottom: 0;
+                    min-width: 120px;
+                    .currency {
+                        font-weight: lighter;
+                        font-size: 1rem;
+                        color: $medium-gray;
+                    }
+                }
+                .you-save-text {
+                    font-size: 1.2rem;
+                    color: $medium-gray;
+                    font-weight: bold;
+                    margin-bottom: 0;
+                    min-width: 120px;
+                }
+                .you-save-value {
+                    font-size: 1.4rem;
+                    color: $alert-color;
+                    font-weight: bold;
+                    margin-bottom: .5rem;
+                    min-width: 120px;
+                }
+                .price-equipped-value {
+                    font-size: 1.4rem;
+                    color: $black;
+                    font-weight: bold;
+                    margin-bottom: 0;
+                    min-width: 120px;
+                    .currency {
+                        font-weight: lighter;
+                        font-size: 1rem;
+                        color: $medium-gray;
+                    }
+                }
+                .price-table {
+                    tbody {
+                        border: none;
+                        tr {
+                            border-bottom: none;
+
+                            .price-sale-text {
+                                font-size: 1.4rem;
+                                color: $alert-color;
+                                font-weight: bold;
+                                margin-bottom: 0;
+                            }
+                            .price-sale-value {
+                                font-size: 1.4rem;
+                                color: $alert-color;
+                                font-weight: bold;
+                                margin-bottom: 0;
+                                .currency {
+                                    font-weight: lighter;
+                                    font-size: 1rem;
+                                    color: $medium-gray;
+                                }
+                            }
+                            .no-haggle-price {
+                                font-size: 1.4rem;
+                                color: $medium-gray;
+                                font-weight: bold;
+                                margin-bottom: 0;
+                                .currency {
+                                    font-weight: lighter;
+                                    font-size: 1rem;
+                                    color: $medium-gray;
+                                }
+                            }
+                        }
+                        .price-sale {
+                            font-size: 1.4rem;
+                            color: $black;
+                            font-weight: bold;
+                            margin-bottom: 0;
+                            .currency {
+                                font-weight: lighter;
+                                font-size: 1rem;
+                                color: $medium-gray;
+                            }
+                        }
+                    }
+                }
             }
 
-          }
-
-          .price-sale {
-            font-size: 1.4rem;
-            color: $black;
-            font-weight: bold;
-            margin-bottom: 0;
-    
-            .currency {
-              font-weight: lighter;
-              font-size: 1rem;
-              color: $medium-gray;
+            .item-image {
+                @include breakpoint(small) {
+                    min-height: 1px;
+                    padding: 0 1rem 1rem;
+                    border-bottom: none;
+                    object-fit: scale-down;
+                    object-position: 100% 0 100% 0;
+                    width: 100%;
+                    height: auto;
+                    max-height: 300px;
+                }
+                @include breakpoint(medium) {
+                    padding: 0 1rem 1rem;
+                    border-bottom: 1px solid $border-gray;
+                    height: 180px;
+                }
+                @include breakpoint(large) {
+                    height: 200px;
+                }
+                @include breakpoint(xlarge) {
+                    height: 220px;
+                }
+                @include breakpoint(xxlarge) {
+                    height: 230px;
+                }
+                @include breakpoint(xxxlarge) {
+                    height: 220px;
+                }
             }
-          }
-
         }
 
-      }
+        a {
+            text-decoration: none;
+        }
 
-		}
-
-		.item-image {
-			@include breakpoint(small) {
-				min-height: 1px;
-				padding: 0 1rem 1rem;
-				border-bottom: none;
-				object-fit: cover;
-				object-position: 100% 0 100% 0;
-				width: 100%;
-				height: auto;
-        max-height: 300px;
-			}
-			@include breakpoint(medium) {
-				padding: 0 1rem 1rem;
-				border-bottom: 1px solid $border-gray;
-				height: 180px;
-			}
-			@include breakpoint(large) {
-				height: 200px;
-			}
-			@include breakpoint(xlarge) {
-				height: 220px;
-			}
-			@include breakpoint(xxlarge) {
-				height: 230px;
-			}
-			@include breakpoint(xxxlarge) {
-				height: 220px;
-			}
-		}
-	}
-
-	a {
-		text-decoration: none;
-	}
-
-	.inventory {
-		.one-and-three-up {
-			@include breakpoint(medium) {
-				.card {
-					width: 95%;
-					margin: 0 5% 5% 0;
-				}
-			}
-			@include breakpoint(xlarge) {
-				&:nth-child(3n-2) {
-					.card {
-						outline: 1px dotted red;
-						width: 95%;
-						margin: 0 5% 5% 0;
-					}
-				}
-
-				&:nth-child(3n-1) {
-					.card {
-						width: 95%;
-						margin: 0 1.75% 5% 3.25%;
-					}
-				}
-
-				&:nth-child(3n) {
-					.card {
-						width: 95%;
-						margin: 0 0 5% 5%;
-					}
-				}
-			}
-		}
-	}
+        .inventory {
+            .one-and-three-up {
+                @include breakpoint(medium) {
+                    .card {
+                        width: 95%;
+                        margin: 0 5% 5% 0;
+                    }
+                }
+                @include breakpoint(xlarge) {
+                    &:nth-child(3n-2) {
+                        .card {
+                            outline: 1px dotted red;
+                            width: 95%;
+                            margin: 0 5% 5% 0;
+                        }
+                    }
+                    &:nth-child(3n-1) {
+                        .card {
+                            width: 95%;
+                            margin: 0 1.75% 5% 3.25%;
+                        }
+                    }
+                    &:nth-child(3n) {
+                        .card {
+                            width: 95%;
+                            margin: 0 0 5% 5%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .card.skeleton {
@@ -359,4 +373,28 @@ $card-margin-xlarge: 4rem;
 	to {
 		background-position: 350% 0, 20px 280px, 20px 330px, 20px 360px, 20px 20px, 0 calc(400px - 40px), 0 0;
 	}
+}
+
+@media screen and (min-width: 75em) {
+    .xlarge-up-2 > .cell {
+        max-width: 50%;
+    }
+}
+
+@media print, screen and (min-width: 40em) {
+    .medium-up-2 > .cell {
+        max-width: 50%;
+    }
+}
+
+@media screen and (min-width: 90em) {
+    .xxlarge-up-3 > .cell {
+        max-width: 33.33333%;
+    }
+}
+
+@media screen and (min-width: 112.5em) {
+    .xxxlarge-up-4 > .cell {
+        max-width: 25%;
+    }
 }

@@ -1023,11 +1023,12 @@ $border: 2px solid $border-gray;
 
 $header-nav-font-family: $header-font-family;
 $header-plain-text-color: $black; //ex: Link List component titles.
-$header-background-color: $black;
+$header-background-color: $white;
+$header-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
 $header-link-background-color-hover: $light-gray;
-$header-background-hover: #000000;
-$header-link-color-start: $white;
-$header-link-color-hover: $white;
+$header-background-hover: $light-gray;
+$header-link-color-start: #595959;
+$header-link-color-hover: #222222;
 $header-link-top-bottom-padding: 2.4rem;
 $header-link-left-right-padding: 1vw;
 $header-link-font-size: 1rem;

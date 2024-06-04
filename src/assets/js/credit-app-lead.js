@@ -461,8 +461,17 @@ jQuery(document).ready(function() {
                     //handleForm(theForm);
                     // Calls wrmgmkto to send form values. Wait for response then perform redirect.
                     handleForm(theForm, function () {
-                        window.open(appurl, '_blank');
-                        window.location.href = '/financing/thank-you.html';
+                        // capturing analytic data before redirecting - digitalDataCaptureForm is found in /content/dam/wrmg/global/js/wrmgDigitalData.js
+                        try {
+                          var ddo = digitalDataCaptureForm(theForm);
+                          window.open(appurl, '_blank');
+                          window.location.href = formRedirectPage + "?success=" + ddo;
+                        }
+                        catch(err) {
+                          console.log(err);
+                          window.open(appurl, '_blank');
+                          window.location.href = formRedirectPage;
+                        }
                     });
                 } else if (response.d === "0") {
                     console.log("Not working!");

@@ -1,0 +1,279 @@
+.bab-model-preview {
+    @include breakpoint(small){
+        // border-top: 4px solid $border-gray;
+        //background: $white;
+        // position: scroll;
+        // padding: 2rem;
+        // margin-top:3rem;
+    }
+    @include breakpoint(large){
+        //background: $white;
+        margin-top: 0;
+        border-top: none;
+        // border-left: 2px solid $border-gray;
+        padding: 2rem 1rem 4rem 1rem;
+        height: 100%;
+    }
+    .bab-boat-year-brand {
+        @include breakpoint (small) {
+            text-align: center;
+            padding-top: 2rem;
+        }
+        @include breakpoint (large) {
+            text-align: left;
+        }
+    }
+    .bab-boat {
+        .bab-boat-name {
+            font-size: 1.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+    }
+    .dealer-info {
+        //background: $light-gray;
+        border: 2px solid $border-gray;
+        margin-top: 1rem;
+        margin-bottom:0;
+        border-radius: 6px;
+        padding: 1rem;
+        font-size: 1rem;
+        line-height: 1.5em;
+        .accordion-title {
+            border: none;
+            color: $global-font-color; //$black;
+            font-size: 1.1rem;
+            font-family: $body-font-family;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0 ;
+            background: none;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            i {
+                padding-right: 0.4rem;
+                color: $primary-color;
+                @include breakpoint (small only) {
+                    display:none;
+                }
+            }
+            &:hover, &:focus {
+                background: none;
+            }
+            .byoDealerName {
+                display: inline-block;
+                padding-right:2rem;
+            }
+        }
+        .accordion-content {
+            border:none;
+            background: none;
+            font-family: $body-font-family;
+            //padding: 1rem 0 0 0;
+        }
+        .dealer-result-name {
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+
+        .dealer-result-phone {
+            margin-top: 1.5rem;
+            margin-bottom: 1em;
+            color: $global-font-color;
+
+            a {
+                color: $global-font-color;
+            }
+        }
+
+        .dealer-result-hours {
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+
+        .dealer-result-address {
+            margin-bottom: 1em;
+        }
+    }
+    .prices {
+    //  border-top: 2px solid $border-gray;
+        font-size: 1rem;
+        padding: 1.5rem 0 0.7rem;
+        border: none;
+        margin-bottom: 0;
+
+        .price-vals {
+            font-weight: bold;
+            text-align: right;
+
+            .price-reg {
+                white-space: nowrap;
+            }
+
+            .strike {
+                text-decoration: line-through;
+            }
+
+            .price-sale-value {
+                color: $primary-color;
+            }
+
+            .price-save-value {
+                white-space: nowrap;
+                font-style: italic;
+                font-weight: normal;
+                color: $medium-gray;
+            }
+        }
+    }
+
+    .prep-freight {
+        margin-top: 0rem;
+        font-size: 1rem;
+        line-height: 2.4rem;
+        margin-bottom: 1em;
+
+        .freight-value,
+        .prep-value {
+            font-weight: bold;
+        }
+    }
+    .options {
+        h6 {
+            padding-bottom: 1rem;
+            border-bottom: 2px solid $border-gray;
+            margin-bottom: 1.3rem;
+            margin-top: 1.3rem;
+        }
+        .option-value {
+            font-weight: bold;
+        }
+        .option-label {
+            padding-bottom: 1rem;
+            text-transform: capitalize;
+        }
+    }
+
+    .special-offers {
+        @include breakpoint(small){
+            background: $bab-sum-special-offers-bkg-color
+        }
+        @include breakpoint(large){
+            background: $bab-sum-special-offers-bkg-color
+        }
+        font-size: 1rem;
+        border-radius: 6px;
+        border:none;
+        //border: $border;
+        //border-width: 1px 0;
+        padding: 1rem;
+        margin-bottom: 2em;
+
+        .special-offers-label {
+            font-weight: bold;
+            margin-bottom: 0em;
+        }
+    }
+
+    .price-total {
+        //border-top: 2px solid $border-gray;
+        border-bottom: 2px solid $border-gray;
+        padding: 0rem 0 1.5rem 0;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        font-weight: 900;
+        margin-top: 1.2rem;
+        margin-bottom: 1.5em;
+    }
+    .is-stuck {
+        margin-top: 47px!important;
+        @include breakpoint (medium) {
+            margin-top: 50px!important;
+        }
+    }
+    .image-carousel {
+        @include breakpoint(small){
+            padding: 0 2rem .5rem;
+        }
+        margin-top: 1rem;
+        .owl-carousel {
+            border: none;
+            cursor: zoom-in;
+            transition: ease;
+            margin-top: 10px;
+            &:hover {
+                opacity: 0.85;
+                transition: ease-in-out;
+                i {
+                    display: block;
+                }
+            }
+            img {
+                // height: 225px;
+                width: auto;
+                text-align: center;
+            }
+        }
+        .owl-thumbs {
+            display: inline-flex;
+            //padding: 1rem;
+            button {
+                padding: 0.5rem;
+                margin: 0rem 0.5rem;
+                border: 1px solid $border-gray;
+                cursor: pointer;
+            }
+            //width: 100px;
+        }
+    }
+    .expand-icon {
+        position: relative;
+        z-index: 10;
+        margin-bottom: -1rem;
+        cursor: pointer;
+        i {
+            opacity: 0.5;
+            padding: 0.4rem;
+            background: $light-gray;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    .ui-icon-triangle-1-e {
+        display: none;
+    }
+    .ui-state-active .ui-icon, .ui-button:active .ui-icon {
+        display: none;
+    }
+    .ui-accordion .ui-accordion-content {
+        padding:0;
+    }
+    .reveal.full {
+        top:0% !important;
+    }
+    .circle {
+        border-radius: 50%;
+    }
+    .summary-swatch {
+        width: 1em;
+        height: 1em;
+        margin-right: 0.5em;
+    }
+    .is-active > .accordion-title::before {
+        content: '+';
+        top:35%;
+    }
+
+    #btnPrintSave {
+        @include breakpoint (xlarge) {
+            width: 17vw;
+            max-width: 350px;
+        }
+    }
+}

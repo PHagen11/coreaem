@@ -7,64 +7,87 @@
 	<div class="grid-x grid-margin-x sticky-anchor large-top" id="sticky-side-anchor-container">
 		<!-- Add a Sticky Menu -->
 		<!-- <div class="cell left small-0 medium-4 large-2 sticky-container" data-sticky-container>
-		<div class="samenu">
-			<div class="sticky" data-sticky data-anchor="sticky-side-anchor-container" data-margin-top="5" data-sticky-on="medium" data-deep-linking="true">
-				<ul class="vertical menu" data-magellan>
-					<li><a href="#inventory-search">Inventory Search</a></li>
-					<li><a href="#form">Form</a></li>
-					<li><a href="#country-select">Country Select</a></li>
-					<li><a href="#brochure-request">Brochure Request</a></li>
-				</ul>
-			</div>
-		</div>
-	</div> -->
+      <div class="samenu">
+        <div class="sticky" data-sticky data-anchor="sticky-side-anchor-container" data-margin-top="5" data-sticky-on="medium" data-deep-linking="true">
+          <ul class="vertical menu" data-magellan>
+            <li><a href="#inventory-search">Inventory Search</a></li>
+            <li><a href="#form">Form</a></li>
+            <li><a href="#country-select">Country Select</a></li>
+            <li><a href="#brochure-request">Brochure Request</a></li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
 		<div class="cell small-12 medium-8 large-12 sections" id="sections">
 
 			<!-- INVENTORY SEARCH -->
 			<section id="inventory-search" data-magellan-target="form" class="large-bottom">
 				<h5 class="medium-bottom">Inventory Search</h5>
-				{{> inventory-search}}
+				{{!> inventory-search}}
 			</section>
 
 			<!-- FORM -->
-			<!-- <section id="form" data-magellan-target="form" class="large-bottom">
+			<section id="form" data-magellan-target="form" class="large-bottom">
 				<h5 class="medium-bottom">Form</h5>
 				{{!> form}}
-			</section> -->
+			</section>
 
 			<!-- COUNTRY SELECT -->
 			<section id="country-select" data-magellan-target="country-select" class="large-bottom">
 				<h5 class="medium-bottom">Country Select</h5>
-				{{> country-select}}
+				{{!> country-select}}
 			</section>
 
 			<!-- BROCHURE REQUEST -->
 			<section id="brochure-request" data-magellan-target="brochure-request" class="large-bottom">
 				<h5 class="medium-bottom">Brochure Request</h5>
-				{{> brochure-request}}
+				{{!> brochure-request}}
 			</section>
 
 			<!-- CUSTOMER SERVICE -->
 			<section id="customer-service" data-magellan-target="customer-service" class="large-bottom">
 				<h5 class="medium-bottom">Customer Service</h5>
-				{{> customer-service}}
+				{{!> customer-service}}
 			</section>
 
 			<!-- BPBC Financing -->
 			<section id="bpbc-finance" data-magellan-target="bpbc-finance" class="large-bottom">
 				<h5 class="medium-bottom">BPBC Financing</h5>
-				{{> bpbc-financing-form}}
+				{{!> bpbc-financing-form}}
 			</section>
 
       <section id="warranty-transfer" data-magellan-target="warranty-transfer" class="large-bottom">
 				<h5 class="medium-bottom">Warranty Transfer</h5>
-				{{> warranty-transfer}}
+				{{!> warranty-transfer}}
 			</section>
       
-      <!-- <section id="hatteras-customer-service" data-magellan-target="hatteras-customer-service" class="large-bottom">
+      <section id="hatteras-customer-service" data-magellan-target="hatteras-customer-service" class="large-bottom">
 				<h5 class="medium-bottom">Hatteras Customer Service</h5>
 				{{!> hatteras-customer-service}}
-			</section> -->
+			</section>
+
+      <section id="warranty-transfer" data-magellan-target="warranty-transfer" class="large-bottom">
+				<h5 class="medium-bottom">Hatteras Next Generation</h5>
+				{{!> hatteras-next-gen }}
+			</section>
+
+      <!-- BROCHURE REQUEST -->
+			<section id="model-request" data-magellan-target="model-request" class="large-bottom">
+				<h5 class="medium-bottom">Model Request</h5>
+				{{!> value-form }}
+			</section>
+
+      <!-- BROCHURE REQUEST -->
+			<section id="bpbc-search" class="make-type-search selected" data-magellan-target="bpbc-search" class="large-bottom">
+				<h5 class="medium-bottom">BPBC Zip Search</h5>
+				{{> bpbc-inventory-search }}
+			</section>
+
+      <!-- Hatteras Haul Out -->
+			<section id="bpbc-search" class="make-type-search selected" data-magellan-target="hatteras-haul-out" class="large-bottom">
+				<h5 class="medium-bottom">Hatteras Haul Out</h5>
+				{{!> hatteras-haul-out }}
+			</section>
 
 		</div>
 	</div>

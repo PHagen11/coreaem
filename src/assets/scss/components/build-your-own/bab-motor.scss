@@ -1,16 +1,18 @@
 .bab-motors {
+
 	@include breakpoint(small) {
-		padding-right: 2rem;
-		padding-left: 2rem;
+        padding: 2rem 2rem 0;
+		// padding-right: 2rem;
+		// padding-left: 2rem;
 	}
 	@include breakpoint(large) {
-		padding-right: 6rem;
-		padding-left: 3rem;
-		min-height: 90vh;
-		padding-bottom: 2rem;
+        padding: 2rem 1rem 1rem 3rem;
+		// min-height: 90vh;
+        // border-left: 2px solid #F2ECE5;
 	}
 	.bab-step-heading {
-			margin-bottom: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
 	}
 
 	.motor {
@@ -20,7 +22,7 @@
 		border-radius: 6px;
 
 		.motor-name {
-			font-size: 1.2rem;
+			font-size: 1.1rem;
 			//font-weight: bold;
 			margin-bottom: 0;
 		}
@@ -31,7 +33,7 @@
 		}
 
 		.motor-price {
-			font-size: 1.2rem;
+			font-size: 1.1rem;
 			//font-weight: bold;
 			text-align: right;
 			margin-bottom: 0;

@@ -2,8 +2,8 @@
 // @import 'settings/settings';
 // @import 'settings/settings-bpbc';
 // @import 'settings/settings-suntracker';
-// @import 'settings/settings-tracker';
-@import 'settings/settings-hatteras';
+@import 'settings/settings-tracker';
+// @import 'settings/settings-hatteras';
 // @import 'settings/settings-regency';
 // @import 'settings/settings-tahoe';
 // @import 'settings/settings-nitro';
@@ -126,6 +126,7 @@
 @import 'components/build-your-own/bab-header';
 @import 'components/build-your-own/bab-navigation';
 @import 'components/build-your-own/bab-sum-column';
+@import 'components/build-your-own/bab-model-preview';
 @import 'components/build-your-own/bab-sum-col-dis';
 @import 'components/build-your-own/bab-motor';
 @import 'components/build-your-own/bab-options';

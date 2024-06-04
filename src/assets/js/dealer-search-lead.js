@@ -149,29 +149,29 @@ $(document).ready(function() {
   // *******************************
 
   // Retrieve any addition query params. IE: Campaigns.
-  var qs = getQueryString();
-  for (var key in qs) {
-    console.log("Param: " + key.toString());
-  }
-  for (var key in qs) {
-    if (key != null) {
-      var field = $(document.createElement("input"));
-      field.attr("name", key).attr("type", "hidden");
-      field.val(qs[key]);
-      $("#"+formId).append(field);
-    }
-  }
-  function getQueryString() {
-    var result = {};
-    if (!window.location.search.length) return result;
-    var qs = window.location.search.slice(1);
-    var parts = qs.split("&");
-    for (var i = 0, len = parts.length; i < len; i++) {
-      var tokens = parts[i].split("=");
-      result[tokens[0]] = decodeURIComponent(tokens[1]);
-    }
-    return result;
-  }
+  // var qs = getQueryString();
+  // for (var key in qs) {
+  //   console.log("Param: " + key.toString());
+  // }
+  // for (var key in qs) {
+  //   if (key != null) {
+  //     var field = $(document.createElement("input"));
+  //     field.attr("name", key).attr("type", "hidden");
+  //     field.val(qs[key]);
+  //     $("#"+formId).append(field);
+  //   }
+  // }
+  // function getQueryString() {
+  //   var result = {};
+  //   if (!window.location.search.length) return result;
+  //   var qs = window.location.search.slice(1);
+  //   var parts = qs.split("&");
+  //   for (var i = 0, len = parts.length; i < len; i++) {
+  //     var tokens = parts[i].split("=");
+  //     result[tokens[0]] = decodeURIComponent(tokens[1]);
+  //   }
+  //   return result;
+  // }
 
 
 	//Apply the dealer id if available.
