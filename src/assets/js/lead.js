@@ -65,7 +65,6 @@ $(document).ready(function () {
 			//debugger
 
 			$.ajax({ 
-
 				crossDomain: true,
 				type: 'POST',
         		url: postUrl,
@@ -75,8 +74,6 @@ $(document).ready(function () {
 				success: function (response) { 
  
 					console.log("Return Value: " + response.d);
-
-					
 
 					if (response.d === "1") {
 						
@@ -123,11 +120,25 @@ $(document).ready(function () {
 	// *******************************
 	// Retrieve any addition query params. IE: Campaigns.
 	var qs = getQueryString();
+    let cookiesArr = ["utm_content", "utm_medium", "utm_campaign", "utm_source", "referrer"];
 	//for (var key in qs) {
 	//    console.log("Param: " + key.toString());
 	//}
+    for (let cookie in cookiesArr) {
+        let cookieArrValue = cookiesArr[cookie];
+        let getCookieValue = getCookie(cookieArrValue)
+        // console.log("looping through utm cookies");
+        if (getCookieValue != "") {
+            let input = document.createElement("input");
+            input.setAttribute("type", "hidden");
+            input.setAttribute("name", cookieArrValue);
+            input.setAttribute("value", getCookieValue);
+            document.querySelector("#"+formId).append(input);
+        }
+    }
+    
 	for (var key in qs) {
-		if (key != null) {
+		if (key != null && !cookiesArr.includes(key)) {
 			var field = $(document.createElement("input"));
 			field.attr("name", key).attr("type", "hidden");
 			field.val(qs[key]);
@@ -146,26 +157,20 @@ $(document).ready(function () {
 		return result;
 	}
 
-
 	//Apply the dealer id if available.
 	try {
-
-		var storeData = getMyStore();
+		var storeData //= getMyStore();
 		if(storeData && storeData.dealerId != "" ) {			
 			var dealerId = storeData.dealerId;	
 			console.log("Dealer ID: " + dealerId);
-				var field = $(document.createElement("input"));
-				field.attr("name", "dealerId").attr("type", "hidden");
-				field.val(dealerId);
-				$("#"+formId).append(field);
+            var field = $(document.createElement("input"));
+            field.attr("name", "dealerId").attr("type", "hidden");
+            field.val(dealerId);
+            $("#"+formId).append(field);
 		}
-		
 	} catch(err) {
-
 		console.log("Tried to apply dealer id ... caught error:")
 		console.log(err)
-
-	}	
-
+	}
 
 });
