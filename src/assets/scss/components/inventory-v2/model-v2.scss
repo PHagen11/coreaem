@@ -104,196 +104,214 @@
   }
 
   .price-block {
+    position: relative;
+
     @include breakpoint(small) {
-      background: $white;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-      padding: 2rem;
-      margin-top: 4rem;
-      border-radius: 4px;
+        background: $white;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        padding: 2.5rem 2rem 2rem;
+        margin-top: 4rem;
+        border-radius: 4px;
     }
     @include breakpoint(large) {
-      margin-top: -5rem;
+        margin-top: -5rem;
+    }
+
+    .availability {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: auto;
+
+        span.badge.success {
+            font-size: .92rem;
+            font-weight: 600;
+            color: $white;
+            padding: .3em .5em;
+            border-radius: 0 0 6px 0;
+            text-transform: uppercase;
+        }
     }
 
     .total {
-      text-align: center;
-      margin-bottom: 1.5rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
 
-      h5 {
-        text-transform: uppercase;
-        font-weight: 500;
-        font-size: 1rem;
-      }
+        h5 {
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 1rem;
+        }
 
-      .usd {
-        font-weight: 400;
-      }
+        .usd {
+            font-weight: 400;
+        }
     }
     .currency {
-      font-weight: 400;
-      color: $medium-gray;
-      font-size: 1.3rem;
+        font-weight: 400;
+        color: $medium-gray;
+        font-size: 1.3rem;
     }
 
     .breakdown {
-      table.item {
-        width: 100%;
-        margin-bottom: 1rem;
-        table-layout: fixed;
-        border-collapse: collapse;
+        table.item {
+            width: 100%;
+            margin-bottom: 1rem;
+            table-layout: fixed;
+            border-collapse: collapse;
 
-        tbody {
-          border-color: transparent;
-          border-spacing: 0;
-        }
+            tbody {
+                border-color: transparent;
+                border-spacing: 0;
+            }
 
-        tr {
-          background: none;
-        }
+            tr {
+                background: none;
+            }
 
-        td {
-          padding: 0.5rem 0;
-          vertical-align: bottom;
-          line-height: 1.25em;
-        }
+            td {
+                padding: 0.5rem 0;
+                vertical-align: bottom;
+                line-height: 1.25em;
+            }
 
-        .name {
-          text-align: left;
-          overflow: hidden;
-          position: relative;
-          font-weight: 600;
+            .name {
+                text-align: left;
+                overflow: hidden;
+                position: relative;
+                font-weight: 600;
 
-          &::after {
-            content: '';
-            position: absolute;
-            bottom: 0.8rem;
-            margin-left: 0.5em;
-            width: 1500px;
-            height: 0;
-            border-bottom: 2px dotted #DEDEDE;
-          }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0.8rem;
+                    margin-left: 0.5em;
+                    width: 1500px;
+                    height: 0;
+                    border-bottom: 2px dotted #DEDEDE;
+                }
+            }
+            .price {
+                color: $black;
+                font-weight: 600;
+                text-align: left;
+                width: 4em;
+                padding-left: 0.5em;
+            }
+            .saving-price {
+                color:$alert-color;
+            }
         }
-        .price {
-          color: $black;
-          font-weight: 600;
-          text-align: left;
-          width: 4em;
-          padding-left: 0.5em;
-        }
-        .saving-price {
-          color:$alert-color;
-        }
-      }
     }
 
     hr {
-      border-color: #DEDEDE;
-      margin: 2rem 0;
+        border-color: #DEDEDE;
+        margin: 2rem 0;
     }
 
     .secondary-cta {
-      text-align: center;
-      font-weight: 500;
-      line-height: 2;
+        text-align: center;
+        font-weight: 500;
+        line-height: 2;
     }
   }
 
-  .trade-in {
-    background: $white;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    margin-top: 2rem;
-    border-radius: 4px;
-    text-align: center;
+    .trade-in {
+        background: $white;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        margin-top: 2rem;
+        border-radius: 4px;
+        text-align: center;
 
-    p {
-      padding: 1rem 0;
-    }
-  }
-
-  .loan-calc {
-    background: $light-gray;
-    //box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    margin-top: 2rem;
-    border-radius: 4px;
-    //text-align: center;
-    p {
-      padding: 1rem 0;
-    }
-  }
-
-  .dealer-callout {
-    background: $white;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    margin-top: 2rem;
-    border-radius: 4px;
-    text-align: left;
-
-    p {
-      //padding: 1rem 0 1rem 0;
-    }
-  }
-
-  .payment-block {
-    text-align: center;
-    background: $white;
-    padding: 2rem;
-    margin-bottom: 1.5rem;
-
-    .payment-price {
-      @include breakpoint(small){
-        font-weight: 700;
-        font-size: 1.5rem;
-      }
-      @include breakpoint(medium) {
-        font-size: 2.5rem;
-      }
-      @include breakpoint(xlarge) {
-        font-size: 3rem;
-      }
-    }
-  }
-  .owl-thumbs {
-    padding-top:1.5rem;
-    //max-height: 140px;
-    //overflow: scroll;
-    background: $light-gray;
-    border-bottom: 2px solid $border-gray;
-    border-left: 2px solid $border-gray;
-    border-right: 2px solid $border-gray;
-    &.tiny-top {
-      margin-top: 0px !important;
-    }
-    //box-shadow: inset 0 -10px 10px rgba(0, 0, 0, 0.6);
-  }
-
-  .owl-thumb-item {
-    @include breakpoint(small) {
-      max-width: 50px;
-      border: 1px solid $border-gray;
-      border-radius: 0;
-      margin: 0 0.4rem 1.1rem;
-      //opacity: 0.8;
-    }
-    @include breakpoint(medium) {
-      max-width: 100px;
+        p {
+            padding: 1rem 0;
+        }
     }
 
-    .play-button {
-      text-align: center;
-      position: absolute;
-      width: 28px;
-      margin: 9px 12px;
+    .loan-calc {
+        background: $light-gray;
+        //box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        margin-top: 2rem;
+        border-radius: 4px;
+        //text-align: center;
+        p {
+            padding: 1rem 0;
+        }
     }
 
-    &:hover {
-      opacity: 1;
-      cursor: pointer;
-      transform: scale(1.12);
-      transition-timing-function: ease;
-      transition: 0.3s;
+    .dealer-callout {
+        background: $white;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        margin-top: 2rem;
+        border-radius: 4px;
+        text-align: left;
+
+        p {
+            //padding: 1rem 0 1rem 0;
+        }
     }
-  }
+
+    .payment-block {
+        text-align: center;
+        background: $white;
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+
+        .payment-price {
+            @include breakpoint(small){
+                font-weight: 700;
+                font-size: 1.5rem;
+            }
+            @include breakpoint(medium) {
+                font-size: 2.5rem;
+            }
+            @include breakpoint(xlarge) {
+                font-size: 3rem;
+            }
+        }
+    }
+    .owl-thumbs {
+        padding-top:1.5rem;
+        //max-height: 140px;
+        //overflow: scroll;
+        background: $light-gray;
+        border-bottom: 2px solid $border-gray;
+        border-left: 2px solid $border-gray;
+        border-right: 2px solid $border-gray;
+        &.tiny-top {
+        margin-top: 0px !important;
+        }
+        //box-shadow: inset 0 -10px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .owl-thumb-item {
+        @include breakpoint(small) {
+            max-width: 50px;
+            border: 1px solid $border-gray;
+            border-radius: 0;
+            margin: 0 0.4rem 1.1rem;
+            //opacity: 0.8;
+        }
+        @include breakpoint(medium) {
+            max-width: 100px;
+        }
+
+        .play-button {
+            text-align: center;
+            position: absolute;
+            width: 28px;
+            margin: 9px 12px;
+        }
+
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+            transform: scale(1.12);
+            transition-timing-function: ease;
+            transition: 0.3s;
+        }
+    }
 }

@@ -16,108 +16,108 @@
     padding-top: 2rem;
   }
 
-  .dealer-info {
-    text-align: center;
-    border: 2px solid $border-gray;
-    padding: 2rem;
-    background: $bab-sum-dealer-card-bkg-color!important; // $white;
-    .dealer-name {
-      //padding-top: 1rem;
-      color: $bab-sum-dealer-card-font-color;
-      i {
-        color: $primary-color;
-        padding-right: 0.6rem;
-      }
-    }
+//   .dealer-info {
+//     text-align: center;
+//     border: 2px solid $border-gray;
+//     padding: 2rem;
+//     background: $bab-sum-dealer-card-bkg-color!important; // $white;
+//     .dealer-name {
+//       //padding-top: 1rem;
+//       color: $bab-sum-dealer-card-font-color;
+//       i {
+//         color: $primary-color;
+//         padding-right: 0.6rem;
+//       }
+//     }
 
-    .dealer-distance {
-      font-weight: bold;
-      margin: 1em 0;
-    }
+//     .dealer-distance {
+//       font-weight: bold;
+//       margin: 1em 0;
+//     }
 
-    .dealer-result-address {
-      padding-top: 0.5rem;
-      font-size: 1.2rem;
-      color: $bab-sum-dealer-card-font-color;
-    }
+//     .dealer-result-address {
+//       padding-top: 0.5rem;
+//       font-size: 1.2rem;
+//       color: $bab-sum-dealer-card-font-color;
+//     }
 
-    .dealer-result-phone {
-      //margin-top: 1rem;
-      //background: $light-gray;
-      font-weight: bold;
-      font-size: 1.2rem;
-      color: $bab-sum-dealer-card-font-color;
-      padding: 1rem;
-      border-radius: 6px;
+//     .dealer-result-phone {
+//       //margin-top: 1rem;
+//       //background: $light-gray;
+//       font-weight: bold;
+//       font-size: 1.2rem;
+//       color: $bab-sum-dealer-card-font-color;
+//       padding: 1rem;
+//       border-radius: 6px;
 
-    //   a {
-    //     color: $bab-sum-dealer-card-link-color!important;
-    //   }
+//     //   a {
+//     //     color: $bab-sum-dealer-card-link-color!important;
+//     //   }
 
-    }
+//     }
 
-    .dealer-hours {
-        background-color: $bab-sum-dealer-card-bkg-color;
-        border: 2px solid $border-gray;
-        margin-top: 1rem;
-        margin-bottom:1rem;
-        border-radius: 6px;
-        padding: 1rem;
-        font-size: 1rem;
-        line-height: 1.5em;
-        .accordion {
-          margin:0px;
-        }
-        .accordion-title {
-          border: none;
-          color: $bab-sum-dealer-card-hours-accordion-text-color;;
-          font-size: 1rem;
-          text-decoration: none;
-          font-weight: bold;
-          padding: 0 ;
-          i {
-            padding-right: 0.4rem;
-            // color: $success-color;
-          }
-        }.accordion-item > a.accordion-title::after {
-          top:0;
-        }
-        .accordion-content {
-          border:none;
-          background: none;
-          padding: 1rem 0 0 0;
-          h6 {
-            text-align: left;
-            padding-top: 1rem
-          }
-        }
+//     .dealer-hours {
+//         background-color: $bab-sum-dealer-card-bkg-color;
+//         border: 2px solid $border-gray;
+//         margin-top: 1rem;
+//         margin-bottom:1rem;
+//         border-radius: 6px;
+//         padding: 1rem;
+//         font-size: 1rem;
+//         line-height: 1.5em;
+//         .accordion {
+//           margin:0px;
+//         }
+//         .accordion-title {
+//           border: none;
+//           color: $bab-sum-dealer-card-hours-accordion-text-color;;
+//           font-size: 1rem;
+//           text-decoration: none;
+//           font-weight: bold;
+//           padding: 0 ;
+//           i {
+//             padding-right: 0.4rem;
+//             // color: $success-color;
+//           }
+//         }.accordion-item > a.accordion-title::after {
+//           top:0;
+//         }
+//         .accordion-content {
+//           border:none;
+//           background: none;
+//           padding: 1rem 0 0 0;
+//           h6 {
+//             text-align: left;
+//             padding-top: 1rem
+//           }
+//         }
 
-      table {
-        //width: auto;
-        border-spacing: 0;
-        @include breakpoint(small) {
-          margin: 0.5em auto 0;
-        }
-        @include breakpoint(medium) {
-          margin: 0.5em 0 0;
-        }
+//       table {
+//         //width: auto;
+//         border-spacing: 0;
+//         @include breakpoint(small) {
+//           margin: 0.5em auto 0;
+//         }
+//         @include breakpoint(medium) {
+//           margin: 0.5em 0 0;
+//         }
 
-        tbody {
-          border: none;
-        }
+//         tbody {
+//           border: none;
+//         }
 
-        tr {
-          background: $white;
-        }
+//         tr {
+//           background: $white;
+//         }
 
-        td {
-          padding: 0 3em 0.3em 0;
-          font-size: .9rem;
-          text-align: left;
-        }
-      }
-    }
-  }
+//         td {
+//           padding: 0 3em 0.3em 0;
+//           font-size: .9rem;
+//           text-align: left;
+//         }
+//       }
+//     }
+//   }
   .ad-info {
     text-align: left;
     padding-top: 3rem;
@@ -162,6 +162,219 @@
     width: 100%;
     font-weight: bold;
   }
+}
+
+.bab-details {
+    .details-accordion {
+        margin: 0 0 1rem;
+
+        .accordion-item {
+            border: $border;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            
+            a {
+                padding: 1.5rem 1rem;
+            }
+        }
+    }
+    .accordion-item > a.accordion-title {
+        // padding: 1rem 0 1rem 0;
+        font-weight: 900;
+        font-size: 1rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: inherit;
+        // border: $border;
+        // border-width: 0 0 2px 0;
+        @include breakpoint(small) {
+            text-align: left;
+        }
+        @include breakpoint(medium) {
+            text-align: left;
+        }
+        //padding-left: 1rem;
+        // &:hover {
+        //   background: $light-gray;
+        // }
+    }
+    .accordion-item > a.accordion-title::before {
+        content: '';
+    }
+
+    .accordion-item > a.accordion-title::after {
+        content: "\f107";
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 700;
+        font-style: normal;
+        cursor: pointer;
+        padding: 0;
+        width: auto;
+        height: auto;
+        transition: $global-transition;
+        border: none;
+        @include breakpoint(small) {
+            display: inline;
+            position: absolute;
+            right: 1em;
+            top: inherit;
+            margin: 0 0 0 0.5rem;
+        }
+        @include breakpoint(medium) {
+            display: block;
+            position: absolute;
+            right: 1em;
+            top: 40%;
+            margin: 0;
+        }
+    }
+
+    .accordion-title {
+        background: transparent;
+        border: none;
+    }
+
+    .accordion-item.is-active > a.accordion-title::after {
+        transform: rotate(-180deg);
+    }
+
+    :last-child:not(.is-active) > .accordion-title {
+        border: none;
+    }
+
+    .accordion-content {
+        //background-color: $light-gray;
+        padding: 1rem .5rem;
+        border-top: $border;
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+
+        .custom-colors {
+            .measurement-toggle {
+              padding: 1rem 0 1.5rem 0;
+              font-size: 0.7rem;
+              font-weight: bold;
+              text-transform: capitalize;
+              a.active {
+                color: $primary-color; //$black;
+                text-decoration: underline;
+                padding: 0 .5rem;
+                &:hover {
+                  color: $primary-color;
+                }
+              }
+              a.inactive {
+                color: $medium-gray;
+                padding: 0 .5rem;
+                &:hover {
+                  color: $primary-color;
+                }
+              }
+            }
+            table {
+              .spec-label {
+                width: 50%;
+                text-transform: capitalize !important;
+                border-right: $model-specs-border-right;
+                //font-size: 1.1rem;
+              }
+              .metric,
+              .standard {
+                //font-weight: 700;
+                //font-size: 1.1rem;
+                text-transform: lowercase;
+                  //padding-left: 10px;
+              }
+              .active-always {
+                  //font-weight: bold;
+                  width: 35%;
+                  padding-left: 10px;
+              }
+              tbody {
+                  border:none;
+              }
+              thead {
+                background-color: $white;
+                border:none;
+              }
+              td {
+                padding: $model-specs-padding;
+              }
+            }
+          
+            &.minimal {
+              table tbody {
+                th, td {
+                  padding: $minimal-spacing;
+                }
+                tr:nth-child(odd) {
+                  background-color: $minimal-odd-background;
+                }
+                tr:nth-child(even) {
+                  background-color: $minimal-even-background;
+                }
+              }
+            }
+            &.basic {
+              table tbody {
+                tr:nth-child(odd) {
+                  background-color: $basic-odd-background;
+                }
+                tr:nth-child(even) {
+                  background-color: $basic-even-background;
+                }
+              }
+            }
+          }
+
+        .model-features-summary {
+            .category {
+              margin: 0;
+          
+              .title {
+                font-size: 1.1rem;
+                font-weight: bold;
+                text-transform: uppercase;
+              }
+            }
+          
+            &.compact {
+              .category {
+                .title {
+                  margin: 2rem 0 1rem;
+                }
+          
+                ul {
+                  li {
+                    padding: 0.25rem 0;
+                  }
+                }
+              }
+            }
+          
+            &.expanded {
+              .category {
+                .title {
+                  margin: 1rem .5rem;
+                }
+              }
+          
+              ul {
+                list-style: none;
+                margin-left: 0;
+          
+                li {
+                  padding: 0.55rem 1rem;
+                }
+          
+                li:nth-child(odd) {
+                  background-color: $model-features-background-odd;
+                }
+              }
+            }
+        }
+    }
 }
 
 .summary {

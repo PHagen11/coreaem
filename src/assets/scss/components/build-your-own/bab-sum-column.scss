@@ -1,18 +1,11 @@
 .bab-sum-col {
     @include breakpoint(small){
-        // border-top: 4px solid $border-gray;
-        //background: $white;
-        // position: scroll;
-        padding: 1rem 2rem 0;
-        // margin-top:3rem;
+        padding: 1.5rem 2rem 0;
     }
     @include breakpoint(large){
-        //background: $white;
         margin-top:0;
         border-top:none;
-        // border-left: 2px solid $border-gray;
-        padding: 0 1rem 0 3rem;
-        // height: 100%;
+        padding: 2rem 1rem 0 2rem;
     }
     .bab-boat-year-brand {
         @include breakpoint (small) {
@@ -30,13 +23,19 @@
             line-height: 1.1;
         }
     }
+    .bab-pricing {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        // margin-top: 2rem;
+        font-weight: 900;
+    }
     .dealer-info {
         //background: $light-gray;
         border: 2px solid $border-gray;
         margin-top: 2rem;
         margin-bottom:2rem;
         border-radius: 6px;
-        padding: 1rem;
+        // padding: 1rem;
         font-size: 1rem;
         line-height: 1.5em;
         .accordion-title {
@@ -46,7 +45,7 @@
             font-family: $body-font-family;
             text-decoration: none;
             font-weight: bold;
-            padding: 0 ;
+            padding: 1rem;
             background: none;
             -webkit-touch-callout: none;
             -webkit-user-select: none;
@@ -67,7 +66,10 @@
                 font-family: "Font Awesome 6 Free";
                 transition: all .25s ease-in-out;
                 @include breakpoint (small) {
-                    right: 0.3rem;
+                    right: 0.5rem;
+                }
+                @include breakpoint (medium) {
+                    right: 0.8rem;
                 }
                 @include breakpoint (large) {
                     right: 1rem;
@@ -87,10 +89,11 @@
             }
         }
         .accordion-content {
-            border:none;
+            border: none;
             background: none;
             font-family: $body-font-family;
-            //padding: 1rem 0 0 0;
+            border-top: $border;
+            padding: 1.2rem;
         }
         .dealer-result-name {
             font-weight: bold;
@@ -100,10 +103,17 @@
             // margin-top: 1.5rem;
             margin-top: 0;
             margin-bottom: 1em;
-            color: $global-font-color;
-            // a {
-            //     color: $global-font-color;
-            // }
+            // color: $global-font-color;
+            a {
+                color: $dark-gray; //$global-font-color;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 18px;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
         }
         .dealer-result-hours {
             font-weight: bold;
@@ -123,9 +133,13 @@
     .prices {
         //  border-top: 2px solid $border-gray;
         font-size: 1.1rem;
-        padding: 1.5rem 0 0.7rem;
+        padding: 0 0 0.7rem;
         border: none;
         margin-bottom: 0;
+
+        h3 {
+            font-size: 1.5rem;
+        }
         .price-vals {
             font-weight: bold;
             text-align: right;
@@ -155,6 +169,12 @@
         font-size: 1rem;
         line-height: 2.4rem;
         margin-bottom: 1em;
+        h6 {
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #ECEDF2;
+            margin-bottom: 1.3rem;
+            margin-top: 1.3rem;
+        }
         .freight-value,
         .prep-value {
             font-weight: bold;
@@ -188,6 +208,7 @@
         //border: $border;
         //border-width: 1px 0;
         padding: 1rem;
+        margin-top: 1em;
         margin-bottom: 2em;
 
         .special-offers-label {

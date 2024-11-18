@@ -1,15 +1,9 @@
 .bab-color {
     @include breakpoint(small) {
-		padding-right: 2rem;
-		padding-left: 2rem;
-        padding-bottom: 100px;
+        padding: 10px 1rem;
 	}
 	@include breakpoint(large) {
-        padding-top: 2rem;
-		padding-right: 6rem;
-		padding-left: 3rem;
-        // height: 90vh;
-        margin-bottom: 8rem;
+        padding: 2rem 1rem .7rem 2rem;
 	}
     .boat-thumbnail {
         overflow: hidden;
@@ -18,7 +12,6 @@
         background-repeat: no-repeat;
         display: inline-block;
         border: 2px solid $border-gray;
-
         @include breakpoint(small) {
             width: 5rem;
             height:  2.5rem;
@@ -34,11 +27,9 @@
             height: 4rem;
             margin: 0 0.5rem;
         }
-
         img {
             width: 100%;
         }
-
         &.selected {
             border-color: $black;
         }
@@ -47,46 +38,31 @@
         margin-top:2rem;
     }
     .owl-thumb-item {
-      @include breakpoint(small) {
-        border:2px solid $border-gray;
-        max-width: 100px;
-        margin: 0rem 0.6rem 1.1rem 0.6rem;
-        //-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-        //filter: grayscale(100%);
-        //opacity: 0.5;
-      }
-      @include breakpoint(medium) {
-        max-width: 100px;
-      }
-    &:hover {
-      opacity: 1;
-      cursor: pointer;
-      //transform: scale(1.15);
-      //transition-timing-function: ease;
-      //ytransition: 0.3s;
-      }
+        @include breakpoint(small) {
+            border:2px solid $border-gray;
+            max-width: 100px;
+            margin: 0 0.6rem 1.1rem 0.6rem;
+        }
+        @include breakpoint(medium) {
+            max-width: 100px;
+        }
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
     }
-
-    // .bab-step-heading {
-    //     margin-bottom: 2rem;
-    // }
-
     .boat-image {
       margin-top: 10vh;
         background-color:$site-bkg-color;
-        //margin-bottom: 2rem;
-        //border-bottom: 2px solid $border-gray;
         img {
             width: 100%;
         }
     }
-
     .accordion {
         margin-bottom:5rem;
         border: $border;
         border-width:0 0 1px 0;
     }
-
     .accordion-item > a.accordion-title {
         font-size: 0.9em;
         text-transform: uppercase;
@@ -101,11 +77,9 @@
             margin-right: 0.5em;
         }
     }
-
     .accordion-item > a.accordion-title::before {
         content: "";
     }
-
     .accordion-item a.accordion-title::after {
         position: relative;
         display: inline-block;
@@ -122,127 +96,93 @@
         transition: $global-transition;
         border: none;
     }
-
     .accordion-title {
         background: transparent;
     }
-
     .accordion-item.is-active > a.accordion-title::after {
         transform: rotate(-180deg);
     }
-
     .accordion-content {
         padding: 0;
         border: none;
         background-color: $light-gray;
         text-align:center;
     }
+    .swatch {
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+        cursor: pointer;
+        width: 6em;
+        margin: 1em 0.2em;
 
-    .swatch-container {
-        margin-top: 0;
-        margin-bottom: 0;
-
-        .swatch {
-            display: inline-block;
-    
-            text-align: center;
-            @include breakpoint(small) {
-                width: 6em;
-                margin: 1em 0.2em;
+        @include breakpoint(large) {
+            width: 7em;
+            margin: 1em 0.5em;
+        }
+        &.selected {
+            .swatch-circle-highlight {
+                background-color: #dedede;
             }
-            // @include breakpoint(medium) {
-            //     width: 5em;
-            //     margin: 1em 0.5em;
-            // }
+        }
+        .swatch-circle-highlight {
+            transition: all .25s ease-in-out;
+            position: relative;
+            width: 6em;
+            height: 6em;
+            border-radius: 50%;
+            background-color: transparent;
             @include breakpoint(large) {
                 width: 7em;
-                margin: 1em 0.5em;
+                height: 7em;
             }
-            .stripe {
-              background-position: center;
-              background-attachment: scroll;
-              background-size: cover;
-            }
-    
-            vertical-align:top;
-            cursor: pointer;
-    
-            .swatch-circle-highlight {
-                transition: $global-transition;
-                position: relative;
-                @include breakpoint(small) {
+            .swatch-circle {
+                cursor: pointer;
+                position: absolute;
+                top: .5em;
+                left: .5em;
+                width: 5em;
+                height: 5em;
+                border-radius: 50%;
+                background-color: #f2ece5;
+                overflow: hidden;
+                box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 6px;
+
+                @include breakpoint(large) {
                     width: 6em;
                     height: 6em;
                 }
-                // @include breakpoint(medium) {
-                //     width: 5em;
-                //     height: 5em;
-                // }
-                @include breakpoint(large) {
-                    width: 7em;
-                    height: 7em;
-                }
-    
-    
-                border-radius: 50%;
-                background-color: transparent;
-    
-                .swatch-circle {
-                    cursor:pointer;
-                    position: absolute;
-                    top: .5em;
-                    left: .5em;
-                    @include breakpoint(small) {
-                        width: 5em;
-                        height: 5em;
-                    }
-                    // @include breakpoint(medium) {
-                    //     width: 4em;
-                    //     height: 4em;
-                    // }
-                    @include breakpoint(large) {
-                        width: 6em;
-                        height: 6em;
-                    }
-    
-                    border-radius: 50%;
-                    background-color: $border-gray;
-                    overflow: hidden;
-                }
-    
-                .three-stripes {
-                    .stripe {
-                        width: 100%;
-                        height: 33.3%;
-                    }
-                }
-                .four-stripes {
-                    .stripe {
-                        width: 100%;
-                        height: 25%;
-                    }
-                }
-    
-                .custom {
-                    .stripe {
-                        width: 100%;
-                        height: 100%;
-                    }
+            }
+            .three-stripes {
+                .stripe {
+                    width: 100%;
+                    height: 33.3%;
                 }
             }
-    
-            &.selected .swatch-circle-highlight {
-                background-color: #dedede;
+            .four-stripes {
+                .stripe {
+                    width: 100%;
+                    height: 25%;
+                }
             }
-            .swatch-name {
-                margin-top:0.8em;
-                font-size: 0.8em;
-                line-height: 1.2em;
-                text-transform: capitalize;
+            .custom {
+                .stripe {
+                    width: 100%;
+                    height: 100%;
+                }
             }
-    
-    
         }
+        .swatch-name {
+            margin-top:0.8em;
+            font-size: 0.8em;
+            line-height: 1.2em;
+            text-transform: capitalize;
+        }
+        .stripe {
+            background-position: center;
+            background-attachment: scroll;
+            background-size: cover;
+        }    
     }
 
     .custom-swatches {
@@ -380,4 +320,84 @@
         }
     }
 
+    .ranger-colorOption-header {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 1rem 1rem 1.4rem;
+        margin-top: 1rem;
+        border: 2px solid #eee;
+        border-radius: 6px;
+    
+        &.selected {
+            border: 4px solid #e51b23;
+            font-weight: bold;
+        }
+    }
+
+    .standard-color-palette {
+        .comboButtonDiv {
+            margin: 1em;
+            width: 10.5em;
+            cursor: pointer;
+            display: inline-block;
+        }
+    }
+
+    .comboButton.selected .button-border {
+        stroke: #e51b23;
+        stroke-width: 10px;
+    }
+
+    #bab-color-configuration {
+        h3 {
+            font-size: 1.5rem;
+        }
+        .color-selections {
+            .category {
+                margin: 2rem 0;
+    
+                .category-parts {
+                    list-style-type: none;
+                    margin-bottom: 0;
+                    margin-left: 0;
+    
+                    .colorConfigColorName {
+                        color: $dark-gray;
+                    }
+                }
+                .title {
+                    margin: .5rem 1rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+            }
+            &.expanded {
+                ul {
+                    list-style: none;
+                    margin-left: 0;
+                    li  {
+                        padding: 3px 6px 3px 3px;
+                        .colorButtonDiv {
+                            // width: 36px;
+                            // height: 36px;
+                            margin: 0 5px 0 0;
+                            cursor: default;
+                            display: inline-block;
+                            .color-button {
+                                height: 30px;
+                                width: 30px;
+                                border-radius: 50%;
+                                border: solid 1px #ccc;
+                                margin: 3px;
+                            }
+                        }
+                        &:nth-child(odd) {
+                            background-color: $light-gray;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

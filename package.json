@@ -25,6 +25,7 @@
     "node-sass": "^4.13.1",
     "owl.carousel": "^2.3.4",
     "owl.carousel2.thumbs": "^0.1.8",
+    "tiny-slider": "^2.9.4",
     "what-input": "^4.1.3"
   },
   "devDependencies": {

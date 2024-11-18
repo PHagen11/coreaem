@@ -36,8 +36,8 @@
 		.title {
 			color: $link-list-title-color!important;
 			// outline:1px dashed black;
-			text-transform: capitalize;
-			font-weight:$link-list-title-font-weight;
+			text-transform: $link-list-text-transform; // capitalize;
+			font-weight: $link-list-title-font-weight;
 			padding:0.7rem 0;
 			font-family: $link-list-font-family;
 			font-size: $link-list-font-size;
@@ -97,4 +97,17 @@
 			display:none;
 		}
 	}
+}
+
+.dropdown {
+    &.menu {
+        &.vertical {
+            > li.opens-right {
+                > .is-dropdown-submenu {
+                    right: auto;
+                    left: 0;
+                }
+            }
+        }
+    }
 }

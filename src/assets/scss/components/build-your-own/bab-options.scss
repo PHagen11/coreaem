@@ -1,7 +1,8 @@
 .bab-options, .bab-sum {
-  @include breakpoint(small) {
-		padding-right: 2rem;
-		padding-left: 2rem;
+    @include breakpoint(small) {
+        padding-top: 1.5rem;
+		padding-right: 1.5rem;
+		padding-left: 1.5rem;
 	}
 	@include breakpoint(large) {
         padding-top: 2rem;
@@ -10,188 +11,217 @@
     //height: 80vh;
 	}
 
-  table.option-item {
-    width: 100%;
-    margin: 0;
-    table-layout: fixed;
-    border-collapse: collapse;
-  }
+    table.option-item {
+        width: 100%;
+        margin: 0;
+        table-layout: fixed;
+        border-collapse: collapse;
 
+        .checkit {
+            padding-left: 1rem;
+            width: 1rem;
 
-//---------START jquery UI accordion----------//
-
-.ui-accordion .ui-accordion-header {
-  padding: 1.5rem 0 1.5rem 0;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  border-bottom: 2px solid $border-gray;
-  font-family: $body-font-family;
-  color: $body-font-color;
-  font-weight: bold;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  h3 {
-    font-family: $body-font-family;
-    letter-spacing: 0 !important;
-  }
-}
-.ui-icon-triangle-1-e {
-  display: none;
-}
-.ui-state-active .ui-icon, .ui-button:active .ui-icon {
-  display: none;
-}
-.ui-accordion-content {
-  border: none;
-  padding: 1rem 0 1rem 0;
-  table tr {
-    margin-top: 0.5rem;
-    background-color: $global-background-color; //none;
-  }
-  table td {
-    padding: 1rem 0;
-  }
-}
-:last-child > .accordion-content:last-child {
-  border-bottom: none !important;
-}
-.ui-widget-content {
-  border:none;
-  font-family: $body-font-family;
-  color: $body-font-color;
-}
-
-//---------END jquery UI accordion----------//
-
-
-  .accordion {
-    margin: 0 0 1rem;
-  }
-
-  .accordion-item > a.accordion-title {
-    padding: 2rem 0 2rem 0;
-    font-weight: 900;
-    font-size: 1rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: inherit;
-    border: $border;
-    border-width: 0 0 2px 0;
-    @include breakpoint(small) {
-      text-align: left;
+            & input[type='checkbox'] {
+                margin: 0;
+            }
+        }
     }
-    @include breakpoint(medium) {
-      text-align: left;
+
+
+    //---------START jquery UI accordion----------//
+
+    .ui-accordion .ui-accordion-header {
+        padding: 1.5rem 0;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-bottom: 2px solid $border-gray;
+        font-family: $body-font-family;
+        color: $body-font-color;
+        font-weight: bold;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        h3 {
+            font-family: $body-font-family;
+            letter-spacing: 0 !important;
+        }
     }
-    //padding-left: 1rem;
-    // &:hover {
-    //   background: $light-gray;
-    // }
-  }
-
-  .accordion-item > a.accordion-title::before {
-    content: '';
-  }
-
-  .accordion-item > a.accordion-title::after {
-    content: "\f107";
-    font-family: 'Font Awesome 5 Pro';
-    font-weight: 700;
-    font-style: normal;
-    cursor: pointer;
-    padding: 0;
-    width: auto;
-    height: auto;
-    transition: $global-transition;
-    border: none;
-    @include breakpoint(small) {
-      display: inline;
-      position: absolute;
-      right: 0.5em;
-      top: inherit;
-      margin: 0 0 0 0.5rem;
+    .ui-icon-triangle-1-e {
+        display: none;
     }
-    @include breakpoint(medium) {
-      display: block;
-      position: absolute;
-      right: 0.5em;
-      top: 35%;
-      margin: 0;
+    .ui-state-active .ui-icon, .ui-button:active .ui-icon {
+        display: none;
     }
-  }
+    .ui-accordion-content {
+        border: none;
+        padding: 1rem 0 1rem 0;
+        table tr {
+            margin-top: 0.5rem;
+            background-color: $global-background-color; //none;
+        }
+        table td {
+            padding: 1rem 0;
+        }
+    }
+    :last-child > .accordion-content:last-child {
+        border-bottom: none !important;
+    }
+    .ui-widget-content {
+        border:none;
+        font-family: $body-font-family;
+        color: $body-font-color;
+    }
 
-  .accordion-title {
-    background: transparent;
-  }
+    //---------END jquery UI accordion----------//
 
-  .accordion-item.is-active > a.accordion-title::after {
-    transform: rotate(-180deg);
-  }
 
-  .accordion-content {
-    //background-color: $light-gray;
-    padding: 1rem 0 1rem 0rem;
-    border: none;
+    .accordion {
+        margin: 0 0 1rem;
 
-    table {
-      tbody {
-        border-color: transparent;
-        border-spacing: 0;
-        //background-color: $light-gray;
-      }
+        .option-accordion {
+            border: $border;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            
+            a {
+                @include breakpoint(small) {
+                    padding: 1.5rem 1.3rem 1.5rem 1rem;
+                }
+                @include breakpoint(medium) {
+                    padding: 1.5rem 1rem;
+                }
+                
+            }
+        }
+    }
 
-      tr {
-        //background-color: rgba(0,0,0,0.05);
-      }
-
-      td {
-        padding: 0.5rem 0;
-        vertical-align: top;
-        line-height: 1em;
-      }
-      tbody tr:nth-child(even) {
-        background: none !important;
-      }
-      tbody tr:nth-child(odd) {
-        background: none !important;
-      }
-
-      .checkit {
-        padding-left: 1rem;
-        width: 1rem;
-      }
-
-      label {
+    .accordion-item > a.accordion-title {
+        // padding: 1rem 0 1rem 0;
+        font-weight: 900;
         font-size: 1rem;
-        line-height: 1.5em;
-        cursor: pointer;
-      }
-
-      .option-name {
-        text-align: left;
-        width: auto;
-
-        label {
-          padding-left: 1.5em;
-          margin-top: -5px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: inherit;
+        // border: $border;
+        // border-width: 0 0 2px 0;
+        @include breakpoint(small) {
+            text-align: left;
         }
-      }
-
-      .option-price {
-        text-align: right;
-        width: 5rem;
-
-        label {
-          font-weight: bold;
-          padding-left: 0.5em;
-          padding-right: 1em;
+        @include breakpoint(medium) {
+            text-align: left;
         }
-      }
+        //padding-left: 1rem;
+        // &:hover {
+        //   background: $light-gray;
+        // }
     }
-  }
+
+    .accordion-item > a.accordion-title::before {
+        content: '';
+    }
+
+    .accordion-item > a.accordion-title::after {
+        content: "\f107";
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 700;
+        font-style: normal;
+        cursor: pointer;
+        padding: 0;
+        width: auto;
+        height: auto;
+        transition: $global-transition;
+        border: none;
+        @include breakpoint(small) {
+            display: inline;
+            position: absolute;
+            right: 1em;
+            top: inherit;
+            margin: 0 0 0 0.5rem;
+        }
+        @include breakpoint(medium) {
+            display: block;
+            position: absolute;
+            right: 1em;
+            top: 40%;
+            margin: 0;
+        }
+    }
+
+    .accordion-title {
+        background: transparent;
+        border: none;
+    }
+
+    .accordion-item.is-active > a.accordion-title::after {
+        transform: rotate(-180deg);
+    }
+
+    :last-child:not(.is-active) > .accordion-title {
+        border: none;
+    }
+
+    .accordion-content {
+        //background-color: $light-gray;
+        padding: 1rem .5rem;
+        border-top: $border; 
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+
+        table {
+            tbody {
+                border-color: transparent;
+                border-spacing: 0;
+                //background-color: $light-gray;
+            }
+
+            td {
+                padding: 0.5rem 0;
+                vertical-align: top;
+                // line-height: 1em;
+            }
+            tbody tr:nth-child(even) {
+                background: none !important;
+            }
+            tbody tr:nth-child(odd) {
+                background: none !important;
+            }
+
+            // .checkit {
+            //     padding-left: 1rem;
+            //     width: 1rem;
+            // }
+
+            label {
+                font-size: 1rem;
+                line-height: 1.5em;
+                cursor: pointer;
+            }
+
+            .option-name {
+                text-align: left;
+                width: auto;
+
+                label {
+                    padding-left: 1.5em;
+                    // margin-top: -5px;
+                }
+            }
+
+            .option-price {
+                text-align: right;
+                width: 5rem;
+
+                label {
+                    font-weight: bold;
+                    padding-left: 0.5em;
+                    padding-right: 1em;
+                }
+            }
+        }
+    }
 }

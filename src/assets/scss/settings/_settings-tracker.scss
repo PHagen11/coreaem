@@ -1050,6 +1050,7 @@ $header-submenu-link-color: $black;
 $header-submenu-link-color-hover: $primary-color;
 $header-submenu-line-height: 1.3rem;
 $header-submenu-link-font-size: 0.94rem;
+$header-submenu-link-margin-left: 0.7rem;
 $header-logo-height: 56px;
 $header-logo-padding-top: 20px;
 $header-cta-left-spacing: 1rem;
@@ -1266,6 +1267,7 @@ $icon-padding: 0.25em;
 // 16. Link List Component
 // -----------------------------
 
+$link-list-text-transform: capitalize;
 $link-list-title-font-weight: bold;
 $link-list-font-family:$header-font-family;
 $link-list-font-size: 1.1rem;

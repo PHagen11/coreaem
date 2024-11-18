@@ -1,7 +1,7 @@
 .build-a-boat-header {
     max-width: 2000px;
     width: 100%;
-    z-index: 10000;
+    z-index: 1000;
     //height: 90px;
     position: fixed;
     _postion: absolute;
@@ -10,25 +10,32 @@
     // padding: 0.8rem 0 ;
     padding-top: .5rem;
     margin: 0 !important;
+    @include breakpoint(medium) {
+        padding: .3rem 1rem;
+    }
     @include breakpoint(large) {
         padding: .5rem 1.2rem;
     }
-    .cell {
+    // .cell {
         //border-left: 1px solid $dark-gray;
         //vertical-align: center;
         //margin: 0rem 1rem 0rem 1rem;
-    }
+    // }
     .button {
         margin-bottom: 0;
-        &.expanded {
+        // &.expanded {
         // background-color: $bab-header-expanded-color;
         //color: $bab-header-expanded-color;
-        }
+        // }
     }
 
     .bab-boat-name {
         font-weight: $bab-header-boat-name-weight;
         font-size: $bab-header-boat-name-size;
+        margin: 0;
+        // @include breakpoint(large) {
+        //     margin: .5rem 0;
+        // }
         a {
             text-decoration: none;
             color:$bab-model-name-header-color;
@@ -42,6 +49,7 @@
     .bab-boat-package-info {
         font-size: 0.9em;
         color: $white;
+        // margin-right: .6rem;
     }
     .bab-price {
         @include breakpoint(small){
@@ -55,10 +63,13 @@
 
     .bab-price-total {
         @include breakpoint(small) {
-            padding-bottom: .8rem;
             font-size: 1.2rem;
+            padding-bottom: .3rem;
         }
-        @include breakpoint(large){
+        // @include breakpoint(medium only){
+        //     margin: .5rem 0;
+        // }
+        @include breakpoint(medium){
             font-size: 1.4rem;
             padding-bottom: 0;
         }
@@ -77,28 +88,28 @@
     }
 
     .send-button {
-        &:before {
+        &:after {
             content: '\f1d8';
             font-family: "Font Awesome 6 Free";
         }
     }
 
     .color-button {
-        &:before {
+        &:after {
             content: '\f53f';
             font-family: "Font Awesome 6 Free";
         }
     }
 
     .options-button {
-        &:before {
+        &:after {
             content: '\f03a';
             font-family: "Font Awesome 6 Free";
         }
     }
 
     .summary-button {
-        &:before {
+        &:after {
             content: '\f46d';
             font-family: "Font Awesome 6 Free";
         }

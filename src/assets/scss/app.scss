@@ -26,7 +26,7 @@
 // @include foundation-range-input;
 @include foundation-accordion;
 @include foundation-accordion-menu;
-//@include foundation-badge;
+@include foundation-badge;
 //@include foundation-breadcrumbs;
 @include foundation-button-group;
 @include foundation-callout;
@@ -126,7 +126,9 @@
 @import 'components/build-your-own/bab-header';
 @import 'components/build-your-own/bab-navigation';
 @import 'components/build-your-own/bab-sum-column';
-@import 'components/build-your-own/bab-model-preview';
+@import 'components/build-your-own/bab-preview-col';
+@import 'components/build-your-own/bab-model-fullscreen';
+@import 'components/build-your-own/bab-custom-color';
 @import 'components/build-your-own/bab-sum-col-dis';
 @import 'components/build-your-own/bab-motor';
 @import 'components/build-your-own/bab-options';

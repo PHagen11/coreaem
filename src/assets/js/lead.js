@@ -41,7 +41,7 @@ $(document).ready(function () {
 	function submitter(parentForm) {
 
 		console.log("OnSubmit");
-		console.log(stopper)
+		console.log(stopper);
 
 		if (stopper == -1) {
 
@@ -64,7 +64,7 @@ $(document).ready(function () {
 
 			//debugger
 
-			$.ajax({ 
+			$.ajax({
 				crossDomain: true,
 				type: 'POST',
         		url: postUrl,
@@ -126,7 +126,7 @@ $(document).ready(function () {
 	//}
     for (let cookie in cookiesArr) {
         let cookieArrValue = cookiesArr[cookie];
-        let getCookieValue = getCookie(cookieArrValue)
+        let getCookieValue = getCookie(cookieArrValue);
         // console.log("looping through utm cookies");
         if (getCookieValue != "") {
             let input = document.createElement("input");
@@ -159,7 +159,7 @@ $(document).ready(function () {
 
 	//Apply the dealer id if available.
 	try {
-		var storeData //= getMyStore();
+		var storeData = getMyStore();
 		if(storeData && storeData.dealerId != "" ) {			
 			var dealerId = storeData.dealerId;	
 			console.log("Dealer ID: " + dealerId);

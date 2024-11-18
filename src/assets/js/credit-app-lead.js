@@ -491,11 +491,25 @@ jQuery(document).ready(function() {
 
 
     var qs = getQueryString();
+    let cookiesArr = ["utm_content", "utm_medium", "utm_campaign", "utm_source", "referrer"];
     //for (var key in qs) {
     //    console.log("Param: " + key.toString());
     //}
+    for (let cookie in cookiesArr) {
+        let cookieArrValue = cookiesArr[cookie];
+        let getCookieValue = getCookie(cookieArrValue);
+        // console.log("looping through utm cookies");
+        if (getCookieValue != "") {
+            let input = document.createElement("input");
+            input.setAttribute("type", "hidden");
+            input.setAttribute("name", cookieArrValue);
+            input.setAttribute("value", getCookieValue);
+            document.querySelector("#"+formId).append(input);
+        }
+    }
+
     for (var key in qs) {
-        if (key != null) {
+        if (key != null && !cookiesArr.includes(key)) {
             var field = jQuery(document.createElement("input"));
             field.attr("name", key).attr("type", "hidden");
             field.val(qs[key]);

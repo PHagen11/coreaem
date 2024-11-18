@@ -1033,14 +1033,15 @@ $header-menu-item-letter-spacing: 1px;
 $header-dropdown-arrow-color: $primary-color;
 $header-dropdown-width: 250px;
 $header-dropdown-background-color: $white;
-$header-dropdown-border-top: 1px solid rgba(0,0,0,.9);
+$header-dropdown-border-top: 1px solid #EBEDF2;
 $header-dropdown-border-left: 4px solid $white;
 $header-submenu-background-color: $secondary-color;
 $header-submenu-background-color: $light-gray;
 $header-submenu-link-color: $black;
 $header-submenu-link-font-size: 1rem;
-$header-submenu-line-height: 1.5rem;
-$header-submenu-link-color-hover: $primary-color;
+$header-submenu-link-margin-left: 0;
+$header-submenu-line-height: 1rem;
+$header-submenu-link-color-hover: inherit;
 $header-link-arrow-color: $primary-color;
 $header-link-arrow-margin-top: 7px;
 $header-logo-height: 56px;
@@ -1259,6 +1260,7 @@ $icon-padding: 0.25em;
 // 16. Link List Component
 // -----------------------------
 
+$link-list-text-transform: uppercase;
 $link-list-title-font-weight: bold;
 $link-list-font-family:$header-font-family;
 $link-list-font-size: 1.1rem;

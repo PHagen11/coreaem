@@ -1,0 +1,250 @@
+#custom-colors {
+    padding-bottom: 70px;
+    background-color: #fff;
+}
+
+#custom-color-container {
+    max-width: 100%;
+    margin: auto;
+    background-color: $light-gray;
+    // border: 3px solid $light-gray;
+
+    .custom-color-ui {
+        margin: 1rem 0 2rem;
+    
+        .cc-headline {
+            font-weight: 600;
+            color: $dark-gray;
+    
+            @include breakpoint(small) {
+                font-size: 2rem;
+            }
+            @include breakpoint(medium) {
+                font-size: 2.5rem;
+            }
+        }
+    
+        .ccDescription {
+            font-size: .9rem;
+            margin: 1.5rem 0;
+        }
+    
+        .custom-colors-bmt {
+            margin: 0 1rem;
+        }
+        
+        #tab-area-container {
+            margin-bottom: 10px;
+        }
+    
+        .part-groups {
+            position: relative;
+            margin: 8px auto;
+            text-align: center;
+    
+            .group-tab {
+                display: inline-block;
+                padding: .5rem 1.3rem;
+                // margin-right: -4px;
+                color: #8a8a8a;
+                font-size: 14px;
+                line-height: 14px;
+                border-left: solid 1px #ccc;
+    
+                &.selected {
+                    background-color: #8a8a8a;
+                    color: #fff;
+                }
+                &:first-child {
+                    border-left: none;
+                }
+                &:hover {
+                    color: #242424;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .tab-area {
+            background-color: inherit;
+            transition: background-color .1s ease-in-out;
+
+            &.is-stuck {
+                background-color: $white;
+                transition: background-color .1s ease-in-out;
+            }
+            &.is-at-bottom {
+                background-color: $white;
+            }
+        }
+    
+        .cc-accordion {
+            margin: 0 .5rem 1rem;
+            border: none;
+
+            .accordion-item {
+                border-bottom: 2px solid #F2ECE5;
+            }
+    
+            .accordion-item > a.accordion-title {
+                font-weight: 900;
+                font-size: 1rem;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: inherit;
+                background: transparent;
+                border: none;
+                @include breakpoint(small) {
+                    text-align: left;
+                    padding: 1.5rem 1.3rem 1.5rem 1rem;
+                }
+                @include breakpoint(medium) {
+                    text-align: left;
+                    padding: 1.5rem 1rem;
+                }
+            }
+        
+            .accordion-item > a.accordion-title::before {
+                content: '';
+            }
+        
+            .accordion-item > a.accordion-title::after {
+                content: "\f107";
+                font-family: 'Font Awesome 5 Pro';
+                font-weight: 700;
+                font-style: normal;
+                cursor: pointer;
+                padding: 0;
+                width: auto;
+                height: auto;
+                transition: $global-transition;
+                border: none;
+                @include breakpoint(small) {
+                    display: inline;
+                    position: absolute;
+                    right: 1em;
+                    left: auto;
+                    top: inherit;
+                    margin: 0 0 0 0.5rem;
+                }
+                @include breakpoint(medium) {
+                    display: block;
+                    position: absolute;
+                    right: 1em;
+                    left: auto;
+                    top: 40%;
+                    margin: 0;
+                }
+            }
+        
+            .accordion-item.is-active > a.accordion-title::after {
+                transform: rotate(-180deg);
+            }
+        
+            :last-child:not(.is-active) > .accordion-title {
+                border: none;
+            }
+        
+            .accordion-content {
+                padding: 1rem .5rem;
+                border-top: $border; 
+                border-right: none;
+                border-bottom: none;
+                border-left: none;
+                background-color: $white;
+            }
+        }
+    
+        .palette {
+            padding: 20px 10px;
+            background-color: #f0f0f0;
+            // background-color: #fff;
+            // border-bottom: solid 1px #dedede;
+    
+            .cc-tabs {
+                .tabs-title {
+                    a {
+                        @include breakpoint(medium) {
+                            padding: .8rem 1vw;
+                            border-bottom-width: 5px;
+                        }
+                    }
+                }
+            }
+            
+            .custom-color-palette {
+                text-align: center;
+    
+                .color-type {
+                    margin: 10px 0 5px;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+    
+                .colorButtonDiv {
+                    width: 80px;
+                    min-height: 100px;
+                    margin: 5px 3px;
+                    padding: 4px 2px;
+                    // border-radius: 50%;
+                    cursor: pointer;
+                    display: inline-block;
+                    vertical-align: top;
+                    position: relative;
+                    transition: all .3s ease;
+                    background-color: #f0f0f0;
+    
+                    &:hover {
+                        z-index: 4;
+                        transform: scale(1.05);
+                        transition: all .3s ease;
+                    }
+    
+                    &:hover > .colorLabel {
+                        max-height: 300px;
+                        transition: all .5s ease;
+                    }
+    
+                    .colorButton {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        margin: auto;
+                        position: absolute;
+                        top: auto;
+                        left: 0;
+                        right: 0;
+    
+                        &.selected {
+                            border: 4px solid #4a90e2;
+                            border-radius: 50%;
+    
+                            circle {
+                                stroke: #4a90e2;
+                                stroke-width: 4px;
+                            }
+                        }
+                    }
+    
+                    .colorLabel {
+                        width: 75px;
+                        max-height: 60px;
+                        color: $black;
+                        font-size: 15px;
+                        line-height: 1.1;
+                        background-color: #f0f0f0;
+                        transition: all .5s ease;
+                        position: absolute;
+                        top: 65px;
+                        left: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+
+        // .cc-nextStep {
+        //     margin: 0 .5rem;
+        // }
+    }
+}

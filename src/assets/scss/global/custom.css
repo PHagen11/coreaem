@@ -1,0 +1,49 @@
+
+/* Fix to price block on mobile view */
+.price-block.hide-for-large {
+    margin-bottom: 7%
+}
+
+/* Fix image height on inventory listings */
+.inventory-card .card .item-image {
+    object-fit: scale-down; }
+/*
+.inventory-card .card .item-image {
+    object-fit: scale-down;
+    height: auto !important; }
+@media print, screen and (min-width: 40em) {
+    .inventory-card .card .item-image {
+    height: auto !important; } }
+@media print, screen and (min-width: 64em) {
+    .inventory-card .card .item-image {
+    height: auto !important; } }
+@media screen and (min-width: 75em) {
+    .inventory-card .card .item-image {
+    height: auto !important; } }
+@media screen and (min-width: 90em) {
+    .inventory-card .card .item-image {
+    height: auto !important; } }
+@media screen and (min-width: 112.5em) {
+    .inventory-card .card .item-image {
+    height: auto !important; } }
+*/
+
+.price-block {
+    position: relative;
+}
+
+.availability {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+}
+
+span.badge.success {
+    font-size: .92rem;
+    font-weight: 600;
+    color: #fff;
+    padding: .3em .5em;
+    border-radius: 0 0 6px 0;
+    text-transform: uppercase;
+}

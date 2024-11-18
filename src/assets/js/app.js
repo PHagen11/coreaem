@@ -14,7 +14,7 @@
 // $(document).foundation();
 
 
-$(document).ready(function($) {
+$(function($) {
 
 	// $('.mega-menu-trigger a').click(function() {
 	//     var target = "." + $(this).data("target");
@@ -60,7 +60,7 @@ $(document).ready(function($) {
 			}
 		});
 
-		jQuery(".header .header-menu > ul > li").on("mouseout", function (e) {
+		$(".header .header-menu > ul > li").on("mouseout", function (e) {
 
 			if ($(window).width() >= 1024) {
 
@@ -72,7 +72,7 @@ $(document).ready(function($) {
 	}
 	//If width is Large or more (1024px) dropdowns are displayed on hover
 
-	$(".header .header-menu > ul > li a").not(".title").click(function() {
+	$(".header .header-menu > ul > li a").not(".title").on("click", function() {
 		if ($(window).width() < 1024) {
 			$(this).parent().children("ul").fadeToggle(150);
 			$(this).parent().toggleClass('opened');
@@ -80,7 +80,7 @@ $(document).ready(function($) {
 	});
 	//If width is less than Large dropdowns are displayed on click (thanks Aman Jain from stackoverflow)
 
-	$(".header .menu-mobile").click(function(e) {
+	$(".header .menu-mobile").on("click", function(e) {
 		$(".header .header-menu > ul").toggleClass('show-on-mobile');
 		e.preventDefault();
 	});
@@ -94,7 +94,7 @@ $(document).ready(function($) {
 
 
 	//inventory functions
-	$('.inventory .category-tab').click (function() {
+	$('.inventory .category-tab').on("click", function() {
 		var mytype=$(this).attr('data-type');
 		$('.inventory .category-tab').removeClass('selected');
 		$('.inventory .make-type-search').removeClass('selected');
@@ -105,26 +105,26 @@ $(document).ready(function($) {
 		$('.inventory .heroArea .normal-size').text($(this).attr('data-text-normal'));
 	})
 
-	$('.inventory .filter-toggle-button').click (function() {
+	$('.inventory .filter-toggle-button').on("click", function() {
 		$('.filter-panel').addClass('shown');
 		// $('.filter-results').addClass('hidden');
 	});
-	$('.inventory .filter-toggle-button').click (function() {
+	$('.inventory .filter-toggle-button').on("click", function() {
 		$('.filter-results').addClass('hidden');
 	});
-	$('.inventory .filter-form .close-button').click (function() {
+	$('.inventory .filter-form .close-button').on("click", function() {
 		$('.filter-panel').addClass('hidden').removeClass('shown');
 		$('.filter-results').removeClass('hidden');
 	});
-	$('.inventory .filter-form .submit-btn').click (function() {
+	$('.inventory .filter-form .submit-btn').on("click", function() {
 		$('.filter-panel').removeClass('shown');
 		$('.filter-results').removeClass('hidden');
 	});
-	$('.inventory .filter-form .condition-buttons label').click (function() {
+	$('.inventory .filter-form .condition-buttons label').on("click", function() {
 		$('.condition-buttons label').removeClass('selected');
 		$(this).addClass('selected');
 	});
-	$('.inventory .filter-form .model-checkbox').change (function() {
+	$('.inventory .filter-form .model-checkbox').on("change", function() {
 		$(this).siblings('.subset').children(":checkbox").prop("checked", false);
 		$(this).siblings('.subset').toggleClass('hide');
 		$(this).toggleClass('selected');
@@ -194,7 +194,7 @@ function technicalQuestion() {
 // customer service end
 
 // var formRedirectPage = "/dealers/service-inquiry/thank-you.html";
-var formId = "form4";
+let formId = "form4";
 
 function dealerWebsiteRedirect(dealerId, url) {
 	//var formRedirectPage = "/dealers/service-inquiry/thank-you.html";
@@ -272,23 +272,23 @@ $(".package-details").css("display", "none");
 
 
 
-window.onload = function() {
-  var date = new Date();
-  var currentYear = date.getFullYear();
-  var addYear = 2000;
-  // console.log("current year is: " + currentYear);
+// window.addEventListener("load", () => {
+//   var date = new Date();
+//   var currentYear = date.getFullYear();
+//   var addYear = 2000;
+//   // console.log("current year is: " + currentYear);
 
-  var minYear = document.getElementById("yearMin");
-  var maxYear = document.getElementById("yearMax");
+//   var minYear = document.getElementById("yearMin");
+//   var maxYear = document.getElementById("yearMax");
 
-  for (var i = 1; addYear <= currentYear + 1; i++) {
-    minYear[i] = new Option(addYear, addYear);
-    maxYear[i] = new Option(addYear, addYear);
-    addYear++
-  }
-}
+//   for (var i = 1; addYear <= currentYear + 1; i++) {
+//     minYear[i] = new Option(addYear, addYear);
+//     maxYear[i] = new Option(addYear, addYear);
+//     addYear++
+//   }
+// });
 
-$(document).ready(function() {
+$(function() {
 
     let qs = getQueryString();
     const qsKeys = Object.keys(qs)
@@ -378,13 +378,65 @@ $(document).ready(function() {
         }
         return result;
     }
-  
+
     $("input[type='submit']").on("click", function(e) {
-      e.preventDefault();
-      if ($("input[name='zip']")[0].value) {
-        url += "&zip=" + $("input[name='zip']")[0].value;
-      }
-      window.location.href = url;
+        e.preventDefault();
+        if ($("input[name='zip']")[0].value) {
+            url += "&zip=" + $("input[name='zip']")[0].value;
+        }
+        window.location.href = url;
     });
-  
 });
+
+/*** BELOW JS USED FOR BYO ***/
+
+// calls tiny slider. used on BYO
+$(function() {
+    var slider = tns({
+        container: '#boat-preview',
+        items: 1,
+        autoHeight: false,
+        center: true,
+        controlsContainer: "#arrow-controls",
+        navContainer: "#boat-preview-thumbnails",
+        navAsThumbnails: true,
+        swipeAngle: false,
+        speed: 400,
+        preventScrollOnTouch: 'force',
+    });
+
+    var fullscreen = tns({
+        container: '#boat-fullscreen',
+        items: 1,
+        autoHeight: false,
+        center: true,
+        controlsContainer: "#arrow-controls-fullscreen",
+        navContainer: "#boat-fullscreen-thumbnails",
+        navAsThumbnails: true,
+        swipeAngle: false,
+        speed: 400,
+        preventScrollOnTouch: 'force',
+    });
+});
+
+$(function() {
+    $(".cc-accordion .accordion-title").on('click', updateAccordion);
+    $(".options-accordion .accordion-title").on("click", updateAccordion);
+    $(".details-accordion .accordion-title").on("click", updateAccordion);
+
+    function updateAccordion() {
+        let $accordionObj = $(this).parent();
+        if ($accordionObj.hasClass('is-active')) {
+            setTimeout(() => {
+                $('html, body').animate({
+                    scrollTop: $(this).offset().top - 100
+                });
+            }, 250);
+        }
+    }
+    // window.addEventListener("beforeunload", function(e) {
+    //     e.preventDefault();
+    // });
+});
+
+/*** END BYO JS ***/

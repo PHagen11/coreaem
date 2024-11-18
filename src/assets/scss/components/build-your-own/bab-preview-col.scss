@@ -1,12 +1,7 @@
-.bab-model-preview {
-    @include breakpoint(small){
-        // border-top: 4px solid $border-gray;
-        //background: $white;
-        // position: scroll;
-        // padding: 2rem;
-        // margin-top:3rem;
-    }
-    @include breakpoint(large){
+.bab-preview-col {
+    padding-top: 1rem;
+    
+    @include breakpoint(medium){
         //background: $white;
         margin-top: 0;
         border-top: none;
@@ -15,12 +10,127 @@
         height: 100%;
     }
     .bab-boat-year-brand {
+        font-size: 1.2rem;
         @include breakpoint (small) {
             text-align: center;
-            padding-top: 2rem;
+            // padding-top: 2rem;
         }
         @include breakpoint (large) {
             text-align: left;
+        }
+    }
+    .tns-outer {
+        // cursor: zoom-in;
+        margin-top: 10px;
+        
+        @include breakpoint (small only) {
+            width: 100vw;
+            max-width: 100%;
+            // margin: auto;
+        }
+        @include breakpoint (medium) {
+            -webkit-box-shadow: 0px 0px 4px 0px rgba(201, 201, 201, 1);
+            -moz-box-shadow: 0px 0px 4px 0px rgba(201, 201, 201, 1);
+            box-shadow: 0px 0px 4px 0px rgba(201, 201, 201, 1);
+        }
+
+        .tns-carousel {
+            // width: 300px;
+            margin-left: 0;
+            display: flex;
+            align-items: center;
+    
+            .img-container { 
+                padding-left: 40px;
+                padding-right: 40px;
+
+                img {
+                    cursor: zoom-in;
+                }
+            }
+        }
+    }
+    .customize-tools {
+        margin-top: 10px;
+        
+        .thumbnails {
+            list-style-type: none;
+            text-align: center;
+            margin-bottom: 0;
+            margin-left: 0;
+
+            li {
+                cursor: pointer;
+                display: inline-block;
+                // width: 50px;
+                border: solid 3px #fff;
+
+                @include breakpoint(small) {
+                    width: 80px;
+                }
+                @include breakpoint(medium) {
+                    width: 125px;
+                }
+
+                &.tns-nav-active {
+                    border-color: #000;
+                }
+
+                img {
+                    vertical-align: middle;
+                    height: auto;
+                    max-height: 60px;
+                }
+            }
+        }
+        .controls {
+            list-style-type: none;
+            margin: 0;
+            
+            .button {
+                position: absolute;
+                color: #fff;
+                background-color: $primary-color;
+                // height: 60px;
+                // width: 40px;
+                // font-size: 50px;
+                padding: 0;
+                @include breakpoint (small) {
+                    top: 25%;
+                    height: 50px;
+                    width: 36px;
+                    font-size: 40px;
+                }
+                @include breakpoint (large) {
+                    top: 35%;
+                    height: 54px;
+                    width: 36px;
+                    font-size: 40px;
+                }
+
+                &.prev {
+                    top: 35%;
+                    left: 0;
+                    cursor: pointer;
+
+                    i {
+                        top: 11%;
+                        left: 20%;
+                        position: absolute;
+                    }
+                }
+                &.next {
+                    top: 35%;
+                    right: 0;
+                    cursor: pointer;
+
+                    i {
+                        top: 11%;
+                        right: 20%;
+                        position: absolute;
+                    }
+                }
+            }
         }
     }
     .bab-boat {
@@ -29,6 +139,16 @@
             font-weight: 900;
             text-transform: uppercase;
             line-height: 1.1;
+            margin-bottom: 0;
+
+            @include breakpoint (small) {
+                margin-left: .4rem;
+                margin-right: .4rem;
+            }
+            @include breakpoint (medium) {
+                margin-left: 0;
+                margin-right: 0;
+            }
         }
     }
     .dealer-info {
@@ -47,7 +167,7 @@
             font-family: $body-font-family;
             text-decoration: none;
             font-weight: bold;
-            padding: 0 ;
+            padding: 0;
             background: none;
             -webkit-touch-callout: none;
             -webkit-user-select: none;
@@ -59,7 +179,7 @@
                 padding-right: 0.4rem;
                 color: $primary-color;
                 @include breakpoint (small only) {
-                    display:none;
+                    display: none;
                 }
             }
             &:hover, &:focus {
@@ -190,8 +310,16 @@
         margin-top: 1.2rem;
         margin-bottom: 1.5em;
     }
+    .is-at-top {
+        transition: all .3s ease-in-out;
+    }
     .is-stuck {
         margin-top: 47px!important;
+        transition: all .3s ease-in-out;
+        @include breakpoint(small only) {
+            // border-bottom: 1px solid #000;
+            box-shadow: 0 6px 8px #d3d3d3;
+        }
         @include breakpoint (medium) {
             margin-top: 50px!important;
         }

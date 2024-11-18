@@ -1,0 +1,122 @@
+// #fullview {
+//     padding-bottom: 70px;
+// }
+
+.close-button {
+    z-index: 1000;
+}
+
+#boat-fullscreen-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    max-width: 1400px;
+    margin: auto;
+    position: relative;
+
+    .tns-outer {
+        width: 100%;
+        flex-basis: auto;
+        -webkit-box-shadow: 0px 0px 4px 0px rgba(201, 201, 201, 1);
+        -moz-box-shadow: 0px 0px 4px 0px rgba(201, 201, 201, 1);
+        box-shadow: 0px 0px 4px 0px rgba(201, 201, 201, 1);
+
+        @include breakpoint (medium only) {
+            margin-top: 20px;
+        }
+
+        .tns-carousel {
+            margin-left: 0;
+            display: flex;
+
+            .tns-item {
+                align-self: center;
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+        }
+    }
+
+    .customize-tools {
+        width: 100%;
+        flex-basis: auto;
+        margin-top: 10px;
+
+        .thumbnails {
+            list-style-type: none;
+            text-align: center;
+            margin-bottom: 0;
+            margin-left: 0;
+    
+            li {
+                cursor: pointer;
+                display: inline-block;
+                border: solid 3px #fff;
+    
+                @include breakpoint(small) {
+                    width: 80px;
+                }
+                @include breakpoint(medium) {
+                    width: 125px;
+                }
+    
+                &.tns-nav-active {
+                    border-color: #000;
+                }
+    
+                img {
+                    vertical-align: bottom;
+                    height: auto;
+                    max-height: 60px;
+                }
+            }
+        }
+    
+        .controls {
+            list-style-type: none;
+            margin: 0;
+            
+            .button {
+                position: absolute;
+                color: #fff;
+                background-color: $primary-color;
+                padding: 0;
+                @include breakpoint (small) {
+                    top: 42%;
+                    height: 50px;
+                    width: 36px;
+                    font-size: 40px;
+                }
+                @include breakpoint (large) {
+                    top: 38%;
+                    height: 60px;
+                    width: 42px;
+                    font-size: 40px;
+                }
+
+                i {
+                    position: absolute;
+                    @include breakpoint (small) {
+                        top: 8%;
+                        left: 20%;
+                    }
+                    @include breakpoint (large) {
+                        top: 17%;
+                        left: 28%;
+                    }
+                }
+    
+                &.prev {
+                    left: 0;
+                    cursor: pointer;
+                }
+                &.next {
+                    right: 0;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

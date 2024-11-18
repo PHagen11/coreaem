@@ -197,19 +197,20 @@
               font-size: $header-submenu-link-font-size;
               color: $header-submenu-link-color;
               height: auto;
-              margin-left: 0.7rem;
+              margin-left: $header-submenu-link-margin-left; // 0.7rem;
               line-height: $header-submenu-line-height;
-              padding:0.4rem 0;
+            //   padding: 0.4rem 0;
               &:hover {
                 color: $header-submenu-link-color-hover;
               }
               .fas {
-                color:$header-link-arrow-color;
-                position: absolute;
-                margin-left: -12px;
-                display: block;
-                margin-top:$header-link-arrow-margin-top;
-                vertical-align: center;
+                // color:$header-link-arrow-color;
+                // position: absolute;
+                // margin-left: -12px;
+                display: inline-block;
+                // margin-top:$header-link-arrow-margin-top;
+                margin-right: 0.5rem;
+                // vertical-align: center;
               }
             }
 

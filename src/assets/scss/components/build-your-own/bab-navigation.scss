@@ -3,15 +3,18 @@
 
 	li a {
         @include breakpoint(small only) {
+            font-size: 16px;
             border-bottom: 4px solid $border-gray;
+            padding: .8rem 1.5vw .8rem 1.5vw;
         }
         @include breakpoint(medium) {
+            font-size: 18px;
             border-bottom: 5px solid $border-gray;
+            padding: .8rem 3vw .8rem 3vw;
             &:hover {
                 border-bottom: 5px solid $primary-color;
             }
         }
-		padding: .8rem 3vw .8rem 3vw;
 		color: $medium-gray;
 		font-weight: bold;
 		//text-transform: uppercase;
@@ -110,9 +113,9 @@
 	}
 }
 .bab-step-heading {
-	font-size:1.5rem;
+	// font-size:1.5rem;
 	margin-bottom:1rem;
-	margin-top: 2rem;
+	// margin-top: 2rem;
 	//text-transform:uppercase;
 	font-weight:900;
 }

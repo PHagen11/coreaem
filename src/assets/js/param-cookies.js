@@ -1,4 +1,56 @@
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', function() {
+
+    /**
+     * Creates a cookie, defaults to the location.href and path / for cookie storage.
+     * @param {*} cname the name of the cookie being set.
+     * @param {*} cvalue The value of the cookie
+     * @param {*} exdays number of days till expire
+     * @param {*} allowedProtocol http or https
+     */
+
+    function setMktCookie(cname, cvalue, exdays, allowedProtocol) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
+        var secure = getMktProtocol();
+        if (allowedProtocol == 'https') {
+            if (secure == allowedProtocol) {
+                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;secure;httpOnly";
+            }
+        } else {
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+    }
+
+    function getMktCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    function checkMktCookie(cname) {
+        var cookie = getMktCookie(cname);
+        if (cookie != "") {
+            return cookie;
+        } else {
+            return '';
+        }
+    }
+
+    function getMktProtocol() {
+        return location.protocol.replace(":", '');
+    }
+
     function setUtmCookie() {
         // check for utm cookies and set utm parameters as cookies if needed
         if (!window.location.search.length) return;
@@ -13,9 +65,9 @@ $(document).ready(function() {
             let value = splitParam[1];
 
             if (key.startsWith("utm")) {
-                if (checkCookie(key) == "" || checkCookie(key) != value) {
+                if (checkMktCookie(key) == "" || checkMktCookie(key) != value) {
                     console.log("setting cookie");
-                    setCookie(key, value, 365, protocol);
+                    setMktCookie(key, value, 60, protocol);
                 }
             }
         }
@@ -31,10 +83,10 @@ $(document).ready(function() {
         console.log("siteDomain " + siteDomain);
 
         if (siteDomain != referrerDomain && referrerUrl != "") {
-            setCookie("referrer", referrerDomain, 365, protocol);
+            setMktCookie("referrer", referrerDomain, 60, protocol);
             console.log("referrer " + referrerDomain);
         } else if (referrerUrl == "") {
-            setCookie("referrer", referrerDomain, 365, protocol);
+            setMktCookie("referrer", referrerDomain, 60, protocol);
             console.log("directly accessed " + referrerDomain);
         }
     }
