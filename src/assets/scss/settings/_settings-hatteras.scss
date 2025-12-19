@@ -1068,6 +1068,7 @@ $header-dropdown-border-left: 4px solid $light-gray;
 $header-submenu-background-color: $primary-color;
 $header-submenu-link-color: $white ;
 $header-submenu-link-font-size: 1rem;
+$header-submenu-link-margin-left: 0.7rem;
 $header-submenu-link-color-hover: $primary-color;
 $header-submenu-line-height: 1.5rem;
 $header-link-arrow-color: $primary-color;
@@ -1289,6 +1290,7 @@ $icon-padding: 0.25em;
 // 16. Link List Component
 // -----------------------------
 
+$link-list-text-transform: capitalize;
 $link-list-title-font-weight: normal;
 $link-list-font-family:$header-font-family;
 $link-list-font-size: 1.1rem;

@@ -1368,6 +1368,9 @@
 	// who and what ... default initialized
 	var dealerId = 0, productID = 0;
 
+	// Inject additional stylesheet
+	$('head').append('<link rel="stylesheet" href="/content/dam/wrmg/BYO-GlobalAssets/css/additionalStyles.css" type="text/css" />');
+
 
 	/********************************** 
 	***********************************
@@ -1704,7 +1707,7 @@
 						localStorage.setItem('byoGrandTotal', grandTotal);
 						localStorage.setItem('byoZONECOST', ZONECOST);
 						localStorage.setItem('byoPREPCOST', PREPCOST);
-						
+						 
 						if(dealerIsSelected){
 							
 							$('#dealerSumAccordion, .dealer-info').fadeIn('fast');
@@ -1754,6 +1757,8 @@
 							}
 						});
 
+
+						/*
 						var durl = 'https://bpbcapi.whiterivermg.com/api/dealer/' + dealerId;
 
 						// let's get all data for this dealer... because local storage (myStore) does not contain hours
@@ -2021,6 +2026,42 @@
 							
 						}); // END getJSON allDealerData
 
+						*/
+
+
+						// display the name of the selected dealer
+						$('.byoDealerName').html(selectedDealer.dealerName);
+
+						// build an HTML5 dialer href value
+						var phoneStringArr = selectedDealer.phone1.match(/(\d+)/g);
+						var phoneHREF = 'tel:';
+						for(i=0; i < phoneStringArr.length;i++) { phoneHREF += phoneStringArr[i].toString() }
+
+						// display dealer information
+						$('.byoDealerPhoneLink').attr('href',phoneHREF);
+						$('.byoDealerPhoneLink').html(selectedDealer.phone1);
+						$('.address1').html(selectedDealer.address.streetAddress1);
+						$('.address2').html(selectedDealer.address.streetAddress2);
+						$('.cityStateZip').html(selectedDealer.address.city + ', '+ selectedDealer.address.state + ' ' + selectedDealer.address.postalCode);
+
+						$('.dealer-hours').hide();
+
+						$('#loader').hide();
+							
+						// build was loaded, click the summary tab
+						if(typeof buildId !== 'undefined'){
+							$('.custom-build-nav-item[data-babstep=sum]').click();
+						}
+
+
+
+
+
+
+
+						
+
+
 					} // END if( localStorage.getItem("myStore") === null )
 				}); // END docready
 			} // END window.populateDealerInfo
@@ -2281,7 +2322,9 @@
 					BOATID === 8689 ||
 					BOATID === 8690 ||
 					BOATID === 8691 ||
-					BOATID === 8692){
+					BOATID === 8692 ||
+					BOATID === 8756 ||
+					BOATID === 8757){
 					loadConfigFile = 'configureColorForm-2024.js';	
 				}
 
@@ -2388,7 +2431,7 @@
 				modDir = replaceAll(modDir,' & ',' ');
 				modDir = replaceAll(modDir,' ','-');
 				modDir = replaceAll(modDir,"'",'');
-				modDir = modDir.toLowerCase();
+				modDir = modDir.toLowerCase(); 
 				
 				var segDir = replaceAll(SEGMENTNAME,'&reg;','');
 				segDir = replaceAll(segDir,'Â®','');
@@ -2397,7 +2440,7 @@
 				segDir = replaceAll(segDir,' & ',' ');
 				segDir = replaceAll(segDir,' ','-');
 				segDir = replaceAll(segDir,"'",'');
-				segDir = replaceAll(segDir,"/",'---');
+				segDir = replaceAll(segDir,"/",'---'); 
 				segDir = segDir.toLowerCase();
 				
 				// build some paths 
@@ -2710,10 +2753,10 @@
 					}
 
 					// build HTML for the swatch for this option
-					swatchConcatenation += '<div class="'+thisClass+'" data-swatchImageURL="https://assets.whiterivermg.com'+codObj[x].swatchPath+'" data-colorID="'+codObj[x].colorID+'" data-colorOptionName="'+doh+'" data-defaultColor="'+codObj[x].defaultColor+'" data-colorPrice="'+codObj[x].colorPrice+'" data-colorProductImage="'+ cpi+'">';
+					swatchConcatenation += '<div class="'+thisClass+'" data-swatchImageURL="'+window.prodSiteURL+codObj[x].swatchPath+'" data-colorID="'+codObj[x].colorID+'" data-colorOptionName="'+doh+'" data-defaultColor="'+codObj[x].defaultColor+'" data-colorPrice="'+codObj[x].colorPrice+'" data-colorProductImage="'+ cpi+'">';
 					swatchConcatenation += '	<div class="swatch-'+swatchClass+'-highlight">';
 					swatchConcatenation += '		<div class="swatch-'+swatchClass+' custom">';
-					swatchConcatenation += '			<div class="stripe" style="background-image:url(\'https://assets.whiterivermg.com'+codObj[x].swatchPath+'\');"></div>';
+					swatchConcatenation += '			<div class="stripe" style="background-image:url(\''+window.prodSiteURL+codObj[x].swatchPath+'\');"></div>';
 					swatchConcatenation += '		</div>';
 					swatchConcatenation += '	</div>';
 					swatchConcatenation += '	<div class="swatch-name text-center">'+thisSwatchDispName+'</div>';
@@ -3066,7 +3109,7 @@
 					$('.price-total').show();
 
 					dealerId = d.dealerId;
-					console.log("/bin/boating-sites/dealerboatpricingdealerId=" + dealerId + "&boatId=" + productID + "&currency=usd")
+					console.log("/bin/boating-sites/dealerboatpricing?dealerId=" + dealerId + "&boatId=" + productID + "&currency=usd")
 					jQuery.ajax({
 						url: "/bin/boating-sites/dealerboatpricing",
 						data: "dealerId=" + dealerId + "&boatId=" + productID + "&currency=usd",
@@ -3522,7 +3565,7 @@
 					$('.custom-build-nav-item[data-babStep="sum"]').addClass('active');
 					babStep('sum');
 					$('#btn-nextStep,#btn-sumColNextStep').attr('data-nextbabstep', 'send-to-dealer');
-					$('#btn-nextStep,#btn-sumColNextStep').text('NEXT: SEND TO DEALER');
+					$('#btn-nextStep,#btn-sumColNextStep').text('Next: Send to Dealer');
 					
 				}
 				
@@ -3551,7 +3594,7 @@
 					$('.custom-build-nav-item[data-babStep="sum"]').addClass('active');
 					babStep('sum');
 					$('#btn-nextStep,#btn-sumColNextStep').attr('data-nextbabstep', 'send-to-dealer');
-					$('#btn-nextStep,#btn-sumColNextStep').text('NEXT: SEND TO DEALER');
+					$('#btn-nextStep,#btn-sumColNextStep').text('Next: Send to Dealer');
 					
 				}
 				
@@ -3578,7 +3621,7 @@
 					$('.custom-build-nav-item[data-babStep="sum"]').addClass('active');
 					babStep('sum');
 					$('#btn-nextStep,#btn-sumColNextStep').attr('data-nextbabstep', 'send-to-dealer');
-					$('#btn-nextStep,#btn-sumColNextStep').text('NEXT: SEND TO DEALER');
+					$('#btn-nextStep,#btn-sumColNextStep').text('Next: Send to Dealer');
 					
 				}
 				
@@ -3605,7 +3648,7 @@
 					$('.custom-build-nav-item[data-babStep="sum"]').addClass('active');
 					babStep('sum');
 					$('#btn-nextStep,#btn-sumColNextStep').attr('data-nextbabstep', 'send-to-dealer');
-					$('#btn-nextStep,#btn-sumColNextStep').text('NEXT: SEND TO DEALER');
+					$('#btn-nextStep,#btn-sumColNextStep').text('Next: Send to Dealer');
 					
 				}
 				
@@ -3759,7 +3802,7 @@
 						case 'sum':
 							$('.bab-step-heading').text('Summary:');
 							$('#btn-nextStep,#btn-sumColNextStep').attr('data-nextbabstep', 'send-to-dealer');
-							$('#btn-nextStep,#btn-sumColNextStep').text('NEXT: SEND TO DEALER');
+							$('#btn-nextStep,#btn-sumColNextStep').text('Next: Send to Dealer');
 							$('.send-print').show();
 							$('#btnSendToDealer').hide();
 
@@ -3834,7 +3877,7 @@
 							$('#btnSendToDealer').hide();
 							
 							$(this).attr('data-nextbabstep', 'send-to-dealer');
-							$(this).text('NEXT: SEND TO DEALER');
+							$(this).text('Next: Send to Dealer');
 							
 							$('.custom-build-nav-item[data-babStep="sum"]').addClass('active');
 							$(this).fadeIn('fast');
@@ -3921,7 +3964,7 @@
 				break;
 				
 			case 'sum':
-				displayNextStep = 'Send to Dealer';
+				displayNextStep = 'Continue';
 				thisNextStep = 'send-to-dealer'
 				break;
 				
@@ -3989,7 +4032,11 @@
 			
 		} else {
 			$('#btn-nextStep,#btn-sumColNextStep').attr('data-babStep', thisNextStep);
-			$('#btn-nextStep,#btn-sumColNextStep').text('NEXT: ' + displayNextStep + '');
+			if(displayNextStep === 'Continue'){
+				$('#btn-nextStep,#btn-sumColNextStep').text(displayNextStep);
+			} else {
+				$('#btn-nextStep,#btn-sumColNextStep').text('NEXT: ' + displayNextStep);
+			}
 		}
 		
 		return;
@@ -4144,32 +4191,45 @@
 	$(".submitButton").bind("click", function () {
 		udpateFormJSON();
 	});
-	
-	// This listens for a change to the dealer info in the header ('.store-name'), then refreshes the dealer info displayed in the BYO app ... I was not able to find a reliable way to listen if the local storage data changes so this was the next best way to listen for a newly selected dealer.
-	$('.store-name').on('DOMSubtreeModified',function(){
 
-		populateDealerInfo();
-		
-		$('#byoSelectDealerMessage').hide();
-		$('#byoContainer').fadeIn('fast');
+	// Select the container to watch for a new selected dealer
+	const dealerNode = document.getElementById('mini-nav-menu'); 
+	// Options for the observer (which mutations to observe) 
+	const config = { childList: true, subtree: true, characterData: true }; 
+	// Callback function to execute when mutations are observed in the dealer container
+	const newDealerSelected = function(mutationsList, observer) { 
+		for (let mutation of mutationsList) { 
+			console.log(mutation)
+			if (mutation.type === 'childList') { 
+				
+				populateDealerInfo();
+			
+				$('#byoSelectDealerMessage').hide();
+				$('#byoContainer').fadeIn('fast');
 
-		$('#dealerSumAccordion, .dealer-info').fadeIn('fast');
-		$('#selectDealer, .prep-freight h6 div').hide();
-		
-		$('.form').css('pointer-events', 'initial');
-		$('.form').css('opacity', '1');
-		$('.send-instructions').css('text-align', 'left');
-		$('.bab-step-heading').html('Send to Dealer');
+				$('#dealerSumAccordion, .dealer-info').fadeIn('fast');
+				$('#selectDealer, .prep-freight h6 div').hide();
+				
+				$('.form').css('pointer-events', 'initial');
+				$('.form').css('opacity', '1');
+				$('.send-instructions').css('text-align', 'left');
+				$('.bab-step-heading').html('Send to Dealer');
 
-		if(BRANDNAME === 'Tracker Off Road'){
-			$('.send-instructions').html(' Please fill out the form below to have your selected dealer contact you about your custom-built offroad vehicle.  You will also receive an email with a link to your vehicle build for future reference. ');
-		} else {
-			$('.send-instructions').html(' Please fill out the form below to have your selected dealer contact you about your boat. You will also receive an email with a link to your boat build for future reference. ');
-		}
+				if(BRANDNAME === 'Tracker Off Road'){
+					$('.send-instructions').html(' Please fill out the form below to have your selected dealer contact you about your custom-built offroad vehicle.  You will also receive an email with a link to your vehicle build for future reference. ');
+				} else {
+					$('.send-instructions').html(' Please fill out the form below to have your selected dealer contact you about your boat. You will also receive an email with a link to your boat build for future reference. ');
+				}
 
-		updateSumCol();
+				updateSumCol();
 
-	});
+			}
+		} 
+	}; 
+	// Create an instance of MutationObserver with the callback 
+	const observer = new MutationObserver(newDealerSelected); 
+	// Start observing the dealerNode for configured mutations 
+	observer.observe(dealerNode, config); 
 	
 	// top is set to 15% in clientlibs.js ... this overrides that and sets it back to 0
 	$(document).on('open.zf.reveal', '[data-reveal]', function() {
@@ -4194,5 +4254,39 @@
 	
 	// this fixes a firefox bug where the color content intrudes on the footer content
 	$('.bab-color').css("height", "unset");	
-	
+
+	/*
+	// DON'T show the
+	if(window.url.indexOf("trackeroffroad") < 0){
+
+		// DREAMBOAT and haveDealerContact CSS insertion:
+		$('head').append('<link rel="stylesheet" href="/content/dam/wrmg/BYO-GlobalAssets/css/dreamboat.css" type="text/css" />');
+		
+
+
+		// CONTACT ME checkbox insertion:
+		$('#form-preferredContact').prepend('<div align="left"><div class="haveDealerContactCheckbox"><input type="checkbox" id="haveDealerContact" name="haveDealerContact" value="1"><label for="haveDealerContact" id="haveDealerContactLabel">Please call me to help turn my dream boat into reality and keep me informed about your latest promotions.</label></div></div>');
+		// pre-check it on page load
+		$("#haveDealerContact").prop("checked", true);
+		$("#haveDealerContactLabel").change(function () {
+			if($("#haveDealerContact").is(":checked")){
+				$("#haveDealerContact").prop("checked", false);
+			} else {
+				$("#haveDealerContact").prop("checked", true);
+			}
+		});
+
+		// DREAMBOAT checkbox insertion:
+		$('#form-preferredContact').prepend('<div align="left"><div class="dreamBoatCheckbox"><input type="checkbox" id="dreamboat" name="dreamboat" value="1"><label for="dreamboat" id="dbl">Check the box to submit as your official Dream Boat Giveaway Entry.</label><div style="grid-column: 1 / span 2; margin: 0 0 30px; text-align: center;"><label style="line-height: 1.2;"><i>NO PURCH. NEC. US/DC, age 18+. <a href="https://www.basspro.com/shop/en/build-your-dream-boat-giveaway-rules" target="_blank" style="color:#e51b23">See Rules</a>. Ends 4/15/25 at 11:59 pm CT. Void where prohibited.</i></label></div></div></div>');
+		$("#dbl").change(function () {
+			if($("#dreamboat").is(":checked")){
+				$("#dreamboat").prop("checked", false);
+			} else {
+				$("#dreamboat").prop("checked", true);
+			}
+		});
+
+	}
+	*/
+
 }());

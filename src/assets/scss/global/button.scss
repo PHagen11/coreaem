@@ -20,7 +20,7 @@
   text-decoration: none;
   @include button-text ('Lato');
   transform: $button-transform;
-  color: $white;
+//   color: $white;
 }
 .button.hollow {
   border-radius: $hollow-radius;

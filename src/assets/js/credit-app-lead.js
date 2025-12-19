@@ -1,11 +1,17 @@
 // Get store specific url extension
 jQuery(document).ready(function() {
 
+    // Base URL for credit application gateway
     var appurlroot = "https://gateway.appone.net/onlineapp/";
     var appurlappend = "tmfs"; //default app
     var appurl;
     var formId = "form4";
 
+    /**
+     * Maps dealer IDs to their specific application URL extensions
+     * @param {number} dealerid - The dealer's unique identifier
+     * @returns {string} Complete application URL for the dealer
+     */
     function GetDealerAppUrl(dealerid) {
 
         switch (dealerid) {
@@ -235,8 +241,8 @@ jQuery(document).ready(function() {
                 appurlappend = "tmbcflo"; break;
             case 749: //Forest Lake, MN
                 appurlappend = "tmbcflk"; break;
-            case 539: //Houston, TX
-                appurlappend = "tmbchou"; break;
+            case 539: //Spring, TX
+                appurlappend = "tmbc--spring"; break;
             case 114: //Longview, TX
                 appurlappend = "tmbclon"; break;
             case 550: //Midland, TX
@@ -259,16 +265,14 @@ jQuery(document).ready(function() {
                 appurlappend = "cabelas"; break;
 
             default:
-                // code block
+                // catch all url if no matches
                 appurlappend = "tmfs"; break;
         }
-
         appurl = appurlroot + appurlappend;
-
         return appurl;
-
     }
 
+    // Parse URL parameters 
 	var sPageURL = window.location.search.substring(1),
 		sURLVariables = sPageURL.split('&'),
 		sParameterName,
@@ -279,64 +283,18 @@ jQuery(document).ready(function() {
 		pigDealerId = 0;
 
         console.log("sURLVariables: " + sURLVariables);
+        console.log(sURLVariables);
 
     var assigned = false;
-    if (sURLVariables.length > 0 && sURLVariables != "")
-    {
-        //Lookup model and get dealer.
-        for (i = 0; i < sURLVariables.length; i++) {
-            sParameterName = sURLVariables[i].split('='); 
-            console.log(sParameterName);
-            if (sParameterName[0] === 'docId') {
-                thisID = sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-                loadURL = '//bpbcapi.whiterivermg.com/api/inventory/' + thisID;
-            } else if (sParameterName[0] === 'id') {
-                thisID = sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-                loadURL = '//bpbcapi.whiterivermg.com/api/Inventory/GetAtv?Id=' + thisID;
-            }
-            console.log("URL: " + loadURL);
-            
-        };
 
-        jQuery.ajax({
-            dataType: "json",
-            url: loadURL
-        }).done(function( data ) {
-            pigDealerId = data.dealerInfo.bpbC_DealerId;
-            console.log("PID: " + pigDealerId);
-
-            if(pigDealerId != ''){
-                var btnURL = GetDealerAppUrl(pigDealerId);
-                console.log("btnURL: " + btnURL);
-                jQuery('#appOneButton').attr('href', btnURL);
-                assigned = true;
-                var field = $(document.createElement("input"));
-                    field.attr("name", "selectdid").attr("type", "hidden");
-                    field.val(pigDealerId);
-                    $("#"+formId).append(field);
-            }
-            else { 
-                //Not yet assigned so lookup with set store object.
-                var storeData = getMyStore();
-                if(storeData && storeData.dealerId != "" ) {
-                    var dealerId = storeData.dealerId;	
-                    var btnURL = GetDealerAppUrl(dealerId);
-                    console.log("Store Object Based: " + dealerId + " -- " + btnURL);
-                    jQuery('#appOneButton').attr('href', btnURL);
-                    var field = $(document.createElement("input"));
-                    field.attr("name", "selectdid").attr("type", "hidden");
-                    field.val(dealerId);
-                        $("#"+formId).append(field);
-                }
-            }
-        });
-    }
-    else
-    {
-        //Not yet assigned so lookup with set store object.
-	 	var storeData = getMyStore();
-	 	if(storeData && storeData.dealerId != "" ) {
-	 		var dealerId = storeData.dealerId;	
+    /**
+     * Sets up the store information and application button URL
+     * Uses stored dealer data if available, otherwise uses default
+     */
+    function setStore() {
+        var storeData = getMyStore();
+        if(storeData && storeData.dealerId != "" ) {
+            var dealerId = storeData.dealerId;	
             var btnURL = GetDealerAppUrl(dealerId);
             console.log("Store Object Based: " + dealerId + " -- " + btnURL);
             jQuery('#appOneButton').attr('href', btnURL);
@@ -350,23 +308,65 @@ jQuery(document).ready(function() {
         }
     }
 
-    // if (!assigned)
-    // {
-    //     //Not yet assigned so lookup with set store object.
-	// 	var storeData = getMyStore();
-	// 	if(storeData && storeData.dealerId != "" ) {
-	// 		var dealerId = storeData.dealerId;	
-    //         var btnURL = GetDealerAppUrl(dealerId);
-    //         console.log("Store Object Based: " + dealerId + " -- " + btnURL);
-    //         jQuery('#appOneButton').attr('href', btnURL);
-    //         var field = $(document.createElement("input"));
-    //         field.attr("name", "selectdid").attr("type", "hidden");
-    //         field.val(dealerId);
-    //             $("#"+formId).append(field);
-    //     }
-    // }
+    // Check if URL parameters exist to determine dealer
+    if (sURLVariables.length > 0 && sURLVariables != "")
+    {
+        // Parse URL parameters looking for docId or id
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('='); 
+            console.log(sParameterName);
+            if (sParameterName[0] === 'docId') {
+                thisID = sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+                loadURL = '//bpbcapi.whiterivermg.com/api/inventory/' + thisID;
+            } else if (sParameterName[0] === 'id') {
+                thisID = sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+                loadURL = '//bpbcapi.whiterivermg.com/api/Inventory/GetAtv?Id=' + thisID;
+            } 
+            console.log("URL: " + loadURL);
+            
+        };
 
-  try
+        // If no loadURL found, use stored dealer info
+        if (loadURL === '') {
+            setStore();
+        } else {
+            // Fetch dealer info from API using inventory ID
+            jQuery.ajax({
+                dataType: "json",
+                url: loadURL
+            }).done(function( data ) {
+                console.log(data.dealerInfo)
+                pigDealerId = data.dealerInfo.bpbC_DealerId;
+                console.log("PID: " + pigDealerId);
+    
+                if(pigDealerId != ''){
+                    var btnURL = GetDealerAppUrl(pigDealerId);
+                    console.log("btnURL: " + btnURL);
+                    jQuery('#appOneButton').attr('href', btnURL);
+                    assigned = true;
+                    var field = $(document.createElement("input"));
+                        field.attr("name", "selectdid").attr("type", "hidden");
+                        field.val(pigDealerId);
+                        $("#"+formId).append(field);
+                }
+                else { 
+                    setStore();
+                }
+            });
+        }
+    }
+    else
+    {
+        // No URL parameters - use stored dealer info
+        setStore();
+        assigned = true;
+    }
+
+    /**
+     * Attempt to get dealer ID from stored data and add to form
+     * Creates hidden input field with dealer ID if available
+     */
+    try
 	{
 		var storeData = getMyStore();
 		if(storeData && storeData.dealerId != "" ) {
@@ -375,11 +375,12 @@ jQuery(document).ready(function() {
                 var field = $(document.createElement("input"));
                     field.attr("name", "dealerId").attr("type", "hidden");
                     field.val(dealerId);
-                    $("#"+formId).append(field);
+                    $("#"+formId).append(field);            
 		}
 	}
-	catch(err)
+	catch(error)
 	{
+        console.error("Unable to fetch storeData:", error);
 	}
 
 
@@ -460,7 +461,7 @@ jQuery(document).ready(function() {
                     //alert("Success: " + response.d);
                     //handleForm(theForm);
                     // Calls wrmgmkto to send form values. Wait for response then perform redirect.
-                    handleForm(theForm, function () {
+                    // handleForm(theForm, function () {
                         // capturing analytic data before redirecting - digitalDataCaptureForm is found in /content/dam/wrmg/global/js/wrmgDigitalData.js
                         try {
                           var ddo = digitalDataCaptureForm(theForm);
@@ -472,7 +473,7 @@ jQuery(document).ready(function() {
                           window.open(appurl, '_blank');
                           window.location.href = formRedirectPage;
                         }
-                    });
+                    // });
                 } else if (response.d === "0") {
                     console.log("Not working!");
                     console.log(JSON.stringify(response, undefined, 2));
@@ -527,5 +528,65 @@ jQuery(document).ready(function() {
             result[tokens[0]] = decodeURIComponent(tokens[1]);
         }
         return result;
+    }
+
+    //get dealer data from local storage if set
+    function getMyStore() {
+        var myStore;
+        if (typeof(Storage) !== "undefined" && localStorage.myStore) {
+            myStore = JSON.parse(localStorage.getItem('myStore'));
+
+            //if the timestamp is over 30 days, pull fresh
+            var currentTime = Date.now();
+            var expiryTimeMillis = 24 * 60 * 60 * 1000
+            if (currentTime - myStore.timestamp >= expiryTimeMillis) {
+                setAsMyStore(myStore.dealerId);
+                myStore = JSON.parse(localStorage.getItem('myStore'));
+            }
+        }
+        return myStore;
+    }
+
+    //function to set the dealer id for a store into local storage
+    function setAsMyStore(dealerId) {
+        var newSearch = "";
+        if(jQuery("#jsVars").attr("data-newSearch") == "true")
+            newSearch = "&newSearch="+jQuery("#jsVars").attr("data-newSearch");
+        if (typeof(Storage) !== "undefined" && dealerId) {
+            var dealerInfoUrl = "/bin/boating-sites/dealer-info?dealerId=" + dealerId + newSearch;
+
+            if (getCookie("userGeoLatitude") && getCookie("userGeoLatitude") != "" && getCookie("userGeoLongitude") && getCookie("userGeoLongitude") != "") {
+                dealerInfoUrl += "&lat=" + getCookie("userGeoLatitude") + "&long=" + getCookie("userGeoLongitude");
+            } else if (getCookie("initlatlng") != null && getCookie("initlatlng") !== "") {
+                var cordlist = getCookie("initlatlng");
+                var cordlist = getCookie("initlatlng").split('|');
+                var akamaiLat = cordlist[0];
+                var akamaiLong = cordlist[1];
+                dealerInfoUrl += "&lat=" + akamaiLat + "&long=" + akamaiLong;
+            } else if (long && lat) {
+                dealerInfoUrl += "&lat=" + lat + "&long=" + long;
+            }
+            $.ajax({
+                url: dealerInfoUrl,
+                data: {
+                    format: "json"
+                },
+                type: "GET",
+                error: function() {
+                    console.log("error");
+                },
+                success: function(result) {
+                    var resultObj = result.result;
+                    if (typeof(resultObj) !== 'undefined' && typeof(resultObj.dealerId) !== 'undefined' && typeof(resultObj.dealerName) !== 'undefined' &&
+                            typeof(resultObj.websiteUrl) !== 'undefined') {
+
+                        resultObj.timestamp = Date.now();
+                        setCookie("dealer", resultObj.dealerId, 365);
+                        localStorage.setItem('myStore', JSON.stringify(resultObj));
+                        showStoreOptions(resultObj);
+                    }
+                }
+            });
+        }
     }
 });

@@ -1,0 +1,182 @@
+<div class="form">
+    <form id="form4" data-abide novalidate>
+        <div data-abide-error class="alert callout" style="display: none;">
+            <p>
+                <i class="fas fa-exclamation-triangle fa-xs">
+                </i> There are some errors in your form.
+            </p>
+        </div>
+        <div class="grid-x">
+            <div class="small-12 medium-6 cell">
+                <label>First Name * 
+                    <input name="firstName" type="text" id="firstNameInput" required />
+                    <span class="form-error" data-form-error-for="firstNameInput">First Name is required.</span>
+                </label>
+            </div>
+            <div class="small-12 medium-6 cell">
+                <label>Last Name * 
+                    <input name="lastName" type="text" id="lastNameInput" required />
+                    <span class="form-error" data-form-error-for="lastNameInput">Last Name is required.</span>
+                </label>
+            </div>
+            <div class="small-12 medium-6 cell">
+                <label>Phone * 
+                    <input name="phone" type="text" id="phoneInput" required />
+                    <span class="form-error" data-form-error-for="phoneInput">Phone is required.</span>
+                </label>
+            </div>
+            <div class="small-12 medium-6 cell">
+                <label>Zip/Postal Code * 
+                    <input name="postalCode" type="text" id="postalCodeInput" required />
+                    <span class="form-error" data-form-error-for="postalCodeInput">Zip/Postal Code is required.</span>
+                </label>
+            </div>
+            <div class="small-12 cell">
+                <label>Email * 
+                    <input name="email" type="text" id="emailInput" pattern="email" required />
+                    <span class="form-error" data-form-error-for="emailInput">Email address is required in standard email format.</span>
+                </label>
+            </div>
+        </div>
+        <h5 class="tiny-top">Boat</h5>
+        <div class="grid-x">
+            <div class="small-12 cell">
+                <label>Your Boat Make * 
+                    <input name="boatMake" type="text" id="boatMakeInput" required />
+                    <span class="form-error" data-form-error-for="boatMakeInput">Your boat make is required.</span>
+                </label>
+            </div>
+            <div class="small-12 medium-6 cell">
+                <label>Your Boat Model * 
+                    <input name="boatModel" type="text" id="boatModelInput" required />
+                    <span class="form-error" data-form-error-for="boatModelInput">Your boat model is required.</span>
+                </label>
+            </div>
+            <div class="small-12 medium-6 cell">
+                <label>Your Boat Year * 
+                    <input name="boatYear" type="text" id="boatYearInput" required />
+                    <span class="form-error" data-form-error-for="boatYearInput">Your boat year is required.</span>
+                </label>
+            </div>
+        </div>
+        <h5 class="tiny-top">Motor</h5>
+        <div class="grid-x">
+            <div class="small-12 medium-6 cell">
+                <label>Year * 
+                    <input name="motorYear" type="text" id="motorYearInput" required />
+                    <span class="form-error" data-form-error-for="motorYearInput">Your motor year is required.</span>
+                </label>
+            </div>
+            <div class="small-12 medium-6 cell">
+                <label>Make * 
+                    <input name="motorMake" type="text" id="motorMakeInput" required />
+                    <span class="form-error" data-form-error-for="motorMakeInput">Your motor make is required.</span>
+                </label>
+            </div>
+            <div class="small-12 medium-6 cell">
+                <label>Horsepower * 
+                    <input name="moterHp" type="text" id="motorHpInput" required />
+                    <span class="form-error" data-form-error-for="motorHpInput">Horsepower is required.</span>
+                </label>
+            </div>
+            <div class="small-12 medium-6 cell">
+                <label>Number of Hours * 
+                    <input name="motorHours" type="text" id="motorHoursInput" required />
+                    <span class="form-error" data-form-error-for="motorHoursInput">Number of hours is required.</span>
+                </label>
+            </div>
+        </div>
+        <h5 class="tiny-top tiny-bottom">Options *</h5>
+        <p>Select One:</p>
+        <div class="grid-x">
+            <div class="small-12 cell">
+                <fieldset id="equipmentInput">
+                    <label>Value With Standard Equipment
+                        <input type="radio" name="equipment" class="boatOptionsRadio" id="standardEquipmentInput" value="Standard Equipment" required />
+                    </label>
+                    <label>Value With Options
+                        <input type="radio" name="equipment" class="boatOptionsRadio" id="customEquipmentInput" value="Options Equipment" required />
+                    </label>
+                </fieldset>
+            </div>
+            <div class="small-12 cell" id="optionDetails" style="display:none;">
+                <label>Enter Your Options Details
+                    <textarea name="optionText" id="optionsTextInput" rows="3" required></textarea>
+                    <span class="form-error" data-form-error-for="optionsTextInput">Option details are required.</span>
+                </label>
+            </div>
+        </div>
+        <h5 class="tiny-top tiny-bottom">Trailer</h5>
+        <div class="grid-x">
+            <div class="small-12 medium-6 cell">
+                <label>Year * 
+                    <input name="trailerYear" type="text" id="trailerYearInput" required />
+                    <span class="form-error" data-form-error-for="trailerYearInput">Trailer year is required.</span>
+                </label>
+            </div>
+            <div class="small-12 medium-6 cell">
+                <label>Axles * 
+                    <input name="trailerAxles" type="text" id="trailerAxlesInput" required />
+                    <span class="form-error" data-form-error-for="trailerAxlesInput">Axles is required.</span>
+                </label>
+            </div>
+            <div class="small-12 medium-6 cell">
+                <label>Length * 
+                    <input name="trailerLength" type="text" id="trailerLengthInput" required />
+                    <span class="form-error" data-form-error-for="trailerLengthInput">Length is required.</span>
+                </label>
+            </div>
+        </div>
+        <h5 class="tiny-top tiny-bottom">Condition</h5>
+        <p>1 = Rough - 5 = Clean</p>
+        <div class="grid-x">
+            <div class="small-12 medium-6 cell">
+                <label>
+                    <select id="conditionSelect" name="condition" required>
+                        <option value="" selected>Select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <span class="form-error" data-form-error-for="conditionSelect">Condition is required.</span>
+                </label>
+            </div>
+        </div>
+        <h5 class="tiny-top tiny-bottom">Type *</h5>
+        <p>Select One:</p>
+        <div class="grid-x">
+            <div class="small-12 cell">
+                <fieldset id="boatTypeInput">
+                    <label>Fresh
+                        <input type="radio" name="boatType" id="freshTypeInput" value="Fresh" required />
+                    </label>
+                    <label>Salt
+                        <input type="radio" name="boatType" id="saltSaltInput" value="Salt" required />
+                    </label>
+                </fieldset>
+            </div>
+        </div>
+        <div id="recaptcha_4" class="g-recaptcha" data-sitekey="6Ldrjo4UAAAAABY3ZWa0FAG529uHVwvxaNhQugCI" data-callback="onSubmit" data-size="invisible"></div>
+        <!-- hidden fields -->
+        <input name="leadTypeId" type="hidden" value="2" />
+        <input name="reasonForContactID" type="hidden" value="37"/>
+        <input name="formType" type="hidden" value="BoatTradeIn" />
+        <input name="brand" type="hidden" value="BassProBoatingCenters" />
+        <input name="source" type="hidden" value="Bass Pro Boating Centers Website" />
+        <input name="url" type="hidden" value="/trade-in-boat.html" />
+        <input name="captchaName" type="hidden" value="invisiblev2" />
+        <!-- end hidden fields -->
+        <div class="grid-x">
+            <div class="small-12 cell hide-for-medium">
+                <button class="button expanded formSubmit submitButton" type="submit" value="Submit">Submit</button>
+            </div>
+            <div class="small-12 cell show-for-medium">
+                <button class="button formSubmit submitButton" type="submit" value="Submit">Submit</button>
+            </div>
+            <div id="loader">
+            </div>
+        </div>
+    </form>
+</div>

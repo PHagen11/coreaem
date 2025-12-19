@@ -1,53 +1,8 @@
-// import $ from 'jquery';
-// import jQuery from 'jquery';
-// import whatInput from 'what-input';
-
-// const { isEmptyObject } = require("jquery");
-
-// window.$ = $;
-// window.jQuery = jQuery;
-
-// import Foundation from 'foundation-sites';
-// If you want to pick and choose which modules to include, comment out the above and uncomment
-// the line below
-
-// $(document).foundation();
-
-
 $(function($) {
-
-	// $('.mega-menu-trigger a').click(function() {
-	//     var target = "." + $(this).data("target");
-	//     $('.mega-menu-panel').not(target).removeClass('mega-menu-panel-open');
-	//     $('.mega-menu-trigger a').not(this).removeClass('mega-menu-triggered');
-	//     $(this).toggleClass('mega-menu-triggered');
-	//     $(target).toggleClass('mega-menu-panel-open');
-	// });
-
-
 	$('.header .header-menu > ul > li:has( > ul)').addClass('menu-dropdown-icon');
-	//Checks if li has sub (ul) and adds class for toggle icon - just an UI
-
-	// $('.menu > ul > li > ul:not(:has(ul))').addClass('normal-sub');
-	//Checks if drodown menu's li elements have anothere level (ul), if not the dropdown is shown as regular dropdown, not a mega menu (thanks Luka Kladaric)
 
 	$(".header .header-menu > ul").before("<a href=\"#\" class=\"menu-mobile\"></a>");
 
-	//Adds menu-mobile class (for mobile toggle menu) before the normal menu
-	//Mobile menu is hidden if width is more then 959px, but normal menu is displayed
-	//Normal menu is hidden if width is below 959px, and jquery adds mobile menu
-	//Done this way so it can be used with wordpress without any trouble
-
-	/* fix for double tap on iPad Landscape issue
-	Old:
-	$(".header .header-menu > ul > li").hover(function(e) {
-		if ($(window).width() >= 1024) {
-			$(this).children("ul").stop(true, false).fadeToggle(150);
-			e.preventDefault();
-		}
-	});
-	New below here:
-	*/
 	if (navigator.userAgent.match(/iPad/i) == null) {
 		console.log("not ipad");
 
@@ -87,10 +42,10 @@ $(function($) {
 	//when clicked on mobile-menu, normal menu is shown as a list, classic rwd menu story (thanks mwl from stackoverflow)
 
 
-	$(window).resize(function() {
-		$(".header .header-menu > ul > li").children("ul").fadeOut(150);
-		$(".header .menu-dropdown-icon").removeClass('opened');
-	});
+	// $(window).resize(function() {
+	// 	$(".header .header-menu > ul > li").children("ul").fadeOut(150);
+	// 	$(".header .menu-dropdown-icon").removeClass('opened');
+	// });
 
 
 	//inventory functions
@@ -131,29 +86,6 @@ $(function($) {
 	});
 
 });
-
-	// var s = $(".submit-btn");
-	// var pos = s.position();
-	// $(window).scroll(function() {
-	// 	var windowpos = $(window).scrollTop();
-	// 	if (windowpos >= pos.top & windowpos <="end") {
-	// 		s.addClass("stick");
-	// 	} else {
-	// 		s.removeClass("stick");
-	// 	}
-	// });
-
-// var s = $(".submit-btn");
-//  var pos = s.position();
-//  $(window).scroll(function() {
-// 		 var windowpos = $(window).scrollTop();
-//
-// 		 if (windowpos <= pos.top) {
-// 				 s.addClass("stick");
-// 		 } else {
-// 				 s.removeClass("stick");
-// 		 }
-//  });
 
 // customer service start
 $(window).on('load', function() {
@@ -270,124 +202,6 @@ $(".menu-option").on("click", function() {
 
 $(".package-details").css("display", "none");
 
-
-
-// window.addEventListener("load", () => {
-//   var date = new Date();
-//   var currentYear = date.getFullYear();
-//   var addYear = 2000;
-//   // console.log("current year is: " + currentYear);
-
-//   var minYear = document.getElementById("yearMin");
-//   var maxYear = document.getElementById("yearMax");
-
-//   for (var i = 1; addYear <= currentYear + 1; i++) {
-//     minYear[i] = new Option(addYear, addYear);
-//     maxYear[i] = new Option(addYear, addYear);
-//     addYear++
-//   }
-// });
-
-$(function() {
-
-    let qs = getQueryString();
-    const qsKeys = Object.keys(qs)
-    const qsValues = Object.values(qs)
-    let url = "";
-
-    if (qsValues.includes("make-tracker+off+road") || qsValues.includes("tracker+off+road")) {
-        url = "/atvs-for-sale";
-    } else {
-        url = "/boats-for-sale";
-    }
-
-    let keyIndex = 0;
-    if (qsKeys.includes("make")) {
-        for (let i = 0; i < qsKeys.length; i ++) {
-            if (qsKeys[i] == "make" && !qsValues[i].includes("make-")) {
-                url += "/make-";
-            } else if (qsKeys[i] == "make" && qsValues[i].includes("make-")) {
-                url += "/";
-            }
-        }
-        keyIndex = qsKeys.indexOf("make");
-        if (qsValues[keyIndex].includes("|")) {
-            let values = qsValues[keyIndex].split("|");
-            for (let i = 0; i < values.length - 1; i++) {
-                url += values[i] + "%7C";
-            }
-            url += values.slice(-1);
-        } else {
-            url += qsValues[keyIndex];
-        }
-        let index = qsKeys.indexOf("make")
-        qsKeys.splice(index, 1)
-        qsValues.splice(index, 1)
-    }
-    if (qsKeys.includes("boatClass")) {
-        keyIndex = qsKeys.indexOf("boatClass")
-        url += "/boatClass-" + qsValues[keyIndex]
-        let index = qsKeys.indexOf("boatClass")
-        qsKeys.splice(index, 1)
-        qsValues.splice(index, 1)
-    }
-    if (qsKeys.includes("condition")) {
-        keyIndex = qsKeys.indexOf("condition")
-        url += "/condition-" + qsValues[keyIndex]
-        let index = qsKeys.indexOf("condition")
-        qsKeys.splice(index, 1)
-        qsValues.splice(index, 1)
-    }
-    
-    url += "?"
-
-    for (let key in qsKeys) {
-        if (key > 0 && qsKeys[key] != "make" && qsKeys[key] != "boatClass" && qsKeys[key] != "condition") {
-            url += "&"
-        }
-        if (qsKeys[key] == "year") {
-            url += "yearMin=" + qsValues[key];
-            url += "&yearMax=" + qsValues[key];
-        } else if (qsKeys[key] == "length") {
-            url += "lengthMin=" + qsValues[key];
-            url += "&lengthMax=" + qsValues[key];
-        } else if (qsKeys[key] == "price") {
-            url += "priceMin=" + qsValues[key];
-            url += "&priceMax=" + qsValues[key];
-        } else if (qsKeys[key] == "model") {
-            url += "model=" + encodeURI(qsValues[key]);
-        } else if (qsKeys[key] == "engineSize") {
-            url += "engineSizeMax=" + qsValues[key];
-            url += "&engineSizeMin=" + qsValues[key];
-        } else if (key && qsKeys[key] != "make" && qsKeys[key] != "boatClass" && qsKeys[key] != "condition") {
-            // console.log(qsValues[key]);
-            url += qsKeys[key] + "=" + qsValues[key];
-        }
-    }
-  
-    function getQueryString() {
-        var result = {};
-        if (!window.location.search.length) {
-            return result = {"":""}
-        }
-        var qs = window.location.search.slice(1);
-        var parts = qs.split("&");
-        for (var i = 0, len = parts.length; i < len; i++) {
-            var tokens = parts[i].split("=");
-            result[tokens[0]] = decodeURIComponent(tokens[1]);
-        }
-        return result;
-    }
-
-    $("input[type='submit']").on("click", function(e) {
-        e.preventDefault();
-        if ($("input[name='zip']")[0].value) {
-            url += "&zip=" + $("input[name='zip']")[0].value;
-        }
-        window.location.href = url;
-    });
-});
-
 /*** BELOW JS USED FOR BYO ***/
 
 // calls tiny slider. used on BYO
@@ -440,3 +254,23 @@ $(function() {
 });
 
 /*** END BYO JS ***/
+
+
+/**** LOGIC FOR TRADE IN FORM ****/
+document.addEventListener("DOMContentLoaded", function() {
+    const equipmentInput = document.querySelectorAll(".boatOptionsRadio");
+    const optionDetails = document.getElementById("optionDetails");
+    const optionsInput = document.getElementById("optionsTextInput");
+
+    equipmentInput.forEach(option => {
+        option.addEventListener("click", function() {
+            if (option.id === "customEquipmentInput") {
+                optionDetails.style.display = "block";
+                optionsInput.required = true;
+            } else {
+                optionDetails.style.display = "none";
+                optionsInput.required = false;
+            }
+        })
+    })
+});

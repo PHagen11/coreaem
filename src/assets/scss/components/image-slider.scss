@@ -1,0 +1,104 @@
+.image-slider-resize {
+    overflow: hidden;
+
+    .image-slider-container {
+        width: 100%;
+        max-width: 1200px;
+        aspect-ratio: 1200 / 460; /* Or match your image aspect ratio */
+        position: relative;
+        margin: 0 auto;
+        overflow: hidden;
+
+        @media(max-width: 600px) {
+            aspect-ratio: 460 / 1200; /* Or match your image aspect ratio */
+            max-width: 450px;
+        }
+
+        .image-after,
+        .image-before {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: drop-shadow(0px 20px 12px rgba(0, 0, 0, 0.8));
+
+            img {
+                max-width: 100%;
+                vertical-align: middle;
+            }
+        }
+
+        .image-before {
+            position:absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .slider-container {
+            background-color: $before-after-slider-divider-color;
+
+            .slider-handle {
+                background-color: $before-after-slider-divider-color;
+                // border: 2px solid #555;
+                border: 2px solid $before-after-slider-divider-icon-color;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                cursor: ew-resize;
+                transform: translate(-50%, -50%);
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                position: absolute;
+                top: 50%;
+
+                touch-action: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+
+                &::before {
+                    font-family: "Font Awesome 5 Pro";
+                    font-weight: 500;
+                    content: '\f053';
+                    position: absolute;
+                    top: 0;
+                    left: 3px;
+                    font-size: 24px;
+                    color: $before-after-slider-divider-icon-color;
+
+                    @media(max-width: 600px) {
+                        content: '\f077';
+                        top: -7px;
+                        left: 8px;
+                    }
+                }
+
+                &::after {
+                    font-family: "Font Awesome 5 Pro";
+                    font-weight: 500;
+                    content: '\f054';
+                    position: absolute;
+                    top: 0;
+                    right: 3px;
+                    font-size: 24px;
+                    color: $before-after-slider-divider-icon-color;
+
+                    @media(max-width: 600px) {
+                        content: '\f078';
+                        top: 7px;
+                        right: auto;
+                        left: 8px;
+                    }
+                }
+
+                @media(max-width: 600px) {
+                    left: 50%;
+                }
+            }
+        }
+    }
+}

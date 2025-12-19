@@ -1,4 +1,3 @@
-
 /* Fix to price block on mobile view */
 .price-block.hide-for-large {
     margin-bottom: 7%
@@ -27,3 +26,40 @@
     .inventory-card .card .item-image {
     height: auto !important; } }
 */
+
+.price-block {
+    position: relative;
+}
+
+.availability {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+}
+
+span.badge.success {
+    font-size: .92rem;
+    font-weight: 600;
+    color: #fff;
+    padding: .3em .5em;
+    border-radius: 0 0 6px 0;
+    text-transform: uppercase;
+}
+
+.clearance {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+}
+
+.promo-badge {
+    font-size: .92rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #e32000;
+    z-index: 0 !important;
+    border-radius: 0 0 0 6px;
+}

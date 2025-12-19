@@ -78,7 +78,7 @@ $(document).ready(function () {
 					if (response.d === "1") {
 						
 						// Calls wrmgmkto to send form values. Wait for response then perform redirect.
-						handleForm(theForm, function () {
+						// handleForm(theForm, function () {
 
 							// capturing analytic data before redirecting - digitalDataCaptureForm is found in /content/dam/wrmg/global/js/wrmgDigitalData.js
 							try {
@@ -90,7 +90,7 @@ $(document).ready(function () {
 								window.location.href = formRedirectPage;
 							}
 
-						});
+						// });
 
 					} else if (response.d === "0") {
 

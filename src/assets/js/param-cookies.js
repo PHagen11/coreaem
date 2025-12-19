@@ -98,4 +98,43 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("error setting utm fields: ");
         console.error(error);
     }
+
+    function getCookieName(name) {
+        const value = `; ${document.cookie}`;
+        let matchingCookies = [];
+        for (let cookie of name) {
+            const cookieParts = value.split(`; ${cookie}=`);
+            if (cookieParts.length === 2) { 
+                matchingCookies.push(cookieParts.pop().split(';').shift())
+                // return parts.pop().split(';').shift();
+            }
+        }
+        return matchingCookies;
+        // const parts = value.split(`; ${name}=`);
+        // if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    function getCookieSize(name) {
+        const cookieValue = getCookieName(name);
+        let cookieSize = [];
+        for (value of cookieValue) {
+            if (value) {
+                // Assuming UTF-8 encoding
+                cookieSize.push(new Blob([value]).size)
+                // return new Blob([cookieValue]).size; 
+            } else {
+                cookieSize.push(0);
+                // return 0;
+            }
+        }
+        return cookieSize
+    }
+    function deleteIfOversize(name, maxSize) {
+        const cookieSizeArr = getCookieSize(name);
+        for (let cookieSize in cookieSizeArr) {
+            if (cookieSizeArr[cookieSize] > maxSize) {
+                document.cookie = `${name[cookieSize]}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+            }
+        }
+    }
+    deleteIfOversize(['referrersWrmg', 'urlParamsWrmg'], 2024); // Delete if over 2KB
 });

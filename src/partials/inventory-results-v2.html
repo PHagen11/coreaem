@@ -48,679 +48,420 @@
 	<button class="filter-toggle-button hide-for-large" data-toggle="filter-panel-reveal"><i class="fas fa-sliders-v"></i> FILTER</button>
 	<!-- <div class="full reveal" id="filter-panel-reveal" data-reveal data-full-screen="true" > -->
 	<div class="searchResults">
-		<div class="grid-y large-grid-frame">
-      <div class="searchFilters cell auto large-cell-block-container">
-        <div class="cell large-12 large-cell-block-y filter-panel">
-          <form class="filter-form data-smooth-scroll">
-            <div class="filter-heading">
-              <span class="title">Filter By:</span>
-              <button class="close-button hide-for-large" aria-label="Close menu" type="button">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <section class="stores">
-              <div class="title">Stores near <a href="">65721</a>:</div>
-              <input type="checkbox" id="springfield-mo"><label for="springfield-mo">Springfield, MO <span class="count">(Your Store)</span></label><br />
-              <input type="checkbox" id="branson-mo"><label for="branson-mo">Branson, MO</label><br />
-              <input type="checkbox" id="broken-arrow-ok"><label for="broken-arrow-ok">Broken Arrow, OK</label><br />
-            </section>
-            <ul class="accordion" data-accordion data-allow-all-closed="true" data-multi-expand="true">
-              <li class="accordion-item is-active" data-accordion-item>
-                <a href="#" class="accordion-title">MAKE:</a>
-                <div class="accordion-content" data-tab-content>
-                  <div>
-                    <input class="model-checkbox" type="checkbox" id="tracker"><label class="model-show" for="tracker">Tracker <span class="count">(24)</span></label>
-                    <div class="subset hide">
-                      <input type="checkbox" id="super-guide-v-16-sc"><label for="super-guide-v-16-sc">Super Guide V-16 SC <span class="count">(2)</span></label><br />
-                      <input type="checkbox" id="topper-1236-riveted-jon"><label for="topper-1236-riveted-jon">Topper 1236 Riveted Jon <span class="count">(1)</span></label><br />
-                      <input type="checkbox" id="pro-guide-v-175-combo"><label for="pro-guide-v-175-combo">Pro Guide V-175 Combo Pro Guide V-175 Combo <span class="count">(2)</span></label><br />
-                      <input type="checkbox" id="pro-team-190-tx"><label for="pro-team-190-tx">Pro Team 190 TX <span class="count">(2)</span></label><br />
-                      <input type="checkbox" id="pro-guide-v-16-sv"><label for="pro-guide-v-16-sv">Pro Guide V-16 SC <span class="count">(1)</span></label><br />
-                      <a class="showmore" href="">Show More</a><br />
+        <div class="grid-y large-grid-frame">
+            <div class="searchFilters cell auto large-cell-block-container">
+                <div class="cell large-12 large-cell-block-y filter-panel">
+                <form class="filter-form data-smooth-scroll">
+                    <div class="filter-heading">
+                    <span class="title">Filter By:</span>
+                    <button class="close-button hide-for-large" aria-label="Close menu" type="button">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                     </div>
-                  </div>
-                  <div>
-                    <input class="model-checkbox" type="checkbox" id="nitro"><label class="model-show" for="nitro">Nitro <span class="count">(34)</span></label>
-                    <div class="subset hide">
-                      <input type="checkbox" id="model-A1"><label for="model-A1">Model A1 <span class="count">(2)</span></label><br />
-                      <input type="checkbox" id="model-A2"><label for="model-A2">Model A2 <span class="count">(1)</span></label><br />
-                      <input type="checkbox" id="model-A3"><label for="model-A3">Model A3 <span class="count">(5)</span></label><br />
-                      <a class="showmore" href="">Show More</a><br />
-                    </div>
-                  </div>
-                  <div>
-                    <input class="model-checkbox" type="checkbox" id="ranger"><label class="model-show" for="ranger">Ranger <span class="count">(12)</span></label>
-                    <div class="subset hide">
-                      <input type="checkbox" id="model-B1"><label for="model-B1">Model B1 <span class="count">(2)</span></label><br />
-                      <input type="checkbox" id="model-B2"><label for="model-B2">Model B2 <span class="count">(1)</span></label><br />
-                      <input type="checkbox" id="model-B3"><label for="model-B3">Model B3 <span class="count">(5)</span></label><br />
-                      <a class="showmore" href="">Show More</a><br />
-                    </div>
-                  </div>
-                  <div>
-                    <input class="model-checkbox" type="checkbox" id="sun-tracker"><label class="model-show" for="sun-tracker">Sun Tracker <span class="count">(8)</span></label>
-                    <div class="subset hide">
-                      <input type="checkbox" id="model-C1"><label for="model-C1">Model C1 <span class="count">(2)</span></label><br />
-                      <input type="checkbox" id="model-C2"><label for="model-C2">Model C2 <span class="count">(1)</span></label><br />
-                      <input type="checkbox" id="model-C3"><label for="model-C3">Model C3 <span class="count">(5)</span></label><br />
-                      <a class="showmore" href="">Show More</a><br />
-                    </div>
-                  </div>
-                  <div>
-                    <input class="model-checkbox" type="checkbox" id="regency"><label class="model-show" for="regency">Regency <span class="count">(10)</span></label>
-                    <div class="subset hide">
-                      <input type="checkbox" id="model-D1"><label for="model-D1">Model D1 <span class="count">(2)</span></label><br />
-                      <input type="checkbox" id="model-D2"><label for="model-D2">Model D2 <span class="count">(1)</span></label><br />
-                      <input type="checkbox" id="model-D3"><label for="model-D3">Model D3 <span class="count">(5)</span></label><br />
-                      <a class="showmore" href="">Show More</a><br />
-                    </div>
-                  </div>
-                  <a class="showmore" href="">Show More</a><br />
-                </div>
-              </li>
-              <li class="accordion-item is-active" data-accordion-item>
-                <a href="#" class="accordion-title">CONDITION:</a>
-                <div class="accordion-content" data-tab-content>
-                  <input type="checkbox" id="model-C1"><label for="model-C1">Used<span class="count"></span></label><br />
-                  <input type="checkbox" id="model-C2"><label for="model-C2">New<span class="count"></span></label><br />
-                  <!-- <div class="condition-buttons">
-                <input type="radio" id="used" name="condition"><label class="button hollow small expanded" for="used">Used</label>
-                <input type="radio" id="new" name="condition"><label class="button hollow small expanded" for="new">New</span></label>
-              </div> -->
-                </div>
-              </li>
-              <li class="accordion-item" data-accordion-item>
-                <a href="#" class="accordion-title">BOAT CLASS:</a>
-                <div class="accordion-content" data-tab-content>
-                  <input type="checkbox" id="jon-boats"><label for="jon-boats">Jon Boats <span class="count">(24)</span></label><br />
-                  <input type="checkbox" id="freshwater-fishing"><label for="freshwater-fishing">Freshwater Fishing <span class="count">(4)</span></label><br />
-                  <input type="checkbox" id="ski-and-fish"><label for="ski-and-fish">Ski and Fish <span class="count">(6)</span></label><br />
-                  <input type="checkbox" id="aluminum-fish-boats"><label for="aluminum-fish-boats">Aluminum Fish Boats <span class="count">(15)</span></label><br />
-                  <a class="showmore" href="">Show More</a><br />
-                </div>
-              </li>
-              <li class="accordion-item" data-accordion-item>
-                <a href="#" class="accordion-title">PRICE RANGE:</a>
-                <div class="accordion-content" data-tab-content>
-                  <div class="price-range">
-                    <div class="grid-x">
-                      <div class="small-12 medium-6 cell">
-                        <label>Min
-                          <select name="distance" id="priceMin" required>
-                            <option value="2000" selected>$2,000</option>
-                            <option value="4000">$4,000</option>
-                            <option value="6000">$6,000</option>
-                            <option value="8000">$8,000</option>
-                            <option value="10000">$10,000</option>
-                            <option value="15000">$15,000</option>
-                            <option value="20000">$20,000</option>
-                          </select>
-                        </label>
-                      </div>
-                      <div class="small-12 medium-6 cell">
-                        <label>Max
-                          <select name="distance" id="priceMax" required>
-                            <option value="2000" selected>$2,000</option>
-                            <option value="4000">$4,000</option>
-                            <option value="6000">$6,000</option>
-                            <option value="8000">$8,000</option>
-                            <option value="10000">$10,000</option>
-                            <option value="15000">$15,000</option>
-                            <option value="20000">$20,000</option>
-                          </select>
-                        </label>
-                      </div>
-                    </div>
-                    <!-- <span class="currencyinput">$<input id="priceMin" type="number"></span>
-                    <span class="currencyinput">$<input id="priceMax" type="number"></span> -->
-                  </div>
-                  <!-- <div class="slider" data-slider data-start="1000" data-end="100000" data-step="1000" data-initial-start="1000" data-initial-end="30000">
-                    <span class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="priceMin"></span>
-                    <span class="slider-fill" data-slider-fill></span>
-                    <span class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="priceMax"></span>
-                  </div> -->
-                </div>
-              </li>
-              <li class="accordion-item" data-accordion-item>
-                <a href="#" class="accordion-title">LENGTH:</a>
-                <div class="accordion-content" data-tab-content>
-                  <div class="length-range">
-                    <div class="grid-x">
-                      <div class="small-12 medium-6 cell">
-                        <label>Min
-                          <select name="distance" id="lengthMin" required>
-                            <option value="no-min" selected>No Min</option>
-                            <option value="4">4 ft.</option>
-                            <option value="6">6 ft.</option>
-                            <option value="8">8 ft.</option>
-                            <option value="10">10 ft.</option>
-                            <option value="12">12 ft.</option>
-                            <option value="14">14 ft.</option>
-                            <option value="16">16 ft.</option>
-                            <option value="18">18 ft.</option>
-                            <option value="20">20 ft.</option>
-                            <option value="25">25 ft.</option>
-                            <option value="30">30 ft.</option>
-                            <option value="35">35 ft.</option>
-                            <option value="40">40 ft.</option>
-                            <option value="45">45 ft.</option>
-                          </select>
-                        </label>
-                      </div>
-                      <div class="small-12 medium-6 cell">
-                        <label>Max
-                          <select name="distance" id="lengthMax" required>
-                            <option value="no-max" selected>No Max</option>
-                            <option value="4">4 ft.</option>
-                            <option value="6">6 ft.</option>
-                            <option value="8">8 ft.</option>
-                            <option value="10">10 ft.</option>
-                            <option value="12">12 ft.</option>
-                            <option value="14">14 ft.</option>
-                            <option value="16">16 ft.</option>
-                            <option value="18">18 ft.</option>
-                            <option value="20">20 ft.</option>
-                            <option value="25">25 ft.</option>
-                            <option value="30">30 ft.</option>
-                            <option value="35-five">35 ft.</option>
-                            <option value="40">40 ft.</option>
-                            <option value="45">45 ft.</option>
-                          </select>
-                        </label>
-                      </div>
-                    </div>
-                </div>
-              </li>
-              <li class="accordion-item" data-accordion-item>
-                <a href="#" class="accordion-title">YEAR:</a>
-                <div class="accordion-content" data-tab-content>
-                  <div class="length-range">
-                    <div class="grid-x">
-                      <div class="small-12 medium-6 cell">
-                        <label>Min
-                          <select name="distance" id="yearMin" required>
-                            <option value="no-min" selected>No Min</option>
-                            <option value="2000" selected>2000</option>
-                            <option value="2001" selected>2001</option>
-                            <option value="2002" selected>2002</option>
-                            <option value="2003" selected>2003</option>
-                            <option value="2004" selected>2004</option>
-                            <option value="2005" selected>2005</option>
-                            <option value="2006" selected>2006</option>
-                            <option value="2007" selected>2007</option>
-                            <option value="2008" selected>2008</option>
-                            <option value="2009" selected>2009</option>
-                            <option value="2010" selected>2010</option>
-                            <option value="2011" selected>2011</option>
-                            <option value="2012" selected>2012</option>
-                            <option value="2013" selected>2013</option>
-                            <option value="2014" selected>2014</option>
-                            <option value="2015" selected>2015</option>
-                            <option value="2016" selected>2016</option>
-                            <option value="2017" selected>2017</option>
-                            <option value="2018" selected>2018</option>
-                            <option value="2019" selected>2019</option>
-                            <option value="2020" selected>2020</option>
-                            <option value="2021" selected>2021</option>
-                            <option value="2022" selected>2022</option>
-                          </select>
-                        </label>
-                      </div>
-                      <div class="small-12 medium-6 cell">
-                        <label>Max
-                          <select name="distance" id="yearMax" required>
-                            <option value="no-max" selected>No Max</option>
-                          </select>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-
-            <div class="submit-btn">
-              <section class="submit">
-                <input type="submit" class="button primary expanded" value="UPDATE RESULTS">
-              </section>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="searchResults cell large-12 large-cell-block-container">
-        <div class="cell large-12 large-cell-block-y filter-results">
-          <!-- <div class="grid-container"> -->
-          <div class="results-heading">
-            <ul class="dropdown menu sort-toggle-button" data-dropdown-menu data-autoclose="true">
-              <li>
-                <a href="#"><i class="fas fa-sort-alt"></i><span id="sort-selection show-for-large"> Recently Added</span></a>
-                <ul class="vertical menu" id="sortresults">
-                  <li><a href="#">Highest Price</a></li>
-                  <li><a href="#">Highest Price</a></li>
-                  <li><a href="#">Lowest Price</a></li>
-                  <li><a href="#">Newest Year</a></li>
-                  <li><a href="#">Oldest Year</a></li>
-                </ul>
-              </li>
-            </ul>
-            <!-- <div class="sort-toggle-button" data-toggle="sort-dropdown">
-              <i class="fas fa-sort-alt"></i><span id="sort-selection show-for-large"> Highest Price</span>
-            </div>
-            <div class="dropdown-pane sort-drop" id="sort-dropdown" data-position="bottom" data-alignment="right" data-dropdown data-close-on-click="true">
-              <ul class="vertical menu">
-                <li><a href="#">Nearest Distance</a></li>
-                <li><a href="#">Model Year</a></li>
-                <li><a href="#">Lowest Price</a></li>
-                <li><a href="#">Highest Price</a></li>
-                <li><a href="#">Listing Distance</a></li>
-              </ul>
-            </div> -->
-            <h3>31 Matches:</h3>
-            <div class="filter-list">
-              <ul class="menu">
-                <li>Tracker</li>
-                <li>New</li>
-                <li>$0 - $50,000</li>
-                <li>6' - 14'</li>
-                <li>2017 - 2018</li>
-                <li class="clear">Clear Filters</li>
-              </ul>
-            </div>
-          </div>
-          <!-- START OF ZERO RESULTS MESSAGE. hide this entire div when not needed -->
-          <!--<div class="grid-x grid-margin-x grid-padding-x xlarge-top xlarge-bottom">
-            <div class="small-12 text-center cell">
-              <h3>We couldn't find any results that matched your search.</h3>
-              <h5>Try expanding your search range or remove filters.</h5>
-            </div>
-          </div>-->
-          <!--END OF ZERO RESULTS MESSAGE-->
-          <div id="results-grid" class="grid-x small-up-1 medium-up-2 large-up-2 xlarge-up-2 xxlarge-up-3 xxxlarge-up-4 two-and-four-up small-bottom">
-
-            <!-- <div class="cell card inventory-card margin-bottom-0" style="background-color:transparent;">
-              <a href="/inventory/inventory-boat.html" class="card">
-                <div class="grid-x">
-                  <div class="cell small-12">
-                    <div class="card-divider">
-                      <div class="condition">NEW</div>
-                    </div>
-                    <img class="item-image" src="https://imt.boatwizard.com/images/1/28/6/7172806_20190915104149674_1_XLARGE.jpg">
-                  </div>
-                  <div class="cell small-12">
-                    <div class="card-section text-center medium-text-left">
-                      <p class="mname">2023 230 DL3</p>
-                      <p class="motorname">w/ 200 L FourStroke w/DTS controls Mercury® FourStroke</p>
-                      <p class="locname">Springfield, MO</p>
-                      <div class="grid-x">
-                        <div class="cell small-8">
-                          <p class="no-haggle-label">
-                            NO HAGGLE NO HASSLE®
-                            <br>
-                            National Base Price
-                          </p>
-                        </div>
-                        <div class="cell small-4">
-                          <p class="price">$59,999 <span class="currency">USD</span></p>
-                        </div>
-                      </div> -->
-                      <!-- <p>
-                        <span class="no-haggle-price text-line-through">$70,995</span> 
-                        <span class="price-sale-value">$65,995</span> 
-                        <span class="currency">USD</span>
-                      </p> -->
-                      <!-- <hr class="price-divider">
-                      <div class="grid-x">
-                        <div class="cell small-8">
-                          <p class="price-equipped-label">Your Price</p>
-                          <p class="price-equipped-sublabel">(w/ options, freight & prep)</p>
-                        </div>
-                        <div class="cell small-4">
-                          <p>
-                            <span class="price-equipped">$68,995</span>
-                            <span class="currency">USD</span>
-                          </p>
-                        </div>
-                      </div> -->
-                      <!-- <table class="unstriped price-table">
-                        <tbody>
-                          <tr>
-                            <td><p class="no-haggle-price text-line-through">$70,995</p></td>
-                            <td><p class="price-sale-value">$65,995 <span class="currency">USD</span></p></td>
-                          </tr> -->
-                          <!-- <tr>
-                            <td class="price-sale-label">Sale Price</td>
-                            <td><p class="price-sale-value">$65,995 <span class="currency">USD</span></p></td>
-                          </tr> -->
-                        <!-- </tbody>
-                      </table> -->
-                      <!-- <p class="price">$59,999 <span class="currency">USD</span></p> -->
-                    <!-- </div>
-                  </div>
-                </div>
-              </a>
-            </div> -->
-
-            <div class="cell card inventory-card margin-bottom-0" style="background-color:transparent;">
-              <a href="/inventory/inventory-boat.html" class="card">
-                <div class="grid-x">
-                  <div class="cell small-12 medium-12">
-                    <div class="card-divider">
-                      <div class="condition">New</div>
-                    </div>
-                    <img class="item-image" src="/assets/img/inventory-default.jpg">
-                  </div>
-                  <div class="cell small-12 medium-12">
-                    <div class="card-section text-center medium-text-left">
-                      <p class="locname text-left"><i class="fas fa-location-pin text-primary"></i> Springfield, MO</p>
-                      <p class="mname">2023 Tracker Bass Tracker Classic XL</p>
-                      <p class="motorname">w/ 115 ELPT Pro XS® FourStroke Mercury® Pro XS®</p>
-                      
-                      <!-- <hr class="border-light-gray"> -->
-                      <div class="grid-x align-middle">
-                        <div class="cell small-8">
-                          <p class="no-haggle-label">
-                            NO HAGGLE NO HASSLE®
-                            <br>
-                          </p>
-                        </div>
-                        <div class="cell small-4">
-                          <p class="no-haggle-value">
-                            <span class="no-haggle-price text-line-through">$70,995</span>
-                          </p>
-                        </div>
-                        <div class="cell small-8">
-                            <p class="national-price-label">
-                              National Base Price
-                            </p>
-                        </div>
-                        <div class="cell small-4">
-                            <p class="price-sale-value">
-                              <span>$65,995</span> 
-                              <!-- <span class="currency">USD</span> -->
-                            </p>
-                          </div>
-                      </div>
-                      <hr class="price-divider">
-                      <div class="grid-x">
-                        <div class="cell small-8">
-                          <p class="you-save-text">You save: </p>
-                        </div>
-                        <div class="cell small-4">
-                          <p class="you-save-value">
-                            <span>$5,000</span>
-                        </p>
-                        </div>
-                        <div class="cell small-8">
-                          <p class="price-equipped-label">Your Price</p>
-                          <p class="price-equipped-sublabel">(w/ options, freight & prep)</p>
-                        </div>
-                        <div class="cell small-4">
-                          <p>
-                            <span class="price-equipped-value">$67,995</span>
-                            <!-- <span class="currency">USD</span> -->
-                          </p>
-                        </div>
-                      </div>
-                      
-                      <!-- <p class="you-save-text">You save: <span class="save-price">$5,000</span></p> -->
-                      <!-- <p class="price">$59,999 <span class="currency">USD</span></p> -->
-                      
-                      <!-- <table class="unstriped price-table">
-                        <tbody>
-                          <tr>
-                            <td>Price As Equipped</td>
-                            <td><p class="price-built">$59,999 <span class="currency">USD</span></p></td>
-                          </tr>
-                          <tr>
-                            <td class="price-sale-label">Sale Price</td>
-                            <td><p class="price-sale-value">$54,999 <span class="currency">USD</span></p></td>
-                          </tr>
-                        </tbody>
-                      </table> -->
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="cell card inventory-card margin-bottom-0" style="background-color:transparent;">
-                <a href="/inventory/inventory-boat.html" class="card">
-                  <div class="grid-x">
-                    <div class="cell small-12 medium-12">
-                      <div class="card-divider">
-                        <div class="cell align-justify">
-                            <div class="locname text-left"><i class="fas fa-location-pin text-primary"></i> Springfield, MO</div>
-                            <div class="condition">New</div>
-                        </div>
-                      </div>
-                      <img class="item-image" src="/assets/img/inventory-default.jpg">
-                    </div>
-                    <div class="cell small-12 medium-12">
-                      <div class="card-section text-center medium-text-left">
-                        <p class="mname">2023 Sun Tracker Party Barge 18</p>
-                        <p class="motorname">w/ 115 ELPT Pro XS® FourStroke Mercury® Pro XS®</p>
-                        
-                        <!-- <hr class="border-light-gray"> -->
-                        <div class="grid-x align-middle">
-                          <div class="cell small-6 large-7">
-                            <p class="no-haggle-label">
-                              NO HAGGLE NO HASSLE®
-                            </p>
-                          </div>
-                          <div class="cell small-6 medium-shrink">
-                            <p class="no-haggle-value">
-                              <span class="no-haggle-price text-line-through">$70,995</span>
-                            </p>
-                          </div>
-                          <div class="cell small-6 large-7">
-                              <p class="national-price-label">
-                                National Base Price
-                              </p>
-                          </div>
-                          <div class="cell small-6 medium-shrink">
-                              <p class="price-sale-value">
-                                <span>$65,995</span> 
-                                <span class="currency">USD</span>
-                              </p>
+                    <section class="stores">
+                    <div class="title">Stores near <a href="">65721</a>:</div>
+                    <input type="checkbox" id="springfield-mo"><label for="springfield-mo">Springfield, MO <span class="count">(Your Store)</span></label><br />
+                    <input type="checkbox" id="branson-mo"><label for="branson-mo">Branson, MO</label><br />
+                    <input type="checkbox" id="broken-arrow-ok"><label for="broken-arrow-ok">Broken Arrow, OK</label><br />
+                    </section>
+                    <ul class="accordion" data-accordion data-allow-all-closed="true" data-multi-expand="true">
+                    <li class="accordion-item is-active" data-accordion-item>
+                        <a href="#" class="accordion-title">MAKE:</a>
+                        <div class="accordion-content" data-tab-content>
+                        <div>
+                            <input class="model-checkbox" type="checkbox" id="tracker"><label class="model-show" for="tracker">Tracker <span class="count">(24)</span></label>
+                            <div class="subset hide">
+                            <input type="checkbox" id="super-guide-v-16-sc"><label for="super-guide-v-16-sc">Super Guide V-16 SC <span class="count">(2)</span></label><br />
+                            <input type="checkbox" id="topper-1236-riveted-jon"><label for="topper-1236-riveted-jon">Topper 1236 Riveted Jon <span class="count">(1)</span></label><br />
+                            <input type="checkbox" id="pro-guide-v-175-combo"><label for="pro-guide-v-175-combo">Pro Guide V-175 Combo Pro Guide V-175 Combo <span class="count">(2)</span></label><br />
+                            <input type="checkbox" id="pro-team-190-tx"><label for="pro-team-190-tx">Pro Team 190 TX <span class="count">(2)</span></label><br />
+                            <input type="checkbox" id="pro-guide-v-16-sv"><label for="pro-guide-v-16-sv">Pro Guide V-16 SC <span class="count">(1)</span></label><br />
+                            <a class="showmore" href="">Show More</a><br />
                             </div>
                         </div>
-                        <hr class="price-divider">
-                        <div class="grid-x">
-                          <div class="cell small-6 large-7">
-                            <p class="you-save-text">You save: </p>
-                          </div>
-                          <div class="cell small-6 medium-shrink">
-                            <p class="you-save-value">
-                                <span>$5,000</span>
-                            </p>
-                          </div>
-                          <div class="cell small-6 large-7">
-                            <p class="price-equipped-label">Your Price</p>
-                            <p class="price-equipped-sublabel">(w/ options, freight & prep)</p>
-                          </div>
-                          <div class="cell small-6 medium-shrink">
-                            <p class="price-equipped-value">
-                              <span>$67,995</span>
-							  <span class="currency">USD</span>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-            </div>
-
-            <div class="cell card inventory-card margin-bottom-0" style="background-color:transparent;">
-                <a href="/inventory/inventory-boat.html" class="card">
-                    <div class="grid-x">
-                        <div class="cell small-12 medium-12">
-                            <div class="card-divider">
-                                <div class="condition">New</div>                        
+                        <div>
+                            <input class="model-checkbox" type="checkbox" id="nitro"><label class="model-show" for="nitro">Nitro <span class="count">(34)</span></label>
+                            <div class="subset hide">
+                            <input type="checkbox" id="model-A1"><label for="model-A1">Model A1 <span class="count">(2)</span></label><br />
+                            <input type="checkbox" id="model-A2"><label for="model-A2">Model A2 <span class="count">(1)</span></label><br />
+                            <input type="checkbox" id="model-A3"><label for="model-A3">Model A3 <span class="count">(5)</span></label><br />
+                            <a class="showmore" href="">Show More</a><br />
                             </div>
-                            <img class="item-image" src="/assets/img/inventory-default.jpg">
                         </div>
-                        <div class="cell small-12 medium-12">
-                            <div class="card-section text-center medium-text-left">
-                                <p class="mname">2019 Tracker Pro Team 195 TXW Tournament Edition</p>
-                                <p class="motorname">w/ 115 ELPT Pro XS® FourStroke Mercury® Pro XS®</p>
-                                <p class="locname text-left">Springfield, MO</p>
-                                
-                                <!-- <hr class="border-light-gray"> -->
-                                <div class="grid-x align-middle">
-                                    <div class="cell small-8">
-                                        <p class="no-haggle-label">
-                                            NO HAGGLE NO HASSLE®
-                                        </p>
-                                    </div>
-                                    <div class="cell small-4">
-                                        <p class="no-haggle-value">
-                                            <span class="text-line-through">$70,995</span>
-                                        </p>
-                                    </div>
-                                    <div class="cell small-8">
-                                        <p class="national-price-label">
-                                            National Base Price
-                                        </p>
-                                    </div>
-                                    <div class="cell small-4">
-                                        <p class="price-sale-value">
-                                            <span>$65,995</span> 
-                                            <!-- <span class="currency">USD</span> -->
-                                        </p>
+                        <div>
+                            <input class="model-checkbox" type="checkbox" id="ranger"><label class="model-show" for="ranger">Ranger <span class="count">(12)</span></label>
+                            <div class="subset hide">
+                            <input type="checkbox" id="model-B1"><label for="model-B1">Model B1 <span class="count">(2)</span></label><br />
+                            <input type="checkbox" id="model-B2"><label for="model-B2">Model B2 <span class="count">(1)</span></label><br />
+                            <input type="checkbox" id="model-B3"><label for="model-B3">Model B3 <span class="count">(5)</span></label><br />
+                            <a class="showmore" href="">Show More</a><br />
+                            </div>
+                        </div>
+                        <div>
+                            <input class="model-checkbox" type="checkbox" id="sun-tracker"><label class="model-show" for="sun-tracker">Sun Tracker <span class="count">(8)</span></label>
+                            <div class="subset hide">
+                            <input type="checkbox" id="model-C1"><label for="model-C1">Model C1 <span class="count">(2)</span></label><br />
+                            <input type="checkbox" id="model-C2"><label for="model-C2">Model C2 <span class="count">(1)</span></label><br />
+                            <input type="checkbox" id="model-C3"><label for="model-C3">Model C3 <span class="count">(5)</span></label><br />
+                            <a class="showmore" href="">Show More</a><br />
+                            </div>
+                        </div>
+                        <div>
+                            <input class="model-checkbox" type="checkbox" id="regency"><label class="model-show" for="regency">Regency <span class="count">(10)</span></label>
+                            <div class="subset hide">
+                            <input type="checkbox" id="model-D1"><label for="model-D1">Model D1 <span class="count">(2)</span></label><br />
+                            <input type="checkbox" id="model-D2"><label for="model-D2">Model D2 <span class="count">(1)</span></label><br />
+                            <input type="checkbox" id="model-D3"><label for="model-D3">Model D3 <span class="count">(5)</span></label><br />
+                            <a class="showmore" href="">Show More</a><br />
+                            </div>
+                        </div>
+                        <a class="showmore" href="">Show More</a><br />
+                        </div>
+                    </li>
+                    <li class="accordion-item is-active" data-accordion-item>
+                        <a href="#" class="accordion-title">CONDITION:</a>
+                        <div class="accordion-content" data-tab-content>
+                        <input type="checkbox" id="model-C1"><label for="model-C1">Used<span class="count"></span></label><br />
+                        <input type="checkbox" id="model-C2"><label for="model-C2">New<span class="count"></span></label><br />
+                        <!-- <div class="condition-buttons">
+                        <input type="radio" id="used" name="condition"><label class="button hollow small expanded" for="used">Used</label>
+                        <input type="radio" id="new" name="condition"><label class="button hollow small expanded" for="new">New</span></label>
+                    </div> -->
+                        </div>
+                    </li>
+                    <li class="accordion-item" data-accordion-item>
+                        <a href="#" class="accordion-title">BOAT CLASS:</a>
+                        <div class="accordion-content" data-tab-content>
+                        <input type="checkbox" id="jon-boats"><label for="jon-boats">Jon Boats <span class="count">(24)</span></label><br />
+                        <input type="checkbox" id="freshwater-fishing"><label for="freshwater-fishing">Freshwater Fishing <span class="count">(4)</span></label><br />
+                        <input type="checkbox" id="ski-and-fish"><label for="ski-and-fish">Ski and Fish <span class="count">(6)</span></label><br />
+                        <input type="checkbox" id="aluminum-fish-boats"><label for="aluminum-fish-boats">Aluminum Fish Boats <span class="count">(15)</span></label><br />
+                        <a class="showmore" href="">Show More</a><br />
+                        </div>
+                    </li>
+                    <li class="accordion-item" data-accordion-item>
+                        <a href="#" class="accordion-title">PRICE RANGE:</a>
+                        <div class="accordion-content" data-tab-content>
+                        <div class="price-range">
+                            <div class="grid-x">
+                            <div class="small-12 medium-6 cell">
+                                <label>Min
+                                <select name="distance" id="priceMin" required>
+                                    <option value="2000" selected>$2,000</option>
+                                    <option value="4000">$4,000</option>
+                                    <option value="6000">$6,000</option>
+                                    <option value="8000">$8,000</option>
+                                    <option value="10000">$10,000</option>
+                                    <option value="15000">$15,000</option>
+                                    <option value="20000">$20,000</option>
+                                </select>
+                                </label>
+                            </div>
+                            <div class="small-12 medium-6 cell">
+                                <label>Max
+                                <select name="distance" id="priceMax" required>
+                                    <option value="2000" selected>$2,000</option>
+                                    <option value="4000">$4,000</option>
+                                    <option value="6000">$6,000</option>
+                                    <option value="8000">$8,000</option>
+                                    <option value="10000">$10,000</option>
+                                    <option value="15000">$15,000</option>
+                                    <option value="20000">$20,000</option>
+                                </select>
+                                </label>
+                            </div>
+                            </div>
+                            <!-- <span class="currencyinput">$<input id="priceMin" type="number"></span>
+                            <span class="currencyinput">$<input id="priceMax" type="number"></span> -->
+                        </div>
+                        <!-- <div class="slider" data-slider data-start="1000" data-end="100000" data-step="1000" data-initial-start="1000" data-initial-end="30000">
+                            <span class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="priceMin"></span>
+                            <span class="slider-fill" data-slider-fill></span>
+                            <span class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="priceMax"></span>
+                        </div> -->
+                        </div>
+                    </li>
+                    <li class="accordion-item" data-accordion-item>
+                        <a href="#" class="accordion-title">LENGTH:</a>
+                        <div class="accordion-content" data-tab-content>
+                        <div class="length-range">
+                            <div class="grid-x">
+                            <div class="small-12 medium-6 cell">
+                                <label>Min
+                                <select name="distance" id="lengthMin" required>
+                                    <option value="no-min" selected>No Min</option>
+                                    <option value="4">4 ft.</option>
+                                    <option value="6">6 ft.</option>
+                                    <option value="8">8 ft.</option>
+                                    <option value="10">10 ft.</option>
+                                    <option value="12">12 ft.</option>
+                                    <option value="14">14 ft.</option>
+                                    <option value="16">16 ft.</option>
+                                    <option value="18">18 ft.</option>
+                                    <option value="20">20 ft.</option>
+                                    <option value="25">25 ft.</option>
+                                    <option value="30">30 ft.</option>
+                                    <option value="35">35 ft.</option>
+                                    <option value="40">40 ft.</option>
+                                    <option value="45">45 ft.</option>
+                                </select>
+                                </label>
+                            </div>
+                            <div class="small-12 medium-6 cell">
+                                <label>Max
+                                <select name="distance" id="lengthMax" required>
+                                    <option value="no-max" selected>No Max</option>
+                                    <option value="4">4 ft.</option>
+                                    <option value="6">6 ft.</option>
+                                    <option value="8">8 ft.</option>
+                                    <option value="10">10 ft.</option>
+                                    <option value="12">12 ft.</option>
+                                    <option value="14">14 ft.</option>
+                                    <option value="16">16 ft.</option>
+                                    <option value="18">18 ft.</option>
+                                    <option value="20">20 ft.</option>
+                                    <option value="25">25 ft.</option>
+                                    <option value="30">30 ft.</option>
+                                    <option value="35-five">35 ft.</option>
+                                    <option value="40">40 ft.</option>
+                                    <option value="45">45 ft.</option>
+                                </select>
+                                </label>
+                            </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="accordion-item" data-accordion-item>
+                        <a href="#" class="accordion-title">YEAR:</a>
+                        <div class="accordion-content" data-tab-content>
+                        <div class="length-range">
+                            <div class="grid-x">
+                            <div class="small-12 medium-6 cell">
+                                <label>Min
+                                <select name="distance" id="yearMin" required>
+                                    <option value="no-min" selected>No Min</option>
+                                    <option value="2000" selected>2000</option>
+                                    <option value="2001" selected>2001</option>
+                                    <option value="2002" selected>2002</option>
+                                    <option value="2003" selected>2003</option>
+                                    <option value="2004" selected>2004</option>
+                                    <option value="2005" selected>2005</option>
+                                    <option value="2006" selected>2006</option>
+                                    <option value="2007" selected>2007</option>
+                                    <option value="2008" selected>2008</option>
+                                    <option value="2009" selected>2009</option>
+                                    <option value="2010" selected>2010</option>
+                                    <option value="2011" selected>2011</option>
+                                    <option value="2012" selected>2012</option>
+                                    <option value="2013" selected>2013</option>
+                                    <option value="2014" selected>2014</option>
+                                    <option value="2015" selected>2015</option>
+                                    <option value="2016" selected>2016</option>
+                                    <option value="2017" selected>2017</option>
+                                    <option value="2018" selected>2018</option>
+                                    <option value="2019" selected>2019</option>
+                                    <option value="2020" selected>2020</option>
+                                    <option value="2021" selected>2021</option>
+                                    <option value="2022" selected>2022</option>
+                                </select>
+                                </label>
+                            </div>
+                            <div class="small-12 medium-6 cell">
+                                <label>Max
+                                <select name="distance" id="yearMax" required>
+                                    <option value="no-max" selected>No Max</option>
+                                </select>
+                                </label>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </li>
+                    </ul>
+
+                    <div class="submit-btn">
+                    <section class="submit">
+                        <input type="submit" class="button primary expanded" value="UPDATE RESULTS">
+                    </section>
+                    </div>
+                </form>
+                </div>
+            </div>
+            <div class="searchResults cell large-12 large-cell-block-container">
+                <div class="cell large-12 large-cell-block-y filter-results">
+                <!-- <div class="grid-container"> -->
+                    <div class="results-heading">
+                        <ul class="dropdown menu sort-toggle-button" data-dropdown-menu data-autoclose="true">
+                        <li>
+                            <a href="#"><i class="fas fa-sort-alt"></i><span id="sort-selection show-for-large"> Recently Added</span></a>
+                            <ul class="vertical menu" id="sortresults">
+                            <li><a href="#">Highest Price</a></li>
+                            <li><a href="#">Highest Price</a></li>
+                            <li><a href="#">Lowest Price</a></li>
+                            <li><a href="#">Newest Year</a></li>
+                            <li><a href="#">Oldest Year</a></li>
+                            </ul>
+                        </li>
+                        </ul>
+                        <!-- <div class="sort-toggle-button" data-toggle="sort-dropdown">
+                        <i class="fas fa-sort-alt"></i><span id="sort-selection show-for-large"> Highest Price</span>
+                        </div>
+                        <div class="dropdown-pane sort-drop" id="sort-dropdown" data-position="bottom" data-alignment="right" data-dropdown data-close-on-click="true">
+                        <ul class="vertical menu">
+                            <li><a href="#">Nearest Distance</a></li>
+                            <li><a href="#">Model Year</a></li>
+                            <li><a href="#">Lowest Price</a></li>
+                            <li><a href="#">Highest Price</a></li>
+                            <li><a href="#">Listing Distance</a></li>
+                        </ul>
+                        </div> -->
+                        <h3>31 Matches:</h3>
+                        <div class="filter-list">
+                        <ul class="menu">
+                            <li>Tracker</li>
+                            <li>New</li>
+                            <li>$0 - $50,000</li>
+                            <li>6' - 14'</li>
+                            <li>2017 - 2018</li>
+                            <li class="clear">Clear Filters</li>
+                        </ul>
+                        </div>
+                    </div>
+                    <!-- START OF ZERO RESULTS MESSAGE. hide this entire div when not needed -->
+                    <!--<div class="grid-x grid-margin-x grid-padding-x xlarge-top xlarge-bottom">
+                        <div class="small-12 text-center cell">
+                        <h3>We couldn't find any results that matched your search.</h3>
+                        <h5>Try expanding your search range or remove filters.</h5>
+                        </div>
+                    </div>-->
+                    <!--END OF ZERO RESULTS MESSAGE-->
+                    <div id="results-grid" class="grid-x small-up-1 medium-up-2 large-up-2 xlarge-up-2 xxlarge-up-3 xxxlarge-up-4 two-and-four-up small-bottom">
+                        <div class="cell inventory-card">
+                            <a href="/inventory/inventory-boat.html">
+                                <div class="card">
+                                    <div class="grid-x">
+                                        <div class="small-6 medium-12">
+                                            <div class="card-divider">
+                                                <div class="condition">NEW</div>
+                                                <!-- <div class="badge alert radius promo-badge" style="font-size:.75rem;color:#fff;">Clearance</div> -->
+                                            </div>
+                                            <img class="item-image" src="/assets/img/inventory-default.jpg">
+                                        </div>
+                                        <div class="small-6 medium-12">
+                                            <div class="card-section">
+                                                <p class="mname">2024 Sun Tracker Bass Buggy 18 DLX</p>
+                                                <p class="locname">Springfield, MO</p>
+                                                <p class="price">$59,999 <span class="currency">USD</span></p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <hr class="price-divider">
-                                <div class="grid-x">
-                                    <div class="cell small-8">
-                                        <p class="you-save-text">You save: </p>
-                                    </div>
-                                    <div class="cell small-4">
-                                        <p class="you-save-value">
-                                            <span>$5,000</span>
-                                        </p>
-                                    </div>
-                                    <div class="cell small-8">
-                                        <p class="price-equipped-label">Your Price</p>
-                                        <p class="price-equipped-sublabel">(w/ options, freight & prep)</p>
-                                    </div>
-                                    <div class="cell small-4">
-                                        <p>
-                                            <span class="price-equipped-value">$67,995</span>
-                                            <!-- <span class="currency">USD</span> -->
-                                        </p>
+                            </a>
+                        </div>
+                        <div class="cell inventory-card">
+                            <a href="/inventory/inventory-boat.html">
+                                <div class="card">
+                                    <div class="grid-x">
+                                        <div class="small-6 medium-12">
+                                            <div class="card-divider">
+                                                <div class="condition">New</div>
+                                            </div>
+                                            <img class="item-image" src="/assets/img/inventory-default.jpg">
+                                        </div>
+                                        <div class="small-6 medium-12">
+                                            <div class="card-section">
+                                                <p class="mname">2024 Ranger 2360 Bay</p>
+                                                <p class="locname">Vaughan, ON</p>
+                                                <p class="price">$59,999 <span class="currency">USD</span></p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                
-                                <!-- <p class="you-save-text">You save: <span class="save-price">$5,000</span></p> -->
-                                <!-- <p class="price">$59,999 <span class="currency">USD</span></p> -->
-                                
-                                <!-- <table class="unstriped price-table">
-                                <tbody>
-                                    <tr>
-                                    <td>Price As Equipped</td>
-                                    <td><p class="price-built">$59,999 <span class="currency">USD</span></p></td>
-                                    </tr>
-                                    <tr>
-                                    <td class="price-sale-label">Sale Price</td>
-                                    <td><p class="price-sale-value">$54,999 <span class="currency">USD</span></p></td>
-                                    </tr>
-                                </tbody>
-                                </table> -->
-                            </div>
+                            </a>
+                        </div>
+                        <div class="cell inventory-card">
+                            <a href="/inventory/inventory-boat.html">
+                                <div class="card">
+                                    <div class="grid-x">
+                                        <div class="small-6 medium-12">
+                                            <div class="card-divider">
+                                            <div class="condition">New</div>
+                                            </div>
+                                            <img class="item-image" src="https://images.boatsgroup.com/images/1/63/22/7536322_20200728110820089_1_XLARGE.jpg">
+                                        </div>
+                                        <div class="small-6 medium-12">
+                                            <div class="card-section">
+                                            <p class="mname">2025 Tracker Pro Team 175 TXW</p>
+                                            <p class="locname">Springfield, MO</p>
+                                            <p class="price">$17,480 <span class="currency">USD</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cell inventory-card">
+                            <a href="/inventory/inventory-boat.html">
+                                <div class="card last">
+                                    <div class="grid-x">
+                                        <div class="small-6 medium-12">
+                                            <div class="card-divider">
+                                            <div class="condition">NEW</div>
+                                            </div>
+                                            <img class="item-image" src="https://images.boatsgroup.com/images/1/69/26/8366926_20221128090319042_1_XLARGE.jpg">
+                                        </div>
+                                        <div class="small-6 medium-12">
+                                            <div class="card-section">
+                                                <p class="mname">2024 Triton 186 Allure</p>
+                                                <p class="locname">Hooksett, NH</p>
+                                                <p class="price">$59,999 <span class="currency">USD</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cell inventory-card">
+                            <a href="/inventory/inventory-boat.html">
+                                <div class="card last">
+                                    <div class="grid-x">
+                                        <div class="small-6 medium-12">
+                                            <div class="card-divider">
+                                            <div class="condition">NEW</div>
+                                            </div>
+                                            <img class="item-image" src="https://images.boats.com/resize/1/42/51/7594251_20200918152852180_1_LARGE.jpg">
+                                        </div>
+                                        <div class="small-6 medium-12">
+                                            <div class="card-section">
+                                                <p class="mname">2024 Tahoe 2150 CC</p>
+                                                <p class="locname">Springfield, MO</p>
+                                                <p class="price">$6,374 <span class="currency">USD</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                </a>
-            </div>
-
-			<div class="cell card inventory-card margin-bottom-0" style="background-color:transparent;">
-                <a href="/inventory/inventory-boat.html" class="card">
-                  <div class="grid-x">
-                    <div class="cell small-12 medium-12">
-                      <div class="card-divider">
-                        <div class="cell align-justify">
-                            <div class="locname text-left"><i class="fas fa-location-pin text-primary"></i> Springfield, MO</div>
-                            <div class="condition">New</div>
+                    <div class="grid-x">
+                        <div class="small-12 cell">
+                            <nav aria-label="Pagination">
+                                <ul class="pagination text-center">
+                                    <li class="pagination-previous disabled">Previous</li>
+                                    <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+                                    <li><a href="#" aria-label="Page 2">2</a></li>
+                                    <li><a href="#" aria-label="Page 3">3</a></li>
+                                    <li><a href="#" aria-label="Page 4">4</a></li>
+                                    <li class="ellipsis"></li>
+                                    <li><a href="#" aria-label="Page 12">12</a></li>
+                                    <li><a href="#" aria-label="Page 13">13</a></li>
+                                    <li class="pagination-next"><a href="#" aria-label="Next page">Next</a></li>
+                                </ul>
+                            </nav>
                         </div>
-                      </div>
-                      <img class="item-image" src="/assets/img/inventory-default.jpg">
                     </div>
-                    <div class="cell small-12 medium-12">
-                      <div class="card-section text-center medium-text-left">
-                        <p class="mname">2019 Tracker Pro Team 195 TXW Tournament Edition</p>
-                        <p class="motorname">w/ 115 ELPT Pro XS® FourStroke Mercury® Pro XS®</p>
-                        
-                        <!-- <hr class="border-light-gray"> -->
-                        <div class="grid-x align-middle">
-                          <div class="cell small-6 large-7">
-                            <p class="no-haggle-label">
-                              NO HAGGLE NO HASSLE®
-                            </p>
-                          </div>
-                          <div class="cell small-6 medium-shrink">
-                            <p class="no-haggle-value">
-                              <span class="no-haggle-price text-line-through">$70,995</span>
-                            </p>
-                          </div>
-                          <div class="cell small-6 large-7">
-                              <p class="national-price-label">
-                                National Base Price
-                              </p>
-                          </div>
-                          <div class="cell small-6 medium-shrink">
-                              <p class="price-sale-value">
-                                <span>$65,995</span> 
-                                <span class="currency">USD</span>
-                              </p>
-                            </div>
-                        </div>
-                        <hr class="price-divider">
-                        <div class="grid-x">
-                          <div class="cell small-6 large-7">
-                            <p class="you-save-text">You save: </p>
-                          </div>
-                          <div class="cell small-6 medium-shrink">
-                            <p class="you-save-value">
-                                <span>$5,000</span>
-                            </p>
-                          </div>
-                          <div class="cell small-6 large-7">
-                            <p class="price-equipped-label">Your Price</p>
-                            <p class="price-equipped-sublabel">(w/ options, freight & prep)</p>
-                          </div>
-                          <div class="cell small-6 medium-shrink">
-                            <p class="price-equipped-value">
-                              <span>$67,995</span>
-							  <span class="currency">USD</span>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
+                </div>
             </div>
-
-          </div>
-          <div class="grid-x">
-            <div class="small-12 cell">
-              <nav aria-label="Pagination">
-                <ul class="pagination text-center">
-                  <li class="pagination-previous disabled">Previous</li>
-                  <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
-                  <li><a href="#" aria-label="Page 2">2</a></li>
-                  <li><a href="#" aria-label="Page 3">3</a></li>
-                  <li><a href="#" aria-label="Page 4">4</a></li>
-                  <li class="ellipsis"></li>
-                  <li><a href="#" aria-label="Page 12">12</a></li>
-                  <li><a href="#" aria-label="Page 13">13</a></li>
-                  <li class="pagination-next"><a href="#" aria-label="Next page">Next</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>

@@ -1,120 +1,120 @@
 .model-listing {
-  background: $model-listing-bg-color;
-  box-shadow: $model-listing-box-shadow;
-  padding: $model-listing-padding;
-  border-radius: $model-listing-border-radius;
-  .model-year {
-    font-size: $model-listing-model-year-size;
-    font-weight: $model-listing-model-year-weight;
-    margin-top: 0.75rem;
-  }
-
-
-  .model-name {
-    font-family: $model-listing-model-name-font;
-    font-size: $model-listing-model-name-size;
-    font-weight: $model-listing-model-name-weight;
-    line-height: $model-listing-model-name-line-height;
-    text-transform: $model-listing-model-name-transform;
-    font-style: $model-listing-model-name-style;
-
-    .tag {
-      font-weight: $model-listing-model-name-tag-weight;
-      color: $model-listing-model-name-tag-color;
+    background: $model-listing-bg-color;
+    box-shadow: $model-listing-box-shadow;
+    padding: $model-listing-padding;
+    border-radius: $model-listing-border-radius;
+    .model-year {
+        font-size: $model-listing-model-year-size;
+        font-weight: $model-listing-model-year-weight;
+        margin-top: 0.75rem;
     }
-  }
 
-  .package-details {
-    margin: $model-listing-package-detail-margin;
-    font-weight: $model-listing-package-font-weight;
-    font-size: $model-listing-package-font-size;
-  }
 
-  .prices {
-    margin: $model-listing-price-block-margin;
-  }
+    .model-name {
+        font-family: $model-listing-model-name-font;
+        font-size: $model-listing-model-name-size;
+        font-weight: $model-listing-model-name-weight;
+        line-height: $model-listing-model-name-line-height;
+        text-transform: $model-listing-model-name-transform;
+        font-style: $model-listing-model-name-style;
 
-  .price-label {
-    font-size: $model-listing-price-label-size;
-    color: $model-listing-price-label-color;
-    padding-top: 1.5rem;
-  }
+        .tag {
+            font-weight: $model-listing-model-name-tag-weight;
+            color: $model-listing-model-name-tag-color;
+        }
+    }
 
-  .price-sale-value {
-    display: inline;
-    font-size: $model-listing-price-sale-value-size;
-    font-weight: $model-listing-price-sale-value-weight;
-    color: $model-listing-price-sale-value-color;
-  }
+    .package-details {
+        margin: $model-listing-package-detail-margin;
+        font-weight: $model-listing-package-font-weight;
+        font-size: $model-listing-package-font-size;
+    }
 
-  .price-value {
-    display: inline;
-    font-size: $model-listing-price-value-size;
-    font-weight: $model-listing-price-value-weight;
-  }
+    .prices {
+        margin: $model-listing-price-block-margin;
+    }
 
-  .strike {
-    color: $model-listing-price-strike-color;
-    text-decoration: line-through;
-    padding-right: 0.5rem;
-  }
+    .price-label {
+        font-size: $model-listing-price-label-size;
+        color: $model-listing-price-label-color;
+        padding-top: 1.5rem;
+    }
 
-  .price-currency {
-    display: inline;
-    font-size: $model-listing-price-currency-size;
-    font-weight: $model-listing-price-currency-weight;
-    color: $model-listing-price-currency-color;
-  }
+    .price-sale-value {
+        display: inline;
+        font-size: $model-listing-price-sale-value-size;
+        font-weight: $model-listing-price-sale-value-weight;
+        color: $model-listing-price-sale-value-color;
+    }
 
-  .price-save-label {
-    display: inline;
-    font-size: $model-listing-price-save-label-size;
-  }
+    .price-value {
+        display: inline;
+        font-size: $model-listing-price-value-size;
+        font-weight: $model-listing-price-value-weight;
+    }
 
-  .price-save-value {
-    display: inline;
-    font-size: $model-listing-price-save-value-size;
-    font-weight: $model-listing-price-save-value-weight;
-    color: $model-listing-price-save-value-color;
-  }
+    .strike {
+        color: $model-listing-price-strike-color;
+        text-decoration: line-through;
+        padding-right: 0.5rem;
+    }
 
-  table.specs {
-    margin: $model-listing-specs-block-margin;
-    width: auto;
+    .price-currency {
+        display: inline;
+        font-size: $model-listing-price-currency-size;
+        font-weight: $model-listing-price-currency-weight;
+        color: $model-listing-price-currency-color;
+    }
 
-    tbody {
-      border: none;
-      margin: 0;
-      background-color: $global-background-color;
-      color: $global-font-color;
+    .price-save-label {
+        display: inline;
+        font-size: $model-listing-price-save-label-size;
+    }
 
-      tr {
-        background-color: transparent;
-      }
+    .price-save-value {
+        display: inline;
+        font-size: $model-listing-price-save-value-size;
+        font-weight: $model-listing-price-save-value-weight;
+        color: $model-listing-price-save-value-color;
+    }
 
-      .spec-label {
+    table.specs {
+        margin: $model-listing-specs-block-margin;
         width: auto;
-        padding: $model-listing-specs-label-padding;
-        font-size: $model-listing-specs-label-size;
-        font-weight: $model-listing-specs-label-weight;
-      }
 
-      .spec-value {
-        width: auto;
-        padding: $model-listing-specs-value-padding;
-        font-size: $model-listing-specs-value-size;
-        font-weight: $model-listing-specs-value-weight;
-      }
-    }
-  }
+        tbody {
+            border: none;
+            margin: 0;
+            background-color: $global-background-color;
+            color: $global-font-color;
 
-  .button {
-    margin-right: 1rem;
-    @include breakpoint(small) {
-      width: 100%;
+            tr {
+                background-color: transparent;
+            }
+
+            .spec-label {
+                width: auto;
+                padding: $model-listing-specs-label-padding;
+                font-size: $model-listing-specs-label-size;
+                font-weight: $model-listing-specs-label-weight;
+            }
+
+            .spec-value {
+                width: auto;
+                padding: $model-listing-specs-value-padding;
+                font-size: $model-listing-specs-value-size;
+                font-weight: $model-listing-specs-value-weight;
+            }
+        }
     }
-    @include breakpoint(medium) {
-      width: auto;
+
+    .button {
+        margin-right: 1rem;
+        @include breakpoint(small) {
+            width: 100%;
+        }
+        @include breakpoint(medium) {
+            width: auto;
+        }
     }
-  }
 }

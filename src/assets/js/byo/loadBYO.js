@@ -10,7 +10,7 @@ $(document).ready(function() {
 	
 	window.DAMroot = '';
 	window.prodSiteURL = '';
-	window.productVarName = '';
+	window.productVarName = ''; 
 
 	window.isJSON = function(str) {
 		try {
@@ -56,44 +56,42 @@ window.getUrlParameter = function(sParam) {
 		siteRoot = jQuery('#loadBYO').attr('data-siteRoot');
 		window.prodSiteURL = '//assets.whiterivermg.com';
 	}
+
+	let subdomain = 'www';
+	let topLevelDomain = 'com';
+	if(loc.indexOf("//dev.") > -1){ subdomain = 'dev'; }
+	if(loc.indexOf(".test") > -1){ topLevelDomain = 'test'; }
 	
 	if( loc.indexOf("trackerboats") != -1 ) { 
 		siteRoot = 'trackerboats';
-		window.prodSiteURL = '//www.trackerboats.com';
 	} 
 	if( loc.indexOf("suntrackerboats") != -1 ) { 
 		siteRoot = 'suntrackerboats';
-		window.prodSiteURL = '//www.suntrackerboats.com';
 	} 
 	if( loc.indexOf("regencyboats") != -1 ) { 
 		siteRoot = 'regencyboats';
-		window.prodSiteURL = '//www.regencyboats.com';
 	} 
 	if( loc.indexOf("makoboats") != -1 ) { 
 		siteRoot = 'makoboats';
-		window.prodSiteURL = '//www.makoboats.com';
 	} 
 	if( loc.indexOf("tahoeboats") != -1 ) { 
 		siteRoot = 'tahoeboats';
-		window.prodSiteURL = '//www.tahoeboats.com';
 	} 
-	if( loc.indexOf("nitro") != -1 ) { 
+	if( loc.indexOf("nitro") != -1 ) {
 		siteRoot = 'nitro';
-		window.prodSiteURL = '//www.nitro.com';
 	} 
 	if( loc.indexOf("ranger") != -1 ) { 
 		siteRoot = 'rangerboats';
-		window.prodSiteURL = 'https://www.rangerboats.com';
 	} 
 	if( loc.indexOf("triton") != -1 ) { 
 		siteRoot = 'tritonboats';
-		window.prodSiteURL = '//www.tritonboats.com';
 	} 
 	if( loc.indexOf("trackeroffroad") != -1 ) { 
 		siteRoot = 'trackeroffroad';
-		window.prodSiteURL = '//www.trackeroffroad.com';
-	} 
-	
+	}
+
+	window.prodSiteURL = '//'+subdomain+'.'+siteRoot+'.'+topLevelDomain;
+
 	// Let's figure out what template we need for this request
 	byoTemplate = '/content/dam/wrmg/BYO-GlobalAssets/templates/template-' + siteRoot + '.html';
 	
@@ -117,10 +115,14 @@ window.getUrlParameter = function(sParam) {
 		productID === '8690' ||
 		productID === '8691' ||
 		productID === '8692' ||
+		productID === '8756' ||
+		productID === '8757' ||
 		productID === 8689 ||
 		productID === 8690 ||
 		productID === 8691 ||
 		productID === 8692  ||
+		productID === 8756 ||
+		productID === 8757  ||
 		// Z Series
 		productID === '8678'  ||
 		productID === '8679'  ||
@@ -237,7 +239,7 @@ window.getUrlParameter = function(sParam) {
 			var safari = ua.indexOf("Chrome/");
 			if (safari > 0) {
 
-				resolve("Chrome");
+				resolve("Chrome"); 
 			}
 
 			var safari = ua.indexOf("Safari/");
@@ -630,3 +632,4 @@ window.getUrlParameter = function(sParam) {
 	}
 	
 });
+

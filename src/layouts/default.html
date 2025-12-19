@@ -8,15 +8,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Components Library</title>
 
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
-
 		<link rel="stylesheet" href="{{root}}assets/css/app.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 		<!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
 
+        <link rel="stylesheet" href="/assets/css/form-controls.css" />
+
+        <link rel="stylesheet" href="/assets/css/custom-trackeroffroad.css">
+
         <script src="https://kit.fontawesome.com/961f4edefa.js" crossorigin="anonymous"></script>
-		<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous"> -->
 
         <script src="{{root}}assets/js/param-cookies.js"></script>
 
@@ -26,7 +27,7 @@
 			}
 		</style>
 
-		<style>
+		<!-- <style>
 			.media-item {
 				width: 33%;
 			}
@@ -34,7 +35,9 @@
 				width: 100%!important;
 				height: auto!important;
 			}
-		</style>
+		</style> -->
+
+        <script src='https://www.google.com/recaptcha/api.js'></script>
 
 		<!-- Hatteras font imports -->
 		<script src="//use.typekit.net/iwq0snr.js"></script>
@@ -83,6 +86,43 @@
                     </div>
                 </div>
 		    </div> -->
+            <div class="dealerLocationBar section">
+
+            <div class="mini-nav" id="mini-nav">
+                <table id="mini-nav-menu">
+                    <tbody>
+                        <tr>
+                            <td class="your-store">
+                                <a href="#" data-toggle="store-dropdown" aria-controls="store-dropdown" data-is-focus="false" data-yeti-box="store-dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="store-label show-for-large">Your Store: </span><span class="store-name">Rocky View, AB</span></a>
+                            </td>
+                            <td class="hide-for-large spacer"></td>
+                            <td id="dealerNavPhone">
+                                <i class="fas fa-phone fa-flip-horizontal"></i> 
+                                <span class="number-digits show-for-large">1-403-592-3832</span>
+                                <span class="number-label hide-for-large"><a href="tel:14035923832">Call</a></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="dropdown-pane" id="store-dropdown" data-hover="true" data-hover-pane="true" aria-hidden="true" data-yeti-box="store-dropdown" data-resize="store-dropdown" aria-labelledby="iazwdm-dd-anchor" data-e="g8iaqr-e" data-events="resize" style="top: 33.3906px; left: 854.969px;">
+                    <ul class="vertical menu">
+                        <li class="dealerNavProfile">
+                            <button class="button expanded primary small" href="#">VISIT STORE PROFILE</button>
+                        </li>
+                        <li>
+                            <a class="store-link navBoatlink" href="/boats-for-sale.html?sDealerIds=5751485650">Shop Boat Inventory</a>
+                        </li>
+                        <li>
+                            <a class="store-link navOffRoadlink" href="/atvs-for-sale.html?sDealerIds=5751485650">Shop Off Road Inventory</a>
+                        </li>
+                        <li>
+                            <a class="store-link" href="/services.html">Schedule Service</a>
+                        </li>
+                    </ul>
+                    <a class="change-store" href="/dealer-locations.html">Change Your Store</a>
+                </div>
+            </div>
 			<div class="sub-navigation" id="sub-navigation">
 				<!-- <div data-sticky-container> -->
 				<div class="title-bar" data-options="marginTop:0;">
@@ -143,18 +183,11 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
             <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
             <script src="{{root}}assets/js/app.js"></script>
-            <!-- <script src="{{root}}assets/js/custom-js.js"></script> -->
 			<script src="{{root}}assets/js/cookies.js"></script>
-			<!-- <script src="{{root}}assets/js/chat.js"></script> -->
-            <!-- <script src="{{root}}assets/js/liveChatHours.js"></script> -->
-            <!-- <script src="{{root}}assets/js/pdp-badging.js"></script> -->
-            <!-- <script src="{{root}}assets/js/plp-badging.js"></script> -->
-            <!-- <script src="{{root}}assets/js/model-year-end-clearance.js"></script> -->
-			<!-- <script src="{{root}}assets/js/credit-app-lead.js"></script> -->
-			<!-- <script src="{{root}}assets/js/dealer-search-lead.js"></script> -->
-            <!-- <script src="{{root}}assets/js/param-cookies.js"></script> -->
-			<script src="{{root}}assets/js/lead.js"></script>
-			<!-- <script src="{{root}}assets/js/rockBottomClearance-promo.js"></script> -->
+			<script src="{{root}}assets/js/promos/2025-model-year-end-clearance.js"></script>
+			<script src="{{root}}assets/js/promos/2025-model-year-end-clearance-pdp.js"></script>
+			<script src="{{root}}assets/js/imageSlider.js"></script>
+			<!-- <script src="{{root}}assets/js/setYearDropdown.js"></script> -->
 			<!-- <script src="https://kit.fontawesome.com/78d9c12a93.js" crossorigin="anonymous"></script> -->
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
 			<script src="{{root}}assets/js/foundationLoad.js"></script>
@@ -170,12 +203,32 @@
 			<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
 			<!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script> -->
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.10/js/lightgallery.min.js"></script>
-			<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lg-thumbnail/1.1.0/lg-thumbnail.min.js"></script> -->
-			<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lg-video/1.2.2/lg-video.min.js"></script> -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/lg-thumbnail/1.1.0/lg-thumbnail.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/lg-video/1.2.2/lg-video.min.js"></script>
 			<!-- <script src="{{root}}assets/js/lib/owl.carousel2.thumbs.js"></script> -->
 			<script src="{{root}}assets/js/custom-gallery.js"></script>
 		</div>
-
 	</body>
 
+    <script>
+        $(document).ready((event) => {
+            twentyFiveMyod();
+            twentyFiveMyecPDP();
+            // initComparisons();
+        });
+        $(document).on("ajaxComplete", () => {
+            twentyFiveMyod();
+            twentyFiveMyecPDP();
+        });
+
+        const sliderDesktopImages = {
+            before: 'https://assets.whiterivermg.com/content/dam/wrmg/ranger-fiberglass/2025/fisherman/621fs-ranger-cup-equipped/studio/24_R_621FSC_OH001.png',
+            after: 'https://assets.whiterivermg.com/content/dam/wrmg/ranger-fiberglass/2025/fisherman/621fs-ranger-cup-equipped/studio/24_R_621FSC_OH002.png',
+        }
+
+        const sliderMobileImages = {
+            before: 'https://dev.rangerboats.test/content/dam/wrmg/ranger-fiberglass/2025/z-comanche-series/z521r/studio/25_R_Z521R_OH001-mobile.png',
+            after: 'https://dev.rangerboats.test/content/dam/wrmg/ranger-fiberglass/2025/z-comanche-series/z521r/studio/25_R_Z521R_OH005-mobile.png'
+        }
+    </script>
 </html>

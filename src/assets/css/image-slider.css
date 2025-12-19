@@ -1,0 +1,56 @@
+/* Before/After Image Slider Styles
+.img-comp-container {
+  position: relative;
+  height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+.img-comp-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+}
+.img-comp-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.img-comp-overlay {
+  width: 50%;
+  overflow: hidden;
+  transition: width 0.2s;
+}
+.img-comp-slider {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 50%;
+  width: 40px;
+  height: 100%;
+  background: rgba(255,255,255,0.7);
+  border-radius: 20px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  cursor: ew-resize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.2s;
+}
+.img-comp-slider:after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 40px;
+  background: #333;
+  border-radius: 4px;
+}
+@media (max-width: 600px) {
+  .img-comp-slider {
+    width: 30px;
+  }
+  .img-comp-slider:after {
+    height: 30px;
+  }
+} */

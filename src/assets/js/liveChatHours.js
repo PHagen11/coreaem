@@ -1,8 +1,10 @@
 /* GET EACH CHAT BUTTON AND SAVE TO VARIABLE */
 // const allChatButtons = document.querySelectorAll(".chat-button");
-let customerServiceBtn = document.querySelector(".cust-service-btn");
-let salesTeamBtn = document.querySelector(".sales-btn");
-let partsTeamBtn = document.querySelector(".parts-btn");
+// let customerServiceBtn = document.querySelector(".cust-service-btn");
+// let salesTeamBtn = document.querySelector(".sales-btn");
+// let partsTeamBtn = document.querySelector(".parts-btn");
+
+let callbackForm = document.getElementById("callback");
 
 // for (let chatButton of allChatButtons) {
 //     let value = chatButton.innerText;
@@ -77,13 +79,18 @@ const dateTimeFormatOptions = {
     minute: 'numeric'
 };
 
-const startHour = 8, endHour = 17, salesEndHour = 18;
+const startHour = 8, weekdayEndHour = [17, 30], saturdayEndHour = [16, 30], salesEndHour = 18;
 
-const isInsideHours = (hour) => hour >= startHour && hour < endHour;
+const isInsideHours = (hour, minute) => { 
+    return hour >= startHour && (hour < weekdayEndHour[0] || (hour === weekdayEndHour[0] && minute < weekdayEndHour[1]))
+}
+const isInsideSatHours = (hour, minute) => {
+    return hour >= startHour && (hour < saturdayEndHour[0] || (hour === saturdayEndHour[0] && minute < saturdayEndHour[1]))
+}
 const isInsideSalesHours = (hour) => hour >= startHour && hour < salesEndHour;
 
 // const isWeekday = (weekday) => weekday !== 'Sat' || 'Sun';
-const isSaturday = (weekday) => weekday == 'Sat';
+const isSaturday = (weekday) => weekday == 'Mon';
 const isSunday = (weekday) => weekday == 'Sun';
 
 const isHoliday = (month, day) =>
@@ -100,26 +107,37 @@ const parseDateSegments = (date = new Date()) =>
         }, {});
 
 const isInsideBusinessHours = (date = new Date()) => {
-    const { weekday, day, month, hour } = parseDateSegments(date);
-    console.log(`${weekday} ${day} ${month} ${hour}`);
+    const { weekday, day, month, hour, minute } = parseDateSegments(date);
+    // console.log(`${weekday} ${day} ${month} ${hour} ${minute}`);
+    // console.log(parseDateSegments())
 
-    if (isInsideHours(hour) && !isSaturday(weekday) && !isSunday(weekday) && !isHoliday(month, day)) {
-        customerServiceBtn.style.display = "block";
-        salesTeamBtn.style.display = "block";
-        partsTeamBtn.style.display = "block";
-    } else if (isInsideSalesHours(hour) && !isSaturday(weekday) && !isSunday(weekday) && !isHoliday(month, day)) {
-        customerServiceBtn.style.display = "none";
-        salesTeamBtn.style.display = "block";
-        partsTeamBtn.style.display = "none";
-    } else if (isInsideSalesHours(hour) && isSaturday(weekday) && !isSunday(weekday) && !isHoliday(month, day)) {
-        customerServiceBtn.style.display = "none";
-        salesTeamBtn.style.display = "block";
-        partsTeamBtn.style.display = "none";
+    // console.log(!isHoliday(month, day))
+
+    if (isInsideHours(hour, minute) && !isSaturday(weekday) && !isSunday(weekday) && !isHoliday(month, day)) {
+        callbackForm.style.display = "block";
+    } else if (isInsideSatHours(hour, minute) && isSaturday(weekday) && !isSunday(weekday) && !isHoliday(month, day)) {
+        callbackForm.style.display = "block";
     } else {
-        customerServiceBtn.style.display = "none";
-        salesTeamBtn.style.display = "none";
-        partsTeamBtn.style.display = "none";
+        callbackForm.style.display = "none";
     }
+
+    // if (isInsideHours(hour) && !isSaturday(weekday) && !isSunday(weekday) && !isHoliday(month, day)) {
+    //     customerServiceBtn.style.display = "block";
+    //     salesTeamBtn.style.display = "block";
+    //     partsTeamBtn.style.display = "block";
+    // } else if (isInsideSalesHours(hour) && !isSaturday(weekday) && !isSunday(weekday) && !isHoliday(month, day)) {
+    //     customerServiceBtn.style.display = "none";
+    //     salesTeamBtn.style.display = "block";
+    //     partsTeamBtn.style.display = "none";
+    // } else if (isInsideSalesHours(hour) && isSaturday(weekday) && !isSunday(weekday) && !isHoliday(month, day)) {
+    //     customerServiceBtn.style.display = "none";
+    //     salesTeamBtn.style.display = "block";
+    //     partsTeamBtn.style.display = "none";
+    // } else {
+    //     customerServiceBtn.style.display = "none";
+    //     salesTeamBtn.style.display = "none";
+    //     partsTeamBtn.style.display = "none";
+    // }
     // return isInsideHours(hour) && isWeekday(weekday) && !isHoliday(month, day);
 };
 
