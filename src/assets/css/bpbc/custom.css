@@ -55,11 +55,11 @@ span.badge.success {
 }
 
 .promo-badge {
-    font-size: .92rem;
+    font-size:.75rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: #fff;
-    background-color: #e32000;
     z-index: 0 !important;
-    border-radius: 0 0 0 6px;
+    border-radius: 0.1875rem;
+    color:#fff;
+    background:#ff2400;
 }

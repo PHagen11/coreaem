@@ -936,6 +936,7 @@ $xy-block-grid-max: 8;
 //  29. Build A Boat Component
 //  30. Scroll to Top Button
 //  31. Inventory Component
+//  32. Before/After Image Component
 
 
 // 1. Global
@@ -1584,6 +1585,16 @@ $inventory-body-bg-color: $body-background;
 $inventory-text-color: $white;
 $inventory-text-hover-color: $medium-gray;
 $inventory-sort-order-menu-text-color: $dark-gray;
+
+// 32. Before/After Image Component
+// -----------------------------
+
+$before-after-background-color: $black;
+$before-after-slider-divider-color: $primary-color;
+$before-after-slider-divider-icon-color: $light-gray;
+$before-after-loading-bar-color: $primary-color;
+$before-after-loading-bar-bg-opacity: 0.5;
+$before-after-loading-bar-bg-color: rgba(49, 50, 54, $before-after-loading-bar-bg-opacity); // $dark-gray;
 
 //These are used by numerous components but seldom change
 

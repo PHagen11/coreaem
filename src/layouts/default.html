@@ -9,6 +9,7 @@
 		<title>Components Library</title>
 
 		<link rel="stylesheet" href="{{root}}assets/css/app.css">
+		<link rel="stylesheet" href="{{root}}assets/css/custom-bpbc.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 		<!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
@@ -27,16 +28,6 @@
 			}
 		</style>
 
-		<!-- <style>
-			.media-item {
-				width: 33%;
-			}
-			.media-item img {
-				width: 100%!important;
-				height: auto!important;
-			}
-		</style> -->
-
         <script src='https://www.google.com/recaptcha/api.js'></script>
 
 		<!-- Hatteras font imports -->
@@ -45,7 +36,6 @@
 
 	</head>
 	<body>
-
 		<div class="site" id="site">
 			<!-- <div class="sub-navigation anchor-menu">
                 <div data-sticky-container>
@@ -86,7 +76,7 @@
                     </div>
                 </div>
 		    </div> -->
-            <div class="dealerLocationBar section">
+            <!-- <div class="dealerLocationBar section"> -->
 
             <div class="mini-nav" id="mini-nav">
                 <table id="mini-nav-menu">
@@ -108,7 +98,7 @@
                 <div class="dropdown-pane" id="store-dropdown" data-hover="true" data-hover-pane="true" aria-hidden="true" data-yeti-box="store-dropdown" data-resize="store-dropdown" aria-labelledby="iazwdm-dd-anchor" data-e="g8iaqr-e" data-events="resize" style="top: 33.3906px; left: 854.969px;">
                     <ul class="vertical menu">
                         <li class="dealerNavProfile">
-                            <button class="button expanded primary small" href="#">VISIT STORE PROFILE</button>
+                            <button class="button expanded primary small">VISIT STORE PROFILE</button>
                         </li>
                         <li>
                             <a class="store-link navBoatlink" href="/boats-for-sale.html?sDealerIds=5751485650">Shop Boat Inventory</a>
@@ -184,9 +174,11 @@
             <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
             <script src="{{root}}assets/js/app.js"></script>
 			<script src="{{root}}assets/js/cookies.js"></script>
-			<script src="{{root}}assets/js/promos/2025-model-year-end-clearance.js"></script>
-			<script src="{{root}}assets/js/promos/2025-model-year-end-clearance-pdp.js"></script>
-			<script src="{{root}}assets/js/imageSlider.js"></script>
+			<!-- <script src="{{root}}assets/js/promos/2025-model-year-end-clearance.js"></script>
+			<script src="{{root}}assets/js/promos/2025-model-year-end-clearance-pdp.js"></script> -->
+			<script src="{{root}}assets/js/promos/tor-warranty-promo.js"></script>
+			<script src="{{root}}assets/js/promos/gift-card-promo-pdp.js"></script>
+			<!-- <script src="{{root}}assets/js/imageSlider.js"></script> -->
 			<!-- <script src="{{root}}assets/js/setYearDropdown.js"></script> -->
 			<!-- <script src="https://kit.fontawesome.com/78d9c12a93.js" crossorigin="anonymous"></script> -->
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
@@ -208,27 +200,24 @@
 			<!-- <script src="{{root}}assets/js/lib/owl.carousel2.thumbs.js"></script> -->
 			<script src="{{root}}assets/js/custom-gallery.js"></script>
 		</div>
+
+        <script>
+            $(document).ready((event) => {
+                torWarrantyPromo();
+            });
+            $(document).on("ajaxComplete", () => {
+                torWarrantyPromo();
+            });
+
+            // const sliderDesktopImages = {
+            //     before: 'https://assets.whiterivermg.com/content/dam/wrmg/ranger-fiberglass/2025/fisherman/621fs-ranger-cup-equipped/studio/24_R_621FSC_OH001.png',
+            //     after: 'https://assets.whiterivermg.com/content/dam/wrmg/ranger-fiberglass/2025/fisherman/621fs-ranger-cup-equipped/studio/24_R_621FSC_OH002.png',
+            // }
+
+            // const sliderMobileImages = {
+            //     before: 'https://dev.rangerboats.test/content/dam/wrmg/ranger-fiberglass/2025/z-comanche-series/z521r/studio/25_R_Z521R_OH001-mobile.png',
+            //     after: 'https://dev.rangerboats.test/content/dam/wrmg/ranger-fiberglass/2025/z-comanche-series/z521r/studio/25_R_Z521R_OH005-mobile.png'
+            // }
+        </script>
 	</body>
-
-    <script>
-        $(document).ready((event) => {
-            twentyFiveMyod();
-            twentyFiveMyecPDP();
-            // initComparisons();
-        });
-        $(document).on("ajaxComplete", () => {
-            twentyFiveMyod();
-            twentyFiveMyecPDP();
-        });
-
-        const sliderDesktopImages = {
-            before: 'https://assets.whiterivermg.com/content/dam/wrmg/ranger-fiberglass/2025/fisherman/621fs-ranger-cup-equipped/studio/24_R_621FSC_OH001.png',
-            after: 'https://assets.whiterivermg.com/content/dam/wrmg/ranger-fiberglass/2025/fisherman/621fs-ranger-cup-equipped/studio/24_R_621FSC_OH002.png',
-        }
-
-        const sliderMobileImages = {
-            before: 'https://dev.rangerboats.test/content/dam/wrmg/ranger-fiberglass/2025/z-comanche-series/z521r/studio/25_R_Z521R_OH001-mobile.png',
-            after: 'https://dev.rangerboats.test/content/dam/wrmg/ranger-fiberglass/2025/z-comanche-series/z521r/studio/25_R_Z521R_OH005-mobile.png'
-        }
-    </script>
 </html>
