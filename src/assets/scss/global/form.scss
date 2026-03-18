@@ -3,17 +3,15 @@
         margin-top: 1rem;
     }
 }
-form label {
-  @include breakpoint(small) {
-    padding: 0 0.5rem 0 0.5rem;
-  }
-  @include breakpoint(medium) {
-    padding-right: 1.2rem;
-    padding-left: 0;
-  }
+#form4 .grid-x .cell {
+    padding: 0;
+    
+    @include breakpoint(medium) {
+        padding: 0 10px;
+    }
 }
-[type='checkbox'] + label, [type='radio'] + label {
-  //margin-left: 0.3rem;
+form label {
+    padding: 0;
 }
 label > [type='checkbox'], label > [type='radio'] {
   margin-right: 0;

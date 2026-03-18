@@ -979,6 +979,7 @@ $title-text-transform:uppercase;
 
 // Site
 $site-bkg-color: $black;
+$column-bkg-color: $secondary-color;
 .site {
   max-width: 2000px;
   margin: auto;
@@ -1594,6 +1595,16 @@ $before-after-slider-divider-icon-color: $light-gray;
 $before-after-loading-bar-color: $primary-color;
 $before-after-loading-bar-bg-opacity: 0.5;
 $before-after-loading-bar-bg-color: rgba(49, 50, 54, $before-after-loading-bar-bg-opacity); // $dark-gray;
+
+// 33. Form Dealer Selector
+// -----------------------------
+$form-dealer-selector-background-color: transparent;
+$form-dealer-selector-border-color: $white;
+$form-dealer-selector-header: $white;
+$form-dealer-selector-address: $white;
+$form-dealer-selector-phone: $white;
+$form-dealer-select-dealer-cta-background-color: $primary-color;
+$form-dealer-change-dealer-cta-color: $white;
 
 //These are used by numerous components but seldom change
 

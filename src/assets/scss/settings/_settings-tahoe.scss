@@ -978,6 +978,7 @@ $title-text-transform:uppercase;
 
 // Site
 $site-bkg-color: $white;
+$column-bkg-color: $white;
 .site {
   max-width: 2000px;
   margin: auto;
@@ -1037,12 +1038,14 @@ $header-menu-item-letter-spacing: 1px;
 $header-dropdown-arrow-color: $primary-color;
 $header-dropdown-width: 250px;
 $header-dropdown-background-color: $white;
+$header-dropdown-border-top: 1px solid rgba(0,0,0,.9);
 $header-dropdown-border-left: 4px solid $light-gray;
 $header-submenu-background-color: $secondary-color;
 $header-submenu-link-color: $black;
 $header-submenu-link-color-hover: $primary-color;
 $header-submenu-line-height: 1.5rem;
 $header-submenu-link-font-size: 1rem;
+$header-submenu-link-margin-left: 0.7rem;
 $header-logo-height: 56px;
 $header-logo-padding-top: 20px;
 $header-cta-left-spacing: 1rem;
@@ -1258,6 +1261,7 @@ $icon-padding: 0.25em;
 // 16. Link List Component
 // -----------------------------
 
+$link-list-text-transform: capitalize;
 $link-list-title-font-weight: bold;
 $link-list-font-family:$header-font-family;
 $link-list-font-size: 1.1rem;
@@ -1581,6 +1585,26 @@ $inventory-body-bg-color: $body-background;
 $inventory-text-color: $white;
 $inventory-text-hover-color: $medium-gray;
 $inventory-sort-order-menu-text-color: $dark-gray;
+
+// 32. Before/After Image Component
+// -----------------------------
+
+$before-after-background-color: $black;
+$before-after-slider-divider-color: $primary-color;
+$before-after-slider-divider-icon-color: $light-gray;
+$before-after-loading-bar-color: $primary-color;
+$before-after-loading-bar-bg-opacity: 0.5;
+$before-after-loading-bar-bg-color: rgba(49, 50, 54, $before-after-loading-bar-bg-opacity); // $dark-gray;
+
+// 33. Form Dealer Selector
+// -----------------------------
+$form-dealer-selector-background-color: #fff;
+$form-dealer-selector-border-color: $border-gray;
+$form-dealer-selector-header: $black;
+$form-dealer-selector-address: $black;
+$form-dealer-selector-phone: $secondary-color;
+$form-dealer-select-dealer-cta-background-color: $secondary-color;
+$form-dealer-change-dealer-cta-color: $black;
 
 //These are used by numerous components but seldom change
 

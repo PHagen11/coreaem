@@ -159,7 +159,8 @@ $(document).ready(function () {
 
 	//Apply the dealer id if available.
 	try {
-		var storeData = getMyStore();
+		// var storeData = getMyStore();
+        const storeData = { dealerId: 1427 }
 		if(storeData && storeData.dealerId != "" ) {			
 			var dealerId = storeData.dealerId;	
 			console.log("Dealer ID: " + dealerId);

@@ -1,0 +1,66 @@
+#dealerDisplay {
+    width: 100%;
+}
+.form-dealer-info {
+    text-align: center;
+    border: 2px solid $form-dealer-selector-border-color;
+    padding: 1rem 0;
+    background-color: $form-dealer-selector-background-color;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+
+    @media (max-width: 500px) {
+        padding: 1.4rem 1rem;
+    }
+
+    .dealer-select {
+        color: $form-dealer-selector-header;
+        text-transform: uppercase;
+        font-size: 1.1rem; // 1.2rem;
+        margin-bottom: 0px;
+    }
+
+    .dealer-name {
+        color: $form-dealer-selector-header;
+        text-transform: uppercase;
+        font-size: 1.1rem; // 1.2rem;
+    }
+
+    .dealer-result-address {
+        // padding-top: 0.5rem;
+        font-size: .94rem; // 1.2rem;
+        color: $form-dealer-selector-address;
+        line-height: 1.3;
+    }
+
+    .dealer-result-phone {
+        font-weight: 500;
+        font-size: .94rem; // 1.2rem;
+        color: $form-dealer-selector-address;
+        // padding: 1rem;
+        border-radius: 6px;
+        line-height: 1.3;
+
+        a {
+            color: $form-dealer-selector-phone;
+            font-weight: 700;
+            display: inline-block;
+        }
+    }
+
+    .change-dealer {
+        display: block;
+        margin: .25rem 0px 0px;
+        padding: 0px;
+        font-size: 1rem;
+        font-weight: 400;
+        color: $form-dealer-change-dealer-cta-color;
+        text-decoration: underline;
+    }
+
+    .select-dealer {
+        margin: 10px 0px 0px;
+        background-color: $form-dealer-select-dealer-cta-background-color;
+    }
+}

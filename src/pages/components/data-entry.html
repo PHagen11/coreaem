@@ -5,22 +5,14 @@
 </div>
 <div class="grid-container">
 	<div class="grid-x grid-margin-x sticky-anchor large-top" id="sticky-side-anchor-container">
-		<!-- Add a Sticky Menu -->
-		<!-- <div class="cell left small-0 medium-4 large-2 sticky-container" data-sticky-container>
-      <div class="samenu">
-        <div class="sticky" data-sticky data-anchor="sticky-side-anchor-container" data-margin-top="5" data-sticky-on="medium" data-deep-linking="true">
-          <ul class="vertical menu" data-magellan>
-            <li><a href="#inventory-search">Inventory Search</a></li>
-            <li><a href="#form">Form</a></li>
-            <li><a href="#country-select">Country Select</a></li>
-            <li><a href="#brochure-request">Brochure Request</a></li>
-          </ul>
-        </div>
-      </div>
-    </div> -->
 		<div class="cell small-12 sections" id="sections">
-
-			<!-- INVENTORY SEARCH -->
+			<!-- REQUEST INFORMATION -->
+			<section id="request-information" data-magellan-target="request-information" class="large-bottom">
+				<h5 class="medium-bottom">Request Information</h5>
+				{{> request-info}}
+			</section>
+            
+            <!-- INVENTORY SEARCH -->
 			<section id="inventory-search" data-magellan-target="inventory-search" class="large-bottom">
 				<h5 class="medium-bottom">Inventory Search</h5>
 				{{!> inventory-search}}
@@ -53,7 +45,7 @@
 			<!-- BPBC Financing -->
 			<section id="bpbc-finance" data-magellan-target="bpbc-finance" class="large-bottom">
 				<h5 class="medium-bottom">BPBC Financing</h5>
-				{{> bpbc-financing-form}}
+				{{!> bpbc-financing-form}}
 			</section>
 
             <section id="warranty-transfer" data-magellan-target="warranty-transfer" class="large-bottom">
@@ -138,7 +130,7 @@
             <!-- Ask a question -->
 			<section id="trade-in-container" class="large-bottom" data-magellan-target="trade-in-container">
 				<h5 class="medium-bottom">Ask A Question</h5>
-				{{> bpbc-boat-model-ask-a-question }}
+				{{!> bpbc-boat-model-ask-a-question }}
                 {{!> bpbc-location-ask-a-question }}
 			</section>
         </div>

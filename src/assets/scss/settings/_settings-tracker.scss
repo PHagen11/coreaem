@@ -939,6 +939,7 @@ $xy-block-grid-max: 8;
 //  29. Build A Boat Component
 //  30. Scroll to Top Button
 //  31. Inventory Component
+//  32. Before/After Image Component
 
 
 // 1. Global
@@ -983,6 +984,7 @@ $target: 'accordion-menu';
 
 // Site
 $site-bkg-color: $white;
+$column-bkg-color: $white;
 .site {
   max-width: 2000px;
   margin: auto;
@@ -1588,6 +1590,26 @@ $inventory-body-bg-color: $body-background;
 $inventory-text-color: $white;
 $inventory-text-hover-color: $medium-gray;
 $inventory-sort-order-menu-text-color: $dark-gray;
+
+// 32. Before/After Image Component
+// -----------------------------
+
+$before-after-background-color: $black;
+$before-after-slider-divider-color: $primary-color;
+$before-after-slider-divider-icon-color: $light-gray;
+$before-after-loading-bar-color: $primary-color;
+$before-after-loading-bar-bg-opacity: 0.5;
+$before-after-loading-bar-bg-color: rgba(49, 50, 54, $before-after-loading-bar-bg-opacity); // $dark-gray;
+
+// 33. Form Dealer Selector
+// -----------------------------
+$form-dealer-selector-background-color: $white;
+$form-dealer-selector-border-color: $border-gray;
+$form-dealer-selector-header: $black;
+$form-dealer-selector-address: $black;
+$form-dealer-selector-phone: $secondary-color;
+$form-dealer-select-dealer-cta-background-color: $secondary-color;
+$form-dealer-change-dealer-cta-color: $black;
 
 //These are used by numerous components but seldom change
 

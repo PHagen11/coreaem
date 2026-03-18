@@ -6,8 +6,7 @@ function giftCardPromoPDP() {
     let modelTitleHeader = document.querySelector(".mname h1").innerHTML.trim();
     let boatCondition = modelTitleContainer.getAttribute('data-condition').toLowerCase();
 
-    const promoModelsPdp = [
-        {offer: '250', title: "Tracker Bass Tracker Classic XL"},
+    const twentySixPromoModels = [
         {offer: '250', title: "Tracker Bass Tracker Classic Limited"},
         {offer: '250', title: "Tracker Pro 170"},
         {offer: '500', title: "Tracker Pro Team 175"},
@@ -18,10 +17,6 @@ function giftCardPromoPDP() {
         {offer: '500', title: "Tracker Pro Guide V-16 SC"},
         {offer: '500', title: "Tracker Pro Guide V-16 WT"},
         {offer: '500', title: "Tracker Pro Guide V-175 Combo"},
-        {offer: '500', title: "Tracker Targa V-18 WT"},
-        {offer: '500', title: "Tracker Targa V-18 Combo"},
-        {offer: '500', title: "Tracker Targa V-19 WT"},
-        {offer: '500', title: "Tracker Targa V-19 Combo"},
         {offer: '500', title: "Nitro Z17"},
         {offer: '500', title: "Nitro Z18"},
         {offer: '500', title: "Nitro Z18 Pro"},
@@ -34,7 +29,6 @@ function giftCardPromoPDP() {
         {offer: '750', title: "Nitro ZV19"},
         {offer: '750', title: "Nitro ZV19 Pro"},
         {offer: '750', title: "Nitro ZV19 Sport"},
-        {offer: '750', title: "Nitro ZV19 Sport Pro"},
         {offer: '1000', title: "Nitro ZV20 Sport"},
         {offer: '1000', title: "Nitro ZV20 Sport Pro"},
         {offer: '1000', title: "Nitro ZV21"},
@@ -46,28 +40,27 @@ function giftCardPromoPDP() {
         {offer: '750', title: "Sun Tracker Fishin' Barge 20 DLX"},
         {offer: '750', title: "Sun Tracker SportFish 20 DLX"},
         {offer: '750', title: "Sun Tracker Party Barge 20 DLX"},
-        {offer: '750', title: "Sun Tracker Fishin' Barge 22 DLX"},
-        {offer: '750', title: "Sun Tracker Party Barge 22 DLX"},
-        {offer: '750', title: "Sun Tracker Party Barge 22 RF DLX"},
-        {offer: '750', title: "Sun Tracker SportFish 22 DLX"},
-        {offer: '750', title: "Sun Tracker SportFish 22 XP3"},
-        {offer: '750', title: "Sun Tracker Fishin' Barge 22 XP3"},
-        {offer: '750', title: "Sun Tracker Party Barge 22 XP3"},
-        {offer: '750', title: "Sun Tracker Party Barge 22 RF XP3"},
+        {offer: '1000', title: "Sun Tracker Fishin' Barge 22 DLX"},
+        {offer: '1000', title: "Sun Tracker Party Barge 22 DLX"},
+        {offer: '1000', title: "Sun Tracker Party Barge 22 RF DLX"},
+        {offer: '1000', title: "Sun Tracker SportFish 22 DLX"},
+        {offer: '1000', title: "Sun Tracker SportFish 22 XP3"},
+        {offer: '1000', title: "Sun Tracker Fishin' Barge 22 XP3"},
+        {offer: '1000', title: "Sun Tracker Party Barge 22 XP3"},
+        {offer: '1000', title: "Sun Tracker Party Barge 22 RF XP3"},
         {offer: '1000', title: "Sun Tracker Party Barge 24 XP3"},
         {offer: '1000', title: "Sun Tracker Sportfish 24 XP3"},
         {offer: '500', title: "Tahoe T16"},
         {offer: '500', title: "Tahoe T18"},
         {offer: '500', title: "Tahoe T21"},
-        {offer: '250', title: "Mako Pro Skiff 13 CC"},
-        {offer: '250', title: "Mako Pro Skiff 15 CC"},
         {offer: '250', title: "Mako Pro Skiff 17 CC"},
+        {offer: '1000', title: "Mako 214 Center Console"},
         {offer: '1000', title: "Mako 24 APEX"},
         {offer: '500', title: "Ranger RT178"},
         {offer: '750', title: "Ranger RT188"},
         {offer: '1000', title: "Ranger RT188P"},
         {offer: '1000', title: "Ranger RT198P"},
-        {offer: '1000', title: "Ranger ALPHA 208"},
+        {offer: '2500', title: "Ranger ALPHA 208"},
         {offer: '500', title: "Ranger VS1665SC"},
         {offer: '750', title: "Ranger VS1682SC Angler"},
         {offer: '750', title: "Ranger VS1682SC Reata"},
@@ -93,7 +86,6 @@ function giftCardPromoPDP() {
         {offer: '2500', title: "Ranger Z521R"},
         {offer: '2500', title: "Ranger Z521R Cup-Equipped"},
         {offer: '1000', title: "Ranger 1880MS"},
-        {offer: '2000', title: "Ranger 2050MS"},
         {offer: '2000', title: "Ranger 2080MS"},
         {offer: '1000', title: "Ranger 212LS"},
         {offer: '2000', title: "Ranger 620FS Cup-Equipped"},
@@ -111,9 +103,28 @@ function giftCardPromoPDP() {
         {offer: '1000', title: "Triton 21XP Patriot"},
     ];
 
-    if (boatCondition.includes("new") && (modelTitleHeader.includes("2024") || modelTitleHeader.includes("2025") || modelTitleHeader.includes("2026"))) {
-        for (let model of promoModelsPdp) {
-            if (modelTitleHeader.slice(5) === model.title) {
+    const twentyFivePromoModels = [
+        {offer: '500', title: "Ranger Reata 200C"},
+        {offer: '500', title: "Ranger Reata 200F"},
+        {offer: '750', title: "Ranger Reata 220C"},
+        {offer: '750', title: "Ranger Reata 223C"},
+        {offer: '500', title: "Regency 230 DL3"},
+        {offer: '500', title: "Regency 250 DL3"},
+        {offer: '750', title: "Regency 230 LE3"},
+        {offer: '750', title: "Regency 250 LE3"},
+    ];
+
+    if (boatCondition.includes("new")) {
+        for (let model of twentySixPromoModels) {
+            if (modelTitleHeader.slice(5) === model.title && (modelTitleHeader.includes("2024") || modelTitleHeader.includes("2025") || modelTitleHeader.includes("2026"))) {
+                priceBlockLarge.parentElement.classList.add("hasPromo")
+                priceBlockSmall.parentElement.classList.add("hasPromo")
+                priceBlockLarge.insertAdjacentHTML('afterend', `<img src="https://assets.whiterivermg.com/content/dam/wrmg/events-and-promos/2026/the-big-bass-boat-sale/gift-cards/GiftCard_${model.offer}_Q1.png" alt="$${model.offer} gift card offer" style="top: 0 !important; position: relative !important; width: 250px !important; right: 0 !important; bottom: auto !important; left: auto !important; display: block !important; margin-left: auto !important; margin-right: auto !important;">`);
+                priceBlockSmall.insertAdjacentHTML('afterend', `<img src="https://assets.whiterivermg.com/content/dam/wrmg/events-and-promos/2026/the-big-bass-boat-sale/gift-cards/GiftCard_${model.offer}_Q1.png" alt="$${model.offer} gift card offer" style="top: 0px !important; position: relative !important; width: 225px !important; right: auto !important; bottom: auto !important; left: auto !important; display: block !important; margin-left: auto !important; margin-right: auto !important;">`);
+            }
+        }
+        for (let model of twentyFivePromoModels) {
+            if (modelTitleHeader.slice(5) === model.title && !modelTitleHeader.includes("2026")) {
                 priceBlockLarge.parentElement.classList.add("hasPromo")
                 priceBlockSmall.parentElement.classList.add("hasPromo")
                 priceBlockLarge.insertAdjacentHTML('afterend', `<img src="https://assets.whiterivermg.com/content/dam/wrmg/events-and-promos/2026/the-big-bass-boat-sale/gift-cards/GiftCard_${model.offer}_Q1.png" alt="$${model.offer} gift card offer" style="top: 0 !important; position: relative !important; width: 250px !important; right: 0 !important; bottom: auto !important; left: auto !important; display: block !important; margin-left: auto !important; margin-right: auto !important;">`);
