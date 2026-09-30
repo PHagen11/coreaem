@@ -4,7 +4,10 @@
   </div>
 </div>
 <div class="grid-container">
-  <div class="grid-x grid-margin-x sticky-anchor large-top" id="sticky-side-anchor-container">
+  <div
+    class="grid-x grid-margin-x sticky-anchor large-top"
+    id="sticky-side-anchor-container"
+  >
     <!-- Add a Sticky Menu -->
     <!-- <div class="cell left small-12 medium-3 large-2 sticky-container" data-sticky-container>
       <div class="samenu">
@@ -24,80 +27,334 @@
       </div>
     </div> -->
     <div class="cell small-12 large-12 sections" id="sections">
+      <div>
+	<style>
+		.content-container {
+			display: flex;
+			padding: 0px;
+			flex-direction: column;
+			align-items: flex-start;
+			align-self: stretch;
+			position: relative;
+			height: 100%;
+		}
+
+		.content-container img {
+			width: 100%;
+			border-radius: 8px;
+		}
+
+		.text-content {
+			color: #1e1d19;
+			text-align: left;
+			font-family: Cabin;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 24px;
+			flex: 1;
+			overflow-y: auto;
+			margin-top: 24px;
+
+			overflow-y: auto;
+			-webkit-overflow-scrolling: touch;
+
+			counter-reset: ContentSubheader;
+		}
+
+		.text-content a {
+			color: #0065d1;
+			font-family: Cabin;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 24px;
+			text-decoration-line: underline;
+			text-decoration-style: solid;
+			text-decoration-skip-ink: none;
+			text-decoration-thickness: auto;
+			text-underline-offset: auto;
+			text-decoration-position: from-front;
+		}
+			
+		h2.content-header {
+			font-family: "Bebas Neue";
+			font-size: 36px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 32px;
+			letter-spacing: 0.5px;
+			text-transform: uppercase;
+			margin-bottom: 24px;
+		}
+
+		h3.content-header {
+			font-family: "Bebas Neue";
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 24px;
+			letter-spacing: 1.5px;
+			text-transform: uppercase;
+			margin-top: 24px;
+			margin-bottom: -18px;
+		}
+
+		h4 {
+			margin: 0;
+		}
+
+		h4::before {
+			counter-increment: ContentSubheader;
+			content: counter(ContentSubheader) ". ";
+		}
+
+		h4.content-subheader {
+			font-family: Cabin;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 24px;
+			margin-top: 18px;
+		}
+		.terms {
+			display: flex;
+			align-items: flex-start;
+			gap: 10px;
+			align-self: stretch;
+			margin-top: 24px;
+
+			p {
+				margin: 0;
+			}
+		}
+		.learn-more-container {
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 16px;
+			align-self: stretch;
+			position: sticky;
+			bottom: -1px;
+			left: 0;
+			right: 0;
+			background-color: #fff;
+			z-index: 10;
+			padding: 24px 24px 8px;
+			margin-left: -24px;
+			margin-right: -24px;
+		}
+		
+		.top-shadow {
+			box-shadow: 0 -4px 4px 0 rgba(30, 29, 25, 0.12);
+		}
+
+		.learn-more-link {
+			width: 100%;
+			text-decoration: none;
+			box-sizing: border-box;
+			border-radius: 4px;
+			padding: 8px 16px 8px 12px;
+			position: relative;
+			color: #fff;
+			background-color: #4f6b57;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 40px;
+			font-size: 16px;
+			line-height: 24px;
+			font-weight: 600;
+			text-align: center;
+			cursor: pointer;
+			border: none;
+			transition: all 0.3s ease-out;
+			text-transform: uppercase;
+			font-family: Cabin, sans-serif;
+			margin-bottom: 16px;
+		}
+
+		@media screen and (max-width: 768px) {
+			.learn-more-container {
+				z-index: 1000;
+				margin-left: -24px;
+				margin-right: -24px;
+				padding: 24px;
+			}
+			.learn-more-link {
+				width: 95% !important;
+				margin-bottom: 0px;
+				align-self: center;
+			}
+		}
+	</style>
+	<div class="content-container">
+		<img
+		  src="https://assets.basspro.com/image/upload/v1778168103/UX/Experience/WRMG%20Content/factory-direct-cast-off-modal.jpg"
+		  alt="Tracker Showroom"
+		/>
+
+		<div class="text-content">
+			<h2 class="content-header">turn your boat purchase into a wonderful vacation in the ozarks!</h2>
+			With the Cast Off signature boating experience, boat customers nationwide can choose to pick up their new boat right where it’s built in the Ozarks and save on freight charges that vary by location. It’s more than a pickup. It’s a red carpet experience that turns delivery into a family getaway, complete with exclusive savings, behind-the-scenes plant tours, special experience and resort offers, and the opportunity to take your new boat out on the water at nearby Table Rock Lake!
+
+			<h3 class="content-header">How it works</h3>
+			<h4 class="content-subheader">Order your new boat in-store or by phone</h4>
+			Work with one of our online sales team members by calling
+			<a href="tel:4178155409"> 417-815-5409 </a>
+			or visiting your local store’s Boating Center to speak with a sales team member! Let them know that you want to take delivery the Cast Off way during your purchase process.
+
+			<h4 class="content-subheader">Choose your pickup experience options</h4>
+			We’ll connect you with a friendly VIP Boat Concierge who will help you every step of the way! They’ll send you options to build your perfect visit—from lodging options with special discounts to once-in-a-lifetime experiences and VIP boat plant tours.
+
+			<h4 class="content-subheader">Pick up your boat with a special VIP experience at the Grandaddy of all outdoors stores!</h4>
+			When your boat is ready for pickup, you’ll make the trip to the Springfield, Missouri Bass Pro Shops. We’ll make it special for you and the whole family!
+		</div>
+		<div class="learn-more-container">
+			<a href="/b/boat-delivery-center" class="learn-more-link"> Learn More </a>
+		</div>
+	</div>
+	<script reactSafe>
+		(function () {
+			const stickyEl = document.querySelector('.learn-more-container');
+			
+			const observer = new IntersectionObserver(
+				([entry]) => {
+					const isStuck = entry.intersectionRatio < 1;
+				
+					stickyEl.classList.toggle('top-shadow', isStuck);
+				},
+				{
+					rootMargin: '0px 0px -1px 0px',
+					threshold: [1]
+				}
+			);
+			
+			observer.observe(stickyEl);
+		})();
+	</script>
+</div>
 
       <!-- INVENTORY CARD -->
-      <section id="inventory-card" data-magellan-target="inventory-card" class="large-bottom">
+      <section
+        id="inventory-card"
+        data-magellan-target="inventory-card"
+        class="large-bottom"
+      >
         <h5 class="medium-bottom">Inventory Card</h5>
         {{> inventory-card}}
       </section>
 
       <!-- MODEL LISTING -->
-      <section id="model-listing" data-magellan-target="model-listing" class="large-bottom">
+      <section
+        id="model-listing"
+        data-magellan-target="model-listing"
+        class="large-bottom"
+      >
         <h5 class="medium-bottom">Model Listing</h5>
-        {{> model-year-dropdown}}
-        {{> model-listing}}
+        {{> model-year-dropdown}} {{> model-listing}}
       </section>
 
       <!-- MODEL PRICE -->
-      <section id="model-price" data-magellan-target="model-price" class="large-bottom">
+      <section
+        id="model-price"
+        data-magellan-target="model-price"
+        class="large-bottom"
+      >
         <h5 class="medium-bottom">Model Price</h5>
         {{> model-price}}
       </section>
 
       <!-- MODEL SPECS -->
-      <section id="model-specs" data-magellan-target="model-specs" class="large-bottom">
+      <section
+        id="model-specs"
+        data-magellan-target="model-specs"
+        class="large-bottom"
+      >
         <h5 class="medium-bottom">Model Specs</h5>
         {{> model-specs}}
       </section>
 
       <!-- MODEL MOTORS -->
-      <section id="model-price" data-magellan-target="model-price" class="large-bottom">
+      <section
+        id="model-price"
+        data-magellan-target="model-price"
+        class="large-bottom"
+      >
         <h5 class="medium-bottom">Model Motors</h5>
         {{> model-motors}}
       </section>
 
       <!-- MODEL FEATURES -->
-      <section id="model-features" data-magellan-target="model-features" class="large-bottom">
+      <section
+        id="model-features"
+        data-magellan-target="model-features"
+        class="large-bottom"
+      >
         <h5 class="medium-bottom">Model Features</h5>
         {{> model-features}}
       </section>
 
       <!-- MODEL OPTIONS -->
-      <section id="model-options" data-magellan-target="model-options" class="large-bottom">
+      <section
+        id="model-options"
+        data-magellan-target="model-options"
+        class="large-bottom"
+      >
         <h5 class="medium-bottom">Model Options</h5>
         {{> model-options}}
       </section>
 
       <!-- DEALERS NEARBY-->
-      <section id="dealer-search" data-magellan-target="dealer-search" class="large-bottom">
+      <section
+        id="dealer-search"
+        data-magellan-target="dealer-search"
+        class="large-bottom"
+      >
         <h5 class="medium-bottom">Dealers Nearby</h5>
         {{> dealer-nearby}}
       </section>
 
       <!-- BPBC DEALER SEARCH-->
-      <section id="bpbc-dealer-search" data-magellan-target="dealer-search" class="large-bottom">
+      <section
+        id="bpbc-dealer-search"
+        data-magellan-target="dealer-search"
+        class="large-bottom"
+      >
         <h5 class="medium-bottom">BPBC Dealer Search</h5>
         {{> bpbc-dealer-search}}
       </section>
 
       <!-- DEALER SEARCH -->
-      <section id="dealer-search" data-magellan-target="dealer-search" class="large-bottom">
+      <section
+        id="dealer-search"
+        data-magellan-target="dealer-search"
+        class="large-bottom"
+      >
         <h5 class="medium-bottom">Dealer Search</h5>
         {{> dealer-search}}
       </section>
 
       <!-- DEALER SELECT -->
-      <section id="dealer-select" data-magellan-target="dealer-select" class="large-bottom">
+      <section
+        id="dealer-select"
+        data-magellan-target="dealer-select"
+        class="large-bottom"
+      >
         <h5 class="medium-bottom">Dealer Select</h5>
         {{> dealer-select-modal}}
       </section>
 
       <!-- INTERNATIONAL DEALERS -->
-      <section id="international-dealers" data-magellan-target="international-dealers" class="large-bottom">
+      <section
+        id="international-dealers"
+        data-magellan-target="international-dealers"
+        class="large-bottom"
+      >
         <h5 class="medium-bottom">International Dealers</h5>
         {{> international-dealer-list}}
       </section>
-
     </div>
   </div>
 </div>

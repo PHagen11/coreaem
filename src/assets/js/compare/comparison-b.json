@@ -1,0 +1,147 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": ["Product", "Vehicle"],
+            "name": "Z521R Ultra",
+            "url": "https://www.rangerboats.com/fiberglass/bass/z-comanche/z521r-ultra.html",
+            "description": "Never has more comfort, style, capability, and technology been packed into one bass boat. The all-new Ranger Z521R Ultra stands apart with one-of-a-kind non-skid Traction pad flooring accented by legendary Comanche stripes, blending beauty and function.",
+            "image": "https://www.rangerboats.com/content/dam/wrmg/ranger-fiberglass/2026/z-comanche-series/z521r-ultra/studio/26_R_Z521RUltra_BMT_001.png/jcr:content/renditions/cq5dam.web.1920.1920.png",
+            "manufacturer": {
+                "@type": "Organization",
+                "name": "White River Marine Group",
+                "founder": {
+                    "@type": "Person",
+                    "name": "Johnny Morris"
+                }
+            },
+            "brand": {
+                "@type": "Brand",
+                "name": "Ranger Boats",
+                "url": "https://www.rangerboats.com/",
+                "sameAs": [
+                    "https://www.facebook.com/rangerboats",
+                    "https://www.instagram.com/rangerboats/?hl=en",
+                    "https://www.youtube.com/user/rangerboatsTV"
+                ]
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://www.rangerboats.com/fiberglass/bass/z-comanche/z521r-ultra.html",
+                "priceCurrency": "USD",
+                "price": "100,595",
+                "itemCondition": "https://schema.org/NewCondition",
+                "availability": "https://schema.org/InStock"
+            },
+            "vehicleModelDate": "2026",
+            "category": "Fiberglass Fishing Boat",
+            "bodyType": "Bass Boat",
+            "vehicleConfiguration": "Ultra",
+            "vehicleInteriorType": [
+                "Air-Ride Cloud 9™ Soft Ride Seating",
+                "Plush and durable quilted seating",
+                "Traction pad flooring",
+                "Ranger Echelon™ rod storage system"
+            ],
+            "vehicleEngine": {
+                "@type": "EngineSpecification",
+                "name": "Mercury® 250L Pro XS Torque Master",
+                "engineType": "Outboard",
+                "engineDisplacement": {
+                    "@type": "QuantitativeValue",
+                    "value": 250,
+                    "unitCode": "BHP",
+                    "unitText": "Horsepower"
+                },
+                "fuelType": "Gasoline"
+            },
+            "additionalProperty": [
+                {
+                    "@type": "PropertyValue",
+                    "name": "Length Overall",
+                    "value": "21.75",
+                    "unitCode": "FOT",
+                    "unitText": "feet"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "Beam",
+                    "value": "96",
+                    "unitCode": "INH",
+                    "unitText": "inches"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "Fuel Capacity",
+                    "value": "54",
+                    "unitCode": "GLL",
+                    "unitText": "gallons"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "Max Persons",
+                    "value": "5"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "Hull Material",
+                    "value": "Fiberglass"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "Approximate Boat Weight",
+                    "value": "2300",
+                    "unitCode": "LBR",
+                    "unitText": "pounds"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "Approximate Storage Length",
+                    "value": "25.1",
+                    "unitCode": "FOT",
+                    "unitText": "feet"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "Trailer Included",
+                    "value": "Yes"
+                }
+            ]
+        },
+        {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.rangerboats.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Fiberglass Boats",
+                    "item": "https://www.rangerboats.com/fiberglass.html"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Bass Boats",
+                    "item": "https://www.rangerboats.com/fiberglass/bass.html"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "Z Comanche Series",
+                    "item": "https://www.rangerboats.com/fiberglass/bass/z-comanche-series.html"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "name": "Z521R",
+                    "item": "https://www.rangerboats.com/fiberglass/bass/z-comanche/z521r-ultra.html"
+                }
+            ]
+        }
+    ]
+}

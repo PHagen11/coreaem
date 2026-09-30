@@ -1,6 +1,21 @@
+$(document).ready(function() {
+    $('.owl-carousel').owlCarousel({
+        thumbs: false,
+        thumbsPrerendered: false,
+        center: true,
+        lazyLoad: true,
+        items: 1,
+        loop: true,
+        nav:true,
+        autoHeight: true,
+        dots:true,
+        navText:['<i aria-label="Next"></i>','<i aria-label="Previous"></i>'],
+        animateOut: 'fadeOut'
+    });
+});
 
-jQuery(document).ready(function() {
-    jQuery('.owl-carousel').owlCarousel({
+$(document).ready(function() {
+    $('.owl-carousel').owlCarousel({
         thumbs: true,
         thumbsPrerendered: true,
         center: true,
@@ -10,7 +25,7 @@ jQuery(document).ready(function() {
         nav:true,
         autoHeight: true,
         dots:true,
-        navText:['<i aria-label="Next"></i>','<i aria-label="Previous"></i>']
+        navText:['<i aria-label="Next"></i>','<i aria-label="Previous"></i>'],
     });
 });
 

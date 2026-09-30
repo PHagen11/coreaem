@@ -6,26 +6,6 @@
 /* Fix image height on inventory listings */
 .inventory-card .card .item-image {
     object-fit: scale-down; }
-/*
-.inventory-card .card .item-image {
-    object-fit: scale-down;
-    height: auto !important; }
-@media print, screen and (min-width: 40em) {
-    .inventory-card .card .item-image {
-    height: auto !important; } }
-@media print, screen and (min-width: 64em) {
-    .inventory-card .card .item-image {
-    height: auto !important; } }
-@media screen and (min-width: 75em) {
-    .inventory-card .card .item-image {
-    height: auto !important; } }
-@media screen and (min-width: 90em) {
-    .inventory-card .card .item-image {
-    height: auto !important; } }
-@media screen and (min-width: 112.5em) {
-    .inventory-card .card .item-image {
-    height: auto !important; } }
-*/
 
 .price-block {
     position: relative;
@@ -62,4 +42,30 @@ span.badge.success {
     border-radius: 0.1875rem;
     color:#fff;
     background:#ff2400;
+}
+
+
+/* used in vwo campaign for pdp's */
+.sticky-cta-container {
+    background-color: #f4f5f7;
+    padding: 1rem;
+    position: fixed;
+    right: 0rem;
+    bottom: 0rem;
+    left: 0rem;
+    z-index: 975;
+}
+.sticky-cta-btn .button {
+    padding: 10px;
+    margin-bottom: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sticky-cta-btn .button.primary {
+    margin-right: 5px;
+}
+.sticky-cta-btn .button.secondary {
+    margin-left: 5px;
 }

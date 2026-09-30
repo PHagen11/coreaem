@@ -9,6 +9,7 @@
 		<title>Components Library</title>
 
 		<link rel="stylesheet" href="{{root}}assets/css/app.css">
+		<link rel="stylesheet" href="{{root}}assets/css/bpbc/custom.css">
 		<!-- <link rel="stylesheet" href="{{root}}assets/css/custom-bpbc.css"> -->
         <!-- <link rel="stylesheet" href="/assets/css/custom-trackeroffroad.css"> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
@@ -38,47 +39,6 @@
         <div id="jsVars" data-brand="tracker" data-mCode="AIzaSyDJ1s2O7uWXHTXWMDTsi016y2rM36Fp65o" data-mMin="4" data-mMax="12" data-searchMax="10" data-newSearch="true" data-searchByLoc="true" data-searchByName="true" data-maxDealerSearchRadius="50" data-maxDealersOnModal="10" data-maxDealerNames="1000" data-pinColor="#9e1c20">
         </div>
 		<div class="site" id="site">
-			<!-- <div class="sub-navigation anchor-menu">
-                <div data-sticky-container>
-                    <div class="title-bar" data-sticky data-sticky-on="small" data-options="marginTop:0;" data-top-anchor="page-title"> -->
-                        <!-- background color based on predefined background-xxxxx classes -->
-                        <!-- <div class="grid-x inner-width" style="padding-left: 1rem; padding-right: 1rem;"> -->
-                        <!-- shows on LARGE, XLARGE -->
-                        <!-- <div class="title-bar-left show-for-large">
-                            <ul class="menu horizontal align-left">
-                                <li class="menu-text text-white">AEM Component Library</li>
-                            </ul>
-                        </div>
-                        <div class="title-bar-right show-for-large">
-                            <ul class="menu horizontal align-right">
-                            <li><a href="#inventory-card">Inventory Card</a></li>
-                            <li><a href="#model-listing">Model Listing</a></li>
-                            <li><a href="#model-price">Model Price</a></li>
-                            <li><a href="#model-specs">Model Specs</a></li>
-                            <li><a href="#model-price">Model Price</a></li> -->
-                            <!--- target="_blank" and <i></i> tags added for external links --->
-                            <!-- </ul>
-                        </div> -->
-                        <!-- shows on SMALL, MEDIUM -->
-                        <!-- <ul class="vertical menu accordion-menu hide-for-large" data-accordion-menu>
-                            <li>
-                                <a href="#">Some Title</a>
-                                <ul class="menu vertical">
-                                    <li><a href="#inventory-card">Inventory Card</a></li>
-                                    <li><a href="#model-listing">Model Listing</a></li>
-                                    <li><a href="#model-price">Model Price</a></li>
-                                    <li><a href="#model-specs">Model Specs</a></li>
-                                    <li><a href="#model-price">Model Price</a></li> -->
-                                    <!--- target="_blank" and <i></i> tags added for external links --->
-                                <!-- </ul>
-                            </li>
-                        </ul>
-                        </div>
-                    </div>
-                </div>
-		    </div> -->
-            <!-- <div class="dealerLocationBar section"> -->
-
             <div class="mini-nav" id="mini-nav">
                 <table id="mini-nav-menu">
                     <tbody>
@@ -170,21 +130,31 @@
 			{{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}} {{> body}}
 
 			<div id="end-sticky-nav"></div>
+
+            <script>
+                const sliderDesktopImages = {
+                    before: 'https://assets.whiterivermg.com/content/dam/wrmg/ranger-fiberglass/2025/fisherman/621fs-ranger-cup-equipped/studio/24_R_621FSC_OH001.png',
+                    after: 'https://assets.whiterivermg.com/content/dam/wrmg/ranger-fiberglass/2025/fisherman/621fs-ranger-cup-equipped/studio/24_R_621FSC_OH002.png',
+                }
+
+                const sliderMobileImages = {
+                    before: 'https://dev.rangerboats.test/content/dam/wrmg/ranger-fiberglass/2025/z-comanche-series/z521r/studio/25_R_Z521R_OH001-mobile.png',
+                    after: 'https://dev.rangerboats.test/content/dam/wrmg/ranger-fiberglass/2025/z-comanche-series/z521r/studio/25_R_Z521R_OH005-mobile.png'
+                }
+            </script>
 			
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
             <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
             <script src="{{root}}assets/js/app.js"></script>
             <script src="{{root}}assets/js/lead.js"></script>
 			<script src="{{root}}assets/js/cookies.js"></script>
-			<!-- <script src="{{root}}assets/js/formDealerHandler.js"></script> -->
-			<!-- <script src="{{root}}assets/js/promos/tor-warranty-promo-pdp.js"></script> -->
-			<!-- <script src="{{root}}assets/js/promos/tor-warranty-promo.js"></script> -->
-			<script src="{{root}}assets/js/promos/gift-card-promo.js"></script>
-			<script src="{{root}}assets/js/promos/gift-card-promo-pdp.js"></script>
+			<!-- <script src="{{root}}assets/js/calculateTotalPrice.js"></script> -->
+			<script src="{{root}}assets/js/promos/2026-tor-promo-plp.js"></script>
+			<script src="{{root}}assets/js/promos/2026-model-year-end-clearance-plp.js"></script>
+			<script src="{{root}}assets/js/promos/2026-model-year-end-clearance-pdp.js"></script>
 			<script src="{{root}}assets/js/imageSlider.js"></script>
 			<!-- <script src="{{root}}assets/js/setYearDropdown.js"></script> -->
 			<!-- <script src="https://kit.fontawesome.com/78d9c12a93.js" crossorigin="anonymous"></script> -->
-            <script src="{{root}}assets/js/formDealerHandler.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
 			<script src="{{root}}assets/js/foundationLoad.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/plugins/foundation.core.js"></script>
@@ -206,21 +176,17 @@
 		</div>
 
         <script>
-            $(document).ready((event) => {
-                formDealerDisplay()
-                // giftCardPromo()
-                // giftCardPromoPDP()
+            $(document).ready(() => {
+                twentySixMyecPLP();
+                twentySixMyecPDP();
+                // torPromo();
+            });
+            $(document).on("ajaxComplete", () => {
+                twentySixMyecPLP();
+                twentySixMyecPDP();
+                // torPromo();
             });
 
-            const sliderDesktopImages = {
-                before: 'https://assets.whiterivermg.com/content/dam/wrmg/ranger-fiberglass/2025/fisherman/621fs-ranger-cup-equipped/studio/24_R_621FSC_OH001.png',
-                after: 'https://assets.whiterivermg.com/content/dam/wrmg/ranger-fiberglass/2025/fisherman/621fs-ranger-cup-equipped/studio/24_R_621FSC_OH002.png',
-            }
-
-            const sliderMobileImages = {
-                before: 'https://dev.rangerboats.test/content/dam/wrmg/ranger-fiberglass/2025/z-comanche-series/z521r/studio/25_R_Z521R_OH001-mobile.png',
-                after: 'https://dev.rangerboats.test/content/dam/wrmg/ranger-fiberglass/2025/z-comanche-series/z521r/studio/25_R_Z521R_OH005-mobile.png'
-            }
         </script>
 	</body>
 </html>
